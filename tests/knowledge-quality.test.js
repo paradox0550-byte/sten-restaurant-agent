@@ -146,7 +146,10 @@ test("post-enrichment holdout runs through production lexical retrieval without 
       relevant_found: item.metrics.relevantFound,
       relevant_total: item.metrics.relevantTotal,
       recall_at_10: item.metrics.recallAtK,
-      first_relevant_rank: item.metrics.reciprocalRank ? 1 / item.metrics.reciprocalRank : null
+      first_relevant_rank: item.metrics.reciprocalRank ? 1 / item.metrics.reciprocalRank : null,
+      expected_ids: item.expected_ids,
+      retrieved_ids: item.retrieved_ids,
+      missing_ids: item.expected_ids.filter((id) => !item.retrieved_ids.includes(id))
     }))
   }));
 });
