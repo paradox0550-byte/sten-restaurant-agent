@@ -6,7 +6,8 @@
   "description": "Provider-neutral HoReCa restaurant management intelligence core",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "validate:evidence": "node src/evidence/cli.js"
+    "validate:evidence": "node src/evidence/cli.js",
+    "validate:package": "node scripts/validate-package.js"
   },
   "engines": {
     "node": ">=18"
