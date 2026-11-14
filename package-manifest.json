@@ -74,7 +74,8 @@
     "role_responsibility_provenance",
     "multi_hop_horeca_evaluation_seed_cases",
     "sector_to_management_domain_coverage_matrix",
-    "structural_multi_hop_graph_evaluation_harness"
+    "structural_multi_hop_graph_evaluation_harness",
+    "knowledge_metadata_and_cross_reference_quality_checks"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -223,12 +224,15 @@
     "knowledge/taxonomy/sector-domain-matrix.json",
     "src/evaluation/multihop.js",
     "tests/multihop-evaluation.test.js",
-    "docs/sector-domain-matrix-evaluation.md"
+    "docs/sector-domain-matrix-evaluation.md",
+    "src/evaluation/knowledge-quality.js",
+    "tests/knowledge-quality.test.js",
+    "docs/knowledge-quality-integrity.md"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 65,
+    "total_expected": 67,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
@@ -236,7 +240,8 @@
     "workflow_layer": 6,
     "horeca_taxonomy": 4,
     "knowledge_graph": 3,
-    "procedures_depth": 3
+    "procedures_depth": 3,
+    "knowledge_quality": 2
   },
   "stage_status": {
     "1": "integrated",
