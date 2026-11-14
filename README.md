@@ -50,3 +50,7 @@ This repository is a working core, not a deployed service. Provider adapters con
 ## Hybrid Retrieval (Stage 9)
 
 Stage 9 adds provider-injected embedding execution, a dependency-free in-memory cosine vector index for tests/small workloads, and hybrid lexical+vector retrieval using Reciprocal Rank Fusion. The current index is ephemeral and is not a production vector database. A real embedding model and persistent vector service must be supplied by the host. See `docs/hybrid-retrieval.md` and `evals/retrieval-quality-cases.json`.
+
+## Semantic Ranking & Conflict Intelligence (Stage 10)
+
+Optional host-injected reranking can reorder existing retrieval candidates without losing their source metadata. Optional semantic conflict detection validates candidate source pairs, distinguishes contextual differences (such as jurisdiction or validity periods) from potential contradictions, and requires human review. No production model is bundled and no conflict is automatically resolved. See `docs/semantic-ranking-conflicts.md`.

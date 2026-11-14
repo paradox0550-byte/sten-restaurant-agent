@@ -11,7 +11,8 @@
     6,
     7,
     8,
-    9
+    9,
+    10
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -53,7 +54,11 @@
     "in_memory_vector_index",
     "hybrid_lexical_vector_retrieval",
     "reciprocal_rank_fusion",
-    "retrieval_quality_seed_cases"
+    "retrieval_quality_seed_cases",
+    "provider_injected_semantic_reranking",
+    "semantic_conflict_detection_orchestration",
+    "contextual_conflict_classification",
+    "human_review_conflict_workflow"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -68,15 +73,15 @@
     "distributed_audit_storage",
     "automated_semantic_conflict_resolution",
     "complete_knowledge_corpus",
-    "deployed_semantic_reranker",
     "deployed_semantic_contradiction_model",
     "complete_curated_horeca_knowledge_corpus",
     "external_task_management_connectors",
     "production_vector_database",
     "production_embedding_provider",
     "measured_production_retrieval_quality",
-    "deployed_semantic_reranker",
-    "automated_semantic_contradiction_detection"
+    "production_semantic_reranker_provider",
+    "production_semantic_contradiction_model",
+    "automatic_conflict_resolution"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -176,16 +181,18 @@
     "src/retrieval/hybrid.js",
     "tests/retrieval-hybrid.test.js",
     "evals/retrieval-quality-cases.json",
-    "docs/hybrid-retrieval.md"
+    "docs/hybrid-retrieval.md",
+    "tests/retrieval-semantic.test.js",
+    "docs/semantic-ranking-conflicts.md"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 46,
+    "total_expected": 52,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
-    "retrieval_layer": 10,
+    "retrieval_layer": 16,
     "workflow_layer": 6
   },
   "stage_status": {
@@ -197,6 +204,7 @@
     "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed",
     "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions",
     "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed",
-    "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed"
+    "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed",
+    "10": "semantic_reranking_and_conflict_intelligence_integrated_with_provider-injected_adapters; no production model configured; findings require human review"
   }
 }

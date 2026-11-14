@@ -25,3 +25,7 @@ Legal records remain jurisdiction- and date-specific. Unknown profile data remai
 ## Stage 9 — Hybrid Retrieval
 
 Integrated: provider-injected query/document embeddings, validated in-memory cosine vector index, lexical+vector retrieval and Reciprocal Rank Fusion. The in-memory index is a reference implementation for tests and small workloads only; no production embedding provider or persistent vector database is bundled. Retrieval quality seed cases are versioned under `evals/` and require a labelled corpus before production acceptance.
+
+## Stage 10 — Semantic Ranking & Conflict Intelligence
+
+Integrated: provider-injected semantic reranking with candidate allowlisting, provenance preservation and lexical/hybrid fallback on provider errors; semantic conflict-detection orchestration with source-pair validation, duplicate suppression and conservative contextual-difference classification. Every finding remains unresolved and requires human review. No production model/provider or automatic conflict resolution is configured. See `docs/semantic-ranking-conflicts.md`.
