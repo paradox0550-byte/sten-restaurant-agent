@@ -1,3 +1,5 @@
+import { rankDocuments } from "../retrieval/rank.js";
+
 const unique = (items) => new Set(items).size === items.length;
 
 export function evaluateKnowledgeQuality({ procedures, checklists, registers, sources, graph, sectorMatrix }) {
@@ -123,5 +125,43 @@ export function evaluateAnswerIntegrity({
     evidence_count: evidence.length,
     conflicts_checked: expectedConflictPairs.length,
     issues
+  };
+}
+
+
+/** Runs labelled cases through the production lexical ranker against a supplied corpus. */
+export function runRetrievalEvaluation({ cases = [], documents = [], k = 10 } = {}) {
+  const results = cases.map((item) => {
+    const ranked = rankDocuments(item.query, documents, { limit: k });
+    const retrieved = ranked.status === "ok" ? ranked.results : [];
+    const expectedIds = item.expected_ids ?? item.expected_document_ids ?? [];
+    const metrics = evaluateRetrievalRanking({ expectedIds, retrieved, k });
+    const corpusIds = new Set(documents.map((document) => document.id));
+    return {
+      case_id: item.id,
+      domain: item.domain ?? null,
+      mode: "lexical",
+      status: ranked.status,
+      retrieved_ids: retrieved.map((entry) => entry.document.id),
+      expected_ids: expectedIds,
+      expected_ids_missing_from_corpus: expectedIds.filter((id) => !corpusIds.has(id)),
+      metrics
+    };
+  });
+  const scored = results.filter((item) => item.metrics.status === "scored");
+  const mean = (key) => scored.length ? scored.reduce((sum, item) => sum + item.metrics[key], 0) / scored.length : null;
+  return {
+    status: scored.length === results.length && results.length > 0 ? "scored" : "partial_or_unscored",
+    scope: "labelled_cases_against_supplied_corpus_lexical_ranker_only",
+    corpus_documents: documents.length,
+    cases_total: results.length,
+    cases_scored: scored.length,
+    macro: {
+      precisionAtK: mean("precisionAtK"),
+      recallAtK: mean("recallAtK"),
+      reciprocalRank: mean("reciprocalRank"),
+      ndcgAtK: mean("ndcgAtK")
+    },
+    results
   };
 }
