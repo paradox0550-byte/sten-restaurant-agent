@@ -47,4 +47,4 @@ This closes implementation of the evaluation framework and its initial lexical b
 
 ### Stage 13 follow-up — holdout preparation
 
-Added a 12-query post-enrichment holdout draft at `evals/stage-13-blind-holdout.json`. It is executed through the existing production lexical ranker by the quality test suite, without graph/ranker tuning or score thresholds. Expected IDs are provisional model-authored labels and require expert adjudication; this is preparation for, not a substitute for, a genuinely blind independent evaluation. See `docs/stage-13-quality-evaluation.md`.
+Added a 12-query post-enrichment holdout draft at `evals/stage-13-blind-holdout.json`, executed through the existing production lexical ranker without graph/ranker tuning or score thresholds. Its first diagnostic run is pinned in `evals/stage-13-holdout-baseline.json` (Recall@10 68.06%, MRR 0.8153, nDCG@10 64.37%). Expected IDs are provisional model-authored labels and require expert adjudication; this is preparation for, not a substitute for, a genuinely blind independent evaluation. See `docs/stage-13-quality-evaluation.md`.
