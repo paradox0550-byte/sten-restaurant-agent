@@ -64,7 +64,10 @@
     "cross_sector_management_domain_catalog",
     "multi_format_establishment_profile_schema",
     "source_intake_and_evidence_governance",
-    "profile_conditioned_applicability_framework"
+    "profile_conditioned_applicability_framework",
+    "source_grounded_operational_knowledge_graph",
+    "multi_parent_cross_domain_knowledge_links",
+    "initial_horeca_practice_source_catalog"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -197,18 +200,23 @@
     "knowledge/taxonomy/management-domains.json",
     "docs/horeca-applicability-profile.md",
     "docs/source-intake-checklist.md",
-    "tests/horeca-taxonomy.test.js"
+    "tests/horeca-taxonomy.test.js",
+    "knowledge/graph/sources.json",
+    "knowledge/graph/operational-knowledge-graph.json",
+    "docs/operational-knowledge-graph.md",
+    "tests/knowledge-graph.test.js"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 56,
+    "total_expected": 59,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
     "retrieval_layer": 16,
     "workflow_layer": 6,
-    "horeca_taxonomy": 4
+    "horeca_taxonomy": 4,
+    "knowledge_graph": 3
   },
   "stage_status": {
     "1": "integrated",
@@ -221,6 +229,6 @@
     "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed",
     "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed",
     "10": "semantic_reranking_and_conflict_intelligence_integrated_with_provider-injected_adapters; no production model configured; findings require human review",
-    "11": "HoReCa taxonomy, cross-sector management domains, establishment profile schema and source/applicability governance integrated; curated corpus population remains ongoing"
+    "11": "HoReCa taxonomy and applicability integrated; initial source-grounded operational knowledge graph and six-source practice catalog added; leaf-level curation and corpus expansion ongoing"
   }
 }

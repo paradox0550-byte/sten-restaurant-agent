@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Traceable source catalog for the initial operational HoReCa knowledge graph. Source records describe provenance, not universal validity.",
+  "sources": [
+    {
+      "id": "source.appearance-training",
+      "title": "Стандарты внешнего вида — план тренинга",
+      "source_type": "internal_training_material",
+      "evidence_class": "PRACTICE",
+      "scope": "organization_specific",
+      "date_status": "not_verified",
+      "locator": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
+      "limitations": [
+        "Corporate resort standard; not a universal dress code.",
+        "Restrictions on appearance and religious symbols require jurisdiction-specific legal and policy review before reuse.",
+        "Footwear is asked as a discussion question but the supplied text does not provide its answer."
+      ],
+      "sensitive_content": "Generalized; organization and personal identifiers excluded."
+    },
+    {
+      "id": "source.operational-management-training",
+      "title": "Система операционного управления — управленческая эффективность",
+      "source_type": "internal_management_training",
+      "evidence_class": "PRACTICE",
+      "scope": "organization_specific_methodology",
+      "date_status": "not_verified",
+      "locator": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
+      "limitations": [
+        "Training framework, not validated universal psychometric assessment.",
+        "Work maturity is evaluated relative to a task, not as a permanent label for a person.",
+        "Slide 11 contains a visual matrix and must be interpreted with its image, not text extraction alone."
+      ]
+    },
+    {
+      "id": "source.director-calendar",
+      "title": "Календарный план директора",
+      "source_type": "operational_planning_workbook",
+      "evidence_class": "PRACTICE",
+      "scope": "organization_specific_operating_model",
+      "date_status": "workbook contains historical October dates; current applicability not verified",
+      "locator": "XLSX; sheets: календарный план, 11-15.10, 18-19.10",
+      "limitations": [
+        "Time budgets and frequencies are examples from one operating model.",
+        "Blank cells are not zero and are not proof that a task is unnecessary.",
+        "Plan/fact values are historical observations, not benchmark standards."
+      ]
+    },
+    {
+      "id": "source.audit-process-model",
+      "title": "Модель бизнес-процессов ресторана",
+      "source_type": "process_audit_workbook",
+      "evidence_class": "PRACTICE",
+      "scope": "organization_specific_process_model",
+      "date_status": "not_verified",
+      "locator": "XLSX; sheet БМ; 336 rows; process hierarchy and functional actions",
+      "limitations": [
+        "Contains owner names and corporate references; these are excluded from generalized graph.",
+        "Some legacy terms, software references and legal/tax workflows may be obsolete or jurisdiction-specific.",
+        "A listed process is not proof that it is implemented or legally required."
+      ]
+    },
+    {
+      "id": "source.guest-service-standard-2025",
+      "title": "Стандарт качества обслуживания гостей (2025)",
+      "source_type": "internal_service_standard",
+      "evidence_class": "PRACTICE",
+      "scope": "specific restaurant concepts",
+      "date_status": "2025 stated in source",
+      "locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+      "limitations": [
+        "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
+        "Brand-specific scripts and operational details are not universal.",
+        "Current legal, accessibility, labor and food-safety applicability requires separate verification."
+      ]
+    },
+    {
+      "id": "source.restaurant-regulation",
+      "title": "Регламент ресторана",
+      "source_type": "internal_operating_regulation",
+      "evidence_class": "PRACTICE",
+      "scope": "specific restaurant chain",
+      "date_status": "not_verified; examples within the document include 2012 dates",
+      "locator": "DOC; contents cover concepts, operations, production and sales, safety, records, cash, payroll, procurement, POS, audits, marketing, delivery, HR, facilities and appendices",
+      "limitations": [
+        "Historical and chain-specific; contains personal names, addresses, suppliers, internal contacts and software procedures excluded from graph.",
+        "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
+        "Legacy system instructions are not portable implementation guidance."
+      ]
+    }
+  ]
+}

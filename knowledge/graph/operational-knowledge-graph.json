@@ -1,0 +1,852 @@
+{
+  "schema_version": "1.0.0",
+  "graph_type": "directed_multigraph",
+  "purpose": "Initial source-grounded operational HoReCa graph. Hierarchical and cross-domain edges are both supported.",
+  "rules": [
+    "Nodes are reusable knowledge concepts, processes, controls or roles; source documents are not themselves the knowledge tree.",
+    "A node may have multiple parents and multiple cross-domain links.",
+    "Every practice node must retain one or more source anchors before it can be treated as source-backed.",
+    "Do not promote a single operator's practice to universal industry guidance.",
+    "Do not infer missing steps, frequencies, owners, thresholds or legal applicability.",
+    "Historical or company-specific instructions remain scoped and may require revalidation."
+  ],
+  "nodes": [
+    {
+      "id": "horeca.operations",
+      "type": "root",
+      "label": "Операционное управление HoReCa",
+      "evidence_class": "CORE",
+      "summary": "Связанный граф процессов, ролей, практик, проверок и управленческих решений."
+    },
+    {
+      "id": "management.system",
+      "type": "domain",
+      "label": "Система управления",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.director-role",
+      "type": "role",
+      "label": "Роль директора ресторана",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.planning",
+      "type": "process",
+      "label": "Планирование работы директора",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.time-budget",
+      "type": "concept",
+      "label": "Бюджет времени: план и факт",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.daily-report",
+      "type": "process",
+      "label": "Анализ ежедневного отчёта и отклонений",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.meetings",
+      "type": "process",
+      "label": "Планёрки и рабочие встречи",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.control",
+      "type": "process",
+      "label": "Контроль и управленческий обход",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.delegation",
+      "type": "method",
+      "label": "Делегирование задач",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.grow",
+      "type": "method",
+      "label": "Модель GROW",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.workforce",
+      "type": "domain",
+      "label": "Персонал и команда",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.recruitment",
+      "type": "process",
+      "label": "Подбор персонала",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.onboarding",
+      "type": "process",
+      "label": "Адаптация и стажировка",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.training",
+      "type": "process",
+      "label": "Обучение сотрудников",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.attestation",
+      "type": "process",
+      "label": "Аттестация и проверка знаний",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.motivation",
+      "type": "process",
+      "label": "Мотивация и обратная связь",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.work-maturity",
+      "type": "method",
+      "label": "Уровень рабочей зрелости по конкретной задаче",
+      "evidence_class": "PRACTICE",
+      "limitations": [
+        "Не использовать как постоянный психологический тип или ярлык сотрудника."
+      ]
+    },
+    {
+      "id": "people.schedule",
+      "type": "process",
+      "label": "График выхода и планирование смен",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.guest-experience",
+      "type": "domain",
+      "label": "Гостевой опыт и сервис",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.guest-journey",
+      "type": "process",
+      "label": "Путь гостя: встреча, заказ, обслуживание, расчёт, прощание",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.recommendation",
+      "type": "process",
+      "label": "Рекомендация блюд и дополнительные продажи",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.complaints",
+      "type": "process",
+      "label": "Работа с жалобами и претензиями",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.recovery",
+      "type": "process",
+      "label": "Восстановление сервиса и эскалация",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.appearance",
+      "type": "standard",
+      "label": "Внешний вид и готовность сотрудника",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.uniform",
+      "type": "standard",
+      "label": "Униформа и рабочая одежда",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.hygiene",
+      "type": "standard",
+      "label": "Личная гигиена",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "service.etiquette",
+      "type": "standard",
+      "label": "Этикет и коммуникация с гостем",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "operations.audit",
+      "type": "domain",
+      "label": "Аудит и контроль процессов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "operations.quality",
+      "type": "process",
+      "label": "Контроль качества продукции и обслуживания",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "operations.video-review",
+      "type": "process",
+      "label": "Просмотр видеонаблюдения и фиксация результатов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "operations.mystery-guest",
+      "type": "process",
+      "label": "Программа тайный гость",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "operations.audit-report",
+      "type": "process",
+      "label": "Отчёт по аудиту, замечания и корректирующие действия",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "production.kitchen",
+      "type": "domain",
+      "label": "Производство и кухня",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "production.prep",
+      "type": "process",
+      "label": "Подготовка компонентов и полуфабрикатов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "production.order-flow",
+      "type": "process",
+      "label": "Поступление заказа, приготовление, сборка и контроль",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "production.menu-cycle",
+      "type": "process",
+      "label": "Обновление меню и сезонных позиций",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "production.recipe-spec",
+      "type": "artifact",
+      "label": "Технологические и калькуляционные карты",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "supply.procurement",
+      "type": "domain",
+      "label": "Снабжение и поставщики",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "supply.receiving",
+      "type": "process",
+      "label": "Заказ, приёмка, хранение сырья и материалов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "supply.claims",
+      "type": "process",
+      "label": "Претензии по качеству сырья и услуг",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "inventory.stocktake",
+      "type": "process",
+      "label": "Инвентаризация, списания и контроль запасов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "finance.management",
+      "type": "domain",
+      "label": "Финансы и управленческая отчётность",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "finance.food-cost",
+      "type": "concept",
+      "label": "Контроль себестоимости и Food Cost",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "finance.cash",
+      "type": "process",
+      "label": "Кассовые операции и движение денежных средств",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "finance.pnl-kpi",
+      "type": "process",
+      "label": "Управленческий отчёт, бюджет и KPI",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "people.payroll",
+      "type": "process",
+      "label": "Начисление, проверка и выплата заработной платы",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.food",
+      "type": "domain",
+      "label": "Пищевая и санитарная безопасность",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.haccp",
+      "type": "process",
+      "label": "Контроль санитарного состояния и применимых процедур HACCP",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.temperatures",
+      "type": "control",
+      "label": "Измерение и регистрация температур",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.fryer-oil",
+      "type": "control",
+      "label": "Контроль качества и замены фритюрных жиров",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.health-records",
+      "type": "record",
+      "label": "Журналы здоровья и допуска сотрудников",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "safety.fire-occupational",
+      "type": "domain",
+      "label": "Пожарная безопасность и охрана труда",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "facilities.maintenance",
+      "type": "domain",
+      "label": "Оборудование и техническое обслуживание",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "facilities.preventive",
+      "type": "process",
+      "label": "Плановое обслуживание и ремонт оборудования",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "delivery.channel",
+      "type": "domain",
+      "label": "Доставка и цифровые каналы",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "delivery.order",
+      "type": "process",
+      "label": "Приём, сборка, упаковка и передача заказа",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "records.document-flow",
+      "type": "process",
+      "label": "Документооборот и архивирование",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "records.contracts",
+      "type": "process",
+      "label": "Договоры и разрешительная документация",
+      "evidence_class": "PRACTICE"
+    }
+  ],
+  "edges": [
+    {
+      "from": "horeca.operations",
+      "to": "management.system",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "people.workforce",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "service.guest-experience",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "operations.audit",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "production.kitchen",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "supply.procurement",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "finance.management",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "safety.food",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "safety.fire-occupational",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "facilities.maintenance",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "delivery.channel",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "horeca.operations",
+      "to": "records.document-flow",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "management.system",
+      "to": "management.director-role",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.planning",
+      "type": "includes"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.daily-report",
+      "type": "includes"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.meetings",
+      "type": "includes"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.control",
+      "type": "includes"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.delegation",
+      "type": "includes"
+    },
+    {
+      "from": "management.planning",
+      "to": "management.time-budget",
+      "type": "uses"
+    },
+    {
+      "from": "management.daily-report",
+      "to": "finance.pnl-kpi",
+      "type": "uses"
+    },
+    {
+      "from": "management.control",
+      "to": "operations.audit",
+      "type": "cross_links"
+    },
+    {
+      "from": "management.delegation",
+      "to": "people.work-maturity",
+      "type": "uses"
+    },
+    {
+      "from": "management.grow",
+      "to": "people.training",
+      "type": "supports"
+    },
+    {
+      "from": "management.grow",
+      "to": "management.delegation",
+      "type": "supports"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.recruitment",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.onboarding",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.training",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.attestation",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.motivation",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.schedule",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "people.workforce",
+      "to": "people.payroll",
+      "type": "cross_links"
+    },
+    {
+      "from": "people.training",
+      "to": "people.attestation",
+      "type": "followed_by"
+    },
+    {
+      "from": "people.training",
+      "to": "service.appearance",
+      "type": "trains"
+    },
+    {
+      "from": "people.work-maturity",
+      "to": "management.delegation",
+      "type": "informs"
+    },
+    {
+      "from": "service.guest-experience",
+      "to": "service.guest-journey",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "service.guest-experience",
+      "to": "service.recommendation",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "service.guest-experience",
+      "to": "service.complaints",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "service.complaints",
+      "to": "service.recovery",
+      "type": "followed_by"
+    },
+    {
+      "from": "service.recovery",
+      "to": "operations.audit-report",
+      "type": "creates_feedback_for"
+    },
+    {
+      "from": "service.appearance",
+      "to": "service.uniform",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "service.appearance",
+      "to": "service.hygiene",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "service.appearance",
+      "to": "service.etiquette",
+      "type": "cross_links"
+    },
+    {
+      "from": "service.appearance",
+      "to": "people.training",
+      "type": "cross_links"
+    },
+    {
+      "from": "service.appearance",
+      "to": "operations.audit",
+      "type": "verified_by"
+    },
+    {
+      "from": "operations.audit",
+      "to": "operations.quality",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "operations.audit",
+      "to": "operations.video-review",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "operations.audit",
+      "to": "operations.mystery-guest",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "operations.audit",
+      "to": "operations.audit-report",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "operations.audit-report",
+      "to": "management.daily-report",
+      "type": "feeds"
+    },
+    {
+      "from": "operations.audit-report",
+      "to": "people.training",
+      "type": "may_trigger"
+    },
+    {
+      "from": "operations.quality",
+      "to": "production.order-flow",
+      "type": "checks"
+    },
+    {
+      "from": "production.kitchen",
+      "to": "production.prep",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "production.kitchen",
+      "to": "production.order-flow",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "production.kitchen",
+      "to": "production.menu-cycle",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "production.menu-cycle",
+      "to": "production.recipe-spec",
+      "type": "produces"
+    },
+    {
+      "from": "production.recipe-spec",
+      "to": "finance.food-cost",
+      "type": "feeds"
+    },
+    {
+      "from": "supply.procurement",
+      "to": "supply.receiving",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "supply.receiving",
+      "to": "inventory.stocktake",
+      "type": "cross_links"
+    },
+    {
+      "from": "supply.claims",
+      "to": "operations.audit-report",
+      "type": "may_trigger"
+    },
+    {
+      "from": "inventory.stocktake",
+      "to": "finance.management",
+      "type": "feeds"
+    },
+    {
+      "from": "finance.management",
+      "to": "finance.food-cost",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "finance.management",
+      "to": "finance.cash",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "finance.management",
+      "to": "finance.pnl-kpi",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "finance.management",
+      "to": "people.payroll",
+      "type": "cross_links"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.haccp",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.temperatures",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.fryer-oil",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.health-records",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "safety.fire-occupational",
+      "to": "facilities.maintenance",
+      "type": "cross_links"
+    },
+    {
+      "from": "delivery.channel",
+      "to": "delivery.order",
+      "type": "decomposes_into"
+    },
+    {
+      "from": "delivery.order",
+      "to": "production.order-flow",
+      "type": "cross_links"
+    },
+    {
+      "from": "records.document-flow",
+      "to": "finance.cash",
+      "type": "supports"
+    },
+    {
+      "from": "records.contracts",
+      "to": "supply.procurement",
+      "type": "supports"
+    },
+    {
+      "from": "facilities.maintenance",
+      "to": "management.control",
+      "type": "scheduled_by"
+    }
+  ],
+  "source_links": [
+    {
+      "source_id": "source.audit-process-model",
+      "node_ids": [
+        "management.system",
+        "people.recruitment",
+        "people.training",
+        "people.attestation",
+        "people.schedule",
+        "finance.food-cost",
+        "finance.cash",
+        "finance.pnl-kpi",
+        "production.kitchen",
+        "production.prep",
+        "production.order-flow",
+        "production.menu-cycle",
+        "supply.procurement",
+        "supply.receiving",
+        "inventory.stocktake",
+        "delivery.channel",
+        "delivery.order",
+        "safety.food",
+        "safety.temperatures",
+        "safety.fryer-oil",
+        "safety.health-records",
+        "safety.fire-occupational",
+        "facilities.maintenance",
+        "records.document-flow",
+        "records.contracts",
+        "operations.audit"
+      ]
+    },
+    {
+      "source_id": "source.director-calendar",
+      "node_ids": [
+        "management.director-role",
+        "management.planning",
+        "management.time-budget",
+        "management.daily-report",
+        "management.meetings",
+        "management.control",
+        "people.recruitment",
+        "people.onboarding",
+        "people.training",
+        "people.motivation",
+        "people.payroll",
+        "finance.pnl-kpi",
+        "inventory.stocktake",
+        "service.guest-experience",
+        "operations.audit",
+        "production.menu-cycle",
+        "safety.haccp"
+      ]
+    },
+    {
+      "source_id": "source.operational-management-training",
+      "node_ids": [
+        "management.system",
+        "management.director-role",
+        "management.meetings",
+        "management.delegation",
+        "management.grow",
+        "people.work-maturity",
+        "people.training",
+        "people.motivation"
+      ]
+    },
+    {
+      "source_id": "source.appearance-training",
+      "node_ids": [
+        "service.appearance",
+        "service.uniform",
+        "service.hygiene",
+        "service.etiquette",
+        "people.training",
+        "operations.audit"
+      ]
+    },
+    {
+      "source_id": "source.guest-service-standard-2025",
+      "node_ids": [
+        "service.guest-experience",
+        "service.guest-journey",
+        "service.recommendation",
+        "service.complaints",
+        "service.recovery",
+        "service.etiquette",
+        "service.appearance"
+      ]
+    },
+    {
+      "source_id": "source.restaurant-regulation",
+      "node_ids": [
+        "management.system",
+        "management.control",
+        "people.workforce",
+        "people.payroll",
+        "finance.cash",
+        "finance.pnl-kpi",
+        "production.kitchen",
+        "supply.procurement",
+        "inventory.stocktake",
+        "delivery.channel",
+        "delivery.order",
+        "safety.food",
+        "safety.fire-occupational",
+        "facilities.maintenance",
+        "records.document-flow",
+        "records.contracts",
+        "operations.audit"
+      ]
+    }
+  ]
+}
