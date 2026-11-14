@@ -85,6 +85,7 @@
     "skills/operational-audit/guest-experience.md",
     "skills/root-cause-analysis/SKILL.md",
     "skills/root-cause-analysis/integrated-diagnosis.md",
+    "src/evidence/adapter.js",
     "src/evidence/cli.js",
     "src/evidence/validate.js",
     "src/finance/ratios.js",
@@ -106,8 +107,8 @@
   ],
   "tests": {
     "stage4_existing": 11,
-    "knowledge_evidence_layer": 8,
-    "total_expected": 19,
+    "knowledge_evidence_layer": 11,
+    "total_expected": 22,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed"
   },
