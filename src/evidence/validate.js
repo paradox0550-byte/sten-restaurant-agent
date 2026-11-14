@@ -18,7 +18,9 @@ export function validateEvidenceRecord(record) {
   if (!Array.isArray(record.topic) || !record.topic.length) errors.push("topic must be a non-empty array");
   if (!Array.isArray(record.limitations) || !record.limitations.length) errors.push("limitations must be a non-empty array");
   const source = record.source || {};
-  for (const key of ["publisher","title","source_type","url","published_at","accessed_at"]) requireValue(source[key],`source.${key}`);
+  for (const key of ["publisher","title","source_type","accessed_at"]) requireValue(source[key],`source.${key}`);
+  if (source.url === undefined) errors.push("Missing required value: source.url");
+  if (source.published_at === undefined) errors.push("Missing required value: source.published_at");
   validDate(source.accessed_at,"source.accessed_at");
   validDate(source.published_at,"source.published_at",true);
   const validity = record.validity || {};
@@ -27,8 +29,9 @@ export function validateEvidenceRecord(record) {
   for (const key of ["published_on","effective_from","effective_to","last_verified_at","review_due_at"]) validDate(validity[key],`validity.${key}`,true);
   if (validity.effective_from && validity.effective_to && validity.effective_to < validity.effective_from) errors.push("effective_to precedes effective_from");
   if (record.evidence_class === "LAW") {
-    if (!record.territory?.jurisdictions?.length || record.territory.scope === "unknown") errors.push("LAW record requires a known jurisdiction");
-    if (!source.url && !source.citation) errors.push("LAW record requires an official source URL or precise citation");
+    const assertedLaw = record.record_status === "approved" || validity.status === "in_force";
+    if (assertedLaw && (!record.territory?.jurisdictions?.length || record.territory.scope === "unknown")) errors.push("LAW record requires a known jurisdiction");
+    if (assertedLaw && !source.url && !source.citation) errors.push("LAW record requires an official source URL or precise citation");
     if (validity.status === "in_force" && (!validity.effective_from || !validity.last_verified_at || !validity.review_due_at)) errors.push("In-force LAW requires effective_from, last_verified_at and review_due_at");
     if (record.record_status === "approved" && !["official_act","official_guidance"].includes(source.source_type)) errors.push("Approved LAW requires official source_type");
   }

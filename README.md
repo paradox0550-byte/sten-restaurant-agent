@@ -1,9 +1,35 @@
-# Excel analysis adapter boundary
+# STEN — Restaurant Management Intelligence
 
-Current package does not include an XLSX parsing dependency or a spreadsheet execution engine. For uploaded workbooks:
-1. preserve original workbook and sheet names;
-2. inspect headers, merged cells, formulas, hidden rows/columns and date/number formats;
-3. distinguish formula values from cached values;
-4. retain source cell/range lineage in extracted facts;
-5. report parsing gaps; never silently replace blanks with zero.
-A concrete parser can be added only after dependency and runtime approval.
+**STEN** is a provider-neutral professional AI expert package for the full HoReCa sector. It combines restaurant management methodology, finance, people/labor, menu economics, guest experience, operations and evidence-governed reasoning.
+
+## Canonical package structure
+
+- `assistant/` — identity, system instructions, behavior policy and conversation starters.
+- `knowledge/` — professional knowledge by domain plus the traceable evidence registry (`knowledge/evidence/`).
+- `skills/` — reusable analysis and operating workflows.
+- `tools/` — deterministic calculators, spreadsheet-analysis boundaries and API integration boundaries.
+- `memory/` — tenant-isolated establishment and manager profile schemas and memory policy.
+- `providers/` — ChatGPT and Claude adapter templates.
+- `evals/` — reasoning and evidence quality cases.
+- `docs/` — architecture and stage integration.
+- `src/` — executable deterministic source modules.
+- `tests/` — automated tests.
+
+## Run locally
+
+Requires Node.js 18+.
+
+```bash
+npm test
+npm run validate:evidence
+```
+
+## Evidence governance
+
+The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two STEN CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
+
+## Important boundaries
+
+This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store, production API or XLSX parser. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
+
+**No source = no fact. Missing != zero.**
