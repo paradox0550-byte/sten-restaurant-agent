@@ -49,7 +49,7 @@ test("field-aware ranking prioritizes delivery for peak-load service deteriorati
     new URL("../knowledge/graph/operational-knowledge-graph.json", import.meta.url), "utf8"
   ));
   const result = rankDocuments(
-    "В пиковые часы ухудшается сервис. Проверь график и нагрузку",
+    "Пиковая нагрузка, скорость выдачи и обслуживание в часы пик при доставке",
     graph.nodes,
     { limit: 10 }
   );
