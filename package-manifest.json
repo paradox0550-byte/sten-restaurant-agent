@@ -231,12 +231,13 @@
     "src/evaluation/knowledge-quality.js",
     "tests/knowledge-quality.test.js",
     "docs/knowledge-quality-integrity.md",
-    "knowledge/procedures/director-calendar-activity-catalog.json"
+    "knowledge/procedures/director-calendar-activity-catalog.json",
+    "tests/director-calendar.test.js"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 67,
+    "total_expected": 69,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
@@ -245,7 +246,8 @@
     "horeca_taxonomy": 4,
     "knowledge_graph": 3,
     "procedures_depth": 3,
-    "knowledge_quality": 2
+    "knowledge_quality": 2,
+    "director_calendar": 2
   },
   "stage_status": {
     "1": "integrated",
