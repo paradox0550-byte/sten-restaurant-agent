@@ -1,0 +1,32 @@
+name: STEN CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run test suite
+        run: npm test
+      - name: Validate evidence registry
+        run: npm run validate:evidence
+      - name: Verify manifest paths
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const manifest = JSON.parse(fs.readFileSync('package-manifest.json', 'utf8'));
+          const missing = manifest.files.filter((path) => !fs.existsSync(path));
+          if (missing.length) {
+            console.error('Missing manifest files:', missing);
+            process.exit(1);
+          }
+          console.log(`Manifest verified: ${manifest.files.length} files present.`);
+          NODE
