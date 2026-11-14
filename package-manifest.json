@@ -9,7 +9,8 @@
     4,
     5,
     6,
-    7
+    7,
+    8
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -39,7 +40,14 @@
     "lexical_knowledge_retrieval",
     "profile_aware_retrieval",
     "expert_context_assembly",
-    "explicit_evidence_conflict_reporting"
+    "explicit_evidence_conflict_reporting",
+    "management_cycle_orchestration",
+    "action_task_lifecycle",
+    "evidence_backed_outcome_verification",
+    "optional_embedding_adapter_contract",
+    "optional_semantic_reranker_contract",
+    "optional_semantic_conflict_detector_contract",
+    "horeca_knowledge_coverage_map"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -54,7 +62,12 @@
     "distributed_audit_storage",
     "vector_or_embedding_search",
     "automated_semantic_conflict_resolution",
-    "complete_knowledge_corpus"
+    "complete_knowledge_corpus",
+    "live_embedding_model_or_vector_database",
+    "deployed_semantic_reranker",
+    "deployed_semantic_contradiction_model",
+    "complete_curated_horeca_knowledge_corpus",
+    "external_task_management_connectors"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -67,11 +80,13 @@
     "docs/architecture.md",
     "docs/contributing-evidence.md",
     "docs/knowledge-evidence-layer.md",
+    "docs/management-cycle.md",
     "docs/retrieval-context.md",
     "docs/runtime-integration.md",
     "docs/stage-integration.md",
     "evals/core-quality-cases.md",
     "evals/knowledge-evidence-cases.md",
+    "knowledge/coverage/horeca-coverage.json",
     "knowledge/evidence/policy.md",
     "knowledge/evidence/registry.json",
     "knowledge/evidence/schema.json",
@@ -117,7 +132,10 @@
     "src/retrieval/context.js",
     "src/retrieval/index.js",
     "src/retrieval/rank.js",
+    "src/retrieval/reranker.js",
+    "src/retrieval/semantic-conflicts.js",
     "src/retrieval/text.js",
+    "src/retrieval/vector-adapter.js",
     "src/runtime/audit.js",
     "src/runtime/errors.js",
     "src/runtime/index.js",
@@ -126,12 +144,18 @@
     "src/runtime/tenant-memory.js",
     "src/runtime/tool-registry.js",
     "src/service/recovery.js",
+    "src/workflow/cycle.js",
+    "src/workflow/index.js",
+    "src/workflow/status.js",
+    "src/workflow/task.js",
+    "src/workflow/verification.js",
     "tests/evidence.test.js",
     "tests/finance.test.js",
     "tests/intelligence-engine.test.js",
     "tests/labor-menu-service.test.js",
     "tests/retrieval.test.js",
     "tests/runtime.test.js",
+    "tests/workflow.test.js",
     "tools/README.md",
     "tools/api/README.md",
     "tools/calculators/finance/ratios.js",
@@ -143,11 +167,12 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 36,
+    "total_expected": 42,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
-    "retrieval_layer": 6
+    "retrieval_layer": 6,
+    "workflow_layer": 6
   },
   "stage_status": {
     "1": "integrated",
@@ -156,6 +181,7 @@
     "4": "integrated_with_evidence_guardrails",
     "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated",
     "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed",
-    "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions"
+    "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions",
+    "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed"
   }
 }

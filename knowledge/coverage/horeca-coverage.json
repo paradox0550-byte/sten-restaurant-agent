@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Target coverage taxonomy for the STEN HoReCa knowledge corpus. Status describes repository content, not assumed completeness.",
+  "status_legend": {
+    "planned": "No curated knowledge package yet",
+    "partial": "Some methodology exists; coverage is incomplete",
+    "seeded": "Initial material exists; requires expansion and evidence review",
+    "reviewed": "Curated and reviewed corpus exists for the declared scope"
+  },
+  "sectors": [
+    {
+      "id": "restaurant",
+      "formats": [
+        "fine_dining",
+        "casual_dining",
+        "family_dining",
+        "author_cuisine",
+        "national_cuisine"
+      ],
+      "domains": [
+        "economics",
+        "food_cost",
+        "bar_cost",
+        "menu_engineering",
+        "procurement",
+        "inventory",
+        "production",
+        "service",
+        "guest_experience",
+        "staffing",
+        "payroll",
+        "leadership",
+        "operations",
+        "food_safety",
+        "fire_safety",
+        "maintenance",
+        "marketing",
+        "reservations",
+        "delivery",
+        "events",
+        "compliance"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "cafe",
+      "formats": [
+        "coffee_shop",
+        "bakery_cafe",
+        "dessert_cafe"
+      ],
+      "domains": [
+        "economics",
+        "coffee_costing",
+        "bakery_costing",
+        "menu",
+        "barista_operations",
+        "service",
+        "staffing",
+        "equipment",
+        "food_safety",
+        "marketing",
+        "delivery"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "bar",
+      "formats": [
+        "wine_bar",
+        "cocktail_bar",
+        "gastropub"
+      ],
+      "domains": [
+        "economics",
+        "beverage_cost",
+        "bar_inventory",
+        "mixology_operations",
+        "licensing",
+        "service",
+        "security",
+        "staffing",
+        "events"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "bakery",
+      "formats": [
+        "production_bakery",
+        "retail_bakery",
+        "confectionery"
+      ],
+      "domains": [
+        "production_planning",
+        "yield",
+        "recipe_costing",
+        "quality",
+        "food_safety",
+        "equipment",
+        "waste",
+        "retail",
+        "staffing",
+        "procurement"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "hotel_food_service",
+      "formats": [
+        "hotel_restaurant",
+        "breakfast",
+        "room_service",
+        "banquet"
+      ],
+      "domains": [
+        "outlet_economics",
+        "occupancy_demand",
+        "breakfast_operations",
+        "room_service",
+        "banquet_operations",
+        "service",
+        "staffing",
+        "procurement",
+        "food_safety"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "catering",
+      "formats": [
+        "contract_catering",
+        "event_catering",
+        "mobile_catering"
+      ],
+      "domains": [
+        "contract_economics",
+        "production_planning",
+        "transport",
+        "event_execution",
+        "food_safety",
+        "staffing",
+        "procurement",
+        "logistics"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "canteen",
+      "formats": [
+        "corporate_canteen",
+        "educational_canteen",
+        "healthcare_catering"
+      ],
+      "domains": [
+        "volume_production",
+        "menu_cycles",
+        "nutrition_constraints",
+        "procurement",
+        "food_safety",
+        "service_lines",
+        "labor_productivity",
+        "waste"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "food_hall",
+      "formats": [
+        "food_hall",
+        "food_court",
+        "multi_concept"
+      ],
+      "domains": [
+        "tenant_economics",
+        "shared_operations",
+        "common_area",
+        "tenant_service_levels",
+        "waste",
+        "facilities",
+        "security",
+        "analytics"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "quick_service",
+      "formats": [
+        "qsr",
+        "fast_casual",
+        "dark_kitchen",
+        "delivery_only"
+      ],
+      "domains": [
+        "throughput",
+        "speed_of_service",
+        "channel_economics",
+        "dispatch",
+        "packaging",
+        "menu_engineering",
+        "labor_productivity",
+        "food_safety",
+        "quality"
+      ],
+      "status": "planned"
+    }
+  ],
+  "cross_cutting_domains": [
+    "finance_and_pnl",
+    "tax_and_accounting_by_jurisdiction",
+    "labor_law_by_jurisdiction",
+    "food_safety_by_jurisdiction",
+    "fire_safety_by_jurisdiction",
+    "occupational_safety",
+    "procurement_and_supplier_management",
+    "inventory_and_stocktaking",
+    "recipe_and_yield_management",
+    "menu_and_pricing",
+    "service_and_guest_experience",
+    "workforce_and_payroll",
+    "leadership_and_training",
+    "maintenance_and_facilities",
+    "digital_channels_and_reputation",
+    "risk_and_incident_management",
+    "sustainability_and_waste",
+    "data_governance_and_privacy",
+    "business_continuity"
+  ],
+  "curation_rule": "Do not mark a domain reviewed until source provenance, evidence class, jurisdiction/scope, validity, applicability, limitations and reviewer are recorded."
+}

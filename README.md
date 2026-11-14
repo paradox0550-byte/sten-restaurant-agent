@@ -15,6 +15,10 @@
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
+## Management Workflow (Stage 8)
+
+The src/workflow module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding STEN to a vendor. See docs/management-cycle.md.
+
 ## Knowledge Retrieval & Expert Context (Stage 7)
 
 `src/retrieval/` provides deterministic lexical ranking, conservative establishment-profile applicability checks, Evidence Registry joining and explicit conflict reporting. It does not infer legal applicability or silently resolve source conflicts. See `docs/retrieval-context.md`.

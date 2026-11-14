@@ -20,3 +20,5 @@ Stage 6 is an injected runtime foundation. It does not include live provider SDK
 9. Knowledge Retrieval & Expert Context — deterministic lexical retrieval, establishment-profile relevance checks, Evidence Registry joining and explicit conflict surfacing.
 
 Stage 7 is a retrieval foundation. It does not yet include vector embeddings, a vector database, automatic semantic contradiction resolution or a complete curated knowledge corpus.
+
+10. Management Workflow — evidence-gated management cycles, approval-based action tasks, task lifecycle and measured outcome verification. Stage 8 also defines provider-neutral extension contracts for embeddings, semantic reranking and semantic conflict detection.
