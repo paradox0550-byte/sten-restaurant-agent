@@ -11,9 +11,30 @@
 - `memory/` — tenant-isolated establishment and manager profile schemas and memory policy.
 - `providers/` — ChatGPT and Claude adapter templates.
 - `evals/` — reasoning and evidence quality cases.
-- `docs/` — architecture and stage integration.
+- `docs/` — architecture, stage status and integration guidance.
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
+
+## Stage status — canonical summary
+
+| Stage | Capability | Engineering status | Important boundary |
+|---:|---|---|---|
+| 1 | Identity and behavior | Integrated | Instructions and policy are package assets, not a deployed assistant |
+| 2 | HoReCa management methodology | Integrated foundation | Not every sector or jurisdiction is fully covered |
+| 3 | Knowledge, skills and calculators | Integrated foundation | Knowledge depth and source review vary by domain |
+| 4 | Intelligence Engine | Integrated foundation | Deterministic structure; host model provides narrative reasoning |
+| 5 | Evidence Registry | Integrated | Registry validation does not certify legal applicability |
+| 6 | Runtime and integration boundary | Integrated foundation | Host must supply authentication, providers and persistent services |
+| 7 | Knowledge retrieval and expert context | Integrated | Lexical retrieval and applicability controls; no automatic conflict resolution |
+| 8 | Management workflow | Integrated | Approval-gated task lifecycle; no external task execution by itself |
+| 9 | Hybrid retrieval | Integrated reference implementation | Embeddings are injected; vector index is in-memory, not production storage |
+| 10 | Semantic ranking and conflict intelligence | Integrated adapter contracts | No production model is bundled; conflicts require human review |
+| 11 | HoReCa knowledge structure | Foundation integrated; validation open | Operational content, calculations and sector branches need expert review |
+| 12 | Expert Intelligence | Initial single-core integration | One core at `src/intelligence/engine.js`; not proof every diagnosis is correct |
+| 13 | Quality & Evaluation | Engineering framework closed | Golden benchmark is a regression fixture, not professional-quality certification |
+| 14 | Final Integration & Release | Engineering integration substantially complete; release open | Artifact verification, secret/private-data clearance and explicit approval remain |
+
+The detailed acceptance record is maintained in [Stage integration](docs/stage-integration.md). Stage 11 remains open and must not be marked complete by Stage 14.
 
 ## Expert Intelligence Core — Stage 12
 
@@ -25,7 +46,7 @@ Undeclared input requirements are `not_assessed`, not sufficient. Missing values
 
 ## Management Workflow (Stage 8)
 
-The src/workflow module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding STEN to a vendor. See docs/management-cycle.md.
+The `src/workflow/` module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding STEN to a vendor. See `docs/management-cycle.md`.
 
 ## Knowledge Retrieval & Expert Context (Stage 7)
 
@@ -42,6 +63,7 @@ Requires Node.js 18+.
 ```bash
 npm test
 npm run validate:evidence
+npm run validate:package
 ```
 
 ## Evidence governance
@@ -66,24 +88,16 @@ Optional host-injected reranking can reorder existing retrieval candidates witho
 
 Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.
 
+**Stage 11 closeout remains open.** The restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. See `docs/stage-11-validation.md`.
 
 ## Quality & Evaluation — Stage 13
 
-The existing `src/evaluation/knowledge-quality.js` provides metadata integrity checks plus retrieval ranking metrics and answer-evidence integrity checks. Eight labelled HoReCa golden cases are stored in `evals/stage-13-golden-cases.json`. Automated tests validate the metrics and case contracts; live retrieval baselines and expert-reviewed answer quality remain to be measured.
-
-**Stage 11 closeout remains open.** The taxonomy and graph foundation is integrated, but the restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. See `docs/stage-11-validation.md`.
-
+The existing `src/evaluation/knowledge-quality.js` provides metadata integrity checks, retrieval ranking metrics and answer-evidence integrity checks. Eight labelled HoReCa golden cases run against the operational graph. The current tuned lexical ranker measures Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%; the pinned nDCG baseline is 93.36%. These are retrieval regression metrics on a small curated set, not a general accuracy score or expert certification. See `docs/stage-13-quality-evaluation.md`.
 
 ## Final Integration & Release — Stage 14
 
-Stage 14 is in progress. It consolidates the existing core for a portable release; it does not add a second expert engine or imply that the knowledge corpus is complete.
+Stage 14 engineering integration is substantially complete. The latest verified CI result recorded for the integration code is 91/91 tests plus Evidence Registry and package-integrity checks on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd`. The manifest audit records 138/138 tracked paths. The later documentation-only commit must be checked by its own CI before claiming the current branch is green.
 
-Release gates:
-- one canonical architecture and accurate stage/status documentation;
-- package manifest reconciled with the tracked deliverables;
-- all automated tests, evidence validation and manifest-path checks passing;
-- provider setup instructions and capability limits verified;
-- security, tenant isolation, permissions, memory and audit boundaries reviewed;
-- release package and versioning reproducible, with limitations and non-production components clearly stated.
+The package remains a **working core**, not a published release. ChatGPT and Claude adapters are templates; the ChatGPT API host is a placeholder with no actions, and Claude MCP configuration is empty. Memory and audit are in-memory development/test adapters. No live provider connection, production API, persistent vector database, hosted memory or production authentication is included.
 
-Stage 11 substantive knowledge validation remains open and is not a Stage 14 shortcut. Passing engineering checks does not certify professional answer correctness, legal compliance or production security. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
+Open release gates: confirm no secrets or private operational data are in the distributable package, generate and verify the source archive from the final tagged commit, verify release notes/artifact contents, and obtain explicit release approval. Stage 11 substantive knowledge validation remains open. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
