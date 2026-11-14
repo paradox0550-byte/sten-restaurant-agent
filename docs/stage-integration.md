@@ -20,3 +20,8 @@ Not claimed:
 - production API, hosted memory, provider deployment or compliance certification.
 
 Legal records remain jurisdiction- and date-specific. Unknown profile data remain unknown. No registry entry certifies an establishment's compliance.
+
+
+## Stage 9 — Hybrid Retrieval
+
+Integrated: provider-injected query/document embeddings, validated in-memory cosine vector index, lexical+vector retrieval and Reciprocal Rank Fusion. The in-memory index is a reference implementation for tests and small workloads only; no production embedding provider or persistent vector database is bundled. Retrieval quality seed cases are versioned under `evals/` and require a labelled corpus before production acceptance.

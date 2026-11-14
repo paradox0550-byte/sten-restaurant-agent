@@ -1,0 +1,8 @@
+import test from"node:test";import assert from"node:assert/strict";import{InMemoryVectorIndex,hybridRetrieve,reciprocalRankFusion}from"../src/retrieval/index.js";
+const docs=[{id:"finance",title:"Food cost and recipe cost control",content:"Себестоимость блюда и закупки"},{id:"labor",title:"Staff scheduling",content:"Планирование смен персонала"},{id:"service",title:"Guest recovery",content:"Работа с жалобами гостей"}];
+const vectors={finance:[1,0],labor:[0,1],service:[-1,0]};
+const embedder={async embed(text){if(text.includes("закуп"))return[1,0];return[0,1];}};
+test("in-memory vector index ranks by cosine and validates dimensions",()=>{const index=new InMemoryVectorIndex();index.upsert(docs.map(d=>({id:d.id,vector:vectors[d.id]})));assert.equal(index.search({vector:[.9,.1]})[0].id,"finance");assert.throws(()=>index.search({vector:[1,2,3]}),/equal dimensions/);});
+test("hybrid retrieval fuses lexical and vector rankings",async()=>{const index=new InMemoryVectorIndex();index.upsert(docs.map(d=>({id:d.id,vector:vectors[d.id]})));const r=await hybridRetrieve({query:"закупки и себестоимость",documents:docs,embedder,index});assert.equal(r.mode,"hybrid");assert.equal(r.results[0].document.id,"finance");});
+test("hybrid retrieval falls back to lexical when provider/index is absent",async()=>{const r=await hybridRetrieve({query:"staff scheduling",documents:docs});assert.equal(r.mode,"lexical_fallback");assert.equal(r.results[0].document.id,"labor");});
+test("RRF combines rankings without duplicating documents",()=>{const a={id:"a"},b={id:"b"};const r=reciprocalRankFusion([[{document:a},{document:b}],[{document:b},{document:a}]]);assert.equal(r.length,2);assert.equal(r[0].document.id,"a");});

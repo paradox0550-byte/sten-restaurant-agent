@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "purpose": "Seed cases for retrieval evaluation; expected IDs are illustrative and must be reviewed against a curated corpus before release.",
+  "cases": [
+    {
+      "id": "retrieval.finance.001",
+      "query": "Как контролировать себестоимость блюд и закупки?",
+      "expected_document_ids": [
+        "finance"
+      ],
+      "domain": "finance",
+      "profile": {
+        "sector": "restaurant"
+      }
+    },
+    {
+      "id": "retrieval.labor.001",
+      "query": "Как планировать смены сотрудников?",
+      "expected_document_ids": [
+        "labor"
+      ],
+      "domain": "labor",
+      "profile": {
+        "sector": "restaurant"
+      }
+    },
+    {
+      "id": "retrieval.service.001",
+      "query": "Что делать при жалобе гостя?",
+      "expected_document_ids": [
+        "service"
+      ],
+      "domain": "guest_experience",
+      "profile": {
+        "sector": "restaurant"
+      }
+    }
+  ]
+}

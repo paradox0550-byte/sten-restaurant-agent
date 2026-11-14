@@ -10,7 +10,8 @@
     5,
     6,
     7,
-    8
+    8,
+    9
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -47,7 +48,12 @@
     "optional_embedding_adapter_contract",
     "optional_semantic_reranker_contract",
     "optional_semantic_conflict_detector_contract",
-    "horeca_knowledge_coverage_map"
+    "horeca_knowledge_coverage_map",
+    "provider_injected_embedding_execution",
+    "in_memory_vector_index",
+    "hybrid_lexical_vector_retrieval",
+    "reciprocal_rank_fusion",
+    "retrieval_quality_seed_cases"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -60,14 +66,17 @@
     "live_provider_connectors",
     "production_authentication_and_authorization",
     "distributed_audit_storage",
-    "vector_or_embedding_search",
     "automated_semantic_conflict_resolution",
     "complete_knowledge_corpus",
-    "live_embedding_model_or_vector_database",
     "deployed_semantic_reranker",
     "deployed_semantic_contradiction_model",
     "complete_curated_horeca_knowledge_corpus",
-    "external_task_management_connectors"
+    "external_task_management_connectors",
+    "production_vector_database",
+    "production_embedding_provider",
+    "measured_production_retrieval_quality",
+    "deployed_semantic_reranker",
+    "automated_semantic_contradiction_detection"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -162,16 +171,21 @@
     "tools/calculators/labor/productivity.js",
     "tools/calculators/menu/engineering.js",
     "tools/calculators/service/recovery.js",
-    "tools/excel-analysis/README.md"
+    "tools/excel-analysis/README.md",
+    "src/retrieval/vector-index.js",
+    "src/retrieval/hybrid.js",
+    "tests/retrieval-hybrid.test.js",
+    "evals/retrieval-quality-cases.json",
+    "docs/hybrid-retrieval.md"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 42,
+    "total_expected": 46,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
-    "retrieval_layer": 6,
+    "retrieval_layer": 10,
     "workflow_layer": 6
   },
   "stage_status": {
@@ -182,6 +196,7 @@
     "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated",
     "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed",
     "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions",
-    "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed"
+    "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed",
+    "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed"
   }
 }

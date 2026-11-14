@@ -45,3 +45,8 @@ The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND,
 This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store, production API or XLSX parser. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
 
 **No source = no fact. Missing != zero.**
+
+
+## Hybrid Retrieval (Stage 9)
+
+Stage 9 adds provider-injected embedding execution, a dependency-free in-memory cosine vector index for tests/small workloads, and hybrid lexical+vector retrieval using Reciprocal Rank Fusion. The current index is ephemeral and is not a production vector database. A real embedding model and persistent vector service must be supplied by the host. See `docs/hybrid-retrieval.md` and `evals/retrieval-quality-cases.json`.
