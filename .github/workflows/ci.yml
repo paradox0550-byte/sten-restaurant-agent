@@ -14,9 +14,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Run test suite
-        run: npm test
       - name: Validate evidence registry
         run: npm run validate:evidence
       - name: Verify package and manifest integrity
         run: npm run validate:package
+      - name: Run test suite
+        run: npm test
