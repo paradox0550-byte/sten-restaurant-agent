@@ -15,6 +15,14 @@
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
+## Expert Intelligence Core — Stage 12
+
+`src/intelligence/engine.js` is the **single expert-analysis control plane**. Its `buildExpertAnalysis` entry point coordinates existing retrieval and evidence modules, decision-input sufficiency, fact and calculation lineage, causal hypotheses, sourced financial scenario comparison and recommendation integrity. No second expert engine is maintained.
+
+The retrieval layer remains responsible for applicable knowledge ranking, evidence-registry joining and explicit conflict reporting. The evidence adapter remains responsible for registry eligibility. Existing finance calculators remain the source of deterministic ratio formulas. The workflow module remains responsible for approval-gated tasks and outcome verification. The expert core coordinates these capabilities rather than duplicating them.
+
+Undeclared input requirements are `not_assessed`, not sufficient. Missing values remain missing. Financial deltas are calculated only on matching metric, definition, scope, period, currency and unit with source lineage; direction is not automatically favourable or unfavourable. Causal links remain hypotheses. See `docs/stage-12-expert-intelligence.md`.
+
 ## Management Workflow (Stage 8)
 
 The src/workflow module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding STEN to a vendor. See docs/management-cycle.md.
@@ -46,7 +54,6 @@ This repository is a working core, not a deployed service. Provider adapters con
 
 **No source = no fact. Missing != zero.**
 
-
 ## Hybrid Retrieval (Stage 9)
 
 Stage 9 adds provider-injected embedding execution, a dependency-free in-memory cosine vector index for tests/small workloads, and hybrid lexical+vector retrieval using Reciprocal Rank Fusion. The current index is ephemeral and is not a production vector database. A real embedding model and persistent vector service must be supplied by the host. See `docs/hybrid-retrieval.md` and `evals/retrieval-quality-cases.json`.
@@ -58,8 +65,3 @@ Optional host-injected reranking can reorder existing retrieval candidates witho
 ## HoReCa Knowledge Structure (Stage 11)
 
 Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.
-
-
-## Expert Intelligence (Stage 12)
-
-`src/intelligence/expert-analysis.js` connects governed retrieval and the Intelligence Engine through `buildExpertAnalysis`. It checks decision-specific input sufficiency, preserves causal links as hypotheses, and compares sourced financial scenarios only on a matching scope, period, currency and unit. Missing values remain missing; financial deltas are directional, not automatically favourable or unfavourable. See `docs/stage-12-expert-intelligence.md`.
