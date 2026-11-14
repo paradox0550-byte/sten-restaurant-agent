@@ -1,0 +1,17 @@
+{
+  "package": "STEN",
+  "version": "0.5.0",
+  "methodology_domains": [
+    "finance",
+    "labor_payroll",
+    "menu_engineering",
+    "restaurant_operations",
+    "service",
+    "management",
+    "legal_evidence",
+    "research"
+  ],
+  "source_policy": "anonymized_generalized",
+  "integrity": "No source = no fact; Missing != zero",
+  "status": "working-core"
+}

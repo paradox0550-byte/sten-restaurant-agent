@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STEN Manager Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tenant_id",
+    "manager_id",
+    "updated_at"
+  ],
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manager_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preferred_detail_level": {
+      "enum": [
+        "concise",
+        "standard",
+        "detailed"
+      ]
+    },
+    "decision_style": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approved_workflows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferences": {
+      "type": "object"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
