@@ -106,4 +106,13 @@ test("Stage 13 runs golden queries through the actual lexical retrieval ranker",
   assert.deepEqual(report.results.map((item) => item.retrieved_ids), baseline.results.map((item) => item.retrieved_ids));
   assert.ok(Math.abs(report.macro.recallAtK - baseline.macro.recall_at_10) < 1e-12);
   assert.ok(Math.abs(report.macro.ndcgAtK - baseline.macro.ndcg_at_10) < 1e-12);
+  assert.deepEqual(
+    report.results.map((item) => [item.metrics.relevantFound, item.metrics.relevantTotal]),
+    baseline.results.map((item) => [item.relevant_found, item.relevant_total])
+  );
+  const fullyRetrieved = report.results.filter((item) => item.metrics.recallAtK === 1).length;
+  assert.equal(fullyRetrieved, 5);
+  assert.equal(report.results.length - fullyRetrieved, 3);
+  assert.equal(report.macro.recallAtK, 0.9291666666666667);
+  assert.equal(report.macro.reciprocalRank, 1);
 });
