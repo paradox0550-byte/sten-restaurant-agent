@@ -97,3 +97,28 @@ test("expert core does not claim readiness when input requirements were not decl
   assert.equal(result.sufficiency.status, "not_assessed");
   assert.equal(result.readiness, "incomplete");
 });
+
+test("expert core delegates restaurant ratios to the existing finance calculator", () => {
+  const result = buildExpertAnalysis({
+    query: "food cost analysis",
+    requiredInputs: ["period"],
+    providedInputs: { period: "2026-10" },
+    financialInputs: { revenue: 1000, cogs: 300, kitchenRevenue: 700, kitchenCogs: 210, labor: 250 }
+  });
+  assert.equal(result.financialRatios.cogsShare.value, 0.3);
+  assert.equal(result.financialRatios.kitchenFoodCost.value, 0.3);
+  assert.equal(result.financialRatios.laborCost.value, 0.25);
+  assert.equal(result.financialRatios.primeCost.value, 0.55);
+});
+
+test("expert core preserves unavailable financial ratios instead of assuming missing inputs are zero", () => {
+  const result = buildExpertAnalysis({
+    query: "food cost analysis",
+    requiredInputs: ["period"],
+    providedInputs: { period: "2026-10" },
+    financialInputs: { revenue: 1000, cogs: null, kitchenRevenue: 700, kitchenCogs: 210, labor: 250 }
+  });
+  assert.equal(result.financialRatios.cogsShare.status, "unavailable");
+  assert.equal(result.financialRatios.primeCost.status, "unavailable");
+  assert.equal(result.readiness, "incomplete");
+});
