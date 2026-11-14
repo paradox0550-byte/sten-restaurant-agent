@@ -6,7 +6,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -109,5 +110,12 @@
     "total_expected": 19,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed"
+  },
+  "stage_status": {
+    "1": "integrated",
+    "2": "integrated",
+    "3": "integrated",
+    "4": "integrated_with_evidence_guardrails",
+    "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated"
   }
 }

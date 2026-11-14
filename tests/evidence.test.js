@@ -12,3 +12,22 @@ test("missing establishment profile fields are explicit",()=>{const r=registry.r
 test("specialist review is not replaced by automatic compliance",()=>{const r=structuredClone(registry.records[0]);r.applicability.required_profile_fields=[];r.applicability.determination="specialist_review";assert.equal(evaluateApplicability(r,{},"2026-11-14").outcome,"specialist_review");});
 test("registry supports class/topic filtering",()=>{assert.equal(findEvidence(registry,{evidence_class:"CORE",topic:"reasoning"}).length,2);});
 test("tenant configuration is rejected from shared registry without tenant id",()=>{const r=structuredClone(registry.records[0]);r.id="config.test-isolation";r.evidence_class="CONFIGURATION";r.tenant_id=null;assert.ok(validateEvidenceRecord(r).errors.some(e=>e.includes("tenant_id")));});
+
+import {adaptEvidenceRegistry,toIntelligenceEvidence} from "../src/evidence/adapter.js";
+import {validateEvidence} from "../src/intelligence/engine.js";
+
+test("reviewed Evidence Registry records adapt into the Stage 4 envelope",()=>{
+ const adapted=adaptEvidenceRegistry(registry);
+ assert.equal(adapted.evidence.length,3);
+ assert.ok(adapted.excluded.some(x=>x.id==="law.placeholder-intake-template"));
+ assert.equal(validateEvidence(adapted.evidence).valid,true);
+});
+test("draft and unverified records cannot be promoted into confirmed evidence",()=>{
+ const record=registry.records.find(x=>x.id==="law.placeholder-intake-template");
+ assert.equal(toIntelligenceEvidence(record).evidence,null);
+});
+test("PRACTICE remains a distinct accepted evidence class",()=>{
+ const practice=adaptEvidenceRegistry(registry).evidence.find(x=>x.class==="PRACTICE");
+ assert.ok(practice);
+ assert.equal(validateEvidence([practice]).valid,true);
+});

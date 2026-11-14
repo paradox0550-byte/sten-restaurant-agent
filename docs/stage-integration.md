@@ -1,10 +1,22 @@
-# Stage integration record
+# Stage integration and closeout record
 
-This repository build consolidates:
-- Stage 1: assistant identity, canonical instructions, behavior rules, initial knowledge, memory policy and core evaluations.
-- Stage 2: finance/P&L, Food/Labor/Prime Cost, FOT/payroll/productivity, menu engineering status, shift/service and operational audit methodology.
-- Stage 3: cumulative knowledge base, deterministic calculators, service recovery, research register, provider notes and tests.
-- Stage 4: integrated Intelligence Engine, cross-domain diagnosis skill, evidence/fact guardrails and expanded tests.
-- Knowledge & Evidence Layer: source registry schema, provenance, validity, territory, applicability, limitations and lifecycle policy.
+## Integrated stages
+- Stage 1 — assistant identity, canonical instructions, behavior rules, knowledge governance, memory policy and core evaluations.
+- Stage 2 — finance/P&L, Food/Labor/Prime Cost, FOT/payroll/productivity, menu engineering, shift/service and operational audit methodology.
+- Stage 3 — cumulative knowledge base, deterministic calculators, service recovery, research register, provider adapter templates and tests.
+- Stage 4 — Intelligence Engine, cross-domain diagnosis, evidence/fact validation, unknown handling, hypothesis labelling and action verification fields.
+- Stage 5 — Knowledge & Evidence Layer: registry schema, provenance, validity lifecycle, territory, applicability, limitations, conflict policy and a registry-to-Intelligence-Engine adapter.
 
-Files are normalized to the canonical layout. The source content is preserved, with provider adapter stubs explicitly marked unconfigured. This package is a working core, not a production release.
+## Stage 5 integration boundary
+The src/evidence/adapter.js module maps reviewed/approved registry records into the Stage 4 evidence envelope. Draft, unknown-validity and unverified records are excluded rather than promoted to facts. PRACTICE is a distinct evidence class and is accepted by the Intelligence Engine; it is not interchangeable with LAW or RESEARCH.
+
+## Acceptance status
+The repository contains a working, testable foundation for Stages 1–5. Automated CI verifies tests, registry validity and all manifest paths. This does not mean every knowledge domain is populated or that the package is production-certified.
+
+Not claimed:
+- a live, exhaustive legal database for any jurisdiction;
+- a complete peer-reviewed research corpus;
+- automatic legal applicability matching for all establishment conditions;
+- production API, hosted memory, provider deployment or compliance certification.
+
+Legal records remain jurisdiction- and date-specific. Unknown profile data remain unknown. No registry entry certifies an establishment's compliance.

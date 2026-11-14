@@ -5,7 +5,7 @@
  */
 
 const EVIDENCE_CLASSES = new Set([
-  'CORE', 'LAW', 'RESEARCH', 'INDUSTRY', 'TREND', 'HYPOTHESIS', 'CONFIGURATION'
+  'CORE', 'LAW', 'RESEARCH', 'INDUSTRY', 'PRACTICE', 'TREND', 'HYPOTHESIS', 'CONFIGURATION'
 ]);
 const FACT_STATUSES = new Set(['observed', 'calculated', 'interpreted', 'hypothesis', 'unknown']);
 
