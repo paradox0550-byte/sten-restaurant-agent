@@ -28,7 +28,16 @@ Integrated: provider-injected query/document embeddings, validated in-memory cos
 Integrated: provider-injected semantic reranking with candidate allowlisting, provenance preservation and lexical/hybrid fallback on provider errors; semantic conflict-detection orchestration with source-pair validation, duplicate suppression and conservative contextual-difference classification. Every finding remains unresolved and requires human review. No production model/provider or automatic conflict resolution is configured. See docs/semantic-ranking-conflicts.md.
 
 ## Stage 11 — HoReCa Knowledge Structure
-Integrated: canonical nine-sector taxonomy with multi-format/channel dimensions; cross-sector management-domain catalog; tenant-scoped establishment profile; source intake checklist; evidence class, provenance, jurisdiction, validity, limitations and applicability governance. Curated domain packages, verified legal corpora and representative evaluations remain to be populated and reviewed. See docs/horeca-applicability-profile.md and docs/source-intake-checklist.md.
+
+Integrated foundation: canonical nine-sector taxonomy, cross-sector management-domain catalog, tenant-scoped establishment profile, source intake checklist, source provenance, evidence classes, jurisdiction/validity/applicability metadata and operational knowledge graph.
+
+**Closeout: not closed.** Substantive validation found that the 77-direction restaurant process catalog still marks all entries as requiring owner/jurisdiction review and reuses generic operation sequences extensively; the detailed curated set contains 12 procedures; eight of nine sector corpora are planned; and current answer-level quality is not measured. See `docs/stage-11-validation.md`. Stage 11 remains open for source-specific process review, sector branches, calculation validation and practical answer review.
+
 
 ## Stage 12 — One Expert Intelligence Core
-Integrated initial single-core orchestration in src/intelligence/engine.js: existing retrieval and evidence adapters feed one deterministic control plane for evidence validation, fact lineage, input sufficiency, causal hypotheses, compatible sourced financial comparisons and recommendation integrity. The parallel src/intelligence/expert-analysis.js implementation has been removed. This is an initial integration, not a claim that every diagnosis is correct or that Stage 11's operational catalog has passed substantive validation. See docs/stage-12-expert-intelligence.md.
+
+Integrated initial single-core orchestration in `src/intelligence/engine.js`: existing retrieval and evidence adapters feed one deterministic control plane for evidence validation, fact lineage, input sufficiency, causal hypotheses, compatible sourced financial comparisons and recommendation integrity. The parallel expert-analysis implementation has been removed. This is an initial integration, not a claim that every diagnosis is correct. See `docs/stage-12-expert-intelligence.md`.
+
+## Stage 13 — Quality & Evaluation
+
+Started: extended the existing `src/evaluation/knowledge-quality.js` with labelled retrieval ranking metrics (precision@k, recall@k, reciprocal rank, nDCG) and answer-integrity checks for factual evidence lineage, unknown values, hypothesis labels and unresolved conflicts. Added eight labelled HoReCa golden cases. Automated metrics currently test the evaluation primitives and case structure; live retrieval baselines and expert-adjudicated answer quality are still pending. See `docs/stage-13-quality-evaluation.md`.
