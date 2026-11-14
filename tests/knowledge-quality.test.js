@@ -103,24 +103,9 @@ test("Stage 13 runs golden queries through the actual lexical retrieval ranker",
   assert.ok(report.results.every((item) => item.expected_ids_missing_from_corpus.length === 0));
   const baseline = read("../evals/stage-13-retrieval-baseline.json");
   assert.equal(report.cases_scored, baseline.cases_scored);
-  // Ranking order may legitimately evolve as graph metadata is enriched.
-  // Keep the baseline as a quality floor rather than freezing every position.
-  assert.ok(report.macro.recallAtK >= baseline.macro.recall_at_10 - 1e-12);
-  assert.ok(report.macro.ndcgAtK >= baseline.macro.ndcg_at_10 - 1e-12);
-  assert.deepEqual(
-    report.results.map((item) => item.case_id),
-    baseline.results.map((item) => item.case_id)
-  );
-  for (const [index, item] of report.results.entries()) {
-    assert.ok(
-      item.metrics.recallAtK >= baseline.results[index].recall_at_10 - 1e-12,
-      `${item.case_id}: recall regressed`
-    );
-    assert.ok(
-      item.metrics.ndcgAtK >= baseline.results[index].ndcg_at_10 - 1e-12,
-      `${item.case_id}: nDCG regressed`
-    );
-  }
+  assert.deepEqual(report.results.map((item) => item.retrieved_ids), baseline.results.map((item) => item.retrieved_ids));
+  assert.ok(Math.abs(report.macro.recallAtK - baseline.macro.recall_at_10) < 1e-12);
+  assert.ok(Math.abs(report.macro.ndcgAtK - baseline.macro.ndcg_at_10) < 1e-12);
   assert.deepEqual(
     report.results.map((item) => [item.metrics.relevantFound, item.metrics.relevantTotal]),
     baseline.results.map((item) => [item.relevant_found, item.relevant_total])
