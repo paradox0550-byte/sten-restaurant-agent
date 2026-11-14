@@ -1,4 +1,4 @@
-import test from"node:test";import assert from"node:assert/strict";import{rankDocuments,assessDocumentApplicability,findExplicitConflicts,buildExpertContext}from"../src/retrieval/index.js";
+import test from"node:test";import fs from"node:fs";import assert from"node:assert/strict";import{rankDocuments,assessDocumentApplicability,findExplicitConflicts,buildExpertContext}from"../src/retrieval/index.js";
 const docs=[{id:"a",title:"Food cost контроль кухни",content:"Себестоимость блюд и контроль закупок",topic:["finance","food_cost"],applicability:{sectors:["restaurant"],formats:["casual_dining"],required_profile_fields:["service_model"],determination:"conditional"}},{id:"b",title:"Кофейня обслуживание",content:"Бариста и кофейное меню",topic:["service"],applicability:{sectors:["cafe"],formats:["coffee_shop"],required_profile_fields:[],determination:"conditional"}}];
 test("lexical retrieval ranks relevant documents deterministically",()=>{const r=rankDocuments("контроль food cost кухни",docs);assert.equal(r.status,"ok");assert.equal(r.results[0].document.id,"a");assert.deepEqual(r.results.map(x=>x.document.id),rankDocuments("контроль food cost кухни",docs).results.map(x=>x.document.id));});
 test("empty query is unavailable",()=>assert.equal(rankDocuments(" ",docs).reason,"empty_query"));
@@ -45,7 +45,7 @@ test("BM25 ranks the document with relevant aliases and keywords first", () => {
 
 
 test("field-aware ranking prioritizes delivery for peak-load service deterioration", () => {
-  const graph = JSON.parse(require("node:fs").readFileSync(
+  const graph = JSON.parse(fs.readFileSync(
     new URL("../knowledge/graph/operational-knowledge-graph.json", import.meta.url), "utf8"
   ));
   const result = rankDocuments(
