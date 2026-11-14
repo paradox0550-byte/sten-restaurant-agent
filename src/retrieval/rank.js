@@ -91,7 +91,9 @@ export function rankDocuments(query, documents = [], { limit = 10 } = {}) {
           : 1;
         const idf = Math.log(1 + (corpusSize - df + 0.5) / (df + 0.5));
         const bm25 = (frequency * (K1 + 1)) / (frequency + K1 * lengthNormalization);
-        termScore += idf * bm25 * group.weight;
+        // A token repeated across several fields should not be counted as
+        // several independent query matches. Keep its strongest field signal.
+        termScore = Math.max(termScore, idf * bm25 * group.weight);
       }
       if (termScore > 0) {
         matchedTerms.push(term);
