@@ -185,6 +185,7 @@
     "providers/claude/mcp-config.json",
     "providers/claude/project-instructions.md",
     "providers/claude/skills/README.md",
+    "scripts/validate-package.js",
     "skills/financial-analysis/SKILL.md",
     "skills/labor-analysis/SKILL.md",
     "skills/menu-analysis/SKILL.md",
