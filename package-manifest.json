@@ -265,10 +265,19 @@
     "director_calendar": 2
   },
   "stage_status": {
+    "1": "integrated_assistant_identity_and_governance",
+    "2": "integrated_horeca_methodology_foundation",
+    "3": "integrated_knowledge_skills_and_calculators_foundation",
+    "4": "integrated_intelligence_engine_foundation",
+    "5": "integrated_evidence_registry",
+    "6": "integrated_runtime_foundation_host_services_required",
+    "7": "integrated_lexical_retrieval_and_applicability",
+    "8": "integrated_approval_gated_management_workflow",
+    "9": "integrated_hybrid_retrieval_reference_implementation",
+    "10": "integrated_semantic_adapter_contracts_provider_required",
     "11": "foundation_integrated_substantive_validation_open",
     "12": "initial_single_core_integration",
     "13": "evaluation_engineering_framework_integrated_answer_quality_not_certified",
-    "14": "in_progress_final_integration_and_release",
-    "1-10": "integrated_foundation"
+    "14": "in_progress_final_integration_and_release"
   }
 }
