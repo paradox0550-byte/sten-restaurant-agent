@@ -84,3 +84,21 @@ Added `evals/stage-13-blind-holdout.json`: 12 new queries across supply quality,
 The cases were authored after the graph enrichment and are not used to tune retrieval or graph metadata. Their expected IDs are **provisional model-authored labels**, checked only for existence in the graph. They have not been independently adjudicated by a HoReCa expert. The file therefore deliberately says this is not an independently administered blind study. Until a qualified reviewer approves or corrects the expected IDs, the measured scores are diagnostic only and must not be represented as validated accuracy.
 
 A regression test runs all 12 through the production lexical ranker, verifies corpus coverage and distinct case IDs, and prints per-case and aggregate metrics in CI. It sets no arbitrary pass threshold and does not modify the graph or ranker. Do not tune against this holdout; after expert adjudication, keep a separate sealed set for final blind evaluation.
+
+
+### First diagnostic result (CI)
+
+The first run completed successfully on the unchanged 94-node graph and lexical ranker:
+
+| Metric | Holdout diagnostic |
+|---|---:|
+| Precision@10 | 23.33% |
+| Recall@10 | 68.06% |
+| MRR | 0.8153 |
+| nDCG@10 | 64.37% |
+
+Case-level retrieval is uneven. Cash reconciliation, seasonal menu costing and uniform readiness retrieved all provisional expected IDs. Temperature deviation retrieved 1/3; takeaway completeness 1/3; delivery handoff 2/4; payroll/timekeeping 2/4. The other cases range from 2/3 to 3/4.
+
+These values are **not a fair comparison** with the eight-case golden baseline because the questions and provisional labels differ and have not been expert-adjudicated. They are useful as a diagnostic signal only. The weaker safety and delivery cases should be reviewed first for two distinct possibilities: missing graph coverage versus lexical mismatch. Do not assume every missing expected ID is a ranker defect; the reviewer may decide an expected node is not actually relevant, or that the graph lacks the required knowledge.
+
+The exact first-run figures are recorded in `evals/stage-13-holdout-baseline.json` and were emitted by CI run [43601928590](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43601928590). No graph or ranker tuning was made in response to this result.
