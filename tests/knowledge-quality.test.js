@@ -100,5 +100,10 @@ test("Stage 13 runs golden queries through the actual lexical retrieval ranker",
   assert.equal(report.cases_total, cases.length);
   assert.ok(report.results.every((item) => item.retrieved_ids.length <= 10));
   assert.ok(report.results.every((item) => item.metrics.status === "scored"));
-  assert.ok(report.results.some((item) => item.expected_ids_missing_from_corpus.length > 0) === false);
+  assert.ok(report.results.every((item) => item.expected_ids_missing_from_corpus.length === 0));
+  const baseline = read("../evals/stage-13-retrieval-baseline.json");
+  assert.equal(report.cases_scored, baseline.cases_scored);
+  assert.deepEqual(report.results.map((item) => item.retrieved_ids), baseline.results.map((item) => item.retrieved_ids));
+  assert.ok(Math.abs(report.macro.recallAtK - baseline.macro.recall_at_10) < 1e-12);
+  assert.ok(Math.abs(report.macro.ndcgAtK - baseline.macro.ndcg_at_10) < 1e-12);
 });
