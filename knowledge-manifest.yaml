@@ -1,0 +1,11 @@
+version: 1
+package: STEN
+knowledge:
+  - ../../knowledge/finance/
+  - ../../knowledge/restaurant-operations/
+  - ../../knowledge/menu-engineering/
+  - ../../knowledge/hr-payroll/
+  - ../../knowledge/service-standards/
+  - ../../knowledge/management/
+evidence_registry: ../../knowledge/evidence/registry.json
+note: Attach files individually where the provider does not support directory uploads.

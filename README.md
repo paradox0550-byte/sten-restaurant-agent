@@ -1,32 +1,9 @@
-# STEN — Restaurant Management Intelligence
+# Excel analysis adapter boundary
 
-Portable, provider-neutral restaurant intelligence package for HoReCa.
-
-## Current build
-- Knowledge & Evidence Layer: **v0.5.0**
-- Goal: maintain a traceable registry of professional knowledge, legal requirements, scientific research, industry practice, trends, hypotheses, and restaurant-specific configuration.
-- Core rule: **No source = no fact. Missing != zero.**
-
-## Repository structure
-- `knowledge/evidence/` — registry schema, lifecycle and applicability policy, controlled vocabularies, starter records.
-- `src/evidence/` — dependency-free JavaScript validation and query helpers.
-- `tests/` — Node.js built-in test suite.
-- `docs/` — contributor and ingestion guidance.
-
-## Quick start
-Requires Node.js 18+.
-
-```bash
-node --test
-```
-
-## Evidence principles
-1. Every factual knowledge record carries provenance.
-2. Jurisdiction and effective dates are explicit for legal records.
-3. Applicability is distinct from validity: a valid rule may not apply to every establishment.
-4. Missing information is represented as unknown, never silently coerced to false or zero.
-5. Conflicting or superseded sources remain traceable; no silent overwrite.
-6. Research, law, professional practice, industry guidance, trends, hypotheses, and configuration are separate evidence classes.
-7. A registry record is not a legal opinion, certification, or declaration of compliance.
-
-See [Knowledge & Evidence Layer](docs/knowledge-evidence-layer.md).
+Current package does not include an XLSX parsing dependency or a spreadsheet execution engine. For uploaded workbooks:
+1. preserve original workbook and sheet names;
+2. inspect headers, merged cells, formulas, hidden rows/columns and date/number formats;
+3. distinguish formula values from cached values;
+4. retain source cell/range lineage in extracted facts;
+5. report parsing gaps; never silently replace blanks with zero.
+A concrete parser can be added only after dependency and runtime approval.
