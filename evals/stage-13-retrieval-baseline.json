@@ -8,17 +8,17 @@
     "retrieval": "src/retrieval/rank.js",
     "mode": "lexical",
     "rank_commit": "72eb89e8d2038951aa732c81fb298cee65a53f7c",
-    "text_commit": "1649f09e67d7548335b29eac15c2e63e8d185858"
+    "text_commit": "3ffd3ef5a856cac60c1c0a8e6aacfce6a4cba9b4"
   },
   "scope": "Measured lexical ranking baseline over operational graph nodes only; not the full knowledge corpus, hybrid retrieval, semantic reranking or answer quality.",
   "k": 10,
   "cases_total": 8,
   "cases_scored": 8,
   "macro": {
-    "precision_at_10": 0.375,
-    "recall_at_10": 0.95,
+    "precision_at_10": 0.36249999999999993,
+    "recall_at_10": 0.9291666666666667,
     "reciprocal_rank": 1,
-    "ndcg_at_10": 0.9237243276936783
+    "ndcg_at_10": 0.9362397043412023
   },
   "results": [
     {
@@ -68,7 +68,7 @@
         "proc.monthly-sanitation-deep-clean",
         "service.guest-experience",
         "register.complaints",
-        "proc.guest-complaint-recovery"
+        "management.role-service-director"
       ],
       "relevant_found": 4,
       "relevant_total": 5,
@@ -80,23 +80,23 @@
     {
       "case_id": "golden.service.repeat-complaint",
       "retrieved_ids": [
+        "management.daily-report",
         "service.complaints",
+        "production.order-flow",
+        "operations.audit-report",
         "register.complaints",
         "proc.guest-complaint-recovery",
         "service.recovery",
-        "management.daily-report",
-        "operations.audit-report",
-        "production.order-flow",
-        "service.guest-journey",
-        "service.recommendation",
-        "service.guest-experience"
+        "finance.food-cost",
+        "people.schedule",
+        "management.control"
       ],
-      "relevant_found": 6,
+      "relevant_found": 5,
       "relevant_total": 6,
-      "precision_at_10": 0.6,
-      "recall_at_10": 1,
+      "precision_at_10": 0.5,
+      "recall_at_10": 0.8333333333333334,
       "reciprocal_rank": 1,
-      "ndcg_at_10": 0.8541058313273971
+      "ndcg_at_10": 0.8760157235037966
     },
     {
       "case_id": "golden.people.training-repeat-errors",
@@ -121,9 +121,10 @@
       "case_id": "golden.profile.unknown-attribute",
       "retrieved_ids": [
         "safety.fire-occupational",
-        "facilities.maintenance",
         "safety.food",
+        "facilities.maintenance",
         "facilities.preventive",
+        "management.control",
         "people.work-maturity"
       ],
       "relevant_found": 3,
@@ -136,15 +137,16 @@
     {
       "case_id": "golden.practice.unknown-cadence",
       "retrieved_ids": [
-        "service.appearance",
         "proc.appearance-readiness",
+        "service.appearance",
         "check.appearance",
-        "people.recruitment",
         "people.training",
-        "management.grow",
-        "people.schedule",
-        "management.director-role",
-        "management.control"
+        "management.control",
+        "people.recruitment",
+        "people.attestation",
+        "operations.audit",
+        "people.payroll",
+        "register.training"
       ],
       "relevant_found": 3,
       "relevant_total": 3,
@@ -158,12 +160,13 @@
       "retrieved_ids": [
         "finance.pnl-kpi",
         "management.daily-report",
+        "finance.cash",
         "operations.audit-report",
         "finance.management",
         "management.control",
         "management.grow",
-        "finance.cash",
         "horeca.operations",
+        "finance.food-cost",
         "management.director-role"
       ],
       "relevant_found": 3,
@@ -171,7 +174,7 @@
       "precision_at_10": 0.3,
       "recall_at_10": 1,
       "reciprocal_rank": 1,
-      "ndcg_at_10": 0.9217868789962071
+      "ndcg_at_10": 1
     }
   ]
 }
