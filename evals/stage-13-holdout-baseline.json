@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "generated_from": {
+    "commit": "0d91f1a46e4a6edeb6f8eaf9cf0aa58175991f4e",
+    "corpus": "knowledge/graph/operational-knowledge-graph.json",
+    "corpus_nodes": 94,
+    "cases": "evals/stage-13-blind-holdout.json",
+    "retrieval": "src/retrieval/rank.js",
+    "mode": "lexical",
+    "k": 10,
+    "ci_run": "https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43601928590"
+  },
+  "label_status": "provisional_model_authored_requires_expert_adjudication",
+  "scope": "Diagnostic lexical retrieval run over 94 operational graph nodes. Expected IDs are provisional, not expert-adjudicated. Not a validated accuracy score or independent blind study.",
+  "macro": {
+    "precision_at_10": 0.2333333333333334,
+    "recall_at_10": 0.6805555555555555,
+    "reciprocal_rank": 0.8152777777777778,
+    "ndcg_at_10": 0.6437170897316891
+  },
+  "results": [
+    {"case_id":"holdout.supply.receiving-quality","relevant_found":2,"relevant_total":3,"recall_at_10":0.6666666666666666,"first_relevant_rank":1},
+    {"case_id":"holdout.safety.temperature-deviation","relevant_found":1,"relevant_total":3,"recall_at_10":0.3333333333333333,"first_relevant_rank":3},
+    {"case_id":"holdout.finance.cash-reconciliation","relevant_found":3,"relevant_total":3,"recall_at_10":1,"first_relevant_rank":1},
+    {"case_id":"holdout.delivery.handoff-delay","relevant_found":2,"relevant_total":4,"recall_at_10":0.5,"first_relevant_rank":1},
+    {"case_id":"holdout.menu.seasonal-costing","relevant_found":3,"relevant_total":3,"recall_at_10":1,"first_relevant_rank":1},
+    {"case_id":"holdout.service.uniform-readiness","relevant_found":4,"relevant_total":4,"recall_at_10":1,"first_relevant_rank":1},
+    {"case_id":"holdout.safety.guest-allergy","relevant_found":3,"relevant_total":4,"recall_at_10":0.75,"first_relevant_rank":1},
+    {"case_id":"holdout.management.unowned-tasks","relevant_found":3,"relevant_total":4,"recall_at_10":0.75,"first_relevant_rank":5},
+    {"case_id":"holdout.facilities.post-maintenance","relevant_found":2,"relevant_total":3,"recall_at_10":0.6666666666666666,"first_relevant_rank":4},
+    {"case_id":"holdout.delivery.takeaway-completeness","relevant_found":1,"relevant_total":3,"recall_at_10":0.3333333333333333,"first_relevant_rank":1},
+    {"case_id":"holdout.people.payroll-time-record","relevant_found":2,"relevant_total":4,"recall_at_10":0.5,"first_relevant_rank":1},
+    {"case_id":"holdout.finance.sales-decline-review","relevant_found":2,"relevant_total":3,"recall_at_10":0.6666666666666666,"first_relevant_rank":1}
+  ]
+}
