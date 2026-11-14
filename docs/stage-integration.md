@@ -43,3 +43,8 @@ Integrated initial single-core orchestration in `src/intelligence/engine.js`: ex
 **Engineering framework closeout: closed.** The existing `src/evaluation/knowledge-quality.js` now provides labelled retrieval metrics, answer-integrity checks and the production lexical-ranker evaluation path. Eight labelled HoReCa golden cases run against the 94-node operational graph. The pinned baseline records Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.36%; five of eight cases retrieve every expected ID and three are partial (inventory 4/5, schedule/service capacity 4/5, repeat complaint 5/6). All eight have at least one relevant hit. Case counts, ranked IDs and aggregate metrics are regression-tested. See `docs/stage-13-quality-evaluation.md`.
 
 This closes implementation of the evaluation framework and its initial lexical benchmark only. Blind holdout, full source-backed and configured hybrid/vector evaluation, and expert-adjudicated end-to-end answer quality remain follow-up acceptance gates. This does not close Stage 11 or certify professional/legal answer correctness.
+
+
+### Stage 13 follow-up — holdout preparation
+
+Added a 12-query post-enrichment holdout draft at `evals/stage-13-blind-holdout.json`. It is executed through the existing production lexical ranker by the quality test suite, without graph/ranker tuning or score thresholds. Expected IDs are provisional model-authored labels and require expert adjudication; this is preparation for, not a substitute for, a genuinely blind independent evaluation. See `docs/stage-13-quality-evaluation.md`.
