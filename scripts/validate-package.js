@@ -15,7 +15,7 @@ if (new Set(manifest.files).size !== manifest.files.length) {
 }
 
 const tracked = execFileSync("git", ["ls-files", "-z"], { encoding: "utf8" })
-  .split("\\0")
+  .split(String.fromCharCode(0))
   .filter(Boolean)
   .sort();
 const declared = [...manifest.files].sort();
