@@ -48,3 +48,30 @@ This closes implementation of the evaluation framework and its initial lexical b
 ### Stage 13 follow-up — holdout preparation
 
 Added a 12-query post-enrichment holdout draft at `evals/stage-13-blind-holdout.json`, executed through the existing production lexical ranker without graph/ranker tuning or score thresholds. Its first diagnostic run is pinned in `evals/stage-13-holdout-baseline.json` (Recall@10 68.06%, MRR 0.8153, nDCG@10 64.37%). Expected IDs are provisional model-authored labels and require expert adjudication; this is preparation for, not a substitute for, a genuinely blind independent evaluation. See `docs/stage-13-quality-evaluation.md`.
+
+
+## Stage 14 — Final Integration & Release
+
+**Status: in progress; no release is declared.**
+
+Scope:
+- stabilize and document the existing interfaces and provider contracts;
+- review security boundaries, tenant isolation, permission gating, memory and audit limitations;
+- reconcile package manifests and canonical documentation with the tracked repository;
+- verify provider setup instructions and supported-host limitations;
+- run the complete CI gates and resolve regressions without weakening tests or silently refreshing baselines;
+- prepare a reproducible versioned package and release notes.
+
+Current verified blockers:
+- latest main CI run `43604092049` failed in `tests/knowledge-quality.test.js`: 88/89 tests passed; the exact Stage 13 golden retrieval ranking differs from its pinned baseline after graph enrichment. The baseline must not be changed until each ranking movement and its relevance impact are reviewed.
+- `package-manifest.json` lists 125 files while the tracked tree contains 135; ten tracked paths are absent from the manifest.
+- `package-manifest.json` stage integration metadata stops at Stage 11 and does not represent the integrated Stage 12 and Stage 13 work.
+- `docs/architecture.md` stops at the Stage 8 description while `stage-integration.md` records Stages 9–13.
+- No GitHub Release is currently published.
+
+Non-goals:
+- do not reopen or claim completion of Stage 11 substantive validation;
+- do not add production providers, persistent vector storage, hosted memory, authentication, external services or dependencies as part of documentation closeout;
+- do not deploy or claim production certification.
+
+Stage 14 may close only after the release checklist in `docs/stage-14-final-integration-release.md` is evidenced.
