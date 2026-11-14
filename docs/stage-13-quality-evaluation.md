@@ -74,7 +74,7 @@ Stage 11 remains open and is not closed by this evaluation framework. No claim i
 
 ## CI record
 
-The Stage 13 regression suite pins ranked result IDs, per-case relevant counts and aggregate metrics. The most recent successful CI run before this closeout is recorded in the repository workflow history; the closeout commit itself must pass CI before it is considered integrated.
+The Stage 13 regression suite pins baseline metrics and per-case relevant counts. It treats exact top-10 IDs as diagnostic ordering, while gating unchanged per-case Recall@10, per-case nDCG within 0.01 of baseline, and non-regressing macro Recall@10 and nDCG@10. The most recent successful CI run before this closeout is recorded in the repository workflow history; the closeout commit itself must pass CI before it is considered integrated.
 
 
 ## Post-enrichment holdout draft
@@ -83,7 +83,7 @@ Added `evals/stage-13-blind-holdout.json`: 12 new queries across supply quality,
 
 The cases were authored after the graph enrichment and are not used to tune retrieval or graph metadata. Their expected IDs are **provisional model-authored labels**, checked only for existence in the graph. They have not been independently adjudicated by a HoReCa expert. The file therefore deliberately says this is not an independently administered blind study. Until a qualified reviewer approves or corrects the expected IDs, the measured scores are diagnostic only and must not be represented as validated accuracy.
 
-A regression test runs all 12 through the production lexical ranker, verifies corpus coverage and distinct case IDs, and prints per-case and aggregate metrics in CI. It sets no arbitrary pass threshold and does not modify the graph or ranker. Do not tune against this holdout; after expert adjudication, keep a separate sealed set for final blind evaluation.
+A regression test runs all 12 through the production lexical ranker, verifies corpus coverage and distinct case IDs, and prints per-case and aggregate metrics in CI. These labels remain provisional; they are not used as a pass threshold and must not be tuned as if expert truth. Do not tune against this holdout; after expert adjudication, keep a separate sealed set for final blind evaluation.
 
 
 ### First diagnostic result (CI)
