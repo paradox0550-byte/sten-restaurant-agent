@@ -1,0 +1,6 @@
+import test from"node:test";import assert from"node:assert/strict";import fs from"node:fs";
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),"utf8"));
+test("HoReCa taxonomy has unique sector and format identifiers",()=>{const t=read("../knowledge/taxonomy/horeca-taxonomy.json"),s=t.sectors.map(x=>x.id),f=t.sectors.flatMap(x=>x.formats);assert.equal(new Set(s).size,s.length);assert.equal(new Set(f).size,f.length);assert.ok(s.includes("hotel_food_service"));assert.ok(f.includes("dark_kitchen"));});
+test("management domain catalog has unique broad coverage",()=>{const d=read("../knowledge/taxonomy/management-domains.json").domains;assert.ok(d.length>=20);assert.equal(new Set(d.map(x=>x.id)).size,d.length);});
+test("establishment profile preserves unknown engineering facts and tenant scope",()=>{const p=read("../memory/restaurant-profile.schema.json");assert.ok(p.required.includes("tenant_id"));assert.ok(p.properties.engineering.properties.gas_equipment.type.includes("null"));assert.ok(p.properties.engineering.properties.open_fire.type.includes("null"));});
+test("coverage distinguishes defined taxonomy from reviewed knowledge",()=>{const c=read("../knowledge/coverage/horeca-coverage.json");assert.equal(c.sectors.length,9);assert.ok(c.curation_rule.includes("reviewed"));});

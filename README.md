@@ -54,3 +54,7 @@ Stage 9 adds provider-injected embedding execution, a dependency-free in-memory 
 ## Semantic Ranking & Conflict Intelligence (Stage 10)
 
 Optional host-injected reranking can reorder existing retrieval candidates without losing their source metadata. Optional semantic conflict detection validates candidate source pairs, distinguishes contextual differences (such as jurisdiction or validity periods) from potential contradictions, and requires human review. No production model is bundled and no conflict is automatically resolved. See `docs/semantic-ranking-conflicts.md`.
+
+## HoReCa Knowledge Structure (Stage 11)
+
+Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.

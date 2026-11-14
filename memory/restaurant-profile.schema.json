@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "STEN Restaurant Profile",
+  "title": "STEN HoReCa Establishment Profile",
+  "description": "Tenant-scoped profile. Null or omitted means unknown, not zero, false, compliant, absent or not applicable.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -8,7 +9,8 @@
     "establishment_id",
     "name",
     "jurisdiction",
-    "format",
+    "primary_sector",
+    "primary_format",
     "updated_at"
   ],
   "properties": {
@@ -28,18 +30,54 @@
       "type": "string",
       "minLength": 2
     },
-    "sector": {
-      "type": "string"
+    "primary_sector": {
+      "enum": [
+        "restaurant",
+        "cafe",
+        "bar",
+        "bakery",
+        "hotel_food_service",
+        "catering",
+        "canteen",
+        "food_hall",
+        "quick_service",
+        "other"
+      ]
     },
-    "format": {
+    "primary_format": {
       "type": "string",
       "minLength": 1
     },
-    "service_model": {
+    "additional_formats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "business_model": {
       "type": [
         "string",
         "null"
       ]
+    },
+    "service_models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sales_channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "production_models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "address": {
       "type": [
@@ -52,6 +90,13 @@
         "string",
         "null"
       ]
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Z]{3}$"
     },
     "area_m2": {
       "type": [
@@ -81,62 +126,255 @@
       ],
       "minimum": 0
     },
-    "gas_equipment": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
-    "open_fire": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
-    "fryers": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
-    "extraction_system": {
-      "type": [
-        "boolean",
-        "null"
-      ]
-    },
-    "building_type": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "departments": {
-      "type": "array",
-      "items": {
-        "type": "string"
+    "building": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "building_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ownership_or_lease": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mall_or_complex": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "hotel_integrated": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "floors_used": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer"
+          }
+        },
+        "shared_areas": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-    "currency": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "engineering": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gas_equipment": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "open_fire": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fryers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "extraction_system": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fire_suppression": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "solid_fuel": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "electrical_capacity_kw": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "ventilation_details": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "equipment_inventory_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
     },
-    "accounting_basis": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "operating_structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "departments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "production_sites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "central_kitchen": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "delivery_fleet": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reservation_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
     },
-    "approved_metrics": {
-      "type": "object"
+    "finance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accounting_basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fiscal_period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approved_metrics": {
+          "type": "object"
+        },
+        "chart_of_accounts_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pnl_source_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "workforce": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "employee_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "employment_models": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "payroll_frequency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "staffing_model_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "compliance_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "permits_and_licenses_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "food_safety_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fire_safety_documents_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "specialist_assessment_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     },
     "source_refs": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "uniqueItems": true
+    },
+    "field_status": {
+      "type": "object",
+      "description": "Optional status by JSON Pointer: known, unknown, not_applicable, requires_confirmation."
     },
     "updated_at": {
       "type": "string",

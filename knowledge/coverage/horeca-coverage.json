@@ -1,12 +1,15 @@
 {
-  "schema_version": "1.0.0",
-  "purpose": "Target coverage taxonomy for the STEN HoReCa knowledge corpus. Status describes repository content, not assumed completeness.",
+  "schema_version": "2.0.0",
+  "purpose": "Coverage status for the STEN HoReCa corpus. Taxonomy coverage is distinct from reviewed knowledge coverage.",
   "status_legend": {
-    "planned": "No curated knowledge package yet",
-    "partial": "Some methodology exists; coverage is incomplete",
-    "seeded": "Initial material exists; requires expansion and evidence review",
-    "reviewed": "Curated and reviewed corpus exists for the declared scope"
+    "taxonomy_defined": "Sector and format taxonomy exists",
+    "planned": "No curated package yet",
+    "partial": "Some methodology exists; coverage incomplete",
+    "seeded": "Initial material exists; requires expansion and review",
+    "reviewed": "Curated and reviewed corpus exists for declared scope"
   },
+  "taxonomy_ref": "knowledge/taxonomy/horeca-taxonomy.json",
+  "management_domains_ref": "knowledge/taxonomy/management-domains.json",
   "sectors": [
     {
       "id": "restaurant",
@@ -15,173 +18,150 @@
         "casual_dining",
         "family_dining",
         "author_cuisine",
-        "national_cuisine"
+        "national_cuisine",
+        "bistro",
+        "trattoria",
+        "steakhouse"
       ],
-      "domains": [
-        "economics",
-        "food_cost",
-        "bar_cost",
-        "menu_engineering",
-        "procurement",
-        "inventory",
-        "production",
-        "service",
-        "guest_experience",
-        "staffing",
-        "payroll",
-        "leadership",
-        "operations",
-        "food_safety",
-        "fire_safety",
-        "maintenance",
-        "marketing",
+      "specific_focus": [
+        "table_service",
         "reservations",
-        "delivery",
-        "events",
-        "compliance"
+        "menu_mix",
+        "guest_journey",
+        "front_back_of_house_coordination"
       ],
-      "status": "partial"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "partial"
     },
     {
       "id": "cafe",
       "formats": [
         "coffee_shop",
+        "specialty_coffee",
         "bakery_cafe",
-        "dessert_cafe"
+        "dessert_cafe",
+        "brunch_cafe",
+        "grab_and_go"
       ],
-      "domains": [
-        "economics",
-        "coffee_costing",
-        "bakery_costing",
-        "menu",
-        "barista_operations",
-        "service",
-        "staffing",
-        "equipment",
-        "food_safety",
-        "marketing",
-        "delivery"
+      "specific_focus": [
+        "beverage_yield",
+        "barista_workflow",
+        "queue_management",
+        "takeaway_mix"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "bar",
       "formats": [
         "wine_bar",
         "cocktail_bar",
-        "gastropub"
+        "beer_bar",
+        "gastropub",
+        "lounge_bar",
+        "night_bar"
       ],
-      "domains": [
-        "economics",
+      "specific_focus": [
         "beverage_cost",
+        "pour_control",
         "bar_inventory",
-        "mixology_operations",
-        "licensing",
-        "service",
-        "security",
-        "staffing",
-        "events"
+        "licensing_context",
+        "night_operations"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "bakery",
       "formats": [
         "production_bakery",
         "retail_bakery",
-        "confectionery"
+        "confectionery",
+        "patisserie",
+        "central_kitchen_bakery"
       ],
-      "domains": [
-        "production_planning",
-        "yield",
-        "recipe_costing",
-        "quality",
-        "food_safety",
-        "equipment",
-        "waste",
-        "retail",
-        "staffing",
-        "procurement"
+      "specific_focus": [
+        "batch_production",
+        "yield_and_loss",
+        "shelf_life",
+        "production_plan"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "hotel_food_service",
       "formats": [
         "hotel_restaurant",
-        "breakfast",
+        "hotel_bar",
+        "breakfast_service",
         "room_service",
-        "banquet"
+        "minibar",
+        "banquet_and_conference"
       ],
-      "domains": [
-        "outlet_economics",
+      "specific_focus": [
         "occupancy_demand",
+        "outlet_pnl",
         "breakfast_operations",
-        "room_service",
-        "banquet_operations",
-        "service",
-        "staffing",
-        "procurement",
-        "food_safety"
+        "room_service_sla",
+        "banquet_orders"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "catering",
       "formats": [
-        "contract_catering",
         "event_catering",
-        "mobile_catering"
+        "contract_catering",
+        "mobile_catering",
+        "offsite_catering",
+        "on_site_catering"
       ],
-      "domains": [
-        "contract_economics",
-        "production_planning",
-        "transport",
-        "event_execution",
-        "food_safety",
-        "staffing",
-        "procurement",
-        "logistics"
+      "specific_focus": [
+        "contract_margin",
+        "event_orders",
+        "transport_controls",
+        "offsite_logistics",
+        "variable_guest_count"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "canteen",
       "formats": [
         "corporate_canteen",
         "educational_canteen",
-        "healthcare_catering"
+        "healthcare_catering",
+        "industrial_canteen"
       ],
-      "domains": [
-        "volume_production",
-        "menu_cycles",
-        "nutrition_constraints",
-        "procurement",
-        "food_safety",
-        "service_lines",
-        "labor_productivity",
-        "waste"
+      "specific_focus": [
+        "volume_forecast",
+        "cycle_menu",
+        "service_line_throughput",
+        "nutrition_constraints"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "food_hall",
       "formats": [
         "food_hall",
         "food_court",
-        "multi_concept"
+        "multi_concept_market",
+        "shared_food_market"
       ],
-      "domains": [
-        "tenant_economics",
-        "shared_operations",
-        "common_area",
-        "tenant_service_levels",
-        "waste",
-        "facilities",
-        "security",
-        "analytics"
+      "specific_focus": [
+        "tenant_unit_economics",
+        "shared_facilities",
+        "common_area_service",
+        "tenant_sla"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     },
     {
       "id": "quick_service",
@@ -189,42 +169,43 @@
         "qsr",
         "fast_casual",
         "dark_kitchen",
-        "delivery_only"
+        "delivery_only",
+        "pickup_only"
       ],
-      "domains": [
+      "specific_focus": [
         "throughput",
         "speed_of_service",
-        "channel_economics",
-        "dispatch",
-        "packaging",
-        "menu_engineering",
-        "labor_productivity",
-        "food_safety",
-        "quality"
+        "channel_contribution",
+        "dispatch_accuracy",
+        "packaging_cost"
       ],
-      "status": "planned"
+      "taxonomy_status": "taxonomy_defined",
+      "corpus_status": "planned"
     }
   ],
   "cross_cutting_domains": [
-    "finance_and_pnl",
-    "tax_and_accounting_by_jurisdiction",
-    "labor_law_by_jurisdiction",
-    "food_safety_by_jurisdiction",
-    "fire_safety_by_jurisdiction",
-    "occupational_safety",
-    "procurement_and_supplier_management",
-    "inventory_and_stocktaking",
-    "recipe_and_yield_management",
-    "menu_and_pricing",
-    "service_and_guest_experience",
-    "workforce_and_payroll",
-    "leadership_and_training",
-    "maintenance_and_facilities",
-    "digital_channels_and_reputation",
-    "risk_and_incident_management",
+    "finance_and_unit_economics",
+    "accounting_tax_and_controls",
+    "menu_product_and_pricing",
+    "procurement_and_suppliers",
+    "inventory_and_warehouse",
+    "kitchen_and_production",
+    "bar_and_beverage",
+    "service_and_hospitality",
+    "guest_experience_and_recovery",
+    "workforce_staffing_and_payroll",
+    "leadership_training_and_culture",
+    "operations_and_shift_control",
+    "food_safety_and_hygiene",
+    "fire_building_and_occupational_safety",
+    "facilities_equipment_and_maintenance",
+    "marketing_sales_and_reputation",
+    "reservations_events_and_capacity",
+    "delivery_and_digital_channels",
+    "risk_incidents_and_continuity",
+    "data_privacy_and_technology",
     "sustainability_and_waste",
-    "data_governance_and_privacy",
-    "business_continuity"
+    "strategy_and_multiunit_management"
   ],
-  "curation_rule": "Do not mark a domain reviewed until source provenance, evidence class, jurisdiction/scope, validity, applicability, limitations and reviewer are recorded."
+  "curation_rule": "Do not mark a domain reviewed until provenance, evidence class, jurisdiction/scope, validity, applicability, limitations, reviewer and representative evaluation cases are recorded. Defined taxonomy is not a populated knowledge corpus."
 }

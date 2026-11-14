@@ -29,3 +29,7 @@ Integrated: provider-injected query/document embeddings, validated in-memory cos
 ## Stage 10 — Semantic Ranking & Conflict Intelligence
 
 Integrated: provider-injected semantic reranking with candidate allowlisting, provenance preservation and lexical/hybrid fallback on provider errors; semantic conflict-detection orchestration with source-pair validation, duplicate suppression and conservative contextual-difference classification. Every finding remains unresolved and requires human review. No production model/provider or automatic conflict resolution is configured. See `docs/semantic-ranking-conflicts.md`.
+
+## Stage 11 — HoReCa Knowledge Structure
+
+Integrated: canonical nine-sector taxonomy with multi-format/channel dimensions; cross-sector management-domain catalog; tenant-scoped establishment profile; source intake checklist; evidence class, provenance, jurisdiction, validity, limitations and applicability governance. Curated domain packages, verified legal corpora and representative evaluations remain to be populated and reviewed. See `docs/horeca-applicability-profile.md` and `docs/source-intake-checklist.md`.

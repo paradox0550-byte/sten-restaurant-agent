@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Canonical HoReCa sector/format taxonomy. Classification is not legal applicability.",
+  "classification_rules": [
+    "One primary sector may have multiple formats and channels.",
+    "Use hybrid/multi-format classification when appropriate; do not force one format.",
+    "Hotel F&B is an operating context and may combine restaurant, bar, room service and banquet formats.",
+    "Dark kitchen and delivery-only describe operating/channel models, not necessarily the underlying cuisine concept.",
+    "Unknown values remain unknown; never infer from the business name."
+  ],
+  "sectors": [
+    {
+      "id": "restaurant",
+      "label": "Ресторан",
+      "formats": [
+        "fine_dining",
+        "casual_dining",
+        "family_dining",
+        "author_cuisine",
+        "national_cuisine",
+        "bistro",
+        "trattoria",
+        "steakhouse"
+      ],
+      "specific_focus": [
+        "table_service",
+        "reservations",
+        "menu_mix",
+        "guest_journey",
+        "front_back_of_house_coordination"
+      ]
+    },
+    {
+      "id": "cafe",
+      "label": "Кафе и кофейня",
+      "formats": [
+        "coffee_shop",
+        "specialty_coffee",
+        "bakery_cafe",
+        "dessert_cafe",
+        "brunch_cafe",
+        "grab_and_go"
+      ],
+      "specific_focus": [
+        "beverage_yield",
+        "barista_workflow",
+        "queue_management",
+        "takeaway_mix"
+      ]
+    },
+    {
+      "id": "bar",
+      "label": "Бар",
+      "formats": [
+        "wine_bar",
+        "cocktail_bar",
+        "beer_bar",
+        "gastropub",
+        "lounge_bar",
+        "night_bar"
+      ],
+      "specific_focus": [
+        "beverage_cost",
+        "pour_control",
+        "bar_inventory",
+        "licensing_context",
+        "night_operations"
+      ]
+    },
+    {
+      "id": "bakery",
+      "label": "Пекарня и кондитерская",
+      "formats": [
+        "production_bakery",
+        "retail_bakery",
+        "confectionery",
+        "patisserie",
+        "central_kitchen_bakery"
+      ],
+      "specific_focus": [
+        "batch_production",
+        "yield_and_loss",
+        "shelf_life",
+        "production_plan"
+      ]
+    },
+    {
+      "id": "hotel_food_service",
+      "label": "Питание в отеле",
+      "formats": [
+        "hotel_restaurant",
+        "hotel_bar",
+        "breakfast_service",
+        "room_service",
+        "minibar",
+        "banquet_and_conference"
+      ],
+      "specific_focus": [
+        "occupancy_demand",
+        "outlet_pnl",
+        "breakfast_operations",
+        "room_service_sla",
+        "banquet_orders"
+      ]
+    },
+    {
+      "id": "catering",
+      "label": "Кейтеринг",
+      "formats": [
+        "event_catering",
+        "contract_catering",
+        "mobile_catering",
+        "offsite_catering",
+        "on_site_catering"
+      ],
+      "specific_focus": [
+        "contract_margin",
+        "event_orders",
+        "transport_controls",
+        "offsite_logistics",
+        "variable_guest_count"
+      ]
+    },
+    {
+      "id": "canteen",
+      "label": "Столовая и организованное питание",
+      "formats": [
+        "corporate_canteen",
+        "educational_canteen",
+        "healthcare_catering",
+        "industrial_canteen"
+      ],
+      "specific_focus": [
+        "volume_forecast",
+        "cycle_menu",
+        "service_line_throughput",
+        "nutrition_constraints"
+      ]
+    },
+    {
+      "id": "food_hall",
+      "label": "Фуд-холл и фуд-корт",
+      "formats": [
+        "food_hall",
+        "food_court",
+        "multi_concept_market",
+        "shared_food_market"
+      ],
+      "specific_focus": [
+        "tenant_unit_economics",
+        "shared_facilities",
+        "common_area_service",
+        "tenant_sla"
+      ]
+    },
+    {
+      "id": "quick_service",
+      "label": "Быстрое обслуживание",
+      "formats": [
+        "qsr",
+        "fast_casual",
+        "dark_kitchen",
+        "delivery_only",
+        "pickup_only"
+      ],
+      "specific_focus": [
+        "throughput",
+        "speed_of_service",
+        "channel_contribution",
+        "dispatch_accuracy",
+        "packaging_cost"
+      ]
+    }
+  ],
+  "operating_dimensions": {
+    "service_models": [
+      "full_table_service",
+      "counter_service",
+      "self_service",
+      "buffet",
+      "quick_service",
+      "delivery",
+      "takeaway",
+      "room_service",
+      "event_service",
+      "hybrid",
+      "unknown"
+    ],
+    "sales_channels": [
+      "dine_in",
+      "takeaway",
+      "delivery_own",
+      "delivery_marketplace",
+      "catering",
+      "hotel_room_charge",
+      "events",
+      "retail",
+      "unknown"
+    ],
+    "production_models": [
+      "made_to_order",
+      "batch_production",
+      "central_kitchen",
+      "commissary",
+      "regeneration",
+      "cook_chill",
+      "cook_freeze",
+      "hybrid",
+      "unknown"
+    ],
+    "business_models": [
+      "independent_single_unit",
+      "independent_multi_unit",
+      "franchise",
+      "chain_owned",
+      "management_contract",
+      "concession",
+      "contract_catering",
+      "hotel_managed",
+      "unknown"
+    ]
+  },
+  "field_states": [
+    "known",
+    "unknown",
+    "not_applicable",
+    "requires_confirmation"
+  ]
+}

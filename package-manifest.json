@@ -12,7 +12,8 @@
     7,
     8,
     9,
-    10
+    10,
+    11
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -58,7 +59,12 @@
     "provider_injected_semantic_reranking",
     "semantic_conflict_detection_orchestration",
     "contextual_conflict_classification",
-    "human_review_conflict_workflow"
+    "human_review_conflict_workflow",
+    "canonical_horeca_sector_format_taxonomy",
+    "cross_sector_management_domain_catalog",
+    "multi_format_establishment_profile_schema",
+    "source_intake_and_evidence_governance",
+    "profile_conditioned_applicability_framework"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -81,7 +87,10 @@
     "measured_production_retrieval_quality",
     "production_semantic_reranker_provider",
     "production_semantic_contradiction_model",
-    "automatic_conflict_resolution"
+    "automatic_conflict_resolution",
+    "complete_curated_horeca_knowledge_corpus",
+    "complete_current_legal_corpus_for_all_jurisdictions",
+    "automated_compliance_certification"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -183,17 +192,23 @@
     "evals/retrieval-quality-cases.json",
     "docs/hybrid-retrieval.md",
     "tests/retrieval-semantic.test.js",
-    "docs/semantic-ranking-conflicts.md"
+    "docs/semantic-ranking-conflicts.md",
+    "knowledge/taxonomy/horeca-taxonomy.json",
+    "knowledge/taxonomy/management-domains.json",
+    "docs/horeca-applicability-profile.md",
+    "docs/source-intake-checklist.md",
+    "tests/horeca-taxonomy.test.js"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 52,
+    "total_expected": 56,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
     "retrieval_layer": 16,
-    "workflow_layer": 6
+    "workflow_layer": 6,
+    "horeca_taxonomy": 4
   },
   "stage_status": {
     "1": "integrated",
@@ -205,6 +220,7 @@
     "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions",
     "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed",
     "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed",
-    "10": "semantic_reranking_and_conflict_intelligence_integrated_with_provider-injected_adapters; no production model configured; findings require human review"
+    "10": "semantic_reranking_and_conflict_intelligence_integrated_with_provider-injected_adapters; no production model configured; findings require human review",
+    "11": "HoReCa taxonomy, cross-sector management domains, establishment profile schema and source/applicability governance integrated; curated corpus population remains ongoing"
   }
 }
