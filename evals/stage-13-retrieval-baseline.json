@@ -1,109 +1,177 @@
 {
   "schema_version": "1.0.0",
   "generated_from": {
-    "commit": "306843e442b034e6c067e5c9a40357fd05ca6bd9",
+    "commit": "24d04ce879e64f716a3e6303d495eae29a3eece8",
     "corpus": "knowledge/graph/operational-knowledge-graph.json",
     "corpus_nodes": 94,
     "cases": "evals/stage-13-golden-cases.json",
     "retrieval": "src/retrieval/rank.js",
-    "mode": "lexical"
+    "mode": "lexical",
+    "rank_commit": "72eb89e8d2038951aa732c81fb298cee65a53f7c",
+    "text_commit": "1649f09e67d7548335b29eac15c2e63e8d185858"
   },
   "scope": "Measured lexical ranking baseline over operational graph nodes only; not the full knowledge corpus, hybrid retrieval, semantic reranking or answer quality.",
   "k": 10,
   "cases_total": 8,
   "cases_scored": 8,
   "macro": {
-    "precision_at_10": 0.025,
-    "recall_at_10": 0.0875,
-    "reciprocal_rank": 0.25,
-    "ndcg_at_10": 0.11903842475488431
+    "precision_at_10": 0.375,
+    "recall_at_10": 0.95,
+    "reciprocal_rank": 1,
+    "ndcg_at_10": 0.9237243276936783
   },
   "results": [
     {
       "case_id": "golden.finance.food-cost-missing-input",
       "retrieved_ids": [
         "finance.food-cost",
+        "production.order-flow",
+        "finance.pnl-kpi",
+        "finance.cash",
+        "management.daily-report",
         "safety.food"
       ],
-      "relevant_found": 1,
+      "relevant_found": 2,
       "relevant_total": 2,
-      "precision_at_10": 0.1,
-      "recall_at_10": 0.5,
+      "precision_at_10": 0.2,
+      "recall_at_10": 1,
       "reciprocal_rank": 1,
-      "ndcg_at_10": 0.6131471927654584
+      "ndcg_at_10": 0.9197207891481876
     },
     {
       "case_id": "golden.finance.inventory-variance",
       "retrieved_ids": [
         "finance.food-cost",
+        "inventory.stocktake",
+        "production.recipe-spec",
+        "register.stocktake",
+        "proc.monthly-stocktake",
+        "supply.receiving",
         "safety.food"
       ],
-      "relevant_found": 1,
+      "relevant_found": 4,
       "relevant_total": 5,
-      "precision_at_10": 0.1,
-      "recall_at_10": 0.2,
+      "precision_at_10": 0.4,
+      "recall_at_10": 0.8,
       "reciprocal_rank": 1,
-      "ndcg_at_10": 0.3391602052736161
+      "ndcg_at_10": 0.843537875344446
     },
     {
       "case_id": "golden.people.schedule-service-capacity",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "people.schedule",
+        "management.director-role",
+        "management.control",
+        "delivery.order",
+        "service.recovery",
+        "proc.staff-schedule-and-timekeeping",
+        "proc.monthly-sanitation-deep-clean",
+        "service.guest-experience",
+        "register.complaints",
+        "proc.guest-complaint-recovery"
+      ],
+      "relevant_found": 4,
       "relevant_total": 5,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.4,
+      "recall_at_10": 0.8,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 0.8687949224876582
     },
     {
       "case_id": "golden.service.repeat-complaint",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "service.complaints",
+        "register.complaints",
+        "proc.guest-complaint-recovery",
+        "service.recovery",
+        "management.daily-report",
+        "operations.audit-report",
+        "production.order-flow",
+        "service.guest-journey",
+        "service.recommendation",
+        "service.guest-experience"
+      ],
+      "relevant_found": 6,
       "relevant_total": 6,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.6,
+      "recall_at_10": 1,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 0.8541058313273971
     },
     {
       "case_id": "golden.people.training-repeat-errors",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "people.training",
+        "operations.audit",
+        "management.grow",
+        "people.work-maturity",
+        "operations.quality",
+        "service.appearance",
+        "service.guest-journey",
+        "service.recovery"
+      ],
+      "relevant_found": 5,
       "relevant_total": 5,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.5,
+      "recall_at_10": 1,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 0.9818483242455303
     },
     {
       "case_id": "golden.profile.unknown-attribute",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "safety.fire-occupational",
+        "facilities.maintenance",
+        "safety.food",
+        "facilities.preventive",
+        "people.work-maturity"
+      ],
+      "relevant_found": 3,
       "relevant_total": 3,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.3,
+      "recall_at_10": 1,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 1
     },
     {
       "case_id": "golden.practice.unknown-cadence",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "service.appearance",
+        "proc.appearance-readiness",
+        "check.appearance",
+        "people.recruitment",
+        "people.training",
+        "management.grow",
+        "people.schedule",
+        "management.director-role",
+        "management.control"
+      ],
+      "relevant_found": 3,
       "relevant_total": 3,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.3,
+      "recall_at_10": 1,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 1
     },
     {
       "case_id": "golden.conflict.revenue-sources",
-      "retrieved_ids": [],
-      "relevant_found": 0,
+      "retrieved_ids": [
+        "finance.pnl-kpi",
+        "management.daily-report",
+        "operations.audit-report",
+        "finance.management",
+        "management.control",
+        "management.grow",
+        "finance.cash",
+        "horeca.operations",
+        "management.director-role"
+      ],
+      "relevant_found": 3,
       "relevant_total": 3,
-      "precision_at_10": 0,
-      "recall_at_10": 0,
-      "reciprocal_rank": 0,
-      "ndcg_at_10": 0
+      "precision_at_10": 0.3,
+      "recall_at_10": 1,
+      "reciprocal_rank": 1,
+      "ndcg_at_10": 0.9217868789962071
     }
   ]
 }
