@@ -19,9 +19,10 @@ Prepare the existing STEN expert core as a coherent, portable, documented releas
 - Repository: `paradox0550-byte/sten-restaurant-agent`, default branch `main`.
 - Package version: `0.5.0`; status: `working-core`.
 - Node requirement: `>=18`; CI uses Node.js 22.
-- Package scripts: `npm test`, `npm run validate:evidence`.
-- Current tracked tree: 136 files.
-- `package-manifest.json`: 136 listed paths; verified against the recursive Git tree with no missing or unlisted paths.
+- Package scripts: `npm test`, `npm run validate:evidence`, `npm run validate:package`.
+- Latest recorded package audit: 138 tracked files and 138 manifest paths, with no missing or unlisted paths.
+- Latest verified integration-code CI: run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654), commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` (91/91 tests, Evidence Registry and package-integrity checks passed).
+- Current main documentation commit: `625260941f913a569f62b958bbf074d0adac9518`; its own CI must be checked before claiming the current HEAD is green.
 - No GitHub Release is currently published.
 - No live provider SDK, production API, hosted memory, production authentication, persistent vector database or production embedding provider is claimed by the package manifest/README.
 
@@ -33,24 +34,13 @@ Prepare the existing STEN expert core as a coherent, portable, documented releas
 - Stage 13: evaluation engineering framework integrated; expert-adjudicated answer quality remains open.
 - Stage 14: current final integration and release work; not closed.
 
-### CI baseline and regression
+### Historical regression and resolution
 
-Latest inspected run: [STEN CI #96](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43612137666), commit `3f293a1241c7b2f8bc23bd90234ba0ac2f975d65`.
+An earlier CI run failed because graph enrichment changed the exact top-10 retrieval order. This was investigated rather than hidden by replacing expected IDs. Experimental field-aware ranking variants were rejected because they reduced golden nDCG below the pinned baseline. The production lexical BM25 ranker was retained with a conservative parameter adjustment and a targeted metadata correction. The accepted regression gate now checks per-case recall and nDCG tolerances plus macro metrics, rather than brittle exact-order equality. Details and measured results are recorded below and in `docs/stage-13-quality-evaluation.md`.
 
-- Result: failure.
-- Test suite: 90 passed, 1 failed out of 91.
-- Failing test: `Stage 13 runs golden queries through the actual lexical retrieval ranker`.
-- Failure: retrieved ID order differs from `evals/stage-13-retrieval-baseline.json` after graph enrichment. New schedule/payroll/safety/process nodes enter the top 10 and displace/reorder prior results in multiple cases.
-- This is a retrieval-ranking regression signal, not a test infrastructure failure.
-- Required action: inspect the changed graph nodes and ranking behaviour case by case; decide whether the ranking is genuinely better, worse or mixed. Only then adjust ranking/metadata or deliberately version the baseline with a documented rationale. Do not simply replace the expected arrays.
+### Documentation alignment
 
-### Documentation drift
-
-- `docs/stage-integration.md` describes Stages 9–13.
-- `docs/architecture.md` previously stopped at Stage 8.
-- `README.md` describes much of the later work but does not provide one consolidated release-status map.
-- `package-manifest.json` stage metadata previously stopped at Stage 11.
-- Provider configuration files exist for ChatGPT and Claude; their actual host setup and limitations must be verified against current provider documentation and schemas.
+The canonical stage map is now maintained in `docs/stage-integration.md` and repeated consistently in `README.md`, `docs/architecture.md` and `package-manifest.json`. Stage 11 remains substantively open; Stage 13 engineering framework is closed but does not certify expert answer quality; Stage 14 release publication remains open. Provider files remain explicitly unconfigured templates.
 
 ## Work packages
 
@@ -128,7 +118,7 @@ This review is not a penetration test or security certification.
 
 ## Current status
 
-**Stage 14 engineering integration is substantially complete; release publication is not complete.** Final CI run `43621988654` on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` passed all 91 tests, Evidence Registry validation and package-integrity validation. Release notes for 0.5.0 are prepared. The current golden retrieval metrics are Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% nDCG baseline. Expected labels and baseline file were not rewritten. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. Final artifact/release-note verification and explicit release approval remain open.
+**Stage 14 engineering integration is substantially complete; release publication is not complete.** Final verified integration-code CI run `43621988654` on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` passed all 91 tests, Evidence Registry validation and package-integrity validation. The later main commit `625260941f913a569f62b958bbf074d0adac9518` contains documentation updates and requires its own CI result before the current HEAD is called green. Release notes for 0.5.0 are prepared. The current golden retrieval metrics are Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% nDCG baseline. Expected labels and baseline file were not rewritten. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. Final artifact/release-note verification and explicit release approval remain open.
 
 
 ### Retrieval experiment disposition (14.5)
