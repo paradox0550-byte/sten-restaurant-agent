@@ -20,8 +20,8 @@ Prepare the existing STEN expert core as a coherent, portable, documented releas
 - Package version: `0.5.0`; status: `working-core`.
 - Node requirement: `>=18`; CI uses Node.js 22.
 - Package scripts: `npm test`, `npm run validate:evidence`.
-- Tracked tree: 135 files.
-- `package-manifest.json`: 125 listed paths before Stage 14 reconciliation; ten tracked paths were missing from the manifest.
+- Current tracked tree: 136 files.
+- `package-manifest.json`: 136 listed paths; verified against the recursive Git tree with no missing or unlisted paths.
 - No GitHub Release is currently published.
 - No live provider SDK, production API, hosted memory, production authentication, persistent vector database or production embedding provider is claimed by the package manifest/README.
 
@@ -35,10 +35,10 @@ Prepare the existing STEN expert core as a coherent, portable, documented releas
 
 ### CI baseline and regression
 
-Latest inspected run: [STEN CI #77](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43604092049), commit `97bfaf48c71fb39ef63b2e4f1efe9ea456b9c98e`.
+Latest inspected run: [STEN CI #96](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43612137666), commit `3f293a1241c7b2f8bc23bd90234ba0ac2f975d65`.
 
 - Result: failure.
-- Test suite: 88 passed, 1 failed out of 89.
+- Test suite: 90 passed, 1 failed out of 91.
 - Failing test: `Stage 13 runs golden queries through the actual lexical retrieval ranker`.
 - Failure: retrieved ID order differs from `evals/stage-13-retrieval-baseline.json` after graph enrichment. New schedule/payroll/safety/process nodes enter the top 10 and displace/reorder prior results in multiple cases.
 - This is a retrieval-ranking regression signal, not a test infrastructure failure.
@@ -126,7 +126,7 @@ This review is not a penetration test or security certification.
 
 ## Current status
 
-**Stage 14 is in progress.** The baseline inventory and release gates are recorded. The current main branch is not release-ready while CI is failing and provider/security/package checks remain incomplete.
+**Stage 14 is in progress.** The package manifest and provider-template boundaries have been inspected; a source-level review of tenant/tool/memory/audit controls has begun. The current main branch is not release-ready: the golden ranking regression still fails CI, provider adapters are unconfigured templates, production host controls are not implemented here, and reproducible release artifact checks remain outstanding.
 
 
 ### Retrieval experiment disposition (14.5)
