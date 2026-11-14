@@ -6,3 +6,39 @@ test("profile mismatch excludes and missing required data remains unresolved",()
 test("explicit conflicts are surfaced once without precedence",()=>{const x=findExplicitConflicts([{id:"x",conflicts_with:["y"]},{id:"y",conflicts_with:["x"]}]);assert.equal(x.length,1);assert.equal(x[0].status,"explicit_conflict_requires_review");});
 test("expert context joins profile, knowledge and adapted evidence",()=>{const registry={records:[{id:"core.abc",title:"Food cost methodology",summary:"Food cost control",evidence_class:"CORE",topic:["food_cost"],source:{publisher:"STEN",title:"Core",citation:"STEN",published_at:"2026-01-01"},territory:{scope:"global",jurisdictions:[]},validity:{status:"in_force",effective_from:"2026-01-01"},applicability:{sectors:["restaurant"],formats:["casual_dining"],required_profile_fields:[],determination:"conditional"},limitations:["Methodology only"],record_status:"approved",conflicts_with:[]}]};const r=buildExpertContext({query:"food cost",profile:{sector:"restaurant",format:"casual_dining"},knowledge:docs,registry});assert.equal(r.status,"ok");assert.equal(r.knowledge[0].document.id,"a");assert.equal(r.evidence[0].adaptedEvidence.id,"core.abc");assert.equal(r.guardrails.noAutomaticLegalApplicability,true);});
 test("draft and unknown evidence stay excluded",()=>{const registry={records:[{id:"law.draft",title:"Draft law template",evidence_class:"LAW",topic:["fire"],source:{publisher:"x",title:"draft",citation:"template",published_at:null},territory:{scope:"unknown",jurisdictions:[]},validity:{status:"unknown"},applicability:{determination:"unknown"},limitations:["draft"],record_status:"draft"}]};const r=buildExpertContext({query:"fire",registry});assert.equal(r.evidence[0].adaptedEvidence,null);assert.ok(r.evidence[0].excludedReason);});
+
+
+import { normalizeText, documentText } from "../src/retrieval/text.js";
+
+test("Russian normalization handles ё, case, question words and inflectional endings", () => {
+  assert.deepEqual(normalizeText("Какой фуд-кост нормальный?"), ["фуд", "кост", "нормальн"]);
+  assert.equal(normalizeText("продукты")[0], normalizeText("продуктов")[0]);
+  assert.equal(normalizeText("Ёлочный")[0], normalizeText("елочный")[0]);
+  assert.ok(normalizeText("не применять").includes("не"), "negation must not be removed");
+});
+
+test("graph retrieval searches labels, summaries, purpose, scope and limitations", () => {
+  const node = {
+    id: "service.appearance",
+    type: "process",
+    label: "Проверка внешнего вида персонала",
+    summary: "Контроль готовности сотрудников к работе",
+    purpose: "Поддержание требований к внешнему виду",
+    limitations: ["Периодичность определяется локальным стандартом"]
+  };
+  const indexedText = documentText(node);
+  assert.match(indexedText, /Проверка внешнего вида персонала/);
+  assert.match(indexedText, /локальным стандартом/);
+  const result = rankDocuments("Как часто проводить проверку внешнего вида персонала?", [node]);
+  assert.equal(result.results[0].document.id, "service.appearance");
+});
+
+test("BM25 ranks the document with relevant aliases and keywords first", () => {
+  const candidates = [
+    { id: "finance.food-cost", label: "Food cost", summary: "Доля стоимости продуктов в выручке", keywords: ["фуд-кост", "себестоимость"] },
+    { id: "finance.cash", label: "Денежные операции", summary: "Кассовая дисциплина" }
+  ];
+  const result = rankDocuments("фуд-кост себестоимость", candidates);
+  assert.equal(result.results[0].document.id, "finance.food-cost");
+  assert.ok(result.results[0].matchedTermCount >= 2);
+});
