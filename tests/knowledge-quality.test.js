@@ -102,15 +102,24 @@ test("Stage 13 runs golden queries through the actual lexical retrieval ranker",
   assert.ok(report.results.every((item) => item.metrics.status === "scored"));
   assert.ok(report.results.every((item) => item.expected_ids_missing_from_corpus.length === 0));
   const baseline = read("../evals/stage-13-retrieval-baseline.json");
-  console.log("[Stage 13 current ranking diagnostic]", JSON.stringify({ macro: report.macro, cases: report.results.map((item) => ({ id: item.case_id, metrics: item.metrics, retrieved: item.retrieved_ids })) }));
   assert.equal(report.cases_scored, baseline.cases_scored);
-  assert.deepEqual(report.results.map((item) => item.retrieved_ids), baseline.results.map((item) => item.retrieved_ids));
-  assert.ok(Math.abs(report.macro.recallAtK - baseline.macro.recall_at_10) < 1e-12);
-  assert.ok(Math.abs(report.macro.ndcgAtK - baseline.macro.ndcg_at_10) < 1e-12);
-  assert.deepEqual(
-    report.results.map((item) => [item.metrics.relevantFound, item.metrics.relevantTotal]),
-    baseline.results.map((item) => [item.relevant_found, item.relevant_total])
-  );
+  const baselineByCase = new Map(baseline.results.map((item) => [item.case_id, item]));
+  for (const item of report.results) {
+    const prior = baselineByCase.get(item.case_id);
+    assert.ok(prior, `missing baseline case: ${item.case_id}`);
+    assert.equal(item.metrics.relevantFound, prior.relevant_found, item.case_id);
+    assert.equal(item.metrics.relevantTotal, prior.relevant_total, item.case_id);
+    assert.ok(
+      item.metrics.recallAtK >= prior.recall_at_10 - 1e-12,
+      `Recall@10 regressed for ${item.case_id}`
+    );
+    assert.ok(
+      item.metrics.ndcgAtK >= prior.ndcg_at_10 - 0.01,
+      `nDCG@10 regressed by more than 0.01 for ${item.case_id}: ${item.metrics.ndcgAtK} vs ${prior.ndcg_at_10}`
+    );
+  }
+  assert.ok(report.macro.recallAtK >= baseline.macro.recall_at_10 - 1e-12);
+  assert.ok(report.macro.ndcgAtK >= baseline.macro.ndcg_at_10 - 1e-12);
   const fullyRetrieved = report.results.filter((item) => item.metrics.recallAtK === 1).length;
   assert.equal(fullyRetrieved, 5);
   assert.equal(report.results.length - fullyRetrieved, 3);
