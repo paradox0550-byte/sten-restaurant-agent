@@ -18,15 +18,5 @@ jobs:
         run: npm test
       - name: Validate evidence registry
         run: npm run validate:evidence
-      - name: Verify manifest paths
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const manifest = JSON.parse(fs.readFileSync('package-manifest.json', 'utf8'));
-          const missing = manifest.files.filter((path) => !fs.existsSync(path));
-          if (missing.length) {
-            console.error('Missing manifest files:', missing);
-            process.exit(1);
-          }
-          console.log(`Manifest verified: ${manifest.files.length} files present.`);
-          NODE
+      - name: Verify package and manifest integrity
+        run: npm run validate:package
