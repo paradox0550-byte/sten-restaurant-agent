@@ -100,7 +100,7 @@ export function rankDocuments(query, documents = [], { limit = 10 } = {}) {
       score,
       matchedTerms,
       matchedTermCount: matchedTerms.length,
-      sourceOrder
+      sourceOrder: item.sourceOrder
     };
   });
 
