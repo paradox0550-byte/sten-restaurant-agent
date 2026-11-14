@@ -1,104 +1,76 @@
 import { tokenize, documentText } from "./text.js";
 
-const K1 = 1.5;
-const B = 0.75;
-
-// Field-aware BM25: generic terms remain searchable; corpus IDF reduces their
-// influence naturally. Each field is length-normalized against its own mean.
-const FIELD_GROUPS = [
-  { fields: ["id"], weight: 3.0 },
-  { fields: ["title", "label"], weight: 2.5 },
-  { fields: ["aliases"], weight: 2.0 },
-  { fields: ["keywords", "tags", "topics", "topic"], weight: 1.5 },
-  { fields: ["summary"], weight: 1.25 },
-  { fields: ["description", "content", "text"], weight: 1.0 },
-  { fields: ["purpose"], weight: 0.8 },
-  { fields: ["scope"], weight: 0.6 },
-  { fields: ["limitations"], weight: 0.4 },
-  { fields: ["domain", "type", "evidence_class", "procedure_id"], weight: 0.35 }
-];
-
-function asText(value) {
-  if (Array.isArray(value)) return value.filter(Boolean).join(" ");
-  return value == null ? "" : String(value);
-}
-
 function counts(tokens) {
   const result = new Map();
   for (const token of tokens) result.set(token, (result.get(token) ?? 0) + 1);
   return result;
 }
 
-function tokensForFields(document, fields) {
-  return tokenize(fields.map((field) => asText(document[field])).filter(Boolean).join(" "));
-}
-
-function averageLength(prepared, fieldGroup) {
-  if (!prepared.length) return 0;
-  const populated = prepared.filter((item) => item.fieldTokens[fieldGroup].length > 0);
-  return populated.length
-    ? populated.reduce((sum, item) => sum + item.fieldTokens[fieldGroup].length, 0) / populated.length
-    : 0;
+function fieldTokens(document, fields) {
+  return tokenize(fields.map((field) => document[field]).filter(Boolean).join(" "));
 }
 
 /**
- * Field-aware BM25 over the canonical document contract.
- * Keeps the public result shape stable for lexical and hybrid retrieval.
+ * BM25 retrieval over the complete searchable document representation.
+ * Graph nodes and knowledge documents share this contract; no parallel index
+ * or external dependency is required.
  */
 export function rankDocuments(query, documents = [], { limit = 10 } = {}) {
-  const terms = [...new Set(tokenize(query))];
+  const terms = tokenize(query);
   if (!terms.length) return { status: "unavailable", reason: "empty_query", results: [] };
   if (!Array.isArray(documents)) {
     return { status: "unavailable", reason: "documents_must_be_array", results: [] };
   }
 
   const prepared = documents.map((document, sourceOrder) => {
-    const fieldTokens = FIELD_GROUPS.map((group) => tokensForFields(document, group.fields));
-    const allTokens = tokenize(documentText(document));
+    const tokens = tokenize(documentText(document));
     return {
       document,
       sourceOrder,
-      allFrequencies: counts(allTokens),
-      fieldFrequencies: fieldTokens.map(counts),
-      fieldTokens
+      tokens,
+      frequencies: counts(tokens),
+      titleTokens: fieldTokens(document, ["title", "label"]),
+      keywordTokens: tokenize([
+        ...(document.keywords ?? []),
+        ...(document.aliases ?? []),
+        ...(document.topics ?? []),
+        ...(document.topic ?? [])
+      ].join(" "))
     };
   });
 
   const corpusSize = prepared.length;
-  const averageLengths = FIELD_GROUPS.map((_, index) => averageLength(prepared, index));
+  const averageLength = corpusSize
+    ? prepared.reduce((sum, item) => sum + item.tokens.length, 0) / corpusSize
+    : 0;
   const documentFrequency = new Map();
-  for (const term of terms) {
+  for (const term of new Set(terms)) {
     documentFrequency.set(term, prepared.reduce(
-      (sum, item) => sum + (item.allFrequencies.has(term) ? 1 : 0), 0
+      (sum, item) => sum + (item.frequencies.has(term) ? 1 : 0), 0
     ));
   }
 
+  const k1 = 1.5;
+  const b = 0.75;
   const results = prepared.map((item) => {
     let score = 0;
     const matchedTerms = [];
-    for (const term of terms) {
+    for (const term of new Set(terms)) {
+      const frequency = item.frequencies.get(term) ?? 0;
+      if (!frequency) continue;
+      matchedTerms.push(term);
       const df = documentFrequency.get(term) ?? 0;
-      if (!df) continue;
-      let termScore = 0;
-      for (let fieldIndex = 0; fieldIndex < FIELD_GROUPS.length; fieldIndex += 1) {
-        const group = FIELD_GROUPS[fieldIndex];
-        const frequency = item.fieldFrequencies[fieldIndex].get(term) ?? 0;
-        if (!frequency) continue;
-        const dl = item.fieldTokens[fieldIndex].length;
-        const avgDl = averageLengths[fieldIndex];
-        const lengthNormalization = avgDl > 0
-          ? 1 - B + B * dl / avgDl
-          : 1;
-        const idf = Math.log(1 + (corpusSize - df + 0.5) / (df + 0.5));
-        const bm25 = (frequency * (K1 + 1)) / (frequency + K1 * lengthNormalization);
-        // A token repeated across several fields should not be counted as
-        // several independent query matches. Keep its strongest field signal.
-        termScore = Math.max(termScore, idf * bm25 * group.weight);
-      }
-      if (termScore > 0) {
-        matchedTerms.push(term);
-        score += termScore;
-      }
+      const inverseDocumentFrequency = Math.log(
+        1 + (corpusSize - df + 0.5) / (df + 0.5)
+      );
+      const lengthNormalization = averageLength
+        ? 1 - b + b * item.tokens.length / averageLength
+        : 1;
+      const bm25 = inverseDocumentFrequency
+        * (frequency * (k1 + 1)) / (frequency + k1 * lengthNormalization);
+      const titleBoost = item.titleTokens.includes(term) ? 1.5 : 0;
+      const keywordBoost = item.keywordTokens.includes(term) ? 1.0 : 0;
+      score += bm25 + titleBoost + keywordBoost;
     }
     return {
       document: item.document,
@@ -111,7 +83,7 @@ export function rankDocuments(query, documents = [], { limit = 10 } = {}) {
 
   return {
     status: "ok",
-    queryTerms: terms,
+    queryTerms: [...new Set(terms)],
     results: results
       .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score || b.matchedTermCount - a.matchedTermCount || a.sourceOrder - b.sourceOrder)
