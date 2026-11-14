@@ -127,3 +127,13 @@ This review is not a penetration test or security certification.
 ## Current status
 
 **Stage 14 is in progress.** The baseline inventory and release gates are recorded. The current main branch is not release-ready while CI is failing and provider/security/package checks remain incomplete.
+
+
+### Retrieval experiment disposition (14.5)
+
+- The proposed field-aware BM25 replacement was tested against the eight Stage 13 golden cases and the provisional 12-case holdout.
+- Experimental field-aware variants preserved golden macro Recall@10 at 0.9292 but reduced golden macro nDCG@10 to 0.9183 and then 0.9136, below the pinned 0.9336 baseline. They are rejected and are not retained in production.
+- The production ranker has been restored to the previously established lexical implementation. The enriched graph still changes exact top-10 ordering, and the strict golden snapshot gate remains open; no baseline was rewritten to conceal this.
+- A focused regression test verifies that a delivery-specific peak-load query retrieves `delivery.order` in the top three, while a payroll-specific query continues to retrieve `people.payroll`.
+- The holdout diagnostic improved in the tested field-aware experiment, but its labels remain provisional and cannot override the golden-case regression or be treated as expert-validated evidence.
+- Next action: tune the existing ranker conservatively or correct the relevant graph metadata, then rerun all golden cases. Do not ship the rejected field-aware scorer or weaken the baseline gate.
