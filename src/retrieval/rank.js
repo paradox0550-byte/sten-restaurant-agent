@@ -51,7 +51,7 @@ export function rankDocuments(query, documents = [], { limit = 10 } = {}) {
   }
 
   const k1 = 1.5;
-  const b = 0.6;
+  const b = 0.4;
   const results = prepared.map((item) => {
     let score = 0;
     const matchedTerms = [];
