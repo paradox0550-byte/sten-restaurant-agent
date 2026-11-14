@@ -1,4 +1,5 @@
 import { buildExpertContext } from "../retrieval/context.js";
+import { calculateCostRatios } from "../finance/ratios.js";
 
 /**
  * STEN Expert Intelligence Core.
@@ -212,12 +213,16 @@ export function buildExpertAnalysis({
   hypotheses = [],
   causalLinks = [],
   decisionScenarios = [],
+  financialInputs = null,
   actions = [],
   limit = 12
 } = {}) {
   const retrieval = buildExpertContext({ query, profile, knowledge, registry, limit });
   const sufficiency = assessInputSufficiency({ required: requiredInputs, provided: providedInputs });
   const financialAssessments = decisionScenarios.map(compareDecisionScenarios);
+  const financialRatios = financialInputs && typeof financialInputs === "object"
+    ? calculateCostRatios(financialInputs)
+    : null;
   const normalizedCausalLinks = causalLinks.map((link, index) => ({
     ...link,
     id: link.id ?? `causal-hypothesis-${index + 1}`,
@@ -239,8 +244,11 @@ export function buildExpertAnalysis({
     item.status === "calculated" ? [] : item.issues.map(issue => `decisionScenarios[${index}]: ${issue}`)
   );
   const inputsAssessed = sufficiency.status !== "not_assessed";
+  const ratioIssues = financialRatios
+    ? Object.entries(financialRatios).filter(([key, value]) => key !== "definitions" && value.status !== "calculated").map(([key, value]) => `${key}: ${value.reason ?? "unavailable"}`)
+    : [];
   const ready = retrieval.status === "ok" && inputsAssessed && sufficiency.sufficient &&
-    analysis.readiness === "structured" && financialIssues.length === 0;
+    analysis.readiness === "structured" && financialIssues.length === 0 && ratioIssues.length === 0;
   return {
     stage: 12,
     engineVersion: analysis.engineVersion,
@@ -250,9 +258,11 @@ export function buildExpertAnalysis({
     analysis,
     causalLinks: normalizedCausalLinks,
     financialAssessments,
+    financialRatios,
     recommendations: analysis.actions,
     integrity: {
       financialIssues,
+      ratioIssues,
       retrievalAvailable: retrieval.status === "ok",
       missingInputsBlockDecision: sufficiency.status === "insufficient",
       inputSufficiencyAssessed: inputsAssessed,
