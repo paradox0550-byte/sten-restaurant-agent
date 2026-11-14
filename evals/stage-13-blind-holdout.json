@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Post-enrichment holdout draft for retrieval regression. These queries were authored after the graph enrichment and are not used to tune the ranker or graph. Labels are provisional model-authored hypotheses, not expert-adjudicated ground truth.",
+  "independence": {
+    "authored_after_graph_enrichment": true,
+    "used_for_retrieval_tuning": false,
+    "expected_ids_status": "provisional_model_authored_requires_expert_adjudication",
+    "blindness": "Not an independently administered blind study; keep sealed from tuning until an expert reviewer adjudicates relevance labels.",
+    "corpus": "knowledge/graph/operational-knowledge-graph.json",
+    "k": 10
+  },
+  "scoring_contract": "Run through the production lexical ranker. Report per-case relevant hits and aggregate precision@10, recall@10, MRR and nDCG@10. Do not enforce a target score until labels are expert-adjudicated.",
+  "cases": [
+    {
+      "id": "holdout.supply.receiving-quality",
+      "query": "В привезённой партии обнаружили повреждённую тару и сомнения в качестве сырья. Как оформить несоответствие поставки и проследить дальнейшие действия?",
+      "domain": "supply_quality",
+      "expected_ids": [
+        "supply.claims",
+        "supply.receiving",
+        "records.document-flow"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.safety.temperature-deviation",
+      "query": "Утренний замер в холодильном оборудовании оказался вне установленного диапазона. Какие процессы и записи нужно проверить, прежде чем делать вывод о причине?",
+      "domain": "food_safety_facilities",
+      "expected_ids": [
+        "safety.temperatures",
+        "safety.haccp",
+        "facilities.maintenance"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.finance.cash-reconciliation",
+      "query": "После закрытия кассы фактическая наличность не совпадает с суммой в управленческой сводке. С чего начать сверку и какие отчёты сопоставить?",
+      "domain": "cash_finance",
+      "expected_ids": [
+        "finance.cash",
+        "management.daily-report",
+        "finance.pnl-kpi"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.delivery.handoff-delay",
+      "query": "Курьер уже прибыл за заказом, но кухня ещё не завершила сборку. Нужно восстановить цепочку задержки и зафиксировать исключение.",
+      "domain": "delivery_kitchen",
+      "expected_ids": [
+        "delivery.order",
+        "proc.delivery-order-control",
+        "register.delivery-exceptions",
+        "production.order-flow"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.menu.seasonal-costing",
+      "query": "После ввода сезонных блюд изменились состав и расчётная себестоимость позиций. Какие данные и связанные процессы должны быть актуализированы?",
+      "domain": "menu_finance",
+      "expected_ids": [
+        "production.menu-cycle",
+        "production.recipe-spec",
+        "finance.food-cost"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.service.uniform-readiness",
+      "query": "Перед началом обслуживания выяснилось, что сотрудник не соответствует требованиям к рабочей одежде и внешнему виду. Какой стандарт и процедуру проверки использовать?",
+      "domain": "service_people",
+      "expected_ids": [
+        "service.uniform",
+        "service.appearance",
+        "proc.appearance-readiness",
+        "check.appearance"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.safety.guest-allergy",
+      "query": "Посетитель сообщает об аллергии до подтверждения заказа. Как проверить информацию о составе и не дать неподтверждённую гарантию безопасности блюда?",
+      "domain": "food_safety_service",
+      "expected_ids": [
+        "safety.food",
+        "safety.haccp",
+        "production.recipe-spec",
+        "service.guest-journey"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.management.unowned-tasks",
+      "query": "На планёрке выяснилось, что несколько обязательных задач смены остались без назначенного исполнителя. Как распределить ответственность и проверить закрытие?",
+      "domain": "management_control",
+      "expected_ids": [
+        "management.delegation",
+        "management.control",
+        "management.meetings",
+        "register.daily-tasks"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.facilities.post-maintenance",
+      "query": "После обслуживания техники нужно подтвердить, что работы зафиксированы и оборудование возвращено в рабочее состояние. Какие процессы связать?",
+      "domain": "facilities_operations",
+      "expected_ids": [
+        "facilities.preventive",
+        "facilities.maintenance",
+        "operations.quality"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.delivery.takeaway-completeness",
+      "query": "При передаче заказа навынос обнаружили, что фактическая комплектация не соответствует заказу. Как зафиксировать отклонение и проверить контроль передачи?",
+      "domain": "delivery_control",
+      "expected_ids": [
+        "delivery.order",
+        "proc.delivery-order-control",
+        "register.delivery-exceptions"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.people.payroll-time-record",
+      "query": "Сотрудник оспаривает начисление: его фактические выходы отличаются от часов, попавших в расчёт. Какие данные сверить?",
+      "domain": "people_payroll",
+      "expected_ids": [
+        "people.payroll",
+        "people.schedule",
+        "proc.staff-schedule-and-timekeeping",
+        "check.schedule-timekeeping"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    },
+    {
+      "id": "holdout.finance.sales-decline-review",
+      "query": "В ежедневной сводке заметно снижение продаж относительно сопоставимого периода. Как организовать разбор показателей и операционных отклонений, не приписывая причину заранее?",
+      "domain": "finance_operations",
+      "expected_ids": [
+        "management.daily-report",
+        "finance.pnl-kpi",
+        "management.control"
+      ],
+      "label_status": "provisional_model_authored_requires_expert_adjudication"
+    }
+  ]
+}
