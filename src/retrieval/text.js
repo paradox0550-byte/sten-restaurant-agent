@@ -22,7 +22,7 @@ const RV_SUFFIXES = [
   "ость", "ости", "ост", "ение", "ения", "ений", "ством", "ство", "ства",
   "иями", "ями", "ами", "ах", "ях", "ов", "ев", "ом", "ем", "ам", "ям",
   "а", "я", "ы", "и", "ь"
-];
+].sort((a, b) => b.length - a.length);
 
 function stemRussian(word) {
   if (word.length < 4 || !/[а-я]/u.test(word)) return word;
