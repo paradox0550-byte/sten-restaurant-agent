@@ -72,7 +72,9 @@
     "procedure_checklist_templates",
     "operational_record_templates",
     "role_responsibility_provenance",
-    "multi_hop_horeca_evaluation_seed_cases"
+    "multi_hop_horeca_evaluation_seed_cases",
+    "sector_to_management_domain_coverage_matrix",
+    "structural_multi_hop_graph_evaluation_harness"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -96,9 +98,10 @@
     "production_semantic_reranker_provider",
     "production_semantic_contradiction_model",
     "automatic_conflict_resolution",
-    "complete_curated_horeca_knowledge_corpus",
     "complete_current_legal_corpus_for_all_jurisdictions",
-    "automated_compliance_certification"
+    "automated_compliance_certification",
+    "measured_answer_level_multi_hop_quality",
+    "complete_reviewed_sector_specific_knowledge_corpus"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -216,12 +219,16 @@
     "knowledge/procedures/role-responsibility-map.json",
     "evals/horeca-multihop-cases.json",
     "docs/procedures-checklists-records.md",
-    "tests/procedures-depth.test.js"
+    "tests/procedures-depth.test.js",
+    "knowledge/taxonomy/sector-domain-matrix.json",
+    "src/evaluation/multihop.js",
+    "tests/multihop-evaluation.test.js",
+    "docs/sector-domain-matrix-evaluation.md"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 62,
+    "total_expected": 65,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
@@ -242,6 +249,6 @@
     "8": "management_workflow_foundation_integrated; analysis-gated action tasks, controlled lifecycle and evidence-backed outcome verification; external execution connectors not deployed",
     "9": "hybrid_retrieval_integrated_with_provider-injected_embeddings_and_in-memory_vector_index; production embedding provider and persistent vector database not deployed",
     "10": "semantic_reranking_and_conflict_intelligence_integrated_with_provider-injected_adapters; no production model configured; findings require human review",
-    "11": "HoReCa taxonomy, source catalog, operational knowledge graph, 12 source-grounded procedures, 12 checklist templates, 6 register templates, role provenance and multi-hop evaluation seed cases integrated; detailed curation and measured evaluations ongoing"
+    "11": "HoReCa taxonomy and source-grounded operational knowledge graph expanded; sector-domain matrix and structural multi-hop path evaluation integrated; answer-level quality evaluation and sector-specific curated corpus remain ongoing"
   }
 }

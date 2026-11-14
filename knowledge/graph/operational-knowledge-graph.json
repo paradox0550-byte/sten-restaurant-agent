@@ -1057,6 +1057,104 @@
       "from": "service.appearance",
       "to": "proc.appearance-readiness",
       "type": "operationalized_by"
+    },
+    {
+      "from": "service.recovery",
+      "to": "service.guest-journey",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "service.guest-journey",
+      "to": "production.order-flow",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "production.order-flow",
+      "to": "operations.audit-report",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "inventory.stocktake",
+      "to": "finance.food-cost",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "finance.food-cost",
+      "to": "production.recipe-spec",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "production.recipe-spec",
+      "to": "supply.receiving",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "supply.receiving",
+      "to": "finance.pnl-kpi",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "operations.audit",
+      "to": "people.training",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "people.training",
+      "to": "people.work-maturity",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "people.work-maturity",
+      "to": "management.grow",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "management.grow",
+      "to": "service.guest-journey",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "people.schedule",
+      "to": "management.director-role",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "management.control",
+      "to": "service.guest-journey",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "service.guest-journey",
+      "to": "delivery.order",
+      "type": "analytical_path",
+      "status": "evaluation_route_not_causal",
+      "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
     }
   ],
   "source_links": [

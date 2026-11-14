@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Sector-to-management branch map for HoReCa. This is a coverage and routing taxonomy, not a claim that curated procedures or legal requirements exist for every branch.",
+  "shared_management_domains": [
+    "finance_and_unit_economics",
+    "accounting_tax_and_controls",
+    "menu_product_and_pricing",
+    "procurement_and_suppliers",
+    "inventory_and_warehouse",
+    "kitchen_and_production",
+    "bar_and_beverage",
+    "service_and_hospitality",
+    "guest_experience_and_recovery",
+    "workforce_staffing_and_payroll",
+    "leadership_training_and_culture",
+    "operations_and_shift_control",
+    "food_safety_and_hygiene",
+    "fire_building_and_occupational_safety",
+    "facilities_equipment_and_maintenance",
+    "marketing_sales_and_reputation",
+    "reservations_events_and_capacity",
+    "delivery_and_digital_channels",
+    "risk_incidents_and_continuity",
+    "data_privacy_and_technology",
+    "sustainability_and_waste",
+    "strategy_and_multiunit_management"
+  ],
+  "sector_branches": [
+    {
+      "sector_id": "restaurant",
+      "branches": [
+        "concept_and_positioning",
+        "guest_journey_and_table_service",
+        "reservations_and_seating",
+        "menu_mix_and_contribution",
+        "kitchen_bar_floor_coordination",
+        "service_recovery",
+        "shift_open_close",
+        "banquets_and_events"
+      ],
+      "profile_fields": [
+        "service_model",
+        "seats",
+        "zones",
+        "hours",
+        "production_model",
+        "channels"
+      ],
+      "corpus_status": "partial"
+    },
+    {
+      "sector_id": "cafe",
+      "branches": [
+        "coffee_recipe_and_yield",
+        "barista_station_workflow",
+        "queue_and_peak_throughput",
+        "pastry_and_food_attach_rate",
+        "takeaway_and_reusable_packaging",
+        "equipment_calibration_and_maintenance"
+      ],
+      "profile_fields": [
+        "coffee_equipment",
+        "grinders",
+        "brewing_methods",
+        "queue_model",
+        "food_offer",
+        "takeaway_share"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "bar",
+      "branches": [
+        "beverage_recipe_and_pour_cost",
+        "bar_setup_and_close",
+        "alcohol_stock_and_variance",
+        "cocktail_batching",
+        "responsible_service_policy",
+        "night_shift_security_and_incidents"
+      ],
+      "profile_fields": [
+        "alcohol_categories",
+        "license_jurisdiction",
+        "bar_stations",
+        "operating_hours",
+        "entertainment",
+        "security_model"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "bakery",
+      "branches": [
+        "dough_and_batch_planning",
+        "fermentation_and_bake_yield",
+        "production_loss_and_rework",
+        "shelf_life_and_rotation",
+        "retail_display_and_sell_through",
+        "central_kitchen_transfer"
+      ],
+      "profile_fields": [
+        "production_type",
+        "oven_types",
+        "batch_sizes",
+        "cold_storage",
+        "retail_vs_wholesale",
+        "delivery_radius"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "hotel_food_service",
+      "branches": [
+        "outlet_level_pnl",
+        "breakfast_forecast_by_occupancy",
+        "room_service_order_to_delivery",
+        "banquet_event_orders",
+        "minibar_and_guest_charges",
+        "multi_outlet_labor_and_shared_services"
+      ],
+      "profile_fields": [
+        "hotel_type",
+        "outlets",
+        "occupancy_feed",
+        "meal_plan",
+        "room_service_sla",
+        "banquet_capacity"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "catering",
+      "branches": [
+        "contract_scope_and_margin",
+        "event_order_and_guest_count",
+        "menu_and_production_plan",
+        "transport_temperature_controls",
+        "onsite_setup_and_service",
+        "post_event_reconciliation"
+      ],
+      "profile_fields": [
+        "onsite_offsite",
+        "contract_type",
+        "guest_count_range",
+        "transport_assets",
+        "production_base",
+        "event_types"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "canteen",
+      "branches": [
+        "demand_and_headcount_forecast",
+        "cycle_menu_and_nutrition_constraints",
+        "bulk_procurement_and_receiving",
+        "batch_production_and_holding",
+        "service_line_capacity",
+        "contract_sla_and_waste"
+      ],
+      "profile_fields": [
+        "institution_type",
+        "meal_periods",
+        "contract_model",
+        "daily_volume",
+        "dietary_constraints",
+        "service_line_count"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "food_hall",
+      "branches": [
+        "tenant_unit_economics",
+        "shared_facility_responsibility",
+        "common_area_guest_journey",
+        "multi_tenant_ordering_and_pickup",
+        "tenant_sla_and_disputes",
+        "shared_waste_and_utilities"
+      ],
+      "profile_fields": [
+        "tenant_count",
+        "operator_model",
+        "shared_services",
+        "common_pos",
+        "seating_model",
+        "tenant_contracts"
+      ],
+      "corpus_status": "planned"
+    },
+    {
+      "sector_id": "quick_service",
+      "branches": [
+        "order_channel_mix",
+        "throughput_and_queue_time",
+        "standardized_recipe_and_portion",
+        "assembly_accuracy",
+        "dispatch_and_pickup",
+        "packaging_and_channel_margin",
+        "dark_kitchen_capacity"
+      ],
+      "profile_fields": [
+        "order_channels",
+        "kds_pos",
+        "target_service_windows",
+        "dispatch_model",
+        "delivery_radius",
+        "production_layout"
+      ],
+      "corpus_status": "planned"
+    }
+  ],
+  "cross_sector_contexts": [
+    {
+      "id": "multi_unit_chain",
+      "applies_to": "any_sector",
+      "branches": [
+        "central_functions",
+        "unit_comparison",
+        "standard_version_control",
+        "regional_audits",
+        "portfolio_pnl",
+        "rollout_and_change_control"
+      ]
+    },
+    {
+      "id": "franchise",
+      "applies_to": "any_sector",
+      "branches": [
+        "brand_standard_compliance",
+        "franchisee_unit_economics",
+        "royalty_and_marketing_fund",
+        "audit_and_corrective_action",
+        "territory_and_exclusivity"
+      ]
+    },
+    {
+      "id": "hotel_accommodation_context",
+      "applies_to": "hotel_food_service",
+      "branches": [
+        "occupancy_and_guest_mix",
+        "front_office_handoffs",
+        "housekeeping_and_facilities_dependencies",
+        "guest_compensation_and_reputation"
+      ],
+      "note": "Accommodation operations are represented as hotel context and cross-functional dependencies, not as restaurant-only procedures."
+    },
+    {
+      "id": "mobile_and_pop_up",
+      "applies_to": "catering_or_food_service",
+      "branches": [
+        "temporary_site_readiness",
+        "mobile_equipment",
+        "power_water_waste",
+        "transport_and_setup",
+        "weather_and_contingency"
+      ]
+    }
+  ],
+  "profile_policy": [
+    "Unknown fields remain unknown.",
+    "A sector may use multiple formats, service models, channels and production models.",
+    "A branch in this matrix is a taxonomy node, not evidence that a procedure or law has been curated.",
+    "Not applicable requires a reason; missing profile data must not be interpreted as not applicable.",
+    "Legal and safety applicability is determined only from current authoritative sources and a complete establishment profile."
+  ]
+}
