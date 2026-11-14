@@ -1,0 +1,3 @@
+import {RuntimeError,requireTenantId} from "./errors.js";
+/** Development/test sink. Production requires a protected durable audit store. */
+export class InMemoryAuditSink{#events=[];async write(event){const tenantId=requireTenantId(event?.tenantId);if(!event?.type||!event?.at)throw new RuntimeError("INVALID_AUDIT_EVENT","Audit event requires type and timestamp.");const safe={id:event.id??`evt_${this.#events.length+1}`,tenantId,type:event.type,at:event.at,actor:event.actor??"runtime",outcome:event.outcome??"recorded",metadata:structuredClone(event.metadata??{})};this.#events.push(safe);return{status:"recorded",id:safe.id};}list({tenantId}){const t=requireTenantId(tenantId);return this.#events.filter(e=>e.tenantId===t).map(e=>structuredClone(e));}}

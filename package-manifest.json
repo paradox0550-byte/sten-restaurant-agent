@@ -7,7 +7,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -28,7 +29,12 @@
     "memory_schemas",
     "provider_adapter_templates",
     "restaurant_knowledge",
-    "skills"
+    "skills",
+    "provider_runtime_interface",
+    "permission_gated_tool_execution",
+    "tenant_scoped_memory_adapter",
+    "runtime_audit_sink",
+    "runtime_orchestrator"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -36,7 +42,11 @@
     "hosted_memory_store",
     "xlsx_parser",
     "provider_deployment",
-    "legal_compliance_certification"
+    "legal_compliance_certification",
+    "production_persistent_memory",
+    "live_provider_connectors",
+    "production_authentication_and_authorization",
+    "distributed_audit_storage"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -49,6 +59,7 @@
     "docs/architecture.md",
     "docs/contributing-evidence.md",
     "docs/knowledge-evidence-layer.md",
+    "docs/runtime-integration.md",
     "docs/stage-integration.md",
     "evals/core-quality-cases.md",
     "evals/knowledge-evidence-cases.md",
@@ -92,11 +103,19 @@
     "src/intelligence/engine.js",
     "src/labor/productivity.js",
     "src/menu/engineering.js",
+    "src/runtime/audit.js",
+    "src/runtime/errors.js",
+    "src/runtime/index.js",
+    "src/runtime/provider-registry.js",
+    "src/runtime/runtime.js",
+    "src/runtime/tenant-memory.js",
+    "src/runtime/tool-registry.js",
     "src/service/recovery.js",
     "tests/evidence.test.js",
     "tests/finance.test.js",
     "tests/intelligence-engine.test.js",
     "tests/labor-menu-service.test.js",
+    "tests/runtime.test.js",
     "tools/README.md",
     "tools/api/README.md",
     "tools/calculators/finance/ratios.js",
@@ -108,15 +127,17 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 22,
+    "total_expected": 30,
     "command": "npm test",
-    "last_local_result": "19 passed, 0 failed"
+    "last_local_result": "19 passed, 0 failed",
+    "runtime_layer": 8
   },
   "stage_status": {
     "1": "integrated",
     "2": "integrated",
     "3": "integrated",
     "4": "integrated_with_evidence_guardrails",
-    "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated"
+    "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated",
+    "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed"
   }
 }

@@ -1,0 +1,2 @@
+export class RuntimeError extends Error { constructor(code,message,details={}) { super(message); this.name="RuntimeError"; this.code=code; this.details=details; } }
+export function requireTenantId(value) { if(typeof value!=="string"||!/^[a-zA-Z0-9][a-zA-Z0-9._:-]{1,127}$/.test(value)) throw new RuntimeError("TENANT_REQUIRED","A valid tenantId is required for every runtime operation."); return value; }

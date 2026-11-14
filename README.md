@@ -15,6 +15,10 @@
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
+## Runtime layer (Stage 6)
+
+A provider-neutral runtime foundation is available in `src/runtime/`. It injects provider, tool, memory and audit adapters; requires tenant identity; and gates every tool call behind explicit host-granted permissions. The included memory and audit adapters are development/test implementations only. See `docs/runtime-integration.md` before connecting a host application.
+
 ## Run locally
 
 Requires Node.js 18+.
