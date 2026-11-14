@@ -109,25 +109,26 @@ This review is not a penetration test or security certification.
 
 ## Acceptance checklist
 
-- [ ] README, architecture, stage integration and package manifest agree.
+- [x] README, architecture, stage integration and package manifest agree on scope and stage status.
 - [ ] Stage status is accurate; Stage 11 is visibly still open.
 - [x] Manifest contains all tracked package files with no missing or unlisted paths (137/137 at the latest tree audit).
 - [x] Dependency-free package validator added to CI for exact tracked-file coverage, duplicate paths, version consistency, Stage 11/14 status and provider-template structure.
-- [ ] ChatGPT provider schema/instructions are internally consistent.
-- [ ] Claude provider configuration/instructions are internally consistent.
-- [ ] Tenant, memory, audit and tool-permission boundaries reviewed.
+- [x] ChatGPT adapter instructions and OpenAPI template are internally consistent; the endpoint template remains intentionally unconfigured.
+- [x] Claude project instructions and empty MCP configuration are internally consistent; Skills packaging adaptation is documented as a host setup task.
+- [x] Tenant, memory, audit and tool-permission boundaries reviewed at source/test level; production host controls and penetration testing remain outside this package.
 - [ ] No secrets or private operational data included in the distributable package.
 - [x] Stage 13 retrieval ranking regression investigated; conservative metadata and BM25 tuning measured above the golden macro nDCG baseline without changing expected labels.
-- [x] `npm test` passes: 91/91 tests on CI run [43621787646](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621787646).
-- [x] `npm run validate:evidence` passes on the same CI run (one explicit warning remains for the unknown legal intake placeholder; it is not treated as a legal fact).
-- [x] Package-integrity CI check passes on the same CI run.
-- [ ] Release artifact and release notes are reproducible and accurate.
-- [x] CI is green on integration commit `fe4750b37b88acbb3c0ebf30d4f2377eea2bc5ee`; a separate release commit/tag still requires release preparation and approval.
+- [x] `npm test` passes: 91/91 tests on CI run [43621893819](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621893819).
+- [x] `npm run validate:evidence` passes on CI run [43621893819](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621893819) (one explicit warning remains for the unknown legal intake placeholder; it is not treated as a legal fact).
+- [x] Package-integrity CI check passes on CI run [43621893819](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621893819).
+- [x] Release notes for 0.5.0 prepared in `docs/release-notes-0.5.0.md`.
+- [ ] Source archive/release artifact is generated from the final tagged commit and verified.
+- [x] CI is green on integration commit `7613b8a8f090c9cc174bfdd7afc29c5bbc305a6d`; the release-notes/manifest update is running its own final CI. A separate release tag still requires artifact verification and approval.
 - [ ] Release readiness is explicitly approved before publication.
 
 ## Current status
 
-**Stage 14 engineering integration is substantially complete; release publication is not complete.** CI run `43621787646` passed all 91 tests, Evidence Registry validation and package-integrity validation. The current golden retrieval metrics are Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% nDCG baseline. Expected labels and baseline file were not rewritten. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. Final artifact/release-note verification and explicit release approval remain open.
+**Stage 14 engineering integration is substantially complete; release publication is not complete.** CI run `43621893819` passed all 91 tests, Evidence Registry validation and package-integrity validation. Release notes for 0.5.0 are now prepared; the final notes/manifest commit still needs its CI result. The current golden retrieval metrics are Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% nDCG baseline. Expected labels and baseline file were not rewritten. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. Final artifact/release-note verification and explicit release approval remain open.
 
 
 ### Retrieval experiment disposition (14.5)
