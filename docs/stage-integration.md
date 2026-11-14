@@ -40,7 +40,7 @@ Integrated initial single-core orchestration in `src/intelligence/engine.js`: ex
 
 ## Stage 13 — Quality & Evaluation
 
-**Engineering framework closeout: closed.** The existing `src/evaluation/knowledge-quality.js` now provides labelled retrieval metrics, answer-integrity checks and the production lexical-ranker evaluation path. Eight labelled HoReCa golden cases run against the 94-node operational graph. The pinned baseline records Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.36%; five of eight cases retrieve every expected ID and three are partial (inventory 4/5, schedule/service capacity 4/5, repeat complaint 5/6). All eight have at least one relevant hit. Case counts, ranked IDs and aggregate metrics are regression-tested. See `docs/stage-13-quality-evaluation.md`.
+**Engineering framework closeout: closed.** The existing `src/evaluation/knowledge-quality.js` now provides labelled retrieval metrics, answer-integrity checks and the production lexical-ranker evaluation path. Eight labelled HoReCa golden cases run against the 94-node operational graph. The pinned baseline records Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.36%. The current tuned lexical ranker measures nDCG@10 93.65% with unchanged Recall@10 92.92%; five of eight cases retrieve every expected ID and three are partial (inventory 4/5, schedule/service capacity 4/5, repeat complaint 5/6). All eight have at least one relevant hit. Per-case relevant counts, recall, per-case nDCG tolerance and aggregate metrics are regression-tested against the pinned baseline; exact top-10 order is retained as diagnostic data, not a hard equality gate. See `docs/stage-13-quality-evaluation.md`.
 
 This closes implementation of the evaluation framework and its initial lexical benchmark only. Blind holdout, full source-backed and configured hybrid/vector evaluation, and expert-adjudicated end-to-end answer quality remain follow-up acceptance gates. This does not close Stage 11 or certify professional/legal answer correctness.
 
@@ -63,11 +63,11 @@ Scope:
 - prepare a reproducible versioned package and release notes.
 
 Current verified status (2026-11-14):
-- Latest inspected main CI run `43612137666` (commit `3f293a1241c7b2f8bc23bd90234ba0ac2f975d65`) completed with failure: 90/91 tests passed. The sole failure is the strict Stage 13 golden retrieval top-10 snapshot after graph enrichment. The baseline has not been rewritten; ranking movement still requires case-by-case relevance review.
-- The repository tree contains 136 tracked files and `package-manifest.json` lists the same 136 paths: no missing or unlisted paths. Stage metadata now includes Stages 1–14; Stage 14 remains in progress.
-- Architecture documentation covers Stages 9–14. Provider files are templates: ChatGPT OpenAPI has a placeholder host and no paths; Claude MCP server list is empty and its Skills need host-format adaptation.
-- Runtime security controls have unit coverage for tenant identity, deny-by-default tool permissions, argument validation, tenant-scoped memory and audit filtering. Memory and audit are in-memory development/test adapters; authentication, tenant derivation, durable storage and host authorization remain host responsibilities. This is a code review, not a penetration test or certification.
-- No GitHub Release is published. Release remains blocked until the ranking regression is resolved, all CI gates pass, and release artifact/release-note checks are completed.
+- Latest successful main CI run `43621787646` on commit `fe4750b37b88acbb3c0ebf30d4f2377eea2bc5ee`: 91/91 tests passed, Evidence Registry validation passed, and package-integrity validation passed.
+- The repository tree contains 137 tracked files and `package-manifest.json` lists the same 137 paths: no missing or unlisted paths. Stage metadata includes Stages 1–14; Stage 11 substantive validation remains open.
+- Architecture documentation covers Stages 9–14. Provider files are explicitly unconfigured templates: ChatGPT OpenAPI has a placeholder host and no paths; Claude MCP server list is empty and its Skills need host-format adaptation.
+- Runtime security controls have unit coverage for tenant identity, deny-by-default tool permissions, argument validation, tenant-scoped memory and audit filtering. Memory and audit are in-memory development/test adapters; authentication, tenant derivation, durable storage and host authorization remain host responsibilities. This is a source-level review, not a penetration test or certification.
+- No GitHub Release is published. Release artifact/release-note verification and explicit release approval remain open.
 
 Non-goals:
 - do not reopen or claim completion of Stage 11 substantive validation;
