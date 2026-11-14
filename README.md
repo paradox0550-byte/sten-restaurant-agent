@@ -72,3 +72,18 @@ Canonical sector/format taxonomy and cross-sector management domains live in `kn
 The existing `src/evaluation/knowledge-quality.js` provides metadata integrity checks plus retrieval ranking metrics and answer-evidence integrity checks. Eight labelled HoReCa golden cases are stored in `evals/stage-13-golden-cases.json`. Automated tests validate the metrics and case contracts; live retrieval baselines and expert-reviewed answer quality remain to be measured.
 
 **Stage 11 closeout remains open.** The taxonomy and graph foundation is integrated, but the restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. See `docs/stage-11-validation.md`.
+
+
+## Final Integration & Release — Stage 14
+
+Stage 14 is in progress. It consolidates the existing core for a portable release; it does not add a second expert engine or imply that the knowledge corpus is complete.
+
+Release gates:
+- one canonical architecture and accurate stage/status documentation;
+- package manifest reconciled with the tracked deliverables;
+- all automated tests, evidence validation and manifest-path checks passing;
+- provider setup instructions and capability limits verified;
+- security, tenant isolation, permissions, memory and audit boundaries reviewed;
+- release package and versioning reproducible, with limitations and non-production components clearly stated.
+
+Stage 11 substantive knowledge validation remains open and is not a Stage 14 shortcut. Passing engineering checks does not certify professional answer correctness, legal compliance or production security. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
