@@ -33,3 +33,8 @@ Integrated: provider-injected semantic reranking with candidate allowlisting, pr
 ## Stage 11 — HoReCa Knowledge Structure
 
 Integrated: canonical nine-sector taxonomy with multi-format/channel dimensions; cross-sector management-domain catalog; tenant-scoped establishment profile; source intake checklist; evidence class, provenance, jurisdiction, validity, limitations and applicability governance. Curated domain packages, verified legal corpora and representative evaluations remain to be populated and reviewed. See `docs/horeca-applicability-profile.md` and `docs/source-intake-checklist.md`.
+
+
+## Stage 12 — Expert Intelligence
+
+Integrated initial orchestration in `src/intelligence/expert-analysis.js`: retrieval context + governed evidence + Intelligence Engine envelope, explicit input sufficiency, source-linked scenario delta comparison on compatible bases, and causal links retained as hypotheses. Added focused tests and acceptance criteria. This is an initial integration, not a claim that every diagnosis is correct or that Stage 11's operational catalog has passed substantive validation. See `docs/stage-12-expert-intelligence.md`.
