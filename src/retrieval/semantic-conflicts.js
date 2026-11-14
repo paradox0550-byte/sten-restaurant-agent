@@ -1,0 +1,2 @@
+/** Injected semantic contradiction detector. Findings always require human review. */
+export async function detectSemanticConflicts({records=[],detector}={}){if(!detector||typeof detector.detect!=="function")return{status:"unavailable",reason:"semantic_conflict_detector_not_configured",conflicts:[]};const conflicts=await detector.detect({records});return{status:"review_required",conflicts:(conflicts??[]).map(x=>({...x,status:"semantic_conflict_requires_human_review"}))};}
