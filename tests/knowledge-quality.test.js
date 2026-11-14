@@ -116,3 +116,37 @@ test("Stage 13 runs golden queries through the actual lexical retrieval ranker",
   assert.equal(report.macro.recallAtK, 0.9291666666666667);
   assert.equal(report.macro.reciprocalRank, 1);
 });
+
+
+test("post-enrichment holdout runs through production lexical retrieval without tuning thresholds", () => {
+  const graph = read("../knowledge/graph/operational-knowledge-graph.json");
+  const holdout = read("../evals/stage-13-blind-holdout.json");
+  const golden = read("../evals/stage-13-golden-cases.json").cases;
+  const goldenIds = new Set(golden.map((item) => item.id));
+  const corpusIds = new Set(graph.nodes.map((item) => item.id));
+  assert.equal(holdout.cases.length, 12);
+  assert.ok(holdout.cases.every((item) => !goldenIds.has(item.id)));
+  assert.ok(holdout.cases.every((item) => item.expected_ids.length > 0));
+  assert.ok(holdout.cases.every((item) => item.expected_ids.every((id) => corpusIds.has(id))));
+  assert.ok(holdout.cases.every((item) =>
+    item.label_status === "provisional_model_authored_requires_expert_adjudication"
+  ));
+
+  const report = runRetrievalEvaluation({ cases: holdout.cases, documents: graph.nodes, k: 10 });
+  assert.equal(report.scope, "labelled_cases_against_supplied_corpus_lexical_ranker_only");
+  assert.equal(report.cases_total, 12);
+  assert.equal(report.cases_scored, 12);
+  assert.ok(report.results.every((item) => item.metrics.status === "scored"));
+  console.log("[Stage 13 holdout — provisional, not expert-adjudicated]", JSON.stringify({
+    corpus_documents: report.corpus_documents,
+    cases_total: report.cases_total,
+    macro: report.macro,
+    cases: report.results.map((item) => ({
+      case_id: item.case_id,
+      relevant_found: item.metrics.relevantFound,
+      relevant_total: item.metrics.relevantTotal,
+      recall_at_10: item.metrics.recallAtK,
+      first_relevant_rank: item.metrics.reciprocalRank ? 1 / item.metrics.reciprocalRank : null
+    }))
+  }));
+});
