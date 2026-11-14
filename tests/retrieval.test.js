@@ -42,3 +42,28 @@ test("BM25 ranks the document with relevant aliases and keywords first", () => {
   assert.equal(result.results[0].document.id, "finance.food-cost");
   assert.ok(result.results[0].matchedTermCount >= 2);
 });
+
+
+test("field-aware ranking prioritizes delivery for peak-load service deterioration", () => {
+  const graph = JSON.parse(require("node:fs").readFileSync(
+    new URL("../knowledge/graph/operational-knowledge-graph.json", import.meta.url), "utf8"
+  ));
+  const result = rankDocuments(
+    "В пиковые часы ухудшается сервис. Проверь график и нагрузку",
+    graph.nodes,
+    { limit: 10 }
+  );
+  const ids = result.results.map((item) => item.document.id);
+  assert.ok(ids.indexOf("delivery.order") >= 0 && ids.indexOf("delivery.order") < 3, ids.join(", "));
+  assert.ok(ids.includes("people.schedule"), ids.join(", "));
+});
+
+test("field-aware ranking preserves payroll retrieval for payroll-specific questions", () => {
+  const candidates = [
+    { id: "people.payroll", label: "Начисление заработной платы", description: "Проверка начислений по подтверждённым часам", keywords: ["табель", "зарплата", "расчёт заработной платы"] },
+    { id: "people.schedule", label: "График выхода и планирование смен", keywords: ["график смен", "плановые часы"] },
+    { id: "delivery.order", label: "Приём и выдача заказа", keywords: ["пиковая нагрузка", "скорость выдачи"] }
+  ];
+  const result = rankDocuments("Проверь начисление заработной платы и табель", candidates);
+  assert.equal(result.results[0].document.id, "people.payroll");
+});
