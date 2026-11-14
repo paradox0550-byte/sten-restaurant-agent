@@ -1,0 +1,66 @@
+{
+  "registry_version":"1.0.0",
+  "package_version":"0.5.0",
+  "records":[
+    {
+      "id":"core.no-source-no-fact",
+      "title":"Правило доказуемости: нет источника — нет факта",
+      "summary":"Управленчески значимые утверждения должны быть прослеживаемы до источника либо явно обозначены как вывод, гипотеза или неизвестное.",
+      "evidence_class":"CORE",
+      "topic":["reasoning","evidence_quality","governance"],
+      "source":{"publisher":"STEN","title":"Методологический принцип STEN","source_type":"internal_methodology","url":null,"citation":"STEN CORE principle: No source = no fact.","published_at":null,"accessed_at":"2026-11-14","source_version":"0.5.0"},
+      "territory":{"scope":"global","jurisdictions":[]},
+      "validity":{"status":"in_force","published_on":null,"effective_from":"2026-11-14","effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-11-14","supersedes":null,"superseded_by":null},
+      "applicability":{"sectors":["restaurant","cafe","bar","bakery","confectionery","hotel_food_service","catering","canteen","food_hall","food_court","fast_casual","quick_service","dark_kitchen","delivery","other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":[],"determination":"universal_within_scope"},
+      "limitations":["Методологическое правило STEN, не внешний научный или нормативный источник."],
+      "related_records":["core.missing-not-zero"],"conflicts_with":[],"record_status":"approved",
+      "review":{"reviewer_role":"methodology_owner","reviewed_at":"2026-11-14","review_notes":"Принцип подтверждён владельцем проекта."},
+      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+    },
+    {
+      "id":"core.missing-not-zero",
+      "title":"Правило неизвестного значения: отсутствие данных не равно нулю",
+      "summary":"Пустое или неизвестное значение нельзя автоматически преобразовывать в 0, false, отсутствие риска или подтверждение соответствия.",
+      "evidence_class":"CORE",
+      "topic":["data_quality","reasoning","financial_analysis"],
+      "source":{"publisher":"STEN","title":"Методологический принцип STEN","source_type":"internal_methodology","url":null,"citation":"STEN CORE principle: Missing != zero.","published_at":null,"accessed_at":"2026-11-14","source_version":"0.5.0"},
+      "territory":{"scope":"global","jurisdictions":[]},
+      "validity":{"status":"in_force","published_on":null,"effective_from":"2026-11-14","effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-11-14","supersedes":null,"superseded_by":null},
+      "applicability":{"sectors":["restaurant","cafe","bar","bakery","confectionery","hotel_food_service","catering","canteen","food_hall","food_court","fast_casual","quick_service","dark_kitchen","delivery","other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":[],"determination":"universal_within_scope"},
+      "limitations":["Ноль допустим только при явном значении из источника или расчёте с подтверждёнными исходными данными."],
+      "related_records":["core.no-source-no-fact"],"conflicts_with":[],"record_status":"approved",
+      "review":{"reviewer_role":"methodology_owner","reviewed_at":"2026-11-14","review_notes":"Принцип подтверждён владельцем проекта."},
+      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+    },
+    {
+      "id":"practice.daily-operational-walk",
+      "title":"Ежедневный операционный обход как практика контроля",
+      "summary":"Регулярный обход зон ресторана может применяться для выявления отклонений в готовности, чистоте, оборудовании, продукте и сервисе. Частота и чек-лист устанавливаются профилем объекта.",
+      "evidence_class":"PRACTICE",
+      "topic":["operations","audit","readiness","quality"],
+      "source":{"publisher":"Обезличенный корпоративный регламент ресторана, предоставленный владельцем проекта","title":"Руководящие документы для ресторанов, редакция на 01.09.2025","source_type":"internal_methodology","url":null,"citation":"Разделы ежедневного визуального обхода, печатные страницы 8–9 исходного материала.","published_at":"2025-09-01","accessed_at":"2026-11-14","source_version":"2025-09-01"},
+      "territory":{"scope":"organization","jurisdictions":[]},
+      "validity":{"status":"historical","published_on":"2025-09-01","effective_from":null,"effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-05-14","supersedes":null,"superseded_by":null},
+      "applicability":{"sectors":["restaurant"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":["service_model","operating_zones"],"determination":"conditional"},
+      "limitations":["Корпоративный регламент одного оператора; не закон и не универсальный отраслевой стандарт.","Частота обходов и параметры не переносятся автоматически на другие предприятия.","Содержание обобщено, корпоративные процедуры дословно не воспроизводятся."],
+      "related_records":[],"conflicts_with":[],"record_status":"reviewed",
+      "review":{"reviewer_role":"knowledge_curator","reviewed_at":"2026-11-14","review_notes":"Обезличено; классифицировано как ограниченная практика."},
+      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+    },
+    {
+      "id":"law.placeholder-intake-template",
+      "title":"Шаблон нормативной записи — не является нормативным требованием",
+      "summary":"Служебная структура записи. Не содержит утверждения о действующей норме и не используется для вывода о соблюдении законодательства.",
+      "evidence_class":"LAW",
+      "topic":["legal_registry","template"],
+      "source":{"publisher":"STEN","title":"Шаблон приёма нормативных источников","source_type":"other","url":null,"citation":null,"published_at":null,"accessed_at":"2026-11-14","source_version":"template"},
+      "territory":{"scope":"unknown","jurisdictions":[]},
+      "validity":{"status":"unknown","published_on":null,"effective_from":null,"effective_to":null,"last_verified_at":null,"review_due_at":null,"supersedes":null,"superseded_by":null},
+      "applicability":{"sectors":["other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":["jurisdiction","date_of_assessment","establishment_profile"],"determination":"unknown"},
+      "limitations":["Технический шаблон, не содержание закона.","До замены конкретным актом и официальным источником остаётся unknown и не используется как требование."],
+      "related_records":[],"conflicts_with":[],"record_status":"draft",
+      "review":{"reviewer_role":null,"reviewed_at":null,"review_notes":"Ожидает реальной нормативной записи из официального источника."},
+      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+    }
+  ]
+}
