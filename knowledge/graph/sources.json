@@ -41,7 +41,7 @@
       "locator": "XLSX; sheets: «календарный план», «11-15.10», «18-19.10»; main sheet rows 2–42; weekly plan/fact sheets rows 3–43; workbook inspected directly",
       "limitations": [
         "Time budgets, frequency labels and the 21-workday calculation base are examples from one organization-specific operating model, not universal standards.",
-        "Blank planned occurrence counts and blank plan/fact cells remain unknown/not entered; they must not be converted to zero.",
+        "Blank cells, blank planned occurrence counts and blank plan/fact cells are not zero and are not proof that a task is unnecessary or was not performed.",
         "Weekly sheets contain historical plan/fact observations; sheet «18-19.10» repeats weekday headings for 11–15.10 and has predominantly blank fact cells, so its date range and actual execution cannot be reliably inferred.",
         "The workbook does not consistently specify accountable owners, evidence records, acceptance criteria or escalation routes for each activity; these must remain unknown unless another source supports them.",
         "Some abbreviations (РУ, ШП, FBC, МС, СШ, СЗ, ТМЦ) are not expanded in the workbook and are retained without speculative interpretation.",
