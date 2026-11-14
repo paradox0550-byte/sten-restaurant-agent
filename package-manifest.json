@@ -75,7 +75,8 @@
     "multi_hop_horeca_evaluation_seed_cases",
     "sector_to_management_domain_coverage_matrix",
     "structural_multi_hop_graph_evaluation_harness",
-    "knowledge_metadata_and_cross_reference_quality_checks"
+    "knowledge_metadata_and_cross_reference_quality_checks",
+    "source_grounded_director_functional_role_and_activity_catalog"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -102,7 +103,9 @@
     "complete_current_legal_corpus_for_all_jurisdictions",
     "automated_compliance_certification",
     "measured_answer_level_multi_hop_quality",
-    "complete_reviewed_sector_specific_knowledge_corpus"
+    "complete_reviewed_sector_specific_knowledge_corpus",
+    "universal_director_time_benchmarks",
+    "validated_org_chart_for_all_horeca_formats"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -227,7 +230,8 @@
     "docs/sector-domain-matrix-evaluation.md",
     "src/evaluation/knowledge-quality.js",
     "tests/knowledge-quality.test.js",
-    "docs/knowledge-quality-integrity.md"
+    "docs/knowledge-quality-integrity.md",
+    "knowledge/procedures/director-calendar-activity-catalog.json"
   ],
   "tests": {
     "stage4_existing": 11,

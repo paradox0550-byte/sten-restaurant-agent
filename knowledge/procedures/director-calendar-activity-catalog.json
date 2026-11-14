@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "source_id": "source.director-calendar",
+  "evidence_class": "PRACTICE",
+  "scope": "organization_specific_operating_model",
+  "purpose": "Structured extraction of functional director roles and activities from the source workbook. This is a descriptive activity catalog, not an approved universal job description or SOP.",
+  "time_unit": "minutes",
+  "planning_period_basis": {
+    "value": "21 working days",
+    "source_location": "Main sheet formula at row 45: =21*8*60",
+    "status": "source_explicit",
+    "limitations": "Historical workbook planning assumption; not a universal calendar or working-time rule."
+  },
+  "functional_roles": [
+    {"id":"management.role-idea-leader","label":"Идейный лидер","purpose":"Новые идеи подхватываются сотрудниками и транслируются гостям; эмоциональный подъём команды.","source_rows":[2,7],"activities":[
+      {"row":2,"activity":"Анализ аудитов сервиса, составление плана мероприятий","cadence":"еженедельно","planned_minutes_per_occurrence":40,"planned_occurrences_per_period":4},
+      {"row":3,"activity":"Планёрка","cadence":"ежедневно","planned_minutes_per_occurrence":30,"planned_occurrences_per_period":21},
+      {"row":4,"activity":"Проведение собрания с руководителями","cadence":"ежемесячно","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1},
+      {"row":5,"activity":"Проведение общего собрания с сотрудниками","cadence":"ежемесячно","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1},
+      {"row":6,"activity":"Работа с отзывами на площадках","cadence":"ежедневно","planned_minutes_per_occurrence":10,"planned_occurrences_per_period":21},
+      {"row":7,"activity":"Решение сложных ситуаций с гостями в зале","cadence":"по потребности","planned_minutes_per_occurrence":10,"planned_occurrences_per_period":null}
+    ]},
+    {"id":"management.role-performance-director","label":"Директор по показателям","purpose":"Прибыль ресторана соответствует целевым показателям или превышает их.","source_rows":[8,17],"activities":[
+      {"row":8,"activity":"Планирование/согласование/корректировка бюджета","cadence":"ежемесячно","planned_minutes_per_occurrence":260,"planned_occurrences_per_period":1},
+      {"row":9,"activity":"Исполнение бюджета/оптимизация расходов (в т.ч. ФОТ, СС)","cadence":"ежедневно","planned_minutes_per_occurrence":40,"planned_occurrences_per_period":21},
+      {"row":10,"activity":"Анализ ежедневного отчёта, план мероприятий при отклонениях, постановка задач руководителям","cadence":"ежедневно","planned_minutes_per_occurrence":20,"planned_occurrences_per_period":21},
+      {"row":11,"activity":"Формирование, анализ и составление планов отчёта KPI","cadence":"ежемесячно","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1},
+      {"row":12,"activity":"Формирование отчёта по доставке","cadence":"еженедельно","planned_minutes_per_occurrence":10,"planned_occurrences_per_period":4},
+      {"row":13,"activity":"Контроль закупа ТМЦ","cadence":"ежедневно","planned_minutes_per_occurrence":20,"planned_occurrences_per_period":21},
+      {"row":14,"activity":"Проведение инвентаризации","cadence":"ежемесячно","planned_minutes_per_occurrence":240,"planned_occurrences_per_period":1},
+      {"row":15,"activity":"Проведение внеплановой инвентаризации (ТМЦ/ОС)","cadence":"по потребности","planned_minutes_per_occurrence":180,"planned_occurrences_per_period":null},
+      {"row":16,"activity":"Составление протокола + СЗ","cadence":"ежемесячно","planned_minutes_per_occurrence":120,"planned_occurrences_per_period":1},
+      {"row":17,"activity":"Защита инвентаризации + дорога","cadence":"ежемесячно","planned_minutes_per_occurrence":100,"planned_occurrences_per_period":1}
+    ]},
+    {"id":"management.role-service-director","label":"Директор по сервису","purpose":"Высокий уровень сервиса в ресторане с концептуальным эмоциональным характером.","source_rows":[18,25],"activities":[
+      {"row":18,"activity":"Подбор людей в команду (обзвон, работа с сайтами)","cadence":"по потребности","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":null},
+      {"row":19,"activity":"Проведение массового подбора","cadence":"по потребности","planned_minutes_per_occurrence":70,"planned_occurrences_per_period":null},
+      {"row":20,"activity":"Контроль адаптации сотрудника","cadence":"по потребности","planned_minutes_per_occurrence":30,"planned_occurrences_per_period":null},
+      {"row":21,"activity":"Планирование обучающих мероприятий","cadence":"ежемесячно","planned_minutes_per_occurrence":20,"planned_occurrences_per_period":1},
+      {"row":22,"activity":"Проведение/контроль обучающих мероприятий","cadence":"ежемесячно","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1},
+      {"row":23,"activity":"Запрос обратной связи у гостей по броням и в зале","cadence":"ежедневно","planned_minutes_per_occurrence":15,"planned_occurrences_per_period":21},
+      {"row":24,"activity":"Предоставление обратной связи сотрудникам","cadence":"ежедневно","planned_minutes_per_occurrence":90,"planned_occurrences_per_period":21},
+      {"row":25,"activity":"Заполнение аудита ведения смены МС","cadence":"ежемесячно","planned_minutes_per_occurrence":30,"planned_occurrences_per_period":2}
+    ]},
+    {"id":"management.role-atmosphere-director","label":"Директор по атмосфере","purpose":"Идеальная атмосфера в ресторане независимо от времени суток и времени года.","source_rows":[26,27],"activities":[
+      {"row":26,"activity":"Контроль открытия зала и контроль в течение смены","cadence":"ежедневно","planned_minutes_per_occurrence":30,"planned_occurrences_per_period":21},
+      {"row":27,"activity":"Проведение технического аудита","cadence":"ежемесячно","planned_minutes_per_occurrence":40,"planned_occurrences_per_period":1}
+    ]},
+    {"id":"management.role-operations-director","label":"Директор по управлению","purpose":"Бесперебойное управление работой ресторана.","source_rows":[28,35],"activities":[
+      {"row":28,"activity":"Разрешительная документация, договоры, трудовые отношения","cadence":"еженедельно","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":4},
+      {"row":29,"activity":"Работа с поставщиками и аутсорсинговыми компаниями","cadence":"ежедневно","planned_minutes_per_occurrence":20,"planned_occurrences_per_period":21},
+      {"row":30,"activity":"Контроль работы бухгалтера: сроки, размеры оплат, первичная бухгалтерия","cadence":"ежедневно","planned_minutes_per_occurrence":15,"planned_occurrences_per_period":21},
+      {"row":31,"activity":"Контроль расчётов и начислений заработной платы, финансовой мотивации","cadence":"ежемесячно","planned_minutes_per_occurrence":120,"planned_occurrences_per_period":1},
+      {"row":32,"activity":"Работа с электронной почтой","cadence":"ежедневно","planned_minutes_per_occurrence":15,"planned_occurrences_per_period":21},
+      {"row":33,"activity":"Подготовка к бизнес-диалогу","cadence":"еженедельно","planned_minutes_per_occurrence":25,"planned_occurrences_per_period":4},
+      {"row":34,"activity":"Рабочая встреча с РУ, обсуждение рабочих вопросов и новых установок","cadence":"еженедельно","planned_minutes_per_occurrence":120,"planned_occurrences_per_period":4},
+      {"row":35,"activity":"Составление протокола по результатам комплексного аудита","cadence":"ежеквартально","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1}
+    ]},
+    {"id":"management.role-taste-director","label":"Директор по вкусу","purpose":"Полное совпадение блюд по вкусу и подаче с эталоном концепции.","source_rows":[36,42],"activities":[
+      {"row":36,"activity":"Планирование фуд-календаря","cadence":"еженедельно","planned_minutes_per_occurrence":10,"planned_occurrences_per_period":1},
+      {"row":37,"activity":"Взаимодействие с шеф-поваром по организации кухни, обратной связи гостей по блюдам, FBC и аудитам","cadence":"ежедневно","planned_minutes_per_occurrence":20,"planned_occurrences_per_period":21},
+      {"row":38,"activity":"Развитие вкуса у сотрудников через презентации FBC","cadence":"ежедневно","planned_minutes_per_occurrence":25,"planned_occurrences_per_period":21},
+      {"row":39,"activity":"Проведение аудита ведения смены СШ","cadence":"ежемесячно","planned_minutes_per_occurrence":30,"planned_occurrences_per_period":2},
+      {"row":40,"activity":"Проведение онлайн-аудитов","cadence":"еженедельно","planned_minutes_per_occurrence":90,"planned_occurrences_per_period":4},
+      {"row":41,"activity":"Проведение аудита HACCP","cadence":"ежеквартально","planned_minutes_per_occurrence":60,"planned_occurrences_per_period":1},
+      {"row":42,"activity":"Проведение аудита организации работы бара","cadence":"ежемесячно","planned_minutes_per_occurrence":40,"planned_occurrences_per_period":1}
+    ]}
+  ],
+  "weekly_sheets": [
+    {"sheet":"11-15.10","period_label":"11–15.10","year":"not stated","contains_plan_and_fact_columns":true,"observations":["План и факт занесены по отдельным дням; встречаются нулевые значения и пустые ячейки — они не взаимозаменяемы.","Некоторые фактические значения превышают план; например, планирование обучающих мероприятий в строке 22 содержит 20 минут плана и 180 минут факта в одном из дней.","Строка 3 по анализу аудитов сервиса содержит 40 минут плана и 64 минуты факта за указанный день.","Даты и год не подтверждены вне заголовка листа."]},
+    {"sheet":"18-19.10","period_label":"18–19.10","year":"not stated","contains_plan_and_fact_columns":true,"observations":["Заголовки столбцов повторяют вторник–субботу 11.10–15.10, хотя имя листа указывает 18–19.10; календарное соответствие неоднозначно.","Фактические ячейки преимущественно пусты; пустота не трактуется как нулевое фактическое время или невыполнение.","Не использовать лист для расчёта фактической загрузки без уточнения периода и заполнения."]}
+  ],
+  "interpretation_rules": [
+    "The six director roles are functional lenses in one management model, not necessarily six separate positions or a recommended universal org chart.",
+    "Activity names, cadence labels and time budgets are preserved as source-specific PRACTICE.",
+    "Null planned occurrence counts mean not specified in the source; do not convert to zero.",
+    "The workbook does not provide a reliable accountable owner, record template, completion evidence or acceptance criteria for every activity; these fields remain unspecified.",
+    "Abbreviations РУ, ШП, FBC, МС, СШ, СЗ, ТМЦ and ОС are retained without expansion because the workbook does not define them.",
+    "No legal, payroll or food-safety compliance conclusion is inferred from the calendar."
+  ]
+}

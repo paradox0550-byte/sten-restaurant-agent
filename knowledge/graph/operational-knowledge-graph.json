@@ -615,6 +615,72 @@
       "type": "record_template",
       "label": "Журнал отклонений доставки",
       "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "management.role-idea-leader",
+      "label": "Функциональная роль: идейный лидер",
+      "purpose": "Новые идеи подхватываются сотрудниками и транслируются гостям; эмоциональный подъём команды.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "management.role-performance-director",
+      "label": "Функциональная роль: директор по показателям",
+      "purpose": "Прибыль ресторана соответствует целевым показателям или превышает их.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "management.role-service-director",
+      "label": "Функциональная роль: директор по сервису",
+      "purpose": "Высокий уровень сервиса в ресторане с концептуальным эмоциональным характером.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "management.role-atmosphere-director",
+      "label": "Функциональная роль: директор по атмосфере",
+      "purpose": "Идеальная атмосфера в ресторане независимо от времени суток и времени года.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "management.role-operations-director",
+      "label": "Функциональная роль: директор по управлению",
+      "purpose": "Бесперебойное управление работой ресторана.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "management.role-taste-director",
+      "label": "Функциональная роль: директор по вкусу",
+      "purpose": "Совпадение блюд по вкусу и подаче с эталоном концепции.",
+      "type": "role",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.director-calendar"
+      ],
+      "scope": "organization_specific_functional_role_not_job_title"
     }
   ],
   "edges": [
@@ -1155,6 +1221,188 @@
       "type": "analytical_path",
       "status": "evaluation_route_not_causal",
       "note": "Связь используется для проверки междоменного анализа; не утверждает причинность и требует подтверждения фактическими данными."
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-idea-leader",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-performance-director",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-service-director",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-atmosphere-director",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-operations-director",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.director-role",
+      "to": "management.role-taste-director",
+      "type": "decomposes_into",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-idea-leader",
+      "to": "management.meetings",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-idea-leader",
+      "to": "service.complaints",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-idea-leader",
+      "to": "people.training",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-performance-director",
+      "to": "finance.pnl-kpi",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-performance-director",
+      "to": "inventory.stocktake",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-performance-director",
+      "to": "supply.procurement",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-service-director",
+      "to": "people.recruitment",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-service-director",
+      "to": "people.onboarding",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-service-director",
+      "to": "people.training",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-service-director",
+      "to": "service.guest-experience",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-atmosphere-director",
+      "to": "management.control",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-atmosphere-director",
+      "to": "facilities.maintenance",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-operations-director",
+      "to": "records.contracts",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-operations-director",
+      "to": "supply.procurement",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-operations-director",
+      "to": "people.payroll",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-operations-director",
+      "to": "management.meetings",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-taste-director",
+      "to": "production.menu-cycle",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-taste-director",
+      "to": "production.kitchen",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-taste-director",
+      "to": "operations.quality",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "management.role-taste-director",
+      "to": "safety.haccp",
+      "type": "includes_activity",
+      "source_id": "source.director-calendar",
+      "scope": "organization_specific_activity_mapping"
     }
   ],
   "source_links": [
@@ -1208,7 +1456,13 @@
         "service.guest-experience",
         "operations.audit",
         "production.menu-cycle",
-        "safety.haccp"
+        "safety.haccp",
+        "management.role-idea-leader",
+        "management.role-performance-director",
+        "management.role-service-director",
+        "management.role-atmosphere-director",
+        "management.role-operations-director",
+        "management.role-taste-director"
       ]
     },
     {
