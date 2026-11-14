@@ -58,3 +58,8 @@ Optional host-injected reranking can reorder existing retrieval candidates witho
 ## HoReCa Knowledge Structure (Stage 11)
 
 Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.
+
+
+## Expert Intelligence (Stage 12)
+
+`src/intelligence/expert-analysis.js` connects governed retrieval and the Intelligence Engine through `buildExpertAnalysis`. It checks decision-specific input sufficiency, preserves causal links as hypotheses, and compares sourced financial scenarios only on a matching scope, period, currency and unit. Missing values remain missing; financial deltas are directional, not automatically favourable or unfavourable. See `docs/stage-12-expert-intelligence.md`.
