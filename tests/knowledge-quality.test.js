@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { evaluateKnowledgeQuality, evaluateRetrievalRanking, evaluateAnswerIntegrity } from "../src/evaluation/knowledge-quality.js";
+import { evaluateKnowledgeQuality, evaluateRetrievalRanking, evaluateAnswerIntegrity, runRetrievalEvaluation } from "../src/evaluation/knowledge-quality.js";
 
 const read = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), "utf8"));
 
@@ -88,4 +88,17 @@ test("Stage 13 golden HoReCa cases cover cross-domain questions and claim guardr
     assert.ok(item.must_require.length > 0, item.id);
     assert.ok(item.must_not_claim.length > 0, item.id);
   }
+});
+
+
+test("Stage 13 runs golden queries through the actual lexical retrieval ranker", () => {
+  const graph = read("../knowledge/graph/operational-knowledge-graph.json");
+  const cases = read("../evals/stage-13-golden-cases.json").cases;
+  const report = runRetrievalEvaluation({ cases, documents: graph.nodes, k: 10 });
+  assert.equal(report.scope, "labelled_cases_against_supplied_corpus_lexical_ranker_only");
+  assert.equal(report.corpus_documents, graph.nodes.length);
+  assert.equal(report.cases_total, cases.length);
+  assert.ok(report.results.every((item) => item.retrieved_ids.length <= 10));
+  assert.ok(report.results.every((item) => item.metrics.status === "scored"));
+  assert.ok(report.results.some((item) => item.expected_ids_missing_from_corpus.length > 0) === false);
 });
