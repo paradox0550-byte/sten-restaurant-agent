@@ -62,12 +62,12 @@ Scope:
 - run the complete CI gates and resolve regressions without weakening tests or silently refreshing baselines;
 - prepare a reproducible versioned package and release notes.
 
-Current verified blockers:
-- latest main CI run `43604092049` failed in `tests/knowledge-quality.test.js`: 88/89 tests passed; the exact Stage 13 golden retrieval ranking differs from its pinned baseline after graph enrichment. The baseline must not be changed until each ranking movement and its relevance impact are reviewed.
-- `package-manifest.json` lists 125 files while the tracked tree contains 135; ten tracked paths are absent from the manifest.
-- `package-manifest.json` stage integration metadata stops at Stage 11 and does not represent the integrated Stage 12 and Stage 13 work.
-- `docs/architecture.md` stops at the Stage 8 description while `stage-integration.md` records Stages 9–13.
-- No GitHub Release is currently published.
+Current verified status (2026-11-14):
+- Latest inspected main CI run `43612137666` (commit `3f293a1241c7b2f8bc23bd90234ba0ac2f975d65`) completed with failure: 90/91 tests passed. The sole failure is the strict Stage 13 golden retrieval top-10 snapshot after graph enrichment. The baseline has not been rewritten; ranking movement still requires case-by-case relevance review.
+- The repository tree contains 136 tracked files and `package-manifest.json` lists the same 136 paths: no missing or unlisted paths. Stage metadata now includes Stages 1–14; Stage 14 remains in progress.
+- Architecture documentation covers Stages 9–14. Provider files are templates: ChatGPT OpenAPI has a placeholder host and no paths; Claude MCP server list is empty and its Skills need host-format adaptation.
+- Runtime security controls have unit coverage for tenant identity, deny-by-default tool permissions, argument validation, tenant-scoped memory and audit filtering. Memory and audit are in-memory development/test adapters; authentication, tenant derivation, durable storage and host authorization remain host responsibilities. This is a code review, not a penetration test or certification.
+- No GitHub Release is published. Release remains blocked until the ranking regression is resolved, all CI gates pass, and release artifact/release-note checks are completed.
 
 Non-goals:
 - do not reopen or claim completion of Stage 11 substantive validation;
