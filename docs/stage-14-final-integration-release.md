@@ -111,7 +111,8 @@ This review is not a penetration test or security certification.
 
 - [ ] README, architecture, stage integration and package manifest agree.
 - [ ] Stage status is accurate; Stage 11 is visibly still open.
-- [ ] Manifest contains all intended tracked package files and no missing paths.
+- [x] Manifest contains all tracked package files with no missing or unlisted paths (136/136 at the last tree audit).
+- [x] Dependency-free package validator added to CI for exact tracked-file coverage, duplicate paths, version consistency, Stage 11/14 status and provider-template structure.
 - [ ] ChatGPT provider schema/instructions are internally consistent.
 - [ ] Claude provider configuration/instructions are internally consistent.
 - [ ] Tenant, memory, audit and tool-permission boundaries reviewed.
@@ -119,7 +120,7 @@ This review is not a penetration test or security certification.
 - [ ] Stage 13 retrieval ranking regression investigated and disposition documented.
 - [ ] `npm test` passes.
 - [ ] `npm run validate:evidence` passes.
-- [ ] Manifest-path CI check passes.
+- [ ] Package-integrity CI check passes on the current commit.
 - [ ] Release artifact and release notes are reproducible and accurate.
 - [ ] Final CI is green on the exact release commit.
 - [ ] Release readiness is explicitly approved before publication.
