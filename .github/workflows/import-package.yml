@@ -20,7 +20,7 @@ jobs:
           mkdir -p /tmp/sten-package
           unzip -q sten-restaurant-agent-complete-package.zip -d /tmp/sten-package
           test -f /tmp/sten-package/sten-restaurant-agent/package-manifest.json
-          rsync -a --delete --exclude='.git/' /tmp/sten-package/sten-restaurant-agent/ ./
+          rsync -a --delete --exclude='.git/' --exclude='.github/workflows/ci.yml' --exclude='.github/workflows/import-package.yml' /tmp/sten-package/sten-restaurant-agent/ ./
           rm -f sten-restaurant-agent-complete-package.zip
           rm -f .github/unpack-trigger
       - name: Commit canonical structure
