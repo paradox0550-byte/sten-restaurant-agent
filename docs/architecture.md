@@ -16,3 +16,7 @@ One reasoning method, multiple providers. The provider is an execution environme
 8. Runtime & integration boundary — provider registry, permission-gated tools, tenant-scoped memory adapter, audit sink and orchestration.
 
 Stage 6 is an injected runtime foundation. It does not include live provider SDKs, production authentication, persistent storage or deployment configuration.
+
+9. Knowledge Retrieval & Expert Context — deterministic lexical retrieval, establishment-profile relevance checks, Evidence Registry joining and explicit conflict surfacing.
+
+Stage 7 is a retrieval foundation. It does not yet include vector embeddings, a vector database, automatic semantic contradiction resolution or a complete curated knowledge corpus.

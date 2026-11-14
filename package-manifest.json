@@ -8,7 +8,8 @@
     3,
     4,
     5,
-    6
+    6,
+    7
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -34,7 +35,11 @@
     "permission_gated_tool_execution",
     "tenant_scoped_memory_adapter",
     "runtime_audit_sink",
-    "runtime_orchestrator"
+    "runtime_orchestrator",
+    "lexical_knowledge_retrieval",
+    "profile_aware_retrieval",
+    "expert_context_assembly",
+    "explicit_evidence_conflict_reporting"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -46,7 +51,10 @@
     "production_persistent_memory",
     "live_provider_connectors",
     "production_authentication_and_authorization",
-    "distributed_audit_storage"
+    "distributed_audit_storage",
+    "vector_or_embedding_search",
+    "automated_semantic_conflict_resolution",
+    "complete_knowledge_corpus"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -59,6 +67,7 @@
     "docs/architecture.md",
     "docs/contributing-evidence.md",
     "docs/knowledge-evidence-layer.md",
+    "docs/retrieval-context.md",
     "docs/runtime-integration.md",
     "docs/stage-integration.md",
     "evals/core-quality-cases.md",
@@ -103,6 +112,12 @@
     "src/intelligence/engine.js",
     "src/labor/productivity.js",
     "src/menu/engineering.js",
+    "src/retrieval/applicability.js",
+    "src/retrieval/conflicts.js",
+    "src/retrieval/context.js",
+    "src/retrieval/index.js",
+    "src/retrieval/rank.js",
+    "src/retrieval/text.js",
     "src/runtime/audit.js",
     "src/runtime/errors.js",
     "src/runtime/index.js",
@@ -115,6 +130,7 @@
     "tests/finance.test.js",
     "tests/intelligence-engine.test.js",
     "tests/labor-menu-service.test.js",
+    "tests/retrieval.test.js",
     "tests/runtime.test.js",
     "tools/README.md",
     "tools/api/README.md",
@@ -127,10 +143,11 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 30,
+    "total_expected": 36,
     "command": "npm test",
     "last_local_result": "19 passed, 0 failed",
-    "runtime_layer": 8
+    "runtime_layer": 8,
+    "retrieval_layer": 6
   },
   "stage_status": {
     "1": "integrated",
@@ -138,6 +155,7 @@
     "3": "integrated",
     "4": "integrated_with_evidence_guardrails",
     "5": "integrated_foundation_registry_and_validation; live legal/research corpus not populated",
-    "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed"
+    "6": "runtime_foundation_integrated; injected provider interface, permission-gated tools, tenant-scoped development memory and audit sink; production adapters not deployed",
+    "7": "retrieval_foundation_integrated; lexical ranked search, conservative profile applicability, evidence join and explicit conflict reporting; no vector database or automatic semantic/legal conclusions"
   }
 }

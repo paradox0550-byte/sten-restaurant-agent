@@ -15,6 +15,10 @@
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
+## Knowledge Retrieval & Expert Context (Stage 7)
+
+`src/retrieval/` provides deterministic lexical ranking, conservative establishment-profile applicability checks, Evidence Registry joining and explicit conflict reporting. It does not infer legal applicability or silently resolve source conflicts. See `docs/retrieval-context.md`.
+
 ## Runtime layer (Stage 6)
 
 A provider-neutral runtime foundation is available in `src/runtime/`. It injects provider, tool, memory and audit adapters; requires tenant identity; and gates every tool call behind explicit host-granted permissions. The included memory and audit adapters are development/test implementations only. See `docs/runtime-integration.md` before connecting a host application.
