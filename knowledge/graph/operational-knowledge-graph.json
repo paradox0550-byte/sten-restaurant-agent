@@ -1052,6 +1052,11 @@
       "from": "proc.delivery-order-control",
       "to": "check.delivery-order",
       "type": "uses_checklist"
+    },
+    {
+      "from": "service.appearance",
+      "to": "proc.appearance-readiness",
+      "type": "operationalized_by"
     }
   ],
   "source_links": [

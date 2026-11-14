@@ -97,7 +97,8 @@
       "query": "Как часто нужно проводить проверку внешнего вида персонала?",
       "expected_path": [
         "service.appearance",
-        "proc.appearance-readiness"
+        "proc.appearance-readiness",
+        "check.appearance"
       ],
       "must_require": [
         "сообщить что периодичность в источнике не указана"
