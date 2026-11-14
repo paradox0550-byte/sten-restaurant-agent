@@ -35,7 +35,10 @@ function tokensForFields(document, fields) {
 
 function averageLength(prepared, fieldGroup) {
   if (!prepared.length) return 0;
-  return prepared.reduce((sum, item) => sum + item.fieldTokens[fieldGroup].length, 0) / prepared.length;
+  const populated = prepared.filter((item) => item.fieldTokens[fieldGroup].length > 0);
+  return populated.length
+    ? populated.reduce((sum, item) => sum + item.fieldTokens[fieldGroup].length, 0) / populated.length
+    : 0;
 }
 
 /**
