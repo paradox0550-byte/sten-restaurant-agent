@@ -77,3 +77,15 @@ test("answer evaluator requires expected source conflicts to remain visible", ()
   const missing = evaluateAnswerIntegrity({ expectedConflictPairs: [["source-a", "source-b"]] });
   assert.equal(missing.status, "needs_review");
 });
+
+test("Stage 13 golden HoReCa cases cover cross-domain questions and claim guardrails", () => {
+  const cases = read("../evals/stage-13-golden-cases.json").cases;
+  assert.ok(cases.length >= 8);
+  for (const item of cases) {
+    assert.ok(item.id && item.query && item.domain);
+    assert.ok(item.expected_ids.length > 0, item.id);
+    assert.ok(item.required_inputs.length > 0, item.id);
+    assert.ok(item.must_require.length > 0, item.id);
+    assert.ok(item.must_not_claim.length > 0, item.id);
+  }
+});
