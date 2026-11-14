@@ -56,3 +56,72 @@ export function evaluateKnowledgeQuality({ procedures, checklists, registers, so
     issues
   };
 }
+
+/**
+ * Ranking metrics for a labelled retrieval case. IDs may be strings or
+ * retrieved objects with id/document.id. An empty relevance set is unscored.
+ */
+export function evaluateRetrievalRanking({ expectedIds = [], retrieved = [], k = 10 } = {}) {
+  if (!expectedIds.length) return { status: "unscored", reason: "expected_ids_required" };
+  const ids = retrieved.slice(0, Math.max(0, k)).map((item) =>
+    typeof item === "string" ? item : item?.document?.id ?? item?.id
+  ).filter(Boolean);
+  const relevant = new Set(expectedIds);
+  const hits = ids.filter((id) => relevant.has(id));
+  const firstRelevant = ids.findIndex((id) => relevant.has(id));
+  const precisionAtK = k > 0 ? hits.length / k : 0;
+  const recallAtK = hits.length / relevant.size;
+  let dcg = 0;
+  ids.forEach((id, index) => { if (relevant.has(id)) dcg += 1 / Math.log2(index + 2); });
+  const idealHits = Math.min(relevant.size, Math.max(0, k));
+  const idealDcg = Array.from({ length: idealHits }, (_, index) => 1 / Math.log2(index + 2)).reduce((a, b) => a + b, 0);
+  return {
+    status: "scored",
+    k,
+    precisionAtK,
+    recallAtK,
+    reciprocalRank: firstRelevant < 0 ? 0 : 1 / (firstRelevant + 1),
+    ndcgAtK: idealDcg ? dcg / idealDcg : 0,
+    relevantFound: hits.length,
+    relevantTotal: relevant.size
+  };
+}
+
+/**
+ * Validates claim-to-evidence lineage and conservative treatment of unknowns,
+ * hypotheses and expected unresolved conflicts.
+ */
+export function evaluateAnswerIntegrity({
+  claims = [],
+  evidence = [],
+  conflicts = [],
+  expectedConflictPairs = []
+} = {}) {
+  const issues = [];
+  const evidenceIds = new Set(evidence.map((item) => item.id));
+  for (const [index, claim] of claims.entries()) {
+    const status = claim.status;
+    if (["observed", "calculated", "fact"].includes(status)) {
+      if (!claim.sourceIds?.length) issues.push(`claim_without_evidence:${index}`);
+      else if (claim.sourceIds.some((id) => !evidenceIds.has(id))) issues.push(`claim_unknown_evidence:${index}`);
+    }
+    if (status === "unknown" && claim.value !== null && claim.value !== undefined) {
+      issues.push(`unknown_coerced_to_value:${index}`);
+    }
+    if (status === "hypothesis" && claim.label !== "HYPOTHESIS") {
+      issues.push(`hypothesis_not_labelled:${index}`);
+    }
+  }
+  const conflictKeys = new Set(conflicts.map((item) => [...(item.recordIds ?? [])].sort().join("|")));
+  for (const pair of expectedConflictPairs) {
+    const key = [...pair].sort().join("|");
+    if (!conflictKeys.has(key)) issues.push(`expected_conflict_not_preserved:${key}`);
+  }
+  return {
+    status: issues.length ? "needs_review" : "pass",
+    claims_checked: claims.length,
+    evidence_count: evidence.length,
+    conflicts_checked: expectedConflictPairs.length,
+    issues
+  };
+}
