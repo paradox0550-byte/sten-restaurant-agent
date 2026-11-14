@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Stage 13 labelled HoReCa golden cases. These are evaluation specifications, not measured model results.",
+  "scoring_contract": {
+    "retrieval": "Compare ranked retrieved IDs with expected_ids using precision@k, recall@k, reciprocal rank and nDCG.",
+    "answer_integrity": "Every observed/calculated claim must cite known evidence; unknown values remain null/unknown; hypotheses retain HYPOTHESIS; expected conflicts remain unresolved and visible.",
+    "answer_quality": "Expert review required for relevance, operational correctness, sector applicability and recommendation usefulness. No automated score is claimed for these dimensions."
+  },
+  "cases": [
+    {
+      "id": "golden.finance.food-cost-missing-input",
+      "query": "Выручка известна, но сумма кухонных списаний отсутствует. Рассчитай Food Cost.",
+      "domain": "finance",
+      "expected_ids": [
+        "finance.food-cost",
+        "finance.pnl-kpi"
+      ],
+      "required_inputs": [
+        "kitchen_revenue",
+        "kitchen_cogs",
+        "period",
+        "calculation_scope"
+      ],
+      "must_require": [
+        "запросить отсутствующие данные",
+        "уточнить формулу и периметр"
+      ],
+      "must_not_claim": [
+        "Food Cost равен нулю",
+        "процент рассчитан без суммы кухонного COGS"
+      ],
+      "expected_answer_status": "needs_data"
+    },
+    {
+      "id": "golden.finance.inventory-variance",
+      "query": "Инвентаризация выявила расхождение. Как проверить влияние на Food Cost?",
+      "domain": "inventory_finance",
+      "expected_ids": [
+        "inventory.stocktake",
+        "finance.food-cost",
+        "production.recipe-spec",
+        "supply.receiving",
+        "finance.pnl-kpi"
+      ],
+      "required_inputs": [
+        "period",
+        "unit",
+        "opening_balance",
+        "receipts",
+        "transfers",
+        "writeoffs",
+        "closing_balance",
+        "food_cost_definition"
+      ],
+      "must_require": [
+        "сверить движение и документы",
+        "разделить факт расхождения и гипотезу причины"
+      ],
+      "must_not_claim": [
+        "Food Cost рассчитан по одному расхождению",
+        "причина потери известна без доказательств"
+      ]
+    },
+    {
+      "id": "golden.people.schedule-service-capacity",
+      "query": "В пиковые часы ухудшается сервис. Проверь график и нагрузку.",
+      "domain": "labor_service",
+      "expected_ids": [
+        "people.schedule",
+        "management.director-role",
+        "management.control",
+        "service.guest-journey",
+        "delivery.order"
+      ],
+      "required_inputs": [
+        "hourly_demand",
+        "actual_hours",
+        "role_coverage",
+        "comparison_period",
+        "metric_definitions"
+      ],
+      "must_require": [
+        "сопоставить почасовую нагрузку и фактическое покрытие"
+      ],
+      "must_not_claim": [
+        "недокомплект без нормативов и спроса",
+        "экономия ФОТ без стоимости труда"
+      ]
+    },
+    {
+      "id": "golden.service.repeat-complaint",
+      "query": "Повторилась жалоба на задержку блюда. Свяжи сервис, кухню и смену.",
+      "domain": "service_operations",
+      "expected_ids": [
+        "service.complaints",
+        "service.recovery",
+        "service.guest-journey",
+        "production.order-flow",
+        "operations.audit-report",
+        "management.daily-report"
+      ],
+      "required_inputs": [
+        "order_timestamps",
+        "complaint_content",
+        "kitchen_status",
+        "prior_incidents_if_available"
+      ],
+      "must_require": [
+        "проверить временные отметки и статус кухни",
+        "разделить подтверждённые факты и возможные причины"
+      ],
+      "must_not_claim": [
+        "виноват конкретный сотрудник без проверки",
+        "потерянная выручка без финансовых данных"
+      ]
+    },
+    {
+      "id": "golden.people.training-repeat-errors",
+      "query": "Повторяются ошибки обслуживания. Как проверить обучение и стандарт?",
+      "domain": "people_service",
+      "expected_ids": [
+        "operations.audit",
+        "people.training",
+        "people.work-maturity",
+        "management.grow",
+        "service.guest-journey"
+      ],
+      "required_inputs": [
+        "specific_observed_error",
+        "standard_version",
+        "observed_action",
+        "training_result",
+        "recheck_result"
+      ],
+      "must_require": [
+        "проверить конкретное действие и версию стандарта",
+        "провести повторную проверку"
+      ],
+      "must_not_claim": [
+        "постоянный психологический тип сотрудника",
+        "эффективность обучения без повторной проверки"
+      ]
+    },
+    {
+      "id": "golden.profile.unknown-attribute",
+      "query": "Можно ли применить требование к объекту, если тип оборудования неизвестен?",
+      "domain": "applicability",
+      "expected_ids": [
+        "safety.food",
+        "safety.fire-occupational",
+        "facilities.maintenance"
+      ],
+      "required_inputs": [
+        "jurisdiction",
+        "equipment_type",
+        "establishment_profile"
+      ],
+      "must_require": [
+        "вернуть undetermined и запросить профильные данные"
+      ],
+      "must_not_claim": [
+        "unknown равно false",
+        "требование автоматически применимо или неприменимо"
+      ]
+    },
+    {
+      "id": "golden.practice.unknown-cadence",
+      "query": "Как часто проводить проверку внешнего вида персонала?",
+      "domain": "service_people",
+      "expected_ids": [
+        "service.appearance",
+        "proc.appearance-readiness",
+        "check.appearance"
+      ],
+      "required_inputs": [
+        "approved_local_standard",
+        "source_cadence"
+      ],
+      "must_require": [
+        "сказать, что периодичность в источнике не указана"
+      ],
+      "must_not_claim": [
+        "ежедневно или еженедельно как установленный факт"
+      ]
+    },
+    {
+      "id": "golden.conflict.revenue-sources",
+      "query": "POS и управленческий отчёт показывают разную выручку за один период. Как поступить?",
+      "domain": "finance_integrity",
+      "expected_ids": [
+        "finance.pnl-kpi",
+        "finance.cash",
+        "management.daily-report"
+      ],
+      "required_inputs": [
+        "source_timestamps",
+        "period_definition",
+        "revenue_scope",
+        "adjustments"
+      ],
+      "must_require": [
+        "показать расхождение и проверить определения, время и периметр"
+      ],
+      "must_not_claim": [
+        "молча выбрать один источник",
+        "усреднить значения без основания"
+      ]
+    }
+  ]
+}
