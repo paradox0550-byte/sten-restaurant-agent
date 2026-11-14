@@ -44,7 +44,7 @@ test("BM25 ranks the document with relevant aliases and keywords first", () => {
 });
 
 
-test("field-aware ranking prioritizes delivery for peak-load service deterioration", () => {
+test("lexical ranking retrieves delivery for a delivery-specific peak-load query", () => {
   const graph = JSON.parse(fs.readFileSync(
     new URL("../knowledge/graph/operational-knowledge-graph.json", import.meta.url), "utf8"
   ));
@@ -58,7 +58,7 @@ test("field-aware ranking prioritizes delivery for peak-load service deteriorati
   assert.ok(ids.includes("people.schedule"), ids.join(", "));
 });
 
-test("field-aware ranking preserves payroll retrieval for payroll-specific questions", () => {
+test("lexical ranking preserves payroll retrieval for payroll-specific questions", () => {
   const candidates = [
     { id: "people.payroll", label: "Начисление заработной платы", description: "Проверка начислений по подтверждённым часам", keywords: ["табель", "зарплата", "расчёт заработной платы"] },
     { id: "people.schedule", label: "График выхода и планирование смен", keywords: ["график смен", "плановые часы"] },
