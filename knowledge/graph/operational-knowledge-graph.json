@@ -362,6 +362,259 @@
       "type": "process",
       "label": "Договоры и разрешительная документация",
       "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "proc.shift-readiness-and-briefing",
+      "type": "procedure",
+      "label": "Подготовка смены и короткая планёрка",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "source_defined"
+    },
+    {
+      "id": "proc.guest-journey-and-order",
+      "type": "procedure",
+      "label": "Путь гостя и приём заказа",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "source_defined"
+    },
+    {
+      "id": "proc.service-delivery-and-delay",
+      "type": "procedure",
+      "label": "Сопровождение заказа и информирование о задержке",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "owner_role_status": "inferred",
+      "cadence_status": "source_defined"
+    },
+    {
+      "id": "proc.bill-and-payment",
+      "type": "procedure",
+      "label": "Расчёт гостя",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "source_defined"
+    },
+    {
+      "id": "proc.guest-complaint-recovery",
+      "type": "procedure",
+      "label": "Жалоба гостя и восстановление сервиса",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "inferred"
+    },
+    {
+      "id": "proc.appearance-readiness",
+      "type": "procedure",
+      "label": "Проверка внешнего вида и готовности сотрудника",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.appearance-training"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "unknown"
+    },
+    {
+      "id": "proc.director-operating-control",
+      "type": "procedure",
+      "label": "Планирование и ежедневный контроль директора",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.operational-management-training",
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "source_defined_scoped"
+    },
+    {
+      "id": "proc.front-of-house-visual-walk",
+      "type": "procedure",
+      "label": "Визуальный обход гостевой зоны",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "source_defined_scoped"
+    },
+    {
+      "id": "proc.monthly-stocktake",
+      "type": "procedure",
+      "label": "Ежемесячная инвентаризация запасов и денежных средств",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined_partial",
+      "cadence_status": "source_defined_scoped"
+    },
+    {
+      "id": "proc.monthly-sanitation-deep-clean",
+      "type": "procedure",
+      "label": "Генеральная уборка / санитарный час",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined_partial",
+      "cadence_status": "source_defined_scoped"
+    },
+    {
+      "id": "proc.staff-schedule-and-timekeeping",
+      "type": "procedure",
+      "label": "Планирование графика и учёт рабочего времени",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined_scoped",
+      "cadence_status": "source_defined_scoped"
+    },
+    {
+      "id": "proc.delivery-order-control",
+      "type": "procedure",
+      "label": "Контроль доставки и самовывоза",
+      "evidence_class": "PRACTICE",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "owner_role_status": "source_defined",
+      "cadence_status": "inferred"
+    },
+    {
+      "id": "check.shift-readiness",
+      "type": "checklist",
+      "label": "check.shift-readiness",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.shift-readiness-and-briefing"
+    },
+    {
+      "id": "check.guest-order",
+      "type": "checklist",
+      "label": "check.guest-order",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.guest-journey-and-order"
+    },
+    {
+      "id": "check.order-follow-up",
+      "type": "checklist",
+      "label": "check.order-follow-up",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.service-delivery-and-delay"
+    },
+    {
+      "id": "check.bill-payment",
+      "type": "checklist",
+      "label": "check.bill-payment",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.bill-and-payment"
+    },
+    {
+      "id": "check.complaint",
+      "type": "checklist",
+      "label": "check.complaint",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.guest-complaint-recovery"
+    },
+    {
+      "id": "check.appearance",
+      "type": "checklist",
+      "label": "check.appearance",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.appearance-readiness"
+    },
+    {
+      "id": "check.director-daily-control",
+      "type": "checklist",
+      "label": "check.director-daily-control",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.director-operating-control"
+    },
+    {
+      "id": "check.front-of-house-walk",
+      "type": "checklist",
+      "label": "check.front-of-house-walk",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.front-of-house-visual-walk"
+    },
+    {
+      "id": "check.stocktake",
+      "type": "checklist",
+      "label": "check.stocktake",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.monthly-stocktake"
+    },
+    {
+      "id": "check.deep-clean",
+      "type": "checklist",
+      "label": "check.deep-clean",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.monthly-sanitation-deep-clean"
+    },
+    {
+      "id": "check.schedule-timekeeping",
+      "type": "checklist",
+      "label": "check.schedule-timekeeping",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.staff-schedule-and-timekeeping"
+    },
+    {
+      "id": "check.delivery-order",
+      "type": "checklist",
+      "label": "check.delivery-order",
+      "evidence_class": "PRACTICE",
+      "procedure_id": "proc.delivery-order-control"
+    },
+    {
+      "id": "register.complaints",
+      "type": "record_template",
+      "label": "Журнал жалоб и восстановления сервиса",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "register.walkthrough",
+      "type": "record_template",
+      "label": "Журнал визуальных обходов",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "register.stocktake",
+      "type": "record_template",
+      "label": "Реестр инвентаризационных расхождений",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "register.training",
+      "type": "record_template",
+      "label": "Журнал обучения и проверки знаний",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "register.daily-tasks",
+      "type": "record_template",
+      "label": "Реестр ежедневных поручений",
+      "evidence_class": "PRACTICE"
+    },
+    {
+      "id": "register.delivery-exceptions",
+      "type": "record_template",
+      "label": "Журнал отклонений доставки",
+      "evidence_class": "PRACTICE"
     }
   ],
   "edges": [
@@ -734,6 +987,71 @@
       "from": "facilities.maintenance",
       "to": "management.control",
       "type": "scheduled_by"
+    },
+    {
+      "from": "proc.shift-readiness-and-briefing",
+      "to": "check.shift-readiness",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.guest-journey-and-order",
+      "to": "check.guest-order",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.service-delivery-and-delay",
+      "to": "check.order-follow-up",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.bill-and-payment",
+      "to": "check.bill-payment",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.guest-complaint-recovery",
+      "to": "check.complaint",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.guest-complaint-recovery",
+      "to": "register.complaints",
+      "type": "records_in"
+    },
+    {
+      "from": "proc.appearance-readiness",
+      "to": "check.appearance",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.director-operating-control",
+      "to": "check.director-daily-control",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.front-of-house-visual-walk",
+      "to": "check.front-of-house-walk",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.monthly-stocktake",
+      "to": "check.stocktake",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.monthly-sanitation-deep-clean",
+      "to": "check.deep-clean",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.staff-schedule-and-timekeeping",
+      "to": "check.schedule-timekeeping",
+      "type": "uses_checklist"
+    },
+    {
+      "from": "proc.delivery-order-control",
+      "to": "check.delivery-order",
+      "type": "uses_checklist"
     }
   ],
   "source_links": [
@@ -800,7 +1118,8 @@
         "management.grow",
         "people.work-maturity",
         "people.training",
-        "people.motivation"
+        "people.motivation",
+        "proc.director-operating-control"
       ]
     },
     {
@@ -811,7 +1130,8 @@
         "service.hygiene",
         "service.etiquette",
         "people.training",
-        "operations.audit"
+        "operations.audit",
+        "proc.appearance-readiness"
       ]
     },
     {
@@ -823,7 +1143,12 @@
         "service.complaints",
         "service.recovery",
         "service.etiquette",
-        "service.appearance"
+        "service.appearance",
+        "proc.shift-readiness-and-briefing",
+        "proc.guest-journey-and-order",
+        "proc.service-delivery-and-delay",
+        "proc.bill-and-payment",
+        "proc.guest-complaint-recovery"
       ]
     },
     {
@@ -845,7 +1170,13 @@
         "facilities.maintenance",
         "records.document-flow",
         "records.contracts",
-        "operations.audit"
+        "operations.audit",
+        "proc.director-operating-control",
+        "proc.front-of-house-visual-walk",
+        "proc.monthly-stocktake",
+        "proc.monthly-sanitation-deep-clean",
+        "proc.staff-schedule-and-timekeeping",
+        "proc.delivery-order-control"
       ]
     }
   ]

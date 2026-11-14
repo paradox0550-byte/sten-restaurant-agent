@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "templates": [
+    {
+      "id": "register.complaints",
+      "name": "Журнал жалоб и восстановления сервиса",
+      "fields": [
+        "event_id",
+        "date_time",
+        "channel",
+        "guest_issue_verbatim_or_neutral_summary",
+        "expected_outcome",
+        "verified_facts",
+        "unknowns",
+        "severity",
+        "owner_role",
+        "escalated_to",
+        "approved_resolution",
+        "action_due_at",
+        "execution_evidence",
+        "guest_follow_up",
+        "root_cause_status",
+        "recurrence_prevention",
+        "closed_at"
+      ],
+      "unknown_policy": "Unknown fields remain null/unknown; do not infer cause or guest intent."
+    },
+    {
+      "id": "register.walkthrough",
+      "name": "Журнал визуальных обходов",
+      "fields": [
+        "date_time",
+        "location_zone",
+        "checklist_version",
+        "item_id",
+        "status",
+        "observation",
+        "photo_or_evidence_ref",
+        "owner_role",
+        "due_at",
+        "recheck_result",
+        "reviewer_role"
+      ],
+      "unknown_policy": "Skipped check is not passed; blank is not zero."
+    },
+    {
+      "id": "register.stocktake",
+      "name": "Реестр инвентаризационных расхождений",
+      "fields": [
+        "count_date",
+        "location",
+        "item_id",
+        "unit",
+        "book_quantity",
+        "counted_quantity",
+        "second_count_quantity",
+        "variance",
+        "source_document_ref",
+        "reason_status",
+        "approved_adjustment_ref",
+        "counter_role",
+        "reviewer_role"
+      ],
+      "unknown_policy": "Do not set missing counted quantity to zero; do not assert cause without evidence."
+    },
+    {
+      "id": "register.training",
+      "name": "Журнал обучения и проверки знаний",
+      "fields": [
+        "employee_pseudonymous_id",
+        "role",
+        "topic",
+        "standard_version",
+        "trainer_role",
+        "training_date",
+        "method",
+        "knowledge_check_result",
+        "observed_practice_result",
+        "gap",
+        "follow_up_action",
+        "recheck_date",
+        "status"
+      ],
+      "unknown_policy": "No permanent personality or maturity label; task-specific assessment only."
+    },
+    {
+      "id": "register.daily-tasks",
+      "name": "Реестр ежедневных поручений",
+      "fields": [
+        "task_id",
+        "created_at",
+        "source_or_reason",
+        "expected_result",
+        "owner_role",
+        "due_at",
+        "control_point",
+        "status",
+        "completion_evidence",
+        "blocker",
+        "replanned_at",
+        "reviewer_role"
+      ],
+      "unknown_policy": "No evidence means unverified, not completed."
+    },
+    {
+      "id": "register.delivery-exceptions",
+      "name": "Журнал отклонений доставки",
+      "fields": [
+        "order_id_pseudonymous",
+        "received_at",
+        "promised_at",
+        "dispatched_at",
+        "delivered_at",
+        "order_accuracy_status",
+        "exception_type",
+        "verified_cause",
+        "unknowns",
+        "owner_role",
+        "corrective_action",
+        "recheck_result"
+      ],
+      "unknown_policy": "Do not attribute delay or error to a person without evidence."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Seed cases for later multi-hop expert reasoning evaluation; not measured performance claims.",
+  "cases": [
+    {
+      "id": "horeca.multi-hop.complaint-to-repeat-revenue",
+      "query": "У гостя повторилась жалоба на задержку блюда. Какие данные нужно собрать, как связать сервис, кухню, смену и управленческий контроль, чтобы предложить обоснованные действия?",
+      "expected_path": [
+        "service.complaints",
+        "service.recovery",
+        "service.guest-journey",
+        "production.order-flow",
+        "operations.audit-report",
+        "management.daily-report"
+      ],
+      "must_require": [
+        "фактические временные отметки заказа",
+        "содержание жалобы",
+        "статус кухни",
+        "предыдущие случаи только при наличии данных"
+      ],
+      "must_not_claim": [
+        "причина задержки без доказательств",
+        "потерянная выручка без финансовых данных",
+        "вина конкретного сотрудника без проверки"
+      ]
+    },
+    {
+      "id": "horeca.multi-hop.stocktake-to-food-cost",
+      "query": "Инвентаризация выявила расхождение. Как проверить влияние на Food Cost и какие действия назначить?",
+      "expected_path": [
+        "inventory.stocktake",
+        "finance.food-cost",
+        "production.recipe-spec",
+        "supply.receiving",
+        "finance.pnl-kpi"
+      ],
+      "must_require": [
+        "период и база расчёта",
+        "единицы измерения",
+        "фактический и учётный остаток",
+        "движения и документы",
+        "определение Food Cost"
+      ],
+      "must_not_claim": [
+        "Food Cost из одного расхождения",
+        "причина потери без доказательств",
+        "ноль при пропуске пересчёта"
+      ]
+    },
+    {
+      "id": "horeca.multi-hop.training-to-service-quality",
+      "query": "Повторяются ошибки обслуживания. Как связать проверку стандарта, обучение, управленческий стиль и повторную проверку?",
+      "expected_path": [
+        "operations.audit",
+        "people.training",
+        "people.work-maturity",
+        "management.grow",
+        "service.guest-journey"
+      ],
+      "must_require": [
+        "конкретная задача/ошибка",
+        "версия стандарта",
+        "наблюдаемое действие",
+        "результат обучения",
+        "повторная проверка"
+      ],
+      "must_not_claim": [
+        "постоянный психологический тип сотрудника",
+        "эффективность обучения без повторной проверки"
+      ]
+    },
+    {
+      "id": "horeca.multi-hop.schedule-to-service-capacity",
+      "query": "В пиковые часы ухудшается сервис. Как проверить график, фактическую нагрузку, роли в смене и показатели обслуживания?",
+      "expected_path": [
+        "people.schedule",
+        "management.director-role",
+        "management.control",
+        "service.guest-journey",
+        "delivery.order"
+      ],
+      "must_require": [
+        "почасовая нагрузка",
+        "фактические часы",
+        "покрытие ролей и зон",
+        "период сравнения",
+        "определения метрик"
+      ],
+      "must_not_claim": [
+        "недокомплект без спроса и нормативов",
+        "экономию ФОТ без данных о затратах"
+      ]
+    },
+    {
+      "id": "horeca.unknown-cadence-appearance",
+      "query": "Как часто нужно проводить проверку внешнего вида персонала?",
+      "expected_path": [
+        "service.appearance",
+        "proc.appearance-readiness"
+      ],
+      "must_require": [
+        "сообщить что периодичность в источнике не указана"
+      ],
+      "must_not_claim": [
+        "ежедневно/еженедельно как будто это исходное требование"
+      ]
+    }
+  ]
+}

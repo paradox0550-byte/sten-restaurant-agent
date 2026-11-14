@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "status_semantics": {
+    "done": "Выполнено и подтверждено",
+    "not_done": "Не выполнено",
+    "not_applicable": "Не применимо с указанным основанием",
+    "unknown": "Не проверено/нет данных"
+  },
+  "templates": [
+    {
+      "id": "check.shift-readiness",
+      "procedure_id": "proc.shift-readiness-and-briefing",
+      "items": [
+        "Зал подготовлен к работе",
+        "Сервировка и поверхности проверены",
+        "Стоп-лист и изменения меню уточнены",
+        "Зоны распределены",
+        "Дополнительные задачи назначены",
+        "Команда знает порядок эскалации"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "template_generalized_from_source"
+    },
+    {
+      "id": "check.guest-order",
+      "procedure_id": "proc.guest-journey-and-order",
+      "items": [
+        "Гость встречен",
+        "Потребности уточнены",
+        "Состав/аллергены/замены подтверждены либо переданы на уточнение",
+        "Заказ повторён/подтверждён",
+        "Заказ внесён в систему",
+        "Существенные модификаторы переданы"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "template_generalized_from_source"
+    },
+    {
+      "id": "check.order-follow-up",
+      "procedure_id": "proc.service-delivery-and-delay",
+      "items": [
+        "Позиция соответствует заказу",
+        "Гость проинформирован о подтверждённой задержке",
+        "Подача/передача корректна",
+        "Повторная проблема эскалирована"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template"
+    },
+    {
+      "id": "check.bill-payment",
+      "procedure_id": "proc.bill-and-payment",
+      "items": [
+        "Счёт сверён",
+        "Сумма подтверждена",
+        "Оплата прошла через утверждённую систему",
+        "Фискальный документ выдан по применимому порядку",
+        "Спор передан менеджеру"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template"
+    },
+    {
+      "id": "check.complaint",
+      "procedure_id": "proc.guest-complaint-recovery",
+      "items": [
+        "Жалоба выслушана",
+        "Суть и ожидание гостя зафиксированы",
+        "Вариант решения разрешён по полномочиям",
+        "Эскалация выполнена при необходимости",
+        "Решение исполнено",
+        "Результат проверен"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template"
+    },
+    {
+      "id": "check.appearance",
+      "procedure_id": "proc.appearance-readiness",
+      "items": [
+        "Локально утверждённая форма/спецодежда соответствует требованиям",
+        "Бейдж проверен, если требуется",
+        "Законные требования гигиены соблюдены",
+        "Обучение/обратная связь зафиксированы"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_requires_hr_legal_review"
+    },
+    {
+      "id": "check.director-daily-control",
+      "procedure_id": "proc.director-operating-control",
+      "items": [
+        "Ежедневный план сформирован",
+        "Входящие указания проверены",
+        "У поручений есть владелец и ожидаемый результат",
+        "Сроки и контрольные точки согласованы",
+        "Невыполненные задачи отражены с причиной"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template"
+    },
+    {
+      "id": "check.front-of-house-walk",
+      "procedure_id": "proc.front-of-house-visual-walk",
+      "items": [
+        "Рекламное оформление проверено",
+        "Выкладка проверена",
+        "Чистота гостевой зоны проверена",
+        "Отклонения зафиксированы",
+        "Ответственный назначен",
+        "Устранение перепроверено"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "template_generalized_from_source"
+    },
+    {
+      "id": "check.stocktake",
+      "procedure_id": "proc.monthly-stocktake",
+      "items": [
+        "Формы и перечни подготовлены",
+        "Весы и тара готовы",
+        "Товар сгруппирован",
+        "Фактические остатки пересчитаны",
+        "Расхождения сохранены отдельно",
+        "Первичные листы связаны с итоговой ведомостью"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "template_generalized_from_source"
+    },
+    {
+      "id": "check.deep-clean",
+      "procedure_id": "proc.monthly-sanitation-deep-clean",
+      "items": [
+        "План зон утверждён",
+        "Доступ и безопасная последовательность обеспечены",
+        "Все запланированные поверхности обработаны",
+        "Оборудование возвращено в безопасное состояние",
+        "Незавершённые участки назначены на повторную работу"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_requires_local_safety_review"
+    },
+    {
+      "id": "check.schedule-timekeeping",
+      "procedure_id": "proc.staff-schedule-and-timekeeping",
+      "items": [
+        "Покрытие смен рассчитано",
+        "Административное покрытие обеспечено",
+        "Фактические часы внесены",
+        "Отклонения проверены",
+        "Итоговый табель согласован"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "template_generalized_from_source"
+    },
+    {
+      "id": "check.delivery-order",
+      "procedure_id": "proc.delivery-order-control",
+      "items": [
+        "Заказ зарегистрирован",
+        "Состав и способ получения подтверждены",
+        "Производство/передача отслежены",
+        "Комплектность проверена",
+        "Время зафиксировано",
+        "Отклонения классифицированы только при наличии доказательств"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template"
+    }
+  ]
+}

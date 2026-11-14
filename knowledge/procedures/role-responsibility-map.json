@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "principle": "Role mapping is not a legal assignment of responsibility. Confirm actual authority in the establishment's approved org chart, job descriptions and jurisdiction.",
+  "roles": [
+    {
+      "id": "role.director",
+      "label": "Управляющий/директор ресторана",
+      "source_basis": "Named repeatedly in restaurant regulation; responsibility varies by section.",
+      "typical_accountabilities": [
+        "Организация работы ресторана",
+        "Планирование и контроль",
+        "Организация инвентаризации",
+        "Организация обучения",
+        "Контроль графиков и табелей"
+      ],
+      "limitations": [
+        "Не считать автоматически ответственным за все юридические обязанности; проверить применимое право и локальные назначения."
+      ]
+    },
+    {
+      "id": "role.shift-manager",
+      "label": "Менеджер/администратор смены",
+      "source_basis": "Named in service and regulation sources.",
+      "typical_accountabilities": [
+        "Планёрка и распределение зон",
+        "Визуальный контроль гостевой зоны",
+        "Первичная эскалация жалоб",
+        "Контроль готовности смены"
+      ]
+    },
+    {
+      "id": "role.server",
+      "label": "Официант",
+      "source_basis": "Guest service standard.",
+      "typical_accountabilities": [
+        "Подготовка рабочего места",
+        "Встреча и обслуживание гостя",
+        "Приём и оформление заказа",
+        "Коммуникация о задержках",
+        "Первичная работа с жалобой в пределах полномочий"
+      ]
+    },
+    {
+      "id": "role.kitchen-lead",
+      "label": "Ответственный кухни/производства",
+      "source_basis": "Role inferred for operational handoff; exact title not fixed in source.",
+      "typical_accountabilities": [
+        "Подтверждение состава/доступности/статуса заказа",
+        "Контроль производства по локальным процедурам"
+      ],
+      "limitations": [
+        "Точное распределение полномочий не указано в источниках."
+      ]
+    },
+    {
+      "id": "role.regional-manager",
+      "label": "Региональный руководитель",
+      "source_basis": "Named in historical restaurant regulation.",
+      "typical_accountabilities": [
+        "Согласование отдельных управленческих отчётов/табелей по исторической модели",
+        "Получение информации и эскалаций"
+      ],
+      "limitations": [
+        "Не переносить должность и права в другую организацию без подтверждения."
+      ]
+    },
+    {
+      "id": "role.hr-trainer",
+      "label": "HR/тренер/наставник",
+      "source_basis": "Training role is described; exact organizational assignment varies.",
+      "typical_accountabilities": [
+        "Проведение обучения",
+        "Проверка знаний и разбор ошибок"
+      ],
+      "limitations": [
+        "Конкретное назначение роли требует локального подтверждения."
+      ]
+    }
+  ],
+  "assignment_policy": [
+    "A procedure may have one accountable role and multiple executor/reviewer roles.",
+    "If the source names no role, mark owner_role_status=unknown or inferred; do not fabricate an appointment.",
+    "Safety-critical controls require an explicitly appointed competent person and a local escalation route before use.",
+    "No person-specific data from source materials is retained."
+  ]
+}
