@@ -65,3 +65,10 @@ Optional host-injected reranking can reorder existing retrieval candidates witho
 ## HoReCa Knowledge Structure (Stage 11)
 
 Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.
+
+
+## Quality & Evaluation — Stage 13
+
+The existing `src/evaluation/knowledge-quality.js` provides metadata integrity checks plus retrieval ranking metrics and answer-evidence integrity checks. Eight labelled HoReCa golden cases are stored in `evals/stage-13-golden-cases.json`. Automated tests validate the metrics and case contracts; live retrieval baselines and expert-reviewed answer quality remain to be measured.
+
+**Stage 11 closeout remains open.** The taxonomy and graph foundation is integrated, but the restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. See `docs/stage-11-validation.md`.
