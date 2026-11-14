@@ -15,7 +15,8 @@
     10,
     11,
     12,
-    13
+    13,
+    14
   ],
   "architecture": "provider-neutral",
   "principles": [
@@ -250,9 +251,8 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 69,
+    "total_expected": 91,
     "command": "npm test",
-    "last_local_result": "19 passed, 0 failed",
     "runtime_layer": 8,
     "retrieval_layer": 16,
     "workflow_layer": 6,
