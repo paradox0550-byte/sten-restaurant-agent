@@ -72,3 +72,11 @@
 Последний подтверждённый CI для предыдущего кандидата: run [43719986139](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43719986139), commit `c2e296767aa06a5ff9dd677ee9b030f161b08b4e`: 99/99 tests passed, Evidence Registry, package validation, secret scan and source archive succeeded. После него добавлен пользовательский план тестирования и обновлён manifest; финальная проверка нового HEAD выполняется отдельным CI run.
 
 Тестовый пакет предназначен для закрытого пользовательского пилота в ChatGPT Project. Публичный GitHub Release не опубликован. Проверка исходного кода не является аудитом защищённого production-host, DLP, penetration test или юридическим подтверждением прав на распространение.
+
+
+## Final private pilot candidate verification — 16 November 2026
+
+- [x] Latest branch-head CI run [43765995720](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43765995720), commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`: 99/99 tests, Evidence Registry, package integrity, secret scan and source archive passed.
+- [x] Package manifest: 147/147 tracked paths.
+- [x] Candidate artifact: `sten-source-7d09d2ecd867112bdb5a0261b2d5aa0052bdb1a9`, SHA-256 `91aa5f65deee52b1a3629f778d6629f12e1644a57cfb5657c9c6b00a90b3e11d`, expires 15 December 2026.
+- [ ] Public redistribution rights and public release approval remain owner decisions. Private Project-based user testing can begin without publishing a GitHub Release.
