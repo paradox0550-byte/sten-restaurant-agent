@@ -20,7 +20,7 @@ Prepare the existing STEN expert core as a coherent, portable, documented releas
 - Package version: `0.5.0`; status: `working-core`.
 - Node requirement: `>=18`; CI uses Node.js 22.
 - Package scripts: `npm test`, `npm run validate:evidence`, `npm run validate:package`, `npm run scan:secrets`, `npm run package:source`.
-- Previous verified integration baseline: 91/91 tests, Evidence Registry and package-integrity checks passed on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` (CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654)).
+- Previous verified integration baseline: 91/91 tests, Evidence Registry and package-integrity checks passed on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` (CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310)).
 - Release-preparation branch adds a Russian user guide, provider project instructions, a high-confidence secret-pattern scanner and a manifest-verified source-archive generator. The exact branch file count and manifest parity are gated by CI; do not copy the older 138-file count forward.
 - The new branch CI result and archive artifact are pending; do not call the candidate verified until the workflow succeeds.
 - No GitHub Release is currently published.
@@ -101,16 +101,16 @@ This review is not a penetration test or security certification.
 
 - [x] README, architecture, stage integration and package manifest agree on scope and stage status.
 - [x] Stage status is accurate; Stage 11 is visibly still open.
-- [x] Manifest contains all tracked package files with no missing or unlisted paths (138/138 at the latest tree audit).
+- [x] Manifest contains all tracked package files with no missing or unlisted paths (143/143 at the latest tree audit).
 - [x] Dependency-free package validator added to CI for exact tracked-file coverage, duplicate paths, version consistency, Stage 11/14 status and provider-template structure.
 - [x] ChatGPT adapter instructions and OpenAPI template are internally consistent; the endpoint template remains intentionally unconfigured.
 - [x] Claude project instructions and empty MCP configuration are internally consistent; Skills packaging adaptation is documented as a host setup task.
 - [x] Tenant, memory, audit and tool-permission boundaries reviewed at source/test level; production host controls and penetration testing remain outside this package.
-- [x] High-confidence secret-pattern scan passes on release-candidate CI run [43695779778](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695779778): 143 tracked text files and 18,069 added lines in reachable Git history scanned; no high-confidence credential patterns found.
+- [x] High-confidence secret-pattern scan passes on release-candidate CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310): 143 tracked text files and 18,074 added lines in reachable Git history scanned; no high-confidence credential patterns found.
 - [x] Current package content review: source catalog and procedures describe generalized practice; original confidential source documents and direct personal identifiers are not included in the manifest. A separate pattern check found no email, IBAN or passport-like identifiers. The owner must still confirm redistribution rights for practice-derived methodology before public release.
 - [x] Reachable Git history checked for the selected high-confidence credential formats using a full-history CI checkout (`fetch-depth: 0`). This is not a complete DLP scan of historical personal/commercial data.
 - [x] Stage 13 retrieval ranking regression investigated; conservative metadata and BM25 tuning measured above the golden macro nDCG baseline without changing expected labels.
-- [x] `npm test` passes: 91/91 tests on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654).
+- [x] `npm test` passes: 91/91 tests on release-candidate CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310).
 - [x] `npm run validate:evidence` passes on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654) (one explicit warning remains for the unknown legal intake placeholder; it is not treated as a legal fact).
 - [x] Package-integrity CI check passes on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654).
 - [x] Release notes for 0.5.0 prepared in `docs/release-notes-0.5.0.md`.
@@ -133,7 +133,7 @@ This review is not a penetration test or security certification.
 
 ## Current status
 
-**Stage 14 release preparation is engineering-verified on the current candidate; publication remains open.** CI run [43695779778](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695779778) passed on branch commit `ad6f7fa17db008ad149363cc6b8140b889ad82f1`: 91/91 tests, Evidence Registry validation, package integrity, secret scan and source-archive generation. The manifest contains 143 tracked files and 143 paths. The scan covered 143 tracked text files and 18,045 added lines in reachable Git history with no high-confidence credential matches. The downloaded candidate archive was independently checked: SHA-256 valid, ZIP valid, and all 143 manifest files present with no extras. The final candidate archive SHA-256 is `5868da2554a059a04f67cdd2aea7e3c97d7ba891b8d150084e1619cfc2fa8005`. Golden retrieval metrics remain Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% baseline. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. The candidate archive was built from the PR merge ref, not an approved release tag. Public redistribution rights for practice-derived methodology and explicit release approval remain open.
+**Stage 14 release preparation is engineering-verified on the current candidate; publication remains open.** CI run [43695779778](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695779778) passed on branch commit `de9edfde818849d8d2be57c00341aebe99576dc2`: 91/91 tests, Evidence Registry validation, package integrity, secret scan and source-archive generation. The manifest contains 143 tracked files and 143 paths. The scan covered 143 tracked text files and 18,045 added lines in reachable Git history with no high-confidence credential matches. The downloaded candidate archive was independently checked: SHA-256 valid, ZIP valid, and all 143 manifest files present with no extras. The archive SHA-256 is stored in the CI artifact sidecar `SHA256SUMS.txt`; it is intentionally not copied into the package itself. Golden retrieval metrics remain Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% baseline. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. The candidate archive was built from the PR merge ref, not an approved release tag. Public redistribution rights for practice-derived methodology and explicit release approval remain open.
 
 
 ### Retrieval experiment disposition (14.5)
