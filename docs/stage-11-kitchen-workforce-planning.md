@@ -41,7 +41,7 @@ Use observed work sampling or time studies across representative staff, shifts a
 - equipment, workspace and pass capacity;
 - breaks, overlap, shift boundaries and legally required rest.
 
-No productivity coefficient, utilization factor, minimum coverage or service target is universal. Missing inputs stay unknown.
+No productivity coefficient, utilization factor, minimum coverage or service target is universal. Missing item routing, standard minutes, batch setup minutes, fixed-work minutes, utilization or minimum coverage stay unknown; the calculator returns unavailable rather than silently treating a missing value as zero.
 
 ## Deterministic calculation
 
