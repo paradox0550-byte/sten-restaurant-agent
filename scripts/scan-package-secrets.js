@@ -53,7 +53,7 @@ const historyPatch = execFileSync(
 let historyFile = "unknown-history-path";
 let historyLine = 0;
 
-for (const line of historyPatch.split(/\\r?\\n/)) {
+for (const line of historyPatch.split(/\r?\n/)) {
   if (line.startsWith("+++ b/")) {
     historyFile = line.slice(6);
     historyLine = 0;
