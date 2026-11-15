@@ -90,7 +90,7 @@ Optional host-injected reranking can reorder existing retrieval candidates witho
 
 Canonical sector/format taxonomy and cross-sector management domains live in `knowledge/taxonomy/`. The tenant-scoped establishment profile captures business model, service/channel/production, building and engineering context, finance, workforce and compliance references. Source intake and applicability rules preserve jurisdiction, validity, provenance and unknowns. Defined taxonomy is not a claim that every domain or jurisdiction has a complete reviewed corpus.
 
-**Stage 11 closeout remains open.** The restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. See `docs/stage-11-validation.md`.
+**Stage 11 closeout remains open.** The restaurant process catalog, sector-specific knowledge and practical answer correctness have not passed substantive validation. New specialist methodology covers kitchen staffing by section and interval and end-to-end menu engineering, with a deterministic workload calculator, retrieval nodes and provisional specialist cases. These methods still require real-site standards and expert adjudication. See `docs/stage-11-validation.md`, `docs/stage-11-kitchen-workforce-planning.md` and `docs/stage-11-menu-engineering.md`.
 
 ## Quality & Evaluation — Stage 13
 
