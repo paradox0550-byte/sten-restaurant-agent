@@ -19,7 +19,7 @@ test("kitchen staffing is calculated by section workload and approved productive
     sectionId: "hot",
     intervalMinutes: 30,
     items: [
-      { itemId: "soup", quantity: 18, standardMinutesPerItem: 2 },
+      { itemId: "soup", quantity: 18, standardMinutesPerItem: 2, setupMinutesPerBatch: 0 },
       { itemId: "steak", quantity: 8, standardMinutesPerItem: 1, batchSize: 4, setupMinutesPerBatch: 4 }
     ],
     fixedWorkMinutes: 6,
@@ -39,13 +39,15 @@ test("same dish count with different station time standards changes staffing", (
   const common = {
     sectionId: "cold",
     intervalMinutes: 30,
-    items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 1 }],
+    items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 1, setupMinutesPerBatch: 0 }],
+    fixedWorkMinutes: 0,
+    minimumCoverage: 0,
     productiveUtilization: 1
   };
   const quick = calculateKitchenSectionStaffing(common);
   const complex = calculateKitchenSectionStaffing({
     ...common,
-    items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 4 }]
+    items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 4, setupMinutesPerBatch: 0 }]
   });
   assert.equal(quick.requiredHeadcount, 1);
   assert.equal(complex.requiredHeadcount, 2);
@@ -59,7 +61,7 @@ test("kitchen staffing refuses missing standards and invalid utilization instead
     productiveUtilization: 0.8
   };
   assert.equal(calculateKitchenSectionStaffing(base).status, "unavailable");
-  assert.equal(calculateKitchenSectionStaffing({ ...base, items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 2 }], productiveUtilization: 1.1 }).status, "unavailable");
+  assert.equal(calculateKitchenSectionStaffing({ ...base, items: [{ itemId: "dish", quantity: 10, standardMinutesPerItem: 2, setupMinutesPerBatch: 0 }], fixedWorkMinutes: 0, minimumCoverage: 0, productiveUtilization: 1.1 }).status, "unavailable");
 });
 
 test("batch setup requires a batch size and is included once per batch", () => {
@@ -77,7 +79,8 @@ test("minimum station coverage is applied without replacing workload calculation
   const r = calculateKitchenSectionStaffing({
     sectionId: "grill",
     intervalMinutes: 30,
-    items: [{ itemId: "dish", quantity: 1, standardMinutesPerItem: 2 }],
+    items: [{ itemId: "dish", quantity: 1, standardMinutesPerItem: 2, setupMinutesPerBatch: 0 }],
+    fixedWorkMinutes: 0,
     productiveUtilization: 1,
     minimumCoverage: 2
   });
@@ -105,4 +108,18 @@ test("service case is not verified just because someone says it is complete", ()
   assert.equal(completed.case.state, "completed_unverified");
   const verified = verifyRecovery(completed.case, { verifierRole: "manager", verifiedAt: "2026-11-14T10:20:00Z", outcomeConfirmed: true });
   assert.equal(verified.case.state, "verified");
+});
+
+test("kitchen staffing requires explicit fixed work and minimum coverage inputs", () => {
+  const base = {
+    sectionId: "hot",
+    intervalMinutes: 30,
+    items: [{ itemId: "dish", quantity: 2, standardMinutesPerItem: 3, setupMinutesPerBatch: 0 }],
+    productiveUtilization: 0.8,
+    fixedWorkMinutes: 0,
+    minimumCoverage: 0
+  };
+  assert.equal(calculateKitchenSectionStaffing({ ...base, fixedWorkMinutes: undefined }).status, "unavailable");
+  assert.equal(calculateKitchenSectionStaffing({ ...base, minimumCoverage: undefined }).status, "unavailable");
+  assert.equal(calculateKitchenSectionStaffing({ ...base, items: [{ itemId: "dish", quantity: 2, standardMinutesPerItem: 3 }] }).status, "unavailable");
 });
