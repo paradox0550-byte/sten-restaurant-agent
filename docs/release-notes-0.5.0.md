@@ -3,7 +3,7 @@
 **Package status:** working core  
 **Compatibility:** Node.js 18 or newer  
 **CI runtime:** Node.js 22  
-**Release state:** prepared for review; not published
+**Release state:** release candidate prepared and CI-verified; not published
 
 ## Included
 
@@ -25,7 +25,7 @@ Latest verified main CI commit: `7613b8a8f090c9cc174bfdd7afc29c5bbc305a6d`.
 
 The golden labels and pinned baseline file were not rewritten. Holdout labels remain provisional and are not expert-adjudicated.
 
-## Provider setup
+## User setup\n\n- Russian end-user guide: `docs/USER_GUIDE_RU.md`.\n- ChatGPT Project instructions: `providers/chatgpt/project-instructions-ru.md`.\n- Security checklist: `docs/SECURITY_RELEASE_CHECKLIST.md`.\n\n## Provider setup
 
 - ChatGPT: copy canonical instructions and attach knowledge files as described in `providers/chatgpt/instructions.md`. The OpenAPI file is an unconfigured template with a placeholder host and no endpoints; it is not a live API.
 - Claude: use the project instructions and knowledge files as described in `providers/claude/project-instructions.md`. Adapt the reference skills to the current Claude Skills packaging format before installation. MCP server configuration is intentionally empty.
