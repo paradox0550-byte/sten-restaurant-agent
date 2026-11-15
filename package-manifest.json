@@ -86,7 +86,8 @@
     "reproducible_manifest_verified_source_archive",
     "kitchen_section_interval_workload_staffing_calculator",
     "kitchen_station_time_standard_methodology",
-    "autonomous_menu_engineering_workflow"
+    "autonomous_menu_engineering_workflow",
+    "stage_11_specialist_menu_and_kitchen_evaluation_cases"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -154,6 +155,7 @@
     "evals/horeca-multihop-cases.json",
     "evals/knowledge-evidence-cases.md",
     "evals/retrieval-quality-cases.json",
+    "evals/stage-11-specialist-cases.json",
     "evals/stage-13-blind-holdout.json",
     "evals/stage-13-golden-cases.json",
     "evals/stage-13-holdout-baseline.json",
@@ -267,7 +269,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 97,
+    "total_expected": 98,
     "command": "npm test",
     "runtime_layer": 8,
     "retrieval_layer": 16,
