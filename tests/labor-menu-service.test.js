@@ -69,6 +69,8 @@ test("batch setup requires a batch size and is included once per batch", () => {
     sectionId: "prep",
     intervalMinutes: 60,
     productiveUtilization: 1,
+    fixedWorkMinutes: 0,
+    minimumCoverage: 0,
     items: [{ itemId: "sauce", quantity: 11, standardMinutesPerItem: 0, setupMinutesPerBatch: 5, batchSize: 10 }]
   };
   assert.equal(calculateKitchenSectionStaffing({ ...base, items: [{ ...base.items[0], batchSize: undefined }] }).status, "unavailable");
