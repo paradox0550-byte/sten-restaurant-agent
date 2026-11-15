@@ -11,7 +11,7 @@
 - `memory/` — tenant-isolated establishment and manager profile schemas and memory policy.
 - `providers/` — ChatGPT and Claude adapter templates.
 - `evals/` — reasoning and evidence quality cases.
-- `docs/` — architecture, stage status and integration guidance.
+- `docs/` — architecture, stage status, Russian user guide and release/security checklists.
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
@@ -64,9 +64,11 @@ Requires Node.js 18+.
 npm test
 npm run validate:evidence
 npm run validate:package
+npm run scan:secrets
+npm run package:source
 ```
 
-## Evidence governance
+## User installation guide\n\nFor end-user setup in ChatGPT Projects or Claude Projects, see [the Russian user guide](docs/USER_GUIDE_RU.md). The guide distinguishes project-based use from a live API/MCP deployment. Current release security limitations are recorded in [the security checklist](docs/SECURITY_RELEASE_CHECKLIST.md).\n\n## Evidence governance
 
 The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two STEN CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
 
@@ -100,4 +102,4 @@ Stage 14 engineering integration is substantially complete. The latest verified 
 
 The package remains a **working core**, not a published release. ChatGPT and Claude adapters are templates; the ChatGPT API host is a placeholder with no actions, and Claude MCP configuration is empty. Memory and audit are in-memory development/test adapters. No live provider connection, production API, persistent vector database, hosted memory or production authentication is included.
 
-Open release gates: confirm no secrets or private operational data are in the distributable package, generate and verify the source archive from the final tagged commit, verify release notes/artifact contents, and obtain explicit release approval. Stage 11 substantive knowledge validation remains open. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
+Release preparation now includes a high-confidence secret-pattern scan, a manifest-verified source-archive generator and a CI artifact for review. These checks do not replace manual review of private operational/personal data or Git history. The final artifact must be generated from the approved release commit. GitHub Release publication still requires explicit owner approval. Stage 11 substantive knowledge validation remains open. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
