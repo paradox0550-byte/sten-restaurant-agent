@@ -37,8 +37,8 @@ export function calculateKitchenSectionStaffing({
   intervalMinutes,
   items,
   productiveUtilization,
-  fixedWorkMinutes = 0,
-  minimumCoverage = 0,
+  fixedWorkMinutes,
+  minimumCoverage,
 }) {
   if (typeof sectionId !== "string" || !sectionId.trim()) {
     return { status: "unavailable", reason: "section_id_required" };
@@ -65,12 +65,13 @@ export function calculateKitchenSectionStaffing({
   for (const item of items) {
     if (typeof item.itemId !== "string" || !item.itemId.trim() ||
         !Number.isFinite(item.quantity) || item.quantity < 0 ||
-        !Number.isFinite(item.standardMinutesPerItem) || item.standardMinutesPerItem < 0) {
-      return { status: "unavailable", reason: "missing_or_invalid_item_quantity_or_standard_minutes" };
+        !Number.isFinite(item.standardMinutesPerItem) || item.standardMinutesPerItem < 0 ||
+        !Number.isFinite(item.setupMinutesPerBatch) || item.setupMinutesPerBatch < 0) {
+      return { status: "unavailable", reason: "missing_or_invalid_item_quantity_standard_or_batch_setup_minutes" };
     }
     unitWorkMinutes += item.quantity * item.standardMinutesPerItem;
 
-    const setupMinutes = item.setupMinutesPerBatch ?? 0;
+    const setupMinutes = item.setupMinutesPerBatch;
     if (!Number.isFinite(setupMinutes) || setupMinutes < 0) {
       return { status: "unavailable", reason: "invalid_batch_setup_minutes" };
     }
