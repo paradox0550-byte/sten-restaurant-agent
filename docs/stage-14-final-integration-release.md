@@ -112,12 +112,12 @@ This review is not a penetration test or security certification.
 - [x] Stage 13 retrieval ranking regression investigated; conservative metadata and BM25 tuning measured above the golden macro nDCG baseline without changing expected labels.
 - [x] `npm test` passes: 91/91 tests on release-candidate CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310).
 - [x] `npm run validate:evidence` passes on release-candidate CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310) (one explicit warning remains for the unknown legal intake placeholder; it is not treated as a legal fact).
-- [x] Package-integrity CI check passes on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654).
+- [x] Package-integrity CI check passes on release-candidate CI run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310).
 - [x] Release notes for 0.5.0 prepared in `docs/release-notes-0.5.0.md`.
 - [x] CI generated the source archive from the release-candidate merge commit, verified 143/143 entries against `package-manifest.json`, and recorded SHA-256.
 - [x] Downloaded CI artifact was independently inspected: checksum valid, ZIP integrity valid, 143 manifest files present, no missing or extra files.
 - [ ] Final release archive is regenerated from the approved release tag/commit; the current archive is a PR candidate artifact.
-- [x] CI is green on release-candidate commit `de9edfde818849d8d2be57c00341aebe99576dc2` in run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310). A separate release tag still requires artifact verification and approval.
+- [x] CI is green on release-candidate commit `de9edfde818849d8d2be57c00341aebe99576dc2` in run [43695843310](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695843310). A separate release tag still requires final artifact generation and owner approval.
 - [x] Russian user guide and provider setup instructions are included and checked against current ChatGPT Projects and Claude Projects documentation.
 - [ ] Owner confirms redistribution rights for generalized practice-derived methodology in the public repository.
 - [ ] Release readiness is explicitly approved before publication.
