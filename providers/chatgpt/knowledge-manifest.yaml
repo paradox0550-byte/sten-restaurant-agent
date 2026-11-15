@@ -7,9 +7,9 @@ knowledge:
   - ../../knowledge/hr-payroll/
   - ../../knowledge/service-standards/
   - ../../knowledge/management/
-evidence_registry: ../../knowledge/evidence/registry.json
-note: Attach files individually where the provider does not support directory uploads.
   - ../../skills/labor-analysis/SKILL.md
   - ../../skills/menu-analysis/SKILL.md
   - ../../docs/stage-11-kitchen-workforce-planning.md
   - ../../docs/stage-11-menu-engineering.md
+evidence_registry: ../../knowledge/evidence/registry.json
+note: Attach files individually where the provider does not support directory uploads.
