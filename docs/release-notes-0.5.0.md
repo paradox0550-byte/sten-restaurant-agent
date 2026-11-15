@@ -10,6 +10,8 @@
 - Provider-neutral HoReCa expert-intelligence core with finance, labor/payroll, menu, service and operations workflows.
 - Evidence Registry with provenance, validity, territory, applicability, limitations and conflict handling.
 - Deterministic finance/labor/menu calculators and source-aware operational knowledge retrieval.
+- Kitchen staffing estimate by station and production interval, with explicit time-standard and utilization inputs.
+- End-to-end menu-engineering workflow connecting sales, recipe cost, contribution, ABC, menu matrix and kitchen workload.
 - Tenant-required runtime boundary, deny-by-default tool execution, argument validation, tenant-scoped development memory and audit interfaces.
 - Management workflow and evidence-backed outcome verification.
 - Retrieval/evidence evaluation framework and package integrity validator.
@@ -18,13 +20,13 @@
 
 ## Verification
 
-Latest candidate CI: [run 43695928368](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695928368), branch commit `b067b37bd0ff91f5079638be7da38d53427afd9c`.
+Latest branch-head CI: [run 43719986139](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43719986139), branch commit `c2e296767aa06a5ff9dd677ee9b030f161b08b4e`.
 
-- Automated tests: 91 passed, 0 failed.
+- Automated tests: 99 passed, 0 failed.
 - Evidence Registry validation: passed; one warning remains for an intentionally unknown legal intake placeholder. It is not treated as a legal fact.
-- Package integrity: passed; 143 tracked files match the 143 manifest paths.
-- Secret-pattern scan: passed across 143 tracked text files and 18,088 added lines in reachable Git history; no high-confidence credential patterns found.
-- Source archive: generated from the pull-request merge candidate, compared with the package manifest (143/143), downloaded and independently inspected. ZIP integrity and SHA-256 passed; the digest is in the artifact sidecar `SHA256SUMS.txt`.
+- Package integrity: passed; 146 tracked files match the 146 manifest paths.
+- Secret-pattern scan: passed on the current branch-head CI; see run logs for the exact scan coverage.
+- Source archive: generated from the pull-request merge candidate and compared with the package manifest (146/146). The current CI artifact is available until 15 December 2026; SHA-256 `03f36559622a3f4bc97fed2057e063844af9f1a91c377f2713d62e55fd442551`.
 - Golden lexical retrieval: Precision@10 36.25%, Recall@10 92.92%, MRR 1.00, nDCG@10 93.65%; pinned baseline nDCG@10 is 93.36%.
 
 The golden labels and pinned baseline file were not rewritten. Holdout labels remain provisional and are not expert-adjudicated.
@@ -52,4 +54,4 @@ The golden labels and pinned baseline file were not rewritten. Holdout labels re
 
 ## Release decision
 
-This file is a release-candidate note set. No GitHub Release or tag is published. Publication requires explicit owner approval after reviewing the stated limitations and confirming redistribution rights.
+This file is a release-candidate note set. No GitHub Release or tag is published. The PR remains draft and unmerged; `main` is unchanged. Publication requires explicit owner approval after reviewing the stated limitations and confirming redistribution rights.
