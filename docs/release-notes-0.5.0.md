@@ -20,13 +20,13 @@
 
 ## Verification
 
-Latest branch-head CI: [run 43719986139](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43719986139), branch commit `c2e296767aa06a5ff9dd677ee9b030f161b08b4e`.
+Latest branch-head CI: [run 43765995720](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43765995720), branch commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`.
 
 - Automated tests: 99 passed, 0 failed.
 - Evidence Registry validation: passed; one warning remains for an intentionally unknown legal intake placeholder. It is not treated as a legal fact.
-- Package integrity: passed; 146 tracked files match the 146 manifest paths.
+- Package integrity: passed; 147 tracked files match the 147 manifest paths.
 - Secret-pattern scan: passed on the current branch-head CI; see run logs for the exact scan coverage.
-- Source archive: generated from the pull-request merge candidate and compared with the package manifest (146/146). The current CI artifact is available until 15 December 2026; SHA-256 `03f36559622a3f4bc97fed2057e063844af9f1a91c377f2713d62e55fd442551`.
+- Source archive: generated from the pull-request merge candidate and compared with the package manifest (146/146). The current CI artifact is available until 15 December 2026; SHA-256 `91aa5f65deee52b1a3629f778d6629f12e1644a57cfb5657c9c6b00a90b3e11d`.
 - Golden lexical retrieval: Precision@10 36.25%, Recall@10 92.92%, MRR 1.00, nDCG@10 93.65%; pinned baseline nDCG@10 is 93.36%.
 
 The golden labels and pinned baseline file were not rewritten. Holdout labels remain provisional and are not expert-adjudicated.
