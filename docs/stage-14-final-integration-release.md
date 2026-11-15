@@ -106,32 +106,34 @@ This review is not a penetration test or security certification.
 - [x] ChatGPT adapter instructions and OpenAPI template are internally consistent; the endpoint template remains intentionally unconfigured.
 - [x] Claude project instructions and empty MCP configuration are internally consistent; Skills packaging adaptation is documented as a host setup task.
 - [x] Tenant, memory, audit and tool-permission boundaries reviewed at source/test level; production host controls and penetration testing remain outside this package.
-- [ ] High-confidence secret-pattern scan passes on the exact release candidate commit.
-- [ ] Manual review confirms no personal data or private operational/commercial data in the package; the pattern scanner cannot establish this by itself.
-- [ ] Git history has been checked separately for previously committed secrets; current-snapshot scanning does not cover history.
+- [x] High-confidence secret-pattern scan passes on release-candidate CI run [43695673263](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695673263): 143 tracked text files and 18,045 added lines in reachable Git history scanned; no high-confidence credential patterns found.
+- [x] Current package content review: source catalog and procedures describe generalized practice; original confidential source documents and direct personal identifiers are not included in the manifest. A separate pattern check found no email, IBAN or passport-like identifiers. The owner must still confirm redistribution rights for practice-derived methodology before public release.
+- [x] Reachable Git history checked for the selected high-confidence credential formats using a full-history CI checkout (`fetch-depth: 0`). This is not a complete DLP scan of historical personal/commercial data.
 - [x] Stage 13 retrieval ranking regression investigated; conservative metadata and BM25 tuning measured above the golden macro nDCG baseline without changing expected labels.
 - [x] `npm test` passes: 91/91 tests on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654).
 - [x] `npm run validate:evidence` passes on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654) (one explicit warning remains for the unknown legal intake placeholder; it is not treated as a legal fact).
 - [x] Package-integrity CI check passes on final CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654).
 - [x] Release notes for 0.5.0 prepared in `docs/release-notes-0.5.0.md`.
-- [ ] CI generates the source archive from the exact candidate commit, verifies its entries against `package-manifest.json`, and records SHA-256.
-- [ ] Downloaded CI artifact is independently inspected; final release archive is regenerated from the approved release tag/commit.
+- [x] CI generated the source archive from the release-candidate merge commit, verified 143/143 entries against `package-manifest.json`, and recorded SHA-256.
+- [x] Downloaded CI artifact was independently inspected: checksum valid, ZIP integrity valid, 143 manifest files present, no missing or extra files.
+- [ ] Final release archive is regenerated from the approved release tag/commit; the current archive is a PR candidate artifact.
 - [x] CI is green on final integration commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` in run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654). A separate release tag still requires artifact verification and approval.
-- [ ] Russian user guide and provider setup instructions are included and checked against current host capabilities.
+- [x] Russian user guide and provider setup instructions are included and checked against current ChatGPT Projects and Claude Projects documentation.
+- [ ] Owner confirms redistribution rights for generalized practice-derived methodology in the public repository.
 - [ ] Release readiness is explicitly approved before publication.
 
 ## Release preparation added
 
 - `docs/USER_GUIDE_RU.md` explains ChatGPT Projects, Claude Projects, initial data preparation, example requests, local developer checks, limitations and safe handling of restaurant data.
 - `providers/chatgpt/project-instructions-ru.md` supplies short Russian instructions for a ChatGPT Project.
-- `scripts/scan-package-secrets.js` scans tracked text files for high-confidence credential patterns. It does not scan Git history and does not detect all personal or commercial data.
+- `scripts/scan-package-secrets.js` scans tracked text files and added lines in reachable Git history for selected high-confidence credential formats. CI fetches full history. It does not detect all personal or commercial data.
 - `scripts/create-source-archive.js` creates a ZIP with `git archive`, compares archive entries to the package manifest, and writes SHA-256 and contents files.
-- CI now runs the secret scan and builds/uploads a source archive artifact after the test gates pass.
+- CI now runs the secret scan and builds/uploads a source archive artifact after the test gates pass. Candidate run [43695673263](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695673263) passed every job.
 - The end-user guide recommends ChatGPT Projects and Claude Projects. Custom GPT creation is not a valid universal path for personal ChatGPT accounts as of the guide date.
 
 ## Current status
 
-**Stage 14 release preparation is in progress; release publication is not complete.** Final verified integration-code CI run `43621988654` on commit `c6d5c8e39704177e06da1fa82644a90838ba56cd` passed all 91 tests, Evidence Registry validation and package-integrity validation. The later main commit `625260941f913a569f62b958bbf074d0adac9518` contains documentation updates and requires its own CI result before the current HEAD is called green. Release notes for 0.5.0 are prepared. The current golden retrieval metrics are Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% nDCG baseline. Expected labels and baseline file were not rewritten. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. The new release-preparation CI and candidate archive must pass on the exact branch commit; secret scan, manual private-data review, archive download inspection and explicit release approval remain open.
+**Stage 14 release preparation is engineering-verified on the current candidate; publication remains open.** CI run [43695673263](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43695673263) passed on branch commit `17bc5b63fe8b0d7696963ceecbe0faadc749f669`: 91/91 tests, Evidence Registry validation, package integrity, secret scan and source-archive generation. The manifest contains 143 tracked files and 143 paths. The scan covered 143 tracked text files and 18,045 added lines in reachable Git history with no high-confidence credential matches. The downloaded candidate archive was independently checked: SHA-256 valid, ZIP valid, and all 143 manifest files present with no extras. The archive SHA-256 is `0882369808b848de0dd566ebe57c841ba4d3a37e6c2b423d1cc839feeba27c2d`. Golden retrieval metrics remain Precision@10 36.25%, Recall@10 92.92%, MRR 1.00 and nDCG@10 93.65%, compared with the pinned 93.36% baseline. Provider adapters remain templates; production host authentication, durable memory/audit and live provider connections are not included. No GitHub Release has been published. The candidate archive was built from the PR merge ref, not an approved release tag. Public redistribution rights for practice-derived methodology and explicit release approval remain open.
 
 
 ### Retrieval experiment disposition (14.5)
