@@ -1,37 +1,46 @@
-# ABC-анализ и инженерия меню — статус источников
+# ABC-анализ и инженерия меню — статус источников и методики
 
-**Статус:** source gap. В просмотренных файлах исходная методология подтверждённой канонической реализации ABC/menu-engineering с порогами A/B/C и матрицей не найдено. Не выдавать предлагаемую методику за уже реализованную.
+**Статус:** source gap remains for externally validated canonical thresholds and site-specific menu policy. A proposed STEN workflow and deterministic primitives are now present; they must not be presented as a source-confirmed universal standard.
 
-## Что есть в исходном контуре
-- Продажи POS по дате, часу, блюду, категории, количеству и выручке.
-- Себестоимость и P&L.
-- Возможность отдельно выделить выручку кухни и себестоимость кухни при наличии данных.
-- Категории и зоны производства для Labor Intelligence.
-- Коэффициенты трудоёмкости и нормы производительности.
-- Принцип: нельзя объявлять блюдо прибыльным только по популярности.
+## What exists in the repository
+- POS sales by date, hour, dish, category, quantity and revenue.
+- Food cost and P&L foundations.
+- Ability to isolate kitchen revenue and kitchen cost when source data supports it.
+- Categories and production zones for Labor Intelligence.
+- Existing deterministic primitives in `src/menu/engineering.js`: ABC classification with explicit basis/cumulative thresholds, contribution calculation and menu-matrix classification with explicit cutoffs.
+- New end-to-end workflow in `docs/stage-11-menu-engineering.md` and `skills/menu-analysis/SKILL.md`.
+- A graph node for menu engineering is explicitly classed HYPOTHESIS/proposed method pending expert adjudication.
 
-## Данные для корректного анализа
-По каждой позиции нужны продажи в штуках, выручка, скидки, возвраты, комплименты, цена, актуальная себестоимость по техкарте, версия рецептуры, при необходимости списания/потери, канал, подразделение и трудоёмкость.
+## Required data
+Per item: stable POS ID, quantity, net sales, discounts, refunds, voids, comps, selling price, current recipe version, portion/yield, ingredient quantities and purchase-cost basis, variable cost perimeter, channel, availability/stock-outs, production section and active work minutes where available.
 
-Без себестоимости можно анализировать продажи и выручку, но нельзя заявлять маржинальную прибыль.
+Without current recipe/variable-cost data, STEN may analyze quantity, sales mix and revenue but must not claim contribution or profitability.
 
-## ABC требует выбора базы
-ABC можно строить по количеству, выручке или маржинальному вкладу. Это разные вопросы. До классификации владелец утверждает базу, период, правила скидок/возвратов, накопительные границы A/B/C, сезонность и обработку новых блюд. Пока это не утверждено, класс A/B/C не присваивается.
+## ABC analysis
+ABC basis must be selected explicitly: quantity, revenue or contribution. These answer different questions. The operator must approve period, discount/refund treatment, cumulative A/B/C thresholds, seasonality handling and treatment of new items. If these are not approved, report raw metrics and do not assign A/B/C.
 
-## Menu engineering
-Для матрицы нужны популярность и маржинальный вклад. Вклад рассчитывается по утверждённой формуле на основе цены и подтверждённой переменной себестоимости. Порог популярности и порог маржинальности утверждаются отдельно. Не использовать универсальные границы без согласования.
+## Menu engineering matrix
+The four groups are Star (high popularity/high contribution), Plowhorse (high popularity/low contribution), Puzzle (low popularity/high contribution) and Dog (low popularity/low contribution). The popularity and contribution cutoffs are explicit required inputs; none are hard-coded as universal rules.
 
-## Предлагаемый рабочий алгоритм
-1. Зафиксировать ресторан, период, канал, меню и версии техкарт.
-2. Сверить продажи и выручку с POS.
-3. Проверить цены, скидки, возвраты и комплименты.
-4. Проверить актуальность себестоимости.
-5. Рассчитать вклад по утверждённой формуле.
-6. Построить ABC по согласованной базе.
-7. Построить матрицу популярность × вклад.
-8. Проверить трудоёмкость, ингредиенты и производственные ограничения.
-9. Подготовить варианты действий на утверждение руководителю.
-10. Проверить результат на сопоставимом периоде.
+Contribution per unit is net realized selling price less the approved variable cost per portion. Total contribution is contribution per unit multiplied by units sold. Contribution is not net profit and does not automatically deduct fixed overhead or full allocated labor.
 
-## Что нужно извлечь дополнительно
-Исходные файлы ABC/меню, если они есть отдельно; правила классификации A/B/C; метод расчёта вклада; учёт скидок, возвратов и списаний; периодичность; полномочия по цене, рецептуре и ассортименту.
+## Integrated menu and kitchen analysis
+A menu recommendation must also be evaluated for:
+- active minutes per dish by station;
+- batch/setup work and station bottlenecks;
+- shared ingredients, stock-outs, waste and spoilage;
+- effect on other dishes and possible cannibalization;
+- channel/daypart mix, guest value and strategic menu role.
+
+Any approved change to price, portion, recipe, batch size or station routing should trigger a new cost and kitchen-workload calculation.
+
+## Workflow and output
+The end-to-end sequence, input contract, exception handling, recommendations and test design are maintained in `docs/stage-11-menu-engineering.md`. The skill is in `skills/menu-analysis/SKILL.md`.
+
+## Remaining source and validation gaps
+- No approved universal ABC thresholds or menu-matrix cutoffs.
+- No site recipe, selling-price, demand-elasticity or station-time dataset is supplied in this repository.
+- No expert-adjudicated evidence yet demonstrates that recommendations improve profit or guest outcomes.
+- Proposed workflow cases are provisional and require menu-expert review.
+
+**Rule:** missing cost is unknown, never zero. A proposed methodology is not a verified fact or a guaranteed sales/profit uplift.
