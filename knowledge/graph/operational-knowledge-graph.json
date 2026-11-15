@@ -1160,6 +1160,77 @@
         "source.director-calendar"
       ],
       "scope": "organization_specific_functional_role_not_job_title"
+    },
+    {
+      "id": "production.kitchen-staffing-by-station",
+      "type": "method",
+      "label": "Расчёт численности кухни по цехам и производственной нагрузке",
+      "evidence_class": "HYPOTHESIS",
+      "description": "Предлагаемая методика расчёта требуемой одновременной численности по каждому кухонному цеху и временному интервалу на основе количества блюд, подтверждённых активных минут на блюдо и станцию, batch/setup и фиксированной работы, производительной доступности и минимального покрытия. Не является универсальной нормой или готовым графиком.",
+      "keywords": [
+        "расчёт поваров",
+        "количество сотрудников кухни",
+        "численность кухни",
+        "расчет персонала кухни",
+        "планирование поваров",
+        "нагрузка кухни",
+        "нагрузка цеха",
+        "блюда по цехам",
+        "блюда в час",
+        "производительность повара",
+        "трудоёмкость блюда",
+        "трудоемкость блюда",
+        "нормо-минуты",
+        "минуты на блюдо",
+        "пиковая нагрузка кухни",
+        "POS KDS",
+        "горячий цех",
+        "холодный цех",
+        "заготовочный цех",
+        "кондитерский цех",
+        "staffing kitchen",
+        "kitchen labor planning"
+      ],
+      "aliases": [
+        "кухонный staffing",
+        "расчёт штата кухни",
+        "расчет смены кухни"
+      ]
+    },
+    {
+      "id": "production.menu-engineering",
+      "type": "method",
+      "label": "Инжиниринг меню: популярность, маржинальный вклад и производственная сложность",
+      "evidence_class": "HYPOTHESIS",
+      "description": "Предлагаемая методика самостоятельного анализа меню: сверка POS-продаж и доступности, проверка версий техкарт и переменной себестоимости, contribution per unit и total contribution, ABC по выбранной базе и матрица популярность × вклад с утверждёнными порогами. Рекомендации учитывают гостевую ценность, каналы, сезонность, трудоёмкость и ограничения цехов; изменения требуют одобрения человека.",
+      "keywords": [
+        "инжиниринг меню",
+        "menu engineering",
+        "анализ меню",
+        "матрица меню",
+        "звезды меню",
+        "рабочие лошадки меню",
+        "загадки меню",
+        "собаки меню",
+        "ABC анализ блюд",
+        "ABC меню",
+        "маржинальный вклад блюда",
+        "contribution margin",
+        "популярность блюда",
+        "рентабельность блюда",
+        "меню микс",
+        "menu mix",
+        "себестоимость блюда",
+        "цена блюда",
+        "прибыльность ассортимента",
+        "оптимизация меню",
+        "ассортиментный анализ"
+      ],
+      "aliases": [
+        "menu matrix",
+        "меню инженерия",
+        "меню-инжиниринг"
+      ]
     }
   ],
   "edges": [
@@ -1882,6 +1953,48 @@
       "type": "includes_activity",
       "source_id": "source.director-calendar",
       "scope": "organization_specific_activity_mapping"
+    },
+    {
+      "from": "production.kitchen",
+      "to": "production.kitchen-staffing-by-station",
+      "type": "methodology_extension",
+      "scope": "proposed_method_requires_site_time_standards_and_expert_validation"
+    },
+    {
+      "from": "people.schedule",
+      "to": "production.kitchen-staffing-by-station",
+      "type": "cross_links",
+      "scope": "workload_estimate_is_an_input_to_roster_design_not_a_roster"
+    },
+    {
+      "from": "production.kitchen-staffing-by-station",
+      "to": "production.order-flow",
+      "type": "cross_links",
+      "scope": "station_capacity_and_ticket_flow_association_not_causation"
+    },
+    {
+      "from": "production.menu-cycle",
+      "to": "production.menu-engineering",
+      "type": "methodology_extension",
+      "scope": "proposed_method_requires_reconciled_sales_recipe_costs_and_approved_thresholds"
+    },
+    {
+      "from": "production.recipe-spec",
+      "to": "production.menu-engineering",
+      "type": "cross_links",
+      "scope": "recipe_version_and_cost_input"
+    },
+    {
+      "from": "finance.food-cost",
+      "to": "production.menu-engineering",
+      "type": "cross_links",
+      "scope": "cost_perimeter_and_contribution_input"
+    },
+    {
+      "from": "production.menu-engineering",
+      "to": "production.kitchen-staffing-by-station",
+      "type": "cross_links",
+      "scope": "menu_changes_may_change_station_workload;recalculate_after_approved_changes"
     }
   ],
   "source_links": [
