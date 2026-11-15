@@ -98,7 +98,7 @@ The existing `src/evaluation/knowledge-quality.js` provides metadata integrity c
 
 ## Final Integration & Release — Stage 14
 
-Stage 14 engineering integration is substantially complete. The latest verified release-candidate CI run before the final guide addition is 99/99 tests, Evidence Registry validation, package integrity, secret scan and source archive generation on commit `c2e296767aa06a5ff9dd677ee9b030f161b08b4e`. The current branch includes a Russian pilot test plan; its updated CI result is pending. Manifest parity is checked on every candidate commit.
+Stage 14 engineering integration is substantially complete. The latest verified release-candidate CI run [43765995720](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43765995720) passed on commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`: 99/99 tests, Evidence Registry validation, package integrity, secret scan and source archive generation. The manifest contains 147/147 tracked paths. A Russian pilot test plan is included.
 
 The package remains a **working core**, not a published release. ChatGPT and Claude adapters are templates; the ChatGPT API host is a placeholder with no actions, and Claude MCP configuration is empty. Memory and audit are in-memory development/test adapters. No live provider connection, production API, persistent vector database, hosted memory or production authentication is included.
 
