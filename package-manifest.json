@@ -83,7 +83,10 @@
     "russian_user_installation_guide",
     "provider_project_setup_instructions",
     "dependency_free_secret_pattern_scan",
-    "reproducible_manifest_verified_source_archive"
+    "reproducible_manifest_verified_source_archive",
+    "kitchen_section_interval_workload_staffing_calculator",
+    "kitchen_station_time_standard_methodology",
+    "autonomous_menu_engineering_workflow"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -139,6 +142,8 @@
     "docs/sector-domain-matrix-evaluation.md",
     "docs/semantic-ranking-conflicts.md",
     "docs/source-intake-checklist.md",
+    "docs/stage-11-kitchen-workforce-planning.md",
+    "docs/stage-11-menu-engineering.md",
     "docs/stage-11-validation.md",
     "docs/stage-11.1-restaurant-audit-workplan.md",
     "docs/stage-12-expert-intelligence.md",
@@ -262,7 +267,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 91,
+    "total_expected": 97,
     "command": "npm test",
     "runtime_layer": 8,
     "retrieval_layer": 16,
