@@ -73,7 +73,7 @@ The 12-query post-enrichment holdout is diagnostic only. Its expected IDs are pr
 
 Latest verified integration code commit: `c6d5c8e39704177e06da1fa82644a90838ba56cd`, CI run [43621988654](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43621988654): 91/91 tests passed, Evidence Registry validation passed (with one explicit warning for an unknown legal intake placeholder), and package-integrity validation passed.
 
-The subsequent documentation-only main commit is `625260941f913a569f62b958bbf074d0adac9518`; its own CI must be checked before claiming that exact HEAD is green. The latest package audit recorded 138 tracked files and 138 manifest paths, with no missing or unlisted paths.
+The subsequent documentation-only main commit is `625260941f913a569f62b958bbf074d0adac9518`. The release-candidate branch has moved beyond that baseline and has its own CI. Current candidate metrics and manifest counts are recorded in `docs/stage-14-final-integration-release.md`.
 
 Provider files remain unconfigured templates: ChatGPT OpenAPI has a placeholder host and no paths; Claude MCP server list is empty and its Skills need host-format adaptation. Runtime security controls have unit coverage for tenant identity, deny-by-default tool permissions, argument validation, tenant-scoped memory and audit filtering. Memory and audit are in-memory development/test adapters; authentication, tenant derivation, durable storage and host authorization remain host responsibilities. This is a source-level review, not a penetration test or certification.
 
@@ -88,4 +88,4 @@ Non-goals:
 - do not add production providers, persistent vector storage, hosted memory, authentication, external services or dependencies as part of documentation closeout;
 - do not deploy or claim production certification.
 
-Stage 14 may close only after every release gate in `docs/stage-14-final-integration-release.md` is evidenced.
+Stage 14 is ready for owner-led private pilot testing after the current candidate CI succeeds. It remains open for public release until redistribution rights are confirmed, a final tag archive is generated, and the owner explicitly approves publication. Stage 11 substantive expert validation remains open and is not a blocker to beginning a controlled pilot.
