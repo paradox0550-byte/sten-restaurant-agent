@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Stage 11 specialist workflow cases. These are provisional test specifications, not expert-adjudicated answers.",
+  "cases": [
+    {
+      "id": "stage11.kitchen.staffing.by-station-peak",
+      "domain": "kitchen_workforce",
+      "query": "По количеству блюд в каждом цеху рассчитай, сколько поваров нужно в пиковые 30 минут.",
+      "expected_ids": [
+        "production.kitchen-staffing-by-station",
+        "production.kitchen",
+        "people.schedule",
+        "production.order-flow"
+      ],
+      "required_inputs": [
+        "production_interval",
+        "station_map",
+        "dish_quantities_by_station_and_interval",
+        "active_minutes_per_dish_per_station",
+        "batch_size_and_setup_minutes_if_applicable",
+        "fixed_work_minutes",
+        "approved_productive_utilization",
+        "approved_minimum_coverage"
+      ],
+      "must_require": [
+        "рассчитать нагрузку отдельно по каждому цеху и интервалу",
+        "показать пиковый интервал и допущения",
+        "проверить навыки, перерывы, оборудование и трудовые ограничения"
+      ],
+      "must_not_claim": [
+        "универсальное количество блюд на одного повара",
+        "готовый график без проверки покрытия",
+        "отсутствующая трудоёмкость равна нулю"
+      ],
+      "label_status": "provisional_requires_kitchen_expert_adjudication"
+    },
+    {
+      "id": "stage11.kitchen.missing-time-standard",
+      "domain": "kitchen_workforce",
+      "query": "В цеху 40 блюд за полчаса, но нормы минут на блюда нет. Сколько поваров поставить?",
+      "expected_ids": [
+        "production.kitchen-staffing-by-station",
+        "production.kitchen"
+      ],
+      "required_inputs": [
+        "station_map",
+        "active_minutes_per_dish_per_station",
+        "approved_productive_utilization",
+        "minimum_coverage"
+      ],
+      "must_require": [
+        "объяснить невозможность точного расчёта без трудоёмкости",
+        "запросить хронометраж или утверждённые нормы",
+        "отделить минимальное дежурное покрытие от нагрузки"
+      ],
+      "must_not_claim": [
+        "вывести численность только из количества блюд",
+        "придумать производительность"
+      ],
+      "label_status": "provisional_requires_kitchen_expert_adjudication"
+    },
+    {
+      "id": "stage11.menu.full-engineering",
+      "domain": "menu_engineering",
+      "query": "Проведи полный инжиниринг меню: найди звёзды, рабочие лошадки, загадки и позиции на пересмотр.",
+      "expected_ids": [
+        "production.menu-engineering",
+        "production.menu-cycle",
+        "production.recipe-spec",
+        "finance.food-cost"
+      ],
+      "required_inputs": [
+        "menu_version_and_period",
+        "POS_item_quantities_and_net_sales",
+        "discounts_refunds_comps_and_voids",
+        "availability_and_stockout_periods",
+        "current_recipe_versions",
+        "variable_cost_per_item",
+        "approved_popularity_and_contribution_cutoffs",
+        "ABC_basis_and_cumulative_thresholds"
+      ],
+      "must_require": [
+        "сверить POS и рецептуры",
+        "показать contribution per unit и total contribution",
+        "разделить ABC и матрицу популярность-вклад",
+        "учесть трудоёмкость и загрузку цехов",
+        "предложить тест и критерии проверки"
+      ],
+      "must_not_claim": [
+        "маржинальный вклад без актуальной себестоимости",
+        "универсальные пороги популярности и вклада",
+        "рост прибыли как гарантированный результат"
+      ],
+      "label_status": "provisional_requires_menu_expert_adjudication"
+    },
+    {
+      "id": "stage11.menu.missing-cost",
+      "domain": "menu_engineering",
+      "query": "Есть продажи и количество блюд, но нет актуальных техкарт и себестоимости. Определи прибыльные блюда.",
+      "expected_ids": [
+        "production.menu-engineering",
+        "production.recipe-spec",
+        "finance.food-cost"
+      ],
+      "required_inputs": [
+        "current_recipe_version",
+        "variable_cost_per_item",
+        "cost_scope",
+        "net_realized_price"
+      ],
+      "must_require": [
+        "сказать, что продажи и популярность можно проанализировать отдельно",
+        "запросить актуальную рецептуру и себестоимость",
+        "оставить contribution и классификацию по вкладу недоступными"
+      ],
+      "must_not_claim": [
+        "прибыльность из одной выручки",
+        "отсутствующая себестоимость равна нулю"
+      ],
+      "label_status": "provisional_requires_menu_expert_adjudication"
+    }
+  ]
+}
