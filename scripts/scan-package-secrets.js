@@ -23,6 +23,7 @@ const patterns = [
 
 const findings = [];
 let scanned = 0;
+let historyScanned = 0;
 
 for (const file of files) {
   if (!textExtensions.has(path.extname(file).toLowerCase())) continue;
@@ -42,6 +43,34 @@ for (const file of files) {
   }
 }
 
+// Inspect every reachable commit diff as well. CI must use fetch-depth: 0 for this
+// pass to cover the complete repository history available to the checkout.
+const historyPatch = execFileSync(
+  "git",
+  ["log", "--all", "-p", "--format=", "--no-ext-diff", "--"],
+  { encoding: "utf8", maxBuffer: 32 * 1024 * 1024 }
+);
+let historyFile = "unknown-history-path";
+let historyLine = 0;
+
+for (const line of historyPatch.split(/\\r?\\n/)) {
+  if (line.startsWith("+++ b/")) {
+    historyFile = line.slice(6);
+    historyLine = 0;
+    continue;
+  }
+  if (line.startsWith("+") && !line.startsWith("+++")) {
+    historyLine += 1;
+    const added = line.slice(1);
+    for (const [label, pattern] of patterns) {
+      if (pattern.test(added)) {
+        findings.push({ file: `history:${historyFile}`, line: historyLine, label });
+      }
+    }
+    historyScanned += 1;
+  }
+}
+
 if (findings.length) {
   console.error(`Potential secrets found in ${findings.length} location(s):`);
   for (const finding of findings) {
@@ -50,6 +79,6 @@ if (findings.length) {
   console.error("Remove the secret from the current files and rotate it if it was real. Also inspect Git history.");
   process.exitCode = 1;
 } else {
-  console.log(`Secret pattern scan passed: ${scanned} tracked text files scanned; no high-confidence credential patterns found.`);
-  console.log("This is a pattern scan of the current tracked snapshot, not a history scan or a complete personal-data audit.");
+  console.log(`Secret pattern scan passed: ${scanned} tracked text files and ${historyScanned} added history lines scanned; no high-confidence credential patterns found.`);
+  console.log("This checks reachable Git history and the current snapshot for selected credential formats. It is not a complete personal-data or commercial-confidentiality audit.");
 }
