@@ -18,5 +18,19 @@ jobs:
         run: npm run validate:evidence
       - name: Verify package and manifest integrity
         run: npm run validate:package
+      - name: Scan tracked package files for high-confidence secrets
+        run: npm run scan:secrets
       - name: Run test suite
         run: npm test
+      - name: Build and verify source archive
+        run: npm run package:source
+      - name: Upload verified source archive and checksums
+        uses: actions/upload-artifact@v4
+        with:
+          name: sten-source-${{ github.sha }}
+          path: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
+            dist/CONTENTS.txt
+          if-no-files-found: error
+          retention-days: 30
