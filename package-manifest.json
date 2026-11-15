@@ -127,6 +127,7 @@
     "assistant/knowledge-governance.md",
     "assistant/system-instructions.md",
     "docs/SECURITY_RELEASE_CHECKLIST.md",
+    "docs/TEST_PLAN_RU.md",
     "docs/USER_GUIDE_RU.md",
     "docs/architecture.md",
     "docs/contributing-evidence.md",
@@ -294,6 +295,6 @@
     "11": "foundation_integrated_substantive_validation_open",
     "12": "initial_single_core_integration",
     "13": "evaluation_engineering_framework_integrated_answer_quality_not_certified",
-    "14": "in_progress_final_integration_and_release"
+    "14": "test_candidate_ready_in_progress_owner_release_approval_pending"
   }
 }
