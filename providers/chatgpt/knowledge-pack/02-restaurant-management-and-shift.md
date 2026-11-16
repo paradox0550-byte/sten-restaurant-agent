@@ -1,0 +1,144 @@
+# Restaurant Management, Shift Operations and Role Procedures
+
+## 1. Operational management system
+
+The supplied training deck *Система операционного управления. Управленческая эффективность* frames restaurant performance as a management system shaped by the market environment (trends, suppliers, customers and competitors) and by people.
+
+The deck identifies three contributors to employee result:
+- knowledge;
+- skills;
+- attitude to work.
+
+It links the organization's ability to attract and retain staff to hiring policy, adaptation, training, working conditions, material motivation and internal communication.
+
+### Manager's recurring functions
+
+The deck identifies five connected management functions:
+1. planning — strategic, long-, medium- and short-term;
+2. organization — work allocation, meetings and delegation;
+3. control — checking execution and standards;
+4. motivation — material and non-material;
+5. development and training.
+
+These functions form a cycle, not separate one-off activities. A plan without ownership is not execution; control without feedback does not develop capability.
+
+### Leadership styles and situational management
+
+The training material describes:
+- authoritarian ("I");
+- democratic ("we");
+- liberal ("you").
+
+It recommends matching the style to the situation and employee's work maturity rather than using one style for everyone.
+
+The deck's four-level work-maturity model combines qualification/productivity and responsibility/attitude:
+- Level 1: no proven experience; may resist or avoid responsibility.
+- Level 2: has performed parts of a task several times; execution is emerging but result ownership is inconsistent.
+- Level 3: can deliver typical projects with predictable quality and accepts responsibility within defined boundaries.
+- Level 4: can handle ambiguous, complex tasks and flexible deadlines with strong ownership.
+
+**Important:** assess maturity for a particular task, not as a permanent label for a person. Do not infer character or motivation from one incident.
+
+The deck's management approaches by level:
+- Level 1 — instruction: small task scope, clear steps, frequent checks and direct feedback.
+- Level 2 — explain and engage: explain why the task matters, support confidence, use mentoring and less frequent but supportive checks.
+- Level 3 — coaching: discuss goal and reality, provide information, agree options and actions; recognize expertise and transfer responsibility.
+- Level 4 — delegation: agree expected result and risks, give autonomy, maintain short regular synchronization and provide resources.
+
+### GROW coaching
+
+The deck presents a coaching sequence:
+- **Goal:** what result is wanted and how success is recognized?
+- **Reality:** what is happening now, what has been tried and what resources exist?
+- **Options:** what possible paths exist, with their advantages and risks?
+- **Way / What:** which action path is selected, who does what and by when, and how progress is checked?
+
+Use GROW to help a capable employee think and own the plan. It does not replace a direct instruction when immediate safety or clear compliance control requires one.
+
+## 2. Manager of shift — source-specific procedure
+
+Source: supplied document *ОР Управляющий смены.docx*, 4 pages, historically scoped to restaurant ТРАТТОРИЯ. Treat it as a local/historical role description, not a universal job description.
+
+### Role and authority described in the source
+- The manager of shift manages and controls restaurant activity during the shift.
+- The source places the role under the director.
+- It lists the shift team: bar, waiters, hostess, cleaning/washing staff, cooks and other personnel on the shift.
+- The source says the manager should know operational standards, relevant orders, menu, equipment and subordinate role instructions.
+
+### Before opening — source checklist
+- Check premises and guest areas.
+- Check furniture, interior, sanitary facilities and equipment.
+- Check ventilation/climate and music equipment.
+- Check cash register and card terminal readiness.
+- Check product availability with bar and kitchen leads.
+- Check staff readiness and advertising/promotional materials.
+- Hold a short briefing: stop-list, promotions, special offers and shift priorities.
+- Conduct dish quality/taste check against the approved technical card where the local procedure requires it.
+- Record the result in the opening checklist.
+
+The original document contains specific times and opening hours. Those are historical restaurant settings, not transferable default times.
+
+### During service
+- Assign staff to zones.
+- Coordinate front-of-house, bar and kitchen.
+- Monitor service standards and staff execution.
+- React to deviations and resolve them when safe and within authority.
+- Handle guest conflicts; escalate threats or emergency risk.
+- Maintain cash-register and payment-terminal controls within the assigned authority.
+- Coordinate internal promotion only using current approved information.
+
+### After closing — source checklist
+- Notify staff that the shift is ending.
+- Stop product movement according to the local closing process.
+- Ensure open guest orders are settled.
+- Prepare shift cash reports and count receipts using approved controls.
+- Communicate next-shift bookings/expected demand to kitchen and bar.
+- Check that non-essential equipment is switched off and required refrigeration remains operating.
+- Record equipment/furniture defects.
+- Confirm staff and unauthorized persons have left relevant areas.
+
+Never reuse old cash, staffing, opening-hour or equipment instructions without checking the current restaurant's policy.
+
+## 3. Bartender — source-specific operating procedure
+
+Source: supplied document *Организация работ бармена.doc*, 6 pages. It is a historical club/bar procedure, not a universal contemporary bar SOP. Some references (ashtrays, smoking, hookah, alcohol display, night operation and club events) are context-bound and must not be copied into a restaurant's current standard without review.
+
+### Responsibility and preparation
+The source assigns the bartender responsibility for the bar counter, equipment, glassware, refrigeration and stock in the bar zone. It expects the bartender to:
+- verify deliveries and supporting documents;
+- monitor stock and submit replenishment requests;
+- keep the bar, equipment, storage and workstation clean;
+- prepare the refrigerator and display;
+- check consumables and cleaning supplies;
+- verify equipment readiness before opening.
+
+### During service
+The source emphasizes:
+- knowledge of menu, assortment and prices;
+- helping guests choose;
+- accurate order execution;
+- visual coordination with waiters and awareness of guest demand;
+- keeping counter and display clean and replenished;
+- rotation of products by expiry/receipt sequence;
+- using measured portions where the recipe requires it;
+- communicating unavailable items to the manager/team.
+
+The source gives a two-minute service target for certain bar orders. Treat this as a historical local target, not a universal SLA.
+
+### Closing and handover
+- Clean equipment and work surfaces.
+- Wash and put away glassware.
+- Remove waste and leave bins clean.
+- Store opened products under the applicable product instructions.
+- Identify spoiled/expired stock for documented write-off; do not silently discard.
+- Count/hand over stock and leave the bar ready for the next shift.
+
+### Knowledge check
+The source includes a bartender qualification sheet and control sheet. Topics include menu/prices, cash register and terminal, role duties, work algorithm, tools, beverage knowledge, cocktails, inventory, bar display and guest service. This is a useful model for a role-based knowledge matrix; the exact subject list should be adapted to the current bar.
+
+## 4. Management control loop
+
+For a shift issue, use:
+**event → evidence → risk/impact → decision → owner role → deadline → action → verification → handover → recurrence prevention.**
+
+Do not create a task from every message. First determine whether it is an event, risk, commitment, exception or request for action. Keep observation, manager decision and completed result separate.
