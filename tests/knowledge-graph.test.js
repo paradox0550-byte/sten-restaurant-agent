@@ -51,14 +51,19 @@ test("Stage 11 specialist knowledge nodes and provisional cases are discoverable
   assert.equal(menu.evidence_class, "HYPOTHESIS");
   assert.ok(staffing.keywords.includes("количество сотрудников кухни"));
   assert.ok(menu.keywords.includes("инжиниринг меню"));
-  for (const id of [
-    "inventory.iiko-stock-accounting-audit",
-    "safety.product-adjacency",
-    "safety.food-marking-and-identification",
-    "management.shift-manager-role",
-    "service.bartender-operating-procedure",
-    "service.casual-dining-training-outline"
-  ]) assert.ok(ids.has(id), id);
+  const sourceLinks = new Map(read("../knowledge/graph/operational-knowledge-graph.json").source_links.map((link) => [link.source_id, link.node_ids]));
+  for (const sourceId of [
+    "source.calculator-iiko-audit-checklist",
+    "source.food-product-adjacency-guide",
+    "source.food-marking-haccp-checklist",
+    "source.shift-manager-trattoria-procedure",
+    "source.bartender-club-operating-procedure",
+    "source.casual-dining-service-book-outline"
+  ]) {
+    assert.ok(sourceIds.has(sourceId), sourceId);
+    assert.ok(sourceLinks.get(sourceId)?.length > 0, sourceId);
+    for (const nodeId of sourceLinks.get(sourceId)) assert.ok(ids.has(nodeId), nodeId);
+  }
   const expandedCases = read("../evals/stage-11-source-expansion-cases.json").cases;
   const sourceIds = new Set(read("../knowledge/graph/sources.json").sources.map((source) => source.id));
   assert.equal(expandedCases.length, 13);
