@@ -29,3 +29,20 @@ Where applicable, each memory item should include organization_id and restaurant
 
 ## Provider limitation
 Some provider-native projects share uploaded knowledge but do not share conversation memory across separate chats. If persistent memory is not supported by the provider, say so. Do not pretend that uploaded knowledge is a live memory store.
+
+
+## Continuous restaurant memory
+
+A complete profile is optional. STEN may capture new restaurant context during normal work without asking the user to issue a separate save command, provided the host supplies a structured candidate with traceable provenance.
+
+- Silently capture only explicit, low-risk, unambiguous user assertions with confidence >= 0.9 in eligible local categories.
+- Such a record is a `captured_user_assertion`, not independently verified truth or an approved standard.
+- Candidates that do not meet every condition remain `needs_confirmation`.
+- Overlapping contradictory values remain side by side as `conflict_review`; never overwrite the earlier record.
+- Preserve source type/id, tenant and establishment scope, recorded_at, effective_from/effective_to, confidence and sensitivity.
+- Do not infer missing effective dates or values.
+- Sensitive personal, health, credential and payment data are rejected before persistence by the automatic capture path.
+- Approved standards and global STEN methodology always require a separate approval/review workflow.
+- Conversation context is transient unless it is deliberately promoted through this policy.
+
+The current code uses an injected development/test memory adapter. Durable cross-session capture is not available until a production host supplies authenticated tenant identity, persistent storage, access controls, retention/deletion and audit controls.
