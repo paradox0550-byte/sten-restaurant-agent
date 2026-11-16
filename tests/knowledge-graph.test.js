@@ -32,7 +32,7 @@ test("every source link resolves and cross-domain links are retained", () => {
 
 test("source catalog preserves PRACTICE limitations and unknowns", () => {
   const sources = read("../knowledge/graph/sources.json").sources;
-  assert.equal(sources.length, 6);
+  assert.equal(sources.length, 12);
   assert.ok(sources.every((source) => source.evidence_class === "PRACTICE"));
   const appearance = sources.find((source) => source.id === "source.appearance-training");
   assert.ok(appearance.limitations.some((item) => item.includes("Footwear")));
@@ -51,6 +51,29 @@ test("Stage 11 specialist knowledge nodes and provisional cases are discoverable
   assert.equal(menu.evidence_class, "HYPOTHESIS");
   assert.ok(staffing.keywords.includes("количество сотрудников кухни"));
   assert.ok(menu.keywords.includes("инжиниринг меню"));
+  const sourceIds = new Set(read("../knowledge/graph/sources.json").sources.map((source) => source.id));
+  const sourceLinks = new Map(read("../knowledge/graph/operational-knowledge-graph.json").source_links.map((link) => [link.source_id, link.node_ids]));
+  for (const sourceId of [
+    "source.calculator-iiko-audit-checklist",
+    "source.food-product-adjacency-guide",
+    "source.food-marking-haccp-checklist",
+    "source.shift-manager-trattoria-procedure",
+    "source.bartender-club-operating-procedure",
+    "source.casual-dining-service-book-outline"
+  ]) {
+    assert.ok(sourceIds.has(sourceId), sourceId);
+    assert.ok(sourceLinks.get(sourceId)?.length > 0, sourceId);
+    for (const nodeId of sourceLinks.get(sourceId)) assert.ok(ids.has(nodeId), nodeId);
+  }
+  const expandedCases = read("../evals/stage-11-source-expansion-cases.json").cases;
+  assert.equal(expandedCases.length, 13);
+  for (const item of expandedCases) {
+    assert.ok(item.id && item.query && item.domain);
+    assert.ok(item.expected_source_ids.length > 0);
+    assert.ok(item.must_require.length > 0);
+    assert.ok(item.must_not_claim.length > 0);
+    for (const sourceId of item.expected_source_ids) assert.ok(sourceIds.has(sourceId), sourceId);
+  }
   const cases = read("../evals/stage-11-specialist-cases.json").cases;
   assert.equal(cases.length, 4);
   for (const item of cases) {

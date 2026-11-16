@@ -17,7 +17,7 @@ Produce a source-traceable, end-to-end audit of the restaurant knowledge corpus 
 - `knowledge/procedures/horeca-operational-process-catalog.json`: 77 functional directions; all currently marked `expanded_methodology_requires_owner_and_jurisdiction_validation`.
 - The 77 directions are not 77 independently validated SOPs: prior content-shape inspection found 15 distinct operation sequences, with generic sequences repeated across many directions.
 - `knowledge/procedures/operational-procedures.json`: 12 curated detailed procedures.
-- `knowledge/graph/sources.json`: six source records, all classed PRACTICE; several have unverified or historical dates and organization-specific scope.
+- `knowledge/graph/sources.json`: 12 source records, all classed PRACTICE (six newly added source records remain draft pending expert review); several have unverified or historical dates and organization-specific scope.
 - `knowledge/graph/operational-knowledge-graph.json`: 94 nodes and 128 edges at the audit baseline. Graph connectivity does not establish causation or operational validity.
 - The nine-sector taxonomy exists; restaurant is the current partial corpus and eight other sectors are planned.
 
@@ -129,3 +129,39 @@ Stage 11 may be considered for closeout only when:
 ## Current status
 
 **Stage 11.1 workplan prepared; substantive audit not yet completed.** The repository remains at the previously recorded Stage 11 status: integrated foundation, validation open.
+
+
+## Additional source intake — 17 November 2026
+
+Eight additional user-supplied files are now catalogued for the restaurant baseline:
+1. *Чек-лист проверки бухгалтера-калькулятора* — iiko stock-accounting review, 10 sections, attributed to @av.buravtsova.
+2. *Стандарт качества обслуживания гостей* (2025) — A.S. Dumrauf; 43 pages; internal/confidential; «Азиатский квартал» and «#Farш».
+3. *Система операционного управления. Управленческая эффективность* — 20-slide management training deck.
+4. *Инструкция «Товарное соседство»* — Olga Ogarkova / HACCP-AUDIT.
+5. *Чек-лист «Маркировка в общепите»* — HACCP-AUDIT.
+6. *ОР Управляющий смены.docx* — historical/local ТРАТТОРИЯ role procedure.
+7. *Организация работ бармена.doc* — historical club/bar role procedure.
+8. *Искусство сервиса в ресторане Casual Dining* — supplied file is only a cover and short outline.
+
+### New audit workstreams
+
+- **Management/leadership:** verify the five management functions, situational style, task-specific work-maturity model and GROW against current management practice; do not treat UРЗ as a validated psychometric test or permanent employee label.
+- **Shift manager:** map source-stated role, reporting line, opening checklist, briefing, in-shift controls, closing, cash/equipment handover and unspecified fields against the actual restaurant's current role matrix.
+- **Bartender:** separate portable controls (readiness, cleanliness, stock rotation, product availability, recipe accuracy, handover) from club-specific details (smoking, ashtrays, hookah, night service, historical two-minute target).
+- **Guest service:** review each stage of the 2025 internal standard, including arrival, needs discovery, menu presentation, order, service, payment, farewell and complaint escalation. Protect its confidential and named-concept scope.
+- **Food safety/marking:** map incoming product information, in-house labels, board/knife coding, cleaning inventory, waste bins, chemical containers, storage adjacency and delivery information to current official provisions and actual layout.
+- **iiko accounting:** test each of the ten checklist sections against the actual iiko version, document types, warehouse map, accounting policy and month-end process.
+
+### Source status
+
+The new consultant checklists are PRACTICE evidence, not legal records. The shift-manager and bartender procedures are historical/local practice. The management deck is a training framework. The service standard is internal/confidential. The Casual Dining book is an outline only.
+
+### Additional blockers
+
+- Confirm whether the iiko document colors, article names, report fields and 23:00/23:59 timestamps still match the live configuration.
+- Confirm current legal basis for every marking/storage claim; do not adopt the under-25-seats exception or historical fine figures from the supplied adjacency PDF without official legal verification.
+- Obtain current product-specific temperature/time rules from authoritative sources; the supplied batch does not contain a complete matrix.
+- Obtain owner/role approval for shift and bartender responsibility, delegated remedies, records and escalation.
+- Adjudicate new Stage 11 answer cases with qualified restaurant, accounting and food-safety reviewers.
+
+The consolidated ChatGPT pack is a 9-file provider export. Original source files and canonical repository documents remain unchanged.

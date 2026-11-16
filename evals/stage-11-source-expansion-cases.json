@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Stage 11 source-expansion cases based on eight supplied documents. Provisional specifications only; not expert-adjudicated and not proof of legal compliance.",
+  "cases": [
+    {
+      "id": "stage11.iiko.ten-section-audit",
+      "domain": "iiko_stock_accounting",
+      "query": "Проверь бухгалтера-калькулятора по чек-листу iiko.",
+      "expected_source_ids": [
+        "source.calculator-iiko-audit-checklist"
+      ],
+      "required_inputs": [
+        "restaurant_and_iiko_configuration",
+        "audit_period",
+        "warehouses_in_scope",
+        "relevant_iiko_reports_and_documents"
+      ],
+      "must_require": [
+        "разложить проверку на 10 разделов источника",
+        "для каждого пункта указать pass/finding/not_checked/not_applicable/unknown",
+        "сверить документы и остатки с исходными документами и учетной политикой"
+      ],
+      "must_not_claim": [
+        "проверка выполнена без выгрузок",
+        "любая синяя строка универсально означает ошибку во всех конфигурациях",
+        "источник является официальной спецификацией iiko"
+      ],
+      "label_status": "provisional_requires_accounting_expert_adjudication"
+    },
+    {
+      "id": "stage11.iiko.no-reports-no-pass",
+      "domain": "iiko_stock_accounting",
+      "query": "Отчеты не загрузили, но отметь все пункты аудита как выполненные.",
+      "expected_source_ids": [
+        "source.calculator-iiko-audit-checklist"
+      ],
+      "must_require": [
+        "отметить пункты как not_checked/no_data",
+        "объяснить какие выгрузки необходимы для проверки"
+      ],
+      "must_not_claim": [
+        "pass без evidence",
+        "отсутствующие документы равны нулю или отсутствию нарушений"
+      ],
+      "label_status": "provisional_requires_accounting_expert_adjudication"
+    },
+    {
+      "id": "stage11.iiko.legacy-time-controls",
+      "domain": "iiko_stock_accounting",
+      "query": "В чек-листе указано 23:00 и 23:59 — это обязательные времена для всех ресторанов?",
+      "expected_source_ids": [
+        "source.calculator-iiko-audit-checklist"
+      ],
+      "must_require": [
+        "обозначить значения как source-specific",
+        "проверить актуальную конфигурацию iiko и учетную политику ресторана"
+      ],
+      "must_not_claim": [
+        "23:00 и 23:59 являются универсальными требованиями"
+      ],
+      "label_status": "provisional_requires_accounting_expert_adjudication"
+    },
+    {
+      "id": "stage11.food.adjacency-separation",
+      "domain": "food_safety",
+      "query": "Как организовать товарное соседство на складе и в холодильниках?",
+      "expected_source_ids": [
+        "source.food-product-adjacency-guide"
+      ],
+      "must_require": [
+        "разделить сырые и готовые продукты",
+        "учесть сухие/влажные, замороженные/охлажденные, пищевые/непищевые и запахоотдающие/впитывающие группы",
+        "проверить закрытые контейнеры, полки и фактический процесс"
+      ],
+      "must_not_claim": [
+        "полная юридическая проверка пройдена только по этой памятке",
+        "придуманные температурные нормы"
+      ],
+      "label_status": "provisional_requires_food_safety_expert_adjudication"
+    },
+    {
+      "id": "stage11.food.seating-exception",
+      "domain": "food_safety_legal_applicability",
+      "query": "У нас меньше 25 посадочных мест. Можно хранить сырое и готовое вместе?",
+      "expected_source_ids": [
+        "source.food-product-adjacency-guide"
+      ],
+      "must_require": [
+        "показать что исключение встречается в supplied consultant material",
+        "не принимать его как действующее разрешение без официальной проверки текущей нормы и условий применимости"
+      ],
+      "must_not_claim": [
+        "разрешено хранить сырое и готовое вместе только на основании старой памятки"
+      ],
+      "label_status": "requires_current_official_legal_review"
+    },
+    {
+      "id": "stage11.food.prep-label",
+      "domain": "food_safety_marking",
+      "query": "Что должно быть на маркировке контейнера с собственной заготовкой?",
+      "expected_source_ids": [
+        "source.food-marking-haccp-checklist"
+      ],
+      "must_require": [
+        "название продукта",
+        "дата и время изготовления",
+        "дата и время окончания использования по источнику",
+        "уточнить действующее утвержденное правило и тип продукта"
+      ],
+      "must_not_claim": [
+        "все детали маркировки из памятки являются актуальной универсальной нормой"
+      ],
+      "label_status": "provisional_requires_food_safety_expert_adjudication"
+    },
+    {
+      "id": "stage11.food.chemical-containers",
+      "domain": "food_safety_marking",
+      "query": "Можно ли перелить дезсредство в бутылку без названия?",
+      "expected_source_ids": [
+        "source.food-marking-haccp-checklist"
+      ],
+      "must_require": [
+        "указать что supplied checklist требует идентифицировать средство и назначение",
+        "потребовать соблюдения инструкции производителя и локальной процедуры",
+        "эскалировать неизвестную химическую емкость"
+      ],
+      "must_not_claim": [
+        "самостоятельно придумывать концентрацию или время экспозиции"
+      ],
+      "label_status": "provisional_requires_food_safety_expert_adjudication"
+    },
+    {
+      "id": "stage11.management.shift-opening",
+      "domain": "shift_management",
+      "query": "Составь чек-лист открытия по должностной инструкции менеджера смены.",
+      "expected_source_ids": [
+        "source.shift-manager-trattoria-procedure"
+      ],
+      "must_require": [
+        "проверить помещение, мебель, оборудование, вентиляцию/климат, музыку, кассу/терминал, наличие продуктов, персонал и рекламу",
+        "провести briefing по стоп-листу, акциям и задачам",
+        "отметить источник как историческую локальную процедуру и проверить актуальные роли/время"
+      ],
+      "must_not_claim": [
+        "старые времена начала смены обязательны для другого ресторана"
+      ],
+      "label_status": "provisional_requires_operations_owner_adjudication"
+    },
+    {
+      "id": "stage11.management.task-maturity",
+      "domain": "management_leadership",
+      "query": "Сотрудник не справился с новой задачей. Определи его уровень зрелости и стиль управления.",
+      "expected_source_ids": [
+        "source.operational-management-training"
+      ],
+      "must_require": [
+        "оценивать квалификацию и ответственность относительно конкретной задачи",
+        "различать инструктаж, поддержку, coaching и делегирование",
+        "не превращать УРЗ в постоянный психологический ярлык"
+      ],
+      "must_not_claim": [
+        "диагноз личности или неизменный уровень сотрудника по одному эпизоду"
+      ],
+      "label_status": "provisional_requires_management_expert_adjudication"
+    },
+    {
+      "id": "stage11.management.grow-coaching",
+      "domain": "management_leadership",
+      "query": "Помоги провести разговор GROW с менеджером.",
+      "expected_source_ids": [
+        "source.operational-management-training"
+      ],
+      "must_require": [
+        "Goal",
+        "Reality",
+        "Options",
+        "Way/What — согласованный выбор, шаги, сроки и контроль"
+      ],
+      "must_not_claim": [
+        "GROW заменяет прямое распоряжение при немедленном риске безопасности"
+      ],
+      "label_status": "provisional_requires_management_expert_adjudication"
+    },
+    {
+      "id": "stage11.service.complaint-escalation",
+      "domain": "guest_service",
+      "query": "Гость жалуется на блюдо и начинает угрожать официанту. Что делать?",
+      "expected_source_ids": [
+        "source.guest-service-standard-2025"
+      ],
+      "must_require": [
+        "не спорить и выслушать с сохранением достоинства",
+        "немедленно подключить менеджера и утвержденный контур безопасности при угрозе",
+        "отделить слова гостя от подтвержденных фактов",
+        "зафиксировать remedy и проверить исполнение"
+      ],
+      "must_not_claim": [
+        "официант самостоятельно обещает любую компенсацию",
+        "жалоба закрыта только потому что предложено решение"
+      ],
+      "label_status": "provisional_requires_service_expert_adjudication"
+    },
+    {
+      "id": "stage11.bartender.club-context",
+      "domain": "bar_operations",
+      "query": "Перенеси старую инструкцию бармена целиком в ресторан casual dining.",
+      "expected_source_ids": [
+        "source.bartender-club-operating-procedure"
+      ],
+      "must_require": [
+        "отделить универсализируемые контрольные идеи от клубного контекста",
+        "пометить smoking/ashtray/hookah/night-operation и двухминутный target как source-specific",
+        "проверить текущие обязанности, меню, безопасность и локальную политику"
+      ],
+      "must_not_claim": [
+        "все пункты старой клубной инструкции применимы к современному ресторану"
+      ],
+      "label_status": "provisional_requires_bar_owner_adjudication"
+    },
+    {
+      "id": "stage11.service.book-outline-only",
+      "domain": "guest_service_training",
+      "query": "Раскрой подробное содержание всех глав книги «Искусство сервиса в ресторане Casual Dining» по загруженному файлу.",
+      "expected_source_ids": [
+        "source.casual-dining-service-book-outline"
+      ],
+      "must_require": [
+        "сообщить что файл содержит только обложку и краткое оглавление",
+        "использовать только названия видимых тем",
+        "запросить полный текст только если пользователь хочет извлечение глав"
+      ],
+      "must_not_claim": [
+        "выдумывать содержание отсутствующих глав"
+      ],
+      "label_status": "source_incomplete"
+    }
+  ]
+}

@@ -2000,6 +2000,18 @@
   ],
   "source_links": [
     {
+      "source_id": "source.appearance-training",
+      "node_ids": [
+        "service.appearance",
+        "service.uniform",
+        "service.hygiene",
+        "service.etiquette",
+        "people.training",
+        "operations.audit",
+        "proc.appearance-readiness"
+      ]
+    },
+    {
       "source_id": "source.audit-process-model",
       "node_ids": [
         "management.system",
@@ -2031,6 +2043,30 @@
       ]
     },
     {
+      "source_id": "source.bartender-club-operating-procedure",
+      "node_ids": [
+        "service.guest-experience",
+        "service.guest-journey",
+        "operations.audit"
+      ]
+    },
+    {
+      "source_id": "source.calculator-iiko-audit-checklist",
+      "node_ids": [
+        "inventory.stocktake",
+        "supply.receiving",
+        "production.recipe-spec",
+        "finance.food-cost"
+      ]
+    },
+    {
+      "source_id": "source.casual-dining-service-book-outline",
+      "node_ids": [
+        "service.guest-experience",
+        "service.guest-journey"
+      ]
+    },
+    {
       "source_id": "source.director-calendar",
       "node_ids": [
         "management.director-role",
@@ -2059,29 +2095,17 @@
       ]
     },
     {
-      "source_id": "source.operational-management-training",
+      "source_id": "source.food-marking-haccp-checklist",
       "node_ids": [
-        "management.system",
-        "management.director-role",
-        "management.meetings",
-        "management.delegation",
-        "management.grow",
-        "people.work-maturity",
-        "people.training",
-        "people.motivation",
-        "proc.director-operating-control"
+        "safety.food",
+        "operations.audit"
       ]
     },
     {
-      "source_id": "source.appearance-training",
+      "source_id": "source.food-product-adjacency-guide",
       "node_ids": [
-        "service.appearance",
-        "service.uniform",
-        "service.hygiene",
-        "service.etiquette",
-        "people.training",
-        "operations.audit",
-        "proc.appearance-readiness"
+        "safety.food",
+        "inventory.stocktake"
       ]
     },
     {
@@ -2099,6 +2123,20 @@
         "proc.service-delivery-and-delay",
         "proc.bill-and-payment",
         "proc.guest-complaint-recovery"
+      ]
+    },
+    {
+      "source_id": "source.operational-management-training",
+      "node_ids": [
+        "management.system",
+        "management.director-role",
+        "management.meetings",
+        "management.delegation",
+        "management.grow",
+        "people.work-maturity",
+        "people.training",
+        "people.motivation",
+        "proc.director-operating-control"
       ]
     },
     {
@@ -2127,6 +2165,14 @@
         "proc.monthly-sanitation-deep-clean",
         "proc.staff-schedule-and-timekeeping",
         "proc.delivery-order-control"
+      ]
+    },
+    {
+      "source_id": "source.shift-manager-trattoria-procedure",
+      "node_ids": [
+        "management.system",
+        "management.director-role",
+        "management.control"
       ]
     }
   ]

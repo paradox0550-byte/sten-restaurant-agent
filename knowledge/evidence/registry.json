@@ -1,66 +1,688 @@
 {
-  "registry_version":"1.0.0",
-  "package_version":"0.5.0",
-  "records":[
+  "registry_version": "1.0.0",
+  "package_version": "0.5.0",
+  "records": [
     {
-      "id":"core.no-source-no-fact",
-      "title":"Правило доказуемости: нет источника — нет факта",
-      "summary":"Управленчески значимые утверждения должны быть прослеживаемы до источника либо явно обозначены как вывод, гипотеза или неизвестное.",
-      "evidence_class":"CORE",
-      "topic":["reasoning","evidence_quality","governance"],
-      "source":{"publisher":"STEN","title":"Методологический принцип STEN","source_type":"internal_methodology","url":null,"citation":"STEN CORE principle: No source = no fact.","published_at":null,"accessed_at":"2026-11-14","source_version":"0.5.0"},
-      "territory":{"scope":"global","jurisdictions":[]},
-      "validity":{"status":"in_force","published_on":null,"effective_from":"2026-11-14","effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-11-14","supersedes":null,"superseded_by":null},
-      "applicability":{"sectors":["restaurant","cafe","bar","bakery","confectionery","hotel_food_service","catering","canteen","food_hall","food_court","fast_casual","quick_service","dark_kitchen","delivery","other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":[],"determination":"universal_within_scope"},
-      "limitations":["Методологическое правило STEN, не внешний научный или нормативный источник."],
-      "related_records":["core.missing-not-zero"],"conflicts_with":[],"record_status":"approved",
-      "review":{"reviewer_role":"methodology_owner","reviewed_at":"2026-11-14","review_notes":"Принцип подтверждён владельцем проекта."},
-      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+      "id": "core.missing-not-zero",
+      "title": "Правило неизвестного значения: отсутствие данных не равно нулю",
+      "summary": "Пустое или неизвестное значение нельзя автоматически преобразовывать в 0, false, отсутствие риска или подтверждение соответствия.",
+      "evidence_class": "CORE",
+      "topic": [
+        "data_quality",
+        "reasoning",
+        "financial_analysis"
+      ],
+      "source": {
+        "publisher": "STEN",
+        "title": "Методологический принцип STEN",
+        "source_type": "internal_methodology",
+        "url": null,
+        "citation": "STEN CORE principle: Missing != zero.",
+        "published_at": null,
+        "accessed_at": "2026-11-14",
+        "source_version": "0.5.0"
+      },
+      "territory": {
+        "scope": "global",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": null,
+        "effective_from": "2026-11-14",
+        "effective_to": null,
+        "last_verified_at": "2026-11-14",
+        "review_due_at": "2027-11-14",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "bakery",
+          "confectionery",
+          "hotel_food_service",
+          "catering",
+          "canteen",
+          "food_hall",
+          "food_court",
+          "fast_casual",
+          "quick_service",
+          "dark_kitchen",
+          "delivery",
+          "other"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "universal_within_scope"
+      },
+      "limitations": [
+        "Ноль допустим только при явном значении из источника или расчёте с подтверждёнными исходными данными."
+      ],
+      "related_records": [
+        "core.no-source-no-fact"
+      ],
+      "conflicts_with": [],
+      "record_status": "approved",
+      "review": {
+        "reviewer_role": "methodology_owner",
+        "reviewed_at": "2026-11-14",
+        "review_notes": "Принцип подтверждён владельцем проекта."
+      },
+      "created_at": "2026-11-14T00:00:00Z",
+      "updated_at": "2026-11-14T00:00:00Z"
     },
     {
-      "id":"core.missing-not-zero",
-      "title":"Правило неизвестного значения: отсутствие данных не равно нулю",
-      "summary":"Пустое или неизвестное значение нельзя автоматически преобразовывать в 0, false, отсутствие риска или подтверждение соответствия.",
-      "evidence_class":"CORE",
-      "topic":["data_quality","reasoning","financial_analysis"],
-      "source":{"publisher":"STEN","title":"Методологический принцип STEN","source_type":"internal_methodology","url":null,"citation":"STEN CORE principle: Missing != zero.","published_at":null,"accessed_at":"2026-11-14","source_version":"0.5.0"},
-      "territory":{"scope":"global","jurisdictions":[]},
-      "validity":{"status":"in_force","published_on":null,"effective_from":"2026-11-14","effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-11-14","supersedes":null,"superseded_by":null},
-      "applicability":{"sectors":["restaurant","cafe","bar","bakery","confectionery","hotel_food_service","catering","canteen","food_hall","food_court","fast_casual","quick_service","dark_kitchen","delivery","other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":[],"determination":"universal_within_scope"},
-      "limitations":["Ноль допустим только при явном значении из источника или расчёте с подтверждёнными исходными данными."],
-      "related_records":["core.no-source-no-fact"],"conflicts_with":[],"record_status":"approved",
-      "review":{"reviewer_role":"methodology_owner","reviewed_at":"2026-11-14","review_notes":"Принцип подтверждён владельцем проекта."},
-      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+      "id": "core.no-source-no-fact",
+      "title": "Правило доказуемости: нет источника — нет факта",
+      "summary": "Управленчески значимые утверждения должны быть прослеживаемы до источника либо явно обозначены как вывод, гипотеза или неизвестное.",
+      "evidence_class": "CORE",
+      "topic": [
+        "reasoning",
+        "evidence_quality",
+        "governance"
+      ],
+      "source": {
+        "publisher": "STEN",
+        "title": "Методологический принцип STEN",
+        "source_type": "internal_methodology",
+        "url": null,
+        "citation": "STEN CORE principle: No source = no fact.",
+        "published_at": null,
+        "accessed_at": "2026-11-14",
+        "source_version": "0.5.0"
+      },
+      "territory": {
+        "scope": "global",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": null,
+        "effective_from": "2026-11-14",
+        "effective_to": null,
+        "last_verified_at": "2026-11-14",
+        "review_due_at": "2027-11-14",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "bakery",
+          "confectionery",
+          "hotel_food_service",
+          "catering",
+          "canteen",
+          "food_hall",
+          "food_court",
+          "fast_casual",
+          "quick_service",
+          "dark_kitchen",
+          "delivery",
+          "other"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "universal_within_scope"
+      },
+      "limitations": [
+        "Методологическое правило STEN, не внешний научный или нормативный источник."
+      ],
+      "related_records": [
+        "core.missing-not-zero"
+      ],
+      "conflicts_with": [],
+      "record_status": "approved",
+      "review": {
+        "reviewer_role": "methodology_owner",
+        "reviewed_at": "2026-11-14",
+        "review_notes": "Принцип подтверждён владельцем проекта."
+      },
+      "created_at": "2026-11-14T00:00:00Z",
+      "updated_at": "2026-11-14T00:00:00Z"
     },
     {
-      "id":"practice.daily-operational-walk",
-      "title":"Ежедневный операционный обход как практика контроля",
-      "summary":"Регулярный обход зон ресторана может применяться для выявления отклонений в готовности, чистоте, оборудовании, продукте и сервисе. Частота и чек-лист устанавливаются профилем объекта.",
-      "evidence_class":"PRACTICE",
-      "topic":["operations","audit","readiness","quality"],
-      "source":{"publisher":"Обезличенный корпоративный регламент ресторана, предоставленный владельцем проекта","title":"Руководящие документы для ресторанов, редакция на 01.09.2025","source_type":"internal_methodology","url":null,"citation":"Разделы ежедневного визуального обхода, печатные страницы 8–9 исходного материала.","published_at":"2025-09-01","accessed_at":"2026-11-14","source_version":"2025-09-01"},
-      "territory":{"scope":"organization","jurisdictions":[]},
-      "validity":{"status":"historical","published_on":"2025-09-01","effective_from":null,"effective_to":null,"last_verified_at":"2026-11-14","review_due_at":"2027-05-14","supersedes":null,"superseded_by":null},
-      "applicability":{"sectors":["restaurant"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":["service_model","operating_zones"],"determination":"conditional"},
-      "limitations":["Корпоративный регламент одного оператора; не закон и не универсальный отраслевой стандарт.","Частота обходов и параметры не переносятся автоматически на другие предприятия.","Содержание обобщено, корпоративные процедуры дословно не воспроизводятся."],
-      "related_records":[],"conflicts_with":[],"record_status":"reviewed",
-      "review":{"reviewer_role":"knowledge_curator","reviewed_at":"2026-11-14","review_notes":"Обезличено; классифицировано как ограниченная практика."},
-      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+      "id": "law.placeholder-intake-template",
+      "title": "Шаблон нормативной записи — не является нормативным требованием",
+      "summary": "Служебная структура записи. Не содержит утверждения о действующей норме и не используется для вывода о соблюдении законодательства.",
+      "evidence_class": "LAW",
+      "topic": [
+        "legal_registry",
+        "template"
+      ],
+      "source": {
+        "publisher": "STEN",
+        "title": "Шаблон приёма нормативных источников",
+        "source_type": "other",
+        "url": null,
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-14",
+        "source_version": "template"
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "other"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "date_of_assessment",
+          "establishment_profile"
+        ],
+        "determination": "unknown"
+      },
+      "limitations": [
+        "Технический шаблон, не содержание закона.",
+        "До замены конкретным актом и официальным источником остаётся unknown и не используется как требование."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Ожидает реальной нормативной записи из официального источника."
+      },
+      "created_at": "2026-11-14T00:00:00Z",
+      "updated_at": "2026-11-14T00:00:00Z"
     },
     {
-      "id":"law.placeholder-intake-template",
-      "title":"Шаблон нормативной записи — не является нормативным требованием",
-      "summary":"Служебная структура записи. Не содержит утверждения о действующей норме и не используется для вывода о соблюдении законодательства.",
-      "evidence_class":"LAW",
-      "topic":["legal_registry","template"],
-      "source":{"publisher":"STEN","title":"Шаблон приёма нормативных источников","source_type":"other","url":null,"citation":null,"published_at":null,"accessed_at":"2026-11-14","source_version":"template"},
-      "territory":{"scope":"unknown","jurisdictions":[]},
-      "validity":{"status":"unknown","published_on":null,"effective_from":null,"effective_to":null,"last_verified_at":null,"review_due_at":null,"supersedes":null,"superseded_by":null},
-      "applicability":{"sectors":["other"],"formats":["other"],"establishment_conditions":[],"required_profile_fields":["jurisdiction","date_of_assessment","establishment_profile"],"determination":"unknown"},
-      "limitations":["Технический шаблон, не содержание закона.","До замены конкретным актом и официальным источником остаётся unknown и не используется как требование."],
-      "related_records":[],"conflicts_with":[],"record_status":"draft",
-      "review":{"reviewer_role":null,"reviewed_at":null,"review_notes":"Ожидает реальной нормативной записи из официального источника."},
-      "created_at":"2026-11-14T00:00:00Z","updated_at":"2026-11-14T00:00:00Z"
+      "id": "practice.bartender-club-operating-procedure",
+      "title": "Организация работ бармена",
+      "summary": "DOC; 6 pages; duties, bar preparation, stock/display, guest service, closing, qualification and control sheets",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "bar",
+        "roles",
+        "shift_operations"
+      ],
+      "source": {
+        "publisher": "Supplied club/bar procedure",
+        "title": "Организация работ бармена",
+        "source_type": "other",
+        "url": null,
+        "citation": "DOC; 6 pages; duties, bar preparation, stock/display, guest service, closing, qualification and control sheets",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "historical",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Legacy club/bar context; smoking, ashtrays, hookah, alcohol display and night-operation details are not automatically relevant to a restaurant.",
+        "Two-minute service target and display rules are source-specific, not universal SLAs.",
+        "Alcohol, cash, hygiene and workplace provisions require current local legal/policy review.",
+        "Role authority and inventory responsibility must be confirmed for the actual establishment."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
+    },
+    {
+      "id": "practice.calculator-iiko-audit-checklist",
+      "title": "Чек-лист проверки бухгалтера-калькулятора",
+      "summary": "PDF; 13 pages; 10 audit sections: nomenclature, incoming/outgoing invoices, write-offs, processing, preparation/disassembly/transfers/returns, realization, stock balance, monthly inventory, period lock",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "accounting",
+        "iiko",
+        "inventory",
+        "audit"
+      ],
+      "source": {
+        "publisher": "@av.buravtsova / Anastasia Buravtsova",
+        "title": "Чек-лист проверки бухгалтера-калькулятора",
+        "source_type": "other",
+        "url": null,
+        "citation": "PDF; 13 pages; 10 audit sections: nomenclature, incoming/outgoing invoices, write-offs, processing, preparation/disassembly/transfers/returns, realization, stock balance, monthly inventory, period lock",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Checklist is attributed to @av.buravtsova / Anastasia Buravtsova; it is not an official iiko specification or statutory accounting standard.",
+        "Document colors, articles, report fields and timestamps depend on the current iiko version and restaurant configuration.",
+        "23:00 and 23:59 timestamps are source-specific examples and must not be generalized.",
+        "Shipment amount > cost and manual-document exclusions require the current accounting policy and document semantics to be checked."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
+    },
+    {
+      "id": "practice.casual-dining-service-book-outline",
+      "title": "Искусство сервиса в ресторане Casual Dining — supplied outline",
+      "summary": "PDF; 2 pages; cover and brief table of contents only",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "service",
+        "training",
+        "casual_dining"
+      ],
+      "source": {
+        "publisher": "Unknown in supplied copy",
+        "title": "Искусство сервиса в ресторане Casual Dining — supplied outline",
+        "source_type": "book",
+        "url": null,
+        "citation": "PDF; 2 pages; cover and brief table of contents only",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "The supplied copy contains no full chapters or detailed methods.",
+        "Use only the visible title and outline topics; do not infer or invent chapter content.",
+        "No author or publication date is established in the supplied pages."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
+    },
+    {
+      "id": "practice.daily-operational-walk",
+      "title": "Ежедневный операционный обход как практика контроля",
+      "summary": "Регулярный обход зон ресторана может применяться для выявления отклонений в готовности, чистоте, оборудовании, продукте и сервисе. Частота и чек-лист устанавливаются профилем объекта.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "operations",
+        "audit",
+        "readiness",
+        "quality"
+      ],
+      "source": {
+        "publisher": "Обезличенный корпоративный регламент ресторана, предоставленный владельцем проекта",
+        "title": "Руководящие документы для ресторанов, редакция на 01.09.2025",
+        "source_type": "internal_methodology",
+        "url": null,
+        "citation": "Разделы ежедневного визуального обхода, печатные страницы 8–9 исходного материала.",
+        "published_at": "2025-09-01",
+        "accessed_at": "2026-11-14",
+        "source_version": "2025-09-01"
+      },
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "historical",
+        "published_on": "2025-09-01",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-14",
+        "review_due_at": "2027-05-14",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "service_model",
+          "operating_zones"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Корпоративный регламент одного оператора; не закон и не универсальный отраслевой стандарт.",
+        "Частота обходов и параметры не переносятся автоматически на другие предприятия.",
+        "Содержание обобщено, корпоративные процедуры дословно не воспроизводятся."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "reviewed",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-14",
+        "review_notes": "Обезличено; классифицировано как ограниченная практика."
+      },
+      "created_at": "2026-11-14T00:00:00Z",
+      "updated_at": "2026-11-14T00:00:00Z"
+    },
+    {
+      "id": "practice.food-marking-haccp-checklist",
+      "title": "Чек-лист «Маркировка в общепите»",
+      "summary": "PDF; 6 pages; incoming product information, in-house preparation labels, boards/knives, processing containers, cleaning inventory, waste bins, decanted chemicals and delivery containers",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "haccp",
+        "marking",
+        "storage"
+      ],
+      "source": {
+        "publisher": "HACCP-AUDIT / Olga Ogarkova",
+        "title": "Чек-лист «Маркировка в общепите»",
+        "source_type": "other",
+        "url": null,
+        "citation": "PDF; 6 pages; incoming product information, in-house preparation labels, boards/knives, processing containers, cleaning inventory, waste bins, decanted chemicals and delivery containers",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; checklist is not an official legal register.",
+        "Required label fields vary by product and applicable technical regulation; verify current provisions.",
+        "Board/knife codes and container arrangements are examples requiring site-specific validation.",
+        "Does not supply a complete HACCP programme, chemical dilution matrix or temperature/time schedule."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
+    },
+    {
+      "id": "practice.food-product-adjacency-guide",
+      "title": "Инструкция «Товарное соседство»",
+      "summary": "PDF; 2 pages; separate storage groups, incompatible product combinations, shared cold storage and claimed seating-capacity exception",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "haccp",
+        "marking",
+        "storage"
+      ],
+      "source": {
+        "publisher": "HACCP-AUDIT / Olga Ogarkova",
+        "title": "Инструкция «Товарное соседство»",
+        "source_type": "other",
+        "url": null,
+        "citation": "PDF; 2 pages; separate storage groups, incompatible product combinations, shared cold storage and claimed seating-capacity exception",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; educational source, not a current official legal act.",
+        "The claimed exception for establishments under 25 seats must not be treated as current legal permission without official verification.",
+        "Fine amounts and Article 6.6 references in the source are not validated as current.",
+        "No complete product-specific temperature/time matrix is supplied."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
+    },
+    {
+      "id": "practice.shift-manager-trattoria-procedure",
+      "title": "ОР Управляющий смены",
+      "summary": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "operations",
+        "shift_management",
+        "roles"
+      ],
+      "source": {
+        "publisher": "Internal restaurant document — ТРАТТОРИЯ",
+        "title": "ОР Управляющий смены",
+        "source_type": "other",
+        "url": null,
+        "citation": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+        "published_at": null,
+        "accessed_at": "2026-11-17",
+        "source_version": "uploaded_2026-11-16"
+      },
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "historical",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "establishment_format",
+          "current_policy_version"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Restaurant-specific procedure for ТРАТТОРИЯ; not a universal manager job description.",
+        "Opening hours, start times, role authority, staff structure and cash controls require current local confirmation.",
+        "The document contains numbering/typographical inconsistencies; preserve intent but verify exact policy before adoption.",
+        "Does not establish current employment-law requirements."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-17",
+        "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
+      },
+      "created_at": "2026-11-17T00:00:00Z",
+      "updated_at": "2026-11-17T00:00:00Z"
     }
   ]
 }

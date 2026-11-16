@@ -1,15 +1,29 @@
-version: 1
+version: 2
 package: STEN
-knowledge:
+provider: chatgpt_project
+attachment_limit_target: 25
+knowledge_pack:
+  directory: knowledge-pack/
+  files:
+    - knowledge-pack/01-core-rules-and-evidence.md
+    - knowledge-pack/02-restaurant-management-and-shift.md
+    - knowledge-pack/03-guest-service-and-recovery.md
+    - knowledge-pack/04-food-safety-haccp-marking.md
+    - knowledge-pack/05-iiko-stock-and-calculator-audit.md
+    - knowledge-pack/06-menu-engineering-and-kitchen-workforce.md
+    - knowledge-pack/07-finance-payroll-and-labor.md
+    - knowledge-pack/08-operational-audit-and-checklists.md
+    - knowledge-pack/09-stage-11-scope-and-validation.md
+  readme: knowledge-pack/README.md
+project_instructions: project-instructions-ru.md
+evidence_registry: ../../knowledge/evidence/registry.json
+canonical_sources:
   - ../../knowledge/finance/
   - ../../knowledge/restaurant-operations/
   - ../../knowledge/menu-engineering/
   - ../../knowledge/hr-payroll/
   - ../../knowledge/service-standards/
   - ../../knowledge/management/
-  - ../../skills/labor-analysis/SKILL.md
-  - ../../skills/menu-analysis/SKILL.md
-  - ../../docs/stage-11-kitchen-workforce-planning.md
-  - ../../docs/stage-11-menu-engineering.md
-evidence_registry: ../../knowledge/evidence/registry.json
-note: Attach files individually where the provider does not support directory uploads.
+  - ../../skills/
+  - ../../docs/
+note: Upload the 9 curated knowledge-pack Markdown files to ChatGPT Project knowledge. Keep Project instructions in the separate instruction field. Canonical repository files remain separate for maintenance; this pack is a compact provider export, not a replacement for the evidence registry or code.

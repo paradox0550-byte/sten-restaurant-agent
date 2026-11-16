@@ -89,6 +89,95 @@
         "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
         "Legacy system instructions are not portable implementation guidance."
       ]
+    },
+    {
+      "id": "source.calculator-iiko-audit-checklist",
+      "title": "Чек-лист проверки бухгалтера-калькулятора",
+      "source_type": "consultant_stock_accounting_checklist",
+      "evidence_class": "PRACTICE",
+      "scope": "iiko_stock_accounting_practice",
+      "date_status": "not stated in supplied PDF; current applicability not verified",
+      "locator": "PDF; 13 pages; 10 audit sections: nomenclature, incoming/outgoing invoices, write-offs, processing, preparation/disassembly/transfers/returns, realization, stock balance, monthly inventory, period lock",
+      "limitations": [
+        "Checklist is attributed to @av.buravtsova / Anastasia Buravtsova; it is not an official iiko specification or statutory accounting standard.",
+        "Document colors, articles, report fields and timestamps depend on the current iiko version and restaurant configuration.",
+        "23:00 and 23:59 timestamps are source-specific examples and must not be generalized.",
+        "Shipment amount > cost and manual-document exclusions require the current accounting policy and document semantics to be checked."
+      ]
+    },
+    {
+      "id": "source.food-product-adjacency-guide",
+      "title": "Инструкция «Товарное соседство»",
+      "source_type": "consultant_food_safety_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "general_food_service_training_material",
+      "date_status": "not stated in supplied PDF; current legal applicability not verified",
+      "locator": "PDF; 2 pages; separate storage groups, incompatible product combinations, shared cold storage and claimed seating-capacity exception",
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; educational source, not a current official legal act.",
+        "The claimed exception for establishments under 25 seats must not be treated as current legal permission without official verification.",
+        "Fine amounts and Article 6.6 references in the source are not validated as current.",
+        "No complete product-specific temperature/time matrix is supplied."
+      ]
+    },
+    {
+      "id": "source.food-marking-haccp-checklist",
+      "title": "Чек-лист «Маркировка в общепите»",
+      "source_type": "consultant_food_safety_checklist",
+      "evidence_class": "PRACTICE",
+      "scope": "general_food_service_training_material",
+      "date_status": "not stated in supplied PDF; current legal applicability not verified",
+      "locator": "PDF; 6 pages; incoming product information, in-house preparation labels, boards/knives, processing containers, cleaning inventory, waste bins, decanted chemicals and delivery containers",
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; checklist is not an official legal register.",
+        "Required label fields vary by product and applicable technical regulation; verify current provisions.",
+        "Board/knife codes and container arrangements are examples requiring site-specific validation.",
+        "Does not supply a complete HACCP programme, chemical dilution matrix or temperature/time schedule."
+      ]
+    },
+    {
+      "id": "source.shift-manager-trattoria-procedure",
+      "title": "ОР Управляющий смены",
+      "source_type": "internal_shift_role_procedure",
+      "evidence_class": "PRACTICE",
+      "scope": "specific_restaurant_trattoria",
+      "date_status": "date not stated; historical/local applicability not confirmed",
+      "locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+      "limitations": [
+        "Restaurant-specific procedure for ТРАТТОРИЯ; not a universal manager job description.",
+        "Opening hours, start times, role authority, staff structure and cash controls require current local confirmation.",
+        "The document contains numbering/typographical inconsistencies; preserve intent but verify exact policy before adoption.",
+        "Does not establish current employment-law requirements."
+      ]
+    },
+    {
+      "id": "source.bartender-club-operating-procedure",
+      "title": "Организация работ бармена",
+      "source_type": "internal_bartender_role_procedure",
+      "evidence_class": "PRACTICE",
+      "scope": "historical_club_bar_operating_model",
+      "date_status": "date not stated; historical/local applicability not confirmed",
+      "locator": "DOC; 6 pages; duties, bar preparation, stock/display, guest service, closing, qualification and control sheets",
+      "limitations": [
+        "Legacy club/bar context; smoking, ashtrays, hookah, alcohol display and night-operation details are not automatically relevant to a restaurant.",
+        "Two-minute service target and display rules are source-specific, not universal SLAs.",
+        "Alcohol, cash, hygiene and workplace provisions require current local legal/policy review.",
+        "Role authority and inventory responsibility must be confirmed for the actual establishment."
+      ]
+    },
+    {
+      "id": "source.casual-dining-service-book-outline",
+      "title": "Искусство сервиса в ресторане Casual Dining — supplied outline",
+      "source_type": "book_outline",
+      "evidence_class": "PRACTICE",
+      "scope": "casual_dining_training_outline",
+      "date_status": "not stated",
+      "locator": "PDF; 2 pages; cover and brief table of contents only",
+      "limitations": [
+        "The supplied copy contains no full chapters or detailed methods.",
+        "Use only the visible title and outline topics; do not infer or invent chapter content.",
+        "No author or publication date is established in the supplied pages."
+      ]
     }
   ]
 }

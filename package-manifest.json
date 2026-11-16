@@ -94,7 +94,11 @@
     "provider_neutral_business_writing_briefs",
     "source_linked_draft_quality_review",
     "structured_manager_task_drafts",
-    "email_sender_compliance_preflight"
+    "email_sender_compliance_preflight",
+    "chatgpt_project_knowledge_consolidation_under_25_attachments",
+    "stage_11_management_service_food_safety_and_iiko_source_expansion",
+    "stage_11_source_expansion_evaluation_cases",
+    "source_linked_management_service_food_safety_and_iiko_knowledge"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -128,7 +132,9 @@
     "guaranteed_spam_filter_bypass",
     "automatic_email_delivery",
     "persistent_style_learning",
-    "external_task_assignment"
+    "external_task_assignment",
+    "current_sanitary_legal_compliance_certification",
+    "live_iiko_audit_or_document_mutation"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -170,6 +176,7 @@
     "evals/horeca-multihop-cases.json",
     "evals/knowledge-evidence-cases.md",
     "evals/retrieval-quality-cases.json",
+    "evals/stage-11-source-expansion-cases.json",
     "evals/stage-11-specialist-cases.json",
     "evals/stage-13-blind-holdout.json",
     "evals/stage-13-golden-cases.json",
@@ -211,6 +218,16 @@
     "providers/chatgpt/actions.openapi.yaml",
     "providers/chatgpt/instructions.md",
     "providers/chatgpt/knowledge-manifest.yaml",
+    "providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md",
+    "providers/chatgpt/knowledge-pack/02-restaurant-management-and-shift.md",
+    "providers/chatgpt/knowledge-pack/03-guest-service-and-recovery.md",
+    "providers/chatgpt/knowledge-pack/04-food-safety-haccp-marking.md",
+    "providers/chatgpt/knowledge-pack/05-iiko-stock-and-calculator-audit.md",
+    "providers/chatgpt/knowledge-pack/06-menu-engineering-and-kitchen-workforce.md",
+    "providers/chatgpt/knowledge-pack/07-finance-payroll-and-labor.md",
+    "providers/chatgpt/knowledge-pack/08-operational-audit-and-checklists.md",
+    "providers/chatgpt/knowledge-pack/09-stage-11-scope-and-validation.md",
+    "providers/chatgpt/knowledge-pack/README.md",
     "providers/chatgpt/project-instructions-ru.md",
     "providers/claude/mcp-config.json",
     "providers/claude/project-instructions.md",
