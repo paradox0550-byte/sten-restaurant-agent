@@ -78,6 +78,11 @@ npm run package:source
 
 The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two STEN CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
 
+
+## Business Writing — management communication
+
+The provider-neutral `src/writing/` module prepares source-linked briefs for memos, email replies, meeting minutes, weekly plans, manager tasks, team messages, guest responses and supplier letters. It builds natural-style generation instructions, checks draft claim references/placeholders/editorial boilerplate, and creates task drafts with explicit owner/deadline/result fields. Email sender preflight checks authentication and bulk-mail hygiene signals; it does not guarantee inbox placement. Actual text generation remains the responsibility of the host model, and human approval remains required. No email is sent and no external task is assigned. See [Business Writing](docs/business-writing.md).
+
 ## Important boundaries
 
 This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store, production API or XLSX parser. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
