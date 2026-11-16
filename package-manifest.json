@@ -87,7 +87,10 @@
     "kitchen_section_interval_workload_staffing_calculator",
     "kitchen_station_time_standard_methodology",
     "autonomous_menu_engineering_workflow",
-    "stage_11_specialist_menu_and_kitchen_evaluation_cases"
+    "stage_11_specialist_menu_and_kitchen_evaluation_cases",
+    "continuous_restaurant_memory_capture",
+    "provenance_and_temporal_memory_records",
+    "conservative_silent_capture_and_conflict_review"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -130,6 +133,7 @@
     "docs/TEST_PLAN_RU.md",
     "docs/USER_GUIDE_RU.md",
     "docs/architecture.md",
+    "docs/continuous-restaurant-memory.md",
     "docs/contributing-evidence.md",
     "docs/horeca-applicability-profile.md",
     "docs/hybrid-retrieval.md",
@@ -234,6 +238,7 @@
     "src/runtime/audit.js",
     "src/runtime/errors.js",
     "src/runtime/index.js",
+    "src/runtime/knowledge-capture.js",
     "src/runtime/provider-registry.js",
     "src/runtime/runtime.js",
     "src/runtime/tenant-memory.js",
@@ -249,6 +254,7 @@
     "tests/finance.test.js",
     "tests/horeca-taxonomy.test.js",
     "tests/intelligence-engine.test.js",
+    "tests/knowledge-capture.test.js",
     "tests/knowledge-graph.test.js",
     "tests/knowledge-quality.test.js",
     "tests/labor-menu-service.test.js",
@@ -270,9 +276,9 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 99,
+    "total_expected": 106,
     "command": "npm test",
-    "runtime_layer": 8,
+    "runtime_layer": 15,
     "retrieval_layer": 16,
     "workflow_layer": 6,
     "horeca_taxonomy": 4,

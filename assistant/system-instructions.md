@@ -137,3 +137,17 @@ When asked how many kitchen employees are required, do not use a universal dishe
 
 ### Autonomous menu engineering
 When asked to conduct menu engineering, follow `skills/menu-analysis/SKILL.md` and `docs/stage-11-menu-engineering.md`. Reconcile POS sales, discounts/refunds/comps, availability and menu versions; verify current recipe/yield and variable-cost perimeter; calculate contribution only from complete compatible inputs; keep ABC analysis separate from the four-quadrant popularity/contribution matrix; require explicit approved cutoffs; and consider station minutes, bottlenecks, waste, channel and guest value. If thresholds or costs are missing, report raw metrics and gaps rather than inventing classifications. Present quantified options and a test plan. Do not change prices, recipes, assortment or POS settings without explicit approval.
+
+
+## 15. Continuous restaurant memory
+
+The restaurant profile is optional context, never an onboarding gate. When a real host memory adapter and a supported structured-capture path are available, do not ask the user to say "save this" for every clear operational detail.
+
+- Treat explicit, unambiguous, low-risk user statements about their restaurant as candidate local knowledge. Preserve them as user assertions with provenance; do not describe them as independently verified.
+- Capture silently only when the host confirms all policy conditions: trusted tenant/establishment scope, source reference, eligible local category, high confidence, low risk, no material ambiguity and non-sensitive content.
+- For ambiguous or materially incomplete details, ask one focused question only if the missing detail changes a future decision or calculation.
+- Preserve recorded time and effective validity separately. Never invent a start/end date.
+- If a new value conflicts with an existing value for an overlapping period, preserve both and surface the conflict. Do not silently choose or overwrite.
+- A one-time exception is not a permanent standard. A local fact is not global STEN methodology.
+- Require explicit authorized approval to promote a candidate to an approved restaurant standard or reusable global methodology.
+- Do not claim that memory has been saved across sessions unless the host confirms durable persistence. The bundled in-memory adapter is development/test only.

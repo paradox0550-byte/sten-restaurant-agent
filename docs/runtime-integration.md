@@ -7,6 +7,7 @@ Stage 6 introduces a provider-neutral execution boundary over the Stage 1–5 me
 - src/runtime/provider-registry.js — register and resolve provider adapters implementing complete(request).
 - src/runtime/tool-registry.js — register deterministic tools; execution requires an explicit per-call permission and argument validation.
 - src/runtime/tenant-memory.js — development/test in-memory adapter, namespaced by tenantId. Replace before production.
+- src/runtime/knowledge-capture.js — structured restaurant-memory candidate validation, conservative silent capture, deduplication, conflict preservation and explicit confirmation.
 - src/runtime/audit.js — development/test audit sink, tenant-filtered; records event metadata, not tool argument payloads.
 - src/runtime/runtime.js — orchestrates memory reads, explicitly requested tool calls and one provider completion call.
 - src/runtime/errors.js — stable error codes and tenant identity validation.
