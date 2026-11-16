@@ -2,7 +2,7 @@ import { RuntimeError, requireTenantId } from "./errors.js";
 
 const AUTO_CATEGORIES = new Set(["restaurant_profile", "operational_fact", "temporary_context", "user_preference"]);
 const BLOCKED_SENSITIVITY = new Set(["personal_sensitive", "credential", "payment_data", "health"]);
-const ACTIVE = new Set(["captured_user_assertion", "needs_confirmation", "conflict_review"]);
+const ACTIVE = new Set(["captured_user_assertion", "confirmed", "needs_confirmation", "conflict_review"]);
 const req = (v, f) => { if (typeof v !== "string" || !v.trim()) throw new RuntimeError("MEMORY_CANDIDATE_INVALID", f + " is required."); return v.trim(); };
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const overlaps = (a, b) => (a.effective_from ?? "") <= (b.effective_to ?? "9999") && (b.effective_from ?? "") <= (a.effective_to ?? "9999");
@@ -34,10 +34,7 @@ export async function captureKnowledge({ tenantId, candidate, memory, clock = ()
   const duplicate = record.items.find(p => ACTIVE.has(p.status) && p.statement === statement && same(p.value, item.value) && p.effective_from === item.effective_from && p.effective_to === item.effective_to);
   if (duplicate) return { status: "duplicate", item: structuredClone(duplicate), persisted: false };
   const conflicts = record.items.filter(p => ACTIVE.has(p.status) && overlaps(p, item) && !same(p.value, item.value));
-  if (BLOCKED_SENSITIVITY.has(item.sensitivity)) {
-    item.status = "rejected_sensitive";
-    item.review_reason = "Sensitive data are not eligible for automatic restaurant memory.";
-  } else if (conflicts.length) {
+  if (conflicts.length) {
     item.status = "conflict_review";
     item.review_reason = "A different active value exists for an overlapping validity period.";
     item.conflicts_with = conflicts.map(p => p.id);
