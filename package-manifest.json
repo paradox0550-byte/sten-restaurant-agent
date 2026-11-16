@@ -96,7 +96,9 @@
     "structured_manager_task_drafts",
     "email_sender_compliance_preflight",
     "chatgpt_project_knowledge_consolidation_under_25_attachments",
-    "stage_11_management_service_food_safety_and_iiko_source_expansion"
+    "stage_11_management_service_food_safety_and_iiko_source_expansion",
+    "stage_11_source_expansion_evaluation_cases",
+    "source_linked_management_service_food_safety_and_iiko_knowledge"
   ],
   "not_claimed": [
     "live_legal_database",
