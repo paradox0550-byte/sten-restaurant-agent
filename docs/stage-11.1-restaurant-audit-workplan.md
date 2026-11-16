@@ -17,7 +17,7 @@ Produce a source-traceable, end-to-end audit of the restaurant knowledge corpus 
 - `knowledge/procedures/horeca-operational-process-catalog.json`: 77 functional directions; all currently marked `expanded_methodology_requires_owner_and_jurisdiction_validation`.
 - The 77 directions are not 77 independently validated SOPs: prior content-shape inspection found 15 distinct operation sequences, with generic sequences repeated across many directions.
 - `knowledge/procedures/operational-procedures.json`: 12 curated detailed procedures.
-- `knowledge/graph/sources.json`: six source records, all classed PRACTICE; several have unverified or historical dates and organization-specific scope.
+- `knowledge/graph/sources.json`: 12 source records, all classed PRACTICE (six newly added source records remain draft pending expert review); several have unverified or historical dates and organization-specific scope.
 - `knowledge/graph/operational-knowledge-graph.json`: 94 nodes and 128 edges at the audit baseline. Graph connectivity does not establish causation or operational validity.
 - The nine-sector taxonomy exists; restaurant is the current partial corpus and eight other sectors are planned.
 
