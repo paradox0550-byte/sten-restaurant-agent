@@ -135,7 +135,7 @@ This review is not a penetration test or security certification.
 
 **Stage 14 engineering/test-candidate preparation is verified; public release remains intentionally unpublished.** The latest branch-head CI run [43765995720](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43765995720) passed on commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`: 99/99 tests, Evidence Registry validation, manifest integrity, secret-pattern scan and source archive generation. The current manifest contains 147 tracked files and 147 declared paths. CI uploaded candidate artifact `sten-source-7d09d2ecd867112bdb5a0261b2d5aa0052bdb1a9`; it expires 15 December 2026. Artifact SHA-256: `91aa5f65deee52b1a3629f778d6629f12e1644a57cfb5657c9c6b00a90b3e11d`.
 
-The archive is a source package, not a one-click desktop installer. ChatGPT Project installation uses the Russian provider instructions and selected knowledge files; the JavaScript modules are not automatically executed inside a ChatGPT Project. Provider adapters remain templates; there is no live POS connector, hosted memory, production API or production authentication. Stage 11 substantive expert validation remains open. Public redistribution rights for practice-derived methodology and final public release approval remain owner decisions. No tag or GitHub Release has been published. The PR remains draft and unmerged; `main` has not been changed.
+The archive is a source package, not a one-click desktop installer. ChatGPT Project installation uses the Russian provider instructions and selected knowledge files; the JavaScript modules are not automatically executed inside a ChatGPT Project. Provider adapters remain templates; there is no live POS connector, hosted memory, production API or production authentication. Stage 11 substantive expert validation remains open. Public redistribution rights for practice-derived methodology and final public release approval remain owner decisions. No tag or GitHub Release has been published.
 
 
 ### Retrieval experiment disposition (14.5)
@@ -148,3 +148,30 @@ The archive is a source package, not a one-click desktop installer. ChatGPT Proj
 - A focused regression test verifies that a delivery-specific peak-load query retrieves `delivery.order` in the top three, while a payroll-specific query continues to retrieve `people.payroll`.
 - The holdout diagnostic improved in the tested field-aware experiment, but its labels remain provisional and cannot override the golden-case regression or be treated as expert-validated evidence.
 - The rejected field-aware scorer is not shipped. The provisional holdout remains diagnostic only and is not used as expert-validated evidence.
+
+
+## Status correction — 16 November 2026 (after continuous-memory integration)
+
+The previous status paragraph incorrectly stated that the release-preparation PR was still draft/unmerged and that `main` had not changed. That statement is historical and superseded.
+
+- Current `main` commit: `2de700906c6a13ed2fe8b7c52c8a9a4bfcfa51d1`.
+- PR #4 (initial integration) was merged before this update.
+- PR #5, `feat: continuous restaurant memory and knowledge capture`, was merged into `main`.
+- Main-branch CI run [43829566228](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43829566228) completed successfully on the current commit.
+- Verified in that run: 106/106 tests passed; Evidence Registry validation, package/manifest integrity, high-confidence secret scan, source archive build and artifact upload all passed.
+- The package manifest and validator report 150 tracked package files and 150 manifest paths.
+- Stage 6 now includes a structured knowledge-capture boundary. It supports conservative capture of structured candidates, provenance and effective-date metadata, deduplication, conflict preservation and explicit confirmation. The adapter remains in-memory development/test infrastructure; durable cross-session memory and extraction from raw chat are not implemented.
+- Stage 11 substantive HoReCa expert validation remains open. Stage 13 retrieval/evaluation engineering does not certify answer-level expert quality.
+- Production authentication/authorization, persistent audit storage, durable memory, live provider/POS integrations, legal validation, redistribution-rights confirmation and owner release approval remain open.
+
+### Review of proposed audit database and authentication snippets
+
+The proposed `migrations/001_create_audit_trail.sql` and `src/runtime/auth-middleware.ts` were reviewed but are not included in this package update.
+
+Reasons:
+- The repository does not define or provision a production PostgreSQL service or migration runner. Adding a database-specific migration would imply a storage decision and deployment path that have not been approved or implemented.
+- The supplied middleware excerpt is incomplete (the `sessionId` expression is cut off) and trusts identity/permission headers unless a separately verified host boundary strips and replaces them. Directly accepting client-supplied `x-tenant-id`, `x-user-id` or `x-permissions` would create a tenant-spoofing and privilege-escalation risk.
+- The current runtime contract already requires the host to supply trusted tenant identity and permissions. A production adapter must authenticate the host/session, derive authorization server-side, and test cross-tenant denial before it can be described as production-ready.
+- The existing in-memory audit sink is explicitly development/test only. A durable audit design still needs a chosen database, append-only/write-restricted policy, retention and deletion rules, access controls, privacy review, and verified migration/backup procedures.
+
+These items remain explicit production-readiness work, not silently accepted as implemented capabilities.
