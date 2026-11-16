@@ -138,7 +138,13 @@
   ],
   "files": [
     ".github/workflows/ci.yml",
+    "DISCLAIMER.md",
+    "LEGAL_DEPLOYMENT_CHECKLIST.md",
+    "LICENSE",
+    "PRIVACY_NOTICE.md",
     "README.md",
+    "README_LEGAL_NOTICE.md",
+    "TERMS_OF_USE.md",
     "assistant/behavior-policy.md",
     "assistant/conversation-starters.md",
     "assistant/identity.md",
