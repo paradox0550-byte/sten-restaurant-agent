@@ -114,3 +114,8 @@ Stage 14 engineering integration is substantially complete. The latest verified 
 The package remains a **working core**, not a published release. ChatGPT and Claude adapters are templates; the ChatGPT API host is a placeholder with no actions, and Claude MCP configuration is empty. Memory and audit are in-memory development/test adapters. No live provider connection, production API, persistent vector database, hosted memory or production authentication is included.
 
 Release preparation now includes a high-confidence secret-pattern scan, a manifest-verified source-archive generator and a CI artifact for review. A Russian pilot test plan is included so the owner can start user acceptance testing in a ChatGPT Project. These checks do not replace manual review of private operational/personal data or Git history. The final artifact must be generated from the approved release commit. GitHub Release publication still requires explicit owner approval. Stage 11 substantive knowledge validation remains open. See [Stage 14 release audit](docs/stage-14-final-integration-release.md).
+
+
+## ChatGPT Project knowledge pack
+
+A curated 9-file Markdown pack is maintained in `providers/chatgpt/knowledge-pack/` to fit a 25-file project attachment ceiling with room for the separate project instructions and future additions. See its README for the exact upload order. The source repository retains its full canonical files, code, tests and evidence registry; the pack is a compact provider export, not a replacement.
