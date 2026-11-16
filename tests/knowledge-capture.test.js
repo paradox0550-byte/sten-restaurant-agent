@@ -56,4 +56,7 @@ test("confirmation preserves original provenance and capture time", async () => 
 test("sensitive data are rejected from automatic memory", async () => {
   const r = await captureKnowledge({ tenantId: "tenant-a", candidate: { ...candidate, id: "c5", sensitivity: "health" }, memory: new InMemoryTenantMemory(), clock });
   assert.equal(r.status, "rejected_sensitive");
+  assert.equal(r.persisted, false);
+  const stored = await memory.get({ tenantId: "tenant-a", namespace: "knowledge", key: "restaurant:restaurant-a:operational_fact:hot-kitchen-shift-start" });
+  assert.equal(stored.status, "not_found");
 });
