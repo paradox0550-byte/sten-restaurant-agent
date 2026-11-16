@@ -1232,6 +1232,116 @@
         "меню инженерия",
         "меню-инжиниринг"
       ]
+    },
+    {
+      "id": "inventory.iiko-stock-accounting-audit",
+      "type": "method",
+      "label": "Аудит складского учёта и документов iiko",
+      "evidence_class": "PRACTICE",
+      "description": "Десятираздельный чек-лист проверки номенклатуры, накладных, списаний, переработок, приготовления/перемещений/возвратов, реализации, остатков, инвентаризаций и блокировки периода. Требует сверки с текущей конфигурацией iiko и учетной политикой.",
+      "keywords": [
+        "аудит iiko",
+        "бухгалтер калькулятор",
+        "проверка калькулятора",
+        "складской учет",
+        "накладные",
+        "акты списания",
+        "инвентаризация iiko",
+        "остатки на складах"
+      ],
+      "source_ids": [
+        "source.calculator-iiko-audit-checklist"
+      ],
+      "scope": "consultant_checklist_requires_accounting_policy_validation"
+    },
+    {
+      "id": "safety.product-adjacency",
+      "type": "practice",
+      "label": "Товарное соседство и раздельное хранение",
+      "evidence_class": "PRACTICE",
+      "description": "Памятка о раздельном хранении групп продуктов, сырого/готового, замороженного/охлажденного, сухого/влажного, пищевого/непищевого и запахоотдающего/впитывающего. Юридическая применимость требует отдельной проверки.",
+      "keywords": [
+        "товарное соседство",
+        "сырые и готовые продукты",
+        "раздельное хранение",
+        "холодильник",
+        "склад продуктов"
+      ],
+      "source_ids": [
+        "source.food-product-adjacency-guide"
+      ]
+    },
+    {
+      "id": "safety.food-marking-and-identification",
+      "type": "practice",
+      "label": "Маркировка продуктов, инвентаря и химических ёмкостей",
+      "evidence_class": "PRACTICE",
+      "description": "Чек-лист по маркировке сырья и заготовок, разделочных досок и ножей, уборочного инвентаря, отходов, моющих и дезинфицирующих средств и контейнеров доставки. Требует проверки по текущим официальным требованиям.",
+      "keywords": [
+        "маркировка заготовок",
+        "маркировка инвентаря",
+        "доски ножи",
+        "уборочный инвентарь",
+        "химические емкости",
+        "контейнеры доставки"
+      ],
+      "source_ids": [
+        "source.food-marking-haccp-checklist"
+      ]
+    },
+    {
+      "id": "management.shift-manager-role",
+      "type": "role",
+      "label": "Менеджер смены — открытие, управление и закрытие",
+      "evidence_class": "PRACTICE",
+      "description": "Историческая локальная должностная процедура: готовность помещений и оборудования, стоп-лист и briefing, распределение зон, контроль сервиса, эскалация, закрытие кассовых/товарных процессов и передача смены. Требует подтверждения актуальных полномочий.",
+      "keywords": [
+        "менеджер смены",
+        "открытие ресторана",
+        "планерка перед сменой",
+        "закрытие смены",
+        "передача смены"
+      ],
+      "source_ids": [
+        "source.shift-manager-trattoria-procedure"
+      ],
+      "scope": "historical_trattoria_procedure"
+    },
+    {
+      "id": "service.bartender-operating-procedure",
+      "type": "procedure",
+      "label": "Операционная работа бармена",
+      "evidence_class": "PRACTICE",
+      "description": "Историческая клубная процедура по подготовке бара, контролю запасов, обслуживанию, уборке, закрытию и проверке знаний. Детали, связанные с клубным форматом, не переносятся автоматически.",
+      "keywords": [
+        "бармен",
+        "подготовка бара",
+        "барная стойка",
+        "барные остатки",
+        "закрытие бара",
+        "инвентаризация бара"
+      ],
+      "source_ids": [
+        "source.bartender-club-operating-procedure"
+      ],
+      "scope": "historical_club_bar_procedure"
+    },
+    {
+      "id": "service.casual-dining-training-outline",
+      "type": "source_outline",
+      "label": "Искусство сервиса Casual Dining — краткое оглавление",
+      "evidence_class": "PRACTICE",
+      "description": "В загруженном файле доступны только обложка и краткий список тем: ожидания гостя, имидж, внешний вид, обслуживание, сложные ситуации, психология официанта и операционное управление. Полный текст глав не предоставлен.",
+      "keywords": [
+        "искусство сервиса",
+        "casual dining",
+        "обучение официантов",
+        "психология официанта"
+      ],
+      "source_ids": [
+        "source.casual-dining-service-book-outline"
+      ],
+      "scope": "outline_only_no_chapter_content"
     }
   ],
   "edges": [
@@ -1996,9 +2106,57 @@
       "to": "production.kitchen-staffing-by-station",
       "type": "cross_links",
       "scope": "menu_changes_may_change_station_workload;recalculate_after_approved_changes"
+    },
+    {
+      "from": "inventory.stocktake",
+      "to": "inventory.iiko-stock-accounting-audit",
+      "type": "methodology_extension",
+      "scope": "source_checklist_requires_current_iiko_configuration_and_accounting_policy"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.product-adjacency",
+      "type": "practice_extension",
+      "scope": "consultant_guidance_requires_current_official_applicability_review"
+    },
+    {
+      "from": "safety.food",
+      "to": "safety.food-marking-and-identification",
+      "type": "practice_extension",
+      "scope": "consultant_checklist_requires_current_official_applicability_review"
+    },
+    {
+      "from": "management.system",
+      "to": "management.shift-manager-role",
+      "type": "practice_extension",
+      "scope": "historical_role_procedure_requires_current_owner_approval"
+    },
+    {
+      "from": "service.guest-experience",
+      "to": "service.bartender-operating-procedure",
+      "type": "practice_extension",
+      "scope": "historical_club_bar_procedure_requires_format_adaptation"
+    },
+    {
+      "from": "service.guest-experience",
+      "to": "service.casual-dining-training-outline",
+      "type": "source_outline",
+      "scope": "outline_only_no_chapter_level_claims"
     }
   ],
   "source_links": [
+    {
+      "source_id": "source.appearance-training",
+      "node_ids": [
+        "service.appearance",
+        "service.uniform",
+        "service.hygiene",
+        "service.etiquette",
+        "people.training",
+        "operations.audit",
+        "proc.appearance-readiness"
+      ]
+    },
     {
       "source_id": "source.audit-process-model",
       "node_ids": [
@@ -2031,6 +2189,28 @@
       ]
     },
     {
+      "source_id": "source.bartender-club-operating-procedure",
+      "node_ids": [
+        "service.bartender-operating-procedure",
+        "service.guest-experience"
+      ]
+    },
+    {
+      "source_id": "source.calculator-iiko-audit-checklist",
+      "node_ids": [
+        "inventory.iiko-stock-accounting-audit",
+        "inventory.stocktake",
+        "finance.food-cost"
+      ]
+    },
+    {
+      "source_id": "source.casual-dining-service-book-outline",
+      "node_ids": [
+        "service.casual-dining-training-outline",
+        "service.guest-experience"
+      ]
+    },
+    {
       "source_id": "source.director-calendar",
       "node_ids": [
         "management.director-role",
@@ -2059,29 +2239,17 @@
       ]
     },
     {
-      "source_id": "source.operational-management-training",
+      "source_id": "source.food-marking-haccp-checklist",
       "node_ids": [
-        "management.system",
-        "management.director-role",
-        "management.meetings",
-        "management.delegation",
-        "management.grow",
-        "people.work-maturity",
-        "people.training",
-        "people.motivation",
-        "proc.director-operating-control"
+        "safety.food-marking-and-identification",
+        "safety.food"
       ]
     },
     {
-      "source_id": "source.appearance-training",
+      "source_id": "source.food-product-adjacency-guide",
       "node_ids": [
-        "service.appearance",
-        "service.uniform",
-        "service.hygiene",
-        "service.etiquette",
-        "people.training",
-        "operations.audit",
-        "proc.appearance-readiness"
+        "safety.product-adjacency",
+        "safety.food"
       ]
     },
     {
@@ -2099,6 +2267,20 @@
         "proc.service-delivery-and-delay",
         "proc.bill-and-payment",
         "proc.guest-complaint-recovery"
+      ]
+    },
+    {
+      "source_id": "source.operational-management-training",
+      "node_ids": [
+        "management.system",
+        "management.director-role",
+        "management.meetings",
+        "management.delegation",
+        "management.grow",
+        "people.work-maturity",
+        "people.training",
+        "people.motivation",
+        "proc.director-operating-control"
       ]
     },
     {
@@ -2127,6 +2309,13 @@
         "proc.monthly-sanitation-deep-clean",
         "proc.staff-schedule-and-timekeeping",
         "proc.delivery-order-control"
+      ]
+    },
+    {
+      "source_id": "source.shift-manager-trattoria-procedure",
+      "node_ids": [
+        "management.shift-manager-role",
+        "management.system"
       ]
     }
   ]
