@@ -12,7 +12,7 @@ This is a content-validation decision, not a failure of the existing structural 
 - All 77 entries carry the status `expanded_methodology_requires_owner_and_jurisdiction_validation`.
 - A content-shape audit found 15 distinct operation sequences across those 77 entries. The two most common generic sequences are reused by 40 and 20 entries respectively. Therefore the 77 entries are not 77 independently validated SOPs.
 - The separately curated `operational-procedures.json` contains 12 detailed procedures, linked to checklists and source records. Some role/cadence values are explicitly inferred, scoped to historical company practice, partial or unknown.
-- The source catalog contains six PRACTICE sources. These establish provenance and context; they do not establish current law or universal industry requirements.
+- The source catalog now contains 12 PRACTICE sources after the 17 November 2026 intake; the six newly catalogued sources have metadata-only draft evidence records pending substantive review. These establish provenance and context; they do not establish current law or universal industry requirements.
 - The operational graph has structurally resolvable nodes, edges and source links. Its analytical paths are explicitly not causal proof.
 - The nine-sector taxonomy is defined. The restaurant corpus is marked partial; cafe, bar, bakery, hotel food service, catering, canteen, food hall and quick service are marked planned.
 - Existing quality tests explicitly report that semantic correctness and legal validity are not measured.
