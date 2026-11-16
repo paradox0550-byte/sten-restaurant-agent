@@ -70,3 +70,38 @@ This is a workflow/methodology expansion, not proof that recommendations increas
 Stage 13 begins with reusable automated metrics for retrieval ranking and answer evidence integrity, plus labelled HoReCa golden cases. These tools can measure repeatable quality dimensions, but cannot substitute for specialist validation or retroactively close Stage 11.
 
 **Status: integrated foundation; substantive validation open.**
+
+
+## Additional Stage 11 source expansion — 17 November 2026
+
+Eight supplied files were reviewed and consolidated into the ChatGPT knowledge pack:
+- iiko accountant-calculator audit checklist (13 pages; 10 audit sections);
+- guest-service standard (2025, A.S. Dumrauf, 43 pages; internal/confidential and scoped to «Азиатский квартал» and «#Farш»);
+- operational-management training deck (20 slides; management functions, leadership styles, task-specific work maturity and GROW);
+- product-adjacency instruction (2 pages; Olga Ogarkova / HACCP-AUDIT);
+- marking checklist (6 pages; HACCP-AUDIT);
+- shift-manager operating procedure (4 pages; historical/local ТРАТТОРИЯ context);
+- bartender operating procedure (6 pages; historical club/bar context);
+- Casual Dining service book copy (2 pages; cover and outline only, not full chapter content).
+
+New documented coverage:
+- management cycle, situational leadership, task-specific work maturity and GROW;
+- shift manager opening/service/closing responsibilities;
+- bartender preparation, stock, service, cleaning, handover and qualification checks;
+- waiter service journey, sales stages, guest communication and complaint recovery;
+- storage separation, product adjacency, in-house preparation marking, boards/knives, cleaning inventory and chemical containers;
+- ten-section iiko stock-accounting audit.
+
+These additions improve source coverage but do not close Stage 11. Source-specific rules, old times, document settings, legal exceptions and fine figures remain unverified. The 25-file ChatGPT Project constraint is addressed by a curated 9-file knowledge pack plus separate project instructions; original repository files remain intact.
+
+## Additional validation gates
+
+- Validate management/shift role authority and opening/closing controls with the current restaurant owner.
+- Validate bartender steps against the current bar format, local policy, equipment and law.
+- Review guest-service scripts and remedies against the actual concept and delegated authority.
+- Validate product storage/marking controls against current official sanitary and technical rules, product categories and actual facility layout.
+- Reconcile the iiko checklist with the current version, warehouses, document types, accounting policy and real exports.
+- Add expert-adjudicated known-answer cases for all new domains.
+- Preserve source-specific values and unknowns; do not promote historical examples into universal norms.
+
+The service book outline is not sufficient evidence for chapter-level procedures. The source material does not include a complete temperature/time matrix or a current legal compliance register.
