@@ -95,3 +95,8 @@ Non-goals:
 - do not deploy or claim production certification.
 
 Stage 14 is ready for owner-led private pilot testing after the current candidate CI succeeds. It remains open for public release until redistribution rights are confirmed, a final tag archive is generated, and the owner explicitly approves publication. Stage 11 substantive expert validation remains open and is not a blocker to beginning a controlled pilot.
+
+
+## Business Writing — management communication
+
+The provider-neutral `src/writing/` module prepares briefs for operational documents and correspondence, carries source references into factual claims, provides editorial checks, and structures manager-task drafts. The host model remains responsible for language generation. Drafts require human approval; task assignment and email delivery are not implemented. Email preflight is a configuration checklist, not a spam-filter bypass or deliverability guarantee. See `docs/business-writing.md`.

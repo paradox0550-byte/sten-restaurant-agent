@@ -90,7 +90,11 @@
     "stage_11_specialist_menu_and_kitchen_evaluation_cases",
     "continuous_restaurant_memory_capture",
     "provenance_and_temporal_memory_records",
-    "conservative_silent_capture_and_conflict_review"
+    "conservative_silent_capture_and_conflict_review",
+    "provider_neutral_business_writing_briefs",
+    "source_linked_draft_quality_review",
+    "structured_manager_task_drafts",
+    "email_sender_compliance_preflight"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -119,7 +123,12 @@
     "measured_answer_level_multi_hop_quality",
     "complete_reviewed_sector_specific_knowledge_corpus",
     "universal_director_time_benchmarks",
-    "validated_org_chart_for_all_horeca_formats"
+    "validated_org_chart_for_all_horeca_formats",
+    "automatic_ai_detector_evasion",
+    "guaranteed_spam_filter_bypass",
+    "automatic_email_delivery",
+    "persistent_style_learning",
+    "external_task_assignment"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -133,6 +142,7 @@
     "docs/TEST_PLAN_RU.md",
     "docs/USER_GUIDE_RU.md",
     "docs/architecture.md",
+    "docs/business-writing.md",
     "docs/continuous-restaurant-memory.md",
     "docs/contributing-evidence.md",
     "docs/horeca-applicability-profile.md",
@@ -249,6 +259,10 @@
     "src/workflow/status.js",
     "src/workflow/task.js",
     "src/workflow/verification.js",
+    "src/writing/brief.js",
+    "src/writing/index.js",
+    "src/writing/review.js",
+    "src/writing/tasks.js",
     "tests/director-calendar.test.js",
     "tests/evidence.test.js",
     "tests/finance.test.js",
@@ -265,6 +279,7 @@
     "tests/retrieval.test.js",
     "tests/runtime.test.js",
     "tests/workflow.test.js",
+    "tests/writing.test.js",
     "tools/README.md",
     "tools/api/README.md",
     "tools/calculators/finance/ratios.js",
@@ -276,7 +291,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 106,
+    "total_expected": 118,
     "command": "npm test",
     "runtime_layer": 15,
     "retrieval_layer": 16,
@@ -285,7 +300,8 @@
     "knowledge_graph": 3,
     "procedures_depth": 3,
     "knowledge_quality": 2,
-    "director_calendar": 2
+    "director_calendar": 2,
+    "business_writing": 12
   },
   "stage_status": {
     "1": "integrated_assistant_identity_and_governance",
