@@ -11,7 +11,7 @@ This document is the canonical stage-by-stage engineering status for STEN 0.5.0.
 | 3 | Knowledge, Skills & Calculators | Integrated foundation | Cumulative knowledge, reusable skills, deterministic calculators, service recovery, research register, provider templates and tests. The source corpus is not complete. |
 | 4 | Intelligence Engine | Integrated foundation | Cross-domain diagnosis, evidence/fact validation, unknown handling, hypothesis labels and action-verification fields. Narrative reasoning remains with the host model. |
 | 5 | Knowledge & Evidence Layer | Integrated | Registry schema, provenance, validity lifecycle, territory, applicability, limitations, conflict policy and registry-to-engine adapter. Registry validity is not legal certification. |
-| 6 | Runtime & Integration | Integrated foundation | Provider/tool/memory/audit injection, tenant-required operations and permission-gated tools. Live provider SDKs, production auth and persistent storage are host responsibilities. |
+| 6 | Runtime & Integration | Integrated foundation + structured knowledge capture | Provider/tool/memory/audit injection, tenant-required operations, permission-gated tools, provenance-aware capture and conflict preservation. Production persistence/auth remain host responsibilities. |
 | 7 | Knowledge Retrieval & Expert Context | Integrated | Lexical ranking, establishment-profile applicability checks, Evidence Registry joining and explicit conflict reporting. No automatic legal applicability or conflict resolution. |
 | 8 | Management Workflow | Integrated | Analysis-gated action planning, human approval, task lifecycle and evidence-backed outcome verification. External task execution requires a host connector. |
 | 9 | Hybrid Retrieval | Integrated reference implementation | Provider-injected embeddings, in-memory cosine vector index, lexical/vector fusion and RRF. No production embedding provider or persistent vector database. |
@@ -36,6 +36,12 @@ Not claimed:
 - production API, hosted memory, provider deployment or compliance certification.
 
 Legal records remain jurisdiction- and date-specific. Unknown profile data remain unknown. No registry entry certifies an establishment's compliance.
+
+## Continuous Restaurant Memory — Stages 6, 11 and 12
+
+A restaurant profile is optional, not an onboarding gate. The runtime now exposes a structured capture boundary for local restaurant facts and operational changes. It silently captures only explicit, unambiguous, low-risk assertions meeting the confidence threshold; other candidates require confirmation. Source provenance and validity dates are retained. Conflicts are appended for review rather than silently overwritten. Local facts are not promoted to approved standards or global methodology by capture.
+
+Implementation: `src/runtime/knowledge-capture.js`; policy and lifecycle: `memory/memory-policy.md` and `docs/continuous-restaurant-memory.md`. The current adapter is still in-memory development/test infrastructure; this does not provide durable production learning or extraction from raw chat messages.
 
 ## Stages 6–8 — runtime, retrieval and workflow
 
