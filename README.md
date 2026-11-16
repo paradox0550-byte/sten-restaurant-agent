@@ -24,7 +24,7 @@
 | 3 | Knowledge, skills and calculators | Integrated foundation | Knowledge depth and source review vary by domain |
 | 4 | Intelligence Engine | Integrated foundation | Deterministic structure; host model provides narrative reasoning |
 | 5 | Evidence Registry | Integrated | Registry validation does not certify legal applicability |
-| 6 | Runtime and integration boundary | Integrated foundation | Host must supply authentication, providers and persistent services |
+| 6 | Runtime and integration boundary | Integrated foundation + structured knowledge capture | Host must supply authentication, extraction, persistent storage and production controls |
 | 7 | Knowledge retrieval and expert context | Integrated | Lexical retrieval and applicability controls; no automatic conflict resolution |
 | 8 | Management workflow | Integrated | Approval-gated task lifecycle; no external task execution by itself |
 | 9 | Hybrid retrieval | Integrated reference implementation | Embeddings are injected; vector index is in-memory, not production storage |
@@ -55,6 +55,12 @@ The `src/workflow/` module implements analysis-gated action planning, controlled
 ## Runtime layer (Stage 6)
 
 A provider-neutral runtime foundation is available in `src/runtime/`. It injects provider, tool, memory and audit adapters; requires tenant identity; and gates every tool call behind explicit host-granted permissions. The included memory and audit adapters are development/test implementations only. See `docs/runtime-integration.md` before connecting a host application.
+
+## Continuous Restaurant Memory — Stages 6, 11 and 12
+
+STEN is designed to learn a restaurant's changing local context during normal work; completing a profile is optional. The structured capture boundary supports conservative silent capture of explicit, low-risk and unambiguous user assertions, preserves provenance and validity dates, deduplicates repeats, and keeps conflicting versions for human review. It does not promote local facts into universal methodology or approved standards.
+
+The capture module currently runs against the injected development/test memory adapter. It does not provide durable cross-session storage or automatic extraction from raw conversations. See [Continuous Restaurant Memory](docs/continuous-restaurant-memory.md).
 
 ## Run locally
 
