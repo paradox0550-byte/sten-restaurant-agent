@@ -51,6 +51,7 @@ test("Stage 11 specialist knowledge nodes and provisional cases are discoverable
   assert.equal(menu.evidence_class, "HYPOTHESIS");
   assert.ok(staffing.keywords.includes("количество сотрудников кухни"));
   assert.ok(menu.keywords.includes("инжиниринг меню"));
+  const sourceIds = new Set(read("../knowledge/graph/sources.json").sources.map((source) => source.id));
   const sourceLinks = new Map(read("../knowledge/graph/operational-knowledge-graph.json").source_links.map((link) => [link.source_id, link.node_ids]));
   for (const sourceId of [
     "source.calculator-iiko-audit-checklist",
@@ -65,7 +66,6 @@ test("Stage 11 specialist knowledge nodes and provisional cases are discoverable
     for (const nodeId of sourceLinks.get(sourceId)) assert.ok(ids.has(nodeId), nodeId);
   }
   const expandedCases = read("../evals/stage-11-source-expansion-cases.json").cases;
-  const sourceIds = new Set(read("../knowledge/graph/sources.json").sources.map((source) => source.id));
   assert.equal(expandedCases.length, 13);
   for (const item of expandedCases) {
     assert.ok(item.id && item.query && item.domain);
