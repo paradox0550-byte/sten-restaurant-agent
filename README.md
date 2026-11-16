@@ -83,6 +83,23 @@ The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND,
 
 The provider-neutral `src/writing/` module prepares source-linked briefs for memos, email replies, meeting minutes, weekly plans, manager tasks, team messages, guest responses and supplier letters. It builds natural-style generation instructions, checks draft claim references/placeholders/editorial boilerplate, and creates task drafts with explicit owner/deadline/result fields. Email sender preflight checks authentication and bulk-mail hygiene signals; it does not guarantee inbox placement. Actual text generation remains the responsibility of the host model, and human approval remains required. No email is sent and no external task is assigned. See [Business Writing](docs/business-writing.md).
 
+## Legal information and free-use terms
+
+STEN is currently offered free of charge for users' own internal professional and business operations. The original STEN materials are licensed under a **proprietary, non-exclusive, royalty-free internal-use license**; this is not an open-source license.
+
+- [Terms of Use](TERMS_OF_USE.md)
+- [License — original STEN materials](LICENSE)
+- [User Disclaimer](DISCLAIMER.md)
+- [Privacy and Data Notice](PRIVACY_NOTICE.md)
+- [Legal publication checklist](LEGAL_DEPLOYMENT_CHECKLIST.md)
+
+**Rightsholder of original components:** Думрауф Александр Сергеевич  
+**Legal contact:** pocketshift.support@gmail.com
+
+Resale, paid standalone redistribution and distribution of modified STEN versions require the rightsholder's prior written permission, subject to mandatory law and the rights GitHub grants for public repositories. Read section 4 of the Terms of Use for the public-repository/fork limitation.
+
+The license applies only to components for which the rightsholder is entitled to grant rights. Third-party components remain subject to their own licenses. The repository remains a public experimental pilot; publication does not certify that every file has completed an ownership or legal audit.
+
 ## Important boundaries
 
 This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store, production API or XLSX parser. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
