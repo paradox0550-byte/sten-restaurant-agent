@@ -17,6 +17,8 @@ export async function captureKnowledge({ tenantId, candidate, memory, clock = ()
   const statement = req(candidate.statement, "statement");
   const source = { type: req(candidate.source?.type, "source.type"), id: req(candidate.source?.id, "source.id") };
   const confidence = candidate.confidence;
+  const sensitivity = candidate.sensitivity ?? "ordinary";
+  if (BLOCKED_SENSITIVITY.has(sensitivity)) return { status: "rejected_sensitive", persisted: false, reason: "Sensitive data are not stored by this memory path." };
   if (!Number.isFinite(confidence) || confidence < 0 || confidence > 1) throw new RuntimeError("MEMORY_CANDIDATE_INVALID", "confidence must be from 0 to 1.");
   for (const field of ["effective_from", "effective_to"]) if (candidate[field] != null && !/^\d{4}-\d{2}-\d{2}$/.test(candidate[field])) throw new RuntimeError("MEMORY_CANDIDATE_INVALID", field + " must be YYYY-MM-DD or null.");
   if (candidate.effective_from && candidate.effective_to && candidate.effective_to < candidate.effective_from) throw new RuntimeError("MEMORY_CANDIDATE_INVALID", "effective_to cannot precede effective_from.");
@@ -29,7 +31,7 @@ export async function captureKnowledge({ tenantId, candidate, memory, clock = ()
     id: req(candidate.id, "id"), tenant_id: tenant, establishment_id: establishmentId, scope: "establishment",
     category, entity_key: entityKey, statement, value: candidate.value ?? null, source,
     recorded_at: clock(), effective_from: candidate.effective_from ?? null, effective_to: candidate.effective_to ?? null,
-    confidence, sensitivity: candidate.sensitivity ?? "ordinary", status: "needs_confirmation"
+    confidence, sensitivity, status: "needs_confirmation"
   };
   const duplicate = record.items.find(p => ACTIVE.has(p.status) && p.statement === statement && same(p.value, item.value) && p.effective_from === item.effective_from && p.effective_to === item.effective_to);
   if (duplicate) return { status: "duplicate", item: structuredClone(duplicate), persisted: false };
