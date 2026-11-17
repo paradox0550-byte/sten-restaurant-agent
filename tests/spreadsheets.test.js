@@ -112,7 +112,7 @@ test("agent tools create and read tenant-scoped XLSX artifacts through the runti
     permissions: ["spreadsheet.create_xlsx"],
     args: { title: "Shift report", sheets: [{ name: "Summary", rows: [["Revenue"], [1000]] }] },
   });
-  assert.equal(created.artifactId, "restaurant-a:artifact-1");
+  assert.equal(created.artifactId, "artifact-1");
   const read = await registry.execute({
     name: "spreadsheet.read_xlsx",
     tenantId: "restaurant-a",
