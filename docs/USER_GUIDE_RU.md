@@ -28,27 +28,36 @@ STEN 0.5.0 — переносимое программное ядро и наб�
 
 ### Какие документы загрузить
 
-Начните с небольшой и полезной подборки:
+Для ChatGPT Project используется **один согласованный комплект из 9 файлов**. Не собирайте его вручную из отдельных папок assistant/, knowledge/, skills/ и docs/: это старый способ, который дублирует и размывает актуальную подборку.
 
-- `assistant/system-instructions.md` — полные канонические инструкции STEN (добавьте как файл-источник; короткие инструкции проекта берите из русскоязычного адаптера).
-- `assistant/identity.md` — роль и границы агента.
-- `assistant/behavior-policy.md` — правила поведения.
-- `assistant/knowledge-governance.md` — правила работы с источниками.
-- `knowledge/finance/financial-integrity.md` — финансовая достоверность.
-- `knowledge/finance/food-labor-prime-cost.md` — Food Cost, Labor Cost и Prime Cost.
-- `knowledge/finance/pnl-and-expense-structure.md` — структура P&L и расходов.
-- `knowledge/restaurant-operations/shift-service-management.md` — управление сменой и сервисом.
-- `knowledge/service-standards/guest-service-standard.md` — стандарт обслуживания.
-- `knowledge/evidence/policy.md` — правила доказательности.
-- `knowledge/evidence/registry.json` — текущий реестр источников.
-- `knowledge/menu-engineering/menu-engineering-status.md` — границы и правила Menu Engineering.
-- `skills/menu-analysis/SKILL.md` — полный сценарий анализа меню.
-- `skills/labor-analysis/SKILL.md` — расчёт трудовой нагрузки и численности кухни.
-- `docs/stage-11-menu-engineering.md` — методика полного инжиниринга меню.
-- `docs/stage-11-kitchen-workforce-planning.md` — расчёт персонала по цехам и интервалам.
-- `docs/TEST_PLAN_RU.md` — пошаговый план приёмочного тестирования STEN.
+Скачайте из GitHub папку providers/chatgpt/knowledge-pack/ и загрузите в знания проекта все девять Markdown-файлов:
 
-Загружайте только те дополнительные материалы, которые нужны конкретному ресторану. Ограничения по количеству и размеру файлов зависят от текущего тарифа и интерфейса ChatGPT. Если лимит достигнут, не удаляйте случайные документы: начните с базового набора и добавляйте материалы по приоритету.
+1. 01-core-rules-and-evidence.md
+2. 02-restaurant-management-and-shift.md
+3. 03-guest-service-and-recovery.md
+4. 04-food-safety-haccp-marking.md
+5. 05-iiko-stock-and-calculator-audit.md
+6. 06-menu-engineering-and-kitchen-workforce.md
+7. 07-finance-payroll-and-labor.md
+8. 08-operational-audit-and-checklists.md
+9. 09-stage-11-scope-and-validation.md
+
+Затем отдельно вставьте текст из providers/chatgpt/project-instructions-ru.md в поле инструкций проекта. **Этот файл не входит в девять вложений**: он предназначен для отдельного поля инструкций.
+
+Проверка перед началом:
+- в знаниях проекта отображаются все 9 файлов с указанными именами;
+- в поле инструкций сохранён текст русскоязычной инструкции STEN;
+- файлы относятся к одной версии репозитория; не смешивайте подборки из разных релизов.
+
+README.md в папке комплекта содержит порядок загрузки и пояснения. knowledge-manifest.yaml — технический манифест для сопровождения, его не нужно загружать в Project.
+
+### Что остаётся в GitHub и почему не загружается
+
+В GitHub остаются исходные методики, полные документы, реестр доказательств, схемы, программные калькуляторы, навыки, тесты и техническая документация. Девять файлов — подготовленная для ChatGPT Project выжимка знаний, а не копия всего репозитория.
+
+ChatGPT Project не получает автоматический доступ к GitHub и не может открыть файлы только потому, что их пути упомянуты в инструкции. Ссылки на src/, tools/, skills/ и docs/ в тексте нужны как происхождение и ориентир для сопровождения; их содержимое доступно Project только если вы отдельно добавили соответствующие материалы или подключили реальный инструмент.
+
+Не загружайте все технические файлы «на всякий случай»: код, тесты и внутренние схемы не запускаются и не исполняются от загрузки в Project. Программные модули требуют отдельного runtime/API-хоста. Подробные границы описаны в разделе 7.
 
 ## 3. Альтернативный способ: проект Claude
 
