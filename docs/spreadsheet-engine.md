@@ -29,7 +29,7 @@ const audit = validateWorkbookFormulas(workbook, {
   requireRulesForEveryFormula: true,
 });
 const docx = await exportWorkbookDocx(workbook, { title: "Payroll" });
-const pdf = await exportWorkbookPdf(workbook, { title: "Payroll" });
+const pdf = await exportWorkbookPdf(workbook, { title: "Payroll", fontPath: "/path/to/unicode-font.ttf" });
 ```
 
 ## Formula assurance
@@ -42,7 +42,7 @@ Formula integrity is not equivalent to formula execution. The validator:
 - reports absent cached results as warnings;
 - can require a validation rule for every formula.
 
-It does not execute arbitrary formulas, VBA, macros, external links or workbook connections. No formula is considered verified merely because a formula string exists.
+It does not execute arbitrary formulas, VBA, macros, external links or workbook connections. No formula is considered verified merely because a formula string exists. For PDF output containing Cyrillic or other non-Latin text, pass a Unicode TTF/OTF file path through the `fontPath` option; PDFKit's built-in fonts do not cover all scripts.
 
 ## Google Sheets
 
