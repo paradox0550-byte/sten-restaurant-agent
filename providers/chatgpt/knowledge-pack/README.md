@@ -15,6 +15,18 @@
 8. `08-operational-audit-and-checklists.md` — audits, corrective actions, handovers, evidence and verification.
 9. `09-stage-11-scope-and-validation.md` — Stage 11 coverage, source register, limitations and closeout gates.
 
+## Connect the pack to a ChatGPT Project
+
+1. Create a dedicated Project for one restaurant or one clearly defined tenant.
+2. Paste the contents of ../project-instructions-ru.md into the Project's separate instruction field.
+3. Upload exactly the nine Markdown files listed above as Project knowledge.
+4. Confirm that all nine filenames are present and that the instructions were saved.
+5. Start a new chat inside that Project and test the evidence rules with a small, non-sensitive source file.
+
+The Project instruction file is not a tenth knowledge attachment. The manifest and this README are maintenance documents; they are not required Project uploads.
+
+A path or filename mentioned in Project instructions does not grant the Project access to that GitHub file. ChatGPT Projects do not execute this repository's JavaScript modules or automatically connect GitHub, POS, iiko, MCP, APIs, persistent tenant memory or the source registry.
+
 ## Consolidation rules
 
 - These files consolidate knowledge for retrieval; the original source files remain in the repository and are not deleted.
@@ -23,6 +35,16 @@
 - The 2025 guest-service standard is marked as internal/confidential source material for the named restaurants.
 - The service book upload contains only a cover and short outline in the supplied file; it is not treated as a complete book.
 - If a fact is missing, report it as unknown. Do not fill it with zero or a generic benchmark.
+
+## Release and consistency checks
+
+Before publishing an updated pack, verify all of the following together:
+- the nine filenames in this README match knowledge-manifest.yaml;
+- the nine files exist in this directory and are Markdown;
+- project-instructions-ru.md describes the same nine-file upload process;
+- docs/USER_GUIDE_RU.md does not prescribe a competing list of individual source files;
+- financial, legal and operational claims remain aligned with their canonical sources;
+- source-specific scope, confidentiality and unresolved validation status are preserved.
 
 ## Canonical repository sources
 

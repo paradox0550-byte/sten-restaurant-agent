@@ -1,48 +1,100 @@
-# Restaurant Finance, Payroll, Advances and Labor Productivity
+# Restaurant Finance, P&L, Payroll and Labor Intelligence
 
 ## 1. Source of truth and calculation discipline
 
 The restaurant's designated accounting, POS, payroll, inventory or management-reporting system is the source of truth for its own data. STEN interprets verified records; it does not replace them.
 
-For every calculation retain source, period, outlet, currency, units, formula, tax/discount/refund treatment, rounding and omissions. If a required component or denominator is missing, return unavailable/partial rather than inventing a value.
+For every calculation retain source, period, outlet, department, currency, units, formula, tax/discount/refund treatment, rounding and omissions. Preserve raw source values separately from normalized values. If a required component or denominator is missing, return unavailable/partial rather than inventing a value.
 
-## 2. Core financial definitions
+Keep these states distinct:
+- **Source fact:** directly present in a supplied or connected record.
+- **Calculation:** reproducible arithmetic from identified inputs.
+- **Interpretation:** meaning inferred from facts.
+- **Hypothesis:** possible explanation not yet confirmed.
+- **Recommendation:** proposed action.
+- **Unknown / no data:** required information is absent or unreliable.
 
-Definitions must match the restaurant's chart of accounts and reporting policy:
-- Revenue: specify gross/net, tax basis, discounts, refunds and service charges.
-- COGS / food and beverage cost: define purchases, inventory movement, transfers, waste, staff meals and write-offs.
-- Labor cost: define payroll components, employer charges, bonuses, overtime, benefits and contractor treatment.
-- Prime Cost: commonly COGS plus labor cost divided by a defined revenue base; confirm all components.
-- OPEX: use the approved expense structure; do not automatically classify capex, financing or owner distributions as OPEX.
-- EBITDA: calculate only from an explicit and consistent reporting definition.
+## 2. Revenue, COGS and Food Cost definitions
 
-Do not equate kitchen Food Cost with total COGS. Do not call contribution margin net profit.
+Definitions must match the restaurant's chart of accounts and reporting policy.
 
-## 3. P&L analysis sequence
+### Revenue
+Before calculating a ratio, establish whether revenue is gross or net and how the source treats VAT/tax, discounts, refunds, voids, complimentary items, service charges, delivery commissions and staff meals. Never silently change the denominator.
 
-1. Validate period, location, currency and source.
-2. Reconcile totals and expose missing categories.
-3. Separate plan, actual, forecast and prior-period values.
-4. Calculate absolute/relative variance only where inputs are complete.
-5. Rank material deviations by monetary impact, not percentage alone.
-6. Investigate drivers using operational evidence.
-7. State what cannot yet be concluded.
-8. Propose a controlled action and verification date.
+### COGS and kitchen Food Cost
+Define COGS using the approved accounting perimeter: purchases, inventory movement, transfers, waste, staff meals and write-offs. Do not assume all source systems use the same formula.
 
-No universal restaurant benchmark is embedded. A benchmark needs source, definition, scope, period and applicability.
+**Do not equate total COGS share with kitchen Food Cost.** The canonical STEN materials identify a definition conflict: one backend field labels COGS divided by total revenue as foodCostPercent, while the frontend calculation distinguishes cogsPercent from kitchen foodCostPercent, which requires separate kitchen revenue and kitchen cost inputs. Until the restaurant's definition is explicitly aligned:
+- label COGS divided by total revenue as **COGS share**;
+- label **kitchen Food Cost** only when kitchen cost and comparable kitchen revenue are separately identified;
+- disclose the definition and source fields used.
 
-## 4. Payroll and schedule data
+A percentage is valid only when numerator and denominator have matching scope, period, outlet, channel and accounting basis.
+
+### Prime Cost
+A common model is:
+
+Prime Cost % = (COGS + Labor Cost) / comparable Revenue × 100
+
+Use it only after confirming the approved composition of COGS, Labor Cost and Revenue. Do not mix payroll accrual with cash payments or inconsistent periods.
+
+## 3. Labor Cost and payroll components
+
+Define the approved labor perimeter before calculation. Confirm treatment of:
+- gross wages and salaries;
+- employer contributions/charges;
+- bonuses, overtime and premiums;
+- benefits and compensation;
+- contractors and outsourced labor;
+- paid leave and other accruals;
+- department allocation and shared staff.
 
 Keep distinct:
 - planned hours;
 - actual worked hours;
 - paid hours;
 - payroll accrual;
+- cash paid;
 - advances;
-- final payment;
-- labor productivity hours.
+- final settlement;
+- productive labor hours.
 
-These are related but not interchangeable.
+These are related but not interchangeable. A cash payment report is not automatically the payroll expense for the same period.
+
+## 4. P&L and EBITDA calculation rules
+
+1. Validate period, restaurant, department, currency, source and accounting basis.
+2. Reconcile revenue and expense totals to source reports.
+3. Confirm account mapping and the sign convention for each expense line.
+4. Separate plan, actual, forecast and prior-period values.
+5. Identify missing, duplicate, unmapped and parent/child rows before aggregation.
+6. Calculate ratios and results only when all required inputs are complete and compatible.
+7. Rank material deviations by monetary impact, not percentage alone.
+8. Investigate drivers using operational evidence; do not infer causality from correlation.
+9. State what cannot yet be concluded and propose a controlled action with verification.
+
+**EBITDA** may be calculated as revenue minus COGS, labor and OPEX only when all four components are present and their definitions and period align. An incomplete subtotal must not be called EBITDA.
+
+A conventional bridge is:
+- EBITDA = Revenue − COGS − Labor − OPEX
+- EBIT = EBITDA − Depreciation
+- Profit before tax = EBIT − Interest
+- Net profit = Profit before tax − Tax
+
+Use the restaurant's approved reporting definition where it differs. Do not invent missing components or treat an unavailable line as zero.
+
+### Plan/fact variance
+
+Interpret variance according to the economic meaning and sign convention of the line:
+- Revenue: actual below plan is generally unfavorable.
+- Positive expense lines: actual expense above plan is generally unfavorable.
+- Negative expense lines: a more negative actual may be unfavorable; inspect the accounting meaning.
+- Sign changes, unknown line types or inconsistent mappings require investigation before labeling favorable/unfavorable.
+- If the plan is absent or zero, do not calculate a percentage variance.
+
+Do not apply a universal materiality or "other expenses" threshold unless the restaurant has approved it.
+
+## 5. Payroll models and advances
 
 ### Pay models
 - Hourly: confirmed hours × confirmed rate.
@@ -51,36 +103,41 @@ These are related but not interchangeable.
 - Additional pay is included only when confirmed.
 - If hours, rate or pay rule is missing, the cost is unavailable.
 
-Do not distribute a monthly salary across shifts without an approved rule.
+Do not distribute a monthly salary across shifts without an approved allocation rule.
 
-## 5. Advances
-
+### Advances and cash payments
 An advance is a payment against accrued salary, not a second labor expense. Track employee, date, amount, accrual period, basis and source document.
 
-A payroll statement and a cash disbursement order (РКО) are different source types; verify they do not represent the same payment. Calculate the remaining amount only when accrual and all payments are complete. Unknown advances are not silently subtracted or treated as zero. Do not count the same advance twice in expenses when accrual is already recognized.
+A payroll statement and a cash disbursement order (РКО) are different source types; verify whether they represent the same payment before aggregating. Calculate the remaining amount only when accrual and all payments are complete. Unknown advances are not silently subtracted or treated as zero. Do not count the same advance twice in expenses when accrual is already recognized.
 
 ## 6. Waiter sales and incentives
 
 Where an approved incentive rule pools personal waiter sales across linked departments, the calculation needs:
 - approved department pool;
-- employee identity;
+- employee identity or stable pseudonymous ID;
 - period;
 - POS sales source;
 - incentive base;
 - approved percentage/rule;
 - duplicate-exclusion logic.
 
-Do not apply a commission automatically without the current approved incentive policy. The existence of a historical operating rule does not prove it remains active.
+Do not apply a commission automatically without the current approved incentive policy. A historical operating rule does not prove that it remains active.
 
-## 7. Labor Intelligence
+## 7. Labor Intelligence and productivity
 
 Demand workload and payroll are separate models:
-- POS sales describe output/demand;
+- POS/KDS sales describe output or demand;
 - workload coefficients describe work content;
 - productive standards translate workload into required hours;
-- timesheets describe actual attendance/worked hours;
-- rates describe cost.
+- timesheets describe attendance/worked hours;
+- paid hours and rates describe labor cost.
 
 A dish count alone is not labor effort. Without approved coefficients and productivity standards, required hours remain unknown.
 
 For a valid productivity comparison, align period, department, role, output measure, time basis and paid/actual hours. A forecast is a draft need estimate, not a named roster. Do not optimize productivity at the expense of safety, quality, guest waiting time or lawful working conditions.
+
+## 8. Benchmarks and decision boundaries
+
+No universal restaurant benchmark is embedded. A benchmark needs a traceable source, definition, scope, period, geography and applicability. Prefer an approved restaurant-specific target when available; label external comparisons as provisional when their comparability is incomplete.
+
+STEN may calculate and recommend. It must not change payroll, incentives, schedules, prices, accounting mappings or source records without explicit human approval and a real authorized tool.
