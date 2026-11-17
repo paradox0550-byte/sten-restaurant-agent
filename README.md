@@ -79,6 +79,12 @@ npm run package:source
 The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two STEN CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
 
 
+## Spreadsheet & Document Engine
+
+`src/spreadsheets/` provides XLSX generation/reading, formula-integrity validation against independent deterministic calculations, DOCX/PDF exports, Google Sheets API v4 operations and Yandex Disk XLSX upload. Google OAuth tokens and Yandex Disk OAuth tokens are injected by the trusted host at call time; no credentials are stored in the repository.
+
+Yandex integration stores XLSX files on Yandex Disk for opening in Yandex Documents. It is not live cell-level synchronization. Arbitrary Excel formula execution is not claimed. See [Spreadsheet Engine](docs/spreadsheet-engine.md).
+
 ## Business Writing — management communication
 
 The provider-neutral `src/writing/` module prepares source-linked briefs for memos, email replies, meeting minutes, weekly plans, manager tasks, team messages, guest responses and supplier letters. It builds natural-style generation instructions, checks draft claim references/placeholders/editorial boilerplate, and creates task drafts with explicit owner/deadline/result fields. Email sender preflight checks authentication and bulk-mail hygiene signals; it does not guarantee inbox placement. Actual text generation remains the responsibility of the host model, and human approval remains required. No email is sent and no external task is assigned. See [Business Writing](docs/business-writing.md).
@@ -102,7 +108,7 @@ The license applies only to components for which the rightsholder is entitled to
 
 ## Important boundaries
 
-This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store, production API or XLSX parser. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
+This repository is a working core, not a deployed service. Provider adapters contain templates, not live integrations. There is no hosted memory store or production API. XLSX reading/writing is available as a library module; provider cloud connections still require host authentication and deployment. Legal content must be populated from current official sources for each jurisdiction and reviewed before operational use. The registry does not certify compliance.
 
 **No source = no fact. Missing != zero.**
 
