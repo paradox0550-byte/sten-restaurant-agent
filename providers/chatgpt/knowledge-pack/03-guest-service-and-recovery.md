@@ -121,3 +121,20 @@ Where reliable data exist, monitor:
 - workload and staffing context.
 
 Every metric requires a defined source, denominator, period and scope. Do not optimize speed at the expense of safety, accuracy or dignity.
+
+---
+
+## Stage 11 professional practice expansion — guest journey and pass control
+
+**Provenance:** anonymized practical materials S11-06 (quality checks before serving), S11-08 (Service Design checklist), S11-12 (KBS coordination), S11-07 (orientation). Source-specific timing, dish descriptions and restaurant names are not transferred.
+
+### Guest journey as observable service
+Map arrival, first contact, seating, menu explanation, order capture, waiting, delivery, check-back, bill, farewell and post-visit response. For each touchpoint define observable behavior, the guest's likely friction, accountable role, evidence, correction and retest. A checklist score is not a complete guest-experience measure; combine observation with complaints, actual order errors and verified feedback.
+
+### Final control before food and drink reach the guest
+Compare the item with the **restaurant's currently approved** recipe/technical card, order, modifications and presentation reference. Check completeness, appearance, obvious spoilage/foreign material, packaging or vessel, and whether the correct guest/course is being served. Service staff do not substitute sensory observation for laboratory or HACCP verification.
+
+On a suspected defect: **do not serve** → isolate/return the item using the local process → notify kitchen/bar lead and shift manager → confirm whether remaking or an approved alternative is feasible → inform the guest accurately about the delay and choices → record the incident → review recurrence. Do not promise a fixed remake time or quietly remove a charged item without authorized POS action. Where product safety is in doubt, apply the site's food-safety response and qualified review.
+
+### Cross-functional delay
+When a kitchen/bar station becomes a bottleneck, the manager coordinates production priorities and guest communication, checks course synchronization, and logs impact. Avoid blaming one function without timestamps and production evidence.
