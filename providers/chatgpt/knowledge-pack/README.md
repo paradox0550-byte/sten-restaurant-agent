@@ -49,3 +49,10 @@ Before publishing an updated pack, verify all of the following together:
 ## Canonical repository sources
 
 This pack is a provider-oriented derivative. The canonical detailed methods, schemas, calculations, source registry, tests and evaluation cases remain in their original repository paths. Update the pack when those canonical sources change; do not edit only the pack and leave the canonical method stale.
+
+
+## User-friendly connection instructions
+
+The full Russian, non-technical, 14-step connection algorithm is maintained at [docs/CONNECTION_ALGORITHM_RU.md](../../../docs/CONNECTION_ALGORITHM_RU.md). It includes direct links to each of the nine knowledge files, the separate Project instruction file, a first-chat smoke test and troubleshooting.
+
+GitHub account registration is not required to open or download files from this public repository. A ChatGPT account is required to create a Project. Check the current per-project file limit before installation: the nine-file pack requires a plan with at least nine project file slots; the current OpenAI Help Center lists 5 for Free and 25 for Go/Plus. Do not silently omit files and describe a partial upload as a complete STEN setup.
