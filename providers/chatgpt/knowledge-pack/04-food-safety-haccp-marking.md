@@ -115,3 +115,18 @@ The supplied materials do not provide a complete current temperature/time matrix
 The product-adjacency PDF contains historic fine figures and a reference to Article 6.6 of the Russian Administrative Offences Code. The figures and applicability are not validated here and must not be quoted as current penalties without checking the current official legal text.
 
 The supplied materials identify a useful control framework; they do not constitute HACCP certification, a production-control programme, or proof of legal compliance.
+
+---
+
+## Stage 11 professional practice expansion — food-safety leadership
+
+**Provenance:** anonymized practical materials S11-09 (procurement and receiving), S11-11 (internal audit), S11-13 (food-safety working group), S11-01 (production flow design). These supply management practice, not a current legal register.
+
+### Food-safety working group
+Identify a responsible leader and competent cross-functional participants from production, receiving/storage, service and maintenance as appropriate. The working cycle is: identify process and hazards → review control measures and ownership → define documented monitoring → handle deviations → verify corrective action → update training and procedures. Membership, meeting frequency, critical limits and authority are establishment-specific.
+
+### Internal verification loop
+Set audit scope and evidence criteria, use qualified independent-enough reviewers, record observations and objective evidence, classify deviations by actual risk, assign containment and root-cause investigation, document corrective action, verify effectiveness, and track repeated findings. An audit finding is not closed by writing “corrected”; verify that the problem no longer recurs.
+
+### Receiving and design interface
+Food safety starts with supplier approval, transport and delivery checks, traceability, stock separation and controlled movement into production. Review flows of raw material, ready-to-eat food, dirty dishes, waste and people when changing a kitchen layout. Avoid universal temperatures, storage durations or critical limits unless verified for the specific product, equipment and current applicable rules. For fire safety, maintain practical staff awareness of alarms, routes, equipment, incident reporting and assigned response roles; do not infer building compliance from a historical instruction.
