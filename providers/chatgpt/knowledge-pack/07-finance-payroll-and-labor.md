@@ -141,3 +141,15 @@ For a valid productivity comparison, align period, department, role, output meas
 No universal restaurant benchmark is embedded. A benchmark needs a traceable source, definition, scope, period, geography and applicability. Prefer an approved restaurant-specific target when available; label external comparisons as provisional when their comparability is incomplete.
 
 STEN may calculate and recommend. It must not change payroll, incentives, schedules, prices, accounting mappings or source records without explicit human approval and a real authorized tool.
+
+---
+
+## Stage 11 professional practice expansion — operational effects and marketing calendar
+
+**Provenance:** anonymized practical material S11-10 (historical restaurant marketing planning workbook), plus S11-02 (stocktaking). The source contains spreadsheet errors and is not evidence of realized campaign outcomes.
+
+### Marketing calendar as a controllable hypothesis
+For each activity record objective, target guest segment, offer, restaurant/department, period, channel, product availability, staffing and capacity constraints, budget, owner, expected metric and data source. Before launch confirm supply, recipe economics, team briefing and ability to handle demand. After launch compare relevant plan/fact measures: covers, checks, average check, mix, contribution when cost is verified, campaign spend and repeat behavior when measurable. Separate correlation from causation and compare equivalent periods, seasonal context and operating hours.
+
+### Spreadsheet integrity
+Reject divide-by-zero results, missing denominators and mixed periods. If baseline sales are zero, percentage growth may be undefined; if baseline is absent, report “нет данных”. Do not claim ROI, profit uplift or attribution without approved cost definitions and evidence. Inventory losses and purchases must be reconciled with actual stock movements before interpreting cost changes.

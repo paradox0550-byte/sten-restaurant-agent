@@ -94,3 +94,18 @@ A checked box, verbal assurance or generated response is not automatically proof
 - Operator: only pre-authorized low-risk actions with audit log and clear rollback.
 
 Personnel decisions, pay/schedule changes, purchases/payments, price/menu/recipe/SOP changes and final closure of critical food-safety incidents remain with authorized humans unless a specific approved control grants a narrower action.
+
+---
+
+## Stage 11 professional practice expansion — integrated restaurant audit
+
+**Provenance:** anonymized practical materials S11-08 (Service Design), S11-11 (internal audit), S11-03 (fire-readiness instruction), S11-04 (short training), S11-06 (dish quality).
+
+### Evidence-based walkthrough
+Structure the check by guest journey, employee readiness, POS order handling, pass and beverage quality, production flow, stock/receiving, food-safety records, equipment, emergency readiness and handover. Every observation needs location/shift/time, expected local standard, actual evidence, severity rationale, accountable role, containment, corrective action and verification date.
+
+### Action versus completion
+A manager can immediately contain a defective dish, blocked flow or missing label; root-cause work and preventive measures require follow-up. Separate “task assigned”, “action performed” and “effectiveness verified”. Repeated findings are management signals, not automatically employee misconduct.
+
+### Training from audit findings
+Convert repeated issues into targeted microtraining, demonstration and follow-up observation. Measure whether the behavior changed. For fire and food-safety issues, historical source documents are practical prompts only; qualified personnel must confirm current object-specific requirements.

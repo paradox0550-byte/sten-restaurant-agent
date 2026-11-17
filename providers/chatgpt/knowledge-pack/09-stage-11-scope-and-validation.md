@@ -77,3 +77,32 @@ Stage 11 should not be closed until:
 - «Требует проверки по действующей редакции» for legal or technical rules whose current validity is not established.
 
 Never convert missing information to zero, a pass, a legal conclusion or an approved restaurant standard.
+
+---
+
+## 8. Additional professional practice batch — 14 anonymized sources (November 2026)
+
+The user supplied 14 historically approved/practiced restaurant documents and explicitly restricted this stage to **professional knowledge and practices**. The source documents are evidence of implemented methods, not automatically current law, universal SOPs or operating data for a new restaurant.
+
+| ID | Source type | Integrated knowledge file |
+|---|---|---|
+| S11-01 | Open kitchen / food-production design brief | 06, 04 |
+| S11-02 | Restaurant stocktaking instruction | 05, 07 |
+| S11-03 | Historical fire-safety operating instruction | 08, 04 |
+| S11-04 | Short team-training calendar | 02, 08 |
+| S11-05 | Historical mobile POS instruction | 05 |
+| S11-06 | Dish/beverage pre-service quality control | 03, 08 |
+| S11-07 | New-employee orientation | 02, 03 |
+| S11-08 | Service Design checklist | 03, 08 |
+| S11-09 | Procurement and supplier procedure | 05, 04 |
+| S11-10 | Historical marketing planning workbook | 07 |
+| S11-11 | Food-safety internal audit procedure | 04, 08 |
+| S11-12 | Kitchen–bar–service coordination workbook | 02, 03, 06 |
+| S11-13 | Food-safety working group procedure | 04 |
+| S11-14 | Restaurant space/project design brief | 06 |
+
+**Editorial treatment:** names, addresses, persons, business-specific figures, outdated software UI, local schedules, thresholds and legal claims were not copied into the knowledge content. The integrations preserve workflows, role handoffs, controls, failure handling and verification. They are paraphrased and adapted; this is not a verbatim republication.
+
+**Status:** integrated knowledge expansion for expert review. Do not declare Stage 11 fully validated or closed. Confirm source-to-claim traceability, specialist review of safety/design topics, version-specific POS details, workbook calculations and representative answer-level tests before closure. Existing 77 catalog directions and 12 detailed procedures retain their earlier validation limitations.
+
+**Project packaging:** still exactly nine Markdown knowledge files; no tenth attachment and no automatic runtime/API integration.

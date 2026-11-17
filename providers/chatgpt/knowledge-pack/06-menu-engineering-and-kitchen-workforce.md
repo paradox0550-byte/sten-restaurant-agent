@@ -102,3 +102,18 @@ This is a modelled requirement, not a roster or legal staffing instruction. A ma
 ## C. Shared menu/labor dependency
 
 Menu changes that alter volume, portion, recipe, batch size or station routing should trigger workload recalculation. Financial attractiveness does not prove operational feasibility. Keep contribution, guest value, quality, waste and production bottlenecks in one decision view.
+
+---
+
+## Stage 11 professional practice expansion — kitchen and open-kitchen design
+
+**Provenance:** anonymized practical materials S11-01 and S11-14 (project briefs for restaurant production and guest space), S11-12 (cross-functional flow). These are design decision patterns, not ready-made engineering specifications.
+
+### Design from menu and throughput
+Before recommending layout or equipment, obtain menu/production routing, batch sizes, peak orders by interval, staffing and skill mix, equipment capacities, raw/finished/dirty/waste flows, storage requirements, service model and maintenance access. Map each menu family to station, process steps, handoffs and required utilities. Validate the design against peak workload and staff movement, not only floor area or visuals.
+
+### Open kitchen
+Treat it as both production space and a visible service touchpoint. Evaluate sightlines, cleanliness, noise, heat, odors, extraction, guest separation, pass design, team communication and interruption risk. Do not sacrifice safe production flow for appearance. Request specialist review of ventilation, fire protection, building services and food-safety applicability; do not derive a compliant design from the old brief.
+
+### Review gates
+Use staged decisions: concept and process flows → layout alternatives → equipment/utilities schedule → operational simulation at peak → specialist review → documentation and cost reconciliation → commissioning and observation. Track unresolved assumptions, owner and evidence. Never carry forward historical equipment brands, project durations, dimensions or temperature setpoints as universal specifications.
