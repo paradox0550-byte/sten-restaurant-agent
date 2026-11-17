@@ -66,7 +66,10 @@ export function validateWorkbookFormulas(workbook, { rules = [], requireRulesFor
     }
   }
 
-  if (formulaCells.length > 0 && rules.length === 0) {\n    issues.push({ severity: "warning", code: "NO_VALIDATION_RULES", message: "Formula cells were detected, but no approved formula rules were supplied." });\n  }\n\n  const errors = issues.filter((issue) => issue.severity === "error").length;
+  if (formulaCells.length > 0 && rules.length === 0) {
+    issues.push({ severity: "warning", code: "NO_VALIDATION_RULES", message: "Formula cells were detected, but no approved formula rules were supplied." });
+  }
+\n  const errors = issues.filter((issue) => issue.severity === "error").length;
   const warnings = issues.filter((issue) => issue.severity === "warning").length;
   return { status: errors ? "failed" : warnings ? "passed_with_warnings" : "passed", formulaCount: formulaCells.length, checkedRuleCount: rules.length, errorCount: errors, warningCount: warnings, issues };
 }
