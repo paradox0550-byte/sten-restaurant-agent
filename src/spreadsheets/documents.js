@@ -33,7 +33,7 @@ export async function exportDocxBuffer({ title = "STEN report", sheets }) {
   return Packer.toBuffer(new Document({ sections: [{ children }] }));
 }
 
-export async function exportPdfBuffer({ title = "STEN report", sheets }) {
+export async function exportPdfBuffer({ title = "STEN report", sheets, fontPath }) {
   const data = toRows(sheets);
   const doc = new PDFDocument({ size: "A4", margin: 36, layout: "landscape", info: { Title: title, Author: "STEN" } });
   const chunks = [];
@@ -42,6 +42,7 @@ export async function exportPdfBuffer({ title = "STEN report", sheets }) {
     doc.on("end", () => resolve(Buffer.concat(chunks)));
     doc.on("error", reject);
   });
+  if (fontPath) doc.font(fontPath);
   doc.fontSize(18).text(title, { underline: true });
   for (const sheet of data) {
     doc.moveDown().fontSize(14).text(sheet.name);
