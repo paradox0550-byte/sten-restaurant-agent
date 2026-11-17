@@ -34,6 +34,7 @@ export function registerSpreadsheetTools({
   artifacts,
   getGoogleAccessToken,
   getYandexDiskAccessToken,
+  getPdfFontPath,
   fetchImpl = fetch,
 }) {
   if (!registry || typeof registry.register !== "function") throw new TypeError("A compatible STEN ToolRegistry is required.");
@@ -97,7 +98,7 @@ export function registerSpreadsheetTools({
     schema: { type: "object", required: ["title", "sheets"], additionalProperties: false, properties: { title: { type: "string" }, sheets: { type: "array" } } },
     execute: async ({ tenantId, title, sheets }) => {
       requireSheets(sheets);
-      const buffer = await exportPdfBuffer({ title, sheets });
+      const buffer = await exportPdfBuffer({ title, sheets, fontPath: typeof getPdfFontPath === "function" ? await getPdfFontPath(tenantId) : undefined });
       return saveArtifact(artifacts, tenantId, safeName(title, "sten-report") + ".pdf", PDF_MIME, buffer);
     },
   });
