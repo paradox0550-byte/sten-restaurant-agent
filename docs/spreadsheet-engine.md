@@ -56,6 +56,6 @@ The Yandex adapter uses the official Yandex Disk REST API upload-link flow, then
 
 - No credentials are embedded in the repository.
 - OAuth tokens are injected only at call time and are never returned or logged.
-- The host must enforce tenant scope and user consent before cloud writes.
+- The host must enforce tenant scope and user consent before cloud writes. To make spreadsheet operations callable by the agent runtime, register the exported `registerSpreadsheetTools({ registry, artifacts, getGoogleAccessToken, getYandexDiskAccessToken, getPdfFontPath })` helper. The artifact store must enforce tenant-scoped `save({ tenantId, name, mimeType, buffer })` and `get({ tenantId, artifactId })`; token/font resolvers are trusted host callbacks and must never be model-controlled.
 - Cloud calls use explicit adapters and can be disabled by omitting credentials.
 - Local file generation does not itself upload or share a document.
