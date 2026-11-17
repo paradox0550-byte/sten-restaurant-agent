@@ -97,7 +97,7 @@ test("agent tools create and read tenant-scoped XLSX artifacts through the runti
   const store = new Map();
   const artifacts = {
     async save({ tenantId, name, mimeType, buffer }) {
-      const id = `${tenantId}:artifact-1`;
+      const id = "artifact-1";
       store.set(id, { name, mimeType, buffer });
       return { id, name };
     },
