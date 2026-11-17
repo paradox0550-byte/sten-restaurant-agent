@@ -67,6 +67,7 @@ The capture module currently runs against the injected development/test memory a
 Requires Node.js 18+.
 
 ```bash
+npm install
 npm test
 npm run validate:evidence
 npm run validate:package
