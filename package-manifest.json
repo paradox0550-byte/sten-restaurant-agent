@@ -103,7 +103,8 @@
     "spreadsheet_formula_integrity_audit",
     "docx_pdf_document_export",
     "google_sheets_api_v4_adapter",
-    "yandex_disk_xlsx_upload_adapter"
+    "yandex_disk_xlsx_upload_adapter",
+    "permission_gated_spreadsheet_agent_tools"
   ],
   "not_claimed": [
     "live_legal_database",
@@ -290,6 +291,7 @@
     "src/spreadsheets/formula-validator.js",
     "src/spreadsheets/google-sheets.js",
     "src/spreadsheets/index.js",
+    "src/spreadsheets/tools.js",
     "src/spreadsheets/workbook.js",
     "src/spreadsheets/yandex-disk.js",
     "src/workflow/cycle.js",
@@ -331,7 +333,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 127,
+    "total_expected": 128,
     "command": "npm test",
     "runtime_layer": 15,
     "retrieval_layer": 16,
@@ -342,7 +344,7 @@
     "knowledge_quality": 2,
     "director_calendar": 2,
     "business_writing": 12,
-    "spreadsheet_engine": 9
+    "spreadsheet_engine": 10
   },
   "stage_status": {
     "1": "integrated_assistant_identity_and_governance",
