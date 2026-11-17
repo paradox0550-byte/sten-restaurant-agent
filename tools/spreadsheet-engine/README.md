@@ -1,6 +1,6 @@
 # STEN Spreadsheet & Document Engine
 
-The executable spreadsheet/document module is in `src/spreadsheets/`.
+The executable spreadsheet/document module is in `src/spreadsheets/`. Hosts can expose its operations to the agent through `registerSpreadsheetTools()` and a tenant-aware artifact store; see `docs/spreadsheet-engine.md`.
 
 ## Capabilities
 
