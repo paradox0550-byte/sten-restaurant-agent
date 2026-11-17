@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   createWorkbook, readXlsxBuffer, writeXlsxBuffer, validateWorkbookFormulas,
-  exportDocxBuffer, exportPdfBuffer, createGoogleSpreadsheet, readGoogleSheetRange, uploadToYandexDisk,
+  exportDocxBuffer, exportPdfBuffer, createGoogleSpreadsheet, readGoogleSheetRange, uploadToYandexDisk, registerSpreadsheetTools,
 } from "../src/spreadsheets/index.js";
 
 test("XLSX workbook can be generated and read with formulas preserved", async () => {
@@ -90,4 +90,40 @@ test("Yandex Disk adapter requests upload link, uploads bytes and verifies metad
 test("Yandex Disk adapter rejects empty files and missing tokens", async () => {
   await assert.rejects(() => uploadToYandexDisk({ accessToken: "", path: "/x", content: Buffer.from("x") }), /OAuth token/);
   await assert.rejects(() => uploadToYandexDisk({ accessToken: "token", path: "/x", content: Buffer.alloc(0) }), /must not be empty/);
+});
+
+test("agent tools create and read tenant-scoped XLSX artifacts through the runtime registry", async () => {
+  const { ToolRegistry } = await import("../src/runtime/index.js");
+  const store = new Map();
+  const artifacts = {
+    async save({ tenantId, name, mimeType, buffer }) {
+      const id = `${tenantId}:artifact-1`;
+      store.set(id, { name, mimeType, buffer });
+      return { id, name };
+    },
+    async get({ tenantId, artifactId }) {
+      return store.get(`${tenantId}:${artifactId}`) ?? null;
+    },
+  };
+  const registry = registerSpreadsheetTools({ registry: new ToolRegistry(), artifacts });
+  const created = await registry.execute({
+    name: "spreadsheet.create_xlsx",
+    tenantId: "restaurant-a",
+    permissions: ["spreadsheet.create_xlsx"],
+    args: { title: "Shift report", sheets: [{ name: "Summary", rows: [["Revenue"], [1000]] }] },
+  });
+  assert.equal(created.artifactId, "restaurant-a:artifact-1");
+  const read = await registry.execute({
+    name: "spreadsheet.read_xlsx",
+    tenantId: "restaurant-a",
+    permissions: ["spreadsheet.read_xlsx"],
+    args: { artifactId: created.artifactId },
+  });
+  assert.equal(read.sheets[0].rows[1][0], 1000);
+  await assert.rejects(() => registry.execute({
+    name: "spreadsheet.read_xlsx",
+    tenantId: "restaurant-b",
+    permissions: ["spreadsheet.read_xlsx"],
+    args: { artifactId: created.artifactId },
+  }), /Artifact not found/);
 });
