@@ -25,7 +25,7 @@ test("XLSX reader rejects non-XLSX input", async () => {
 test("formula validator checks approved formula and independent result", () => {
   const workbook = createWorkbook({ sheets: [{ name: "Calc", rows: [["Hours", "Rate", "Pay"], [10, 500, { formula: "B2*A2", result: 5000 }]] }] });
   const result = validateWorkbookFormulas(workbook, {
-    rules: [{ sheet: "Calc", cell: "C2", expectedFormula: "A2*B2", expectedValue: 5000 }],
+    rules: [{ sheet: "Calc", cell: "C2", expectedFormula: "B2*A2", expectedValue: 5000 }],
     requireRulesForEveryFormula: true,
   });
   assert.equal(result.status, "passed");
