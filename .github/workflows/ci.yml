@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate evidence registry
+      - name: Install pinned runtime dependencies\n        run: npm install --no-audit --no-fund\n      - name: Validate evidence registry
         run: npm run validate:evidence
       - name: Verify package and manifest integrity
         run: npm run validate:package
