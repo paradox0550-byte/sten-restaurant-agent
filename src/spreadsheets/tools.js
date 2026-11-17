@@ -66,7 +66,7 @@ export function registerSpreadsheetTools({
     name: "spreadsheet.validate_formulas",
     description: "Audit XLSX formula integrity against approved formulas and independent expected values.",
     schema: { type: "object", required: ["artifactId", "rules"], additionalProperties: false, properties: { artifactId: { type: "string" }, rules: { type: "array" }, requireRulesForEveryFormula: { type: "boolean" } } },
-    execute: async ({ tenantId, artifactId, rules, requireRulesForEveryFormula = false }) => {
+    execute: async ({ tenantId, artifactId, rules, requireRulesForEveryFormula = true }) => {
       const artifact = await artifacts.get({ tenantId, artifactId });
       if (!artifact?.buffer) throw new Error("Artifact not found for this tenant.");
       const parsed = await readXlsxBuffer(artifact.buffer);
