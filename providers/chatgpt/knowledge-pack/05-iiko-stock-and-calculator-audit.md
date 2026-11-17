@@ -105,3 +105,18 @@ Do not ask for all ten report groups before inspecting the first supplied file.
 - Do not assume all manual documents are invalid without the approved workflow.
 - Do not use source-specific 23:00 or 23:59 times unless confirmed for the current setup.
 - This checklist does not replace accounting reconciliation, stocktaking or an authorized accountant's sign-off.
+
+---
+
+## Stage 11 professional practice expansion — POS orders, stocktake and suppliers
+
+**Provenance:** anonymized practical materials S11-05 (historical mobile POS workflow), S11-02 (stocktake), S11-09 (procurement). Interface screenshots and local inventory schedules are not current software documentation.
+
+### Order integrity independent of POS brand
+Before sending: confirm table/guest and order ownership, exact items, quantities, modifiers, allergens or restrictions communicated by the guest, courses and agreed timing. After sending: verify correct routing and changes; follow permissioned procedures for cancellations, discounts, split bills and corrections. Never claim a particular screen or button exists in the user's software version without checking it.
+
+### Inventory control
+Prepare a frozen or reconciled cutoff, complete goods movements, identify counting zones and units, assign counters and independent review, separate open containers and sealed packs, and prevent double counting or unrecorded movements. Count actual stock, then compare to system quantities using conversion factors and recorded movements. Investigate variance by item, unit, location and document trail; document approved corrections and recheck. A historical practice of twice-monthly counting or counting on a particular weekday is not a universal requirement.
+
+### Supplier-to-stock chain
+Forecast demand using menu, expected load and existing stock; approve purchase against authorization; evaluate supplier reliability and product specifications; check deliveries for identity, quantity, condition and traceability; register acceptance or discrepancy; route approved stock to correct storage; monitor recurring claims. The lowest purchase price is not automatically the lowest total cost. Keep physical quantity variance distinct from cost variance.
