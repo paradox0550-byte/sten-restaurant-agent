@@ -98,13 +98,17 @@
     "chatgpt_project_knowledge_consolidation_under_25_attachments",
     "stage_11_management_service_food_safety_and_iiko_source_expansion",
     "stage_11_source_expansion_evaluation_cases",
-    "source_linked_management_service_food_safety_and_iiko_knowledge"
+    "source_linked_management_service_food_safety_and_iiko_knowledge",
+    "xlsx_workbook_generation_and_reading",
+    "spreadsheet_formula_integrity_audit",
+    "docx_pdf_document_export",
+    "google_sheets_api_v4_adapter",
+    "yandex_disk_xlsx_upload_adapter"
   ],
   "not_claimed": [
     "live_legal_database",
     "production_api",
     "hosted_memory_store",
-    "xlsx_parser",
     "provider_deployment",
     "legal_compliance_certification",
     "production_persistent_memory",
@@ -134,7 +138,11 @@
     "persistent_style_learning",
     "external_task_assignment",
     "current_sanitary_legal_compliance_certification",
-    "live_iiko_audit_or_document_mutation"
+    "live_iiko_audit_or_document_mutation",
+    "arbitrary_excel_formula_execution",
+    "google_oauth_consent_flow",
+    "native_yandex_spreadsheet_cell_api",
+    "production_cloud_connector_deployment"
   ],
   "files": [
     ".github/workflows/ci.yml",
@@ -170,6 +178,7 @@
     "docs/sector-domain-matrix-evaluation.md",
     "docs/semantic-ranking-conflicts.md",
     "docs/source-intake-checklist.md",
+    "docs/spreadsheet-engine.md",
     "docs/stage-11-kitchen-workforce-planning.md",
     "docs/stage-11-menu-engineering.md",
     "docs/stage-11-validation.md",
@@ -277,6 +286,12 @@
     "src/runtime/tenant-memory.js",
     "src/runtime/tool-registry.js",
     "src/service/recovery.js",
+    "src/spreadsheets/documents.js",
+    "src/spreadsheets/formula-validator.js",
+    "src/spreadsheets/google-sheets.js",
+    "src/spreadsheets/index.js",
+    "src/spreadsheets/workbook.js",
+    "src/spreadsheets/yandex-disk.js",
     "src/workflow/cycle.js",
     "src/workflow/index.js",
     "src/workflow/status.js",
@@ -301,6 +316,7 @@
     "tests/retrieval-semantic.test.js",
     "tests/retrieval.test.js",
     "tests/runtime.test.js",
+    "tests/spreadsheets.test.js",
     "tests/workflow.test.js",
     "tests/writing.test.js",
     "tools/README.md",
@@ -309,12 +325,13 @@
     "tools/calculators/labor/productivity.js",
     "tools/calculators/menu/engineering.js",
     "tools/calculators/service/recovery.js",
-    "tools/excel-analysis/README.md"
+    "tools/excel-analysis/README.md",
+    "tools/spreadsheet-engine/README.md"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 118,
+    "total_expected": 127,
     "command": "npm test",
     "runtime_layer": 15,
     "retrieval_layer": 16,
@@ -324,7 +341,8 @@
     "procedures_depth": 3,
     "knowledge_quality": 2,
     "director_calendar": 2,
-    "business_writing": 12
+    "business_writing": 12,
+    "spreadsheet_engine": 9
   },
   "stage_status": {
     "1": "integrated_assistant_identity_and_governance",
