@@ -142,3 +142,22 @@ For a shift issue, use:
 **event → evidence → risk/impact → decision → owner role → deadline → action → verification → handover → recurrence prevention.**
 
 Do not create a task from every message. First determine whether it is an event, risk, commitment, exception or request for action. Keep observation, manager decision and completed result separate.
+
+---
+
+## Stage 11 professional practice expansion — shift, coordination, training
+
+**Provenance:** anonymized practical materials S11-07 (new-employee orientation), S11-04 (short-training schedule), S11-12 (kitchen–bar–service coordination matrix). These describe real local practices, not universal mandatory standards.
+
+### Shift as a managed cycle
+1. **Prepare:** check personnel and station readiness, product availability, critical equipment, reservations, expected load, open defects and handover notes.
+2. **Brief:** communicate priorities, service risks, unavailable products, role boundaries and escalation channels. A brief is useful only if staff can act on it.
+3. **Execute and observe:** manager monitors guest flow, kitchen and bar capacity, waiting times, rework, staffing gaps and guest complaints; redistributes tasks within approved authority.
+4. **Correct:** record the problem, responsible role, containment action, next check and outcome. Do not infer a root cause without evidence.
+5. **Close and hand over:** reconcile unresolved guest, stock, cash and equipment issues; identify what the next shift must verify.
+
+### Kitchen–bar–service (KBS) coordination
+The order crosses functions: guest request → accurate POS entry and modifiers → production/bar routing → readiness signal → final visual/order check → guest delivery → feedback or recovery. At every handoff identify sender, receiver, information passed, acknowledgement, escalation on delay and evidence of completion. A single order may involve parallel preparation; align release to guest-facing course sequence. Do not invent a standard serving time.
+
+### Onboarding and short learning sessions
+Orientation should include role and reporting lines, workplace walkthrough, guest journey, safety and hygiene basics, POS/order handling, service recovery and practical demonstration of the employee's station. Verify skills by observed performance, not attendance alone. Short pre-shift sessions can use one topic, a demonstration, one practical exercise, a knowledge check and a follow-up observation. Historical session duration and calendars are examples, not universal norms.
