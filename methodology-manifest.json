@@ -2,16 +2,78 @@
   "package": "STEN",
   "version": "0.5.0",
   "methodology_domains": [
+    "director_management",
     "finance",
+    "food_safety",
     "labor_payroll",
+    "legal_evidence",
+    "management",
     "menu_engineering",
+    "people_management",
+    "production",
+    "purchasing",
+    "research",
     "restaurant_operations",
     "service",
-    "management",
-    "legal_evidence",
-    "research"
+    "stock_inventory"
   ],
   "source_policy": "anonymized_generalized",
   "integrity": "No source = no fact; Missing != zero",
-  "status": "working-core"
+  "status": "working-core_methodology_prototypes_pending_specialist_validation",
+  "methodologies": [
+    {
+      "id": "method.financial-control",
+      "path": "knowledge/methodologies/financial-control.md",
+      "status": "draft_for_finance_expert_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.fot-labor-control",
+      "path": "knowledge/methodologies/fot-and-labor-control.md",
+      "status": "draft_for_hr_payroll_expert_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.stock-control",
+      "path": "knowledge/methodologies/stock-control.md",
+      "status": "draft_for_inventory_and_accounting_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.purchasing-control",
+      "path": "knowledge/methodologies/purchasing-control.md",
+      "status": "draft_for_procurement_expert_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.production-control",
+      "path": "knowledge/methodologies/production-control.md",
+      "status": "draft_for_chef_and_food-safety_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.service-management",
+      "path": "knowledge/methodologies/service-management.md",
+      "status": "draft_for_service_expert_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.safety-compliance",
+      "path": "knowledge/methodologies/safety-and-compliance.md",
+      "status": "draft_for_safety_and_legal_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.people-management",
+      "path": "knowledge/methodologies/people-management.md",
+      "status": "draft_for_hr_and_operations_review",
+      "version": "0.1.0"
+    },
+    {
+      "id": "method.director-management-system",
+      "path": "knowledge/methodologies/director-management-system.md",
+      "status": "draft_for_director_and_owner_review",
+      "version": "0.1.0"
+    }
+  ]
 }
