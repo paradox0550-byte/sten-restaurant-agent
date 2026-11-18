@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { calculateRequiredHours, calculateKitchenSectionStaffing } from "../src/labor/productivity.js";
+import { calculateRequiredHours, calculateKitchenSectionStaffing, calculateLaborVariance } from "../src/labor/productivity.js";
 import { classifyABC, calculateContribution } from "../src/menu/engineering.js";
 import { createRecoveryCase, markRecoveryCompleted, verifyRecovery } from "../src/service/recovery.js";
 
