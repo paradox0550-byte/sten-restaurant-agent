@@ -3,18 +3,18 @@
  * Units, time standards, utilization and minimum coverage must be supplied
  * and approved by the operator. These outputs are planning estimates, not rosters.
  */
-export function calculateRequiredHours({ items, coefficients, unitsPerLaborHour }) {
+export function calculateRequiredHours({ items, coefficients, unitsPerLaborHour, emptyDemandConfirmed = false }) {
   if (!Array.isArray(items) || !Array.isArray(coefficients)) {
     return { status: "unavailable", reason: "missing_items_or_coefficients" };
   }
-  if (!Number.isFinite(unitsPerLaborHour) || unitsPerLaborHour <= 0) {
+  if (items.length === 0 && emptyDemandConfirmed !== true) {\n    return { status: "unavailable", reason: "empty_workload_requires_explicit_zero_demand_confirmation" };\n  }\n  if (!Number.isFinite(unitsPerLaborHour) || unitsPerLaborHour <= 0) {
     return { status: "unavailable", reason: "missing_or_invalid_productivity_standard" };
   }
-  const coefficientMap = new Map(coefficients.map(x => [x.itemId, x.unitsPerItem]));
+  if (coefficients.some(x => typeof x?.itemId !== "string" || !x.itemId.trim() ||\n      !Number.isFinite(x.unitsPerItem) || x.unitsPerItem <= 0) ||\n      new Set(coefficients.map(x => x.itemId)).size !== coefficients.length) {\n    return { status: "unavailable", reason: "invalid_or_duplicate_item_coefficients" };\n  }\n  const coefficientMap = new Map(coefficients.map(x => [x.itemId, x.unitsPerItem]));
   let workloadUnits = 0;
   for (const item of items) {
     const coefficient = coefficientMap.get(item.itemId);
-    if (!Number.isFinite(item.quantity) || !Number.isFinite(coefficient)) {
+    if (typeof item?.itemId !== "string" || !item.itemId.trim() ||\n        !Number.isFinite(item.quantity) || item.quantity < 0 || !Number.isFinite(coefficient)) {
       return { status: "unavailable", reason: "missing_quantity_or_item_coefficient" };
     }
     workloadUnits += item.quantity * coefficient;
@@ -109,7 +109,7 @@ export function calculateKitchenSectionStaffing({
 }
 
 export function calculateLaborVariance({ actualHours, requiredHours }) {
-  if (!Number.isFinite(actualHours) || !Number.isFinite(requiredHours)) {
+  if (!Number.isFinite(actualHours) || !Number.isFinite(requiredHours) || actualHours < 0 || requiredHours < 0) {
     return { status: "unavailable", reason: "missing_actual_or_required_hours" };
   }
   return {
