@@ -81,13 +81,15 @@
       "title": "Регламент ресторана",
       "source_type": "internal_operating_regulation",
       "evidence_class": "PRACTICE",
-      "scope": "specific restaurant chain",
-      "date_status": "not_verified; examples within the document include 2012 dates",
-      "locator": "DOC; contents cover concepts, operations, production and sales, safety, records, cash, payroll, procurement, POS, audits, marketing, delivery, HR, facilities and appendices",
+      "scope": "specific restaurant chain; fast-food format",
+      "date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+      "locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
       "limitations": [
-        "Historical and chain-specific; contains personal names, addresses, suppliers, internal contacts and software procedures excluded from graph.",
-        "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
-        "Legacy system instructions are not portable implementation guidance."
+        "Internal corporate document, not a universal industry standard.",
+        "Cover identifies an edition date of 01.09.2025; signature/approval status and current validity were not independently confirmed.",
+        "Document includes legacy dates, historical system instructions and organization-specific roles, limits, forms and workflows; each item requires current local validation.",
+        "Legal, tax, payroll, employment and food-safety statements require current official-source review for the relevant jurisdiction.",
+        "Personal names, addresses, supplier details, internal contacts and corporate identifiers must not be reproduced in generalized methodology."
       ]
     },
     {
