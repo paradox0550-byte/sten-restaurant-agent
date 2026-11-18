@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Карта 36 направлений управления ресторанным бизнесом",
+  "purpose": "Каноническая предметная карта ресторанного управления. Направления являются верхним уровнем таксономии, не перечнем файлов или готовых SOP.",
+  "decision_date": "2026-11-19",
+  "count": 36,
+  "domains": [
+    {
+      "id": "strategy_business_model",
+      "number": 1,
+      "name": "Стратегия и бизнес-модель",
+      "description": "Цели, позиционирование, формат, конкурентные преимущества, модель доходности.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "market_macroeconomics",
+      "number": 2,
+      "name": "Рынок и макроэкономика",
+      "description": "Спрос, покупательная способность, инфляция, ставки, занятость, туризм, сезонность, внешние риски.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "concept_product_identity",
+      "number": 3,
+      "name": "Концепция и продуктовая идентичность",
+      "description": "Идея ресторана, формат, кухня, ценностное предложение, аудитория.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "location_real_estate",
+      "number": 4,
+      "name": "Локация и коммерческая недвижимость",
+      "description": "Трафик, окружение, помещение, аренда, инженерные ограничения, инвестиционная оценка.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "brand_reputation",
+      "number": 5,
+      "name": "Бренд и репутация",
+      "description": "Идентичность, позиционирование, узнаваемость, репутация, публичные коммуникации.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "investment_opening_scaling",
+      "number": 6,
+      "name": "Инвестиции, открытие и масштабирование",
+      "description": "Бизнес-планы, CAPEX, окупаемость, новые проекты, франчайзинг, закрытие и перезапуск.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "guest_psychology",
+      "number": 7,
+      "name": "Психология гостя и потребительское поведение",
+      "description": "Мотивация, ожидания, восприятие ценности, привычки, сегментация.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "guest_journey_hospitality",
+      "number": 8,
+      "name": "Гостевой путь и гостеприимство",
+      "description": "Впечатление от посещения, эмоциональный опыт, забота, персонализация.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "service_standards",
+      "number": 9,
+      "name": "Сервис и стандарты обслуживания",
+      "description": "Встреча, бронирование, обслуживание, расчёт, обратная связь.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "complaints_service_recovery",
+      "number": 10,
+      "name": "Жалобы и восстановление сервиса",
+      "description": "Конфликты, возвраты, компенсации, претензии, предотвращение повторов.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "sales_revenue_management",
+      "number": 11,
+      "name": "Продажи и управление доходностью",
+      "description": "Средний чек, конверсия, загрузка, допродажи, ценообразование.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "marketing_pr_loyalty",
+      "number": 12,
+      "name": "Маркетинг, PR и лояльность",
+      "description": "Продвижение, CRM, повторные визиты, репутационный маркетинг, программы лояльности.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "menu_product_strategy",
+      "number": 13,
+      "name": "Меню и продуктовая стратегия",
+      "description": "Структура меню, ассортимент, сезонность, гастрономическая концепция.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "menu_engineering_pricing",
+      "number": 14,
+      "name": "Меню-инжиниринг и ценообразование",
+      "description": "ABC-анализ, маржинальность, популярность, матрица блюд, корректировка цен.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "kitchen_production",
+      "number": 15,
+      "name": "Кухня и производственные процессы",
+      "description": "Приготовление, технологические карты, нормы, организация рабочих станций.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "bar_beverage",
+      "number": 16,
+      "name": "Бары и напитки",
+      "description": "Алкогольная и безалкогольная карта, рецептуры, себестоимость, барные процессы.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "product_quality_standardization",
+      "number": 17,
+      "name": "Качество и стандартизация продукта",
+      "description": "Органолептика, внешний вид, стабильность, контроль выдачи.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "production_planning_waste",
+      "number": 18,
+      "name": "Производственное планирование и потери",
+      "description": "Заготовки, прогнозирование потребности, списания, отходы, производительность.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "shift_daily_operations",
+      "number": 19,
+      "name": "Управление сменой и ежедневная деятельность",
+      "description": "Открытие, закрытие, передача смены, готовность зон, контроль исполнения.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "hall_guest_areas",
+      "number": 20,
+      "name": "Управление залом и гостевыми зонами",
+      "description": "Готовность залов, посадка, бронирования, очереди, обслуживание.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "procurement_suppliers",
+      "number": 21,
+      "name": "Закупки и поставщики",
+      "description": "Выбор поставщиков, условия, цены, договоры, контроль качества поставок.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "warehouse_inventory",
+      "number": 22,
+      "name": "Склад и товарный учёт",
+      "description": "Приёмка, хранение, инвентаризация, перемещения, списания, остатки.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "logistics_delivery_channels",
+      "number": 23,
+      "name": "Логистика и движение продукции",
+      "description": "Внутренние перемещения, доставка, упаковка, каналы заказов.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "facilities_equipment",
+      "number": 24,
+      "name": "Оборудование, эксплуатация и инфраструктура",
+      "description": "Техническое состояние, ремонты, инженерные системы, обслуживание помещений.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "finance_management_accounting",
+      "number": 25,
+      "name": "Финансы и управленческий учёт",
+      "description": "P&L, ДДС, баланс, EBITDA, прибыльность, финансовая дисциплина.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "budgeting_financial_planning",
+      "number": 26,
+      "name": "Бюджетирование и финансовое планирование",
+      "description": "Бюджеты, прогнозы, план-факт, сценарии, денежные потоки.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "cost_control",
+      "number": 27,
+      "name": "Себестоимость и управление затратами",
+      "description": "Food Cost, Labor Cost, Prime Cost, OPEX, потери, эффективность расходов.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "hr_personnel",
+      "number": 28,
+      "name": "Персонал и кадровое управление",
+      "description": "Штатная структура, подбор, адаптация, кадровое администрирование, удержание.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "team_psychology_leadership",
+      "number": 29,
+      "name": "Психология команды, лидерство и мотивация",
+      "description": "Культура, конфликты, эмоциональный интеллект, делегирование, развитие руководителей.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "labor_planning_payroll",
+      "number": 30,
+      "name": "Планирование труда и оплата",
+      "description": "Графики, ФОТ, производительность, нормы времени, начисления, мотивационные схемы.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "training_development",
+      "number": 31,
+      "name": "Обучение и профессиональное развитие",
+      "description": "Обучение должностям, аттестация, наставничество, кадровый резерв.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "food_safety_sanitation",
+      "number": 32,
+      "name": "Пищевая безопасность и санитария",
+      "description": "HACCP, санитарные процедуры, температурные режимы, прослеживаемость, аллергены.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "law_licensing_compliance",
+      "number": 33,
+      "name": "Право, лицензии и нормативное соответствие",
+      "description": "Трудовое, налоговое, санитарное, алкогольное и потребительское законодательство.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "safety_risk_continuity",
+      "number": 34,
+      "name": "Безопасность и управление рисками",
+      "description": "Охрана труда, пожарная безопасность, безопасность гостей, инциденты, кризисные сценарии.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "digital_systems_analytics",
+      "number": 35,
+      "name": "Цифровые системы и аналитика",
+      "description": "POS, iiko, учётные системы, BI, автоматизация, интеграции, качество данных.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    },
+    {
+      "id": "audit_internal_control",
+      "number": 36,
+      "name": "Аудит, внутренний контроль и улучшение",
+      "description": "Проверки, отклонения, корректирующие действия, контроль исполнения, отчётность.",
+      "classification": "model_defined_management_domain",
+      "source_status": "taxonomy_decision_not_source_claim"
+    }
+  ],
+  "principles": [
+    "Карта охватывает стратегию, рынок, гостя, продукт, операции, финансы, людей, безопасность, технологии и контроль.",
+    "Один процесс может быть связан с несколькими направлениями; у него одно основное направление и дополнительные связи.",
+    "Направления не являются исчерпывающим списком процедур: внутри них создаются процессы, процедуры, инструкции, чек-листы и записи.",
+    "Классификация направлений — проектное решение, а не утверждение, что каждый процесс уже подтверждён источниками.",
+    "Новые направления верхнего уровня добавляются только при выявлении устойчивой самостоятельной области, не покрываемой текущими 36."
+  ]
+}
