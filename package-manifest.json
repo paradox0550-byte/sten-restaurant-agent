@@ -310,6 +310,7 @@
     "tests/knowledge-graph.test.js",
     "tests/knowledge-quality.test.js",
     "tests/labor-menu-service.test.js",
+    "tests/management-methodologies.test.js",
     "tests/multihop-evaluation.test.js",
     "tests/procedures-depth.test.js",
     "tests/retrieval-hybrid.test.js",
@@ -329,7 +330,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 118,
+    "total_expected": 119,
     "command": "npm test",
     "runtime_layer": 15,
     "retrieval_layer": 16,
@@ -339,7 +340,8 @@
     "procedures_depth": 3,
     "knowledge_quality": 2,
     "director_calendar": 2,
-    "business_writing": 12
+    "business_writing": 12,
+    "management_methodologies": 1
   },
   "stage_status": {
     "1": "integrated_assistant_identity_and_governance",
