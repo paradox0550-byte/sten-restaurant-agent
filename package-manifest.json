@@ -194,6 +194,7 @@
     "knowledge/evidence/policy.md",
     "knowledge/evidence/registry.json",
     "knowledge/evidence/schema.json",
+    "knowledge/evidence/source-crosswalk.json",
     "knowledge/evidence/vocabularies.json",
     "knowledge/finance/financial-integrity.md",
     "knowledge/finance/food-labor-prime-cost.md",
