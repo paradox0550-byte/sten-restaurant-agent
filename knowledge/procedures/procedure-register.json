@@ -1,0 +1,1138 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Иерархический реестр операционных процедур ресторана",
+  "purpose": "Разделить библиотеку на уровни сложности и декомпозировать функциональные направления в самостоятельные процессы, процедуры, рабочие инструкции, чек-листы и записи.",
+  "policy": {
+    "hierarchy": "Домен → процесс → процедура → рабочая инструкция/чек-лист → запись/доказательство. Управленческие методики задают правила принятия решений над несколькими процессами, но не заменяют их.",
+    "complexity": "L1–L5 описывают сложность и масштаб ответственности, а не должностной ранг и не качество готовности.",
+    "evidence": "Уровень сложности — предварительная аналитическая классификация. Источник подтверждает только название/иерархию исходного каталога; он не подтверждает готовность SOP.",
+    "decomposition": "Один пункт каталога может распадаться на несколько процедур. Делить, если различаются триггер, исполнитель/владелец, вход, результат, запись, риск или критерий приёмки. Не делить один процесс на искусственные микрошаги без самостоятельного результата.",
+    "readiness": "Inventory-only → source-mapped → procedure-drafted → specialist-reviewed → pilot-verified → approved-local. Не повышать статус за счёт наличия файла или зелёного CI."
+  },
+  "levels": [
+    {
+      "level": 1,
+      "code": "L1_EXECUTION",
+      "name": "Исполнительская операция",
+      "complexity": "Низкая",
+      "definition": "Одна понятная задача в рамках одной роли; короткая линейная последовательность; ограниченный риск; результат проверяется сразу.",
+      "typicalRoles": [
+        "исполнитель смены"
+      ],
+      "requiredEvidence": "Факт выполнения и простая запись/отметка, если она предусмотрена источником.",
+      "approval": "В рамках уже выданных полномочий."
+    },
+    {
+      "level": 2,
+      "code": "L2_STANDARD_PROCEDURE",
+      "name": "Стандартная операционная процедура",
+      "complexity": "Умеренная",
+      "definition": "Повторяемая процедура одной функции/рабочей зоны; несколько шагов, входы, критерии качества, исключения и передача результата.",
+      "typicalRoles": [
+        "специалист зоны",
+        "старший смены"
+      ],
+      "requiredEvidence": "Вход, последовательность, критерии приёмки, результат и запись.",
+      "approval": "Локальное утверждение владельцем функции."
+    },
+    {
+      "level": 3,
+      "code": "L3_COORDINATED_PROCESS",
+      "name": "Координируемый процесс",
+      "complexity": "Повышенная",
+      "definition": "Несколько ролей, зон или систем; есть hand-off, последовательность зависимостей, промежуточные статусы и сверки.",
+      "typicalRoles": [
+        "менеджер смены",
+        "руководители функций"
+      ],
+      "requiredEvidence": "Ответственность на каждом этапе, hand-off, статусы, сверки, эскалации и закрытие.",
+      "approval": "Управляющий/владелец процесса."
+    },
+    {
+      "level": 4,
+      "code": "L4_SPECIALIST_CONTROL",
+      "name": "Специализированный контроль",
+      "complexity": "Высокая",
+      "definition": "Финансовые, кадровые, учётные, технические, пищевые или юридически значимые решения; нужны специальные знания, точные источники, формулы или нормативная применимость.",
+      "typicalRoles": [
+        "профильный специалист",
+        "контролёр",
+        "уполномоченный эксперт"
+      ],
+      "requiredEvidence": "Первичные документы, версия правил, расчёт/критерий, проверка вторым лицом и стоп-условия.",
+      "approval": "Профильный эксперт и уполномоченное лицо; юридические вопросы — по актуальной юрисдикции."
+    },
+    {
+      "level": 5,
+      "code": "L5_MANAGEMENT_SYSTEM",
+      "name": "Управленческая система и решения директора",
+      "complexity": "Системная",
+      "definition": "Межфункциональная/многопериодная задача: стратегия, бюджет, организационная модель, риски, распределение ресурсов, полномочия и оценка результата.",
+      "typicalRoles": [
+        "директор",
+        "операционный руководитель",
+        "собственник"
+      ],
+      "requiredEvidence": "Сводная доказательная картина, альтернативы, сценарии, полномочия, решение, контроль эффекта.",
+      "approval": "По матрице полномочий компании."
+    }
+  ],
+  "domains": [
+    {
+      "id": "management_and_governance",
+      "name": "Управление и контроль",
+      "areas": [
+        "Управленческие процессы"
+      ],
+      "framework": "knowledge/methodologies/director-management-system.md"
+    },
+    {
+      "id": "people_and_labor",
+      "name": "Люди, персонал и труд",
+      "framework": "knowledge/methodologies/people-management.md"
+    },
+    {
+      "id": "finance_and_accounting",
+      "name": "Финансы, касса и учёт",
+      "framework": "knowledge/methodologies/financial-control.md"
+    },
+    {
+      "id": "commercial_and_guest",
+      "name": "Продажи, маркетинг и гостевой опыт",
+      "framework": "knowledge/methodologies/service-management.md"
+    },
+    {
+      "id": "kitchen_and_production",
+      "name": "Кухня, производство и меню",
+      "framework": "knowledge/methodologies/production-control.md"
+    },
+    {
+      "id": "supply_and_stock",
+      "name": "Закупки, поставщики и склад",
+      "framework": "knowledge/methodologies/purchasing-control.md"
+    },
+    {
+      "id": "food_safety_and_facility",
+      "name": "Пищевая безопасность, санитария и объект",
+      "framework": "knowledge/methodologies/safety-and-compliance.md"
+    }
+  ],
+  "source_catalog": {
+    "source_id": "source.audit-process-model",
+    "source_sheet": "БМ",
+    "process_count": 77,
+    "items": [
+      {
+        "process_id": "horeca.a.1-1",
+        "source_code": "1.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Контроль качества",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.1-2",
+        "source_code": "1.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Просмотр видеонаблюдения ресторана",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.1-3",
+        "source_code": "1.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация программы тайный гость",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.1-4",
+        "source_code": "1.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Предоставление отчета по МБП",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-1",
+        "source_code": "2.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Подбор персонала",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-2",
+        "source_code": "2.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Обучение линейных сотрудников, включая правила площадки",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-3",
+        "source_code": "2.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Аттестация линейных сотрудников",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-4",
+        "source_code": "2.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Составление графика выхода сотрудников",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-5",
+        "source_code": "2.5",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация мотивационной программы",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-6",
+        "source_code": "2.6",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация программ корпоративной культуры",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-7",
+        "source_code": "2.7",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация дисциплинарной политики",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.2-8",
+        "source_code": "2.8",
+        "area": "Управленческие процессы",
+        "functional_direction": "Проведение собраний с сотрудниками",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.3-1",
+        "source_code": "3.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Контроль себестоимости продукции и Food Cost",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.3-2",
+        "source_code": "3.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Ведение отчета по кассе",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.3-3",
+        "source_code": "3.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Формирование управленческого отчета ресторана",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.4-1",
+        "source_code": "4.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Подготовка ежемесячных бюджетов и KPI",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.4-2",
+        "source_code": "4.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Управление рентабельностью предприятия",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.4-3",
+        "source_code": "4.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Управление средним чеком и показателями продаж",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.5-1",
+        "source_code": "5.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Проведение рекламных кампаний и конкурсов",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.5-2",
+        "source_code": "5.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Продвижение в социальных сетях",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.5-3",
+        "source_code": "5.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Работа с обратной связью гостей",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.a.5-4",
+        "source_code": "5.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Запуск сезонных специалитетов",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.b.1-1",
+        "source_code": "1.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Приготовление блюд в ресторане",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.b.2-1",
+        "source_code": "2.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа продукции в ресторане",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.b.3-1",
+        "source_code": "3.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа продукции через агрегаторы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.b.3-2",
+        "source_code": "3.2",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа через собственные каналы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.b.4-1",
+        "source_code": "4.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Оплата обязательных платежей арендодателю и отчет по товарообороту",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-1",
+        "source_code": "1.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение запасов сырья",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-2",
+        "source_code": "1.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Приготовление полуфабрикатов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-3",
+        "source_code": "1.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение запасов расходных материалов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-4",
+        "source_code": "1.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Плановое обслуживание оборудования",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-5",
+        "source_code": "1.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Ремонт оборудования",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.1-6",
+        "source_code": "1.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Плановое обновление меню",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-1",
+        "source_code": "2.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Внесение первичных документов в учетную систему",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-2",
+        "source_code": "2.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оплата счетов ресторана",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-3",
+        "source_code": "2.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Сверка взаиморасчетов с контрагентами",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-4",
+        "source_code": "2.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Проведение инвентаризации",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-5",
+        "source_code": "2.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Списание продукции",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-6",
+        "source_code": "2.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Корректировка или аннулирование кассовых чеков",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-7",
+        "source_code": "2.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Начисление и выплата официальной части заработной платы",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-8",
+        "source_code": "2.8",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Расчет и выплата заработной платы",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-9",
+        "source_code": "2.9",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Разнесение и проверка данных бухгалтерского учета",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-10",
+        "source_code": "2.10",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка годовой отчетности государственным органам",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-11",
+        "source_code": "2.11",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка квартальной налоговой отчетности",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-12",
+        "source_code": "2.12",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка периодической отчетности по персоналу",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-13",
+        "source_code": "2.13",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Расчет и уплата налогов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-14",
+        "source_code": "2.14",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Формирование и передача первичной документации",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-15",
+        "source_code": "2.15",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление авансовых отчетов",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-16",
+        "source_code": "2.16",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Хранение архивных документов",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-17",
+        "source_code": "2.17",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Учет основных средств и товарно-материальных ценностей",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-18",
+        "source_code": "2.18",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Привлечение заемного финансирования и лизинга",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-19",
+        "source_code": "2.19",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Ведение кассовых книг и кассовых регистров",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.2-20",
+        "source_code": "2.20",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Учет рабочего времени",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-1",
+        "source_code": "3.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Открытие смены администратором",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-2",
+        "source_code": "3.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Открытие смены старшим поваром",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-3",
+        "source_code": "3.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Закрытие смены старшим поваром",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-4",
+        "source_code": "3.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Закрытие смены администратором",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-5",
+        "source_code": "3.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль внешнего вида и униформы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-6",
+        "source_code": "3.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение сотрудников униформой",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.3-7",
+        "source_code": "3.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Допуск подрядчиков к ремонтным работам",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-1",
+        "source_code": "4.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Генеральная уборка",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-2",
+        "source_code": "4.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль состояния и замена фритюрного масла",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-3",
+        "source_code": "4.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль температур и ведение записей",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-4",
+        "source_code": "4.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль состояния здоровья персонала",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-5",
+        "source_code": "4.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Отбор и передача смывов и проб",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-6",
+        "source_code": "4.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Дезинфекция и борьба с вредителями",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-7",
+        "source_code": "4.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Прослеживаемость и электронный ветеринарный документооборот",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-8",
+        "source_code": "4.8",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Регистрация чрезвычайных ситуаций и инцидентов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-9",
+        "source_code": "4.9",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль обязательных медицинских документов персонала",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.4-10",
+        "source_code": "4.10",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Охрана труда и пожарная безопасность",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.5-1",
+        "source_code": "5.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Хранение учредительных и корпоративных документов",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.5-2",
+        "source_code": "5.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Заключение и сопровождение договоров",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.5-3",
+        "source_code": "5.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обслуживание фискального оборудования и накопителей",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.5-4",
+        "source_code": "5.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Претензионная работа по некачественным товарам и услугам",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.6-1",
+        "source_code": "6.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление приема на работу",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.6-2",
+        "source_code": "6.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление прекращения трудовых отношений",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      },
+      {
+        "process_id": "horeca.c.6-3",
+        "source_code": "6.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Документальное сопровождение кадровых событий",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_process_title_and_risk_profile",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Название и принадлежность перенесены из исходного каталога; уровень сложности — предлагаемая классификация, не факт источника. Не является готовой SOP."
+      }
+    ]
+  },
+  "existing_procedure_cards": {
+    "file": "knowledge/procedures/operational-procedures.json",
+    "count": 12,
+    "items": [
+      {
+        "procedure_id": "proc.shift-readiness-and-briefing",
+        "title": "Подготовка смены и короткая планёрка",
+        "domain": "operations_and_shift_control",
+        "source_ids": [
+          "source.guest-service-standard-2025"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Ресторанный сервис с зональной работой официантов; адаптировать под формат и график объекта.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.guest-journey-and-order",
+        "title": "Путь гостя и приём заказа",
+        "domain": "service_and_hospitality",
+        "source_ids": [
+          "source.guest-service-standard-2025"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Зал с обслуживанием за столом; для counter service, buffet, QSR и доставки нужна отдельная адаптация.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.service-delivery-and-delay",
+        "title": "Сопровождение заказа и информирование о задержке",
+        "domain": "service_and_hospitality",
+        "source_ids": [
+          "source.guest-service-standard-2025"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Ресторанное обслуживание за столом; последовательность подачи корректируется по пожеланию гостя и концепции.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.bill-and-payment",
+        "title": "Расчёт гостя",
+        "domain": "service_and_hospitality",
+        "source_ids": [
+          "source.guest-service-standard-2025"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Только после адаптации к действующим кассовым процедурам, POS и законодательству конкретной юрисдикции.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.guest-complaint-recovery",
+        "title": "Жалоба гостя и восстановление сервиса",
+        "domain": "guest_experience_and_recovery",
+        "source_ids": [
+          "source.guest-service-standard-2025"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Все форматы с гостевым взаимодействием; полномочия по компенсациям устанавливаются локально.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.appearance-readiness",
+        "title": "Проверка внешнего вида и готовности сотрудника",
+        "domain": "leadership_training_and_culture",
+        "source_ids": [
+          "source.appearance-training"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Только после утверждения локального стандарта и проверки применимого трудового, антидискриминационного и иного права; спорные ограничения исходника не переносятся автоматически.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.director-operating-control",
+        "title": "Планирование и ежедневный контроль директора",
+        "domain": "strategy_and_multiunit_management",
+        "source_ids": [
+          "source.operational-management-training",
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 5,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Управление рестораном; график и роли адаптируются к структуре оператора.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.front-of-house-visual-walk",
+        "title": "Визуальный обход гостевой зоны",
+        "domain": "operations_and_shift_control",
+        "source_ids": [
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Это конкретная практика одного оператора; время, содержание и срок хранения не являются отраслевым нормативом.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.monthly-stocktake",
+        "title": "Ежемесячная инвентаризация запасов и денежных средств",
+        "domain": "inventory_and_warehouse",
+        "source_ids": [
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Историческая корпоративная процедура; сверить с действующей учётной политикой, POS/ERP, бухгалтерским регламентом и местным правом.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.monthly-sanitation-deep-clean",
+        "title": "Генеральная уборка / санитарный час",
+        "domain": "food_safety_and_hygiene",
+        "source_ids": [
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Только как историческая практика конкретного оператора; фактическая программа санитарной уборки определяется оценкой рисков, технологией и актуальными требованиями юрисдикции.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.staff-schedule-and-timekeeping",
+        "title": "Планирование графика и учёт рабочего времени",
+        "domain": "workforce_staffing_and_payroll",
+        "source_ids": [
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Только как описанная корпоративная практика; нормы рабочего времени, согласование графиков и обработка данных требуют проверки по актуальному трудовому праву.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      },
+      {
+        "procedure_id": "proc.delivery-order-control",
+        "title": "Контроль доставки и самовывоза",
+        "domain": "delivery_and_digital_channels",
+        "source_ids": [
+          "source.restaurant-regulation"
+        ],
+        "complexity_level": 3,
+        "maturity": "source_grounded_procedure_draft",
+        "approval_status": "specialist_review_open",
+        "source_scope": "Историческая модель конкретной сети; не переносить целевые минуты на другие форматы без анализа маршрута, мощности и обещаний гостю.",
+        "file": "knowledge/procedures/operational-procedures.json"
+      }
+    ]
+  },
+  "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
+}
