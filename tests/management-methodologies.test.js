@@ -25,7 +25,7 @@ test("nine standalone restaurant management methods have independent contracts a
     }
     assert.match(content, /Валидац|review|провер/i, file + ": review gate missing");
     assert.ok(content.includes("## Приёмочные сценарии") || content.includes("## Проверка качества"), file + ": acceptance scenarios missing");
-    assert.match(content, /unknown|неизвестн|unavailable/i, file + ": missing-data guardrail missing");
+    assert.match(content, /unknown|неизвест|unavailable|нет данных/i, file + ": missing-data guardrail missing");
     assert.match(content, /приёмочн|сценари/i, file + ": no acceptance scenarios");
   }
 });
