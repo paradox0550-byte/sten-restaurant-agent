@@ -330,7 +330,7 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 119,
+    "total_expected": 125,
     "command": "npm test",
     "runtime_layer": 15,
     "retrieval_layer": 16,
