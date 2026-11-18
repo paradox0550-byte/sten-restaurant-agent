@@ -163,3 +163,19 @@ test("post-enrichment holdout runs through production lexical retrieval without 
     }))
   }));
 });
+
+
+test("every source catalog entry maps to exactly one evidence record and every PRACTICE evidence record maps back", () => {
+  const sources = read("../knowledge/graph/sources.json").sources;
+  const registry = read("../knowledge/evidence/registry.json").records;
+  const sourceIds = new Set(sources.map((item) => item.id));
+  const bySource = new Map();
+  for (const record of registry.filter((item) => item.evidence_class === "PRACTICE")) {
+    assert.ok(record.source_catalog_id, `missing source_catalog_id: ${record.id}`);
+    assert.ok(sourceIds.has(record.source_catalog_id), `unknown source_catalog_id: ${record.id}`);
+    bySource.set(record.source_catalog_id, (bySource.get(record.source_catalog_id) ?? 0) + 1);
+  }
+  for (const source of sources) {
+    assert.equal(bySource.get(source.id), 1, `source must have exactly one PRACTICE evidence record: ${source.id}`);
+  }
+});
