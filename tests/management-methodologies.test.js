@@ -20,8 +20,8 @@ test("nine standalone restaurant management methods have independent contracts a
     const content = fs.readFileSync(path.join("knowledge/methodologies", file), "utf8");
     assert.ok(content.includes(id), file + ": method id missing");
     assert.ok(content.includes(status), file + ": review status missing");
-    for (const heading of [/^## Назначение\\b/m, /^## Источники\\b/m, /^## Приёмочные сценарии\\b/m, /^## Валидация\\b/m]) {
-      assert.match(content, heading, file + ": required section missing: " + heading);
+    for (const heading of ["## Назначение", "## Источники", "## Приёмочные сценарии", "## Валидация"]) {
+      assert.ok(content.includes(heading), file + ": required section missing: " + heading);
     }
     assert.match(content, /unknown|неизвестн|unavailable/i, file + ": missing-data guardrail missing");
     assert.match(content, /приёмочн|сценари/i, file + ": no acceptance scenarios");
