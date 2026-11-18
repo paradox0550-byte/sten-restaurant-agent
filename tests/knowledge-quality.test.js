@@ -198,6 +198,8 @@ test("source crosswalk resolves source, evidence, graph and procedure references
     assert.ok(item.evidence_record_ids.every((id) => evidenceIds.has(id)), item.source_id);
     assert.ok(item.graph_node_ids.every((id) => graphIds.has(id)), item.source_id);
     assert.ok(item.procedure_ids.every((id) => procedureIds.has(id)), item.source_id);
-    assert.equal(item.source_anchor_status, "repository_locator_only_original_anchor_recheck_open");
+    assert.equal(item.original_source_recovered, item.source_anchor_status !== "original_source_not_located_in_current_library_search");
+    if (item.original_source_recovered) assert.ok(item.original_source_file?.name, item.source_id);
+    else assert.equal(item.original_source_file, null);
   }
 });
