@@ -279,7 +279,8 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.bartender-club-operating-procedure"
     },
     {
       "id": "practice.calculator-iiko-audit-checklist",
@@ -348,7 +349,8 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.calculator-iiko-audit-checklist"
     },
     {
       "id": "practice.casual-dining-service-book-outline",
@@ -413,7 +415,8 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.casual-dining-service-book-outline"
     },
     {
       "id": "practice.daily-operational-walk",
@@ -478,7 +481,8 @@
         "review_notes": "Обезличено; классифицировано как ограниченная практика."
       },
       "created_at": "2026-11-14T00:00:00Z",
-      "updated_at": "2026-11-14T00:00:00Z"
+      "updated_at": "2026-11-14T00:00:00Z",
+      "source_catalog_id": "source.restaurant-regulation"
     },
     {
       "id": "practice.food-marking-haccp-checklist",
@@ -547,7 +551,8 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.food-marking-haccp-checklist"
     },
     {
       "id": "practice.food-product-adjacency-guide",
@@ -616,7 +621,8 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.food-product-adjacency-guide"
     },
     {
       "id": "practice.shift-manager-trattoria-procedure",
@@ -682,7 +688,381 @@
         "review_notes": "Source metadata catalogued. Substantive process-owner and legal validation remain open; draft record is not an approved operating rule."
       },
       "created_at": "2026-11-17T00:00:00Z",
-      "updated_at": "2026-11-17T00:00:00Z"
+      "updated_at": "2026-11-17T00:00:00Z",
+      "source_catalog_id": "source.shift-manager-trattoria-procedure"
+    },
+    {
+      "id": "practice.appearance-training-plan",
+      "title": "Стандарты внешнего вида — план тренинга",
+      "summary": "План тренинга по внешнему виду и личной гигиене; корпоративный материал, не универсальный дресс-код.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "people",
+        "uniform",
+        "employee_readiness"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Стандарты внешнего вида — план тренинга",
+        "source_type": "other",
+        "url": null,
+        "citation": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.appearance-training",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Corporate resort standard; not a universal dress code.",
+        "Restrictions on appearance and religious symbols require jurisdiction-specific legal and policy review before reuse.",
+        "Footwear is asked as a discussion question but the supplied text does not provide its answer.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.operational-management-training",
+      "title": "Система операционного управления — управленческая эффективность",
+      "summary": "Обучающий материал по функциям управления, ситуационному лидерству, рабочей зрелости по задаче и GROW.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "management",
+        "leadership",
+        "coaching"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Система операционного управления — управленческая эффективность",
+        "source_type": "other",
+        "url": null,
+        "citation": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.operational-management-training",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Training framework, not validated universal psychometric assessment.",
+        "Work maturity is evaluated relative to a task, not as a permanent label for a person.",
+        "Slide 11 contains a visual matrix and must be interpreted with its image, not text extraction alone.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.director-calendar-workbook",
+      "title": "Календарный план директора",
+      "summary": "Историческая рабочая модель календарного планирования директора; даты, нормы времени и периодичность не являются универсальными нормативами.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "management",
+        "planning",
+        "time_management"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Календарный план директора",
+        "source_type": "other",
+        "url": null,
+        "citation": "XLSX; sheets: «календарный план», «11-15.10», «18-19.10»; main sheet rows 2–42; weekly plan/fact sheets rows 3–43; workbook inspected directly",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.director-calendar",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Time budgets, frequency labels and the 21-workday calculation base are examples from one organization-specific operating model, not universal standards.",
+        "Blank cells, blank planned occurrence counts and blank plan/fact cells are not zero and are not proof that a task is unnecessary or was not performed.",
+        "Weekly sheets contain historical plan/fact observations; sheet «18-19.10» repeats weekday headings for 11–15.10 and has predominantly blank fact cells, so its date range and actual execution cannot be reliably inferred.",
+        "The workbook does not consistently specify accountable owners, evidence records, acceptance criteria or escalation routes for each activity; these must remain unknown unless another source supports them.",
+        "Some abbreviations (РУ, ШП, FBC, МС, СШ, СЗ, ТМЦ) are not expanded in the workbook and are retained without speculative interpretation.",
+        "Historical plan/fact values are not benchmarks and must not be generalized to other restaurant formats or current organizations.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.restaurant-business-process-model",
+      "title": "Модель бизнес-процессов ресторана",
+      "summary": "Корпоративная модель процессов ресторана; перечень процессов не доказывает их фактическое исполнение или обязательность.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "operations",
+        "process_mapping",
+        "responsibility"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Модель бизнес-процессов ресторана",
+        "source_type": "other",
+        "url": null,
+        "citation": "XLSX; sheet БМ; 336 rows; process hierarchy and functional actions",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.audit-process-model",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Contains owner names and corporate references; these are excluded from generalized graph.",
+        "Some legacy terms, software references and legal/tax workflows may be obsolete or jurisdiction-specific.",
+        "A listed process is not proof that it is implemented or legally required.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.guest-service-standard-2025",
+      "title": "Стандарт качества обслуживания гостей (2025)",
+      "summary": "Конфиденциальный стандарт обслуживания 2025 года для конкретных ресторанных концепций; в общую методику допускаются только обезличенные и обобщённые элементы.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "service",
+        "guest_experience",
+        "sales",
+        "complaints"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Стандарт качества обслуживания гостей (2025)",
+        "source_type": "other",
+        "url": null,
+        "citation": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.guest-service-standard-2025",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
+        "Brand-specific scripts and operational details are not universal.",
+        "Current legal, accessibility, labor and food-safety applicability requires separate verification.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.restaurant-operating-regulation",
+      "title": "Регламент ресторана",
+      "summary": "Исторический корпоративный регламент ресторанной сети; положения требуют проверки актуальности, юрисдикции и локальной применимости.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "operations",
+        "finance",
+        "people",
+        "safety",
+        "procurement",
+        "pos"
+      ],
+      "source": {
+        "publisher": "Не установлен сверх сведений каталога источников",
+        "title": "Регламент ресторана",
+        "source_type": "other",
+        "url": null,
+        "citation": "DOC; contents cover concepts, operations, production and sales, safety, records, cash, payroll, procurement, POS, audits, marketing, delivery, HR, facilities and appendices",
+        "published_at": null,
+        "accessed_at": "2026-11-18",
+        "source_version": null
+      },
+      "source_catalog_id": "source.restaurant-regulation",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Historical and chain-specific; contains personal names, addresses, suppliers, internal contacts and software procedures excluded from graph.",
+        "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
+        "Legacy system instructions are not portable implementation guidance.",
+        "Запись создана для трассировки источника; содержательная и независимая экспертная проверка не подтверждена."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Не утверждено. Требуется сверка оригинала, точных якорей и применимости."
+      },
+      "created_at": "2026-11-18T00:00:00Z",
+      "updated_at": "2026-11-18T00:00:00Z"
     }
   ]
 }
