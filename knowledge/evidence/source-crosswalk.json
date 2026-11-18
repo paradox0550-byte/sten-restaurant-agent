@@ -21,7 +21,7 @@
         "Restrictions on appearance and religious symbols require jurisdiction-specific legal and policy review before reuse.",
         "Footwear is asked as a discussion question but the supplied text does not provide its answer."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.appearance-training-plan"
       ],
@@ -31,7 +31,15 @@
       "procedure_ids": [
         "proc.appearance-readiness"
       ],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "02_Стандарты внешнего вида.docx",
+        "format": "DOCX",
+        "pages": 2,
+        "anchor": "Основной текст и план тренинга; страницы 1–2",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.operational-management-training",
@@ -45,7 +53,7 @@
         "Work maturity is evaluated relative to a task, not as a permanent label for a person.",
         "Slide 11 contains a visual matrix and must be interpreted with its image, not text extraction alone."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.operational-management-training"
       ],
@@ -55,7 +63,15 @@
       "procedure_ids": [
         "proc.director-operating-control"
       ],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "СИСТЕМА_ОПЕРАЦИОННОГО_УПРАВЛЕНИЯ_Итоговая.pptx",
+        "format": "PPTX",
+        "pages": 20,
+        "anchor": "Текст презентации; 20 слайдов. Визуальная матрица слайда 11 требует отдельной проверки изображения.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.director-calendar",
@@ -72,7 +88,7 @@
         "Some abbreviations (РУ, ШП, FBC, МС, СШ, СЗ, ТМЦ) are not expanded in the workbook and are retained without speculative interpretation.",
         "Historical plan/fact values are not benchmarks and must not be generalized to other restaurant formats or current organizations."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
       "evidence_record_ids": [
         "practice.director-calendar-workbook"
       ],
@@ -85,7 +101,9 @@
         "management.role-taste-director"
       ],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_recovered": false,
+      "original_source_file": null
     },
     {
       "source_id": "source.audit-process-model",
@@ -99,13 +117,15 @@
         "Some legacy terms, software references and legal/tax workflows may be obsolete or jurisdiction-specific.",
         "A listed process is not proof that it is implemented or legally required."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
       "evidence_record_ids": [
         "practice.restaurant-business-process-model"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_recovered": false,
+      "original_source_file": null
     },
     {
       "source_id": "source.guest-service-standard-2025",
@@ -119,7 +139,7 @@
         "Brand-specific scripts and operational details are not universal.",
         "Current legal, accessibility, labor and food-safety applicability requires separate verification."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_full_text_reopened_anchor_review_partial",
       "evidence_record_ids": [
         "practice.guest-service-standard-2025"
       ],
@@ -137,7 +157,15 @@
         "proc.bill-and-payment",
         "proc.guest-complaint-recovery"
       ],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Стандарт обслуживания Гостей.pdf",
+        "format": "PDF",
+        "pages": 43,
+        "anchor": "Титул и оглавление прочитаны; полный постраничный anchor review остаётся открытым.",
+        "status": "recovered_full_text_reopened_anchor_review_partial"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.restaurant-regulation",
@@ -151,7 +179,7 @@
         "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
         "Legacy system instructions are not portable implementation guidance."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened_partial",
       "evidence_record_ids": [
         "practice.daily-operational-walk",
         "practice.restaurant-operating-regulation"
@@ -172,7 +200,15 @@
         "proc.staff-schedule-and-timekeeping",
         "proc.delivery-order-control"
       ],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Регламент ресторана.doc",
+        "format": "DOC",
+        "pages": 130,
+        "anchor": "Титул, оглавление и начальные разделы; документ указывает редакцию на 01.09.2025 и формат fast-food.",
+        "status": "recovered_and_full_text_reopened_partial"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.calculator-iiko-audit-checklist",
@@ -187,13 +223,21 @@
         "23:00 and 23:59 timestamps are source-specific examples and must not be generalized.",
         "Shipment amount > cost and manual-document exclusions require the current accounting policy and document semantics to be checked."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.calculator-iiko-audit-checklist"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Чек-лист проверки калькулятора.pdf",
+        "format": "PDF",
+        "pages": 13,
+        "anchor": "Полный текст 13 страниц; 10 разделов аудита.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.food-product-adjacency-guide",
@@ -208,13 +252,21 @@
         "Fine amounts and Article 6.6 references in the source are not validated as current.",
         "No complete product-specific temperature/time matrix is supplied."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.food-product-adjacency-guide"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Инструкция «Товарное соседство».pdf",
+        "format": "PDF",
+        "pages": 2,
+        "anchor": "Полный текст 2 страниц; разделы основных принципов, несовместимых сочетаний и заявленного исключения.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.food-marking-haccp-checklist",
@@ -229,13 +281,21 @@
         "Board/knife codes and container arrangements are examples requiring site-specific validation.",
         "Does not supply a complete HACCP programme, chemical dilution matrix or temperature/time schedule."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.food-marking-haccp-checklist"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Чек-лист «Маркировка в общепите».pdf",
+        "format": "PDF",
+        "pages": 6,
+        "anchor": "Полный текст 6 страниц; маркировка сырья, заготовок, инвентаря, отходов, химии и доставки.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.shift-manager-trattoria-procedure",
@@ -250,13 +310,21 @@
         "The document contains numbering/typographical inconsistencies; preserve intent but verify exact policy before adoption.",
         "Does not establish current employment-law requirements."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.shift-manager-trattoria-procedure"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "ОР Управляющий смены.docx",
+        "format": "DOCX",
+        "pages": 4,
+        "anchor": "Полный текст 4 страниц; общие положения, подготовка к смене, обязанности во время и после смены.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.bartender-club-operating-procedure",
@@ -271,13 +339,21 @@
         "Alcohol, cash, hygiene and workplace provisions require current local legal/policy review.",
         "Role authority and inventory responsibility must be confirmed for the actual establishment."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.bartender-club-operating-procedure"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "Организация работ бармена.doc",
+        "format": "DOC",
+        "pages": 6,
+        "anchor": "Полный текст 6 страниц; обязанности, алгоритм работы, обслуживание, закрытие и квалификационный лист.",
+        "status": "recovered_and_full_text_reopened"
+      },
+      "original_source_recovered": true
     },
     {
       "source_id": "source.casual-dining-service-book-outline",
@@ -291,13 +367,16 @@
         "Use only the visible title and outline topics; do not infer or invent chapter content.",
         "No author or publication date is established in the supplied pages."
       ],
-      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
       "evidence_record_ids": [
         "practice.casual-dining-service-book-outline"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
-      "linkage_status": "evidence_linked"
+      "linkage_status": "evidence_linked",
+      "original_source_recovered": false,
+      "original_source_file": null
     }
-  ]
+  ],
+  "audit_note": "Nine of twelve source catalog entries were matched to original files in the current Library search; seven of those were fully text-reopened and two have partial anchor review. Three originals remain unlocated: director calendar workbook, restaurant business-process model workbook and supplied Casual Dining outline. This is not a complete inventory of the user's 25+ original documents."
 }
