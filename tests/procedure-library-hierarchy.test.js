@@ -11,16 +11,16 @@ test("procedure library separates domains, processes, procedures and complexity 
   assert.equal(register.source_catalog.items.length, 77);
   assert.equal(register.existing_procedure_cards.count, procedureCards.procedures.length);
   assert.equal(procedureCards.procedures.length, 12);
-  assert.equal(levels.levels.length, 5);
+  assert.equal(levels.levels.length, 6);\n  const domainMap = JSON.parse(fs.readFileSync("knowledge/taxonomy/restaurant-management-domains.json", "utf8"));\n  assert.equal(domainMap.domains.length, 36);\n  assert.equal(new Set(domainMap.domains.map(d => d.id)).size, 36);\n  assert.equal(register.domains.length, 36);
   for (const item of register.source_catalog.items) {
     assert.ok(sourceCatalog.processes.some(p => p.id === item.process_id), item.process_id + ": source process not found");
-    assert.ok(item.complexity_level >= 1 && item.complexity_level <= 5, item.process_id + ": invalid complexity");
+    assert.ok(item.complexity_level >= 1 && item.complexity_level <= 6, item.process_id + ": invalid complexity");
     assert.equal(item.source_maturity, "inventory_only", item.process_id + ": source inventory must not be promoted");
     assert.equal(item.procedure_status, "not_yet_decomposed_or_expert_approved", item.process_id + ": inventory item was misrepresented as SOP");
   }
   for (const procedure of register.existing_procedure_cards.items) {
     assert.ok(procedureCards.procedures.some(p => p.id === procedure.procedure_id), procedure.procedure_id + ": procedure card missing");
-    assert.ok(procedure.complexity_level >= 1 && procedure.complexity_level <= 5);
+    assert.ok(procedure.complexity_level >= 1 && procedure.complexity_level <= 6);
   }
   assert.match(register.policy.decomposition, /триггер|trigger/i);
   assert.match(register.policy.readiness, /pilot[-_]verified/);
