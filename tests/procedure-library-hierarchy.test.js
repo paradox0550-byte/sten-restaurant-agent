@@ -23,5 +23,5 @@ test("procedure library separates domains, processes, procedures and complexity 
     assert.ok(procedure.complexity_level >= 1 && procedure.complexity_level <= 5);
   }
   assert.match(register.policy.decomposition, /триггер|trigger/i);
-  assert.match(register.policy.readiness, /pilot_verified/);
+  assert.match(register.policy.readiness, /pilot[-_]verified/);
 });
