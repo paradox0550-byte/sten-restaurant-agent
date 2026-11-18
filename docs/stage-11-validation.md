@@ -148,3 +148,27 @@ The knowledge corpus must be treated as three separate layers:
 - Keep all disputed or unsupported content visible as open; do not promote it to approved because a file exists or CI passes.
 
 Status: repository audit has identified concrete structural and provenance defects. The reconstruction and specialist validation work remains open. No production or legal certification is implied.
+
+
+## Nine standalone management methodologies — 18 November 2026
+
+Added nine independently addressable methodology documents under `knowledge/methodologies/`:
+1. Financial control — source reconciliation, P&L perimeter, periodization, ratios, variance diagnosis and verified follow-up.
+2. FOT and labor control — demand, workload, schedule, actual attendance, timesheet, accrual and productivity.
+3. Stock control — master data, receiving, movement, stocktake, variance and authorized adjustment.
+4. Purchasing — demand planning, supplier comparison, approval, receiving, invoice/payment reconciliation and supplier review.
+5. Production — forecast, station readiness, recipe/version control, order routing, quality release, waste and throughput.
+6. Service — guest journey, accurate product information, complaint recovery, authority and verification.
+7. Safety — risk register, local control plan, incident containment, escalation, corrective action and restart approval.
+8. People management — role design, recruitment, lawful admission, onboarding, task-based capability, feedback and exit.
+9. Director system — daily/weekly/monthly management rhythm, authority matrix, executive panel, task lifecycle and verified outcomes.
+
+Each document contains its own purpose, applicability, source basis with locators, operational sequence, input/output or record contract, control logic, exception/stop states, acceptance scenarios and specialist validation requirements. The nine methods are connected through the management cycle but remain independently usable.
+
+### Source and maturity boundaries
+
+- The corporate operating regulation is identified as the 01.09.2025 fast-food edition. Its contents provide anchors: finance pp.31–35; payroll pp.36–43; procurement pp.44–48; safety pp.26–28; production pp.16–25; personnel pp.58–60; stocktake appendix 4 / p.69; hiring/payroll/personnel appendices 17 and 22–29. This source is organization-specific and its full page-level review remains open.
+- The iiko calculator checklist (13 pages), product-adjacency guide (2 pages), food-marking checklist (6 pages), shift-manager procedure (4 pages), and 2025 guest-service standard (43 pages) have distinct provenance and limitations. Guest-service full page-level anchor review remains open.
+- The director calendar workbook and business-process model workbook are still not recovered. No calendar frequencies, owner names, time budgets or workbook-specific process details have been inferred.
+- These are source-grounded management-method prototypes, not approved SOPs. All nine remain draft pending named specialist review and pilot evidence. No legal, accounting, payroll, food-safety or operational certification is implied.
+- No deterministic calculator, backend, cloud, API Gateway, deployment or dependency was changed in this methodology slice.
