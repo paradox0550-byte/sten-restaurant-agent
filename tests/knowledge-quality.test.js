@@ -203,3 +203,18 @@ test("source crosswalk resolves source, evidence, graph and procedure references
     else assert.equal(item.original_source_file, null);
   }
 });
+
+
+test("daily management cycle methodology is source-linked, bounded and not falsely approved", () => {
+  const method = read("../knowledge/methodologies/manager-daily-control-cycle.json");
+  const sources = new Set(read("../knowledge/graph/sources.json").sources.map((x) => x.id));
+  assert.equal(method.status, "draft_for_expert_review");
+  assert.equal(method.maturity, "source_grounded_method_prototype");
+  assert.ok(method.method_steps.length >= 5);
+  assert.equal(new Set(method.method_steps.map((x) => x.id)).size, method.method_steps.length);
+  assert.ok(method.source_basis.length >= 3);
+  assert.ok(method.source_basis.every((x) => sources.has(x.source_id)));
+  assert.ok(method.reviewed_at === null);
+  assert.ok(method.guardrails.some((x) => x.includes("универсальный норматив")));
+  assert.ok(method.evaluation_scenarios.length >= 5);
+});
