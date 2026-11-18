@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Explicit crosswalk between source catalog, evidence registry, graph and procedures. This is a repository traceability index, not proof that source content is current, complete or expert-approved.",
+  "generated_at": "2026-11-18",
+  "limitations": [
+    "The 12 entries are the source catalog currently present in this repository, not proof that all original user-supplied source files (more than 25) have been recovered.",
+    "Source locators are carried from repository metadata; original files have not all been independently reopened and re-anchored during this audit pass.",
+    "A source-to-procedure link proves declared provenance only. It does not establish that the method is complete, universal, current or approved.",
+    "Graph links are concept links, not a substitute for page/section/row-level source anchors."
+  ],
+  "sources": [
+    {
+      "source_id": "source.appearance-training",
+      "title": "Стандарты внешнего вида — план тренинга",
+      "source_type": "internal_training_material",
+      "scope": "organization_specific",
+      "date_status": "not_verified",
+      "locator": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
+      "limitations": [
+        "Corporate resort standard; not a universal dress code.",
+        "Restrictions on appearance and religious symbols require jurisdiction-specific legal and policy review before reuse.",
+        "Footwear is asked as a discussion question but the supplied text does not provide its answer."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.appearance-training-plan"
+      ],
+      "graph_node_ids": [
+        "proc.appearance-readiness"
+      ],
+      "procedure_ids": [
+        "proc.appearance-readiness"
+      ],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.operational-management-training",
+      "title": "Система операционного управления — управленческая эффективность",
+      "source_type": "internal_management_training",
+      "scope": "organization_specific_methodology",
+      "date_status": "not_verified",
+      "locator": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
+      "limitations": [
+        "Training framework, not validated universal psychometric assessment.",
+        "Work maturity is evaluated relative to a task, not as a permanent label for a person.",
+        "Slide 11 contains a visual matrix and must be interpreted with its image, not text extraction alone."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.operational-management-training"
+      ],
+      "graph_node_ids": [
+        "proc.director-operating-control"
+      ],
+      "procedure_ids": [
+        "proc.director-operating-control"
+      ],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.director-calendar",
+      "title": "Календарный план директора",
+      "source_type": "operational_planning_workbook",
+      "scope": "organization_specific_operating_model",
+      "date_status": "historical October dates; year not stated in workbook; current applicability not verified",
+      "locator": "XLSX; sheets: «календарный план», «11-15.10», «18-19.10»; main sheet rows 2–42; weekly plan/fact sheets rows 3–43; workbook inspected directly",
+      "limitations": [
+        "Time budgets, frequency labels and the 21-workday calculation base are examples from one organization-specific operating model, not universal standards.",
+        "Blank cells, blank planned occurrence counts and blank plan/fact cells are not zero and are not proof that a task is unnecessary or was not performed.",
+        "Weekly sheets contain historical plan/fact observations; sheet «18-19.10» repeats weekday headings for 11–15.10 and has predominantly blank fact cells, so its date range and actual execution cannot be reliably inferred.",
+        "The workbook does not consistently specify accountable owners, evidence records, acceptance criteria or escalation routes for each activity; these must remain unknown unless another source supports them.",
+        "Some abbreviations (РУ, ШП, FBC, МС, СШ, СЗ, ТМЦ) are not expanded in the workbook and are retained without speculative interpretation.",
+        "Historical plan/fact values are not benchmarks and must not be generalized to other restaurant formats or current organizations."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.director-calendar-workbook"
+      ],
+      "graph_node_ids": [
+        "management.role-idea-leader",
+        "management.role-performance-director",
+        "management.role-service-director",
+        "management.role-atmosphere-director",
+        "management.role-operations-director",
+        "management.role-taste-director"
+      ],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.audit-process-model",
+      "title": "Модель бизнес-процессов ресторана",
+      "source_type": "process_audit_workbook",
+      "scope": "organization_specific_process_model",
+      "date_status": "not_verified",
+      "locator": "XLSX; sheet БМ; 336 rows; process hierarchy and functional actions",
+      "limitations": [
+        "Contains owner names and corporate references; these are excluded from generalized graph.",
+        "Some legacy terms, software references and legal/tax workflows may be obsolete or jurisdiction-specific.",
+        "A listed process is not proof that it is implemented or legally required."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.restaurant-business-process-model"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.guest-service-standard-2025",
+      "title": "Стандарт качества обслуживания гостей (2025)",
+      "source_type": "internal_service_standard",
+      "scope": "specific restaurant concepts",
+      "date_status": "2025 stated in source",
+      "locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+      "limitations": [
+        "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
+        "Brand-specific scripts and operational details are not universal.",
+        "Current legal, accessibility, labor and food-safety applicability requires separate verification."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.guest-service-standard-2025"
+      ],
+      "graph_node_ids": [
+        "proc.shift-readiness-and-briefing",
+        "proc.guest-journey-and-order",
+        "proc.service-delivery-and-delay",
+        "proc.bill-and-payment",
+        "proc.guest-complaint-recovery"
+      ],
+      "procedure_ids": [
+        "proc.shift-readiness-and-briefing",
+        "proc.guest-journey-and-order",
+        "proc.service-delivery-and-delay",
+        "proc.bill-and-payment",
+        "proc.guest-complaint-recovery"
+      ],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.restaurant-regulation",
+      "title": "Регламент ресторана",
+      "source_type": "internal_operating_regulation",
+      "scope": "specific restaurant chain",
+      "date_status": "not_verified; examples within the document include 2012 dates",
+      "locator": "DOC; contents cover concepts, operations, production and sales, safety, records, cash, payroll, procurement, POS, audits, marketing, delivery, HR, facilities and appendices",
+      "limitations": [
+        "Historical and chain-specific; contains personal names, addresses, suppliers, internal contacts and software procedures excluded from graph.",
+        "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
+        "Legacy system instructions are not portable implementation guidance."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.daily-operational-walk",
+        "practice.restaurant-operating-regulation"
+      ],
+      "graph_node_ids": [
+        "proc.director-operating-control",
+        "proc.front-of-house-visual-walk",
+        "proc.monthly-stocktake",
+        "proc.monthly-sanitation-deep-clean",
+        "proc.staff-schedule-and-timekeeping",
+        "proc.delivery-order-control"
+      ],
+      "procedure_ids": [
+        "proc.director-operating-control",
+        "proc.front-of-house-visual-walk",
+        "proc.monthly-stocktake",
+        "proc.monthly-sanitation-deep-clean",
+        "proc.staff-schedule-and-timekeeping",
+        "proc.delivery-order-control"
+      ],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.calculator-iiko-audit-checklist",
+      "title": "Чек-лист проверки бухгалтера-калькулятора",
+      "source_type": "consultant_stock_accounting_checklist",
+      "scope": "iiko_stock_accounting_practice",
+      "date_status": "not stated in supplied PDF; current applicability not verified",
+      "locator": "PDF; 13 pages; 10 audit sections: nomenclature, incoming/outgoing invoices, write-offs, processing, preparation/disassembly/transfers/returns, realization, stock balance, monthly inventory, period lock",
+      "limitations": [
+        "Checklist is attributed to @av.buravtsova / Anastasia Buravtsova; it is not an official iiko specification or statutory accounting standard.",
+        "Document colors, articles, report fields and timestamps depend on the current iiko version and restaurant configuration.",
+        "23:00 and 23:59 timestamps are source-specific examples and must not be generalized.",
+        "Shipment amount > cost and manual-document exclusions require the current accounting policy and document semantics to be checked."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.calculator-iiko-audit-checklist"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.food-product-adjacency-guide",
+      "title": "Инструкция «Товарное соседство»",
+      "source_type": "consultant_food_safety_guidance",
+      "scope": "general_food_service_training_material",
+      "date_status": "not stated in supplied PDF; current legal applicability not verified",
+      "locator": "PDF; 2 pages; separate storage groups, incompatible product combinations, shared cold storage and claimed seating-capacity exception",
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; educational source, not a current official legal act.",
+        "The claimed exception for establishments under 25 seats must not be treated as current legal permission without official verification.",
+        "Fine amounts and Article 6.6 references in the source are not validated as current.",
+        "No complete product-specific temperature/time matrix is supplied."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.food-product-adjacency-guide"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.food-marking-haccp-checklist",
+      "title": "Чек-лист «Маркировка в общепите»",
+      "source_type": "consultant_food_safety_checklist",
+      "scope": "general_food_service_training_material",
+      "date_status": "not stated in supplied PDF; current legal applicability not verified",
+      "locator": "PDF; 6 pages; incoming product information, in-house preparation labels, boards/knives, processing containers, cleaning inventory, waste bins, decanted chemicals and delivery containers",
+      "limitations": [
+        "Attributed to Olga Ogarkova / HACCP-AUDIT; checklist is not an official legal register.",
+        "Required label fields vary by product and applicable technical regulation; verify current provisions.",
+        "Board/knife codes and container arrangements are examples requiring site-specific validation.",
+        "Does not supply a complete HACCP programme, chemical dilution matrix or temperature/time schedule."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.food-marking-haccp-checklist"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.shift-manager-trattoria-procedure",
+      "title": "ОР Управляющий смены",
+      "source_type": "internal_shift_role_procedure",
+      "scope": "specific_restaurant_trattoria",
+      "date_status": "date not stated; historical/local applicability not confirmed",
+      "locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+      "limitations": [
+        "Restaurant-specific procedure for ТРАТТОРИЯ; not a universal manager job description.",
+        "Opening hours, start times, role authority, staff structure and cash controls require current local confirmation.",
+        "The document contains numbering/typographical inconsistencies; preserve intent but verify exact policy before adoption.",
+        "Does not establish current employment-law requirements."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.shift-manager-trattoria-procedure"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.bartender-club-operating-procedure",
+      "title": "Организация работ бармена",
+      "source_type": "internal_bartender_role_procedure",
+      "scope": "historical_club_bar_operating_model",
+      "date_status": "date not stated; historical/local applicability not confirmed",
+      "locator": "DOC; 6 pages; duties, bar preparation, stock/display, guest service, closing, qualification and control sheets",
+      "limitations": [
+        "Legacy club/bar context; smoking, ashtrays, hookah, alcohol display and night-operation details are not automatically relevant to a restaurant.",
+        "Two-minute service target and display rules are source-specific, not universal SLAs.",
+        "Alcohol, cash, hygiene and workplace provisions require current local legal/policy review.",
+        "Role authority and inventory responsibility must be confirmed for the actual establishment."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.bartender-club-operating-procedure"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    },
+    {
+      "source_id": "source.casual-dining-service-book-outline",
+      "title": "Искусство сервиса в ресторане Casual Dining — supplied outline",
+      "source_type": "book_outline",
+      "scope": "casual_dining_training_outline",
+      "date_status": "not stated",
+      "locator": "PDF; 2 pages; cover and brief table of contents only",
+      "limitations": [
+        "The supplied copy contains no full chapters or detailed methods.",
+        "Use only the visible title and outline topics; do not infer or invent chapter content.",
+        "No author or publication date is established in the supplied pages."
+      ],
+      "source_anchor_status": "repository_locator_only_original_anchor_recheck_open",
+      "evidence_record_ids": [
+        "practice.casual-dining-service-book-outline"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked"
+    }
+  ]
+}
