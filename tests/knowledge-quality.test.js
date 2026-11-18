@@ -179,3 +179,25 @@ test("every source catalog entry maps to exactly one evidence record and every P
     assert.ok((bySource.get(source.id) ?? 0) >= 1, `source must have at least one PRACTICE evidence record: ${source.id}`);
   }
 });
+
+
+test("source crosswalk resolves source, evidence, graph and procedure references without claiming source verification", () => {
+  const crosswalk = read("../knowledge/evidence/source-crosswalk.json");
+  const sources = read("../knowledge/graph/sources.json").sources;
+  const registry = read("../knowledge/evidence/registry.json").records;
+  const graph = read("../knowledge/graph/operational-knowledge-graph.json");
+  const procedures = read("../knowledge/procedures/operational-procedures.json").procedures;
+  assert.equal(crosswalk.sources.length, sources.length);
+  const sourceIds = new Set(sources.map((x) => x.id));
+  const evidenceIds = new Set(registry.map((x) => x.id));
+  const graphIds = new Set(graph.nodes.map((x) => x.id));
+  const procedureIds = new Set(procedures.map((x) => x.id));
+  for (const item of crosswalk.sources) {
+    assert.ok(sourceIds.has(item.source_id), item.source_id);
+    assert.ok(item.evidence_record_ids.length > 0, item.source_id);
+    assert.ok(item.evidence_record_ids.every((id) => evidenceIds.has(id)), item.source_id);
+    assert.ok(item.graph_node_ids.every((id) => graphIds.has(id)), item.source_id);
+    assert.ok(item.procedure_ids.every((id) => procedureIds.has(id)), item.source_id);
+    assert.equal(item.source_anchor_status, "repository_locator_only_original_anchor_recheck_open");
+  }
+});
