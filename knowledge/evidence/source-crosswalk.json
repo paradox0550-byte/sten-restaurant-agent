@@ -367,16 +367,21 @@
         "Use only the visible title and outline topics; do not infer or invent chapter content.",
         "No author or publication date is established in the supplied pages."
       ],
-      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "source_anchor_status": "recovered_and_full_text_reopened",
       "evidence_record_ids": [
         "practice.casual-dining-service-book-outline"
       ],
       "graph_node_ids": [],
       "procedure_ids": [],
       "linkage_status": "evidence_linked",
-      "original_source_recovered": false,
-      "original_source_file": null
+      "original_source_recovered": true,
+      "original_source_file": {
+        "name": "Искусство_сервиса_Casual_Dining_издательская_версия.docx",
+        "format": "DOCX",
+        "pages": 2,
+        "anchor": "Полный текст 2 страниц; авторское предисловие, введение, краткое содержание 7 глав, заключение и приложение."
+      }
     }
   ],
-  "audit_note": "Nine of twelve source catalog entries were matched to original files in the current Library search; seven of those were fully text-reopened and two have partial anchor review. Three originals remain unlocated: director calendar workbook, restaurant business-process model workbook and supplied Casual Dining outline. This is not a complete inventory of the user's 25+ original documents."
+  "audit_note": "Ten of twelve source catalog entries were matched to original files in the current Library search; eight were fully text-reopened in this pass, while the 43-page guest standard and 130-page corporate regulation still need complete page-level review. Two originals remain unlocated: director calendar workbook and restaurant business-process model workbook. This is not a complete inventory of the user's 25+ original documents."
 }
