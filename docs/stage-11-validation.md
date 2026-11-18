@@ -105,3 +105,46 @@ These additions improve source coverage but do not close Stage 11. Source-specif
 - Preserve source-specific values and unknowns; do not promote historical examples into universal norms.
 
 The service book outline is not sufficient evidence for chapter-level procedures. The source material does not include a complete temperature/time matrix or a current legal compliance register.
+
+
+## Full-repository audit — 18 November 2026
+
+A fresh read-only inventory was performed against main at 7bbdf999c2aa31e1448f03e5a6042bdf9da92183 (174 tracked files). The following findings supersede earlier content-shape counts where they differ.
+
+### Confirmed findings
+
+1. The process catalog contains 77 unique process IDs: 22 management, 5 core and 50 supporting directions.
+2. The catalog contains 486 operation entries but only 54 distinct operation descriptions. The 486 completion-evidence entries all use one identical generic sentence. The repeated sequence is scaffolding, not evidence of 77 distinct operating methods.
+3. All 77 entries had previously been labelled expanded_methodology_requires_owner_and_jurisdiction_validation, which overstated their maturity. In the audit branch they are explicitly marked inventory_only and catalog_only_source_mapping_and_specialist_validation_open. They must not be used or described as completed SOPs.
+4. knowledge/procedures/operational-procedures.json contains 12 more detailed procedures. Their existence does not validate the 77-direction catalog and several retain source-specific, inferred or unknown fields.
+5. knowledge/graph/operational-knowledge-graph.json currently contains 96 nodes and 135 edges. Graph connectivity is not process validation or causal proof.
+6. knowledge/graph/sources.json contains 12 PRACTICE source records. knowledge/evidence/registry.json contains 10 records (2 CORE, 1 LAW template, 7 PRACTICE); six graph source IDs do not have matching PRACTICE records in the evidence registry, while one PRACTICE record (daily operational walk) is not represented in the graph source catalog. This cross-registry mismatch must be reconciled before claims of complete provenance.
+7. The coverage map defines nine sectors but marks only restaurant as partial; the other eight sectors remain planned. The repository is not a reviewed all-HoReCa corpus.
+8. Stage 13's automated evaluation remains a retrieval/integrity framework. Its holdout labels are provisional and not expert-adjudicated; no automated score certifies professional correctness.
+9. Current GitHub Actions run #229 on the current main SHA completed successfully. This confirms the current engineering CI workflow only; it does not close Stage 11 or establish production readiness.
+
+### Corrective change in audit branch
+
+The 77 process entries have been relabelled as inventory-only scaffolds. A regression test now requires all 77 to retain this explicit non-SOP status. This is an honesty/quality-gate correction, not a claim that the 77 methodologies have been authored.
+
+### Required reconstruction model
+
+The knowledge corpus must be treated as three separate layers:
+
+- Source library: preserve each original document as an individually traceable source, including page/section/sheet/row anchors, version/date, author/publisher where relevant, scope, confidentiality and rights status.
+- Expert methodology library: derive new STEN methods from supported source facts plus clearly labelled research or expert reasoning. Each method must have its own operational sequence, decision rules, inputs, outputs, exceptions, records, controls, calculations and verification.
+- ChatGPT Project distribution pack: the nine files are a transport/attachment-limit format only. They are generated views over the governed methodology library and must not be treated as the canonical knowledge store or as a limit on the number of methods.
+
+### Full audit completion gates
+
+- Reconcile every original document consolidated into the nine files; no source may disappear behind a combined file.
+- Build a source-to-method-to-process-to-tool-to-evaluation traceability matrix.
+- Review all 77 catalog directions individually. Split directions when they contain multiple independent workflows; merge only true duplicates. The final number of methods is determined by operational reality, not a target count.
+- Replace generic steps only where the source or validated domain method supports a specific sequence. Preserve unknowns where it does not.
+- Reconcile the graph source catalog and Evidence Registry one-to-one, including explicit orphan and superseded records.
+- Audit all 12 detailed procedures, checklists, role mappings, record templates, graph nodes/edges, calculations, skills, tools, retrieval and answer policies for consistency.
+- Review all legal claims separately against current official jurisdiction-specific sources. Historical source wording is not legal evidence.
+- Add known-answer tests for every deterministic calculation and representative scenario tests for every approved methodology.
+- Keep all disputed or unsupported content visible as open; do not promote it to approved because a file exists or CI passes.
+
+Status: repository audit has identified concrete structural and provenance defects. The reconstruction and specialist validation work remains open. No production or legal certification is implied.
