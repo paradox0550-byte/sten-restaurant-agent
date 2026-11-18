@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "purpose": "Five proposed operational complexity levels for procedure classification.",
+  "purpose": "Six proposed complexity levels for classifying restaurant-management tasks and procedures.",
   "principle": "Complexity classification is a model assessment; it is not source fact, employee seniority or readiness.",
   "levels": [
     {
@@ -68,6 +68,15 @@
       ],
       "requiredEvidence": "Сводная доказательная картина, альтернативы, сценарии, полномочия, решение, контроль эффекта.",
       "approval": "По матрице полномочий компании."
+    },
+    {
+      "level": 6,
+      "code": "L6_STRATEGIC_PORTFOLIO",
+      "name": "Стратегия и портфель бизнеса",
+      "complexity": "Стратегическая",
+      "definition": "Решения на уровне собственника/группы: инвестиционный портфель, макроэкономические сценарии, выбор рынков и форматов, масштабирование и перераспределение капитала.",
+      "requiredEvidence": "Проверенные рыночные данные, инвестиционная модель, сценарии, риски, альтернативы, решение и постинвестиционная оценка.",
+      "approval": "По полномочиям собственника/совета/инвестиционного комитета."
     }
   ]
 }
