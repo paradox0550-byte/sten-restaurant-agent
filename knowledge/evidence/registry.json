@@ -1143,6 +1143,961 @@
       "created_at": "2026-11-19T00:00:00Z",
       "updated_at": "2026-11-19T00:00:00Z",
       "source_catalog_id": "source.ppk-establishment-2026-draft"
+    },
+    {
+      "id": "law.eu.food-law-178-2002",
+      "title": "EU General Food Law Regulation 178/2002",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "LAW",
+      "topic": [
+        "food_safety",
+        "traceability",
+        "advertising"
+      ],
+      "source": {
+        "publisher": "European Parliament and Council",
+        "title": "Regulation (EC) No 178/2002, consolidated 2026-01-01",
+        "source_type": "official_act",
+        "url": "https://eur-lex.europa.eu/eli/reg/2002/178/2026-01-01/eng/pdf",
+        "citation": null,
+        "published_at": "2026-01-01",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": "2026-01-01",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.eu.edpb-cctv-sme-guide",
+      "title": "EDPB SME Guide FAQ — CCTV",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "privacy",
+        "cctv",
+        "surveillance"
+      ],
+      "source": {
+        "publisher": "European Data Protection Board",
+        "title": "Can I set up closed CCTV on my business premises?",
+        "source_type": "official_guidance",
+        "url": "https://www.edpb.europa.eu/sme-data-protection-guide/faq-search_en?search=CCTV",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.eu.gdpr-2016-679",
+      "title": "General Data Protection Regulation (EU) 2016/679",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "LAW",
+      "topic": [
+        "privacy",
+        "personal_data",
+        "marketing"
+      ],
+      "source": {
+        "publisher": "European Parliament and Council",
+        "title": "Regulation (EU) 2016/679",
+        "source_type": "official_act",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+        "citation": null,
+        "published_at": "2016-04-27",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": "2016-04-27",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.eu.edps-video-surveillance",
+      "title": "EDPS Video-surveillance guidance",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "privacy",
+        "cctv",
+        "surveillance"
+      ],
+      "source": {
+        "publisher": "European Data Protection Supervisor",
+        "title": "Video-surveillance",
+        "source_type": "official_guidance",
+        "url": "https://www.edps.europa.eu/data-protection/data-protection/reference-library/video-surveillance_en",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "EU institutions guidance",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.eu.framework-osh-89-391",
+      "title": "Framework Directive 89/391/EEC on occupational safety and health",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "LAW",
+      "topic": [
+        "occupational_safety",
+        "risk_assessment",
+        "training"
+      ],
+      "source": {
+        "publisher": "European Council",
+        "title": "Council Directive 89/391/EEC",
+        "source_type": "official_act",
+        "url": "https://eur-lex.europa.eu/eli/dir/1989/391/oj/eng",
+        "citation": null,
+        "published_at": "1989-06-12",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": "1989-06-12",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.eu.chemical-agents-98-24",
+      "title": "Directive 98/24/EC on chemical agents at work",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "LAW",
+      "topic": [
+        "occupational_safety",
+        "chemicals",
+        "maintenance"
+      ],
+      "source": {
+        "publisher": "European Parliament and Council",
+        "title": "Directive 98/24/EC",
+        "source_type": "official_act",
+        "url": "https://eur-lex.europa.eu/eli/dir/1998/24/2024-04-08/eng",
+        "citation": null,
+        "published_at": "1998-04-07",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": "1998-04-07",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.eu.unfair-commercial-practices-2005-29",
+      "title": "Unfair Commercial Practices Directive 2005/29/EC",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "LAW",
+      "topic": [
+        "marketing",
+        "advertising",
+        "consumer_protection"
+      ],
+      "source": {
+        "publisher": "European Parliament and Council",
+        "title": "Directive 2005/29/EC",
+        "source_type": "official_act",
+        "url": "https://eur-lex.europa.eu/eli/dir/2005/29/oj",
+        "citation": null,
+        "published_at": "2005-05-11",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "in_force",
+        "published_on": "2005-05-11",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.eu.commission-unfair-marketing",
+      "title": "European Commission — Unfair commercial practices and price indication",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "marketing",
+        "advertising",
+        "pricing"
+      ],
+      "source": {
+        "publisher": "European Commission",
+        "title": "Unfair commercial practices and price indication",
+        "source_type": "official_guidance",
+        "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-and-price-indication_en",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "EU",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "research.restaurant-reservation-cancellation-2025",
+      "title": "Restaurant cancellation policies and no-show awareness experiments (2025)",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "RESEARCH",
+      "topic": [
+        "reservations",
+        "no_show",
+        "cancellations"
+      ],
+      "source": {
+        "publisher": "International Journal of Consumer Studies",
+        "title": "The Effects of Restaurant Cancellation Policies and No-Show Awareness Campaigns on Reservation Behaviors",
+        "source_type": "peer_reviewed",
+        "url": "https://doi.org/10.1111/ijcs.70069",
+        "citation": null,
+        "published_at": "2025-04-19",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": "2025-04-19",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Study scenarios; market transfer limited",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "research.fine-dining-no-show-2024",
+      "title": "Fine-dining cancellation policy and consumer awareness experiments (2024)",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "RESEARCH",
+      "topic": [
+        "reservations",
+        "no_show"
+      ],
+      "source": {
+        "publisher": "Journal of Revenue and Pricing Management",
+        "title": "Tackling no-shows in fine dining: insights into cancellation policies and consumer awareness",
+        "source_type": "peer_reviewed",
+        "url": "https://doi.org/10.1057/s41272-024-00499-1",
+        "citation": null,
+        "published_at": "2024-08-06",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": "2024-08-06",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Fine dining; two experiments",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "research.restaurant-no-show-capacity-2017",
+      "title": "Restaurant no-shows, cancellations, overbooking and walk-ins model",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "RESEARCH",
+      "topic": [
+        "reservations",
+        "revenue_management",
+        "capacity"
+      ],
+      "source": {
+        "publisher": "Journal of Foodservice Business Research",
+        "title": "Modeling no-shows, cancellations, overbooking, and walk-ins in restaurant revenue management",
+        "source_type": "peer_reviewed",
+        "url": "https://doi.org/10.1080/15378020.2016.1198626",
+        "citation": null,
+        "published_at": "2017-01-01",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": "2017-01-01",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Two-year data from one Hong Kong restaurant",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "research.reservation-policies-2012",
+      "title": "Reservation policies, deposits and capacity allocation",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "RESEARCH",
+      "topic": [
+        "reservations",
+        "capacity_management"
+      ],
+      "source": {
+        "publisher": "Manufacturing & Service Operations Management",
+        "title": "Are Reservations Recommended?",
+        "source_type": "peer_reviewed",
+        "url": "https://doi.org/10.1287/msom.1110.0360",
+        "citation": null,
+        "published_at": "2012-02-28",
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "unknown",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": "2012-02-28",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Theoretical model; not an operating standard",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.codex-maintenance-legacy",
+      "title": "Codex General Principles of Food Hygiene — maintenance passage (legacy online text)",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "maintenance",
+        "food_safety",
+        "equipment"
+      ],
+      "source": {
+        "publisher": "FAO / Codex Alimentarius",
+        "title": "Recommended International Code of Practice — General Principles of Food Hygiene, maintenance section",
+        "source_type": "other",
+        "url": "https://www.fao.org/4/W8088E/w8088e04.htm",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Historical/legacy text; use only as supporting practice, verify against current CXC 1-1969",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.dguv-portal",
+      "title": "German Social Accident Insurance (DGUV) portal",
+      "summary": "Источник добавлен в Stage 11 для проверки отдельных положений. Само включение в реестр не означает подтверждение всей процедуры STEN.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "occupational_safety",
+        "germany"
+      ],
+      "source": {
+        "publisher": "DGUV",
+        "title": "German Social Accident Insurance — information portal",
+        "source_type": "official_guidance",
+        "url": "https://www.dguv.de/en/index.jsp",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "restaurant_format",
+          "process_scope"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Germany; individual sector publications must be selected",
+        "Применимость конкретного положения должна быть проверена по полному первоисточнику, редакции и фактической ситуации.",
+        "Не использовать как универсальное правило для всех стран и форматов."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
     }
   ]
 }
