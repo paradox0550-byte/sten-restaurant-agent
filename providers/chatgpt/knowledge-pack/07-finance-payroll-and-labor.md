@@ -146,7 +146,7 @@ STEN may calculate and recommend. It must not change payroll, incentives, schedu
 
 ## Stage 11 professional practice expansion — operational effects and marketing calendar
 
-**Provenance:** anonymized practical material S11-10 (historical restaurant marketing planning workbook), plus S11-02 (stocktaking). The source contains spreadsheet errors and is not evidence of realized campaign outcomes.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Marketing calendar as a controllable hypothesis
 For each activity record objective, target guest segment, offer, restaurant/department, period, channel, product availability, staffing and capacity constraints, budget, owner, expected metric and data source. Before launch confirm supply, recipe economics, team briefing and ability to handle demand. After launch compare relevant plan/fact measures: covers, checks, average check, mix, contribution when cost is verified, campaign spend and repeat behavior when measurable. Separate correlation from causation and compare equivalent periods, seasonal context and operating hours.
