@@ -1281,7 +1281,8 @@
         "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.eu.edpb-cctv-sme-guide"
     },
     {
       "id": "law.eu.gdpr-2016-679",
@@ -1420,7 +1421,8 @@
         "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.eu.edps-video-surveillance"
     },
     {
       "id": "law.eu.framework-osh-89-391",
@@ -1699,7 +1701,8 @@
         "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.eu.commission-unfair-marketing"
     },
     {
       "id": "research.restaurant-reservation-cancellation-2025",
@@ -2034,7 +2037,8 @@
         "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.codex-maintenance-legacy"
     },
     {
       "id": "practice.dguv-portal",
@@ -2102,7 +2106,8 @@
         "review_notes": "Добавлено в реестр Stage 11. Не утверждено; требуется постатейная проверка и экспертный sign-off."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.dguv-portal"
     },
     {
       "id": "practice.eu.commission-gdpr-scope",
@@ -2170,7 +2175,8 @@
         "review_notes": "Added as supporting guidance; not approved."
       },
       "created_at": "2026-11-20T00:00:00Z",
-      "updated_at": "2026-11-20T00:00:00Z"
+      "updated_at": "2026-11-20T00:00:00Z",
+      "source_catalog_id": "source.eu.commission-gdpr-scope"
     }
   ]
 }
