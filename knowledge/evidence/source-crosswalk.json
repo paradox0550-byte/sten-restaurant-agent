@@ -290,7 +290,9 @@
         "practice.food-marking-haccp-checklist"
       ],
       "graph_node_ids": [],
-      "procedure_ids": [],
+      "procedure_ids": [
+        "proc.food-product-and-equipment-labelling"
+      ],
       "linkage_status": "evidence_linked",
       "original_source_file": {
         "name": "Чек-лист «Маркировка в общепите».pdf",
