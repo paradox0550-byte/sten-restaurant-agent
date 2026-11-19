@@ -13,5 +13,10 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "docx": "9.5.1",
+    "pdfkit": "0.17.2"
   }
 }
