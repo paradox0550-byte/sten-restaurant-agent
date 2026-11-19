@@ -1063,6 +1063,87 @@
       },
       "created_at": "2026-11-18T00:00:00Z",
       "updated_at": "2026-11-18T00:00:00Z"
+    },
+    {
+      "id": "practice.ppk-establishment-2026-draft",
+      "title": "Проект программы производственного контроля ресторана — редакция 2026",
+      "summary": "12-page establishment-specific draft containing a production-control framework, HACCP workflow, monitoring programme, proposed laboratory plan, preliminary six-CCP table and a register of 16 referenced work instructions. The document explicitly remains a draft pending closure of its approval checklist.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "haccp",
+        "production_control",
+        "restaurant_operations",
+        "source_draft"
+      ],
+      "source": {
+        "publisher": "Пользовательский проектный документ",
+        "title": "Программа производственного контроля ресторана — проект 2026",
+        "source_type": "internal_methodology",
+        "url": null,
+        "citation": "DOCX, 12 pages; full text inspected; page 12 states draft status and approval prerequisites.",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": "draft_2026_final_edit"
+      },
+      "territory": {
+        "scope": "establishment",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant"
+        ],
+        "formats": [
+          "restaurant"
+        ],
+        "establishment_conditions": [
+          "single establishment only",
+          "actual menu, equipment, staffing, premises and operations must be confirmed"
+        ],
+        "required_profile_fields": [
+          "confirmed_establishment_profile",
+          "actual_menu_and_technological_cards",
+          "equipment_inventory",
+          "staffing_and_responsibilities",
+          "process_flow_and_layout",
+          "water_and_sewage_profile",
+          "approved_haccp_plan"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Проект ППК, а не утверждённая программа; не применять как действующее предписание до закрытия контрольного перечня и утверждения уполномоченным лицом.",
+        "В документе остаются незаполненные сведения об ответственном лице, фактическом адресе/параметрах объекта и оборудовании.",
+        "Шесть заявленных ККТ предварительные; статус каждой точки должен быть подтверждён анализом опасностей, а критические пределы, мониторинг, ответственные и корректирующие действия заполнены по фактическим технологическим картам.",
+        "Периодичность лабораторных исследований обозначена как проектный ориентир, не универсальная законодательная периодичность.",
+        "Ссылки на нормативные акты требуют отдельной проверки по официальным актуальным источникам и применимой юрисдикции.",
+        "Перечень из 16 рабочих инструкций не доказывает, что сами инструкции доступны, актуальны или утверждены.",
+        "Не использовать документ как источник универсальных температур, сроков хранения, концентраций или частот контроля."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Источник прочитан полностью. Авторизация, профиль объекта, фактическое оборудование, отдельные HACCP-инструкции, критические пределы и юридическая применимость остаются открытыми."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z",
+      "source_catalog_id": "source.ppk-establishment-2026-draft"
     }
   ]
 }
