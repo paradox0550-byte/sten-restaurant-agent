@@ -1066,8 +1066,8 @@
     },
     {
       "id": "practice.ppk-establishment-2026-draft",
-      "title": "Проект программы производственного контроля ресторана — редакция 2026",
-      "summary": "12-page establishment-specific draft containing a production-control framework, HACCP workflow, monitoring programme, proposed laboratory plan, preliminary six-CCP table and a register of 16 referenced work instructions. The document explicitly remains a draft pending closure of its approval checklist.",
+      "title": "Программа производственного контроля ресторана — редакция 2026, утверждение не подтверждено",
+      "summary": "Latest located 14-page 2026 version contains an establishment profile, HACCP framework, control measures, six preliminary CCPs with a responsible role and per-batch monitoring, proposed laboratory plan, register of 16 referenced work instructions and current-control procedure. The approval signature/date on the title page are blank; it is not treated as approved.",
       "evidence_class": "PRACTICE",
       "topic": [
         "food_safety",
@@ -1078,13 +1078,13 @@
       ],
       "source": {
         "publisher": "Пользовательский проектный документ",
-        "title": "Программа производственного контроля ресторана — проект 2026",
+        "title": "Программа производственного контроля ресторана — редакция 2026 (14 страниц)",
         "source_type": "internal_methodology",
         "url": null,
-        "citation": "DOCX, 12 pages; full text inspected; page 12 states draft status and approval prerequisites.",
+        "citation": "DOCX, 14 pages; pages 1–14 inspected; title-page signature/date blank; pages 11–12 include preliminary CCPs; pages 13–14 list 16 referenced work instructions and current-control process.",
         "published_at": null,
         "accessed_at": "2026-11-19",
-        "source_version": "draft_2026_final_edit"
+        "source_version": "2026_14_page_final_version_approval_unconfirmed"
       },
       "territory": {
         "scope": "establishment",
@@ -1125,13 +1125,12 @@
         "determination": "specialist_review"
       },
       "limitations": [
-        "Проект ППК, а не утверждённая программа; не применять как действующее предписание до закрытия контрольного перечня и утверждения уполномоченным лицом.",
-        "В документе остаются незаполненные сведения об ответственном лице, фактическом адресе/параметрах объекта и оборудовании.",
-        "Шесть заявленных ККТ предварительные; статус каждой точки должен быть подтверждён анализом опасностей, а критические пределы, мониторинг, ответственные и корректирующие действия заполнены по фактическим технологическим картам.",
-        "Периодичность лабораторных исследований обозначена как проектный ориентир, не универсальная законодательная периодичность.",
-        "Ссылки на нормативные акты требуют отдельной проверки по официальным актуальным источникам и применимой юрисдикции.",
-        "Перечень из 16 рабочих инструкций не доказывает, что сами инструкции доступны, актуальны или утверждены.",
-        "Не использовать документ как источник универсальных температур, сроков хранения, концентраций или частот контроля."
+        "Последняя найденная версия — 14 страниц; подпись и дата утверждения на титульном листе пустые, статус утверждения не установлен.",
+        "Шесть ККТ перечислены с ответственным и контролем каждой партии/операции, но числовые критические пределы отнесены к утверждённым техкартам и рабочим листам HACCP; классификация ККТ требует проверки анализом опасностей.",
+        "Периодичность лабораторных исследований представлена как внутренний проектный план, а не универсальное законодательное требование.",
+        "Ссылки на нормативные акты не проверены независимо по официальным источникам.",
+        "16 инструкций HACCP перечислены по коду и названию, но сами индивидуальные утверждённые документы не приложены и не подтверждены как найденные.",
+        "Документ относится к одному конкретному ресторанному объекту; не переносить реквизиты, штат и локальные роли в общую методологию."
       ],
       "related_records": [],
       "conflicts_with": [],
@@ -1139,7 +1138,7 @@
       "review": {
         "reviewer_role": null,
         "reviewed_at": null,
-        "review_notes": "Источник прочитан полностью. Авторизация, профиль объекта, фактическое оборудование, отдельные HACCP-инструкции, критические пределы и юридическая применимость остаются открытыми."
+        "review_notes": "Последняя найденная 14-страничная версия прочитана полностью. На титуле пустые подпись/дата; утверждение не подтверждено. Шесть ККТ имеют ответственного и контроль каждой партии, но числовые пределы и исходные техкарты/инструкции требуют подтверждения."
       },
       "created_at": "2026-11-19T00:00:00Z",
       "updated_at": "2026-11-19T00:00:00Z",
