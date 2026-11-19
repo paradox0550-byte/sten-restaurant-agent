@@ -399,9 +399,12 @@
       "providers/chatgpt/knowledge-pack/README.md"
     ],
     "excluded_private_or_internal_paths": [
+      "knowledge/evidence/registry.json",
       "knowledge/evidence/source-crosswalk.json",
       "knowledge/graph/sources.json",
-      "knowledge/management/research-register.md"
+      "knowledge/graph/operational-knowledge-graph.json",
+      "knowledge/management/research-register.md",
+      "evals/stage-11-source-expansion-cases.json"
     ],
     "security_note": "Exclusion from this archive does not make files private while they remain in a public repository or its Git history. Confidential material must not be committed to a public repository."
   }
