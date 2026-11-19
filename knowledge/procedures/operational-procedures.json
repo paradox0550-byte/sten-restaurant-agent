@@ -1474,9 +1474,96 @@
       "unknowns_are_blocking": true,
       "approval_status": "not_approved_for_operational_use",
       "local_adaptation_required": true
+    },
+    {
+      "id": "proc.storage-compatibility-segregation",
+      "title": "Разделение пищевых продуктов при хранении",
+      "domain": "food_safety_and_hygiene",
+      "domain_id": "food_safety_sanitation",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_cross_category_storage_and_contamination_risk",
+      "source_ids": [
+        "source.food-product-adjacency-guide"
+      ],
+      "source_facts": [
+        "Учебная инструкция рекомендует раздельное хранение продуктов по группам: сухие продукты, хлеб, мясные, рыбные, молочно-жировые, гастрономические, овощи и фрукты.",
+        "В источнике перечислены несовместимые сочетания: продукты, отдающие запах, и продукты, впитывающие запах; сырые продукты/полуфабрикаты и готовая продукция; замороженные и охлаждённые продукты; сухие/сыпучие и влажные продукты; пищевые и непищевые продукты.",
+        "Источник описывает хранение сырья разных видов в одной холодильной/морозильной камере на разных полках как вариант при недостаточной мощности для отдельных камер.",
+        "Источник требует хранить продукцию в закрытых контейнерах и гастроёмкостях.",
+        "Источник заявляет исключение для предприятий менее 25 посадочных мест в отношении совместного хранения сырой и готовой продукции; правовая актуальность и применимость этого утверждения не подтверждены."
+      ],
+      "applicability": "Образовательная инструкция HACCP-AUDIT, PDF 2 страницы, дата не указана. Не является официальным нормативным актом. Использовать как перечень рисков для проектирования локальной схемы хранения; не применять заявленное исключение по числу посадочных мест без проверки действующих официальных требований.",
+      "owner": {
+        "role": "Не указан в источнике; назначается организацией",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "При размещении/перемещении продукции и проверке складских/холодильных зон",
+        "basis": "Model-proposed workflow trigger",
+        "status": "model_proposed"
+      },
+      "steps": [
+        "Составить перечень фактически хранимых продуктов и разделить их по группам, условиям хранения, состоянию (сырьё/готовая продукция) и аллергенным рискам.",
+        "Разделить сырые продукты и готовую к употреблению продукцию по утверждённой схеме HACCP и планировке; исключение из образовательного источника не использовать без официальной проверки.",
+        "Разделить продукты с выраженным запахом и продукты, впитывающие запахи.",
+        "Разделить замороженные и охлаждённые продукты по требуемым режимам хранения.",
+        "Разделить сухие/сыпучие продукты и влажные продукты.",
+        "Отделить пищевые продукты от непищевых материалов и химических средств.",
+        "Если несколько видов сырья размещаются в одной камере, использовать отдельные полки/зоны и закрытые маркированные контейнеры только при подтверждении допустимости схемы локальным планом HACCP и инструкцией оборудования.",
+        "Проверить целостность упаковки, маркировку, сроки и условия хранения по техкартам и требованиям к конкретной продукции.",
+        "Зафиксировать несовместимое размещение, переместить продукт в допустимую зону и оценить риск загрязнения затронутой продукции."
+      ],
+      "checklist_id": "check.storage-compatibility",
+      "record": {
+        "name": "Схема товарного соседства и чек-лист размещения",
+        "status": "proposed_template",
+        "source_form": "В исходном PDF нет плана зон конкретного объекта или журнала контроля."
+      },
+      "verification": [
+        "Сырые и готовые продукты разделены по утверждённой схеме.",
+        "Продукты с несовместимыми запахами/влагой/температурой не размещены вместе.",
+        "Пищевые и непищевые материалы разделены.",
+        "Продукты находятся в закрытой таре и промаркированы по локальным требованиям.",
+        "Исключения не применены без документированной правовой и HACCP-проверки."
+      ],
+      "stop_conditions": [
+        "Неизвестны условия хранения продукта или совместимость категорий.",
+        "Сырая продукция может контактировать с готовой к употреблению.",
+        "Нет закрытой тары или маркировки для идентификации продукта.",
+        "Предлагается применить исключение «менее 25 посадочных мест» без подтверждения действующей нормы."
+      ],
+      "stop_conditions_basis": "Proposed food-safety guardrails; specialist/legal validation required.",
+      "unspecified": [
+        "Точные температурные режимы и сроки хранения по продуктам",
+        "Схема холодильных камер и полок объекта",
+        "Матрица аллергенов и перекрёстного контакта",
+        "Действующая нормативная применимость заявленного исключения",
+        "Ответственные и форма журнала"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.food-product-adjacency-guide",
+          "source_title": "Инструкция «Товарное соседство»",
+          "source_locator": "PDF; 2 pages; storage groups, incompatible combinations, shared cold storage and claimed seating-capacity exception",
+          "source_scope": "general_food_service_training_material",
+          "source_date_status": "not stated; current legal applicability not verified",
+          "page_anchors": [
+            1,
+            2
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Обе страницы прочитаны; группы и несовместимые сочетания — стр. 1, варианты совместного хранения и заявленное исключение — стр. 2."
+        }
+      ],
+      "complexity_assessment": "model_proposed_cross_category_storage_and_contamination_risk",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     }
   ],
   "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
   "complexity_levels": "L1-L6; task complexity classification, model-proposed",
-  "readiness_policy": "18 source-grounded procedure drafts. Source anchors are verified for guest service, selected corporate regulation pages, shift-manager procedure, iiko audit checklist and food-labelling checklist. Specialist review, local approval and pilot verification remain open; no draft is approved for operational use."
+  "readiness_policy": "19 source-grounded procedure drafts. Page anchors verified for guest service, selected corporate regulation pages, shift manager procedure, iiko audit, food labelling and product-adjacency guide. Specialist review, local approval and pilot verification remain open."
 }
