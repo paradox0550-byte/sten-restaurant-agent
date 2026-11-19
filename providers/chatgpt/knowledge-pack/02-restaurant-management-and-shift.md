@@ -2,9 +2,9 @@
 
 ## 1. Operational management system
 
-The supplied training deck *Система операционного управления. Управленческая эффективность* frames restaurant performance as a management system shaped by the market environment (trends, suppliers, customers and competitors) and by people.
+Restaurant performance is managed as an integrated system shaped by market conditions, suppliers, guests, competitors and organizational capability.
 
-The deck identifies three contributors to employee result:
+The management model uses three contributors to employee result:
 - knowledge;
 - skills;
 - attitude to work.
@@ -13,7 +13,7 @@ It links the organization's ability to attract and retain staff to hiring policy
 
 ### Manager's recurring functions
 
-The deck identifies five connected management functions:
+The management model uses five connected management functions:
 1. planning — strategic, long-, medium- and short-term;
 2. organization — work allocation, meetings and delegation;
 3. control — checking execution and standards;
@@ -24,14 +24,14 @@ These functions form a cycle, not separate one-off activities. A plan without ow
 
 ### Leadership styles and situational management
 
-The training material describes:
+Situational leadership distinguishes three broad modes:
 - authoritarian ("I");
 - democratic ("we");
 - liberal ("you").
 
 It recommends matching the style to the situation and employee's work maturity rather than using one style for everyone.
 
-The deck's four-level work-maturity model combines qualification/productivity and responsibility/attitude:
+A task-specific capability model combines qualification/productivity and responsibility/attitude:
 - Level 1: no proven experience; may resist or avoid responsibility.
 - Level 2: has performed parts of a task several times; execution is emerging but result ownership is inconsistent.
 - Level 3: can deliver typical projects with predictable quality and accepts responsibility within defined boundaries.
@@ -39,7 +39,7 @@ The deck's four-level work-maturity model combines qualification/productivity an
 
 **Important:** assess maturity for a particular task, not as a permanent label for a person. Do not infer character or motivation from one incident.
 
-The deck's management approaches by level:
+Select the management approach according to demonstrated capability for the specific task:
 - Level 1 — instruction: small task scope, clear steps, frequent checks and direct feedback.
 - Level 2 — explain and engage: explain why the task matters, support confidence, use mentoring and less frequent but supportive checks.
 - Level 3 — coaching: discuss goal and reality, provide information, agree options and actions; recognize expertise and transfer responsibility.
@@ -47,7 +47,7 @@ The deck's management approaches by level:
 
 ### GROW coaching
 
-The deck presents a coaching sequence:
+A practical coaching conversation can follow this sequence:
 - **Goal:** what result is wanted and how success is recognized?
 - **Reality:** what is happening now, what has been tried and what resources exist?
 - **Options:** what possible paths exist, with their advantages and risks?
@@ -55,17 +55,17 @@ The deck presents a coaching sequence:
 
 Use GROW to help a capable employee think and own the plan. It does not replace a direct instruction when immediate safety or clear compliance control requires one.
 
-## 2. Manager of shift — source-specific procedure
+## 2. Shift manager — adaptable role model
 
-Source: supplied document *ОР Управляющий смены.docx*, 4 pages, historically scoped to restaurant ТРАТТОРИЯ. Treat it as a local/historical role description, not a universal job description.
+The shift manager coordinates the live operation within the authority assigned by the establishment. The role model below is a configurable management framework, not a fixed job description. Adapt reporting lines, staffing, opening routines and authority to the actual restaurant.
 
-### Role and authority described in the source
+### Core role and authority
 - The manager of shift manages and controls restaurant activity during the shift.
-- The source places the role under the director.
+- The reporting line must be set in the establishment's authority matrix.
 - It lists the shift team: bar, waiters, hostess, cleaning/washing staff, cooks and other personnel on the shift.
-- The source says the manager should know operational standards, relevant orders, menu, equipment and subordinate role instructions.
+- The role requires working knowledge of operational standards, relevant orders, menu, equipment and subordinate role instructions.
 
-### Before opening — source checklist
+### Before opening — readiness checks
 - Check premises and guest areas.
 - Check furniture, interior, sanitary facilities and equipment.
 - Check ventilation/climate and music equipment.
@@ -147,7 +147,7 @@ Do not create a task from every message. First determine whether it is an event,
 
 ## Stage 11 professional practice expansion — shift, coordination, training
 
-**Provenance:** anonymized practical materials S11-07 (new-employee orientation), S11-04 (short-training schedule), S11-12 (kitchen–bar–service coordination matrix). These describe real local practices, not universal mandatory standards.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Shift as a managed cycle
 1. **Prepare:** check personnel and station readiness, product availability, critical equipment, reservations, expected load, open defects and handover notes.
