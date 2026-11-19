@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "purpose": "Explicit crosswalk between source catalog, evidence registry, graph and procedures. This is a repository traceability index, not proof that source content is current, complete or expert-approved.",
-  "generated_at": "2026-11-18",
+  "generated_at": "2026-11-19",
   "limitations": [
     "The 12 entries are the source catalog currently present in this repository, not proof that all original user-supplied source files (more than 25) have been recovered.",
     "Source locators are carried from repository metadata; original files have not all been independently reopened and re-anchored during this audit pass.",
@@ -381,6 +381,36 @@
         "pages": 2,
         "anchor": "Полный текст 2 страниц; авторское предисловие, введение, краткое содержание 7 глав, заключение и приложение."
       }
+    },
+    {
+      "source_id": "source.ppk-establishment-2026-draft",
+      "title": "Программа производственного контроля ресторана — проект 2026",
+      "source_type": "user_supplied_production_control_program_draft",
+      "scope": "single_establishment_draft",
+      "date_status": "Document identifies itself as a 2026 draft; approval date and authorized signature are blank.",
+      "locator": "DOCX; 12 pages; PPK overview, establishment profile, HACCP framework, production-control measures, proposed laboratory programme, preliminary CCP table and register of 16 referenced work instructions.",
+      "limitations": [
+        "Project document explicitly remains a draft pending closure of its approval checklist.",
+        "Six CCP entries are preliminary and require hazard-analysis confirmation and completed limits/monitoring/owners/corrective actions.",
+        "Proposed laboratory intervals are not universal statutory requirements.",
+        "Referenced 16 working instructions are not proven available or approved by this file alone.",
+        "Legal citations require independent official-source verification; no compliance conclusion is made."
+      ],
+      "source_anchor_status": "recovered_full_text_reopened_draft_review_open",
+      "evidence_record_ids": [
+        "practice.ppk-establishment-2026-draft"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked",
+      "original_source_file": {
+        "name": "ППК_ООО_Фрианд_2026_финальная_редакция_исправлено.docx",
+        "format": "DOCX",
+        "pages": 12,
+        "anchor": "Pages 1–12 inspected; page 12 contains explicit draft status and pre-approval closure checklist.",
+        "status": "recovered_full_text_reopened"
+      },
+      "original_source_recovered": true
     }
   ],
   "audit_note": "Ten of twelve source catalog entries were matched to original files in the current Library search; eight were fully text-reopened in this pass, while the 43-page guest standard and 130-page corporate regulation still need complete page-level review. Two originals remain unlocated: director calendar workbook and restaurant business-process model workbook. This is not a complete inventory of the user's 25+ original documents."
