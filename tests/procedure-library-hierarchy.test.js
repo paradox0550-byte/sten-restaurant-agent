@@ -11,7 +11,15 @@ test("procedure library uses the canonical 36-domain map and six complexity leve
   assert.equal(register.source_catalog.process_count, 77);
   assert.equal(register.source_catalog.items.length, 77);
   assert.equal(register.existing_procedure_cards.count, procedureCards.procedures.length);
-  assert.equal(procedureCards.procedures.length, 12);\n  for (const card of procedureCards.procedures) {\n    assert.ok(card.domain_id, card.id + ": missing canonical domain");\n    assert.ok(card.complexity_level >= 1 && card.complexity_level <= 6, card.id + ": invalid complexity level");\n    assert.ok(card.source_traceability.length > 0, card.id + ": missing source traceability");\n    assert.ok(card.stop_conditions.length > 0, card.id + ": missing stop conditions");\n    assert.equal(card.approval_status, "not_approved_for_operational_use");\n    assert.equal(card.unknowns_are_blocking, true);\n  }
+  assert.equal(procedureCards.procedures.length, 12);
+  for (const card of procedureCards.procedures) {
+    assert.ok(card.domain_id, card.id + ": missing canonical domain");
+    assert.ok(card.complexity_level >= 1 && card.complexity_level <= 6, card.id + ": invalid complexity level");
+    assert.ok(card.source_traceability.length > 0, card.id + ": missing source traceability");
+    assert.ok(card.stop_conditions.length > 0, card.id + ": missing stop conditions");
+    assert.equal(card.approval_status, "not_approved_for_operational_use");
+    assert.equal(card.unknowns_are_blocking, true);
+  }
   assert.equal(levels.levels.length, 6);
   assert.equal(domainMap.domains.length, 36);
   assert.equal(new Set(domainMap.domains.map(d => d.id)).size, 36);
