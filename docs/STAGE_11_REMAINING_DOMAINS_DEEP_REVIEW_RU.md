@@ -192,9 +192,9 @@ Asset ID; производитель/модель/серийный номер; �
 | E25 | Kim & Tang (2024), Tackling no-shows in fine dining, Journal of Revenue and Pricing Management 23, 423–434 | Two experiments; fine-dining context, cancellation fairness and awareness; limited external validity. DOI 10.1057/s41272-024-00499-1 |
 | E26 | Tse & Poon (2017), Modeling no-shows, cancellations, overbooking, and walk-ins in restaurant revenue management | Two-year data from one Hong Kong restaurant; supports modelling, not universal booking caps. DOI 10.1080/15378020.2016.1198626 |
 | E27 | Alexandrov & Lariviere (2012), Are Reservations Recommended?, Manufacturing & Service Operations Management 14(2), 218–230 | Capacity/reservation trade-offs; theoretical model, not direct restaurant operating standard. DOI 10.1287/msom.1110.0360 |
-| E28 | Codex Alimentarius CXC 1-1969, General Principles of Food Hygiene, Section on establishment maintenance | Preventive maintenance programme and manufacturer/operating-condition-based frequency. <https://www.fao.org/4/W8088E/w8088e04.htm> |
+| E28 | FAO-hosted legacy online text of the Recommended International Code of Practice — General Principles of Food Hygiene | Historical supporting passage on written preventive maintenance and manufacturer/operating-condition-based frequency; not treated as current Codex edition. Verify against current CXC 1-1969 before normative use. <https://www.fao.org/4/W8088E/w8088e04.htm> |
 | E29 | German Social Accident Insurance (DGUV) | German occupational safety authority/insurance association portal; select sector-specific current guidance, not a single universal restaurant rule. <https://www.dguv.de/en/index.jsp> |
-| E30 | EU Regulation 2016/679 (GDPR) | Primary legal text for EU/EEA data protection scope subject to territorial applicability and national supervisory interpretation. <https://eur-lex.europa.eu/eli/reg/2016/679/oj> |
+| E30 | EU Regulation 2016/679 (GDPR) | Primary legal text for EU/EEA data protection duties; applicability and national supervisory interpretation must be checked. <https://eur-lex.europa.eu/eli/reg/2016/679/oj> |
 
 ## 9. Незакрытые правовые вопросы
 
