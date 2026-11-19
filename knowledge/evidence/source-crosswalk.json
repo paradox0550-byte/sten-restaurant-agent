@@ -137,9 +137,10 @@
       "limitations": [
         "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
         "Brand-specific scripts and operational details are not universal.",
-        "Current legal, accessibility, labor and food-safety applicability requires separate verification."
+        "Current legal, accessibility, labor and food-safety applicability requires separate verification.",
+        "Page-level extraction supports the 5 current procedure drafts; other topics and source-specific scripts still require separate procedure review before reuse."
       ],
-      "source_anchor_status": "recovered_full_text_reopened_anchor_review_partial",
+      "source_anchor_status": "recovered_full_text_all_43_pages_inspected_procedure_extract_anchors_mapped",
       "evidence_record_ids": [
         "practice.guest-service-standard-2025"
       ],
@@ -162,7 +163,7 @@
         "name": "Стандарт обслуживания Гостей.pdf",
         "format": "PDF",
         "pages": 43,
-        "anchor": "Титул и оглавление прочитаны; полный постраничный anchor review остаётся открытым.",
+        "anchor": "All 43 pages inspected; page anchors for shift preparation (8–9), appearance (10–11), guest journey/order (12–29), service delivery (30–34), bill/payment (35–37), complaints/conflicts (39–42).",
         "status": "recovered_full_text_reopened_anchor_review_partial"
       },
       "original_source_recovered": true
@@ -179,7 +180,7 @@
         "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
         "Legacy system instructions are not portable implementation guidance."
       ],
-      "source_anchor_status": "recovered_and_full_text_reopened_partial",
+      "source_anchor_status": "recovered_full_text_selected_pages_reopened_anchor_review_partial",
       "evidence_record_ids": [
         "practice.daily-operational-walk",
         "practice.restaurant-operating-regulation"
@@ -205,7 +206,7 @@
         "name": "Регламент ресторана.doc",
         "format": "DOC",
         "pages": 130,
-        "anchor": "Титул, оглавление и начальные разделы; документ указывает редакцию на 01.09.2025 и формат fast-food.",
+        "anchor": "130-page document; reviewed selected pages 8–13, 18–25, 52–56, 69–72 and 98–106. Exact anchors are mapped only where noted in procedure cards; full document remains under review.",
         "status": "recovered_and_full_text_reopened_partial"
       },
       "original_source_recovered": true
