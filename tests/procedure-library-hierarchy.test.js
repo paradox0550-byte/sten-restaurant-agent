@@ -11,7 +11,7 @@ test("procedure library uses the canonical 36-domain map and six complexity leve
   assert.equal(register.source_catalog.process_count, 77);
   assert.equal(register.source_catalog.items.length, 77);
   assert.equal(register.existing_procedure_cards.count, procedureCards.procedures.length);
-  assert.equal(procedureCards.procedures.length, 13);
+  assert.equal(procedureCards.procedures.length, 16);\n  assert.equal(register.existing_procedure_cards.count, 16);
   for (const card of procedureCards.procedures) {
     assert.ok(card.domain_id, card.id + ": missing canonical domain");
     assert.ok(card.complexity_level >= 1 && card.complexity_level <= 6, card.id + ": invalid complexity level");
