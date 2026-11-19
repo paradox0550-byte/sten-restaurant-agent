@@ -198,9 +198,9 @@ The procedure library is now architected hierarchically. Full decomposition of a
 - Selected pages of the 130-page corporate regulation were inspected (pages 8–13, 18–25, 52–56, 69–72, 98–106); the complete document has not yet received a full page-by-page review.
 
 ### Draft production-control programme (2026)
-A 12-page user-supplied PPK draft was inspected in full and registered as `source.ppk-establishment-2026-draft`. It is explicitly not approved. The draft itself leaves establishment fields incomplete, lists six preliminary CCPs without complete critical limits/monitoring/owners/corrective actions, and presents laboratory frequencies as proposed internal planning values. No legal-compliance claim is inferred from it.
+The latest located 14-page 2026 PPK version was inspected in full and registered as `source.ppk-establishment-2026-draft`. The title-page approval signature/date remain blank, so approval is unconfirmed. It identifies a responsible role and per-batch monitoring for six preliminary CCPs, but numeric critical limits depend on approved technological cards/HACCP worksheets and the CCP classification still requires hazard-analysis validation. It presents laboratory frequencies as proposed internal planning values, not universal legal intervals. The earlier 12-page version is retained only as a superseded draft reference. No legal-compliance claim is inferred from it.
 
-Appendix 6 lists 16 HACCP working-instruction titles. The original instructions are not established as recovered/approved, so `knowledge/procedures/procedure-candidates.json` records them as candidates only, with null complexity and no procedure cards. They must not be promoted until the original instruction and its approval/version are obtained.
+Appendix 6 (pages 13–14) lists 16 HACCP working-instruction titles. The original instructions are not established as recovered/approved, so `knowledge/procedures/procedure-candidates.json` records them as candidates only, with null complexity and no procedure cards. They must not be promoted until the original instruction and its approval/version are obtained.
 
 ### Remaining gates
 - Complete source-page anchors for the remaining large documents and the 130-page regulation.
