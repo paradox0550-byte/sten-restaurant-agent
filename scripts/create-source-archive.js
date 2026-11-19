@@ -17,7 +17,7 @@ fs.mkdirSync(outputDir, { recursive: true });
 if (fs.existsSync(archivePath)) fs.unlinkSync(archivePath);
 
 execFileSync("git", [
-  "archive", "--format=zip", `--prefix=${prefix}/`, "HEAD", "--", ...declared, "-o", archivePath
+  "archive", "--format=zip", "-o", archivePath, `--prefix=${prefix}/`, "HEAD", "--", ...declared
 ], { stdio: "inherit" });
 
 const listing = execFileSync("unzip", ["-Z1", archivePath], { encoding: "utf8" })
