@@ -261,7 +261,9 @@
         "practice.food-product-adjacency-guide"
       ],
       "graph_node_ids": [],
-      "procedure_ids": [],
+      "procedure_ids": [
+        "proc.storage-compatibility-segregation"
+      ],
       "linkage_status": "evidence_linked",
       "original_source_file": {
         "name": "Инструкция «Товарное соседство».pdf",
