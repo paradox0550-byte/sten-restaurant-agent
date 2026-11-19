@@ -3274,6 +3274,221 @@
       },
       "created_at": "2026-11-20T00:00:00Z",
       "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.trts-021-2011",
+      "title": "ТР ТС 021/2011 «О безопасности пищевой продукции»",
+      "summary": "Технический регламент ЕАЭС по безопасности пищевой продукции; актуальность изменений проверять по решениям ЕЭК и карточке Росстандарта.",
+      "evidence_class": "LAW",
+      "topic": [
+        "food_safety",
+        "haccp",
+        "production",
+        "storage",
+        "health_screening"
+      ],
+      "source": {
+        "publisher": "Росстандарт",
+        "title": "Карточка технического регламента ТР ТС 021/2011",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://protect.gost.ru/tr/details/8df9092f-9ca8-4776-ba2a-7b6c678ff5ca",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EAEU",
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "process_scope",
+          "product_category",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Технический регламент/закон применяется по сфере и категории продукции; не все пункты относятся к каждому ресторанному процессу.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия объекта.",
+        "Проверить полный действующий текст и решения ЕЭК/переходные положения перед внедрением."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Базовый текст/карточка источника найдены; нужна независимая юридическая и технологическая проверка применимости."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.trts-022-2011",
+      "title": "ТР ТС 022/2011 «Пищевая продукция в части её маркировки»",
+      "summary": "Технический регламент ЕАЭС о маркировке пищевой продукции; учитывать изменения Совета ЕЭК, включая редакцию 22.04.2024.",
+      "evidence_class": "LAW",
+      "topic": [
+        "food_labeling",
+        "allergens",
+        "menu",
+        "marketing"
+      ],
+      "source": {
+        "publisher": "Комиссия Таможенного союза / ЕЭК",
+        "title": "ТР ТС 022/2011, Решение КТС от 09.12.2011 № 881",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_124614/6ab20e093bf33afdae0c68aa39dfe35a7958b065/",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EAEU",
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "process_scope",
+          "product_category",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Технический регламент/закон применяется по сфере и категории продукции; не все пункты относятся к каждому ресторанному процессу.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия объекта.",
+        "Проверить полный действующий текст и решения ЕЭК/переходные положения перед внедрением."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Базовый текст/карточка источника найдены; нужна независимая юридическая и технологическая проверка применимости."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.veterinary-4979-1",
+      "title": "Закон РФ № 4979-1 «О ветеринарии»",
+      "summary": "Федеральная правовая основа ветеринарных сопроводительных документов и прослеживаемости подконтрольных товаров; ст. 2.3 в действующей редакции.",
+      "evidence_class": "LAW",
+      "topic": "1993-05-14",
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Закон РФ от 14.05.1993 № 4979-1",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_4438/",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EAEU",
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "process_scope",
+          "product_category",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Технический регламент/закон применяется по сфере и категории продукции; не все пункты относятся к каждому ресторанному процессу.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия объекта.",
+        "Проверить полный действующий текст и решения ЕЭК/переходные положения перед внедрением."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Базовый текст/карточка источника найдены; нужна независимая юридическая и технологическая проверка применимости."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
     }
   ]
 }
