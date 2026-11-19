@@ -6,5 +6,6 @@ Deterministic helpers are implemented in `calculators/` and source modules in `.
 - Menu engineering: classification requires an explicit basis and approved thresholds.
 - Service recovery: tracks case states; does not contact guests or claim resolution.
 - Intelligence engine: validates evidence/facts, legal applicability guardrails and action completeness.
+- Spreadsheet/document engine: creates and reads XLSX, audits formula integrity against approved specifications and independent calculations, exports DOCX/PDF, creates Google Sheets, and uploads XLSX to Yandex Disk.
 
-`excel-analysis/` and `api/` are extension points only. No spreadsheet parser, hosted API or external integration is claimed as implemented in this package.
+See `spreadsheet-engine/README.md` and `../docs/spreadsheet-engine.md` for provider authentication boundaries and limitations.
