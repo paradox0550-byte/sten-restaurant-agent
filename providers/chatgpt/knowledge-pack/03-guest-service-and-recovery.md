@@ -122,7 +122,7 @@ Every metric requires a defined source, denominator, period and scope. Do not op
 
 ## Stage 11 professional practice expansion — guest journey and pass control
 
-**Provenance:** anonymized practical materials S11-06 (quality checks before serving), S11-08 (Service Design checklist), S11-12 (KBS coordination), S11-07 (orientation). Source-specific timing, dish descriptions and restaurant names are not transferred.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Guest journey as observable service
 Map arrival, first contact, seating, menu explanation, order capture, waiting, delivery, check-back, bill, farewell and post-visit response. For each touchpoint define observable behavior, the guest's likely friction, accountable role, evidence, correction and retest. A checklist score is not a complete guest-experience measure; combine observation with complaints, actual order errors and verified feedback.
