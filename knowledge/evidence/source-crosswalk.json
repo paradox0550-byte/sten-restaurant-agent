@@ -423,6 +423,132 @@
         "status": "recovered_full_text_reopened_approval_unconfirmed"
       },
       "original_source_recovered": true
+    },
+    {
+      "source_id": "source.eu.edpb-cctv-sme-guide",
+      "title": "EDPB SME Guide FAQ — CCTV",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "EDPB SME Guide FAQ — CCTV",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.eu.edpb-cctv-sme-guide"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
+    },
+    {
+      "source_id": "source.eu.edps-video-surveillance",
+      "title": "EDPS Video-surveillance",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "EDPS Video-surveillance",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.eu.edps-video-surveillance"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
+    },
+    {
+      "source_id": "source.eu.commission-unfair-marketing",
+      "title": "European Commission — Unfair commercial practices and price indication",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "European Commission — Unfair commercial practices and price indication",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.eu.commission-unfair-marketing"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
+    },
+    {
+      "source_id": "source.codex-maintenance-legacy",
+      "title": "FAO-hosted legacy Codex maintenance text",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "FAO-hosted legacy Codex maintenance text",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.codex-maintenance-legacy"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
+    },
+    {
+      "source_id": "source.dguv-portal",
+      "title": "German Social Accident Insurance (DGUV) portal",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "German Social Accident Insurance (DGUV) portal",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.dguv-portal"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
+    },
+    {
+      "source_id": "source.eu.commission-gdpr-scope",
+      "title": "European Commission — Application of the GDPR",
+      "source_type": "official_guidance_or_historical_practice",
+      "scope": "regional_or_limited",
+      "date_status": "accessed 2026-11-20; applicability and currentness require specialist review",
+      "locator": "European Commission — Application of the GDPR",
+      "limitations": [
+        "New Stage 11 source; not yet linked to a reviewed procedure or graph node.",
+        "Not a universal rule; territory and exact provision must be verified."
+      ],
+      "source_anchor_status": "original_source_not_located_in_current_library_search",
+      "evidence_record_ids": [
+        "practice.eu.commission-gdpr-scope"
+      ],
+      "graph_node_ids": [],
+      "procedure_ids": [],
+      "linkage_status": "evidence_linked_registry_only",
+      "original_source_file": null,
+      "original_source_recovered": false
     }
   ],
   "audit_note": "Ten of twelve source catalog entries were matched to original files in the current Library search; eight were fully text-reopened in this pass, while the 43-page guest standard and 130-page corporate regulation still need complete page-level review. Two originals remain unlocated: director calendar workbook and restaurant business-process model workbook. This is not a complete inventory of the user's 25+ original documents."
