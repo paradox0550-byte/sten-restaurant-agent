@@ -2177,6 +2177,1029 @@
       "created_at": "2026-11-20T00:00:00Z",
       "updated_at": "2026-11-20T00:00:00Z",
       "source_catalog_id": "source.eu.commission-gdpr-scope"
+    },
+    {
+      "id": "law.ru.sanpin-4282-26",
+      "title": "СанПиН 2.3/2.4.4282-26 — санитарные требования к организации общественного питания",
+      "summary": "Постановление Главного государственного санитарного врача РФ от 02.06.2026 № 18; зарегистрировано Минюстом № 86854; действует 01.09.2026–01.09.2032.",
+      "evidence_class": "LAW",
+      "topic": [
+        "food_safety",
+        "sanitary",
+        "haccp",
+        "restaurant"
+      ],
+      "source": {
+        "publisher": "Главный государственный санитарный врач РФ",
+        "title": "Постановление от 02.06.2026 № 18",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://publication.pravo.gov.ru/document/0001202606020084",
+        "citation": null,
+        "published_at": "2026-06-02",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2026-06-02",
+        "effective_from": "2026-09-01",
+        "effective_to": "2032-09-01",
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "СанПиН 2.3/2.4.3590-20 отменён с 01.09.2026; использовать новый акт.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.152-fz",
+      "title": "Федеральный закон № 152-ФЗ «О персональных данных»",
+      "summary": "Базовый федеральный закон об обработке, защите и передаче персональных данных; отдельная проверка актуальной редакции и применимости для CCTV/CRM/маркетинга.",
+      "evidence_class": "LAW",
+      "topic": [
+        "privacy",
+        "personal_data",
+        "cctv",
+        "marketing",
+        "hr"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 27.07.2006 № 152-ФЗ",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_61801/",
+        "citation": null,
+        "published_at": "2006-07-27",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2006-07-27",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Для видеонаблюдения, CRM и рассылок оценивать цель, основание, локализацию, уведомление и трансграничную передачу отдельно.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.54-fz",
+      "title": "Федеральный закон № 54-ФЗ о применении контрольно-кассовой техники",
+      "summary": "Федеральный закон о применении ККТ, фискальных документах и обязанностях пользователя ККТ; конкретная схема зависит от расчётов и договорной модели.",
+      "evidence_class": "LAW",
+      "topic": [
+        "cash_register",
+        "fiscalization",
+        "restaurant_finance",
+        "aggregators"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 22.05.2003 № 54-ФЗ",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_42359/",
+        "citation": null,
+        "published_at": "2003-05-22",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2003-05-22",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Не заменять фискальный документ отчётом POS; проверять актуальную редакцию, ФФД, пользователя ККТ и расчётную схему.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.402-fz",
+      "title": "Федеральный закон № 402-ФЗ «О бухгалтерском учёте»",
+      "summary": "Федеральный закон о первичных документах, регистрах, учётной политике, отчётности и хранении; учитывать изменения, в том числе вступающие в силу с 01.01.2027.",
+      "evidence_class": "LAW",
+      "topic": [
+        "accounting",
+        "primary_documents",
+        "financial_reporting",
+        "archive"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 06.12.2011 № 402-ФЗ",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_122855/",
+        "citation": null,
+        "published_at": "2011-12-06",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2011-12-06",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Учитывать поправки с отложенной датой вступления; бухгалтерские и управленческие показатели не смешивать.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.tk",
+      "title": "Трудовой кодекс Российской Федерации",
+      "summary": "Основной федеральный закон о трудовых отношениях, времени работы, оплате, кадровых событиях, дисциплине и охране труда.",
+      "evidence_class": "LAW",
+      "topic": [
+        "labor",
+        "hr",
+        "payroll",
+        "working_time",
+        "occupational_safety"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 30.12.2001 № 197-ФЗ",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_34683/",
+        "citation": null,
+        "published_at": "2001-12-30",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2001-12-30",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Проверять редакцию на дату события; локальные акты не могут ухудшать положение работника по сравнению с законом.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.consumer-2300-1",
+      "title": "Закон РФ № 2300-1 «О защите прав потребителей»",
+      "summary": "Базовый закон о правах потребителей, информации об услугах, качестве и ответственности исполнителя/агрегатора.",
+      "evidence_class": "LAW",
+      "topic": [
+        "consumer_rights",
+        "restaurant_service",
+        "aggregators",
+        "reservations",
+        "complaints"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Закон РФ от 07.02.1992 № 2300-1",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_305/",
+        "citation": null,
+        "published_at": "1992-02-07",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "1992-02-07",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Применимость конкретных статей проверять по роли ресторана/агрегатора и фактической модели заказа.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.advertising-38-fz",
+      "title": "Федеральный закон № 38-ФЗ «О рекламе»",
+      "summary": "Федеральный закон о достоверности рекламы, стимулирующих мероприятиях, рекламе по сетям электросвязи и интернет-рекламе.",
+      "evidence_class": "LAW",
+      "topic": [
+        "advertising",
+        "marketing",
+        "social_media",
+        "contests",
+        "alcohol"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 13.03.2006 № 38-ФЗ",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_58968/",
+        "citation": null,
+        "published_at": "2006-03-13",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2006-03-13",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Квалифицировать формат по фактическому содержанию и каналу; алкогольная реклама требует отдельной проверки.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.pp-1515",
+      "title": "Правила оказания услуг общественного питания — ПП РФ № 1515",
+      "summary": "Правила № 1515 в редакции ПП РФ № 1474 от 09.11.2026; срок действия продлён до 01.09.2027, новая редакция действует с 17.11.2026.",
+      "evidence_class": "LAW",
+      "topic": [
+        "consumer_rights",
+        "restaurant_service",
+        "reservations",
+        "preorders"
+      ],
+      "source": {
+        "publisher": "Правительство Российской Федерации",
+        "title": "Постановление от 21.09.2020 № 1515",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_363241/",
+        "citation": null,
+        "published_at": "2020-09-21",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2020-09-21",
+        "effective_from": "2021-01-01",
+        "effective_to": "2027-09-01",
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Проверять изменения и дату действия; п. 14 регулирует предварительный заказ и договор с формой предоплаты.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.pp-2464",
+      "title": "Постановление Правительства РФ № 2464 об обучении по охране труда",
+      "summary": "Правила обучения и проверки знаний по охране труда; редакция от 30.06.2026, изменения с 31.08.2026; срок действия до 01.09.2032.",
+      "evidence_class": "LAW",
+      "topic": [
+        "occupational_safety",
+        "training",
+        "contractors"
+      ],
+      "source": {
+        "publisher": "Правительство Российской Федерации",
+        "title": "Постановление от 24.12.2021 № 2464",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_405174/",
+        "citation": null,
+        "published_at": "2021-12-24",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2021-12-24",
+        "effective_from": "2022-09-01",
+        "effective_to": "2032-09-01",
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Применять по категориям работников и видам работ; обычный корпоративный тренинг не заменяет обязательное обучение.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.3210-u",
+      "title": "Указание Банка России № 3210-У о порядке ведения кассовых операций",
+      "summary": "Указание о кассовых операциях юридических лиц и упрощённом порядке для ИП/субъектов малого предпринимательства; актуальная редакция от 09.01.2024.",
+      "evidence_class": "LAW",
+      "topic": [
+        "cash_operations",
+        "cash_book",
+        "accountable_expenses"
+      ],
+      "source": {
+        "publisher": "Банк России",
+        "title": "Указание от 11.03.2014 № 3210-У",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_163618/",
+        "citation": null,
+        "published_at": "2014-03-11",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2014-03-11",
+        "effective_from": "2014-06-01",
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Проверять условия применения упрощений для ИП/МСП; не переносить исключения на все организации.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.fsbu-28-2023",
+      "title": "ФСБУ 28/2023 «Инвентаризация»",
+      "summary": "Федеральный стандарт бухгалтерского учёта, обязателен к применению с 01.04.2025, кроме организаций бюджетной сферы.",
+      "evidence_class": "LAW",
+      "topic": [
+        "inventory",
+        "accounting",
+        "assets",
+        "stock"
+      ],
+      "source": {
+        "publisher": "Минфин России",
+        "title": "Приказ от 13.01.2023 № 4н",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_443995/",
+        "citation": null,
+        "published_at": "2023-01-13",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2023-01-13",
+        "effective_from": "2025-04-01",
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "С 01.04.2025 старые Методические указания № 49 не применяются в противоречащей части.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.fsbu-25-2018",
+      "title": "ФСБУ 25/2018 «Бухгалтерский учёт аренды»",
+      "summary": "Федеральный стандарт бухгалтерского учёта аренды, применяемый к аренде/лизингу при соблюдении сферы действия стандарта.",
+      "evidence_class": "LAW",
+      "topic": [
+        "lease",
+        "leasing",
+        "accounting",
+        "fixed_assets"
+      ],
+      "source": {
+        "publisher": "Минфин России",
+        "title": "Приказ от 16.10.2018 № 208н",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://base.garant.ru/72138328/",
+        "citation": null,
+        "published_at": "2018-10-16",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2018-10-16",
+        "effective_from": "2022-01-01",
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Определять применимость и допустимые исключения по договору и учётной политике.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.sfr-efs1-guidance",
+      "title": "СФР — официальные сроки и правила представления ЕФС-1",
+      "summary": "Официальная страница СФР о составе формы ЕФС-1 и сроках подачи по видам кадровых событий/подразделам.",
+      "evidence_class": "LAW",
+      "topic": [
+        "hr_reporting",
+        "employment",
+        "personnel_records"
+      ],
+      "source": {
+        "publisher": "Социальный фонд России",
+        "title": "Официальное разъяснение по форме ЕФС-1",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://sfr.gov.ru/employers/lk_insurer/baza_znanij/efs_1",
+        "citation": null,
+        "published_at": "2026-11-20",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2026-11-20",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Сроки различаются по подразделам и типу события; перед отправкой сверять текущую форму и редакцию.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.fns-ens-guidance",
+      "title": "ФНС — единый налоговый счёт и календарь уплаты",
+      "summary": "Официальная страница ФНС о ЕНС/ЕНП, уведомлениях, декларациях и общих сроках уплаты; конкретные обязательства имеют исключения.",
+      "evidence_class": "LAW",
+      "topic": [
+        "tax",
+        "single_tax_account",
+        "payroll_tax",
+        "tax_reporting"
+      ],
+      "source": {
+        "publisher": "Федеральная налоговая служба",
+        "title": "Официальное разъяснение по ЕНС",
+        "source_type": "official_act_or_official_guidance",
+        "url": "https://www.nalog.gov.ru/rn18/ens/",
+        "citation": null,
+        "published_at": "2026-11-20",
+        "accessed_at": "2026-11-20",
+        "source_version": "checked_2026-11-20"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2026-11-20",
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering",
+          "delivery"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "establishment_profile",
+          "process_scope",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Не применять общие даты 25/28 числа без проверки конкретного налога, режима и события.",
+        "Включение в реестр не является юридическим заключением или подтверждением соответствия конкретного объекта.",
+        "Перед внедрением проверить действующую редакцию, переходные положения, региональные/муниципальные требования и фактическую применимость."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Источник найден и базовые реквизиты/период действия сверены; требуется независимая проверка юристом и проверка применимости к конкретному ресторану."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
     }
   ]
 }
