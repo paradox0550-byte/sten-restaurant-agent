@@ -53,6 +53,7 @@
     "evidence_validation_cli",
     "expert_context_assembly",
     "explicit_evidence_conflict_reporting",
+    "gmail_discovered_expert_and_corporate_source_intake_metadata_only",
     "hierarchical_procedure_library",
     "horeca_knowledge_coverage_map",
     "human_review_conflict_workflow",
