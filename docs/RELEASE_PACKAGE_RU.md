@@ -1,0 +1,40 @@
+# Release package — STEN 0.5.0
+
+## Distribution contract
+
+The user download is a curated ChatGPT Project knowledge pack, not a source-code distribution. It contains:
+- nine STEN knowledge Markdown files;
+- a separate Project instruction file.
+
+The installation guide and user guide are maintained separately in the documentation set and Dropbox Paper. Internal evidence registries, source crosswalks, graph provenance catalogs, research registers, source files, tests and runtime code are not part of the tenant archive.
+
+## Build and verification
+
+The release archive is produced by `npm run package:source` from the explicit `tenant_distribution.files` allowlist in `package-manifest.json`.
+
+The CI release gate must pass:
+1. evidence registry validation;
+2. source/package manifest validation;
+3. high-confidence secret scan;
+4. complete automated test suite;
+5. tenant archive build and allowlist comparison;
+6. artifact upload.
+
+The archive's `SHA256SUMS.txt` is the integrity reference. `CONTENTS.txt` is the file inventory.
+
+## User release procedure
+
+1. Download the archive artifact from a successful main-branch CI run.
+2. Inspect the nested tenant ZIP and confirm it contains the nine knowledge files, README and Project instructions only.
+3. Scan the extracted tenant files for configured private source identities and locators.
+4. Upload the ZIP and its checksum/inventory to the Dropbox release folder.
+5. Update the Dropbox Paper release log with the actual commit, CI run, checksum and final Dropbox paths.
+6. Verify the user-facing Dropbox link with a separate browser/account if public access is intended.
+
+## Important boundaries
+
+- A file excluded from the tenant ZIP is not private if it remains in a public GitHub repository or its history.
+- Do not put confidential source materials into a public repository.
+- A green CI run proves only the automated checks it executes. It does not certify expert correctness, legal compliance, or successful operation at a restaurant.
+- Stage 11 substantive validation remains open until specialist review and controlled pilots are completed.
+- No release is published until the owner approves the final contents and distribution link.
