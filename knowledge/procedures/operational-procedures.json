@@ -920,9 +920,95 @@
       "unknowns_are_blocking": true,
       "approval_status": "not_approved_for_operational_use",
       "local_adaptation_required": true
+    },
+    {
+      "id": "proc.fryer-oil-management",
+      "title": "Эксплуатация фритюрницы и контроль фритюрного масла",
+      "domain": "kitchen_and_production",
+      "domain_id": "kitchen_and_production",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_food_process_equipment_and_safety_risk",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "source_facts": [
+        "Корпоративный регламент требует использовать для фритюрниц масло/жир, поставляемое указанным в документе поставщиком.",
+        "При жарке масло должно полностью покрывать продукт в корзине.",
+        "Размораживать продукты перед жаркой по данному источнику не допускается; повторное обжаривание не допускается.",
+        "После жарки корзине с готовым блюдом предписано дать стечь маслу не менее 30 секунд.",
+        "В перерывах источник предписывает снижать температуру фритюрницы до 140 °C; перед началом жарки возвращать требуемую температуру.",
+        "Замена масла описана 1–2 раза в неделю в зависимости от объёма жарки, цвета масла и вкусовых качеств готового блюда; ведётся журнал использования фритюрных жиров.",
+        "Слив и фильтрация масла описаны каждые 2–3 дня в зависимости от объёма жарки; взвесь утилизируется.",
+        "Отработанное масло передаётся в таре подрядчика; слив в канализацию запрещён."
+      ],
+      "applicability": "Исторический корпоративный регламент сети Гранд Фуд, редакция на 01.09.2025, формат fast-food. Не переносить поставщика, температурные установки, интервалы замены и прочие параметры на другой объект. Перед использованием требуется сверка с инструкцией конкретной фритюрницы, характеристиками масла, актуальной технологией и действующими требованиями.",
+      "owner": {
+        "role": "Не указан в источнике",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "По циклам эксплуатации; источник указывает фильтрацию каждые 2–3 дня и замену 1–2 раза в неделю с поправкой на объём и состояние масла",
+        "basis": "Source-specific corporate instruction",
+        "status": "source_defined_scoped"
+      },
+      "steps": [
+        "Проверить, что используется масло/жир, разрешённый действующей спецификацией объекта; корпоративное требование к конкретному поставщику применять только при подтверждённой применимости документа.",
+        "Перед загрузкой убедиться, что продукт подготовлен по актуальной технологической карте и масло покрывает продукт в корзине.",
+        "Не размораживать продукт перед жаркой и не выполнять повторное обжаривание в рамках описанной исходником процедуры.",
+        "После жарки дать корзине стечь не менее 30 секунд — параметр источника, подлежащий локальной технологической проверке.",
+        "В перерывах использовать режим снижения температуры только в соответствии с инструкцией производителя оборудования и утверждённой технологией; 140 °C — исторический параметр конкретного источника, не универсальная установка.",
+        "Проверять состояние масла по принятой на объекте спецификации; исходный документ связывает замену с объёмом жарки, цветом и вкусовыми качествами готового блюда.",
+        "Фильтровать масло и удалять взвесь по локально утверждённому графику; исходный документ указывает 2–3 дня в зависимости от объёма жарки.",
+        "Фиксировать фильтрацию и замену в журнале использования фритюрных жиров.",
+        "Собирать отработанное масло в предназначенную тару и передавать на установленную утилизацию; не сливать в канализацию."
+      ],
+      "record": {
+        "name": "Журнал использования фритюрных жиров",
+        "status": "source_defined",
+        "source_form": "Название журнала указано; форма и поля в доступном фрагменте не приведены."
+      },
+      "verification": [
+        "Есть подтверждение применяемой спецификации масла и инструкции оборудования.",
+        "Операции фильтрации/замены отражены в журнале.",
+        "Отработанное масло передано в предусмотренную тару, не слито в канализацию."
+      ],
+      "exception_handling": "При неизвестном состоянии масла, неисправности терморегулятора, отсутствии безопасной тары или сомнении в допустимости продукта остановить использование затронутой фритюрницы и передать вопрос ответственному руководителю/техническому специалисту по локальному порядку.",
+      "stop_conditions": [
+        "Не подтверждены тип масла, допустимый режим или инструкция производителя оборудования.",
+        "Фритюрница неисправна или температура не контролируется.",
+        "Масло имеет признаки непригодности либо безопасное состояние не может быть подтверждено.",
+        "Нет безопасной тары/маршрута передачи отработанного масла."
+      ],
+      "unspecified": [
+        "Форма журнала и обязательные поля",
+        "Критерии измерения качества/полярных соединений масла",
+        "Температура жарки для конкретных продуктов",
+        "Текущие инструкции производителя оборудования и масла",
+        "Действующий подрядчик и договор на утилизацию"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover edition 01.09.2025; corporate fast-food format",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "page_anchors": [
+            23
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Стр. 23 документа; параметры и периодичность относятся к историческому корпоративному регламенту."
+        }
+      ],
+      "complexity_assessment": "model_proposed_from_food_process_equipment_and_safety_risk",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     }
   ],
   "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
   "complexity_levels": "L1-L6; task complexity classification, model-proposed",
-  "readiness_policy": "All 12 cards are drafts. Page anchors have been verified for the referenced portions of the guest-service standard and restaurant regulation. Page/slide anchors remain open for appearance-training and management-training sources; specialist review, local approval and pilot verification remain open for all cards."
+  "readiness_policy": "13 cards are source-grounded drafts. Page anchors are verified for referenced portions of the guest-service standard and restaurant regulation. Specialist review, local approval and pilot verification remain open; no draft is approved for operational use."
 }
