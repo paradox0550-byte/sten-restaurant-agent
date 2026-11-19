@@ -1288,7 +1288,7 @@
   },
   "existing_procedure_cards": {
     "file": "knowledge/procedures/operational-procedures.json",
-    "count": 17,
+    "count": 18,
     "items": [
       {
         "procedure_id": "proc.shift-readiness-and-briefing",
@@ -1425,9 +1425,17 @@
         "complexity_assessment": "model_proposed_from_accounting_system_audit_scope_and_financial_control_risk",
         "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
         "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.food-product-and-equipment-labelling",
+        "domain_id": "food_safety_sanitation",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_zone_traceability_and_cross_contamination_control",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
       }
     ],
-    "note": "17 source-grounded drafts have canonical domain IDs, provisional task complexity, source locators/page anchors where verified, explicit stop conditions, checklist links and approval gates. Specialist review, local approval and pilots remain open."
+    "note": "18 source-grounded drafts have canonical domain IDs, provisional task complexity, source locators/page anchors where verified, explicit stop conditions, checklist links and approval gates. Specialist review, local approval and pilots remain open."
   },
   "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
 }
