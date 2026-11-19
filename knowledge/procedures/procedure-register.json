@@ -1288,7 +1288,7 @@
   },
   "existing_procedure_cards": {
     "file": "knowledge/procedures/operational-procedures.json",
-    "count": 16,
+    "count": 17,
     "items": [
       {
         "procedure_id": "proc.shift-readiness-and-briefing",
@@ -1399,7 +1399,7 @@
         "domain_id": "shift_daily_operations",
         "complexity_level": 3,
         "complexity_assessment": "model_proposed_multi_role_cross_zone_readiness",
-        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "source_maturity": "procedure_draft_source_locator_review_open",
         "procedure_status": "not_approved_for_operational_use"
       },
       {
@@ -1407,7 +1407,7 @@
         "domain_id": "shift_daily_operations",
         "complexity_level": 3,
         "complexity_assessment": "model_proposed_multi_role_shift_coordination",
-        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "source_maturity": "procedure_draft_source_locator_review_open",
         "procedure_status": "not_approved_for_operational_use"
       },
       {
@@ -1415,11 +1415,19 @@
         "domain_id": "shift_daily_operations",
         "complexity_level": 3,
         "complexity_assessment": "model_proposed_multi_role_cash_stock_equipment_close",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.iiko-stock-accounting-audit",
+        "domain_id": "accounting_tax_and_controls",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_accounting_system_audit_scope_and_financial_control_risk",
         "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
         "procedure_status": "not_approved_for_operational_use"
       }
     ],
-    "note": "16 source-grounded drafts have canonical domain IDs, provisional complexity, source locators/page anchors where verified, explicit stop conditions and approval gates. All remain drafts pending specialist review, local approval and pilots."
+    "note": "17 source-grounded drafts have canonical domain IDs, provisional task complexity, source locators/page anchors where verified, explicit stop conditions, checklist links and approval gates. Specialist review, local approval and pilots remain open."
   },
   "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
 }
