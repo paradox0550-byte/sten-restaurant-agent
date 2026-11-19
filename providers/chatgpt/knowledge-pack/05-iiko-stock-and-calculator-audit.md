@@ -108,7 +108,7 @@ Do not ask for all ten report groups before inspecting the first supplied file.
 
 ## Stage 11 professional practice expansion — POS orders, stocktake and suppliers
 
-**Provenance:** anonymized practical materials S11-05 (historical mobile POS workflow), S11-02 (stocktake), S11-09 (procurement). Interface screenshots and local inventory schedules are not current software documentation.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Order integrity independent of POS brand
 Before sending: confirm table/guest and order ownership, exact items, quantities, modifiers, allergens or restrictions communicated by the guest, courses and agreed timing. After sending: verify correct routing and changes; follow permissioned procedures for cancellations, discounts, split bills and corrections. Never claim a particular screen or button exists in the user's software version without checking it.
