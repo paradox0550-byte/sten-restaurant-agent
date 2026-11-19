@@ -74,7 +74,8 @@
         "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
         "Brand-specific scripts and operational details are not universal.",
         "Current legal, accessibility, labor and food-safety applicability requires separate verification."
-      ]
+      ],
+      "source_anchor_status": "recovered_full_text_all_43_pages_inspected_procedure_extract_anchors_mapped"
     },
     {
       "id": "source.restaurant-regulation",
@@ -90,6 +91,41 @@
         "Document includes legacy dates, historical system instructions and organization-specific roles, limits, forms and workflows; each item requires current local validation.",
         "Legal, tax, payroll, employment and food-safety statements require current official-source review for the relevant jurisdiction.",
         "Personal names, addresses, supplier details, internal contacts and corporate identifiers must not be reproduced in generalized methodology."
+      ],
+      "source_anchor_status": "recovered_full_text_selected_pages_reopened_anchor_review_partial",
+      "reviewed_page_anchors": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        52,
+        53,
+        54,
+        55,
+        56,
+        69,
+        70,
+        71,
+        72,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
       ]
     },
     {
