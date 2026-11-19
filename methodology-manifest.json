@@ -97,5 +97,14 @@
     "note": "77 source directions remain inventory-only and preliminarily mapped to 36 domains; 19 procedure cards are source-grounded drafts, not complete approved SOP coverage.",
     "management_domain_taxonomy": "knowledge/taxonomy/restaurant-management-domains.json",
     "management_domain_count": 36
+  },
+  "source_intake": {
+    "status": "metadata_discovery_expanded_attachment_contents_pending",
+    "date": "2026-11-19",
+    "source_catalog": "knowledge/graph/sources.json",
+    "evidence_registry": "knowledge/evidence/registry.json",
+    "count_added": 12,
+    "rule": "No requirement, procedure, limit or expert claim may be derived from an email subject or attachment filename. Full source bytes and text are required.",
+    "all_new_records_draft": true
   }
 }
