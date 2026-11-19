@@ -57,7 +57,28 @@
         "Срок хранения записи",
         "Ответственный за стоп-лист",
         "Порядок замещения менеджера"
-      ]
+      ],
+      "domain_id": "operations_and_shift_control",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены стоп-лист, состав блюда, аллерген или доступность позиции.",
+        "Зона или оборудование не готовы к безопасной работе."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.guest-journey-and-order",
@@ -108,7 +129,27 @@
         "Норматив времени встречи",
         "Обязательная форма листа заказа вне POS",
         "Срок хранения сервисных записей"
-      ]
+      ],
+      "domain_id": "service_standards",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены состав, аллерген, модификация или возможность исполнения запроса гостя."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.service-delivery-and-delay",
@@ -156,7 +197,28 @@
         "Норматив подачи для всех блюд",
         "Универсальные интервалы check-back",
         "Форма регистрации задержек"
-      ]
+      ],
+      "domain_id": "guest_journey_hospitality",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Статус заказа или оценка времени не подтверждены.",
+        "Есть риск перепутать блюдо, гостя или модификацию."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.bill-and-payment",
@@ -204,7 +266,29 @@
         "Текущие правовые сроки/требования",
         "Полномочия на возврат/аннулирование",
         "Локальная процедура закрытия кассы"
-      ]
+      ],
+      "domain_id": "accounting_tax_and_controls",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Расхождение счёта и заказа.",
+        "Система не подтвердила оплату.",
+        "Действие выходит за пределы полномочий сотрудника."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.guest-complaint-recovery",
@@ -255,7 +339,27 @@
         "Матрица компенсаций",
         "Срок хранения журнала",
         "Уровни эскалации по суммам"
-      ]
+      ],
+      "domain_id": "complaints_service_recovery",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Угроза безопасности, травма, аллергическая реакция, подозрение на загрязнение или конфликт, превышающий полномочия."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.appearance-readiness",
@@ -303,7 +407,27 @@
         "Периодичность",
         "Форма журнала",
         "Критерии обуви — в тренинге задан вопрос, но ответ не приведён"
-      ]
+      ],
+      "domain_id": "hr_personnel",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.appearance-training",
+          "source_title": "Стандарты внешнего вида — план тренинга",
+          "source_locator": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
+          "source_scope": "organization_specific",
+          "source_date_status": "not_verified",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Локальный стандарт не утверждён или его правовая применимость спорна."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.director-operating-control",
@@ -354,7 +478,35 @@
         "Универсальное число задач",
         "Норматив времени директора",
         "Форма единого журнала поручений"
-      ]
+      ],
+      "domain_id": "strategy_business_model",
+      "complexity_level": 5,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.operational-management-training",
+          "source_title": "Система операционного управления — управленческая эффективность",
+          "source_locator": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
+          "source_scope": "organization_specific_methodology",
+          "source_date_status": "not_verified",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        },
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Нет подтверждённых данных о статусе поручения или полномочиях на решение."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.front-of-house-visual-walk",
@@ -404,7 +556,28 @@
       "unspecified": [
         "Полный перечень пунктов чек-листа в извлечённом фрагменте",
         "Срок устранения каждого дефекта"
-      ]
+      ],
+      "domain_id": "hall_guest_areas",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Дефект создаёт риск для гостя или сотрудника.",
+        "Форма/маршрут обхода недоступны или неактуальны."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.monthly-stocktake",
@@ -458,7 +631,27 @@
         "Правило двойного пересчёта",
         "Текущие дедлайны передачи и утверждения",
         "Методика списания/переоценки"
-      ]
+      ],
+      "domain_id": "warehouse_inventory",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Неясная единица измерения, неполная первичная ведомость или расхождение без повторной проверки."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.monthly-sanitation-deep-clean",
@@ -509,7 +702,28 @@
         "Химия и концентрации",
         "Фактические критерии приемки",
         "Журнал и срок хранения"
-      ]
+      ],
+      "domain_id": "food_safety_sanitation",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Неизвестны безопасный способ, средство или условия очистки оборудования.",
+        "Оборудование нельзя безопасно вывести из эксплуатации."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.staff-schedule-and-timekeeping",
@@ -557,7 +771,28 @@
         "Текущие правила сверхурочной работы",
         "Локальные сроки публикации графика",
         "Формат и срок хранения табеля"
-      ]
+      ],
+      "domain_id": "labor_planning_payroll",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Фактическое время отсутствует или конфликтует с первичными данными.",
+        "Предлагаемое действие может нарушать применимые нормы труда."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.delivery-order-control",
@@ -606,7 +841,31 @@
         "Универсальные целевые сроки",
         "Стандарт упаковки для всех продуктов",
         "Метод распределения причин опоздания"
-      ]
+      ],
+      "domain_id": "logistics_delivery_channels",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены комплектность, адрес/способ получения или статус заказа.",
+        "Задержка без подтверждённой оценки времени."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     }
-  ]
+  ],
+  "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
+  "complexity_levels": "L1-L6; task complexity classification, model-proposed",
+  "readiness_policy": "All 12 cards are drafts. Source document locators are recorded, but page/section/row anchors, specialist review, local approval and pilot verification remain open where not explicitly completed."
 }
