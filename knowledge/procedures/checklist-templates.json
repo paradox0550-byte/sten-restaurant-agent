@@ -226,6 +226,86 @@
         "unknown"
       ],
       "source_status": "proposed_template"
+    },
+    {
+      "id": "check.fryer-oil",
+      "procedure_id": "proc.fryer-oil-management",
+      "items": [
+        "Тип масла и применимость спецификации подтверждены",
+        "Уровень масла и покрытие продукта соответствуют локальной инструкции",
+        "Подготовка продукта и режим жарки проверены по техкарте",
+        "Фильтрация/замена отражены в журнале",
+        "Отработанное масло передано в предназначенную тару; слив в канализацию исключён",
+        "Неизвестные параметры оборудования/масла переданы специалисту"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_requires_food_safety_and_equipment_review"
+    },
+    {
+      "id": "check.manager-opening",
+      "procedure_id": "proc.manager-shift-opening-readiness",
+      "items": [
+        "Помещения, мебель и интерьер проверены",
+        "Сантехническое, вентиляционное и климатическое оборудование проверено",
+        "Кассовая техника и терминал проверены",
+        "Наличие продукции кухни/бара подтверждено ответственными",
+        "Готовность персонала проверена",
+        "Стоп-лист и задачи смены доведены до команды",
+        "Бракераж и рекламная информация проверены, если применимо",
+        "Незакрытые дефекты оставлены в статусе unknown/not_done и эскалированы"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_for_specific_trattoria_source_requires_local_approval"
+    },
+    {
+      "id": "check.manager-control",
+      "procedure_id": "proc.manager-shift-control",
+      "items": [
+        "Сотрудники распределены по зонам",
+        "Кухня, бар и зал имеют подтверждённый статус работы",
+        "Отклонения и нарушения зарегистрированы",
+        "Кассовые операции проходят через утверждённый контур",
+        "Конфликты/инциденты эскалированы по полномочиям",
+        "Незакрытые задачи подготовлены к передаче"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_for_specific_trattoria_source_requires_local_approval"
+    },
+    {
+      "id": "check.manager-closing",
+      "procedure_id": "proc.manager-shift-closing",
+      "items": [
+        "Персонал уведомлён об окончании смены",
+        "Движение товаров прекращено или передано по процедуре",
+        "Открытые заказы закрыты или переданы",
+        "Кассовый отчёт сформирован и денежные средства пересчитаны",
+        "Следующая смена получила информацию о бронях/пополнении",
+        "Оборудование оставлено в требуемом состоянии",
+        "Неисправности мебели/оборудования зафиксированы",
+        "Отсутствие персонала и посторонних лиц подтверждено"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_for_specific_trattoria_source_requires_local_approval"
     }
   ]
 }
