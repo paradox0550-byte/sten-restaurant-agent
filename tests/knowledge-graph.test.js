@@ -32,7 +32,7 @@ test("every source link resolves and cross-domain links are retained", () => {
 
 test("source catalog preserves PRACTICE limitations and unknowns", () => {
   const sources = read("../knowledge/graph/sources.json").sources;
-  assert.equal(sources.length, 13);
+  assert.equal(sources.length, 19);
   assert.ok(sources.every((source) => source.evidence_class === "PRACTICE"));
   const appearance = sources.find((source) => source.id === "source.appearance-training");
   assert.ok(appearance.limitations.some((item) => item.includes("Footwear")));
