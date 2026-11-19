@@ -74,20 +74,58 @@
         "The document states it contains confidential information for named concepts; graph stores generalized concepts only.",
         "Brand-specific scripts and operational details are not universal.",
         "Current legal, accessibility, labor and food-safety applicability requires separate verification."
-      ]
+      ],
+      "source_anchor_status": "recovered_full_text_all_43_pages_inspected_procedure_extract_anchors_mapped"
     },
     {
       "id": "source.restaurant-regulation",
       "title": "Регламент ресторана",
       "source_type": "internal_operating_regulation",
       "evidence_class": "PRACTICE",
-      "scope": "specific restaurant chain",
-      "date_status": "not_verified; examples within the document include 2012 dates",
-      "locator": "DOC; contents cover concepts, operations, production and sales, safety, records, cash, payroll, procurement, POS, audits, marketing, delivery, HR, facilities and appendices",
+      "scope": "specific restaurant chain; fast-food format",
+      "date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+      "locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
       "limitations": [
-        "Historical and chain-specific; contains personal names, addresses, suppliers, internal contacts and software procedures excluded from graph.",
-        "All legal/tax/payroll statements require current official-source review for the relevant jurisdiction.",
-        "Legacy system instructions are not portable implementation guidance."
+        "Internal corporate document, not a universal industry standard.",
+        "Cover identifies an edition date of 01.09.2025; signature/approval status and current validity were not independently confirmed.",
+        "Document includes legacy dates, historical system instructions and organization-specific roles, limits, forms and workflows; each item requires current local validation.",
+        "Legal, tax, payroll, employment and food-safety statements require current official-source review for the relevant jurisdiction.",
+        "Personal names, addresses, supplier details, internal contacts and corporate identifiers must not be reproduced in generalized methodology."
+      ],
+      "source_anchor_status": "recovered_full_text_selected_pages_reopened_anchor_review_partial",
+      "reviewed_page_anchors": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        52,
+        53,
+        54,
+        55,
+        56,
+        69,
+        70,
+        71,
+        72,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
       ]
     },
     {
@@ -178,6 +216,32 @@
         "Use only the visible title and outline topics; do not infer or invent chapter content.",
         "No author or publication date is established in the supplied pages."
       ]
+    },
+    {
+      "id": "source.ppk-establishment-2026-draft",
+      "title": "Программа производственного контроля ресторана — редакция 2026 (ответственный указан; утверждение не подтверждено)",
+      "source_type": "user_supplied_production_control_program_draft",
+      "evidence_class": "PRACTICE",
+      "scope": "single_establishment_draft",
+      "date_status": "Document identifies itself as a 2026 edition; approval signature/date on title page are blank and approval status is unconfirmed.",
+      "locator": "DOCX; 14 pages; establishment profile, HACCP framework, production-control measures, six preliminary CCPs with responsible role and per-batch monitoring, proposed laboratory programme, register of 16 referenced work instructions and current-control procedure.",
+      "limitations": [
+        "Latest located version is 14 pages and supersedes the earlier 12-page draft for working review; the approval signature and date remain blank, so approved status is not established.",
+        "Establishment-profile data and applicability still require confirmation against actual operations and source records.",
+        "Six CCPs are listed with a responsible role and per-batch monitoring, but numeric critical limits are deferred to approved technological cards and HACCP working sheets; CCP classification itself still requires hazard-analysis validation.",
+        "Proposed laboratory intervals are internal planning proposals, not universal statutory periods.",
+        "References to legal acts and dates are not independently verified by this source record; legal applicability must be checked against official current texts.",
+        "The 16 HACCP work instructions are listed by title/code, but individual approved source files are not attached or independently recovered.",
+        "Business identifiers, personal contacts and exact establishment address are intentionally excluded from generalized knowledge."
+      ],
+      "source_anchor_status": "recovered_full_text_14_page_version_reopened_approval_unconfirmed",
+      "original_source_file": {
+        "name": "ППК_ООО_Фрианд_2026_итог_ответственный_гендиректор.docx",
+        "format": "DOCX",
+        "pages": 14,
+        "anchor": "Pages 1–2 establish the object profile and responsible role; pages 11–12 list preliminary CCP monitoring; pages 13–14 list 16 referenced instructions and current-control procedure. Signature/date on page 1 remain blank.",
+        "status": "recovered_full_text_reopened_approval_unconfirmed"
+      }
     }
   ]
 }

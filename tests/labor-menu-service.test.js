@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { calculateRequiredHours, calculateKitchenSectionStaffing } from "../src/labor/productivity.js";
+import { calculateRequiredHours, calculateKitchenSectionStaffing, calculateLaborVariance } from "../src/labor/productivity.js";
 import { classifyABC, calculateContribution } from "../src/menu/engineering.js";
 import { createRecoveryCase, markRecoveryCompleted, verifyRecovery } from "../src/service/recovery.js";
 
@@ -124,4 +124,34 @@ test("kitchen staffing requires explicit fixed work and minimum coverage inputs"
   assert.equal(calculateKitchenSectionStaffing({ ...base, fixedWorkMinutes: undefined }).status, "unavailable");
   assert.equal(calculateKitchenSectionStaffing({ ...base, minimumCoverage: undefined }).status, "unavailable");
   assert.equal(calculateKitchenSectionStaffing({ ...base, items: [{ itemId: "dish", quantity: 2, standardMinutesPerItem: 3 }] }).status, "unavailable");
+});
+
+
+test("empty workload is not silently treated as zero demand", () => {
+  assert.equal(calculateRequiredHours({ items: [], coefficients: [], unitsPerLaborHour: 10 }).status, "unavailable");
+  assert.equal(calculateRequiredHours({ items: [], coefficients: [], unitsPerLaborHour: 10, emptyDemandConfirmed: true }).requiredHours, 0);
+  const staffing = {
+    sectionId: "hot",
+    intervalMinutes: 30,
+    items: [],
+    productiveUtilization: 0.8,
+    fixedWorkMinutes: 0,
+    minimumCoverage: 0
+  };
+  assert.equal(calculateKitchenSectionStaffing(staffing).status, "unavailable");
+  assert.equal(calculateKitchenSectionStaffing({ ...staffing, emptyDemandConfirmed: true }).requiredHeadcount, 0);
+});
+
+test("labor workload rejects negative quantities, invalid coefficients and negative hours", () => {
+  assert.equal(calculateRequiredHours({
+    items: [{ itemId: "dish", quantity: -1 }],
+    coefficients: [{ itemId: "dish", unitsPerItem: 2 }],
+    unitsPerLaborHour: 10
+  }).status, "unavailable");
+  assert.equal(calculateRequiredHours({
+    items: [{ itemId: "dish", quantity: 1 }],
+    coefficients: [{ itemId: "dish", unitsPerItem: -2 }],
+    unitsPerLaborHour: 10
+  }).status, "unavailable");
+  assert.equal(calculateLaborVariance({ actualHours: -1, requiredHours: 2 }).status, "unavailable");
 });

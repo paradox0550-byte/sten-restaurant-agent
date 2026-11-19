@@ -163,3 +163,58 @@ test("post-enrichment holdout runs through production lexical retrieval without 
     }))
   }));
 });
+
+
+test("every source catalog entry maps to exactly one evidence record and every PRACTICE evidence record maps back", () => {
+  const sources = read("../knowledge/graph/sources.json").sources;
+  const registry = read("../knowledge/evidence/registry.json").records;
+  const sourceIds = new Set(sources.map((item) => item.id));
+  const bySource = new Map();
+  for (const record of registry.filter((item) => item.evidence_class === "PRACTICE")) {
+    assert.ok(record.source_catalog_id, `missing source_catalog_id: ${record.id}`);
+    assert.ok(sourceIds.has(record.source_catalog_id), `unknown source_catalog_id: ${record.id}`);
+    bySource.set(record.source_catalog_id, (bySource.get(record.source_catalog_id) ?? 0) + 1);
+  }
+  for (const source of sources) {
+    assert.ok((bySource.get(source.id) ?? 0) >= 1, `source must have at least one PRACTICE evidence record: ${source.id}`);
+  }
+});
+
+
+test("source crosswalk resolves source, evidence, graph and procedure references without claiming source verification", () => {
+  const crosswalk = read("../knowledge/evidence/source-crosswalk.json");
+  const sources = read("../knowledge/graph/sources.json").sources;
+  const registry = read("../knowledge/evidence/registry.json").records;
+  const graph = read("../knowledge/graph/operational-knowledge-graph.json");
+  const procedures = read("../knowledge/procedures/operational-procedures.json").procedures;
+  assert.equal(crosswalk.sources.length, sources.length);
+  const sourceIds = new Set(sources.map((x) => x.id));
+  const evidenceIds = new Set(registry.map((x) => x.id));
+  const graphIds = new Set(graph.nodes.map((x) => x.id));
+  const procedureIds = new Set(procedures.map((x) => x.id));
+  for (const item of crosswalk.sources) {
+    assert.ok(sourceIds.has(item.source_id), item.source_id);
+    assert.ok(item.evidence_record_ids.length > 0, item.source_id);
+    assert.ok(item.evidence_record_ids.every((id) => evidenceIds.has(id)), item.source_id);
+    assert.ok(item.graph_node_ids.every((id) => graphIds.has(id)), item.source_id);
+    assert.ok(item.procedure_ids.every((id) => procedureIds.has(id)), item.source_id);
+    assert.equal(item.original_source_recovered, item.source_anchor_status !== "original_source_not_located_in_current_library_search");
+    if (item.original_source_recovered) assert.ok(item.original_source_file?.name, item.source_id);
+    else assert.equal(item.original_source_file, null);
+  }
+});
+
+
+test("daily management cycle methodology is source-linked, bounded and not falsely approved", () => {
+  const method = read("../knowledge/methodologies/manager-daily-control-cycle.json");
+  const sources = new Set(read("../knowledge/graph/sources.json").sources.map((x) => x.id));
+  assert.equal(method.status, "draft_for_expert_review");
+  assert.equal(method.maturity, "source_grounded_method_prototype");
+  assert.ok(method.method_steps.length >= 5);
+  assert.equal(new Set(method.method_steps.map((x) => x.id)).size, method.method_steps.length);
+  assert.ok(method.source_basis.length >= 3);
+  assert.ok(method.source_basis.every((x) => sources.has(x.source_id)));
+  assert.ok(method.reviewed_at === null);
+  assert.ok(method.guardrails.some((x) => x.includes("универсальный норматив")));
+  assert.ok(method.evaluation_scenarios.length >= 5);
+});

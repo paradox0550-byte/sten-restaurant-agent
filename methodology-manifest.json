@@ -2,16 +2,100 @@
   "package": "STEN",
   "version": "0.5.0",
   "methodology_domains": [
+    "director_management",
     "finance",
+    "food_safety",
     "labor_payroll",
+    "legal_evidence",
+    "management",
     "menu_engineering",
+    "people_management",
+    "production",
+    "purchasing",
+    "research",
     "restaurant_operations",
     "service",
-    "management",
-    "legal_evidence",
-    "research"
+    "stock_inventory"
   ],
   "source_policy": "anonymized_generalized",
   "integrity": "No source = no fact; Missing != zero",
-  "status": "working-core"
+  "status": "hierarchical_procedure_library_architecture_integrated_domain_frameworks_pending_specialist_validation",
+  "management_domain_frameworks": [
+    {
+      "id": "method.financial-control",
+      "path": "knowledge/methodologies/financial-control.md",
+      "status": "draft_for_finance_expert_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.fot-labor-control",
+      "path": "knowledge/methodologies/fot-and-labor-control.md",
+      "status": "draft_for_hr_payroll_expert_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.stock-control",
+      "path": "knowledge/methodologies/stock-control.md",
+      "status": "draft_for_inventory_and_accounting_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.purchasing-control",
+      "path": "knowledge/methodologies/purchasing-control.md",
+      "status": "draft_for_procurement_expert_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.production-control",
+      "path": "knowledge/methodologies/production-control.md",
+      "status": "draft_for_chef_and_food-safety_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.service-management",
+      "path": "knowledge/methodologies/service-management.md",
+      "status": "draft_for_service_expert_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.safety-compliance",
+      "path": "knowledge/methodologies/safety-and-compliance.md",
+      "status": "draft_for_safety_and_legal_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.people-management",
+      "path": "knowledge/methodologies/people-management.md",
+      "status": "draft_for_hr_and_operations_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    },
+    {
+      "id": "method.director-management-system",
+      "path": "knowledge/methodologies/director-management-system.md",
+      "status": "draft_for_director_and_owner_review",
+      "version": "0.1.0",
+      "classification": "domain_management_framework_not_atomic_operating_procedure"
+    }
+  ],
+  "procedure_library": {
+    "hierarchy": "domain > process > procedure > work_instruction_or_checklist > record_or_evidence",
+    "complexity_levels": "L1-L6",
+    "machine_readable_levels": "knowledge/procedures/complexity-levels.json",
+    "procedure_register": "knowledge/procedures/procedure-register.json",
+    "source_process_inventory": "knowledge/procedures/horeca-operational-process-catalog.json",
+    "existing_procedure_cards": "knowledge/procedures/operational-procedures.json",
+    "source_inventory_count": 77,
+    "existing_procedure_card_count": 19,
+    "note": "77 source directions remain inventory-only and preliminarily mapped to 36 domains; 19 procedure cards are source-grounded drafts, not complete approved SOP coverage.",
+    "management_domain_taxonomy": "knowledge/taxonomy/restaurant-management-domains.json",
+    "management_domain_count": 36
+  }
 }

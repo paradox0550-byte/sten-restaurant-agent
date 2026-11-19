@@ -105,3 +105,114 @@ These additions improve source coverage but do not close Stage 11. Source-specif
 - Preserve source-specific values and unknowns; do not promote historical examples into universal norms.
 
 The service book outline is not sufficient evidence for chapter-level procedures. The source material does not include a complete temperature/time matrix or a current legal compliance register.
+
+
+## Full-repository audit — 18 November 2026
+
+A fresh read-only inventory was performed against main at 7bbdf999c2aa31e1448f03e5a6042bdf9da92183 (174 tracked files). The following findings supersede earlier content-shape counts where they differ.
+
+### Confirmed findings
+
+1. The process catalog contains 77 unique process IDs: 22 management, 5 core and 50 supporting directions.
+2. The catalog contains 486 operation entries but only 54 distinct operation descriptions. The 486 completion-evidence entries all use one identical generic sentence. The repeated sequence is scaffolding, not evidence of 77 distinct operating methods.
+3. All 77 entries had previously been labelled expanded_methodology_requires_owner_and_jurisdiction_validation, which overstated their maturity. In the audit branch they are explicitly marked inventory_only and catalog_only_source_mapping_and_specialist_validation_open. They must not be used or described as completed SOPs.
+4. knowledge/procedures/operational-procedures.json contains 12 more detailed procedures. Their existence does not validate the 77-direction catalog and several retain source-specific, inferred or unknown fields.
+5. knowledge/graph/operational-knowledge-graph.json currently contains 96 nodes and 135 edges. Graph connectivity is not process validation or causal proof.
+6. knowledge/graph/sources.json contains 12 PRACTICE source records. knowledge/evidence/registry.json contains 10 records (2 CORE, 1 LAW template, 7 PRACTICE); six graph source IDs do not have matching PRACTICE records in the evidence registry, while one PRACTICE record (daily operational walk) is not represented in the graph source catalog. This cross-registry mismatch must be reconciled before claims of complete provenance.
+7. The coverage map defines nine sectors but marks only restaurant as partial; the other eight sectors remain planned. The repository is not a reviewed all-HoReCa corpus.
+8. Stage 13's automated evaluation remains a retrieval/integrity framework. Its holdout labels are provisional and not expert-adjudicated; no automated score certifies professional correctness.
+9. Current GitHub Actions run #229 on the current main SHA completed successfully. This confirms the current engineering CI workflow only; it does not close Stage 11 or establish production readiness.
+
+### Corrective change in audit branch
+
+The 77 process entries have been relabelled as inventory-only scaffolds. A regression test now requires all 77 to retain this explicit non-SOP status. This is an honesty/quality-gate correction, not a claim that the 77 methodologies have been authored.
+
+### Required reconstruction model
+
+The knowledge corpus must be treated as three separate layers:
+
+- Source library: preserve each original document as an individually traceable source, including page/section/sheet/row anchors, version/date, author/publisher where relevant, scope, confidentiality and rights status.
+- Expert methodology library: derive new STEN methods from supported source facts plus clearly labelled research or expert reasoning. Each method must have its own operational sequence, decision rules, inputs, outputs, exceptions, records, controls, calculations and verification.
+- ChatGPT Project distribution pack: the nine files are a transport/attachment-limit format only. They are generated views over the governed methodology library and must not be treated as the canonical knowledge store or as a limit on the number of methods.
+
+### Full audit completion gates
+
+- Reconcile every original document consolidated into the nine files; no source may disappear behind a combined file.
+- Build a source-to-method-to-process-to-tool-to-evaluation traceability matrix.
+- Review all 77 catalog directions individually. Split directions when they contain multiple independent workflows; merge only true duplicates. The final number of methods is determined by operational reality, not a target count.
+- Replace generic steps only where the source or validated domain method supports a specific sequence. Preserve unknowns where it does not.
+- Reconcile the graph source catalog and Evidence Registry one-to-one, including explicit orphan and superseded records.
+- Audit all 12 detailed procedures, checklists, role mappings, record templates, graph nodes/edges, calculations, skills, tools, retrieval and answer policies for consistency.
+- Review all legal claims separately against current official jurisdiction-specific sources. Historical source wording is not legal evidence.
+- Add known-answer tests for every deterministic calculation and representative scenario tests for every approved methodology.
+- Keep all disputed or unsupported content visible as open; do not promote it to approved because a file exists or CI passes.
+
+Status: repository audit has identified concrete structural and provenance defects. The reconstruction and specialist validation work remains open. No production or legal certification is implied.
+
+
+## Domain management frameworks and hierarchical procedure library — 19 November 2026
+
+The nine documents under `knowledge/methodologies/` are now explicitly classified as domain management frameworks/playbooks, not as the final set of operational procedures:
+1. Financial control — source reconciliation, P&L perimeter, periodization, ratios, variance diagnosis and verified follow-up.
+2. FOT and labor control — demand, workload, schedule, actual attendance, timesheet, accrual and productivity.
+3. Stock control — master data, receiving, movement, stocktake, variance and authorized adjustment.
+4. Purchasing — demand planning, supplier comparison, approval, receiving, invoice/payment reconciliation and supplier review.
+5. Production — forecast, station readiness, recipe/version control, order routing, quality release, waste and throughput.
+6. Service — guest journey, accurate product information, complaint recovery, authority and verification.
+7. Safety — risk register, local control plan, incident containment, escalation, corrective action and restart approval.
+8. People management — role design, recruitment, lawful admission, onboarding, task-based capability, feedback and exit.
+9. Director system — daily/weekly/monthly management rhythm, authority matrix, executive panel, task lifecycle and verified outcomes.
+
+These frameworks define cross-cutting management logic and specialist review gates. They do not replace atomic procedures. The canonical hierarchy is now `domain → process → procedure → work instruction/checklist → record/evidence`. A single domain may contain dozens of independent procedures.
+
+### Source and maturity boundaries
+
+- The corporate operating regulation is identified as the 01.09.2025 fast-food edition. Its contents provide anchors: finance pp.31–35; payroll pp.36–43; procurement pp.44–48; safety pp.26–28; production pp.16–25; personnel pp.58–60; stocktake appendix 4 / p.69; hiring/payroll/personnel appendices 17 and 22–29. This source is organization-specific and its full page-level review remains open.
+- The iiko calculator checklist (13 pages), product-adjacency guide (2 pages), food-marking checklist (6 pages), shift-manager procedure (4 pages), and 2025 guest-service standard (43 pages) have distinct provenance and limitations. Guest-service full page-level anchor review remains open.
+- The director calendar workbook and business-process model workbook are still not recovered. No calendar frequencies, owner names, time budgets or workbook-specific process details have been inferred.
+- These are source-grounded management-method prototypes, not approved SOPs. All nine remain draft pending named specialist review and pilot evidence. No legal, accounting, payroll, food-safety or operational certification is implied.
+- No deterministic calculator, backend, cloud, API Gateway, deployment or dependency was changed in this methodology slice.
+
+
+### Hierarchical procedure library correction — 19 November 2026
+
+- Added five proposed complexity levels: L1 execution task; L2 standard procedure; L3 coordinated cross-role process; L4 specialist control; L5 management system/decision.
+- Added `docs/knowledge-library-hierarchy.md`, `docs/operational-complexity-levels.md`, machine-readable complexity levels, and `knowledge/procedures/procedure-register.json`.
+- The register maps all 77 source-catalog directions to a preliminary complexity level. Every one remains `inventory_only` and `not_yet_decomposed_or_expert_approved`; the complexity assignment is explicitly model-proposed, not a source fact.
+- The current operational procedure file contains 12 source-linked procedure cards. These are a starting subset, not a complete operating library.
+- One source direction may be decomposed into multiple procedure cards when triggers, roles, inputs, outputs, records, risks or approval rights differ. The count of final procedures is not capped at 77 or 25.
+- The 25-file limit applies only to an individual ChatGPT Project distribution package. The canonical repository library is not capped at 25; distribution packs should be generated by role, format and task.
+- Added a regression test checking all 77 mappings, the five levels, and the distinction between source inventory and procedure cards.
+- The nine prior documents have a visible notice clarifying that they are domain frameworks/playbooks, not atomic SOPs.
+
+The procedure library is now architected hierarchically. Full decomposition of all 77 directions, additional source recovery, page-level anchors, expert review and field pilots remain open.
+
+## Source-grounded procedure expansion — 19 November 2026
+
+### Current procedure inventory
+- 19 standalone procedure drafts are present in `knowledge/procedures/operational-procedures.json`.
+- The drafts cover shift readiness, guest journey/order, service delivery/delay, guest payment, complaint recovery, appearance readiness, director daily control, front-of-house walk, monthly stocktake, sanitation deep clean, staff schedule/timekeeping, delivery control, fryer-oil management, manager shift opening, manager shift control and manager shift closing.
+- Cards now carry canonical domain IDs, provisional L1–L6 complexity, source locators, page anchors where verified, explicit stop conditions, unknowns-as-blocking and a no-operational-approval gate.
+- Source-specific details from the 2025 corporate fast-food regulation and undated Trattoria shift-manager procedure remain scoped to those sources. No historical times, staffing, supplier, temperature or cash rules are treated as universal.
+- All 43 pages of the 2025 Guest Service Standard have now been inspected; page anchors for the procedure extracts are recorded.
+- Selected pages of the 130-page corporate regulation were inspected (pages 8–13, 18–25, 52–56, 69–72, 98–106); the complete document has not yet received a full page-by-page review.
+
+### Draft production-control programme (2026)
+The latest located 14-page 2026 PPK version was inspected in full and registered as `source.ppk-establishment-2026-draft`. The title-page approval signature/date remain blank, so approval is unconfirmed. It identifies a responsible role and per-batch monitoring for six preliminary CCPs, but numeric critical limits depend on approved technological cards/HACCP worksheets and the CCP classification still requires hazard-analysis validation. It presents laboratory frequencies as proposed internal planning values, not universal legal intervals. The earlier 12-page version is retained only as a superseded draft reference. No legal-compliance claim is inferred from it.
+
+Appendix 6 (pages 13–14) lists 16 HACCP working-instruction titles. The original instructions are not established as recovered/approved, so `knowledge/procedures/procedure-candidates.json` records them as candidates only, with null complexity and no procedure cards. They must not be promoted until the original instruction and its approval/version are obtained.
+
+### Remaining gates
+- Complete source-page anchors for the remaining large documents and the 130-page regulation.
+- Recover the original director-calendar and business-process workbooks; current crosswalk still marks both originals not located.
+- Recover the 16 referenced HACCP instructions and confirm approved versions.
+- Complete specialist review and local pilots for all 16 drafts; none is approved for operational use.
+- Reconcile the 77-item inventory against original workbook rows and correct preliminary domain/complexity assignments.
+
+### iiko stock-accounting audit procedure — 19 November 2026
+The 13-page consultant checklist «Проверка бухгалтера-калькулятора» was read in full. A separate L4 draft, `proc.iiko-stock-accounting-audit`, now covers the ten source sections with page anchors 3–12 and an audit checklist. Source-specific 23:00/23:59 timestamps, zero-value document checks and shipment/cost comparisons are explicitly not universal rules; their meaning must be checked against the current iiko version, document type and accounting policy. The checklist is not an official iiko specification or accounting standard.
+
+### Food-labelling and storage-segregation procedures — 19 November 2026
+Two additional source-based drafts were added after reading the original materials in full:
+- `proc.food-product-and-equipment-labelling`: six-page HACCP-AUDIT checklist; source anchors 3–6. Covers incoming product labels, in-house preparations, boards/knives, cleaning inventory, waste bins, decanted chemicals and delivery containers. It is a consultant checklist, not a complete legal labelling matrix.
+- `proc.storage-compatibility-segregation`: two-page HACCP-AUDIT guide; source anchors 1–2. Covers separation of product categories and incompatible storage combinations. The source's claimed under-25-seat exception is explicitly not accepted as current legal permission and requires official verification.

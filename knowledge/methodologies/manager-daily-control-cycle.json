@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0.0",
+  "method_id": "method.manager-daily-control-cycle",
+  "title": "Цикл ежедневного управления рестораном",
+  "version": "0.1.0",
+  "status": "draft_for_expert_review",
+  "maturity": "source_grounded_method_prototype",
+  "purpose": "Связать подготовку ресторана, управление ходом смены, работу с отклонениями, развитие команды и передачу незавершённых вопросов в единый проверяемый управленческий цикл.",
+  "intended_users": [
+    "управляющий рестораном",
+    "директор ресторана",
+    "менеджер смены",
+    "операционный руководитель"
+  ],
+  "applicability": {
+    "sectors": [
+      "restaurant"
+    ],
+    "formats": [
+      "table_service",
+      "fast_food",
+      "casual_dining"
+    ],
+    "determination": "conditional",
+    "required_profile_fields": [
+      "establishment.format",
+      "establishment.operating_hours",
+      "roles.shift_manager",
+      "approved.local_standards"
+    ],
+    "limitations": [
+      "Первые контрольные области основаны на материалах конкретных организаций и должны быть адаптированы к фактическому формату и утверждённым локальным процедурам.",
+      "Методика не задаёт универсальные часы начала смены, длительность планёрки, численность персонала, нормативы сервиса или частоту обходов.",
+      "Не заменяет HACCP/ППК, кассовые и бухгалтерские регламенты, охрану труда, пожарную безопасность и юридическую проверку.",
+      "Статус draft_for_expert_review означает, что независимая экспертная апробация метода ещё не выполнена."
+    ]
+  },
+  "source_basis": [
+    {
+      "source_id": "source.operational-management-training",
+      "anchors": [
+        "20-slide management training deck",
+        "management functions: planning, organization, control, motivation, development/training",
+        "situational leadership and GROW"
+      ],
+      "use": "Взята логика пяти взаимосвязанных функций управления и развитие сотрудников; адаптация к ежедневному циклу создана заново."
+    },
+    {
+      "source_id": "source.shift-manager-trattoria-procedure",
+      "anchors": [
+        "DOCX pp. 1–4",
+        "shift preparation, briefing, in-shift coordination, close and handover"
+      ],
+      "use": "Использованы области контроля менеджера смены; локальные времена, роли и правила не переносятся как универсальные."
+    },
+    {
+      "source_id": "source.restaurant-regulation",
+      "anchors": [
+        "DOC pp. 1–4 contents and scope",
+        "corporate operating controls and appendices"
+      ],
+      "use": "Использована как источник существования корпоративных контрольных контуров; частные лимиты и устаревающие инструкции не копируются."
+    },
+    {
+      "source_id": "source.restaurant-regulation",
+      "anchors": [
+        "practice.daily-operational-walk: printed source pages 8–9"
+      ],
+      "use": "Использована как источник практики визуального операционного обхода; её чек-листы и критерии требуют восстановления и проверки по оригиналу."
+    }
+  ],
+  "method_steps": [
+    {
+      "id": "scope_and_plan",
+      "phase": "before_shift",
+      "objective": "Определить ожидаемый результат дня/смены и существенные риски.",
+      "actions": [
+        "Зафиксировать ресторан, подразделения, период и действующие локальные стандарты.",
+        "Проверить план/прогноз, бронирования и известные события только по доступным источникам.",
+        "Определить критические ограничения по людям, продукту, оборудованию и сервису.",
+        "Сформировать короткий список контрольных приоритетов с основанием и ответственным."
+      ],
+      "completion_evidence": [
+        "План смены или управленческая запись с датой, scope и источниками.",
+        "Приоритеты связаны с наблюдаемыми фактами или явно отмечены как гипотезы."
+      ]
+    },
+    {
+      "id": "readiness_check",
+      "phase": "before_opening",
+      "objective": "Убедиться, что ключевые зоны и ресурсы готовы к работе.",
+      "actions": [
+        "Проверить готовность гостевых и рабочих зон по утверждённому чек-листу объекта.",
+        "Сверить доступность персонала и фактическое распределение ролей.",
+        "Подтвердить готовность кухни, бара, POS/KDS и критичного оборудования.",
+        "Сверить стоп-лист, доступность меню и существенные ограничения, влияющие на обещания гостю.",
+        "Зарегистрировать отклонения и определить временные меры/эскалацию."
+      ],
+      "completion_evidence": [
+        "Запись о проверенных зонах и времени проверки.",
+        "Открытые отклонения имеют статус, владельца роли и следующий шаг.",
+        "Непроверенные пункты отмечены not_checked, а не pass."
+      ]
+    },
+    {
+      "id": "team_alignment",
+      "phase": "before_service",
+      "objective": "Синхронизировать команду по приоритетам и условиям работы.",
+      "actions": [
+        "Сообщить подтверждённые изменения меню, стоп-листа, бронирований и событий.",
+        "Распределить зоны и ответственность в пределах утверждённых полномочий.",
+        "Уточнить критичные handoff между залом, кухней, баром и кассой.",
+        "Проверить понимание задач и способ эскалации проблем.",
+        "Подобрать стиль руководства под конкретную задачу и подтверждённую самостоятельность сотрудника."
+      ],
+      "completion_evidence": [
+        "Зафиксированы задачи, зоны и ответственные роли.",
+        "Критичные инструкции и изменения подтверждены получателями."
+      ]
+    },
+    {
+      "id": "live_control",
+      "phase": "during_service",
+      "objective": "Поддерживать управляемость процесса и своевременно реагировать на отклонения.",
+      "actions": [
+        "Проводить обходы по утверждённому маршруту и фактическим рискам.",
+        "Проверять состояние гостевого пути, кухни/бара, чистоты, оборудования и потока заказов.",
+        "Отделять наблюдение от сообщения сотрудника и предположения.",
+        "При отклонении зафиксировать место, время, факт, доказательство и возможное влияние.",
+        "Для немедленных рисков применить утверждённый локальный порядок containment и escalation."
+      ],
+      "completion_evidence": [
+        "Наблюдения содержат точное место, время и evidence reference.",
+        "Риски без подтверждённого критерия получают unresolved, а не выдуманный severity.",
+        "Критичные эскалации подтверждены ответственным человеком."
+      ]
+    },
+    {
+      "id": "coach_and_correct",
+      "phase": "during_service_or_review",
+      "objective": "Устранить причины повторяющихся отклонений и развивать способность команды.",
+      "actions": [
+        "Разделить единичный сбой, повторяемый дефект процесса и недостаток навыка.",
+        "Выбрать инструктаж, объяснение, коучинг или делегирование по уровню конкретной задачи.",
+        "Согласовать корректирующее действие, владельца роли и срок; не назначать сотруднику полномочия, которых у него нет.",
+        "Для повторяющейся проблемы определить, какие данные нужны для проверки гипотезы."
+      ],
+      "completion_evidence": [
+        "Действие имеет основание, владельца, срок и ожидаемый результат.",
+        "Гипотеза не записана как установленная причина."
+      ]
+    },
+    {
+      "id": "close_and_handover",
+      "phase": "shift_end",
+      "objective": "Закрыть цикл смены и передать незавершённые риски следующему ответственному.",
+      "actions": [
+        "Сверить открытые заказы, гостевые кейсы, стоп-лист, кадровые и технические ограничения.",
+        "Проверить выполнение согласованных действий; не закрывать их без доказательства.",
+        "Передать следующей смене незавершённые вопросы, критичные риски и необходимые действия.",
+        "Получить подтверждение приёма критичных пунктов от принимающей роли.",
+        "Сформировать краткий итог: факт, отклонение, действие, результат, неизвестное."
+      ],
+      "completion_evidence": [
+        "Запись передачи содержит незакрытые вопросы и принимающую роль.",
+        "Критичные пункты подтверждены принимающей стороной.",
+        "Статус completed_unverified не приравнен к verified."
+      ]
+    }
+  ],
+  "input_contract": {
+    "required": [
+      "establishment_id",
+      "date_or_period",
+      "approved_local_standards_reference"
+    ],
+    "optional": [
+      "shift_id",
+      "staffing_plan_and_actual",
+      "reservations_or_demand_forecast",
+      "menu_availability",
+      "POS_or_KDS_status",
+      "equipment_status",
+      "guest_cases",
+      "previous_open_actions"
+    ],
+    "missing_data_rule": "Отсутствующий отчёт, показатель или контрольная запись остаётся unknown/not_checked; не заменять нулём или pass."
+  },
+  "output_contract": {
+    "daily_brief": [
+      "scope",
+      "confirmed_facts",
+      "unverified_reports",
+      "priority_deviations",
+      "open_risks",
+      "actions_proposed",
+      "owner_roles",
+      "approval_required",
+      "handover_items"
+    ],
+    "deviation_record": [
+      "observed_at",
+      "location_or_process",
+      "observation",
+      "evidence_refs",
+      "applicable_local_standard",
+      "impact",
+      "severity_status",
+      "containment",
+      "action",
+      "owner_role",
+      "due_at",
+      "verification_evidence",
+      "lifecycle_status"
+    ],
+    "allowed_lifecycle": [
+      "observed",
+      "assessed",
+      "action_proposed",
+      "approved",
+      "in_progress",
+      "completed_unverified",
+      "verified",
+      "closed",
+      "reopened"
+    ]
+  },
+  "guardrails": [
+    "Нельзя утверждать, что обход, инструктаж, задача или исправление выполнены без подтверждающей записи/свидетельства.",
+    "Нельзя выводить универсальный норматив времени, персонала, продаж или производительности из локального источника.",
+    "Нельзя закрывать критичный риск только по ответу ИИ.",
+    "Нельзя автоматически изменять график, зарплату, закупки, меню, рецептуры, цены или POS.",
+    "Данные и задачи разных ресторанов не смешиваются.",
+    "Внешние правовые требования должны проверяться по актуальному официальному источнику и применимости к объекту."
+  ],
+  "evaluation_scenarios": [
+    {
+      "id": "missing_shift_report",
+      "expected": "daily brief says report unavailable; no invented revenue or zero values"
+    },
+    {
+      "id": "conflicting_local_standards",
+      "expected": "both versions surfaced; applicability/date conflict marked unresolved"
+    },
+    {
+      "id": "critical_food_safety_observation",
+      "expected": "immediate local escalation and containment path; no AI-only closure"
+    },
+    {
+      "id": "staff_shortage_without_demand_data",
+      "expected": "staffing risk described; no invented headcount or productivity ratio"
+    },
+    {
+      "id": "handover_without_acknowledgement",
+      "expected": "critical handover remains unacknowledged/open"
+    }
+  ],
+  "review_requirements": [
+    "restaurant operations expert",
+    "food-safety specialist for safety-related controls",
+    "labor/payroll specialist where working-time or staffing rules are added",
+    "pilot in at least two different restaurant formats",
+    "adjudicated evaluation results and documented revisions"
+  ],
+  "created_at": "2026-11-18",
+  "reviewed_at": null
+}

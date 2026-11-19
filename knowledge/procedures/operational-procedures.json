@@ -57,7 +57,33 @@
         "Срок хранения записи",
         "Ответственный за стоп-лист",
         "Порядок замещения менеджера"
-      ]
+      ],
+      "domain_id": "operations_and_shift_control",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8,
+            9
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены стоп-лист, состав блюда, аллерген или доступность позиции.",
+        "Зона или оборудование не готовы к безопасной работе."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.guest-journey-and-order",
@@ -108,7 +134,32 @@
         "Норматив времени встречи",
         "Обязательная форма листа заказа вне POS",
         "Срок хранения сервисных записей"
-      ]
+      ],
+      "domain_id": "service_standards",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            12,
+            29
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены состав, аллерген, модификация или возможность исполнения запроса гостя."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.service-delivery-and-delay",
@@ -156,7 +207,33 @@
         "Норматив подачи для всех блюд",
         "Универсальные интервалы check-back",
         "Форма регистрации задержек"
-      ]
+      ],
+      "domain_id": "guest_journey_hospitality",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            30,
+            34
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Статус заказа или оценка времени не подтверждены.",
+        "Есть риск перепутать блюдо, гостя или модификацию."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.bill-and-payment",
@@ -204,7 +281,34 @@
         "Текущие правовые сроки/требования",
         "Полномочия на возврат/аннулирование",
         "Локальная процедура закрытия кассы"
-      ]
+      ],
+      "domain_id": "accounting_tax_and_controls",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            35,
+            37
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Расхождение счёта и заказа.",
+        "Система не подтвердила оплату.",
+        "Действие выходит за пределы полномочий сотрудника."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.guest-complaint-recovery",
@@ -255,7 +359,32 @@
         "Матрица компенсаций",
         "Срок хранения журнала",
         "Уровни эскалации по суммам"
-      ]
+      ],
+      "domain_id": "complaints_service_recovery",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.guest-service-standard-2025",
+          "source_title": "Стандарт качества обслуживания гостей (2025)",
+          "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
+          "source_scope": "specific restaurant concepts",
+          "source_date_status": "2025 stated in source",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            39,
+            42
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Угроза безопасности, травма, аллергическая реакция, подозрение на загрязнение или конфликт, превышающий полномочия."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.appearance-readiness",
@@ -303,7 +432,28 @@
         "Периодичность",
         "Форма журнала",
         "Критерии обуви — в тренинге задан вопрос, но ответ не приведён"
-      ]
+      ],
+      "domain_id": "hr_personnel",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.appearance-training",
+          "source_title": "Стандарты внешнего вида — план тренинга",
+          "source_locator": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
+          "source_scope": "organization_specific",
+          "source_date_status": "not_verified",
+          "anchor_status": "document_locator_known_slide_or_section_anchor_open",
+          "page_anchors": []
+        }
+      ],
+      "stop_conditions": [
+        "Локальный стандарт не утверждён или его правовая применимость спорна."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.director-operating-control",
@@ -354,7 +504,41 @@
         "Универсальное число задач",
         "Норматив времени директора",
         "Форма единого журнала поручений"
-      ]
+      ],
+      "domain_id": "strategy_business_model",
+      "complexity_level": 5,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.operational-management-training",
+          "source_title": "Система операционного управления — управленческая эффективность",
+          "source_locator": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
+          "source_scope": "organization_specific_methodology",
+          "source_date_status": "not_verified",
+          "anchor_status": "document_locator_known_slide_or_section_anchor_open",
+          "page_anchors": []
+        },
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8,
+            9
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Нет подтверждённых данных о статусе поручения или полномочиях на решение."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.front-of-house-visual-walk",
@@ -404,7 +588,32 @@
       "unspecified": [
         "Полный перечень пунктов чек-листа в извлечённом фрагменте",
         "Срок устранения каждого дефекта"
-      ]
+      ],
+      "domain_id": "hall_guest_areas",
+      "complexity_level": 2,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Дефект создаёт риск для гостя или сотрудника.",
+        "Форма/маршрут обхода недоступны или неактуальны."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.monthly-stocktake",
@@ -414,10 +623,14 @@
         "source.restaurant-regulation"
       ],
       "source_facts": [
-        "Исторический регламент описывает инвентаризацию продуктов и материалов на первое число месяца; начало — последний день месяца в 20:00.",
-        "Подготовка включает весы, группировку товаров и материалов, тару и обеспечение персоналом для пересчёта.",
-        "Рукописные бланки отправляются руководителям и бухгалтерам в установленные источником сроки и хранятся полгода.",
-        "Инвентаризация основных средств и оборудования описана как ежегодная."
+        "В редакции корпоративного регламента 01.09.2025 инвентаризация продуктов и материалов проводится по состоянию на первое число каждого месяца; начало указано на последний день месяца в 20:00.",
+        "Бланки инвентаризации продуктов и материальных средств распечатываются из iiko.",
+        "Инвентаризация денежных средств проводится по состоянию на 23:59 последнего дня месяца; акт направляется бухгалтеру-куратору первого числа.",
+        "Инвентаризация основных средств и оборудования в источнике указана как ежегодная.",
+        "Перед началом управляющий готовит весы, группирует товары и материалы по группам/наименованиям в таре, удобной для пересчёта, и обеспечивает персонал для проведения пересчёта.",
+        "По завершении управляющий вносит данные в iiko до 19:00 первого числа; сканы рукописных черновиков направляет региональному управляющему и бухгалтеру-куратору до 10:00 первого числа.",
+        "Рукописные бланки в источнике предписано хранить в ресторане полгода; подписанная ведомость iiko и остаток денежных средств направляются бухгалтеру-куратору до 19:00 первого числа.",
+        "Качество и достоверность инвентаризации возложены в источнике на управляющего; контроль сроков — на регионального/территориального управляющего."
       ],
       "applicability": "Историческая корпоративная процедура; сверить с действующей учётной политикой, POS/ERP, бухгалтерским регламентом и местным правом.",
       "owner": {
@@ -431,14 +644,15 @@
         "status": "source_defined_scoped"
       },
       "steps": [
-        "Подготовить актуальные перечни и формы учёта.",
-        "Подготовить весы, тару и сгруппировать товары.",
-        "Назначить участников пересчёта.",
-        "Провести фактический пересчёт и взвешивание.",
-        "Сопоставить фактические остатки с учётными данными.",
-        "Зафиксировать расхождения отдельно от объяснений причин.",
-        "Передать результаты в установленный учётный контур.",
-        "Сохранить первичные листы по утверждённому сроку."
+        "Подтвердить, что локальный график и действующая учётная политика предусматривают инвентаризацию на выбранную дату; не применять исторические корпоративные сроки автоматически.",
+        "Подготовить формы из используемой учётной системы и сверить их версию/периметр.",
+        "Подготовить весы, тару и сгруппировать товары и материалы по группам и наименованиям.",
+        "Организовать фактический пересчёт/взвешивание и зафиксировать первичные результаты; не заполнять отсутствующие позиции нулями.",
+        "Отдельно провести сверку денежных средств на установленный момент времени и оформить отдельное подтверждение.",
+        "Сопоставить фактические остатки с учётными данными; расхождения сохранить отдельно от гипотез о причинах.",
+        "Внести подтверждённые данные в учётную систему и подготовить подписанную ведомость по локальному процессу.",
+        "Передать первичные листы, ведомость и денежные остатки уполномоченным адресатам в утверждённые сроки.",
+        "Сохранить первичные документы по действующей политике хранения."
       ],
       "checklist_id": "check.stocktake",
       "record": {
@@ -448,17 +662,49 @@
         "retention_status": "source_defined_scoped"
       },
       "verification": [
-        "Каждая позиция имеет единицу измерения и фактическое количество.",
-        "Расхождения прослеживаются до первичного листа.",
-        "Корректировки имеют основание и уполномоченное подтверждение."
+        "Каждая позиция, фактически присутствующая в ресторане, имеет первичный лист пересчёта и единицу измерения.",
+        "Неясные единицы, отсутствующие строки и расхождения не превращены в нулевые значения.",
+        "Фактические остатки и учётная система сверены; корректировки имеют отдельное основание.",
+        "Денежные средства сверены отдельно от товарных остатков.",
+        "Передача документов и согласование подтверждены."
       ],
       "exception_handling": "Не превращать отсутствующую позицию или незаполненную строку в нулевой остаток; запросить пересчёт/уточнение.",
       "unspecified": [
-        "Состав комиссии",
-        "Правило двойного пересчёта",
-        "Текущие дедлайны передачи и утверждения",
-        "Методика списания/переоценки"
-      ]
+        "Действующая в конкретной организации процедура двойного пересчёта",
+        "Состав комиссии и принцип разделения счёта/проверки",
+        "Текущие сроки и каналы передачи документов",
+        "Порядок бухгалтерских корректировок и признания недостач",
+        "Действующая политика хранения первичных документов"
+      ],
+      "domain_id": "warehouse_inventory",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            10,
+            71,
+            72
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждена дата/время среза или версия формы.",
+        "Есть позиции без единицы измерения, пересчёта или надёжной идентификации.",
+        "Есть необъяснённые расхождения или отсутствуют первичные листы.",
+        "Не подтверждены полномочия на корректировку учётных остатков."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.monthly-sanitation-deep-clean",
@@ -468,10 +714,11 @@
         "source.restaurant-regulation"
       ],
       "source_facts": [
-        "Исторический регламент описывает генеральную уборку в первый вторник месяца до 12:00.",
-        "Перечислены рабочие места, оборудование, инвентарь, пол и стены под оборудованием, вытяжки, мебель, стены, потолки, светильники и рекламные вывески.",
-        "Уборка при пересмене не отменяет генеральную уборку.",
-        "Для торгового центра время может требовать согласования и переноса в нерабочие часы."
+        "Корпоративный регламент редакции 01.09.2025 описывает санитарный час в первый вторник месяца с утра до 12:00.",
+        "Если договор аренды ТРЦ не позволяет переносить начало работы, источник предписывает проводить уборку до открытия, предварительно согласовав время с ТРЦ.",
+        "Перечень поверхностей включает рабочие места, оборудование, инвентарь, пол и стены под оборудованием, вытяжки, мебель, стены, потолки, светильники и рекламные вывески.",
+        "Уборка при пересмене не отменяет санитарный час.",
+        "Если ресторан закрывается на санитарный час, источник требует разместить объявление о закрытии до 12:00."
       ],
       "applicability": "Только как историческая практика конкретного оператора; фактическая программа санитарной уборки определяется оценкой рисков, технологией и актуальными требованиями юрисдикции.",
       "owner": {
@@ -485,12 +732,13 @@
         "status": "source_defined_scoped"
       },
       "steps": [
-        "Составить перечень зон и оборудования.",
-        "Согласовать доступ и остановку/перенос работ, если требуется.",
-        "Определить безопасную последовательность уборки и используемые средства по утверждённым инструкциям.",
-        "Выполнить уборку, включая доступные скрытые поверхности и зоны под оборудованием.",
-        "Проверить визуальное состояние и корректное восстановление рабочих зон.",
-        "Зафиксировать незавершённые участки и назначить повторную работу."
+        "Проверить применимость локального плана генеральной уборки и согласовать окно работ с арендодателем/ТРЦ, если требуется.",
+        "Составить перечень зон и оборудования по действующему локальному плану.",
+        "Определить безопасную последовательность работ, вывод оборудования из эксплуатации и допуск персонала.",
+        "Выполнить уборку предусмотренных зон, включая доступные поверхности под оборудованием и мебелью.",
+        "Использовать моющие/дезинфицирующие средства только по актуальным инструкциям производителя и утверждённой программе объекта.",
+        "Проверить чистоту, отсутствие остатков химии и безопасное восстановление рабочих зон.",
+        "Зафиксировать пропуски, дефекты и повторные работы; закрыть только после подтверждения результата."
       ],
       "checklist_id": "check.deep-clean",
       "record": {
@@ -499,17 +747,47 @@
         "source_form": "Подробная форма в доступном фрагменте не приведена"
       },
       "verification": [
-        "Все предусмотренные локальным планом зоны проверены.",
-        "Химические средства и способы применены по инструкции производителя и локальным правилам.",
-        "Зона безопасно возвращена в эксплуатацию."
+        "Проверены все зоны из актуального локального плана.",
+        "Средства и способы очистки применены по действующей инструкции.",
+        "Оборудование и рабочие зоны безопасно возвращены в эксплуатацию.",
+        "Пропущенные зоны и повторные работы отражены в записи."
       ],
       "exception_handling": "Не выполнять очистку работающего/энергизированного оборудования способом, не предусмотренным инструкцией; привлекать компетентного специалиста при необходимости.",
       "unspecified": [
-        "Ответственные по зонам",
-        "Химия и концентрации",
-        "Фактические критерии приемки",
-        "Журнал и срок хранения"
-      ]
+        "Ответственные по зонам и проверяющий",
+        "Полный локальный перечень химических средств и концентраций",
+        "Критерии приёмки каждой зоны",
+        "Форма журнала и срок хранения",
+        "Действующая санитарная программа и актуальные нормативные требования"
+      ],
+      "domain_id": "food_safety_sanitation",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            12,
+            13
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Неизвестны безопасный способ очистки, средство или концентрация.",
+        "Оборудование не может быть безопасно обесточено/выведено из эксплуатации по инструкции.",
+        "Не согласовано закрытие или изменение режима работы, если это требуется.",
+        "После уборки остались загрязнения, химические остатки или опасные условия."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.staff-schedule-and-timekeeping",
@@ -557,7 +835,33 @@
         "Текущие правила сверхурочной работы",
         "Локальные сроки публикации графика",
         "Формат и срок хранения табеля"
-      ]
+      ],
+      "domain_id": "labor_planning_payroll",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            11,
+            12
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Фактическое время отсутствует или конфликтует с первичными данными.",
+        "Предлагаемое действие может нарушать применимые нормы труда."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     },
     {
       "id": "proc.delivery-order-control",
@@ -606,7 +910,660 @@
         "Универсальные целевые сроки",
         "Стандарт упаковки для всех продуктов",
         "Метод распределения причин опоздания"
-      ]
+      ],
+      "domain_id": "logistics_delivery_channels",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+      "maturity_status": "procedure_draft_source_locator_review_open",
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            56,
+            58
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
+        }
+      ],
+      "stop_conditions": [
+        "Не подтверждены комплектность, адрес/способ получения или статус заказа.",
+        "Задержка без подтверждённой оценки времени."
+      ],
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
+    },
+    {
+      "id": "proc.fryer-oil-management",
+      "title": "Эксплуатация фритюрницы и контроль фритюрного масла",
+      "domain": "kitchen_and_production",
+      "domain_id": "kitchen_and_production",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_food_process_equipment_and_safety_risk",
+      "source_ids": [
+        "source.restaurant-regulation"
+      ],
+      "source_facts": [
+        "Корпоративный регламент требует использовать для фритюрниц масло/жир, поставляемое указанным в документе поставщиком.",
+        "При жарке масло должно полностью покрывать продукт в корзине.",
+        "Размораживать продукты перед жаркой по данному источнику не допускается; повторное обжаривание не допускается.",
+        "После жарки корзине с готовым блюдом предписано дать стечь маслу не менее 30 секунд.",
+        "В перерывах источник предписывает снижать температуру фритюрницы до 140 °C; перед началом жарки возвращать требуемую температуру.",
+        "Замена масла описана 1–2 раза в неделю в зависимости от объёма жарки, цвета масла и вкусовых качеств готового блюда; ведётся журнал использования фритюрных жиров.",
+        "Слив и фильтрация масла описаны каждые 2–3 дня в зависимости от объёма жарки; взвесь утилизируется.",
+        "Отработанное масло передаётся в таре подрядчика; слив в канализацию запрещён."
+      ],
+      "applicability": "Исторический корпоративный регламент сети Гранд Фуд, редакция на 01.09.2025, формат fast-food. Не переносить поставщика, температурные установки, интервалы замены и прочие параметры на другой объект. Перед использованием требуется сверка с инструкцией конкретной фритюрницы, характеристиками масла, актуальной технологией и действующими требованиями.",
+      "owner": {
+        "role": "Не указан в источнике",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "По циклам эксплуатации; источник указывает фильтрацию каждые 2–3 дня и замену 1–2 раза в неделю с поправкой на объём и состояние масла",
+        "basis": "Source-specific corporate instruction",
+        "status": "source_defined_scoped"
+      },
+      "steps": [
+        "Проверить, что используется масло/жир, разрешённый действующей спецификацией объекта; корпоративное требование к конкретному поставщику применять только при подтверждённой применимости документа.",
+        "Перед загрузкой убедиться, что продукт подготовлен по актуальной технологической карте и масло покрывает продукт в корзине.",
+        "Не размораживать продукт перед жаркой и не выполнять повторное обжаривание в рамках описанной исходником процедуры.",
+        "После жарки дать корзине стечь не менее 30 секунд — параметр источника, подлежащий локальной технологической проверке.",
+        "В перерывах использовать режим снижения температуры только в соответствии с инструкцией производителя оборудования и утверждённой технологией; 140 °C — исторический параметр конкретного источника, не универсальная установка.",
+        "Проверять состояние масла по принятой на объекте спецификации; исходный документ связывает замену с объёмом жарки, цветом и вкусовыми качествами готового блюда.",
+        "Фильтровать масло и удалять взвесь по локально утверждённому графику; исходный документ указывает 2–3 дня в зависимости от объёма жарки.",
+        "Фиксировать фильтрацию и замену в журнале использования фритюрных жиров.",
+        "Собирать отработанное масло в предназначенную тару и передавать на установленную утилизацию; не сливать в канализацию."
+      ],
+      "record": {
+        "name": "Журнал использования фритюрных жиров",
+        "status": "source_defined",
+        "source_form": "Название журнала указано; форма и поля в доступном фрагменте не приведены."
+      },
+      "verification": [
+        "Есть подтверждение применяемой спецификации масла и инструкции оборудования.",
+        "Операции фильтрации/замены отражены в журнале.",
+        "Отработанное масло передано в предусмотренную тару, не слито в канализацию."
+      ],
+      "exception_handling": "При неизвестном состоянии масла, неисправности терморегулятора, отсутствии безопасной тары или сомнении в допустимости продукта остановить использование затронутой фритюрницы и передать вопрос ответственному руководителю/техническому специалисту по локальному порядку.",
+      "stop_conditions": [
+        "Не подтверждены тип масла, допустимый режим или инструкция производителя оборудования.",
+        "Фритюрница неисправна или температура не контролируется.",
+        "Масло имеет признаки непригодности либо безопасное состояние не может быть подтверждено.",
+        "Нет безопасной тары/маршрута передачи отработанного масла."
+      ],
+      "unspecified": [
+        "Форма журнала и обязательные поля",
+        "Критерии измерения качества/полярных соединений масла",
+        "Температура жарки для конкретных продуктов",
+        "Текущие инструкции производителя оборудования и масла",
+        "Действующий подрядчик и договор на утилизацию"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.restaurant-regulation",
+          "source_title": "Регламент ресторана",
+          "source_locator": "Original DOC; 130 pages; cover edition 01.09.2025; corporate fast-food format",
+          "source_scope": "specific restaurant chain; fast-food format",
+          "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
+          "page_anchors": [
+            23
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Стр. 23 документа; параметры и периодичность относятся к историческому корпоративному регламенту."
+        }
+      ],
+      "complexity_assessment": "model_proposed_from_food_process_equipment_and_safety_risk",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true,
+      "checklist_id": "check.fryer-oil"
+    },
+    {
+      "source_ids": [
+        "source.shift-manager-trattoria-procedure"
+      ],
+      "applicability": "Документ «ОР Управляющий смены», 4 страницы, без даты; описывает конкретный ресторан ТРАТТОРИЯ. Это локальная модель должности и организации смены, не универсальная процедура. Часы, полномочия, роли и контрольные формы требуют подтверждения на текущем объекте.",
+      "owner": {
+        "role": "Менеджер смены",
+        "basis": "Source-defined role",
+        "status": "source_defined"
+      },
+      "local_adaptation_required": true,
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "source_traceability": [
+        {
+          "source_id": "source.shift-manager-trattoria-procedure",
+          "source_title": "ОР Управляющий смены",
+          "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+          "source_scope": "specific_restaurant_trattoria",
+          "source_date_status": "date not stated; historical/local applicability not confirmed",
+          "page_anchors": [
+            2,
+            3
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
+        }
+      ],
+      "id": "proc.manager-shift-opening-readiness",
+      "title": "Открытие смены: проверка готовности ресторана",
+      "domain": "operations_and_shift_control",
+      "domain_id": "shift_daily_operations",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_multi_role_cross_zone_readiness",
+      "source_facts": [
+        "Источник задаёт время начала смены менеджера не позднее 08:30 и подготовительный период 08:30–09:00.",
+        "Проверка включает помещения, мебель и интерьер, сантехническое и прочее оборудование, вентиляцию и климат, музыку, кассовую технику и терминал, наличие продукции на кухне и в баре, готовность персонала и рекламные материалы.",
+        "Готовность продукции проверяется менеджером совместно с барменом и су-шефом при отсутствии шеф-повара.",
+        "Готовность расчётного оборудования проверяется совместно с барменом.",
+        "Персонал, согласно источнику, должен находиться в заведении не позднее чем за 15 минут до начала смены.",
+        "Не позднее чем за 5 минут до начала смены проводится экспресс-собрание о стоп-листе, акциях, специальных предложениях и задачах.",
+        "До начала смены менеджер проводит бракераж блюд по указанному в источнике распоряжению и проверяет актуальность рекламной информации.",
+        "Результаты проверки готовности фиксируются в чек-листе."
+      ],
+      "steps": [
+        "Сверить фактическое время и локальный график открытия; время 08:30–09:00 считать историческим параметром источника, пока не утверждено для объекта.",
+        "Проверить помещения, мебель, интерьер, сантехнику, вентиляцию, климат и музыкальное оборудование.",
+        "Проверить кассовую технику и терминал совместно с ответственным сотрудником; записать неисправности.",
+        "Проверить наличие и достаточность продукции на кухне и в баре совместно с барменом и су-шефом/замещающей ролью, если такая роль назначена локально.",
+        "Проверить присутствие и готовность персонала по актуальному графику.",
+        "Проверить актуальность рекламной информации и носителей.",
+        "Провести предусмотренный локальным распоряжением бракераж; не применять неизвестные критерии и не подменять действующую систему пищевой безопасности.",
+        "Провести экспресс-собрание: стоп-лист, акции/спецпредложения, задачи и важные ограничения смены.",
+        "Заполнить чек-лист готовности; неизвестные и неустранённые дефекты оставить открытыми."
+      ],
+      "record": {
+        "name": "Чек-лист готовности ресторана к смене",
+        "status": "source_defined_in_part",
+        "source_form": "Источник упоминает чек-лист, сам бланк в документе отсутствует."
+      },
+      "verification": [
+        "Проверены все зоны и группы оборудования, перечисленные в локальном чек-листе.",
+        "Доступность продукции и стоп-лист подтверждены ответственными.",
+        "Состояние расчётного оборудования проверено.",
+        "Команда получила информацию о задачах и ограничениях.",
+        "Бракераж и рекламная проверка отражены в локальной записи, если предусмотрены."
+      ],
+      "stop_conditions": [
+        "Предлагаемый локальный стоп: критичная зона или оборудование небезопасны/неисправны.",
+        "Предлагаемый локальный стоп: нет подтверждённой информации о стоп-листе, составе/качестве блюда или доступности продукта.",
+        "Не определено, кто уполномочен подтвердить готовность кухни/бара."
+      ],
+      "stop_conditions_basis": "Proposed safety gates derived from the workflow; require local approval.",
+      "cadence": {
+        "value": "Перед началом каждой смены по описанной процедуре",
+        "basis": "Source-described opening workflow",
+        "status": "source_defined"
+      },
+      "exception_handling": "Зафиксировать незакрытую проверку и передать ответственному руководителю; не отмечать готовность по отсутствию сведений.",
+      "unspecified": [
+        "Текущие часы и состав смены",
+        "Действующая форма чек-листа",
+        "Критерии приемки каждой зоны/оборудования",
+        "Порядок действий при неисправности кассы/терминала",
+        "Критерии бракеража и распоряжение #2",
+        "Кто замещает су-шефа/шеф-повара"
+      ],
+      "checklist_id": "check.manager-opening"
+    },
+    {
+      "source_ids": [
+        "source.shift-manager-trattoria-procedure"
+      ],
+      "applicability": "Документ «ОР Управляющий смены», 4 страницы, без даты; описывает конкретный ресторан ТРАТТОРИЯ. Это локальная модель должности и организации смены, не универсальная процедура. Часы, полномочия, роли и контрольные формы требуют подтверждения на текущем объекте.",
+      "owner": {
+        "role": "Менеджер смены",
+        "basis": "Source-defined role",
+        "status": "source_defined"
+      },
+      "local_adaptation_required": true,
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "source_traceability": [
+        {
+          "source_id": "source.shift-manager-trattoria-procedure",
+          "source_title": "ОР Управляющий смены",
+          "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+          "source_scope": "specific_restaurant_trattoria",
+          "source_date_status": "date not stated; historical/local applicability not confirmed",
+          "page_anchors": [
+            3,
+            4
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
+        }
+      ],
+      "id": "proc.manager-shift-control",
+      "title": "Управление операционной деятельностью в течение смены",
+      "domain": "operations_and_shift_control",
+      "domain_id": "shift_daily_operations",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_multi_role_shift_coordination",
+      "source_facts": [
+        "Менеджер смены организует расстановку сотрудников по зонам.",
+        "Источник описывает корректировку расстановки/графика смены с учётом доходности.",
+        "Менеджер управляет процессами бара и кухни и контролирует соблюдение стандартов операционной деятельности.",
+        "Менеджер обязан реагировать на нарушения и принимать меры по конфликтным ситуациям.",
+        "При невозможности урегулировать конфликт или при чрезвычайной ситуации с угрозой жизни/здоровью источник требует вызвать охрану.",
+        "Менеджер обеспечивает учёт поступающих от гостей денежных средств и соблюдение правил использования кассовой техники и терминала.",
+        "Документ ограничивает приём денег менеджером, кроме особых случаев."
+      ],
+      "steps": [
+        "Распределить сотрудников по зонам в соответствии с локальной схемой и квалификацией.",
+        "Отслеживать покрытие зон и при необходимости согласовывать изменения расстановки/графика в рамках полномочий.",
+        "Контролировать взаимодействие кухни, бара и зала; передавать подтверждённые статусы и ограничения.",
+        "Наблюдать соблюдение утверждённых стандартов операционной деятельности.",
+        "Реагировать на нарушения, фиксировать факт и проверять устранение.",
+        "Контролировать кассовую дисциплину и использование расчётного оборудования в пределах полномочий; не принимать деньги вне разрешённых исключений.",
+        "При конфликте действовать по утверждённому алгоритму; при угрозе жизни/здоровью немедленно вызвать охрану согласно локальному плану безопасности.",
+        "Фиксировать существенные отклонения и незакрытые вопросы для передачи следующей смене."
+      ],
+      "record": {
+        "name": "Записи менеджера смены / операционный чек-лист",
+        "status": "proposed_template",
+        "source_form": "Документ описывает контрольные обязанности, но не задаёт единую форму журнала смены."
+      },
+      "verification": [
+        "Зоны и ответственные распределены.",
+        "Существенные нарушения имеют статус и подтверждение устранения.",
+        "Кассовые операции выполняются через разрешённый контур.",
+        "Инциденты и незакрытые задачи переданы руководителю/следующей смене."
+      ],
+      "stop_conditions": [
+        "Угроза жизни или здоровью — немедленная эскалация по плану безопасности.",
+        "Нет полномочий на кассовое, кадровое или компенсационное решение.",
+        "Невозможно подтвердить статус важного операционного процесса."
+      ],
+      "stop_conditions_basis": "Safety and authority gates; local emergency and approval procedures must be supplied.",
+      "cadence": {
+        "value": "В течение смены",
+        "basis": "Source-defined shift responsibility",
+        "status": "source_defined"
+      },
+      "exception_handling": "При превышении полномочий передать решение директору/уполномоченному лицу; при чрезвычайной угрозе — охране и экстренным службам по локальному плану.",
+      "unspecified": [
+        "Матрица полномочий менеджера",
+        "Актуальная схема зон и штат смены",
+        "Матрица компенсаций и кассовых исключений",
+        "Форма журнала инцидентов",
+        "Локальный план экстренного реагирования"
+      ],
+      "checklist_id": "check.manager-control"
+    },
+    {
+      "source_ids": [
+        "source.shift-manager-trattoria-procedure"
+      ],
+      "applicability": "Документ «ОР Управляющий смены», 4 страницы, без даты; описывает конкретный ресторан ТРАТТОРИЯ. Это локальная модель должности и организации смены, не универсальная процедура. Часы, полномочия, роли и контрольные формы требуют подтверждения на текущем объекте.",
+      "owner": {
+        "role": "Менеджер смены",
+        "basis": "Source-defined role",
+        "status": "source_defined"
+      },
+      "local_adaptation_required": true,
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "source_traceability": [
+        {
+          "source_id": "source.shift-manager-trattoria-procedure",
+          "source_title": "ОР Управляющий смены",
+          "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
+          "source_scope": "specific_restaurant_trattoria",
+          "source_date_status": "date not stated; historical/local applicability not confirmed",
+          "page_anchors": [
+            4
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
+        }
+      ],
+      "id": "proc.manager-shift-closing",
+      "title": "Закрытие смены и передача состояния ресторана",
+      "domain": "operations_and_shift_control",
+      "domain_id": "shift_daily_operations",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_multi_role_cash_stock_equipment_close",
+      "source_facts": [
+        "Источник указывает окончание работы ресторана в 23:00, кроме случаев продления по приказу директора или соглашению с гостем по указанному распоряжению.",
+        "После смены менеджер уведомляет персонал об окончании смены.",
+        "Менеджер обеспечивает прекращение движения товаров и расчёт открытых заказов.",
+        "Менеджер обеспечивает формирование кассового отчёта и подсчёт поступивших денежных средств.",
+        "Менеджер сообщает бармену и су-шефу о предстоящих бронях следующей смены для пополнения запасов.",
+        "Менеджер контролирует отключение оборудования, кроме холодильного и другого оборудования, которое должно продолжать работу.",
+        "Менеджер проверяет исправность мебели, интерьера, сантехнического и прочего оборудования и фиксирует неисправности.",
+        "Перед уходом менеджер удостоверяется в отсутствии персонала и посторонних людей в помещениях."
+      ],
+      "steps": [
+        "Подтвердить окончание обслуживания и локальное разрешение на возможное продление работы.",
+        "Уведомить персонал об окончании смены.",
+        "Остановить движение товаров в соответствии с локальным закрывающим процессом.",
+        "Проверить и закрыть открытые заказы.",
+        "Сформировать кассовый отчёт и пересчитать денежные средства по утверждённой кассовой процедуре.",
+        "Передать бармену и су-шефу/назначенному ответственному подтверждённую информацию о бронях следующей смены для планирования пополнения запасов.",
+        "Отключить оборудование по локальному перечню; не отключать холодильное и иное оборудование, которое должно работать непрерывно.",
+        "Проверить состояние мебели, интерьера, сантехнического и прочего оборудования; зарегистрировать дефекты.",
+        "Проверить отсутствие персонала и посторонних лиц в помещениях и завершить передачу смены."
+      ],
+      "record": {
+        "name": "Кассовый отчёт смены и запись о состоянии/неисправностях",
+        "status": "source_defined_in_part",
+        "source_form": "Источник называет кассовый отчёт и обязанность фиксировать неисправность; единая форма передачи смены не приложена."
+      },
+      "verification": [
+        "Открытые заказы закрыты или явно переданы с причиной.",
+        "Кассовый отчёт сформирован, денежные средства пересчитаны по локальной процедуре.",
+        "Следующая смена получила сведения о бронях и потребности пополнения.",
+        "Оборудование оставлено в требуемом состоянии.",
+        "Неисправности записаны и переданы ответственному.",
+        "Помещения проверены перед уходом."
+      ],
+      "stop_conditions": [
+        "Расхождение кассового отчёта и фактических средств.",
+        "Есть открытые заказы или движение товаров, которые не закрыты/не переданы.",
+        "Неясно, какое оборудование должно оставаться включённым.",
+        "Не подтверждено отсутствие людей в помещениях."
+      ],
+      "stop_conditions_basis": "Proposed close-out gates based on source tasks; local approval and forms required.",
+      "cadence": {
+        "value": "После окончания каждой смены",
+        "basis": "Source-described closing workflow",
+        "status": "source_defined"
+      },
+      "exception_handling": "При кассовом расхождении, неисправности или незакрытом заказе не скрывать проблему; зарегистрировать и передать уполномоченному лицу до закрытия смены.",
+      "unspecified": [
+        "Актуальное время закрытия",
+        "Текущий порядок закрытия кассы и инкассации",
+        "Перечень непрерывно работающего оборудования",
+        "Форма передачи смены",
+        "Порядок действий при расхождении денег"
+      ],
+      "checklist_id": "check.manager-closing"
+    },
+    {
+      "id": "proc.iiko-stock-accounting-audit",
+      "title": "Проверка полноты и согласованности складского учёта в iiko",
+      "domain": "accounting_tax_and_controls",
+      "domain_id": "accounting_tax_and_controls",
+      "complexity_level": 4,
+      "complexity_basis": "model_proposed_from_accounting_system_audit_scope_and_financial_control_risk",
+      "source_ids": [
+        "source.calculator-iiko-audit-checklist"
+      ],
+      "source_facts": [
+        "Чек-лист аудитора содержит 10 разделов: номенклатура; приходные накладные; расходные накладные; акты списания; акты переработки; акты приготовления/разбора/перемещений/возвратов; акты реализации; отчёт «Остатки на складах»; инвентаризации за отчётный месяц; дата блокировки периода.",
+        "В источнике предлагается проверять наличие непроведённых документов, документов с суммой 0 руб., соответствие накладных бумажным документам и заполнение входящего номера с указанным исключением для покупок на рынке/в магазине.",
+        "Для расходных накладных источник содержит критерий «сумма отгрузки выше суммы себестоимости»; его экономический и учётный смысл зависит от типа документа и политики объекта.",
+        "Для актов списания источник указывает проверку статей «Расход продуктов» и ручных документов по статье «Удаление блюд со списанием».",
+        "Для актов переработки источник ограничивает переработку взаимозаменяемыми позициями, близкими по себестоимости и одинаковыми по свойствам.",
+        "Для реализации источник указывает проверку времени документов не ранее 23:00 и отсутствие ручных документов.",
+        "Для остатков источник указывает отсутствие остатков по блюдам, услугам и удалённым позициям.",
+        "Для инвентаризаций источник указывает наличие документов по всем складам, время 23:59, отсутствие отрицательных остатков в РОСВ и сверку сумм остатков с третьим шагом соответствующих инвентаризаций.",
+        "В источнике требуется установить дату окончательной блокировки предыдущего отчётного периода в настройках торгового предприятия."
+      ],
+      "applicability": "Консультантский чек-лист проверки iiko, PDF 13 страниц, дата не указана. Это вспомогательный аудит складского учёта, не официальная спецификация iiko и не нормативный стандарт бухгалтерского учёта. Применять только после проверки версии iiko, конфигурации, учётной политики, типов документов и локальных процедур.",
+      "owner": {
+        "role": "Не указан в источнике; назначается организацией",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "Не установлена; источник описывает проверку отчётного месяца, но не задаёт владельца или обязательную частоту всего аудита",
+        "basis": "Source has monthly inventory/period-close checkpoints but no explicit audit cadence",
+        "status": "unknown"
+      },
+      "steps": [
+        "Зафиксировать организацию, ресторан, период, склады, версию iiko и настройки учётного контура.",
+        "Проверить дерево номенклатуры: группировку позиций, информационные модификаторы и отсутствие необъяснённых маркеров себестоимости в используемых блюдах/заготовках.",
+        "Сверить приходные накладные iiko с первичными документами; отдельно исследовать непроведённые документы, нулевые суммы и незаполненные входящие номера с учётом описанного источником исключения.",
+        "Проверить расходные накладные и исследовать непроведённые/нулевые документы; критерий сравнения суммы отгрузки и себестоимости подтвердить по типу документа и учётной политике.",
+        "Проверить акты списания, причины, статьи и наличие ручных документов; каждое исключение сверить с первичным основанием.",
+        "Проверить акты переработки, приготовления, разбора, внутренних перемещений и возвратов; сопоставить исходные и полученные позиции и подтверждающие документы.",
+        "Проверить акты реализации и временные метки; значение 23:00 из источника не переносить без подтверждения локальной настройки закрытия дня.",
+        "Проверить отчёт «Остатки на складах» и разобраться с остатками по блюдам, услугам и удалённым/неактивным позициям.",
+        "Сверить инвентаризации по каждому складу, временные метки, отрицательные остатки и суммы с соответствующими шагами ведомости; значение 23:59 считать примером источника до подтверждения настройки.",
+        "Проверить установленную дату блокировки периода и полномочия на её изменение.",
+        "Сформировать перечень расхождений с ID документа, складом, периодом, первичным подтверждением, ответственным (если назначен) и статусом; не исправлять документы без разрешения."
+      ],
+      "checklist_id": "check.iiko-accounting-audit",
+      "record": {
+        "name": "Реестр аудита iiko и подтверждающие документы",
+        "status": "proposed_template",
+        "source_form": "Исходный PDF содержит контрольные пункты, но не даёт готового единого журнала отклонений."
+      },
+      "verification": [
+        "Каждый вывод привязан к документу/складу/периоду и проверяемому источнику.",
+        "Необъяснённые нулевые суммы, ручные документы, отрицательные остатки и расхождения не исправлены молча.",
+        "Критерии и время сверены с текущей версией iiko и учётной политикой.",
+        "Корректировки имеют основание и подтверждение уполномоченного лица."
+      ],
+      "stop_conditions": [
+        "Не подтверждена версия iiko, конфигурация или период отчёта.",
+        "Нельзя сопоставить документ с первичным основанием.",
+        "Неизвестен смысл типа документа или статьи списания.",
+        "Есть отрицательные остатки или расхождения без достаточных данных для объяснения.",
+        "Предлагается изменить/аннулировать документ без полномочий и основания."
+      ],
+      "stop_conditions_basis": "Proposed audit guardrails based on source checklist; require local approval.",
+      "unspecified": [
+        "Версия iiko и конфигурация объекта",
+        "Учетная политика и семантика типов документов",
+        "Кто выполняет аудит и кто утверждает корректировки",
+        "Формат и срок хранения аудиторского реестра",
+        "Критерии допустимых временных меток для данного контура",
+        "Действующий порядок блокировки периода"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.calculator-iiko-audit-checklist",
+          "source_title": "Чек-лист проверки бухгалтера-калькулятора",
+          "source_locator": "PDF; 13 pages; 10 audit sections",
+          "source_scope": "iiko_stock_accounting_practice",
+          "source_date_status": "not stated in supplied PDF; current applicability not verified",
+          "page_anchors": [
+            3,
+            12
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Все 13 страниц прочитаны; пункты 1–10 распределены по страницам 3–12."
+        }
+      ],
+      "complexity_assessment": "model_proposed_from_accounting_system_audit_scope_and_financial_control_risk",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
+    },
+    {
+      "id": "proc.food-product-and-equipment-labelling",
+      "title": "Проверка маркировки сырья, заготовок, инвентаря и доставки",
+      "domain": "food_safety_and_hygiene",
+      "domain_id": "food_safety_sanitation",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_multi_zone_traceability_and_cross_contamination_control",
+      "source_ids": [
+        "source.food-marking-haccp-checklist"
+      ],
+      "source_facts": [
+        "В консультантском чек-листе для поступающего сырья приведён перечень сведений на транспортной/потребительской таре: наименование, состав, количество, дата изготовления, срок годности, условия хранения, изготовитель, рекомендации/ограничения, пищевая ценность, сведения о ГМО и единый знак обращения.",
+        "Для заготовок, произведённых на предприятии, источник указывает маркировку каждого контейнера/ёмкости: наименование продукта, дата и время изготовления, дата и время окончания использования; для замороженных продуктов источник отдельно указывает только даты.",
+        "Для досок и ножей источник приводит буквенные обозначения продуктовых групп, включая сырое мясо, сырую рыбу, сырые овощи, варёные продукты, птицу, хлеб и гастрономию.",
+        "Для мойки овощей/зелени и яиц источник приводит отдельные ёмкости при отсутствии отдельных моечных ванн, если соответствующие продукты используются.",
+        "Для уборочного инвентаря источник предлагает обозначение по зонам применения: производственные цеха, склад, вспомогательные помещения и санузлы.",
+        "Для баков отходов источник указывает маркировку «ОТХОДЫ» или пиктограмму.",
+        "Для перелитых моющих/дезинфицирующих средств источник указывает маркировку наименования средства и цели применения и запрещает обезличенные ёмкости.",
+        "Для контейнеров/ёмкостей доставки источник перечисляет сведения о продукте, включая наименование, дату изготовления, срок годности, условия хранения, компоненты/аллергены и дополнительную информацию; формат этикетки/вкладыша зависит от упаковки."
+      ],
+      "applicability": "Консультантский чек-лист HACCP-AUDIT, PDF 6 страниц, дата не указана. Это учебно-практический чек-лист, не официальный нормативный акт и не полная матрица маркировки. Все буквенные коды, поля, сроки и способы маркировки должны быть проверены по текущим официальным требованиям, техкартам, фактическим операциям и утверждённой программе HACCP.",
+      "owner": {
+        "role": "Не указан в источнике; назначается организацией",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "При приёмке, изготовлении/перемещении и проверке рабочих зон; точная частота источником не задана",
+        "basis": "Workflow triggers inferred from checklist object groups",
+        "status": "model_proposed"
+      },
+      "steps": [
+        "Определить фактические группы сырья и операции на объекте; исключить неприменимые категории.",
+        "При приёмке проверить маркировку и комплект сведений на таре по действующим требованиям к конкретному продукту и документам поставщика.",
+        "Для каждой заготовки/контейнера проверить наименование, дату и время изготовления, а также срок/дату и время использования по утверждённой техкарте и действующим требованиям.",
+        "Сверить маркировку досок и ножей с локальной схемой разделения сырья, готовой продукции, аллергенов и зон; коды из источника использовать только как пример, не как универсальный стандарт.",
+        "Проверить отдельные ёмкости для мойки овощей/зелени и яиц, если эти операции выполняются и нет выделенных моечных ванн; фактическую схему утвердить по планировке и HACCP.",
+        "Проверить идентификацию уборочного инвентаря по зонам и исключить его перенос между несовместимыми зонами без предусмотренной обработки.",
+        "Проверить маркировку баков отходов и раздельность потоков отходов.",
+        "Проверить все ёмкости с перелитыми моющими/дезинфицирующими средствами: название, назначение и отсутствие обезличенной тары; концентрации/способ применения сверять с инструкцией изготовителя.",
+        "Для доставки проверить маркировку/вкладыш по составу продукта, датам, условиям хранения и аллергенам по актуальным требованиям и меню/техкартам.",
+        "Зарегистрировать немаркированные объекты, изолировать/приостановить их использование в пределах локальных полномочий до идентификации и корректного перемаркирования."
+      ],
+      "checklist_id": "check.food-product-labelling",
+      "record": {
+        "name": "Чек-лист маркировки по зонам и видам объектов",
+        "status": "proposed_template",
+        "source_form": "Исходный PDF — обучающий чек-лист; собственная форма аудита не приложена."
+      },
+      "verification": [
+        "Маркировка позволяет однозначно идентифицировать продукт/средство/зону.",
+        "Даты и условия использования согласованы с действующими техкартами и требованиями.",
+        "Коды досок/ножей и разделение инвентаря соответствуют утверждённой схеме объекта.",
+        "Аллергенная информация для доставки проверена по меню и матрице аллергенов.",
+        "Все неизвестные и несоответствия зарегистрированы, а не замаскированы."
+      ],
+      "stop_conditions": [
+        "Нельзя определить продукт, дату изготовления или срок использования.",
+        "Обезличенная ёмкость содержит химическое средство.",
+        "Нельзя подтвердить состав/аллергены продукта для выдачи/доставки.",
+        "Маркировка противоречит техкарте, поставочной этикетке или действующему требованию."
+      ],
+      "stop_conditions_basis": "Proposed guardrails based on food-safety and traceability logic; require specialist and local approval.",
+      "unspecified": [
+        "Актуальная нормативная матрица обязательных полей маркировки",
+        "Конкретные коды досок/ножей и их цветовая схема",
+        "Сроки хранения и числовые параметры по каждой категории продуктов",
+        "Форма журнала и периодичность внутреннего аудита",
+        "Утверждённая матрица аллергенов и рецептуры"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.food-marking-haccp-checklist",
+          "source_title": "Чек-лист «Маркировка в общепите»",
+          "source_locator": "PDF; 6 pages; raw materials, preparations, boards/knives, cleaning inventory, waste bins, decanted chemicals and delivery packaging",
+          "source_scope": "general_food_service_training_material",
+          "source_date_status": "not stated; current legal applicability not verified",
+          "page_anchors": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Все 6 страниц прочитаны; маркировка сырья и заготовок — стр. 3, инвентарь — стр. 4, уборочный инвентарь/химия/доставка — стр. 5–6."
+        }
+      ],
+      "complexity_assessment": "model_proposed_multi_zone_traceability_and_cross_contamination_control",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
+    },
+    {
+      "id": "proc.storage-compatibility-segregation",
+      "title": "Разделение пищевых продуктов при хранении",
+      "domain": "food_safety_and_hygiene",
+      "domain_id": "food_safety_sanitation",
+      "complexity_level": 3,
+      "complexity_basis": "model_proposed_cross_category_storage_and_contamination_risk",
+      "source_ids": [
+        "source.food-product-adjacency-guide"
+      ],
+      "source_facts": [
+        "Учебная инструкция рекомендует раздельное хранение продуктов по группам: сухие продукты, хлеб, мясные, рыбные, молочно-жировые, гастрономические, овощи и фрукты.",
+        "В источнике перечислены несовместимые сочетания: продукты, отдающие запах, и продукты, впитывающие запах; сырые продукты/полуфабрикаты и готовая продукция; замороженные и охлаждённые продукты; сухие/сыпучие и влажные продукты; пищевые и непищевые продукты.",
+        "Источник описывает хранение сырья разных видов в одной холодильной/морозильной камере на разных полках как вариант при недостаточной мощности для отдельных камер.",
+        "Источник требует хранить продукцию в закрытых контейнерах и гастроёмкостях.",
+        "Источник заявляет исключение для предприятий менее 25 посадочных мест в отношении совместного хранения сырой и готовой продукции; правовая актуальность и применимость этого утверждения не подтверждены."
+      ],
+      "applicability": "Образовательная инструкция HACCP-AUDIT, PDF 2 страницы, дата не указана. Не является официальным нормативным актом. Использовать как перечень рисков для проектирования локальной схемы хранения; не применять заявленное исключение по числу посадочных мест без проверки действующих официальных требований.",
+      "owner": {
+        "role": "Не указан в источнике; назначается организацией",
+        "basis": "Not stated in source",
+        "status": "unknown"
+      },
+      "cadence": {
+        "value": "При размещении/перемещении продукции и проверке складских/холодильных зон",
+        "basis": "Model-proposed workflow trigger",
+        "status": "model_proposed"
+      },
+      "steps": [
+        "Составить перечень фактически хранимых продуктов и разделить их по группам, условиям хранения, состоянию (сырьё/готовая продукция) и аллергенным рискам.",
+        "Разделить сырые продукты и готовую к употреблению продукцию по утверждённой схеме HACCP и планировке; исключение из образовательного источника не использовать без официальной проверки.",
+        "Разделить продукты с выраженным запахом и продукты, впитывающие запахи.",
+        "Разделить замороженные и охлаждённые продукты по требуемым режимам хранения.",
+        "Разделить сухие/сыпучие продукты и влажные продукты.",
+        "Отделить пищевые продукты от непищевых материалов и химических средств.",
+        "Если несколько видов сырья размещаются в одной камере, использовать отдельные полки/зоны и закрытые маркированные контейнеры только при подтверждении допустимости схемы локальным планом HACCP и инструкцией оборудования.",
+        "Проверить целостность упаковки, маркировку, сроки и условия хранения по техкартам и требованиям к конкретной продукции.",
+        "Зафиксировать несовместимое размещение, переместить продукт в допустимую зону и оценить риск загрязнения затронутой продукции."
+      ],
+      "checklist_id": "check.storage-compatibility",
+      "record": {
+        "name": "Схема товарного соседства и чек-лист размещения",
+        "status": "proposed_template",
+        "source_form": "В исходном PDF нет плана зон конкретного объекта или журнала контроля."
+      },
+      "verification": [
+        "Сырые и готовые продукты разделены по утверждённой схеме.",
+        "Продукты с несовместимыми запахами/влагой/температурой не размещены вместе.",
+        "Пищевые и непищевые материалы разделены.",
+        "Продукты находятся в закрытой таре и промаркированы по локальным требованиям.",
+        "Исключения не применены без документированной правовой и HACCP-проверки."
+      ],
+      "stop_conditions": [
+        "Неизвестны условия хранения продукта или совместимость категорий.",
+        "Сырая продукция может контактировать с готовой к употреблению.",
+        "Нет закрытой тары или маркировки для идентификации продукта.",
+        "Предлагается применить исключение «менее 25 посадочных мест» без подтверждения действующей нормы."
+      ],
+      "stop_conditions_basis": "Proposed food-safety guardrails; specialist/legal validation required.",
+      "unspecified": [
+        "Точные температурные режимы и сроки хранения по продуктам",
+        "Схема холодильных камер и полок объекта",
+        "Матрица аллергенов и перекрёстного контакта",
+        "Действующая нормативная применимость заявленного исключения",
+        "Ответственные и форма журнала"
+      ],
+      "source_traceability": [
+        {
+          "source_id": "source.food-product-adjacency-guide",
+          "source_title": "Инструкция «Товарное соседство»",
+          "source_locator": "PDF; 2 pages; storage groups, incompatible combinations, shared cold storage and claimed seating-capacity exception",
+          "source_scope": "general_food_service_training_material",
+          "source_date_status": "not stated; current legal applicability not verified",
+          "page_anchors": [
+            1,
+            2
+          ],
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "anchor_note": "Обе страницы прочитаны; группы и несовместимые сочетания — стр. 1, варианты совместного хранения и заявленное исключение — стр. 2."
+        }
+      ],
+      "complexity_assessment": "model_proposed_cross_category_storage_and_contamination_risk",
+      "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
+      "unknowns_are_blocking": true,
+      "approval_status": "not_approved_for_operational_use",
+      "local_adaptation_required": true
     }
-  ]
+  ],
+  "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
+  "complexity_levels": "L1-L6; task complexity classification, model-proposed",
+  "readiness_policy": "19 source-grounded procedure drafts. Page anchors verified for guest service, selected corporate regulation pages, shift manager procedure, iiko audit, food labelling and product-adjacency guide. Specialist review, local approval and pilot verification remain open."
 }

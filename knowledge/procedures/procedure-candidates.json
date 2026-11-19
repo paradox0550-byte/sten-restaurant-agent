@@ -1,0 +1,657 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Реестр кандидатов процедур по ссылкам из ППК 2026",
+  "purpose": "Backlog самостоятельных процедур, названия которых перечислены в приложении 6 проекта ППК 2026. Это ссылки на документы, а не содержание самих инструкций.",
+  "source_policy": "No source = no fact; a title in a register does not establish procedure content.",
+  "source_id": "source.ppk-establishment-2026-draft",
+  "candidate_count": 16,
+  "items": [
+    {
+      "id": "candidate.haccp-doc-control",
+      "number": 1,
+      "title": "Управление документацией и записями",
+      "domain_id": "audit_internal_control",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-staff-training",
+      "number": 2,
+      "title": "Обучение персонала",
+      "domain_id": "training_development",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-complaints",
+      "number": 3,
+      "title": "Анализ претензий и рекламаций",
+      "domain_id": "complaints_service_recovery",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-emergency",
+      "number": 4,
+      "title": "Действия при чрезвычайных ситуациях",
+      "domain_id": "safety_risk_continuity",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-nonconforming-product",
+      "number": 5,
+      "title": "Управление несоответствующей продукцией",
+      "domain_id": "food_safety_sanitation",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-traceability",
+      "number": 6,
+      "title": "Идентификация и прослеживаемость",
+      "domain_id": "food_safety_sanitation",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-internal-audit",
+      "number": 7,
+      "title": "Внутренние проверки",
+      "domain_id": "audit_internal_control",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-territory",
+      "number": 8,
+      "title": "Требования к содержанию территории",
+      "domain_id": "facilities_equipment",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-storage",
+      "number": 9,
+      "title": "Хранение сырья и готовой продукции",
+      "domain_id": "warehouse_inventory",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-waste",
+      "number": 10,
+      "title": "Порядок сбора и вывоза отходов",
+      "domain_id": "sustainability_and_waste",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-equipment-cleaning",
+      "number": 11,
+      "title": "Очистка и санитарная обработка оборудования",
+      "domain_id": "food_safety_sanitation",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-equipment-maintenance",
+      "number": 12,
+      "title": "Техническое обслуживание оборудования",
+      "domain_id": "facilities_equipment",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-supplier-selection",
+      "number": 13,
+      "title": "Выбор поставщиков сырья",
+      "domain_id": "procurement_suppliers",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-incoming-control",
+      "number": 14,
+      "title": "Входной контроль",
+      "domain_id": "procurement_suppliers",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-premises-cleaning",
+      "number": 15,
+      "title": "Уборка помещений",
+      "domain_id": "food_safety_sanitation",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    },
+    {
+      "id": "candidate.haccp-staff-hygiene",
+      "number": 16,
+      "title": "Соблюдение санитарно-гигиенических норм персоналом",
+      "domain_id": "food_safety_sanitation",
+      "source_ids": [
+        "source.ppk-establishment-2026-draft"
+      ],
+      "source_anchor": {
+        "source_id": "source.ppk-establishment-2026-draft",
+        "page_anchors": [
+          13,
+          14
+        ],
+        "anchor_status": "title_listed_in_ppk_appendix_6_original_instruction_not_recovered"
+      },
+      "candidate_status": "source_reference_only_original_instruction_not_recovered",
+      "complexity_level": null,
+      "complexity_status": "unknown_until_original_instruction_review",
+      "procedure_card_created": false,
+      "source_facts": [
+        "Наименование включено в реестр 16 рабочих инструкций приложения 6 последней найденной 14-страничной редакции ППК 2026."
+      ],
+      "not_established": [
+        "Содержание исходной инструкции",
+        "Текущая утверждённая версия",
+        "Область применения на объекте",
+        "Ответственные и замещающие роли",
+        "Пошаговый порядок",
+        "Формы записей и критерии приёмки",
+        "Критические пределы/частота/эскалации"
+      ],
+      "required_next_evidence": [
+        "Оригинальная инструкция указанного кода",
+        "Титульный лист с владельцем, версией, датой и подтверждением утверждения",
+        "Все формы/журналы/приложения, на которые ссылается инструкция",
+        "Подтверждение фактической применимости к объекту и операциям"
+      ],
+      "promotion_rule": "Не создавать SOP и не присваивать уровень сложности до получения и проверки оригинальной инструкции."
+    }
+  ],
+  "limitations": [
+    "Источник — проект ППК, не утверждённая программа.",
+    "Индивидуальные инструкции И-1—И-16 не подтверждены как полученные/актуальные в данном source package.",
+    "Не выводить из названия шаги, роли, периодичность, температуры, сроки или полномочия.",
+    "Кандидаты относятся к конкретному объекту и применяются только после проверки фактических процессов и утверждения.",
+    "Последняя найденная редакция ППК — 14 страниц; подпись и дата утверждения на титуле пустые. Перечень И-1—И-16 сам по себе не доказывает, что индивидуальные инструкции приложены или утверждены."
+  ]
+}

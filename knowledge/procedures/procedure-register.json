@@ -1,0 +1,1449 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Иерархический реестр процедур ресторана по 36 направлениям управления",
+  "purpose": "Разделить библиотеку на уровни сложности и декомпозировать функциональные направления в самостоятельные процессы, процедуры, рабочие инструкции, чек-листы и записи.",
+  "policy": {
+    "hierarchy": "Домен → процесс → процедура → рабочая инструкция/чек-лист → запись/доказательство. Управленческие методики задают правила принятия решений над несколькими процессами, но не заменяют их.",
+    "complexity": "L1–L6 описывают сложность конкретной задачи/процедуры, а не должностной ранг и не качество готовности.",
+    "evidence": "Уровень сложности — предварительная аналитическая классификация. Источник подтверждает только название/иерархию исходного каталога; он не подтверждает готовность SOP.",
+    "decomposition": "Один пункт каталога может распадаться на несколько процедур. Делить, если различаются триггер, исполнитель/владелец, вход, результат, запись, риск или критерий приёмки. Не делить один процесс на искусственные микрошаги без самостоятельного результата.",
+    "readiness": "Inventory-only → source-mapped → procedure-drafted → specialist-reviewed → pilot-verified → approved-local. Не повышать статус за счёт наличия файла или зелёного CI.",
+    "domain_map": "Каждый исходный процесс получает одно предварительное основное направление из канонической карты 36 направлений; назначение является модельной классификацией и требует подтверждения по содержанию исходного листа."
+  },
+  "levels": [
+    {
+      "level": 1,
+      "code": "L1_EXECUTION",
+      "name": "Исполнительская операция",
+      "complexity": "Низкая",
+      "definition": "Одна роль, короткая линейная задача, низкий риск, немедленная проверка результата.",
+      "requiredEvidence": "Факт выполнения и простая запись, если предусмотрена источником."
+    },
+    {
+      "level": 2,
+      "code": "L2_STANDARD_PROCEDURE",
+      "name": "Стандартная процедура",
+      "complexity": "Умеренная",
+      "definition": "Одна функция или зона, несколько шагов, критерии качества, исключения и передача результата.",
+      "requiredEvidence": "Входы, шаги, критерии приёмки, результат и запись."
+    },
+    {
+      "level": 3,
+      "code": "L3_COORDINATED_PROCESS",
+      "name": "Координируемый процесс",
+      "complexity": "Повышенная",
+      "definition": "Несколько ролей, зон или систем, hand-off, зависимости, промежуточные статусы и сверки.",
+      "requiredEvidence": "Ответственность этапов, hand-off, статусы, сверки и закрытие."
+    },
+    {
+      "level": 4,
+      "code": "L4_SPECIALIST_CONTROL",
+      "name": "Специализированный контроль",
+      "complexity": "Высокая",
+      "definition": "Финансовые, кадровые, учётные, технические, пищевые или юридически значимые решения со специальными знаниями и строгими доказательствами.",
+      "requiredEvidence": "Первичные документы, версия правил, формула/критерий, стоп-условия и экспертная проверка."
+    },
+    {
+      "level": 5,
+      "code": "L5_MANAGEMENT_SYSTEM",
+      "name": "Управленческая система",
+      "complexity": "Системная",
+      "definition": "Межфункциональное или многопериодное управление ресурсами, бюджетом, полномочиями, рисками и эффектом.",
+      "requiredEvidence": "Сводные данные, сценарии, полномочия, решение и проверка эффекта."
+    },
+    {
+      "level": 6,
+      "code": "L6_STRATEGIC_PORTFOLIO",
+      "name": "Стратегия и портфель бизнеса",
+      "complexity": "Стратегическая",
+      "definition": "Решения на уровне собственника/группы: инвестиционный портфель, макроэкономические сценарии, выбор рынков и форматов, M&A, масштабирование и перераспределение капитала.",
+      "requiredEvidence": "Проверенные рыночные данные, инвестиционная модель, сценарии, риски, альтернативы, решение и постинвестиционная оценка."
+    }
+  ],
+  "domains": [
+    {
+      "id": "strategy_business_model",
+      "name": "Стратегия и бизнес-модель",
+      "description": "Цели, позиционирование, формат, конкурентные преимущества, модель доходности.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "market_macroeconomics",
+      "name": "Рынок и макроэкономика",
+      "description": "Спрос, покупательная способность, инфляция, ставки, занятость, туризм, сезонность, внешние риски.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "concept_product_identity",
+      "name": "Концепция и продуктовая идентичность",
+      "description": "Идея ресторана, формат, кухня, ценностное предложение, аудитория.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "location_real_estate",
+      "name": "Локация и коммерческая недвижимость",
+      "description": "Трафик, окружение, помещение, аренда, инженерные ограничения, инвестиционная оценка.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "brand_reputation",
+      "name": "Бренд и репутация",
+      "description": "Идентичность, позиционирование, узнаваемость, репутация, публичные коммуникации.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "investment_opening_scaling",
+      "name": "Инвестиции, открытие и масштабирование",
+      "description": "Бизнес-планы, CAPEX, окупаемость, новые проекты, франчайзинг, закрытие и перезапуск.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "guest_psychology",
+      "name": "Психология гостя и потребительское поведение",
+      "description": "Мотивация, ожидания, восприятие ценности, привычки, сегментация.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "guest_journey_hospitality",
+      "name": "Гостевой путь и гостеприимство",
+      "description": "Впечатление от посещения, эмоциональный опыт, забота, персонализация.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "service_standards",
+      "name": "Сервис и стандарты обслуживания",
+      "description": "Встреча, бронирование, обслуживание, расчёт, обратная связь.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "complaints_service_recovery",
+      "name": "Жалобы и восстановление сервиса",
+      "description": "Конфликты, возвраты, компенсации, претензии, предотвращение повторов.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "sales_revenue_management",
+      "name": "Продажи и управление доходностью",
+      "description": "Средний чек, конверсия, загрузка, допродажи, ценообразование.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "marketing_pr_loyalty",
+      "name": "Маркетинг, PR и лояльность",
+      "description": "Продвижение, CRM, повторные визиты, репутационный маркетинг, программы лояльности.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "menu_product_strategy",
+      "name": "Меню и продуктовая стратегия",
+      "description": "Структура меню, ассортимент, сезонность, гастрономическая концепция.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "menu_engineering_pricing",
+      "name": "Меню-инжиниринг и ценообразование",
+      "description": "ABC-анализ, маржинальность, популярность, матрица блюд, корректировка цен.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "kitchen_production",
+      "name": "Кухня и производственные процессы",
+      "description": "Приготовление, технологические карты, нормы, организация рабочих станций.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "bar_beverage",
+      "name": "Бары и напитки",
+      "description": "Алкогольная и безалкогольная карта, рецептуры, себестоимость, барные процессы.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "product_quality_standardization",
+      "name": "Качество и стандартизация продукта",
+      "description": "Органолептика, внешний вид, стабильность, контроль выдачи.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "production_planning_waste",
+      "name": "Производственное планирование и потери",
+      "description": "Заготовки, прогнозирование потребности, списания, отходы, производительность.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "shift_daily_operations",
+      "name": "Управление сменой и ежедневная деятельность",
+      "description": "Открытие, закрытие, передача смены, готовность зон, контроль исполнения.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "hall_guest_areas",
+      "name": "Управление залом и гостевыми зонами",
+      "description": "Готовность залов, посадка, бронирования, очереди, обслуживание.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "procurement_suppliers",
+      "name": "Закупки и поставщики",
+      "description": "Выбор поставщиков, условия, цены, договоры, контроль качества поставок.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "warehouse_inventory",
+      "name": "Склад и товарный учёт",
+      "description": "Приёмка, хранение, инвентаризация, перемещения, списания, остатки.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "logistics_delivery_channels",
+      "name": "Логистика и движение продукции",
+      "description": "Внутренние перемещения, доставка, упаковка, каналы заказов.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "facilities_equipment",
+      "name": "Оборудование, эксплуатация и инфраструктура",
+      "description": "Техническое состояние, ремонты, инженерные системы, обслуживание помещений.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "finance_management_accounting",
+      "name": "Финансы и управленческий учёт",
+      "description": "P&L, ДДС, баланс, EBITDA, прибыльность, финансовая дисциплина.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "budgeting_financial_planning",
+      "name": "Бюджетирование и финансовое планирование",
+      "description": "Бюджеты, прогнозы, план-факт, сценарии, денежные потоки.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "cost_control",
+      "name": "Себестоимость и управление затратами",
+      "description": "Food Cost, Labor Cost, Prime Cost, OPEX, потери, эффективность расходов.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "hr_personnel",
+      "name": "Персонал и кадровое управление",
+      "description": "Штатная структура, подбор, адаптация, кадровое администрирование, удержание.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "team_psychology_leadership",
+      "name": "Психология команды, лидерство и мотивация",
+      "description": "Культура, конфликты, эмоциональный интеллект, делегирование, развитие руководителей.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "labor_planning_payroll",
+      "name": "Планирование труда и оплата",
+      "description": "Графики, ФОТ, производительность, нормы времени, начисления, мотивационные схемы.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "training_development",
+      "name": "Обучение и профессиональное развитие",
+      "description": "Обучение должностям, аттестация, наставничество, кадровый резерв.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "food_safety_sanitation",
+      "name": "Пищевая безопасность и санитария",
+      "description": "HACCP, санитарные процедуры, температурные режимы, прослеживаемость, аллергены.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "law_licensing_compliance",
+      "name": "Право, лицензии и нормативное соответствие",
+      "description": "Трудовое, налоговое, санитарное, алкогольное и потребительское законодательство.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "safety_risk_continuity",
+      "name": "Безопасность и управление рисками",
+      "description": "Охрана труда, пожарная безопасность, безопасность гостей, инциденты, кризисные сценарии.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "digital_systems_analytics",
+      "name": "Цифровые системы и аналитика",
+      "description": "POS, iiko, учётные системы, BI, автоматизация, интеграции, качество данных.",
+      "classification": "model_defined_management_domain"
+    },
+    {
+      "id": "audit_internal_control",
+      "name": "Аудит, внутренний контроль и улучшение",
+      "description": "Проверки, отклонения, корректирующие действия, контроль исполнения, отчётность.",
+      "classification": "model_defined_management_domain"
+    }
+  ],
+  "source_catalog": {
+    "source_id": "source.audit-process-model",
+    "source_sheet": "БМ",
+    "process_count": 77,
+    "items": [
+      {
+        "process_id": "horeca.a.1-1",
+        "source_code": "1.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Контроль качества",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.1-2",
+        "source_code": "1.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Просмотр видеонаблюдения ресторана",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.1-3",
+        "source_code": "1.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация программы тайный гость",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.1-4",
+        "source_code": "1.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Предоставление отчета по МБП",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-1",
+        "source_code": "2.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Подбор персонала",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-2",
+        "source_code": "2.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Обучение линейных сотрудников, включая правила площадки",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-3",
+        "source_code": "2.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Аттестация линейных сотрудников",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-4",
+        "source_code": "2.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Составление графика выхода сотрудников",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-5",
+        "source_code": "2.5",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация мотивационной программы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-6",
+        "source_code": "2.6",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация программ корпоративной культуры",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-7",
+        "source_code": "2.7",
+        "area": "Управленческие процессы",
+        "functional_direction": "Реализация дисциплинарной политики",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.2-8",
+        "source_code": "2.8",
+        "area": "Управленческие процессы",
+        "functional_direction": "Проведение собраний с сотрудниками",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.3-1",
+        "source_code": "3.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Контроль себестоимости продукции и Food Cost",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "cost_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.3-2",
+        "source_code": "3.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Ведение отчета по кассе",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.3-3",
+        "source_code": "3.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Формирование управленческого отчета ресторана",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.4-1",
+        "source_code": "4.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Подготовка ежемесячных бюджетов и KPI",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.4-2",
+        "source_code": "4.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Управление рентабельностью предприятия",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.4-3",
+        "source_code": "4.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Управление средним чеком и показателями продаж",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "sales_revenue_management",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.5-1",
+        "source_code": "5.1",
+        "area": "Управленческие процессы",
+        "functional_direction": "Проведение рекламных кампаний и конкурсов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "marketing_pr_loyalty",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.5-2",
+        "source_code": "5.2",
+        "area": "Управленческие процессы",
+        "functional_direction": "Продвижение в социальных сетях",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "marketing_pr_loyalty",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.5-3",
+        "source_code": "5.3",
+        "area": "Управленческие процессы",
+        "functional_direction": "Работа с обратной связью гостей",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "marketing_pr_loyalty",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.a.5-4",
+        "source_code": "5.4",
+        "area": "Управленческие процессы",
+        "functional_direction": "Запуск сезонных специалитетов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "menu_product_strategy",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.b.1-1",
+        "source_code": "1.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Приготовление блюд в ресторане",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "kitchen_production",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.b.2-1",
+        "source_code": "2.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа продукции в ресторане",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "sales_revenue_management",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.b.3-1",
+        "source_code": "3.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа продукции через агрегаторы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "logistics_delivery_channels",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.b.3-2",
+        "source_code": "3.2",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Продажа через собственные каналы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "logistics_delivery_channels",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.b.4-1",
+        "source_code": "4.1",
+        "area": "Основные бизнес-процессы",
+        "functional_direction": "Оплата обязательных платежей арендодателю и отчет по товарообороту",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-1",
+        "source_code": "1.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение запасов сырья",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "warehouse_inventory",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-2",
+        "source_code": "1.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Приготовление полуфабрикатов",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "kitchen_production",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-3",
+        "source_code": "1.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение запасов расходных материалов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "warehouse_inventory",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-4",
+        "source_code": "1.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Плановое обслуживание оборудования",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "facilities_equipment",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-5",
+        "source_code": "1.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Ремонт оборудования",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "facilities_equipment",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.1-6",
+        "source_code": "1.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Плановое обновление меню",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "menu_product_strategy",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-1",
+        "source_code": "2.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Внесение первичных документов в учетную систему",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-2",
+        "source_code": "2.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оплата счетов ресторана",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-3",
+        "source_code": "2.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Сверка взаиморасчетов с контрагентами",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-4",
+        "source_code": "2.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Проведение инвентаризации",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "warehouse_inventory",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-5",
+        "source_code": "2.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Списание продукции",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "warehouse_inventory",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-6",
+        "source_code": "2.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Корректировка или аннулирование кассовых чеков",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-7",
+        "source_code": "2.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Начисление и выплата официальной части заработной платы",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-8",
+        "source_code": "2.8",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Расчет и выплата заработной платы",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "labor_planning_payroll",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-9",
+        "source_code": "2.9",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Разнесение и проверка данных бухгалтерского учета",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-10",
+        "source_code": "2.10",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка годовой отчетности государственным органам",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-11",
+        "source_code": "2.11",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка квартальной налоговой отчетности",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-12",
+        "source_code": "2.12",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Подготовка периодической отчетности по персоналу",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-13",
+        "source_code": "2.13",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Расчет и уплата налогов",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-14",
+        "source_code": "2.14",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Формирование и передача первичной документации",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-15",
+        "source_code": "2.15",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление авансовых отчетов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-16",
+        "source_code": "2.16",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Хранение архивных документов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-17",
+        "source_code": "2.17",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Учет основных средств и товарно-материальных ценностей",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-18",
+        "source_code": "2.18",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Привлечение заемного финансирования и лизинга",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-19",
+        "source_code": "2.19",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Ведение кассовых книг и кассовых регистров",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.2-20",
+        "source_code": "2.20",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Учет рабочего времени",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "labor_planning_payroll",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-1",
+        "source_code": "3.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Открытие смены администратором",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "shift_daily_operations",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-2",
+        "source_code": "3.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Открытие смены старшим поваром",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "shift_daily_operations",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-3",
+        "source_code": "3.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Закрытие смены старшим поваром",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "shift_daily_operations",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-4",
+        "source_code": "3.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Закрытие смены администратором",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "shift_daily_operations",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-5",
+        "source_code": "3.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль внешнего вида и униформы",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-6",
+        "source_code": "3.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обеспечение сотрудников униформой",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "hr_personnel",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.3-7",
+        "source_code": "3.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Допуск подрядчиков к ремонтным работам",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "facilities_equipment",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-1",
+        "source_code": "4.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Генеральная уборка",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "food_safety_sanitation",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-2",
+        "source_code": "4.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль состояния и замена фритюрного масла",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "facilities_equipment",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-3",
+        "source_code": "4.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль температур и ведение записей",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "food_safety_sanitation",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-4",
+        "source_code": "4.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль состояния здоровья персонала",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "food_safety_sanitation",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-5",
+        "source_code": "4.5",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Отбор и передача смывов и проб",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "food_safety_sanitation",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-6",
+        "source_code": "4.6",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Дезинфекция и борьба с вредителями",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "food_safety_sanitation",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-7",
+        "source_code": "4.7",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Прослеживаемость и электронный ветеринарный документооборот",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "audit_internal_control",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-8",
+        "source_code": "4.8",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Регистрация чрезвычайных ситуаций и инцидентов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "safety_risk_continuity",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-9",
+        "source_code": "4.9",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Контроль обязательных медицинских документов персонала",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.4-10",
+        "source_code": "4.10",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Охрана труда и пожарная безопасность",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "safety_risk_continuity",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.5-1",
+        "source_code": "5.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Хранение учредительных и корпоративных документов",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.5-2",
+        "source_code": "5.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Заключение и сопровождение договоров",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.5-3",
+        "source_code": "5.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Обслуживание фискального оборудования и накопителей",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "finance_management_accounting",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.5-4",
+        "source_code": "5.4",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Претензионная работа по некачественным товарам и услугам",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "procurement_suppliers",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.6-1",
+        "source_code": "6.1",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление приема на работу",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.6-2",
+        "source_code": "6.2",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Оформление прекращения трудовых отношений",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      },
+      {
+        "process_id": "horeca.c.6-3",
+        "source_code": "6.3",
+        "area": "Поддерживающие бизнес-процессы",
+        "functional_direction": "Документальное сопровождение кадровых событий",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_direction_and_risk_pending_process_detail_review",
+        "source_maturity": "inventory_only",
+        "procedure_status": "not_yet_decomposed_or_expert_approved",
+        "note": "Предварительная классификация по названию направления; требует сверки с исходной строкой/листом и экспертной проверки. Не является SOP.",
+        "domain_id": "law_licensing_compliance",
+        "domain_assignment": "model_proposed_from_source_direction_title_pending_source_row_review"
+      }
+    ]
+  },
+  "existing_procedure_cards": {
+    "file": "knowledge/procedures/operational-procedures.json",
+    "count": 19,
+    "items": [
+      {
+        "procedure_id": "proc.shift-readiness-and-briefing",
+        "domain_id": "operations_and_shift_control",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.guest-journey-and-order",
+        "domain_id": "service_standards",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.service-delivery-and-delay",
+        "domain_id": "guest_journey_hospitality",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.bill-and-payment",
+        "domain_id": "accounting_tax_and_controls",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.guest-complaint-recovery",
+        "domain_id": "complaints_service_recovery",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.appearance-readiness",
+        "domain_id": "hr_personnel",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.director-operating-control",
+        "domain_id": "strategy_business_model",
+        "complexity_level": 5,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.front-of-house-visual-walk",
+        "domain_id": "hall_guest_areas",
+        "complexity_level": 2,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.monthly-stocktake",
+        "domain_id": "warehouse_inventory",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.monthly-sanitation-deep-clean",
+        "domain_id": "food_safety_sanitation",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.staff-schedule-and-timekeeping",
+        "domain_id": "labor_planning_payroll",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.delivery-order-control",
+        "domain_id": "logistics_delivery_channels",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.fryer-oil-management",
+        "domain_id": "kitchen_and_production",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_food_process_equipment_and_safety_risk",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-opening-readiness",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_cross_zone_readiness",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-control",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_shift_coordination",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-closing",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_cash_stock_equipment_close",
+        "source_maturity": "procedure_draft_source_locator_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.iiko-stock-accounting-audit",
+        "domain_id": "accounting_tax_and_controls",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_accounting_system_audit_scope_and_financial_control_risk",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.food-product-and-equipment-labelling",
+        "domain_id": "food_safety_sanitation",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_zone_traceability_and_cross_contamination_control",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.storage-compatibility-segregation",
+        "domain_id": "food_safety_sanitation",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_cross_category_storage_and_contamination_risk",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      }
+    ],
+    "note": "19 source-grounded drafts have canonical domain IDs, provisional task complexity, source locators/page anchors where verified, explicit stop conditions, checklist links and approval gates. Specialist review, local approval and pilots remain open."
+  },
+  "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
+}

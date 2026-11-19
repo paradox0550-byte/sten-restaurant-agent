@@ -37,3 +37,14 @@ test("multi-hop cases include expected paths and unsupported-claim guardrails", 
     assert.ok(item.must_not_claim.length > 0);
   }
 });
+
+test("77-direction catalog is explicitly an inventory, never misrepresented as 77 validated SOPs", () => {
+  const data = read("../knowledge/procedures/horeca-operational-process-catalog.json");
+  assert.equal(data.processes.length, 77);
+  assert.equal(new Set(data.processes.map((item) => item.id)).size, 77);
+  for (const process of data.processes) {
+    assert.equal(process.content_maturity, "inventory_only");
+    assert.equal(process.quality_status, "catalog_only_source_mapping_and_specialist_validation_open");
+    assert.match(process.methodology_notice, /не использовать как готовую инструкцию\/SOP/i);
+  }
+});
