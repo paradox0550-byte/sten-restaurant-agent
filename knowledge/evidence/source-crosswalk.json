@@ -396,19 +396,19 @@
     },
     {
       "source_id": "source.ppk-establishment-2026-draft",
-      "title": "Программа производственного контроля ресторана — проект 2026",
+      "title": "Программа производственного контроля ресторана — редакция 2026 (утверждение не подтверждено)",
       "source_type": "user_supplied_production_control_program_draft",
       "scope": "single_establishment_draft",
-      "date_status": "Document identifies itself as a 2026 draft; approval date and authorized signature are blank.",
-      "locator": "DOCX; 12 pages; PPK overview, establishment profile, HACCP framework, production-control measures, proposed laboratory programme, preliminary CCP table and register of 16 referenced work instructions.",
+      "date_status": "Document identifies itself as a 2026 edition; approval signature/date on title page are blank and approval status is unconfirmed.",
+      "locator": "DOCX; 14 pages; establishment profile, HACCP framework, production-control measures, six preliminary CCPs with responsible role and per-batch monitoring, proposed laboratory programme, register of 16 referenced work instructions.",
       "limitations": [
-        "Project document explicitly remains a draft pending closure of its approval checklist.",
-        "Six CCP entries are preliminary and require hazard-analysis confirmation and completed limits/monitoring/owners/corrective actions.",
+        "Latest located 14-page version; signature/date blank, approval unconfirmed.",
+        "Six CCPs have named responsibility and per-batch monitoring, but numeric critical limits depend on approved technological cards and HACCP worksheets.",
         "Proposed laboratory intervals are not universal statutory requirements.",
-        "Referenced 16 working instructions are not proven available or approved by this file alone.",
-        "Legal citations require independent official-source verification; no compliance conclusion is made."
+        "Legal citations require independent official-source verification.",
+        "16 referenced instructions are not individually recovered or approved."
       ],
-      "source_anchor_status": "recovered_full_text_reopened_draft_review_open",
+      "source_anchor_status": "recovered_full_text_14_page_version_reopened_approval_unconfirmed",
       "evidence_record_ids": [
         "practice.ppk-establishment-2026-draft"
       ],
@@ -416,11 +416,11 @@
       "procedure_ids": [],
       "linkage_status": "evidence_linked",
       "original_source_file": {
-        "name": "ППК_ООО_Фрианд_2026_финальная_редакция_исправлено.docx",
+        "name": "ППК_ООО_Фрианд_2026_итог_ответственный_гендиректор.docx",
         "format": "DOCX",
-        "pages": 12,
-        "anchor": "Pages 1–12 inspected; page 12 contains explicit draft status and pre-approval closure checklist.",
-        "status": "recovered_full_text_reopened"
+        "pages": 14,
+        "anchor": "Pages 1–2 object profile and responsible role; pages 11–12 preliminary CCPs; pages 13–14 register of 16 instructions and current-control process. Signature/date on page 1 blank.",
+        "status": "recovered_full_text_reopened_approval_unconfirmed"
       },
       "original_source_recovered": true
     }
