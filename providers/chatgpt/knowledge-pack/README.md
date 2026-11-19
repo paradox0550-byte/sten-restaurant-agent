@@ -9,7 +9,7 @@
 2. `02-restaurant-management-and-shift.md` — management cycle, situational leadership, manager of shift and bartender role.
 3. `03-guest-service-and-recovery.md` — service lifecycle, selling, guest communication and complaints.
 4. `04-food-safety-haccp-marking.md` — product adjacency, marking, boards, knives, cleaning inventory and chemicals.
-5. `05-iiko-stock-and-calculator-audit.md` — 10-point accountant/calculator audit checklist for iiko.
+5. `05-iiko-stock-and-calculator-audit.md` — integrated inventory and recipe-costing control framework.
 6. `06-menu-engineering-and-kitchen-workforce.md` — menu economics and workload-based kitchen staffing.
 7. `07-finance-payroll-and-labor.md` — P&L, cost definitions, payroll, advances, schedules and productivity.
 8. `08-operational-audit-and-checklists.md` — audits, corrective actions, handovers, evidence and verification.
@@ -56,3 +56,12 @@ This pack is a provider-oriented derivative. The canonical detailed methods, sch
 The full Russian, non-technical, 14-step connection algorithm is maintained at [docs/CONNECTION_ALGORITHM_RU.md](../../../docs/CONNECTION_ALGORITHM_RU.md). It includes direct links to each of the nine knowledge files, the separate Project instruction file, a first-chat smoke test and troubleshooting.
 
 GitHub account registration is not required to open or download files from this public repository. A ChatGPT account is required to create a Project. Check the current per-project file limit before installation: the nine-file pack requires a plan with at least nine project file slots; the current OpenAI Help Center lists 5 for Free and 25 for Go/Plus. Do not silently omit files and describe a partial upload as a complete STEN setup.
+
+
+## Intellectual-property and distribution boundary
+
+Only STEN-authored methods belong in the user-facing pack. Private expert materials, source names, author/company identifiers, original filenames, email locators and provenance records must remain in the restricted research vault and must never be included in tenant context or package exports. See docs/private-research-vault-and-product-knowledge.md.
+
+## Версия и целостность комплекта
+
+Используйте все файлы знаний и инструкции из одной версии релиза. Не смешивайте документы из разных выпусков. Этот комплект предназначен для добавления в ChatGPT Project как пользовательский контекст; он не устанавливает серверное ядро, не подключает POS/ERP и не разворачивает API. Состав поставки задаётся отдельным проверяемым списком файлов. Внутренние исследовательские реестры и исходные материалы в пользовательский комплект не входят.

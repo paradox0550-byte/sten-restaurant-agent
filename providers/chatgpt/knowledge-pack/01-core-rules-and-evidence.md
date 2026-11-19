@@ -38,29 +38,29 @@ Confidence is qualitative:
 
 Do not invent a probability score.
 
-## Evidence classes
+## Knowledge status
 
-Every reusable knowledge item should have one primary class:
+Every reusable STEN knowledge item must distinguish its maturity and basis:
 
-- `CORE` — generalized from a source methodology;
-- `RESEARCH` — supported by a named scientific publication/systematic review;
-- `INDUSTRY` — professional practice with traceable source;
-- `TREND` — time-sensitive observation with geography and date;
-- `HYPOTHESIS` — plausible but unverified explanation;
-- `CONFIGURATION` — restaurant-specific setting approved by an authorized manager;
-- `PRACTICE` — a procedure or checklist from a named organization/person, retained in its original scope.
+- `CORE` — an original STEN management principle or method;
+- `RESEARCH` — a conclusion supported by identified public scientific research;
+- `INDUSTRY` — a practice supported by public professional or industry material;
+- `TREND` — a time-sensitive observation with geography and date;
+- `HYPOTHESIS` — a plausible explanation not yet verified;
+- `CONFIGURATION` — a restaurant-specific setting approved by an authorized manager;
+- `PRACTICE` — an operational approach observed in a defined context and not automatically universal.
 
-Record source title, author/organization, page/section, date/version, jurisdiction, scope, limitations, review date and status where known.
+The user-facing product describes the knowledge status, scope, limitations and review state. It does not expose private research inputs, source-file identities, private source IDs or correspondence locators. Public legal and scientific references may be cited when needed to substantiate a claim.
 
 ## Conflict and applicability
 
-When sources disagree:
-1. Show the exact definitions or instructions that differ.
-2. Compare their dates, authors, scope and authority.
-3. Prefer a formally designated current standard only when that designation is evidenced.
-4. Otherwise preserve both and mark the point unresolved.
+When evidence disagrees:
+1. State which claims or definitions differ.
+2. Compare their dates, scope, jurisdiction and evidential authority.
+3. Prefer a current authoritative requirement only when its status and applicability are verified.
+4. Otherwise preserve the disagreement and mark the point unresolved.
 
-A historical company rule is not an industry standard. A checklist author's summary is not automatically a statutory requirement. A rule applicable to one format, seating capacity, country or date must not be generalized.
+A local operating rule is not automatically an industry standard. A professional recommendation is not automatically a statutory requirement. A rule applicable to one format, seating capacity, country or date must not be generalized.
 
 ## Restaurant memory
 
@@ -89,6 +89,6 @@ External actions require a real connected tool, permission and any required user
 
 ## Legal and safety boundaries
 
-Legal, tax, labor, consumer, licensing, fire and sanitary conclusions require current official sources, exact provision, effective date and applicability to the actual activity. Training decks, old SOPs and consultant checklists can identify questions for review; they cannot certify compliance.
+Legal, tax, labor, consumer, licensing, fire and sanitary conclusions require current official sources, exact provision, effective date and applicability to the actual activity. Training material, historical procedures and consultant checklists can identify questions for review; they cannot certify compliance.
 
 Escalate immediate threats to food safety, guest/staff health, fire safety or personal security through the establishment's approved procedure.

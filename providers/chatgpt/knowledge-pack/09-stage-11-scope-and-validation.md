@@ -1,108 +1,75 @@
-# STEN Stage 11 — Expanded Restaurant Operating Knowledge and Validation
+# STEN — Product Knowledge Scope and Quality Gates
 
-## 1. Stage 11 scope
+## Product identity
 
-Stage 11 develops the restaurant-domain knowledge and specialist workflows. Existing repository components include:
-- restaurant taxonomy, profile and source catalog;
-- 77 functional directions in the PRACTICE process catalog;
-- 12 curated detailed operational procedures;
-- operational knowledge graph;
-- finance, labor, menu and service methods;
-- deterministic menu and labor calculation primitives;
-- kitchen staffing by station and interval;
-- menu engineering workflow.
+STEN is an independently developed restaurant-management intelligence system. It is not a document library, a repackaging of third-party manuals, or a generic chatbot with restaurant prompts. Its product value is the original synthesis of restaurant operating experience, domain research, decision logic, deterministic calculations, establishment context and verified feedback.
 
-The 77 functional directions are not 77 independently validated SOPs. The current validation report records 15 distinct operation sequences reused across the 77 directions; generic sequences recur heavily. The 12 detailed procedures include some inferred, historical, partial or unknown role/cadence values.
+## What belongs in the user-facing knowledge pack
 
-## 2. New source expansion in this pack
+The user-facing pack contains only:
+- STEN-authored professional explanations and methods;
+- reusable operating models expressed in original language;
+- decision rules and calculations whose definitions and limitations are explicit;
+- adaptable procedures that have passed the required review gates;
+- clear applicability boundaries, unknowns and safety stop conditions.
 
-Eight user-supplied materials were reviewed:
+It must not contain:
+- private source filenames, titles, authors, organizations, correspondence subjects or source-specific labels;
+- raw excerpts, distinctive phrasing, copied tables or copied checklists from confidential or third-party materials;
+- internal source IDs, correspondence IDs, private file paths, research-vault locators or private provenance notes;
+- one customer's operational details, figures, schedules, staff names, suppliers, venue names or configuration in another tenant's context.
 
-1. *Инструкция «Товарное соседство»* — Olga Ogarkova / HACCP-AUDIT, 2 pages.
-2. *Чек-лист «Маркировка в общепите»* — Olga Ogarkova / HACCP-AUDIT, 6 pages.
-3. *Чек-лист проверки калькулятора* — @av.buravtsova / Anastasia Buravtsova, 13 pages.
-4. *Стандарт качества обслуживания гостей* — A.S. Dumrauf, 2025, 43 pages, scoped in the source to «Азиатский квартал» and «#Farш» and marked confidential.
-5. *Система операционного управления. Управленческая эффективность* — 20-slide training deck.
-6. *ОР Управляющий смены.docx* — 4 pages, historical role procedure for ТРАТТОРИЯ.
-7. *Организация работ бармена.doc* — 6 pages, historical club/bar operating procedure.
-8. *Искусство сервиса в ресторане Casual Dining* — supplied copy contains a cover and short outline only; no chapter-level content was available.
+## Research and product separation
 
-## 3. Domains expanded
+Original research inputs and their traceability records belong in a separately access-controlled research environment. They are not part of tenant retrieval, prompt context, user exports, generated procedures or downloadable product packages.
 
-- operational management functions, leadership styles, situational management, task-specific work maturity and GROW coaching;
-- shift manager responsibilities across opening, service and closing;
-- bartender role procedure, workstation, stock, service, cleaning and handover;
-- waiter guest-service lifecycle, sales stages, order accuracy, bill, farewell and complaint handling;
-- food storage separation, product adjacency and marking;
-- board/knife identification, cleaning inventory, waste and decanted chemical containers;
-- 10-section iiko accountant-calculator audit checklist;
-- link between menu economics, production routing and kitchen staffing.
+A public source repository is not a private vault. Excluding a file from a release archive does not make that file private if it remains accessible in a public repository or its history. Confidential source material must not be committed to a public repository. Access to customer-specific operational records and manager preferences must remain tenant-isolated.
 
-The source-specific details and cautions are in knowledge-pack files 02–08.
+## Method synthesis standard
 
-## 4. Important applicability boundaries
+Every new STEN method must be independently authored:
+1. Define the operating problem, intended result, constraints and measurable outcome.
+2. Separate confirmed expert experience from hypotheses, local rules and external claims.
+3. Research relevant international practice and current authoritative standards where appropriate.
+4. Compare approaches and test their relevance to restaurant formats, scale, jurisdiction and operating conditions.
+5. Build an original STEN model: objective, inputs, sequence, decision logic, roles, records, metrics, exceptions, failure response and review cycle.
+6. Verify calculations and deterministic rules with test cases.
+7. Record limitations and unresolved questions without filling gaps by invention.
+8. Run specialist review and, where operationally material, a controlled site pilot.
+9. Publish only the approved STEN-authored formulation. Keep confidential research records outside the public product repository.
 
-- Historical opening/closing times, staffing arrangements, 23:00/23:59 document timestamps, two-minute bartender target, and local cash/document procedures are not universal norms.
-- The iiko checklist depends on current system version, document configuration, warehouse structure and approved accounting policy.
-- The HACCP-AUDIT PDFs contain claims about a seating-capacity exception and historical fine amounts. Neither is accepted here as current legal permission or current penalty.
-- The 2025 guest standard is internal and restaurant-specific. Do not expose or generalize it as a public industry standard.
-- The bartender SOP is from a club/bar context. Smoking, ashtrays, hookah, alcohol display and night-operation provisions are context-specific.
-- The supplied Casual Dining service book is an outline, not a full source.
-- No temperature/time matrix, legal compliance certificate, complete HACCP programme or current legal register was supplied in this batch.
+Do not translate or lightly paraphrase a source document and call it original methodology. Do not claim that a method is unique or validated merely because it has been renamed.
 
-## 5. Current Stage 11 status
+## Evidence and attribution policy
 
-**Integrated foundation; substantive validation remains open.**
+The product distinguishes its own methods from public evidence and context-specific practice. Internal traceability is maintained only in an appropriately restricted environment; it is not displayed in the product knowledge pack or ordinary tenant answers.
 
-The new documents broaden source coverage. They do not prove legal validity, full operational accuracy or universal applicability. Existing structural tests and retrieval tests cannot substitute for process-owner, accountant, kitchen, service and food-safety expert review.
+When a user explicitly asks for legal, scientific or current factual substantiation, STEN may cite public authoritative sources in that answer. This is distinct from exposing private expert inputs. Legal requirements must be tied to the applicable jurisdiction and current official text; research claims must be distinguished from STEN's own recommendations.
 
-## 6. Closeout gates
+## Research and development priorities
 
-Stage 11 should not be closed until:
-1. each of the 77 directions has a source-backed disposition;
-2. all detailed procedures have verified steps, handoffs, exceptions, records and checks;
-3. the new management, service, iiko, stock and food-safety material is mapped to exact source locations;
-4. role, authority, cadence and numeric thresholds are distinguished as source-stated, inferred, approved local configuration or unknown;
-5. calculations pass known-answer tests with units, periods, denominators and missing-input behavior;
-6. Russian legal claims are checked against current official texts and actual establishment applicability;
-7. representative answer-level evaluations are reviewed by qualified specialists;
-8. disputed findings and approvals are recorded explicitly.
+The methodology research programme should combine:
+- international food-safety management and prerequisite programmes;
+- hospitality and restaurant operations research;
+- service quality and service-recovery evidence;
+- process management, continuous improvement and organizational learning;
+- financial control, revenue management, labour productivity and menu economics;
+- human factors, leadership, training and decision science.
 
-## 7. What STEN must say when evidence is missing
+External research informs the synthesis; it does not become copied content. User experience informs problem framing and expert judgment; it does not authorize exposing confidential inputs.
 
-- «Не проверено» when the relevant report/document was not supplied.
-- «Нет данных» when a required input is absent.
-- «Не применимо» only when the scope supports that conclusion.
-- «Неизвестно» when evidence cannot establish the answer.
-- «Требует проверки по действующей редакции» for legal or technical rules whose current validity is not established.
+## Method maturity gates
 
-Never convert missing information to zero, a pass, a legal conclusion or an approved restaurant standard.
+inventory only → research synthesized → method drafted → specialist reviewed → pilot verified → approved for product.
 
----
+A source file being present, a draft being written or CI passing is not enough to promote a method. Legal review, site approval and product approval are distinct states.
 
-## 8. Additional professional practice batch — 14 anonymized sources (November 2026)
+## Release checks
 
-The user supplied 14 historically approved/practiced restaurant documents and explicitly restricted this stage to **professional knowledge and practices**. The source documents are evidence of implemented methods, not automatically current law, universal SOPs or operating data for a new restaurant.
-
-| ID | Source type | Integrated knowledge file |
-|---|---|---|
-| S11-01 | Open kitchen / food-production design brief | 06, 04 |
-| S11-02 | Restaurant stocktaking instruction | 05, 07 |
-| S11-03 | Historical fire-safety operating instruction | 08, 04 |
-| S11-04 | Short team-training calendar | 02, 08 |
-| S11-05 | Historical mobile POS instruction | 05 |
-| S11-06 | Dish/beverage pre-service quality control | 03, 08 |
-| S11-07 | New-employee orientation | 02, 03 |
-| S11-08 | Service Design checklist | 03, 08 |
-| S11-09 | Procurement and supplier procedure | 05, 04 |
-| S11-10 | Historical marketing planning workbook | 07 |
-| S11-11 | Food-safety internal audit procedure | 04, 08 |
-| S11-12 | Kitchen–bar–service coordination workbook | 02, 03, 06 |
-| S11-13 | Food-safety working group procedure | 04 |
-| S11-14 | Restaurant space/project design brief | 06 |
-
-**Editorial treatment:** names, addresses, persons, business-specific figures, outdated software UI, local schedules, thresholds and legal claims were not copied into the knowledge content. The integrations preserve workflows, role handoffs, controls, failure handling and verification. They are paraphrased and adapted; this is not a verbatim republication.
-
-**Status:** integrated knowledge expansion for expert review. Do not declare Stage 11 fully validated or closed. Confirm source-to-claim traceability, specialist review of safety/design topics, version-specific POS details, workbook calculations and representative answer-level tests before closure. Existing 77 catalog directions and 12 detailed procedures retain their earlier validation limitations.
-
-**Project packaging:** still exactly nine Markdown knowledge files; no tenth attachment and no automatic runtime/API integration.
+Before generating a user-facing pack:
+- scan for private source titles, authors, organizations, filenames, correspondence identifiers and private source IDs;
+- ensure source registries and private research records are excluded from distribution;
+- ensure product methods are written in STEN's own terminology and structure;
+- verify tenant isolation and that no other customer's records are in the output;
+- run content, schema, calculation and answer-level tests;
+- require explicit release approval.
