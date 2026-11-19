@@ -1044,7 +1044,10 @@
           "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
           "source_scope": "specific_restaurant_trattoria",
           "source_date_status": "date not stated; historical/local applicability not confirmed",
-          "page_anchors": [],
+          "page_anchors": [
+            2,
+            3
+          ],
           "anchor_status": "page_anchors_verified_from_source_document",
           "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
         }
@@ -1129,7 +1132,10 @@
           "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
           "source_scope": "specific_restaurant_trattoria",
           "source_date_status": "date not stated; historical/local applicability not confirmed",
-          "page_anchors": [],
+          "page_anchors": [
+            3,
+            4
+          ],
           "anchor_status": "page_anchors_verified_from_source_document",
           "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
         }
@@ -1210,7 +1216,9 @@
           "source_locator": "DOCX; 4 pages; role, opening preparation, pre-shift briefing, service management, cash/equipment controls and closing",
           "source_scope": "specific_restaurant_trattoria",
           "source_date_status": "date not stated; historical/local applicability not confirmed",
-          "page_anchors": [],
+          "page_anchors": [
+            4
+          ],
           "anchor_status": "page_anchors_verified_from_source_document",
           "anchor_note": "DOCX, страницы 1–4; дата документа в источнике не указана."
         }
