@@ -216,3 +216,41 @@ The 13-page consultant checklist «Проверка бухгалтера-кал�
 Two additional source-based drafts were added after reading the original materials in full:
 - `proc.food-product-and-equipment-labelling`: six-page HACCP-AUDIT checklist; source anchors 3–6. Covers incoming product labels, in-house preparations, boards/knives, cleaning inventory, waste bins, decanted chemicals and delivery containers. It is a consultant checklist, not a complete legal labelling matrix.
 - `proc.storage-compatibility-segregation`: two-page HACCP-AUDIT guide; source anchors 1–2. Covers separation of product categories and incompatible storage combinations. The source's claimed under-25-seat exception is explicitly not accepted as current legal permission and requires official verification.
+
+
+## Gmail source intake — 19 November 2026
+
+This section records candidate source metadata discovered during the Stage 11 mail review. **It does not claim that the attachment contents have been read, verified or approved.**
+
+| Source ID | Email evidence | Candidate material | Intake status |
+|---|---|---|---|
+| `source.frio-safe-restaurant-course-2022` | Gmail thread 17f44bfdfffd313b | ФРиО / Food Audit — курс «Безопасный ресторан 2022. Санитарное законодательство» | metadata only; source bytes pending |
+| `source.food-audit-mercury-course-2022` | Gmail thread 181155718e52f6e8 | ФРиО / Food Audit — занятие «Меркурий в ресторане — это важно!» | metadata only; source bytes pending |
+| `source.resort-sop-template-and-library-2020` | Gmail threads 1758da9da696907f, 175995f0e65cd8d4, 175982a452df8a8e | Курорт Красная Поляна — шаблон СОП с правками юристов и библиотека СОП Ibis/отелей | metadata only; source bytes pending |
+| `source.resort-movenpick-phone-sop-2020` | Gmail thread 175995f0e65cd8d4 | Movenpick — СОП FB «Телефонный стандарт» (пример) | metadata only; source bytes pending |
+| `source.restaurant-service-dishes-sop-2020` | Gmail thread 175d2f655f5b78bd | СОП «Сервис блюд и напитков» | metadata only; source bytes pending |
+| `source.pandan-guest-service-standard-2021` | Gmail thread 17a552676b44783f | Стандарт обслуживания Гостей Пандан | metadata only; source bytes pending |
+| `source.ibis-breakfast-standard-workbook-2020` | Gmail thread 175890c992a1d9d1 | IBIS — стандарт завтраков | metadata only; source bytes pending |
+| `source.internal-restaurant-role-instructions-2020` | Gmail thread 171f9dfea2db2681 | Должностные инструкции: повар, кассир, менеджер, официант, стюард, шеф-повар | metadata only; source bytes pending |
+| `source.restaurant-inventory-instruction-2013` | Gmail thread 141a0e1a225e273e | Инструкция по инвентаризации | metadata only; source bytes pending |
+| `source.service-inspector-sanpin-audit-2024` | Gmail thread 1930a75b70aa6175 | Service Inspector — санитарные чек-листы Gastro Port и «Фарш», Красная Поляна | metadata only; source bytes pending |
+| `source.internal-ppk-workbook-forms-email-2026` | Gmail thread 1a1f58bea7ec102a | ХАССП ФРИАНД — формы журналов, приказов, уборки и техкарты | metadata only; source bytes pending |
+| `source.production-control-program-email-2026` | Gmail thread 1a1c6013a80d959b | Программа производственного контроля (письмо от 10.11.2026) | metadata only; source bytes pending |
+
+### Promotion rules
+
+- Preserve exact filename, issuer/author, date, version, approval evidence and hash when source bytes become available.
+- Read the complete source before excerpting, creating a procedure or making a claim.
+- Preserve expert wording and scope; never rewrite, extend or complete missing requirements.
+- Distinguish professional guidance, corporate standard, historical practice, operational audit, template and legal source.
+- Do not infer legal effect, current applicability or mandatory status from an email subject or filename.
+- Screen confidentiality, personal data and redistribution rights before copying material into shared/general STEN knowledge.
+
+
+### Intake summary and status correction — 19 November 2026
+
+Gmail discovery expanded the candidate source list across HACCP/production control, Food Audit/FRiO training, hotel and restaurant SOP libraries, service, role instructions, sanitation audits and inventory control. Source and Evidence Registry entries are draft PRACTICE metadata records.
+
+This is **source discovery, not content integration**. Gmail supplied message text/metadata and attachment filenames but not binary attachment contents in this workflow. No procedures, temperatures, frequencies, responsibilities, records, thresholds or legal requirements have been inferred. All 19 existing procedure drafts remain drafts; new sources do not increase that count until full texts are inspected and source-grounded procedure cards are created.
+
+Do not close Stage 11 expert validation until source bytes, complete reading, source-to-claim traceability, specialist adjudication and site applicability are documented.
