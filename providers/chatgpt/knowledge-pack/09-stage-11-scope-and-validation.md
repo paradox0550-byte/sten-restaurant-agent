@@ -14,35 +14,35 @@ The user-facing pack contains only:
 - clear applicability boundaries, unknowns and safety stop conditions.
 
 It must not contain:
-- filenames, titles, authors, company names, email subjects, internal document names or source-specific labels from private user materials;
+- private source filenames, titles, authors, organizations, correspondence subjects or source-specific labels;
 - raw excerpts, distinctive phrasing, copied tables or copied checklists from confidential or third-party materials;
-- internal source IDs, Gmail thread IDs, private file paths, evidence-registry locators or private provenance notes;
+- internal source IDs, correspondence IDs, private file paths, research-vault locators or private provenance notes;
 - one customer's operational details, figures, schedules, staff names, suppliers, venue names or configuration in another tenant's context.
 
-## Private research vault
+## Research and product separation
 
-Original user-provided materials and their provenance belong in a restricted research/evidence vault, separate from the product pack. The vault exists for traceability, review, version control and claim verification. It is not part of tenant retrieval, prompt context, user exports, generated procedures or downloadable knowledge packages.
+Original research inputs and their traceability records belong in a separately access-controlled research environment. They are not part of tenant retrieval, prompt context, user exports, generated procedures or downloadable product packages.
 
-Access to the vault is limited to authorized project research and quality workflows. Tenant-specific operational records and manager preferences must remain tenant-isolated. Do not expose the source vault to a tenant assistant merely because a derived method was created from it.
+A public source repository is not a private vault. Excluding a file from a release archive does not make that file private if it remains accessible in a public repository or its history. Confidential source material must not be committed to a public repository. Access to customer-specific operational records and manager preferences must remain tenant-isolated.
 
 ## Method synthesis standard
 
 Every new STEN method must be independently authored:
-1. Extract the operational problem, intended result, constraints and validated insight from the expert input.
-2. Separate the user's confirmed experience from hypotheses, local rules and external claims.
+1. Define the operating problem, intended result, constraints and measurable outcome.
+2. Separate confirmed expert experience from hypotheses, local rules and external claims.
 3. Research relevant international practice and current authoritative standards where appropriate.
 4. Compare approaches and test their relevance to restaurant formats, scale, jurisdiction and operating conditions.
 5. Build an original STEN model: objective, inputs, sequence, decision logic, roles, records, metrics, exceptions, failure response and review cycle.
 6. Verify calculations and deterministic rules with test cases.
 7. Record limitations and unresolved questions without filling gaps by invention.
 8. Run specialist review and, where operationally material, a controlled site pilot.
-9. Publish only the approved product-language output. Keep source provenance in the restricted vault.
+9. Publish only the approved STEN-authored formulation. Keep confidential research records outside the public product repository.
 
 Do not translate or lightly paraphrase a source document and call it original methodology. Do not claim that a method is unique or validated merely because it has been renamed.
 
 ## Evidence and attribution policy
 
-Internal provenance is retained where necessary for intellectual-property management, auditability and verification. It is not displayed in the product knowledge pack or ordinary tenant answers.
+The product distinguishes its own methods from public evidence and context-specific practice. Internal traceability is maintained only in an appropriately restricted environment; it is not displayed in the product knowledge pack or ordinary tenant answers.
 
 When a user explicitly asks for legal, scientific or current factual substantiation, STEN may cite public authoritative sources in that answer. This is distinct from exposing private expert inputs. Legal requirements must be tied to the applicable jurisdiction and current official text; research claims must be distinguished from STEN's own recommendations.
 
@@ -56,19 +56,19 @@ The methodology research programme should combine:
 - financial control, revenue management, labour productivity and menu economics;
 - human factors, leadership, training and decision science.
 
-External research informs the synthesis; it does not become copied content. User experience informs the problem framing and expert judgment; it does not authorize exposing the user's source materials.
+External research informs the synthesis; it does not become copied content. User experience informs problem framing and expert judgment; it does not authorize exposing confidential inputs.
 
-## Stage 11 maturity gates
+## Method maturity gates
 
 inventory only → research synthesized → method drafted → specialist reviewed → pilot verified → approved for product.
 
-A source file being present, a draft being written or CI passing is not enough to promote a method. Legal approval, site approval and product approval are distinct states.
+A source file being present, a draft being written or CI passing is not enough to promote a method. Legal review, site approval and product approval are distinct states.
 
 ## Release checks
 
 Before generating a user-facing pack:
-- scan for private source titles, authors, organizations, filenames, email/thread identifiers and private source IDs;
-- ensure source/evidence registries and private vault files are excluded from distribution;
+- scan for private source titles, authors, organizations, filenames, correspondence identifiers and private source IDs;
+- ensure source registries and private research records are excluded from distribution;
 - ensure product methods are written in STEN's own terminology and structure;
 - verify tenant isolation and that no other customer's records are in the output;
 - run content, schema, calculation and answer-level tests;
