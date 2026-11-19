@@ -106,3 +106,10 @@ The user supplied 14 historically approved/practiced restaurant documents and ex
 **Status:** integrated knowledge expansion for expert review. Do not declare Stage 11 fully validated or closed. Confirm source-to-claim traceability, specialist review of safety/design topics, version-specific POS details, workbook calculations and representative answer-level tests before closure. Existing 77 catalog directions and 12 detailed procedures retain their earlier validation limitations.
 
 **Project packaging:** still exactly nine Markdown knowledge files; no tenth attachment and no automatic runtime/API integration.
+
+
+## Email source intake status — 19 November 2026
+
+Candidate materials located in Gmail include Food Audit/FRiO training, hotel and restaurant SOP libraries, service and breakfast standards, restaurant role instructions, Service Inspector sanitation audit reports, inventory instructions and HACCP/production-control forms.
+
+They are registered as draft PRACTICE source metadata only. Attachment bytes were not returned by the Gmail connector in this intake. No requirements, procedures, limits or legal obligations have been inferred. Full-text extraction, source-to-claim mapping, scope review, expert adjudication and any redistribution-rights review remain required.
