@@ -22,6 +22,13 @@ The CI release gate must pass:
 
 The archive's `SHA256SUMS.txt` is the integrity reference. `CONTENTS.txt` is the file inventory.
 
+## Current Dropbox publication record
+
+- Uploaded file: `STEN-Project-Knowledge-Pack-0.5.0.zip`.
+- Dropbox path: `/STEN Restaurant Agent/05. Обновления и версии/STEN-Project-Knowledge-Pack-0.5.0.zip`.
+- Archive SHA-256: `0a7f19e3a0939eef3b9eb956d6ee172e811d2734849ebe1afbbcb0ea33cb9fdb`.
+- The file exists in Dropbox. A public anyone-with-the-link URL has not yet been enabled; this must be done in Dropbox web UI and then tested in a private browser session.
+
 ## User release procedure
 
 1. Download the archive artifact from a successful main-branch CI run.
