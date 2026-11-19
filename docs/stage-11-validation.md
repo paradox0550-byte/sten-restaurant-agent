@@ -190,7 +190,7 @@ The procedure library is now architected hierarchically. Full decomposition of a
 ## Source-grounded procedure expansion — 19 November 2026
 
 ### Current procedure inventory
-- 16 standalone procedure drafts are present in `knowledge/procedures/operational-procedures.json`.
+- 17 standalone procedure drafts are present in `knowledge/procedures/operational-procedures.json`.
 - The drafts cover shift readiness, guest journey/order, service delivery/delay, guest payment, complaint recovery, appearance readiness, director daily control, front-of-house walk, monthly stocktake, sanitation deep clean, staff schedule/timekeeping, delivery control, fryer-oil management, manager shift opening, manager shift control and manager shift closing.
 - Cards now carry canonical domain IDs, provisional L1–L6 complexity, source locators, page anchors where verified, explicit stop conditions, unknowns-as-blocking and a no-operational-approval gate.
 - Source-specific details from the 2025 corporate fast-food regulation and undated Trattoria shift-manager procedure remain scoped to those sources. No historical times, staffing, supplier, temperature or cash rules are treated as universal.
@@ -208,3 +208,6 @@ Appendix 6 lists 16 HACCP working-instruction titles. The original instructions 
 - Recover the 16 referenced HACCP instructions and confirm approved versions.
 - Complete specialist review and local pilots for all 16 drafts; none is approved for operational use.
 - Reconcile the 77-item inventory against original workbook rows and correct preliminary domain/complexity assignments.
+
+### iiko stock-accounting audit procedure — 19 November 2026
+The 13-page consultant checklist «Проверка бухгалтера-калькулятора» was read in full. A separate L4 draft, `proc.iiko-stock-accounting-audit`, now covers the ten source sections with page anchors 3–12 and an audit checklist. Source-specific 23:00/23:59 timestamps, zero-value document checks and shipment/cost comparisons are explicitly not universal rules; their meaning must be checked against the current iiko version, document type and accounting policy. The checklist is not an official iiko specification or accounting standard.
