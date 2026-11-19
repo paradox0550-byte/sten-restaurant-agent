@@ -15,7 +15,11 @@ test("procedure library uses the canonical 36-domain map and six complexity leve
   for (const card of procedureCards.procedures) {
     assert.ok(card.domain_id, card.id + ": missing canonical domain");
     assert.ok(card.complexity_level >= 1 && card.complexity_level <= 6, card.id + ": invalid complexity level");
-    assert.ok(card.source_traceability.length > 0, card.id + ": missing source traceability");\n    for (const trace of card.source_traceability) {\n      assert.ok(trace.source_id && trace.source_locator, card.id + ": incomplete source trace");\n      if (trace.page_anchors?.length) assert.ok(trace.anchor_status.includes("verified"), card.id + ": page anchors not marked verified");\n    }
+    assert.ok(card.source_traceability.length > 0, card.id + ": missing source traceability");
+    for (const trace of card.source_traceability) {
+      assert.ok(trace.source_id && trace.source_locator, card.id + ": incomplete source trace");
+      if (trace.page_anchors?.length) assert.ok(trace.anchor_status.includes("verified"), card.id + ": page anchors not marked verified");
+    }
     assert.ok(card.stop_conditions.length > 0, card.id + ": missing stop conditions");
     assert.equal(card.approval_status, "not_approved_for_operational_use");
     assert.equal(card.unknowns_are_blocking, true);
