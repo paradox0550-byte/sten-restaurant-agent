@@ -380,5 +380,27 @@
     "12": "initial_single_core_integration",
     "13": "evaluation_engineering_framework_integrated_answer_quality_not_certified",
     "14": "test_candidate_ready_in_progress_owner_release_approval_pending"
+  },
+  "tenant_distribution": {
+    "description": "Curated tenant-facing ChatGPT knowledge pack only. This is not the complete source-code archive.",
+    "files": [
+      "providers/chatgpt/project-instructions-ru.md",
+      "providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md",
+      "providers/chatgpt/knowledge-pack/02-restaurant-management-and-shift.md",
+      "providers/chatgpt/knowledge-pack/03-guest-service-and-recovery.md",
+      "providers/chatgpt/knowledge-pack/04-food-safety-haccp-marking.md",
+      "providers/chatgpt/knowledge-pack/05-iiko-stock-and-calculator-audit.md",
+      "providers/chatgpt/knowledge-pack/06-menu-engineering-and-kitchen-workforce.md",
+      "providers/chatgpt/knowledge-pack/07-finance-payroll-and-labor.md",
+      "providers/chatgpt/knowledge-pack/08-operational-audit-and-checklists.md",
+      "providers/chatgpt/knowledge-pack/09-stage-11-scope-and-validation.md",
+      "providers/chatgpt/knowledge-pack/README.md"
+    ],
+    "excluded_private_or_internal_paths": [
+      "knowledge/evidence/source-crosswalk.json",
+      "knowledge/graph/sources.json",
+      "knowledge/management/research-register.md"
+    ],
+    "security_note": "Exclusion from this archive does not make files private while they remain in a public repository or its Git history. Confidential material must not be committed to a public repository."
   }
 }
