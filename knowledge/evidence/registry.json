@@ -1143,6 +1143,810 @@
       "created_at": "2026-11-19T00:00:00Z",
       "updated_at": "2026-11-19T00:00:00Z",
       "source_catalog_id": "source.ppk-establishment-2026-draft"
+    },
+    {
+      "id": "practice.frio-safe-restaurant-course-2022",
+      "title": "ФРиО / Food Audit — курс «Безопасный ресторан 2022. Санитарное законодательство»",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "restaurant_operations",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Федерация рестораторов и отельеров / Food Audit",
+        "title": "ФРиО / Food Audit — курс «Безопасный ресторан 2022. Санитарное законодательство»",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 17f44bfdfffd313b; «Инструкция И-4гот.docx»; follow-up 17f8cfd74508c989 with «Инструкция И-11гот.docx»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.frio-safe-restaurant-course-2022",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.food-audit-mercury-course-2022",
+      "title": "ФРиО / Food Audit — занятие «Меркурий в ресторане — это важно!»",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "restaurant_operations",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Федерация рестораторов и отельеров / Food Audit",
+        "title": "ФРиО / Food Audit — занятие «Меркурий в ресторане — это важно!»",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 181155718e52f6e8; message body lists FSIS Mercury/VSd/document flow/marking topics; image attachment",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.food-audit-mercury-course-2022",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.resort-sop-template-and-library-2020",
+      "title": "Курорт Красная Поляна — шаблон СОП с правками юристов и библиотека СОП Ibis/отелей",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Курорт Красная Поляна / Ibis (email context)",
+        "title": "Курорт Красная Поляна — шаблон СОП с правками юристов и библиотека СОП Ibis/отелей",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail threads 1758da9da696907f, 175995f0e65cd8d4, 175982a452df8a8e; attachments include SOP template, SOP list workbook, breakfast, kitchen, appearance, buffet procedures",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.resort-sop-template-and-library-2020",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.resort-movenpick-phone-sop-2020",
+      "title": "Movenpick — СОП FB «Телефонный стандарт» (пример)",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Курорт Красная Поляна / Ibis (email context)",
+        "title": "Movenpick — СОП FB «Телефонный стандарт» (пример)",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 175995f0e65cd8d4; «02 Movenpik СОП FB Телефоный стандарт_пример.docx»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.resort-movenpick-phone-sop-2020",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.restaurant-service-dishes-sop-2020",
+      "title": "СОП «Сервис блюд и напитков»",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "СОП «Сервис блюд и напитков»",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 175d2f655f5b78bd; attachment «СОП сервис блюд.docx»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.restaurant-service-dishes-sop-2020",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.pandan-guest-service-standard-2021",
+      "title": "Стандарт обслуживания Гостей Пандан",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "Стандарт обслуживания Гостей Пандан",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 17a552676b44783f; attachment «Стандарт обслуживания Гостей Пандан.doc»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.pandan-guest-service-standard-2021",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.ibis-breakfast-standard-workbook-2020",
+      "title": "IBIS — стандарт завтраков",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "IBIS — стандарт завтраков",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 175890c992a1d9d1; attachment «Копия ibis kitchen BREAKFAST СТАНДАРТ ЗАВТРАКОВ IBIS (002).xlsx»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.ibis-breakfast-standard-workbook-2020",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.internal-restaurant-role-instructions-2020",
+      "title": "Должностные инструкции: повар, кассир, менеджер, официант, стюард, шеф-повар",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "restaurant_operations",
+        "service",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "Должностные инструкции: повар, кассир, менеджер, официант, стюард, шеф-повар",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 171f9dfea2db2681; six DOCX role instructions",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.internal-restaurant-role-instructions-2020",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.restaurant-inventory-instruction-2013",
+      "title": "Инструкция по инвентаризации",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "audit",
+        "food_safety",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "Инструкция по инвентаризации",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 141a0e1a225e273e; attachment «Инструкция по инвентаризации.doc»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.restaurant-inventory-instruction-2013",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.service-inspector-sanpin-audit-2024",
+      "title": "Service Inspector — санитарные чек-листы Gastro Port и «Фарш», Красная Поляна",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "restaurant_operations",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "Service Inspector — санитарные чек-листы Gastro Port и «Фарш», Красная Поляна",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 1930a75b70aa6175; two PDFs «Gastro Port.САНПИН…07.11.24.pdf» and «Gastro Port.Фарш Красная Поляна.07.11.24.pdf»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.service-inspector-sanpin-audit-2024",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.internal-ppk-workbook-forms-email-2026",
+      "title": "ХАССП ФРИАНД — формы журналов, приказов, уборки и техкарты",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "restaurant_operations",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "ХАССП ФРИАНД — формы журналов, приказов, уборки и техкарты",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 1a1f58bea7ec102a; 12 attachments: hygiene log, cleaning schedule, lamp log, tasting log, temperature/humidity logs, fryer oil log, commission regulation/order, PPK responsible-person order, tech card, cleaning rules",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.internal-ppk-workbook-forms-email-2026",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
+    },
+    {
+      "id": "practice.production-control-program-email-2026",
+      "title": "Программа производственного контроля (письмо от 10.11.2026)",
+      "summary": "Metadata-only intake. Attachment content is not available in this review; no substantive requirements or steps are asserted.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "food_safety",
+        "restaurant_operations",
+        "source_intake"
+      ],
+      "source": {
+        "publisher": "Gmail source record",
+        "title": "Программа производственного контроля (письмо от 10.11.2026)",
+        "source_type": "other",
+        "url": null,
+        "citation": "Gmail thread 1a1c6013a80d959b; «ПРОГРАММА ПРОИЗВОДСТВЕННОГО КОНТРОЛЯ Суп (00000002).doc»",
+        "published_at": null,
+        "accessed_at": "2026-11-19",
+        "source_version": null
+      },
+      "source_catalog_id": "source.production-control-program-email-2026",
+      "territory": {
+        "scope": "organization",
+        "jurisdictions": []
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": null,
+        "review_due_at": null,
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "hotel_food_service"
+        ],
+        "formats": [
+          "other"
+        ],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "source_file_content",
+          "version_and_approval",
+          "actual_establishment_profile"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Gmail metadata only; no attachment body extracted.",
+        "No current legal applicability or operational approval established.",
+        "Do not derive claims from subject or filename."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "knowledge_curator",
+        "reviewed_at": "2026-11-19",
+        "review_notes": "Provenance-only registration; source content and rights remain unreviewed."
+      },
+      "created_at": "2026-11-19T00:00:00Z",
+      "updated_at": "2026-11-19T00:00:00Z"
     }
   ]
 }
