@@ -1022,7 +1022,8 @@
       "maturity_status": "procedure_draft_source_anchor_verified_specialist_review_open",
       "unknowns_are_blocking": true,
       "approval_status": "not_approved_for_operational_use",
-      "local_adaptation_required": true
+      "local_adaptation_required": true,
+      "checklist_id": "check.fryer-oil"
     },
     {
       "source_ids": [
@@ -1110,7 +1111,8 @@
         "Порядок действий при неисправности кассы/терминала",
         "Критерии бракеража и распоряжение #2",
         "Кто замещает су-шефа/шеф-повара"
-      ]
+      ],
+      "checklist_id": "check.manager-opening"
     },
     {
       "source_ids": [
@@ -1194,7 +1196,8 @@
         "Матрица компенсаций и кассовых исключений",
         "Форма журнала инцидентов",
         "Локальный план экстренного реагирования"
-      ]
+      ],
+      "checklist_id": "check.manager-control"
     },
     {
       "source_ids": [
@@ -1282,7 +1285,8 @@
         "Перечень непрерывно работающего оборудования",
         "Форма передачи смены",
         "Порядок действий при расхождении денег"
-      ]
+      ],
+      "checklist_id": "check.manager-closing"
     }
   ],
   "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
