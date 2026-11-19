@@ -1,16 +1,12 @@
 # Food Safety, Product Adjacency, Marking and Cleaning Inventory
 
-## Source basis and status
+## Operating model and applicability
 
-This document consolidates two supplied training/checklist materials by HACCP-AUDIT / Olga Ogarkova:
-- *Инструкция «Товарное соседство»*, 2 pages;
-- *Чек-лист «Маркировка в общепите»*, 6 pages.
+Food safety controls must be designed around the actual menu, ingredients, process flow, equipment, premises, suppliers, consumer profile and applicable jurisdiction. The following is a professional operating framework for identifying contamination pathways and designing local controls. It is not a legal register or a substitute for a site-specific hazard analysis.
 
-They are professional educational materials, not a verified current legal register. Use them to structure operational questions and checks. Before calling any point a legal requirement, verify the current official regulation, exact provision, effective date, exceptions and applicability to the actual restaurant.
+## 1. Product separation and storage compatibility
 
-## 1. Product adjacency — principles in the supplied instruction
-
-The source defines product adjacency as rules for joint storage or sale intended to prevent contamination.
+Storage compatibility is the controlled placement of products to prevent biological, chemical, physical and allergen cross-contact, deterioration and transfer of unwanted odours.
 
 It recommends separating:
 - dry products (flour, sugar, grains, pasta and similar);
@@ -23,19 +19,19 @@ It recommends separating:
 - raw and heat-treated vegetables;
 - rye and wheat bread.
 
-The source lists incompatible storage combinations:
+Treat the following as risk combinations requiring separation or validated controls:
 1. odor-emitting products (for example, herring and spices) with odor-absorbing products (tea, salt, sugar);
 2. raw products/semi-finished products with ready-to-eat food;
 3. frozen products with chilled products where temperature regimes differ;
 4. dry/loose products with wet products;
 5. food products with non-food products.
 
-The source says that where different raw-material groups share one refrigerator/freezer, they should be kept on separate shelves and in closed containers/gastronorm pans. It also includes a claimed exception for establishments with fewer than 25 seats allowing raw and ready-to-eat food to be stored together. **Do not repeat or apply this exception as current legal permission without checking the binding current rule.** This is a legal-applicability checkpoint, not a safe default.
+Where equipment is shared, define a documented segregation plan using dedicated zones or shelves, closed identified containers, vertical separation where relevant, and a cleaning/handling sequence that prevents cross-contact. Never assume that a venue-size threshold waives safe segregation; verify any claimed exception against current binding rules before use.
 
-## 2. Marking in the supplied HACCP-AUDIT checklist
+## 2. Identification and traceability controls
 
 ### Incoming raw materials
-The source's incoming-product table lists information on transport/consumer packaging including:
+Receiving controls should verify the information required for the specific product and applicable technical rules, including on transport/consumer packaging including:
 - product name;
 - composition;
 - quantity;
@@ -51,15 +47,15 @@ The source's incoming-product table lists information on transport/consumer pack
 The exact mandatory fields depend on product type and current technical regulation. Do not tell a restaurant to create missing package data itself; verify supplier documentation and applicable rules.
 
 ### In-house preparations
-The checklist says each container/gastronorm/other vessel with an in-house preparation should identify:
+Each in-house preparation container should carry the fields required by the approved product-specific control system, normally including:
 - product name;
 - manufacture date and time;
 - date and time until which it may be used.
 
-It notes a different date-only approach for frozen products in its example. Verify current approved procedure and product-specific rules before adopting that detail.
+Do not apply one label template to every product. The responsible specialist must validate shelf-life, time/temperature and frozen-product labelling rules for each product group.
 
 ### Cutting boards and knives
-The source gives a color-free abbreviation system for boards and knives, including:
+The establishment must implement a consistent identification system for boards, knives and other food-contact tools. It must distinguish at least the relevant raw/ready-to-eat, allergen and product groups for that kitchen. The exact coding is a local controlled specification, not a universal colour or abbreviation table.
 - raw meat (СМ);
 - raw fish (СР);
 - raw vegetables (СО);
@@ -75,13 +71,13 @@ The source gives a color-free abbreviation system for boards and knives, includi
 - raw poultry (СП);
 - gastronomy (Г).
 
-The source explicitly includes knives in all production areas, including personal knives. Treat the list as an example of a segregation/identification scheme. The actual site must define and consistently apply its own validated coding.
+Apply the same identification and segregation logic to all tools in use, including employee-owned tools where permitted. The establishment must define and audit its own validated coding.
 
 ### Vegetable and egg processing containers
-The checklist suggests separate labelled containers for vegetable/greens processing and three containers for egg processing where those products are used and separate washing sinks are unavailable. This is a source-specific arrangement; validate it against the current layout, process flow and official requirements before adopting.
+Use separate identified containers and a validated process flow for vegetable/greens processing and three containers for egg processing where those products are used and separate washing sinks are unavailable. Validate the arrangement against the current layout, process flow and official requirements before adopting.
 
 ### Cleaning inventory, waste and chemicals
-The source expects:
+The sanitation control system should ensure:
 - each mop, bucket and cloth to be identifiable by zone (production, storage, auxiliary rooms, toilets);
 - waste bins to be marked «ОТХОДЫ» or with a pictogram;
 - any container into which a detergent/disinfectant is decanted from the supplier's original packaging to identify the product and purpose;
