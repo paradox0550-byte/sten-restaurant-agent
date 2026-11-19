@@ -7,7 +7,7 @@ test("procedure library uses the canonical 36-domain map and six complexity leve
   const levels = JSON.parse(fs.readFileSync("knowledge/procedures/complexity-levels.json", "utf8"));
   const sourceCatalog = JSON.parse(fs.readFileSync("knowledge/procedures/horeca-operational-process-catalog.json", "utf8"));
   const procedureCards = JSON.parse(fs.readFileSync("knowledge/procedures/operational-procedures.json", "utf8"));
-  const domainMap = JSON.parse(fs.readFileSync("knowledge/taxonomy/restaurant-management-domains.json", "utf8"));
+  const domainMap = JSON.parse(fs.readFileSync("knowledge/taxonomy/restaurant-management-domains.json", "utf8"));\n  const candidates = JSON.parse(fs.readFileSync("knowledge/procedures/procedure-candidates.json", "utf8"));
   assert.equal(register.source_catalog.process_count, 77);
   assert.equal(register.source_catalog.items.length, 77);
   assert.equal(register.existing_procedure_cards.count, procedureCards.procedures.length);
@@ -28,7 +28,7 @@ test("procedure library uses the canonical 36-domain map and six complexity leve
   assert.equal(levels.levels.length, 6);
   assert.equal(domainMap.domains.length, 36);
   assert.equal(new Set(domainMap.domains.map(d => d.id)).size, 36);
-  assert.equal(register.domains.length, 36);
+  assert.equal(register.domains.length, 36);\n  assert.equal(candidates.candidate_count, 16);\n  assert.equal(candidates.items.length, 16);\n  for (const candidate of candidates.items) {\n    assert.equal(candidate.procedure_card_created, false);\n    assert.equal(candidate.candidate_status, "source_reference_only_original_instruction_not_recovered");\n    assert.equal(candidate.complexity_level, null);\n  }
   for (const item of register.source_catalog.items) {
     assert.ok(sourceCatalog.processes.some(p => p.id === item.process_id), item.process_id + ": source process not found");
     assert.ok(item.complexity_level >= 1 && item.complexity_level <= 6, item.process_id + ": invalid complexity");
