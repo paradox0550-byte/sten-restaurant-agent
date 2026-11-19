@@ -1288,7 +1288,7 @@
   },
   "existing_procedure_cards": {
     "file": "knowledge/procedures/operational-procedures.json",
-    "count": 12,
+    "count": 13,
     "items": [
       {
         "procedure_id": "proc.shift-readiness-and-briefing",
@@ -1494,9 +1494,17 @@
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
         "procedure_status": "draft_not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.fryer-oil-management",
+        "domain_id": "kitchen_and_production",
+        "complexity_level": 4,
+        "complexity_assessment": "model_proposed_from_food_process_equipment_and_safety_risk",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "draft_not_approved_for_operational_use"
       }
     ],
-    "note": "12 cards now have canonical domain IDs, provisional task complexity, source document locators, explicit stop conditions and approval gates. Page/section/row anchors, specialist review, local approval and pilot remain open."
+    "note": "13 cards now have canonical domain IDs, provisional task complexity, source document locators, stop conditions and approval gates. Page anchors are verified where explicitly recorded; specialist review, local approval and pilot remain open."
   },
   "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
 }
