@@ -219,28 +219,28 @@
     },
     {
       "id": "source.ppk-establishment-2026-draft",
-      "title": "Программа производственного контроля ресторана — проект 2026",
+      "title": "Программа производственного контроля ресторана — редакция 2026 (ответственный указан; утверждение не подтверждено)",
       "source_type": "user_supplied_production_control_program_draft",
       "evidence_class": "PRACTICE",
       "scope": "single_establishment_draft",
-      "date_status": "Document identifies itself as a 2026 draft; approval date and authorized signature are blank.",
-      "locator": "DOCX; 12 pages; PPK overview, establishment profile, HACCP framework, production-control measures, proposed laboratory programme, preliminary CCP table and register of 16 referenced work instructions.",
+      "date_status": "Document identifies itself as a 2026 edition; approval signature/date on title page are blank and approval status is unconfirmed.",
+      "locator": "DOCX; 14 pages; establishment profile, HACCP framework, production-control measures, six preliminary CCPs with responsible role and per-batch monitoring, proposed laboratory programme, register of 16 referenced work instructions and current-control procedure.",
       "limitations": [
-        "Draft document; page 12 states it is ready for final review and approval only after checklist items are closed. It is not an approved PPK.",
-        "Contains unresolved establishment-profile fields, including responsible person, equipment details, address confirmation and actual operating parameters.",
-        "The six CCP entries are preliminary; the document itself requires hazard-analysis confirmation and completion of critical limits, monitoring frequency, responsible roles and corrective actions.",
-        "Proposed quarterly/annual laboratory intervals are expressly presented as internal planning proposals, not universal statutory periods.",
+        "Latest located version is 14 pages and supersedes the earlier 12-page draft for working review; the approval signature and date remain blank, so approved status is not established.",
+        "Establishment-profile data and applicability still require confirmation against actual operations and source records.",
+        "Six CCPs are listed with a responsible role and per-batch monitoring, but numeric critical limits are deferred to approved technological cards and HACCP working sheets; CCP classification itself still requires hazard-analysis validation.",
+        "Proposed laboratory intervals are internal planning proposals, not universal statutory periods.",
         "References to legal acts and dates are not independently verified by this source record; legal applicability must be checked against official current texts.",
-        "The 16 HACCP instruction titles are listed in the register, but their individual source files and current approved versions are not established by this 12-page document.",
+        "The 16 HACCP work instructions are listed by title/code, but individual approved source files are not attached or independently recovered.",
         "Business identifiers, personal contacts and exact establishment address are intentionally excluded from generalized knowledge."
       ],
-      "source_anchor_status": "recovered_full_text_reopened_draft_review_open",
+      "source_anchor_status": "recovered_full_text_14_page_version_reopened_approval_unconfirmed",
       "original_source_file": {
-        "name": "ППК_ООО_Фрианд_2026_финальная_редакция_исправлено.docx",
+        "name": "ППК_ООО_Фрианд_2026_итог_ответственный_гендиректор.docx",
         "format": "DOCX",
-        "pages": 12,
-        "anchor": "Pages 1–12 inspected; page 12 contains explicit draft status and pre-approval closure checklist.",
-        "status": "recovered_full_text_reopened"
+        "pages": 14,
+        "anchor": "Pages 1–2 establish the object profile and responsible role; pages 11–12 list preliminary CCP monitoring; pages 13–14 list 16 referenced instructions and current-control procedure. Signature/date on page 1 remain blank.",
+        "status": "recovered_full_text_reopened_approval_unconfirmed"
       }
     }
   ]
