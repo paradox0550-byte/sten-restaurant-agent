@@ -27,6 +27,8 @@
     "no_silent_conflict_resolution"
   ],
   "implemented": [
+    "16_haccp_instruction_candidates_not_promoted_to_sops",
+    "16_source_grounded_procedure_drafts_with_checklist_links",
     "77_process_inventory_classified_without_sop_promotion",
     "77_source_processes_preliminarily_mapped_to_36_domains",
     "action_task_lifecycle",
@@ -43,6 +45,7 @@
     "dependency_free_secret_pattern_scan",
     "deterministic_calculators",
     "email_sender_compliance_preflight",
+    "establishment_specific_ppk_draft_evidence_record",
     "evaluations",
     "evidence_applicability_guardrails",
     "evidence_backed_outcome_verification",
