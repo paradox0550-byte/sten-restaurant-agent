@@ -116,7 +116,7 @@ The supplied materials identify a useful control framework; they do not constitu
 
 ## Stage 11 professional practice expansion — food-safety leadership
 
-**Provenance:** anonymized practical materials S11-09 (procurement and receiving), S11-11 (internal audit), S11-13 (food-safety working group), S11-01 (production flow design). These supply management practice, not a current legal register.
+The following operating model combines procurement control, internal verification, food-safety governance and production-flow risk management. It is a STEN-authored framework; local roles, review cadence and control limits must be configured and verified.
 
 ### Food-safety working group
 Identify a responsible leader and competent cross-functional participants from production, receiving/storage, service and maintenance as appropriate. The working cycle is: identify process and hazards → review control measures and ownership → define documented monitoring → handle deviations → verify corrective action → update training and procedures. Membership, meeting frequency, critical limits and authority are establishment-specific.
@@ -126,10 +126,3 @@ Set audit scope and evidence criteria, use qualified independent-enough reviewer
 
 ### Receiving and design interface
 Food safety starts with supplier approval, transport and delivery checks, traceability, stock separation and controlled movement into production. Review flows of raw material, ready-to-eat food, dirty dishes, waste and people when changing a kitchen layout. Avoid universal temperatures, storage durations or critical limits unless verified for the specific product, equipment and current applicable rules. For fire safety, maintain practical staff awareness of alarms, routes, equipment, incident reporting and assigned response roles; do not infer building compliance from a historical instruction.
-
-
-## Additional email source candidates — 19 November 2026
-
-Gmail search located additional candidate material from Food Audit/FRiO, a separate production-control-program attachment, and a 12-file package of HACCP journals, cleaning schedules, fryer-oil log, tasting-commission documents, assignment orders, technological card and cleaning rules. Exact thread references, attachment filenames and limitations are stored in `knowledge/graph/sources.json`.
-
-**Metadata only:** the Gmail connector did not expose the attachment contents. No HACCP requirement, temperature, frequency, responsibility, critical limit or legal obligation has been added from the filenames. The separately attached PPK must not be assumed identical to the 14-page PPK already inspected. Reconcile identity, version, approval and full text before integrating content.
