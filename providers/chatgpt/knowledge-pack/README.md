@@ -61,3 +61,7 @@ GitHub account registration is not required to open or download files from this 
 ## Intellectual-property and distribution boundary
 
 Only STEN-authored methods belong in the user-facing pack. Private expert materials, source names, author/company identifiers, original filenames, email locators and provenance records must remain in the restricted research vault and must never be included in tenant context or package exports. See docs/private-research-vault-and-product-knowledge.md.
+
+## Версия и целостность комплекта
+
+Используйте все файлы знаний и инструкции из одной версии релиза. Не смешивайте документы из разных выпусков. Этот комплект предназначен для добавления в ChatGPT Project как пользовательский контекст; он не устанавливает серверное ядро, не подключает POS/ERP и не разворачивает API. Состав поставки задаётся отдельным проверяемым списком файлов. Внутренние исследовательские реестры и исходные материалы в пользовательский комплект не входят.
