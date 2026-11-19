@@ -329,6 +329,28 @@
         "unknown"
       ],
       "source_status": "proposed_template_requires_iiko_and_accounting_specialist_review"
+    },
+    {
+      "id": "check.food-product-labelling",
+      "procedure_id": "proc.food-product-and-equipment-labelling",
+      "items": [
+        "Сырьё имеет идентифицирующую маркировку и данные поставщика",
+        "Заготовки промаркированы по локальной техкарте",
+        "Доски и ножи идентифицированы по утверждённой схеме",
+        "Ёмкости для мойки овощей/яиц разделены, если применимо",
+        "Уборочный инвентарь идентифицирован по зонам",
+        "Баки отходов обозначены",
+        "Перелитые моющие/дезсредства имеют название и назначение",
+        "Контейнеры доставки имеют применимую маркировку и аллергенную информацию",
+        "Неизвестные/неподтверждённые продукты или ёмкости изолированы и эскалированы"
+      ],
+      "status_semantics": [
+        "done",
+        "not_done",
+        "not_applicable",
+        "unknown"
+      ],
+      "source_status": "proposed_template_requires_food_safety_and_legal_review"
     }
   ]
 }
