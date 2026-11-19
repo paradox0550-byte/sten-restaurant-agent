@@ -242,6 +242,186 @@
         "anchor": "Pages 1–2 establish the object profile and responsible role; pages 11–12 list preliminary CCP monitoring; pages 13–14 list 16 referenced instructions and current-control procedure. Signature/date on page 1 remain blank.",
         "status": "recovered_full_text_reopened_approval_unconfirmed"
       }
+    },
+    {
+      "id": "source.frio-safe-restaurant-course-2022",
+      "title": "ФРиО / Food Audit — курс «Безопасный ресторан 2022. Санитарное законодательство»",
+      "source_type": "professional_education_course_material",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Course correspondence dated March 2022; attachment content not extracted.",
+      "locator": "Gmail thread 17f44bfdfffd313b; «Инструкция И-4гот.docx»; follow-up 17f8cfd74508c989 with «Инструкция И-11гот.docx»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.food-audit-mercury-course-2022",
+      "title": "ФРиО / Food Audit — занятие «Меркурий в ресторане — это важно!»",
+      "source_type": "professional_education_course_invitation",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 30 May 2022; invitation/topic metadata only.",
+      "locator": "Gmail thread 181155718e52f6e8; message body lists FSIS Mercury/VSd/document flow/marking topics; image attachment",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.resort-sop-template-and-library-2020",
+      "title": "Курорт Красная Поляна — шаблон СОП с правками юристов и библиотека СОП Ibis/отелей",
+      "source_type": "corporate_sop_template_and_practice_library",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email correspondence dated 26 Oct–16 Nov 2020; attachment content not extracted.",
+      "locator": "Gmail threads 1758da9da696907f, 175995f0e65cd8d4, 175982a452df8a8e; attachments include SOP template, SOP list workbook, breakfast, kitchen, appearance, buffet procedures",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.resort-movenpick-phone-sop-2020",
+      "title": "Movenpick — СОП FB «Телефонный стандарт» (пример)",
+      "source_type": "corporate_service_sop_example",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 5 Nov 2020; attachment content not extracted.",
+      "locator": "Gmail thread 175995f0e65cd8d4; «02 Movenpik СОП FB Телефоный стандарт_пример.docx»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.restaurant-service-dishes-sop-2020",
+      "title": "СОП «Сервис блюд и напитков»",
+      "source_type": "restaurant_service_sop",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 16 Nov 2020; attachment content not extracted.",
+      "locator": "Gmail thread 175d2f655f5b78bd; attachment «СОП сервис блюд.docx»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.pandan-guest-service-standard-2021",
+      "title": "Стандарт обслуживания Гостей Пандан",
+      "source_type": "restaurant_guest_service_standard",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 29 Jun 2021; use only exact source copy/version after identity check.",
+      "locator": "Gmail thread 17a552676b44783f; attachment «Стандарт обслуживания Гостей Пандан.doc»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.ibis-breakfast-standard-workbook-2020",
+      "title": "IBIS — стандарт завтраков",
+      "source_type": "hotel_breakfast_standard_workbook",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 2 Nov 2020; attachment content not extracted.",
+      "locator": "Gmail thread 175890c992a1d9d1; attachment «Копия ibis kitchen BREAKFAST СТАНДАРТ ЗАВТРАКОВ IBIS (002).xlsx»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.internal-restaurant-role-instructions-2020",
+      "title": "Должностные инструкции: повар, кассир, менеджер, официант, стюард, шеф-повар",
+      "source_type": "restaurant_role_instruction_bundle",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 9 May 2020; attachment content, approval and current status not checked.",
+      "locator": "Gmail thread 171f9dfea2db2681; six DOCX role instructions",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.restaurant-inventory-instruction-2013",
+      "title": "Инструкция по инвентаризации",
+      "source_type": "restaurant_inventory_instruction",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 10 Oct 2013; old source, contents not extracted, current applicability unknown.",
+      "locator": "Gmail thread 141a0e1a225e273e; attachment «Инструкция по инвентаризации.doc»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.service-inspector-sanpin-audit-2024",
+      "title": "Service Inspector — санитарные чек-листы Gastro Port и «Фарш», Красная Поляна",
+      "source_type": "completed_operational_audit_report",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Reports generated 8 Nov 2024 for checks dated 7 Nov 2024; PDF contents not extracted.",
+      "locator": "Gmail thread 1930a75b70aa6175; two PDFs «Gastro Port.САНПИН…07.11.24.pdf» and «Gastro Port.Фарш Красная Поляна.07.11.24.pdf»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.internal-ppk-workbook-forms-email-2026",
+      "title": "ХАССП ФРИАНД — формы журналов, приказов, уборки и техкарты",
+      "source_type": "food_safety_records_and_templates_bundle",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 19 Nov 2026; only metadata and filenames retrieved, not contents.",
+      "locator": "Gmail thread 1a1f58bea7ec102a; 12 attachments: hygiene log, cleaning schedule, lamp log, tasting log, temperature/humidity logs, fryer oil log, commission regulation/order, PPK responsible-person order, tech card, cleaning rules",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
+    },
+    {
+      "id": "source.production-control-program-email-2026",
+      "title": "Программа производственного контроля (письмо от 10.11.2026)",
+      "source_type": "production_control_program_attachment",
+      "evidence_class": "PRACTICE",
+      "scope": "source_candidate_metadata_only",
+      "date_status": "Email dated 10 Nov 2026; attachment not examined; not reconciled with the known 14-page PPK.",
+      "locator": "Gmail thread 1a1c6013a80d959b; «ПРОГРАММА ПРОИЗВОДСТВЕННОГО КОНТРОЛЯ Суп (00000002).doc»",
+      "limitations": [
+        "Email metadata and attachment name establish provenance only; the attachment bytes/text have not been examined in this intake.",
+        "Do not infer procedural steps, responsibility, frequency, acceptance criteria, temperature/time limits or legal obligations from a filename or email subject.",
+        "Historical corporate practice, professional training, audit records and templates are different evidence classes in use and are not universal requirements.",
+        "Full text, author/issuer, version, approval evidence, applicability and redistribution rights require review before any content integration."
+      ]
     }
   ]
 }
