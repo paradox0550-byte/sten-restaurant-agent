@@ -242,6 +242,78 @@
         "anchor": "Pages 1–2 establish the object profile and responsible role; pages 11–12 list preliminary CCP monitoring; pages 13–14 list 16 referenced instructions and current-control procedure. Signature/date on page 1 remain blank.",
         "status": "recovered_full_text_reopened_approval_unconfirmed"
       }
+    },
+    {
+      "id": "source.eu.edpb-cctv-sme-guide",
+      "title": "EDPB SME Guide FAQ — CCTV",
+      "source_type": "official_data_protection_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "EU",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "EDPB SME Guide FAQ — CCTV",
+      "limitations": [
+        "Official guidance on CCTV purpose, legal basis, transparency, data subject rights and retention. Not a substitute for GDPR text or national DPA decisions."
+      ]
+    },
+    {
+      "id": "source.eu.edps-video-surveillance",
+      "title": "EDPS Video-surveillance",
+      "source_type": "official_data_protection_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "EU institutions",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "EDPS Video-surveillance",
+      "limitations": [
+        "Guidance on minimisation, notice and retention. Institutional guidance; apply to restaurants only as supporting principles."
+      ]
+    },
+    {
+      "id": "source.eu.commission-unfair-marketing",
+      "title": "European Commission — Unfair commercial practices and price indication",
+      "source_type": "official_consumer_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "EU",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "European Commission — Unfair commercial practices and price indication",
+      "limitations": [
+        "Summary guidance on price indication and unfair commercial practices. Legal duties must be grounded in applicable directives and national transposition."
+      ]
+    },
+    {
+      "id": "source.codex-maintenance-legacy",
+      "title": "FAO-hosted legacy Codex maintenance text",
+      "source_type": "historical_food_hygiene_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "International reference; historical text",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "FAO-hosted legacy Codex maintenance text",
+      "limitations": [
+        "Legacy online text on preventive maintenance. Not the current Codex edition; verify against current CXC 1-1969 before normative use."
+      ]
+    },
+    {
+      "id": "source.dguv-portal",
+      "title": "German Social Accident Insurance (DGUV) portal",
+      "source_type": "official_occupational_safety_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "Germany",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "German Social Accident Insurance (DGUV) portal",
+      "limitations": [
+        "Entry point to German occupational safety guidance; select current sector-specific publications and national rules."
+      ]
+    },
+    {
+      "id": "source.eu.commission-gdpr-scope",
+      "title": "European Commission — Application of the GDPR",
+      "source_type": "official_data_protection_guidance",
+      "evidence_class": "PRACTICE",
+      "scope": "EU",
+      "date_status": "accessed 2026-11-20; current legal interpretation requires verification",
+      "locator": "European Commission — Application of the GDPR",
+      "limitations": [
+        "Official summary of GDPR territorial scope and risk-based application; read with Regulation (EU) 2016/679 and national supervisory guidance."
+      ]
     }
   ]
 }
