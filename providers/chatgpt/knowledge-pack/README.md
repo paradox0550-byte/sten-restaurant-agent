@@ -1,67 +1,49 @@
-# STEN — ChatGPT Knowledge Pack
+# STEN — пользовательский комплект знаний
 
-**Purpose:** a compact, curated knowledge set for a ChatGPT Project.  
-**Upload target:** 9 Markdown files in this folder, plus the separate Project instruction file if the interface has a separate instruction field. This stays comfortably below a 25-file attachment ceiling.
+**Версия:** 0.5.0  
+**Назначение:** материалы для подключения STEN к ChatGPT Project.
 
-## Upload order
+## Что входит
 
-1. `01-core-rules-and-evidence.md` — identity, evidence, memory and decision boundaries.
-2. `02-restaurant-management-and-shift.md` — management cycle, situational leadership, manager of shift and bartender role.
-3. `03-guest-service-and-recovery.md` — service lifecycle, selling, guest communication and complaints.
-4. `04-food-safety-haccp-marking.md` — product adjacency, marking, boards, knives, cleaning inventory and chemicals.
-5. `05-iiko-stock-and-calculator-audit.md` — integrated inventory and recipe-costing control framework.
-6. `06-menu-engineering-and-kitchen-workforce.md` — menu economics and workload-based kitchen staffing.
-7. `07-finance-payroll-and-labor.md` — P&L, cost definitions, payroll, advances, schedules and productivity.
-8. `08-operational-audit-and-checklists.md` — audits, corrective actions, handovers, evidence and verification.
-9. `09-stage-11-scope-and-validation.md` — Stage 11 coverage, source register, limitations and closeout gates.
+- Девять файлов базы знаний в этой папке.
+- Отдельные инструкции проекта: `providers/chatgpt/project-instructions-ru.md`.
+- Подробное руководство по подключению: `docs/CONNECTION_ALGORITHM_RU.md`.
+- Руководство пользователя: `docs/USER_GUIDE_RU.md`.
 
-## Connect the pack to a ChatGPT Project
+## Как подключить
 
-1. Create a dedicated Project for one restaurant or one clearly defined tenant.
-2. Paste the contents of ../project-instructions-ru.md into the Project's separate instruction field.
-3. Upload exactly the nine Markdown files listed above as Project knowledge.
-4. Confirm that all nine filenames are present and that the instructions were saved.
-5. Start a new chat inside that Project and test the evidence rules with a small, non-sensitive source file.
+1. Создайте ChatGPT Project.
+2. Вставьте содержимое `project-instructions-ru.md` в отдельное поле Project instructions.
+3. Загрузите все девять Markdown-файлов из этой папки в Sources.
+4. Проверьте, что в Sources отображаются все девять файлов.
+5. Начните новый чат внутри Project и отправьте стартовое сообщение из инструкции подключения.
 
-The Project instruction file is not a tenth knowledge attachment. The manifest and this README are maintenance documents; they are not required Project uploads.
+Файл инструкций не является десятым вложением: его содержимое помещается в отдельное поле настроек проекта.
 
-A path or filename mentioned in Project instructions does not grant the Project access to that GitHub file. ChatGPT Projects do not execute this repository's JavaScript modules or automatically connect GitHub, POS, iiko, MCP, APIs, persistent tenant memory or the source registry.
+## Девять файлов
 
-## Consolidation rules
+1. `01-core-rules-and-evidence.md` — роль STEN, доказательность, границы выводов и решений.
+2. `02-restaurant-management-and-shift.md` — управленческий цикл, работа смены и координация.
+3. `03-guest-service-and-recovery.md` — гостевой путь, сервис и восстановление после сбоев.
+4. `04-food-safety-haccp-marking.md` — операционная модель пищевой безопасности и контроля.
+5. `05-iiko-stock-and-calculator-audit.md` — аудит товарного учёта и калькуляционного контура.
+6. `06-menu-engineering-and-kitchen-workforce.md` — экономика меню и планирование нагрузки кухни.
+7. `07-finance-payroll-and-labor.md` — P&L, расходы, ФОТ и производительность.
+8. `08-operational-audit-and-checklists.md` — операционный аудит, корректирующие действия и проверка.
+9. `09-stage-11-scope-and-validation.md` — границы зрелости методик и критерии их проверки.
 
-- These files consolidate knowledge for retrieval; the original source files remain in the repository and are not deleted.
-- Source-specific practices are not automatically universal standards.
-- Legal and sanitary claims from training/checklist materials are not treated as current law until checked against the official act and the actual establishment.
-- The 2025 guest-service standard is marked as internal/confidential source material for the named restaurants.
-- The service book upload contains only a cover and short outline in the supplied file; it is not treated as a complete book.
-- If a fact is missing, report it as unknown. Do not fill it with zero or a generic benchmark.
+## Принципы распространения
 
-## Release and consistency checks
+Пользовательский комплект содержит только документы, предназначенные для контекста Project. Не загружайте в Project весь репозиторий, исходный код, тесты, исследовательские реестры или служебные метаданные.
 
-Before publishing an updated pack, verify all of the following together:
-- the nine filenames in this README match knowledge-manifest.yaml;
-- the nine files exist in this directory and are Markdown;
-- project-instructions-ru.md describes the same nine-file upload process;
-- docs/USER_GUIDE_RU.md does not prescribe a competing list of individual source files;
-- financial, legal and operational claims remain aligned with their canonical sources;
-- source-specific scope, confidentiality and unresolved validation status are preserved.
+Методы STEN формулируются самостоятельным профессиональным языком. Частные материалы, внутренние идентификаторы и переписка не являются пользовательскими вложениями. Этот архив не является закрытым хранилищем исходных материалов.
 
-## Canonical repository sources
+## Ограничения
 
-This pack is a provider-oriented derivative. The canonical detailed methods, schemas, calculations, source registry, tests and evaluation cases remain in their original repository paths. Update the pack when those canonical sources change; do not edit only the pack and leave the canonical method stale.
+ChatGPT Project использует инструкции и документы как контекст модели. Само подключение не запускает программное ядро из репозитория и не создаёт интеграцию с POS/iiko, банком, складом, API или серверной памятью.
 
+Не обещайте автоматическое обновление документов после публикации новой версии в Dropbox. Для обновления скачайте новый комплект и замените старые материалы целиком.
 
-## User-friendly connection instructions
+## Версия и целостность
 
-The full Russian, non-technical, 14-step connection algorithm is maintained at [docs/CONNECTION_ALGORITHM_RU.md](../../../docs/CONNECTION_ALGORITHM_RU.md). It includes direct links to each of the nine knowledge files, the separate Project instruction file, a first-chat smoke test and troubleshooting.
-
-GitHub account registration is not required to open or download files from this public repository. A ChatGPT account is required to create a Project. Check the current per-project file limit before installation: the nine-file pack requires a plan with at least nine project file slots; the current OpenAI Help Center lists 5 for Free and 25 for Go/Plus. Do not silently omit files and describe a partial upload as a complete STEN setup.
-
-
-## Intellectual-property and distribution boundary
-
-Only STEN-authored methods belong in the user-facing pack. Private expert materials, source names, author/company identifiers, original filenames, email locators and provenance records must remain in the restricted research vault and must never be included in tenant context or package exports. See docs/private-research-vault-and-product-knowledge.md.
-
-## Версия и целостность комплекта
-
-Используйте все файлы знаний и инструкции из одной версии релиза. Не смешивайте документы из разных выпусков. Этот комплект предназначен для добавления в ChatGPT Project как пользовательский контекст; он не устанавливает серверное ядро, не подключает POS/ERP и не разворачивает API. Состав поставки задаётся отдельным проверяемым списком файлов. Внутренние исследовательские реестры и исходные материалы в пользовательский комплект не входят.
+Используйте все девять файлов и инструкции из одной версии релиза. Не смешивайте документы разных выпусков. Состав архива проверяется по отдельному списку файлов и контрольной сумме.
