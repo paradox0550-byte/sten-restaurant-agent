@@ -2098,6 +2098,74 @@
       },
       "created_at": "2026-11-20T00:00:00Z",
       "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "practice.eu.commission-gdpr-scope",
+      "title": "European Commission — Application of the GDPR",
+      "summary": "Official guidance on GDPR territorial scope, SME context and risk-based application.",
+      "evidence_class": "PRACTICE",
+      "topic": [
+        "privacy",
+        "personal_data",
+        "gdpr"
+      ],
+      "source": {
+        "publisher": "European Commission",
+        "title": "Application of the GDPR",
+        "source_type": "official_guidance",
+        "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+        "citation": null,
+        "published_at": null,
+        "accessed_at": "2026-11-20",
+        "source_version": null
+      },
+      "territory": {
+        "scope": "regional",
+        "jurisdictions": [
+          "EU"
+        ]
+      },
+      "validity": {
+        "status": "unknown",
+        "published_on": null,
+        "effective_from": null,
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-05-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "data_subjects",
+          "processing_purpose"
+        ],
+        "determination": "specialist_review"
+      },
+      "limitations": [
+        "Guidance summary, not substitute for Regulation (EU) 2016/679 or national supervisory authority decisions.",
+        "Must be read with applicable ePrivacy and national employment/privacy law."
+      ],
+      "related_records": [],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": null,
+        "reviewed_at": null,
+        "review_notes": "Added as supporting guidance; not approved."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
     }
   ]
 }
