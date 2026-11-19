@@ -69,7 +69,12 @@
           "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
           "source_scope": "specific restaurant concepts",
           "source_date_status": "2025 stated in source",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8,
+            9
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -141,7 +146,12 @@
           "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
           "source_scope": "specific restaurant concepts",
           "source_date_status": "2025 stated in source",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            12,
+            29
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -209,7 +219,12 @@
           "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
           "source_scope": "specific restaurant concepts",
           "source_date_status": "2025 stated in source",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            30,
+            34
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -278,7 +293,12 @@
           "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
           "source_scope": "specific restaurant concepts",
           "source_date_status": "2025 stated in source",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            35,
+            37
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -351,7 +371,12 @@
           "source_locator": "PDF; 43 pages; guest journey, service stages, sales, atypical situations and complaints",
           "source_scope": "specific restaurant concepts",
           "source_date_status": "2025 stated in source",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            39,
+            42
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -419,7 +444,8 @@
           "source_locator": "DOCX; sections: clothing/uniform, personal hygiene, watches/jewelry, training plan and discussion questions",
           "source_scope": "organization_specific",
           "source_date_status": "not_verified",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "document_locator_known_slide_or_section_anchor_open",
+          "page_anchors": []
         }
       ],
       "stop_conditions": [
@@ -490,7 +516,8 @@
           "source_locator": "PPTX; 20 slides; management functions, situational leadership, work maturity levels, GROW",
           "source_scope": "organization_specific_methodology",
           "source_date_status": "not_verified",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "document_locator_known_slide_or_section_anchor_open",
+          "page_anchors": []
         },
         {
           "source_id": "source.restaurant-regulation",
@@ -498,7 +525,12 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8,
+            9
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -568,7 +600,11 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            8
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -643,7 +679,13 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            10,
+            71,
+            72
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -714,7 +756,12 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            12,
+            13
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -783,7 +830,12 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            11,
+            12
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -853,7 +905,12 @@
           "source_locator": "Original DOC; 130 pages; cover states «Руководящие документы для ресторанов корпорации (формат фаст-фуд) на 01.09.25»; contents include operations, production/sales, safety, documents, finance, labor, procurement, iiko, inspections, delivery, HR, facilities and 29 appendices.",
           "source_scope": "specific restaurant chain; fast-food format",
           "source_date_status": "Document states edition 01.09.2025; approval status and current applicability require confirmation.",
-          "anchor_status": "document_locator_known_page_section_or_row_anchor_open"
+          "anchor_status": "page_anchors_verified_from_source_document",
+          "page_anchors": [
+            56,
+            58
+          ],
+          "anchor_note": "PDF/DOC page index is 1-based; source-specific instructions remain scoped to the source operator."
         }
       ],
       "stop_conditions": [
@@ -867,5 +924,5 @@
   ],
   "library_hierarchy": "management_domain > source_process > procedure > work_instruction_or_checklist > record_or_evidence",
   "complexity_levels": "L1-L6; task complexity classification, model-proposed",
-  "readiness_policy": "All 12 cards are drafts. Source document locators are recorded, but page/section/row anchors, specialist review, local approval and pilot verification remain open where not explicitly completed."
+  "readiness_policy": "All 12 cards are drafts. Page anchors have been verified for the referenced portions of the guest-service standard and restaurant regulation. Page/slide anchors remain open for appearance-training and management-training sources; specialist review, local approval and pilot verification remain open for all cards."
 }
