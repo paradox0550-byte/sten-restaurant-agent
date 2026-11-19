@@ -180,6 +180,32 @@
         "Use only the visible title and outline topics; do not infer or invent chapter content.",
         "No author or publication date is established in the supplied pages."
       ]
+    },
+    {
+      "id": "source.ppk-establishment-2026-draft",
+      "title": "Программа производственного контроля ресторана — проект 2026",
+      "source_type": "user_supplied_production_control_program_draft",
+      "evidence_class": "PRACTICE",
+      "scope": "single_establishment_draft",
+      "date_status": "Document identifies itself as a 2026 draft; approval date and authorized signature are blank.",
+      "locator": "DOCX; 12 pages; PPK overview, establishment profile, HACCP framework, production-control measures, proposed laboratory programme, preliminary CCP table and register of 16 referenced work instructions.",
+      "limitations": [
+        "Draft document; page 12 states it is ready for final review and approval only after checklist items are closed. It is not an approved PPK.",
+        "Contains unresolved establishment-profile fields, including responsible person, equipment details, address confirmation and actual operating parameters.",
+        "The six CCP entries are preliminary; the document itself requires hazard-analysis confirmation and completion of critical limits, monitoring frequency, responsible roles and corrective actions.",
+        "Proposed quarterly/annual laboratory intervals are expressly presented as internal planning proposals, not universal statutory periods.",
+        "References to legal acts and dates are not independently verified by this source record; legal applicability must be checked against official current texts.",
+        "The 16 HACCP instruction titles are listed in the register, but their individual source files and current approved versions are not established by this 12-page document.",
+        "Business identifiers, personal contacts and exact establishment address are intentionally excluded from generalized knowledge."
+      ],
+      "source_anchor_status": "recovered_full_text_reopened_draft_review_open",
+      "original_source_file": {
+        "name": "ППК_ООО_Фрианд_2026_финальная_редакция_исправлено.docx",
+        "format": "DOCX",
+        "pages": 12,
+        "anchor": "Pages 1–12 inspected; page 12 contains explicit draft status and pre-approval closure checklist.",
+        "status": "recovered_full_text_reopened"
+      }
     }
   ]
 }
