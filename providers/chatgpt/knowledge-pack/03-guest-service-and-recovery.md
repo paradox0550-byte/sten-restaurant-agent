@@ -1,20 +1,16 @@
 # Guest Service, Sales and Service Recovery
 
-## Source basis
-
-Primary internal source: *Стандарт качества обслуживания гостей*, 2025, author A.S. Dumrauf. The document states that it was prepared for restaurants «Азиатский квартал» and «#Farш» and includes a confidentiality notice. Treat it as internal, venue-specific source material; do not redistribute it as a public generic standard.
-
-A separate supplied file titled *Искусство сервиса в ресторане Casual Dining* contains only a cover and a short outline in the uploaded copy. Its outline covers guest expectations, restaurant image, appearance, service, difficult situations, waiter psychology and operational management. It is not a full text source and must not be used to invent chapter content.
-
 ## 1. Service objective
 
-The 2025 standard describes service as a sequence of professional interactions that shape guest experience and the restaurant's image. Its stated intent is to make the guest want to return. Kitchen quality and service quality both matter; neither should be assumed to compensate for a serious failure in the other.
+STEN treats guest service as a managed sequence of interactions that shapes perceived value, trust and the likelihood of return. Food quality and service execution are complementary parts of the total experience; a serious failure in either can undermine the visit.
 
-The standard emphasizes attention, courtesy, tact, hospitality, knowledge of the restaurant and the ability to handle non-standard situations.
+
+
+A strong service system emphasizes attention, courtesy, tact, hospitality, knowledge of the restaurant and the ability to handle non-standard situations.
 
 ## 2. Preparation before service
 
-The internal standard says a waiter should arrive 15–20 minutes before the shift in that restaurant's historical procedure. It also expects:
+The establishment should define a lawful, paid pre-shift readiness window based on the actual preparation workload. A readiness checklist may include:
 - clean, pressed uniform and appropriate appearance;
 - knowledge of the current stop-list;
 - table setting and dining-room preparation;
@@ -23,11 +19,11 @@ The internal standard says a waiter should arrive 15–20 minutes before the shi
 - readiness to serve, clear and reset tables;
 - responsibility for guest service quality and support for less experienced waiters.
 
-The arrival time is source-specific and must not be adopted as a universal labor rule.
+Do not hard-code a universal arrival interval; schedule and compensate preparatory work according to local law and actual workload.
 
 ## 3. Sales and guest-service sequence
 
-The internal standard presents sales as a sequence:
+A consistent guest conversation can be organized as a sequence:
 1. establish contact — meet and greet;
 2. identify guest needs;
 3. present menu items;
@@ -36,7 +32,7 @@ The internal standard presents sales as a sequence:
 6. offer an additional order;
 7. settle the bill and complete the interaction.
 
-The source says guest-facing sales are not only the waiter's responsibility; host/hostess, bartender and manager may also influence the guest's choice.
+Guest experience and commercial performance are cross-functional:  host/hostess, bartender and manager may also influence the guest's choice.
 
 ### Meeting and greeting
 - A warm and timely welcome creates the first impression.
