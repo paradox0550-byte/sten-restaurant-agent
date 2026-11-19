@@ -3200,6 +3200,80 @@
       },
       "created_at": "2026-11-20T00:00:00Z",
       "updated_at": "2026-11-20T00:00:00Z"
+    },
+    {
+      "id": "law.ru.tk-amendment-144-2026",
+      "title": "Федеральный закон № 144-ФЗ от 25.05.2026 — изменения ТК РФ по сверхурочной работе",
+      "summary": "Изменения ст. 99 и 152 ТК РФ, вступившие в силу 01.09.2026: пределы сверхурочной работы, особые категории работников, согласие и оплата сверхурочных.",
+      "evidence_class": "LAW",
+      "topic": [
+        "labor",
+        "working_time",
+        "overtime",
+        "payroll"
+      ],
+      "source": {
+        "publisher": "Российская Федерация",
+        "title": "Федеральный закон от 25.05.2026 № 144-ФЗ",
+        "source_type": "federal_law",
+        "url": "https://www.garant.ru/products/ipo/prime/doc/414178334/",
+        "citation": null,
+        "published_at": "2026-05-25",
+        "accessed_at": "2026-11-20",
+        "source_version": "effective_from_2026-09-01"
+      },
+      "territory": {
+        "scope": "country",
+        "jurisdictions": [
+          "RU"
+        ]
+      },
+      "validity": {
+        "status": "current_but_unverified",
+        "published_on": "2026-05-25",
+        "effective_from": "2026-09-01",
+        "effective_to": null,
+        "last_verified_at": "2026-11-20",
+        "review_due_at": "2027-02-20",
+        "supersedes": null,
+        "superseded_by": null
+      },
+      "applicability": {
+        "sectors": [
+          "restaurant",
+          "cafe",
+          "bar",
+          "hotel_food_service",
+          "catering"
+        ],
+        "formats": [],
+        "establishment_conditions": [],
+        "required_profile_fields": [
+          "jurisdiction",
+          "entity_type",
+          "employee_category",
+          "working_time_regime",
+          "date_of_assessment"
+        ],
+        "determination": "conditional"
+      },
+      "limitations": [
+        "Не применять увеличение до 240 часов как универсальный предел: нужны предусмотренные законом коллективный договор и/или отраслевое соглашение.",
+        "Для отдельных категорий работников действует ограничение 120 часов и дополнительные гарантии.",
+        "Включение в реестр не заменяет индивидуальную проверку кадровым юристом."
+      ],
+      "related_records": [
+        "law.ru.tk"
+      ],
+      "conflicts_with": [],
+      "record_status": "draft",
+      "review": {
+        "reviewer_role": "legal_research",
+        "reviewed_at": "2026-11-20",
+        "review_notes": "Основные изменения ст. 99 и 152 сверены по тексту закона/актуальной редакции; требуется юридический sign-off для конкретного работодателя."
+      },
+      "created_at": "2026-11-20T00:00:00Z",
+      "updated_at": "2026-11-20T00:00:00Z"
     }
   ]
 }
