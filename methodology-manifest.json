@@ -93,8 +93,8 @@
     "source_process_inventory": "knowledge/procedures/horeca-operational-process-catalog.json",
     "existing_procedure_cards": "knowledge/procedures/operational-procedures.json",
     "source_inventory_count": 77,
-    "existing_procedure_card_count": 18,
-    "note": "77 source directions remain inventory-only and preliminarily mapped to 36 domains; 18 procedure cards are source-grounded drafts, not complete approved SOP coverage.",
+    "existing_procedure_card_count": 19,
+    "note": "77 source directions remain inventory-only and preliminarily mapped to 36 domains; 19 procedure cards are source-grounded drafts, not complete approved SOP coverage.",
     "management_domain_taxonomy": "knowledge/taxonomy/restaurant-management-domains.json",
     "management_domain_count": 36
   }
