@@ -230,7 +230,9 @@
         "practice.calculator-iiko-audit-checklist"
       ],
       "graph_node_ids": [],
-      "procedure_ids": [],
+      "procedure_ids": [
+        "proc.iiko-stock-accounting-audit"
+      ],
       "linkage_status": "evidence_linked",
       "original_source_file": {
         "name": "Чек-лист проверки калькулятора.pdf",
