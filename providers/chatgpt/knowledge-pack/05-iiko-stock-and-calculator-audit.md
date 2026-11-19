@@ -1,30 +1,28 @@
-# iiko Stock Accounting and Accountant-Calculator Audit
+# inventory system Stock Accounting and Accountant-Calculator Audit
 
-## Source basis
+## Scope and applicability
 
-Source: supplied *Чек-лист проверки калькулятора.pdf*, 13 pages, attributed in the file to @av.buravtsova / Anastasia Buravtsova. The checklist says its purpose is to assess the accountant-calculator's qualification and the quality of stock accounting in iiko.
+This is a configurable stock-accounting control framework for establishments using an integrated POS, inventory and recipe-costing system. It is not tied to one software vendor, screen colour, document label or chart of accounts. Map every check to the current system version, permissions, document model and approved accounting policy.
 
-This is a source-specific audit checklist. It is not a universal statement of iiko configuration or accounting policy. Document colors, document names, article names, report fields and time settings can vary by system version and restaurant configuration.
+## Audit domains
 
-## 10 audit sections from the source
-
-### 1. Nomenclature directory
+### 1. Item and recipe master data
 - Exclamation marks should appear only on informational modifiers.
 - Nomenclature tree should be structured; no items should remain outside groups.
 - Used dishes/preparations should not show an asterisk in the «Себестоимость, руб» column.
 
-### 2. Incoming invoices
+### 2. Receiving and supplier documents
 - No unposted (blue) documents.
 - No documents with total amount equal to zero.
 - System invoices correspond to paper/source documents.
 - «Входящий номер» field is completed, except for the market/shop receipts described in the source.
 
-### 3. Outgoing invoices
+### 3. Transfers and dispatch
 - No unposted (blue) documents.
 - No documents with total amount equal to zero.
 - Shipment amount is greater than cost amount, according to the source's stated check. This rule must be interpreted against the actual document type, pricing method and internal transfer policy before treating it as a universal control.
 
-### 4. Write-off acts
+### 4. Write-offs and waste
 - No unposted documents.
 - No zero-amount documents.
 - No documents under the article «Расход продуктов» as described by the source.
@@ -32,7 +30,7 @@ This is a source-specific audit checklist. It is not a universal statement of ii
 
 The exact article names and expected behavior require confirmation in the restaurant's current accounting policy.
 
-### 5. Processing/transformation acts
+### 5. Production and transformation records
 - No unposted documents.
 - Transformations should involve only substitutable items that are close in cost and have comparable properties, as the source describes.
 
@@ -88,7 +86,7 @@ Never mark a check as passed merely because the user has not supplied a report. 
 ## Required input set for an actual audit
 
 Ask for only the smallest export needed after scoping:
-- restaurant/outlet and iiko version/configuration if relevant;
+- restaurant/outlet and inventory system version/configuration if relevant;
 - audit period;
 - warehouses in scope;
 - reports/documents for the checklist section being checked;
@@ -99,7 +97,7 @@ Do not ask for all ten report groups before inspecting the first supplied file.
 
 ## Guardrails
 
-- Do not post, reverse, delete or edit iiko documents.
+- Do not post, reverse, delete or edit inventory system documents.
 - Do not infer zero from a blank amount or missing row.
 - Do not treat a warning icon as an error without inspecting its item and configuration.
 - Do not assume all manual documents are invalid without the approved workflow.
@@ -110,7 +108,7 @@ Do not ask for all ten report groups before inspecting the first supplied file.
 
 ## Stage 11 professional practice expansion — POS orders, stocktake and suppliers
 
-**Provenance:** anonymized practical materials S11-05 (historical mobile POS workflow), S11-02 (stocktake), S11-09 (procurement). Interface screenshots and local inventory schedules are not current software documentation.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Order integrity independent of POS brand
 Before sending: confirm table/guest and order ownership, exact items, quantities, modifiers, allergens or restrictions communicated by the guest, courses and agreed timing. After sending: verify correct routing and changes; follow permissioned procedures for cancellations, discounts, split bills and corrections. Never claim a particular screen or button exists in the user's software version without checking it.
