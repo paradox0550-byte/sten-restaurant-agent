@@ -1288,212 +1288,103 @@
   },
   "existing_procedure_cards": {
     "file": "knowledge/procedures/operational-procedures.json",
-    "count": 13,
+    "count": 16,
     "items": [
       {
         "procedure_id": "proc.shift-readiness-and-briefing",
-        "title": "Подготовка смены и короткая планёрка",
-        "domain": "operations_and_shift_control",
-        "source_ids": [
-          "source.guest-service-standard-2025"
-        ],
-        "complexity_level": 3,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Ресторанный сервис с зональной работой официантов; адаптировать под формат и график объекта.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "operations_and_shift_control",
+        "complexity_level": 3,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.guest-journey-and-order",
-        "title": "Путь гостя и приём заказа",
-        "domain": "service_and_hospitality",
-        "source_ids": [
-          "source.guest-service-standard-2025"
-        ],
-        "complexity_level": 2,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Зал с обслуживанием за столом; для counter service, buffet, QSR и доставки нужна отдельная адаптация.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "service_standards",
+        "complexity_level": 2,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.service-delivery-and-delay",
-        "title": "Сопровождение заказа и информирование о задержке",
-        "domain": "service_and_hospitality",
-        "source_ids": [
-          "source.guest-service-standard-2025"
-        ],
-        "complexity_level": 3,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Ресторанное обслуживание за столом; последовательность подачи корректируется по пожеланию гостя и концепции.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "guest_journey_hospitality",
+        "complexity_level": 3,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.bill-and-payment",
-        "title": "Расчёт гостя",
-        "domain": "service_and_hospitality",
-        "source_ids": [
-          "source.guest-service-standard-2025"
-        ],
-        "complexity_level": 4,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Только после адаптации к действующим кассовым процедурам, POS и законодательству конкретной юрисдикции.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "accounting_tax_and_controls",
+        "complexity_level": 4,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.guest-complaint-recovery",
-        "title": "Жалоба гостя и восстановление сервиса",
-        "domain": "guest_experience_and_recovery",
-        "source_ids": [
-          "source.guest-service-standard-2025"
-        ],
-        "complexity_level": 3,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Все форматы с гостевым взаимодействием; полномочия по компенсациям устанавливаются локально.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "complaints_service_recovery",
+        "complexity_level": 3,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.appearance-readiness",
-        "title": "Проверка внешнего вида и готовности сотрудника",
-        "domain": "leadership_training_and_culture",
-        "source_ids": [
-          "source.appearance-training"
-        ],
-        "complexity_level": 2,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Только после утверждения локального стандарта и проверки применимого трудового, антидискриминационного и иного права; спорные ограничения исходника не переносятся автоматически.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "hr_personnel",
+        "complexity_level": 2,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.director-operating-control",
-        "title": "Планирование и ежедневный контроль директора",
-        "domain": "strategy_and_multiunit_management",
-        "source_ids": [
-          "source.operational-management-training",
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 5,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Управление рестораном; график и роли адаптируются к структуре оператора.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "strategy_business_model",
+        "complexity_level": 5,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.front-of-house-visual-walk",
-        "title": "Визуальный обход гостевой зоны",
-        "domain": "operations_and_shift_control",
-        "source_ids": [
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 2,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Это конкретная практика одного оператора; время, содержание и срок хранения не являются отраслевым нормативом.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "hall_guest_areas",
+        "complexity_level": 2,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.monthly-stocktake",
-        "title": "Ежемесячная инвентаризация запасов и денежных средств",
-        "domain": "inventory_and_warehouse",
-        "source_ids": [
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 4,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Историческая корпоративная процедура; сверить с действующей учётной политикой, POS/ERP, бухгалтерским регламентом и местным правом.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "warehouse_inventory",
+        "complexity_level": 4,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.monthly-sanitation-deep-clean",
-        "title": "Генеральная уборка / санитарный час",
-        "domain": "food_safety_and_hygiene",
-        "source_ids": [
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 4,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Только как историческая практика конкретного оператора; фактическая программа санитарной уборки определяется оценкой рисков, технологией и актуальными требованиями юрисдикции.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "food_safety_sanitation",
+        "complexity_level": 4,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.staff-schedule-and-timekeeping",
-        "title": "Планирование графика и учёт рабочего времени",
-        "domain": "workforce_staffing_and_payroll",
-        "source_ids": [
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 4,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Только как описанная корпоративная практика; нормы рабочего времени, согласование графиков и обработка данных требуют проверки по актуальному трудовому праву.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "labor_planning_payroll",
+        "complexity_level": 4,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.delivery-order-control",
-        "title": "Контроль доставки и самовывоза",
-        "domain": "delivery_and_digital_channels",
-        "source_ids": [
-          "source.restaurant-regulation"
-        ],
-        "complexity_level": 3,
-        "maturity": "source_grounded_procedure_draft",
-        "approval_status": "specialist_review_open",
-        "source_scope": "Историческая модель конкретной сети; не переносить целевые минуты на другие форматы без анализа маршрута, мощности и обещаний гостю.",
-        "file": "knowledge/procedures/operational-procedures.json",
         "domain_id": "logistics_delivery_channels",
+        "complexity_level": 3,
         "complexity_assessment": "model_proposed_from_workflow_scope_and_risk; not a source fact",
         "source_maturity": "procedure_draft_source_locator_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
       },
       {
         "procedure_id": "proc.fryer-oil-management",
@@ -1501,10 +1392,34 @@
         "complexity_level": 4,
         "complexity_assessment": "model_proposed_from_food_process_equipment_and_safety_risk",
         "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
-        "procedure_status": "draft_not_approved_for_operational_use"
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-opening-readiness",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_cross_zone_readiness",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-control",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_shift_coordination",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
+      },
+      {
+        "procedure_id": "proc.manager-shift-closing",
+        "domain_id": "shift_daily_operations",
+        "complexity_level": 3,
+        "complexity_assessment": "model_proposed_multi_role_cash_stock_equipment_close",
+        "source_maturity": "procedure_draft_source_anchor_verified_specialist_review_open",
+        "procedure_status": "not_approved_for_operational_use"
       }
     ],
-    "note": "13 cards now have canonical domain IDs, provisional task complexity, source document locators, stop conditions and approval gates. Page anchors are verified where explicitly recorded; specialist review, local approval and pilot remain open."
+    "note": "16 source-grounded drafts have canonical domain IDs, provisional complexity, source locators/page anchors where verified, explicit stop conditions and approval gates. All remain drafts pending specialist review, local approval and pilots."
   },
   "next_decomposition_rule": "Review each of the 77 source directions and split multi-workflow entries into separate procedure cards only when source evidence supports the operational steps. New cards must link to source page/section/sheet/row anchors and include acceptance cases."
 }
