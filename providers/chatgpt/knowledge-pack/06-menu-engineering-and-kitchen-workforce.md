@@ -107,7 +107,7 @@ Menu changes that alter volume, portion, recipe, batch size or station routing s
 
 ## Stage 11 professional practice expansion — kitchen and open-kitchen design
 
-**Provenance:** anonymized practical materials S11-01 and S11-14 (project briefs for restaurant production and guest space), S11-12 (cross-functional flow). These are design decision patterns, not ready-made engineering specifications.
+**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Design from menu and throughput
 Before recommending layout or equipment, obtain menu/production routing, batch sizes, peak orders by interval, staffing and skill mix, equipment capacities, raw/finished/dirty/waste flows, storage requirements, service model and maintenance access. Map each menu family to station, process steps, handoffs and required utilities. Validate the design against peak workload and staff movement, not only floor area or visuals.
