@@ -199,7 +199,8 @@
         "proc.monthly-stocktake",
         "proc.monthly-sanitation-deep-clean",
         "proc.staff-schedule-and-timekeeping",
-        "proc.delivery-order-control"
+        "proc.delivery-order-control",
+        "proc.fryer-oil-management"
       ],
       "linkage_status": "evidence_linked",
       "original_source_file": {
@@ -316,7 +317,11 @@
         "practice.shift-manager-trattoria-procedure"
       ],
       "graph_node_ids": [],
-      "procedure_ids": [],
+      "procedure_ids": [
+        "proc.manager-shift-opening-readiness",
+        "proc.manager-shift-control",
+        "proc.manager-shift-closing"
+      ],
       "linkage_status": "evidence_linked",
       "original_source_file": {
         "name": "ОР Управляющий смены.docx",
