@@ -15,6 +15,10 @@
 - `src/` — executable deterministic source modules.
 - `tests/` — automated tests.
 
+## Закрытый пользовательский пилот
+
+Инструкция для первых тестировщиков: [Пилот STEN на друзьях — подключение, сценарии и фиксация ошибок](docs/PILOT_FRIENDS_GUIDE_RU.md). Для установки в ChatGPT Project используйте отдельный приватный Project на каждого участника и девять файлов из `providers/chatgpt/knowledge-pack/`.
+
 ## Stage status — canonical summary
 
 | Stage | Capability | Engineering status | Important boundary |
