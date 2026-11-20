@@ -45,3 +45,15 @@ The CI release gate must pass:
 - A green CI run proves only the automated checks it executes. It does not certify expert correctness, legal compliance, or successful operation at a restaurant.
 - Stage 11 substantive validation remains open until specialist review and controlled pilots are completed.
 - No release is published until the owner approves the final contents and distribution link.
+
+
+## Closed pilot candidate — 20 November 2026
+
+- Main commit: `8bcff642340c6a4d1a524769560bda002629ac1f`.
+- Successful CI: [run 44680980200](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/44680980200).
+- Automated tests: 139 passed, 0 failed.
+- Tenant archive: `sten-knowledge-pack-0.5.0.zip`, 11/11 allowlisted files verified.
+- SHA-256: `b57c02814cb9737ac4fcc1a277f023a8b039789adc55c10acf60f4fc23ed1287`.
+- GitHub Actions artifact: `sten-knowledge-pack-8bcff642340c6a4d1a524769560bda002629ac1f` (available until 20 December 2026).
+
+This candidate is intended for a closed friends pilot in separate ChatGPT Projects using synthetic or anonymized data. It is not a deployed STEN server/API or a general production SaaS release. The public GitHub Release and Dropbox publication remain owner-controlled and have not been performed.
