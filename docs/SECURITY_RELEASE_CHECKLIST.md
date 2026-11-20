@@ -80,3 +80,21 @@
 - [x] Package manifest: 147/147 tracked paths.
 - [x] Candidate artifact: `sten-source-7d09d2ecd867112bdb5a0261b2d5aa0052bdb1a9`, SHA-256 `91aa5f65deee52b1a3629f778d6629f12e1644a57cfb5657c9c6b00a90b3e11d`, expires 15 December 2026.
 - [ ] Public redistribution rights and public release approval remain owner decisions. Private Project-based user testing can begin without publishing a GitHub Release.
+
+
+## Closed friends-pilot candidate — 20 November 2026
+
+- [x] Main commit: `8bcff642340c6a4d1a524769560bda002629ac1f`.
+- [x] CI run [44680980200](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/44680980200) completed successfully.
+- [x] 139/139 automated tests passed.
+- [x] Evidence Registry validation passed.
+- [x] Source manifest validation passed: 293 tracked files, 293 declared source-manifest paths.
+- [x] High-confidence secret-pattern scan passed: 292 tracked text files and 42,959 added history lines scanned; no high-confidence credential patterns found. This is not a full DLP or privacy audit.
+- [x] Tenant knowledge pack built and allowlist-verified: 11/11 files.
+- [x] Archive SHA-256: `b57c02814cb9737ac4fcc1a277f023a8b039789adc55c10acf60f4fc23ed1287`.
+- [x] GitHub Actions artifact: `sten-knowledge-pack-8bcff642340c6a4d1a524769560bda002629ac1f`; artifact expires 20 December 2026.
+- [ ] Owner has not yet approved a public GitHub Release or public Dropbox distribution link.
+- [ ] Rights to publicly redistribute all generalized methodologies and materials remain subject to owner confirmation.
+- [ ] This candidate is for a closed ChatGPT Project pilot using synthetic/anonymized data, not a production SaaS deployment.
+
+The green run confirms the checks listed above only. It does not validate answer quality across all 77 processes, legal compliance at a restaurant, infrastructure security, or professional outcomes.
