@@ -1,8 +1,8 @@
-# Release package — STEN 0.5.0
+# STEN 0.5.0 — пакет знаний для ChatGPT Project
 
 ## Distribution contract
 
-The user download is a curated ChatGPT Project knowledge pack, not a source-code distribution. It contains:
+Пользовательский архив — это curated knowledge pack для ChatGPT Project, а не исходный код и не развёртываемый сервер. Инструкция для пилотной группы: [PILOT_FRIENDS_GUIDE_RU.md](PILOT_FRIENDS_GUIDE_RU.md). It contains:
 - nine STEN knowledge Markdown files;
 - a separate Project instruction file.
 
@@ -20,7 +20,7 @@ The CI release gate must pass:
 5. tenant archive build and allowlist comparison;
 6. artifact upload.
 
-The archive's `SHA256SUMS.txt` is the integrity reference. `CONTENTS.txt` is the file inventory.
+Архив создаётся скриптом `scripts/create-source-archive.js` из `tenant_distribution.files`; фактическое имя — `sten-knowledge-pack-0.5.0.zip`. `SHA256SUMS.txt` — контрольная сумма, `CONTENTS.txt` — перечень содержимого. `CONTENTS.txt` is the file inventory.
 
 ## Current Dropbox publication record
 
