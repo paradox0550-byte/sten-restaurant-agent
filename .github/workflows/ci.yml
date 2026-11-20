@@ -26,12 +26,12 @@ jobs:
         run: npm run scan:secrets
       - name: Run test suite
         run: npm test
-      - name: Build and verify source archive
+      - name: Build and verify tenant knowledge pack
         run: npm run package:source
       - name: Upload verified source archive and checksums
         uses: actions/upload-artifact@v4
         with:
-          name: sten-source-${{ github.sha }}
+          name: sten-knowledge-pack-${{ github.sha }}
           path: |
             dist/*.zip
             dist/SHA256SUMS.txt
