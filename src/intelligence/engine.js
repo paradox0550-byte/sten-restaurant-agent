@@ -137,8 +137,10 @@ export function buildExpertAnalysis({
     return item.status === "calculated" ? [] : [`${metric}: ${item.reason ?? "unavailable"}`];
   });
   const inputsAssessed = sufficiency.status !== "not_assessed";
+  const retrievalHasResults = retrieval.status === "ok" && retrieval.knowledge.length > 0;
   const readinessIssues = [
     ...(retrieval.status !== "ok" ? [`retrieval: ${retrieval.status}`] : []),
+    ...(!retrievalHasResults ? ["retrieval: no applicable knowledge results"] : []),
     ...(!inputsAssessed ? ["decision inputs: not_assessed"] : []),
     ...(!sufficiency.sufficient ? sufficiency.missing.map(key => `missing input: ${key}`) : []),
     ...analysis.integrity.evidenceIssues, ...analysis.integrity.factIssues, ...analysis.integrity.actionIssues,
@@ -154,6 +156,8 @@ export function buildExpertAnalysis({
     integrity: {
       financialIssues: scenarioIssues, ratioIssues, readinessIssues,
       retrievalAvailable: retrieval.status === "ok",
+      retrievalHasResults,
+      retrievedKnowledgeCount: retrieval.knowledge?.length ?? 0,
       missingInputsBlockDecision: sufficiency.status === "insufficient",
       inputSufficiencyAssessed: inputsAssessed, causalLinksAreNotProof: true
     },
