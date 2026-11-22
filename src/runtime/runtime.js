@@ -13,7 +13,7 @@ export function createStenRuntime({providers,tools,memory,audit,clock=()=>new Da
         const approvalRequest={callId:call.id??null,toolName:call.name,tenantId:tenant,args:structuredClone(call.args??{})};
         const approved=approvedToolCalls.some(item=>item&&item.callId===approvalRequest.callId&&item.toolName===approvalRequest.toolName&&item.tenantId===tenant&&stableJson(item.args??{})===stableJson(approvalRequest.args));
         try{
-          const result=await tools.execute({...call,tenantId:tenant,permissions,approved});
+          const result=await tools.execute({...call,callId:call.id,tenantId:tenant,permissions,approved});
           toolResults.push({id:call.id??null,name:call.name,status:"success",result});
           await audit.write({tenantId:tenant,type:"tool.execution",at:clock(),outcome:"success",metadata:{tool:call.name,callId:call.id??null,approved}});
         }catch(error){
