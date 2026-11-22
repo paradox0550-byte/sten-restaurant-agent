@@ -53,6 +53,7 @@ export function registerSpreadsheetTools({
 
   registry.register({
     name: "spreadsheet.read_xlsx",
+    approval: "not_required",
     description: "Read an XLSX artifact, preserving formulas and cached values separately.",
     schema: { type: "object", required: ["artifactId"], additionalProperties: false, properties: { artifactId: { type: "string" } } },
     execute: async ({ tenantId, artifactId }) => {
@@ -64,6 +65,7 @@ export function registerSpreadsheetTools({
 
   registry.register({
     name: "spreadsheet.validate_formulas",
+    approval: "not_required",
     description: "Audit XLSX formula integrity against approved formulas and independent expected values.",
     schema: { type: "object", required: ["artifactId", "rules"], additionalProperties: false, properties: { artifactId: { type: "string" }, rules: { type: "array" }, requireRulesForEveryFormula: { type: "boolean" } } },
     execute: async ({ tenantId, artifactId, rules, requireRulesForEveryFormula = true }) => {
