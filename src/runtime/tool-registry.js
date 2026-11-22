@@ -9,11 +9,11 @@ export class ToolRegistry{
     this.#tools.set(name,{name,description,schema,approval,execute});return this;
   }
   describe(){return [...this.#tools.values()].map(({name,description,schema,approval})=>({name,description,schema,approval,requiresApproval:approval==="required"}));}
-  async execute({name,args={},tenantId,permissions=[],approved=false}={}){
+  async execute({name,args={},tenantId,permissions=[],approved=false,callId=null}={}){
     const tenant=requireTenantId(tenantId),tool=this.#tools.get(name);
     if(!tool)throw new RuntimeError("TOOL_NOT_FOUND",`Tool is not registered: ${name}`);
     if(!permissions.includes(name))throw new RuntimeError("TOOL_FORBIDDEN",`Tool is not allowed: ${name}`);
-    if(tool.approval==="required"&&approved!==true)throw new RuntimeError("TOOL_APPROVAL_REQUIRED",`Explicit approval is required for tool: ${name}`);
+    if(tool.approval==="required"&&(!callId||typeof callId!=="string"))throw new RuntimeError("TOOL_CALL_ID_REQUIRED",`A stable call id is required for approval-gated tool: ${name}`);\n    if(tool.approval==="required"&&approved!==true)throw new RuntimeError("TOOL_APPROVAL_REQUIRED",`Explicit approval is required for tool: ${name}`);
     const invalid=validateArguments(tool.schema,args);
     if(invalid)throw new RuntimeError("INVALID_TOOL_ARGUMENTS",invalid,{tool:name});
     return tool.execute({...args,tenantId:tenant});
