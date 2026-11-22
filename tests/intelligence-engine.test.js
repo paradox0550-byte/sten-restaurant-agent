@@ -111,6 +111,13 @@ test("expert core delegates restaurant ratios to the existing finance calculator
   assert.equal(result.financialRatios.primeCost.value, 0.55);
 });
 
+test("expert core distinguishes a successful empty search from useful retrieval results", () => {
+  const result = buildExpertAnalysis({ query: "a query with no applicable knowledge", knowledge: [], requiredInputs: ["period"], providedInputs: { period: "2026-10" } });
+  assert.equal(result.retrieval.status, "ok");
+  assert.equal(result.integrity.retrievalHasResults, false);
+  assert.equal(result.readiness, "incomplete");
+});
+
 test("expert core preserves unavailable financial ratios instead of assuming missing inputs are zero", () => {
   const result = buildExpertAnalysis({
     query: "food cost analysis",
