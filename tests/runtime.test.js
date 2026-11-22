@@ -24,6 +24,9 @@ test("action tools pause for approval and execute only after the exact call id i
   const resumed=await runtime.run({tenantId:"a1",providerId:"mock",permissions:["task.create"],approvedToolCalls:[pending.toolResults[0].approvalRequest],toolCalls:[{id:"task-call-1",name:"task.create",args:{title:"Review waste"}}]});
   assert.equal(resumed.status,"completed");
   assert.deepEqual(resumed.toolResults[0].result,{status:"created",title:"Review waste"});assert.deepEqual(executedActions,["Review waste"]);
+  const replay=await runtime.run({tenantId:"a1",providerId:"mock",permissions:["task.create"],approvedToolCalls:[pending.toolResults[0].approvalRequest],toolCalls:[{id:"task-call-1",name:"task.create",args:{title:"Review waste"}}]});
+  assert.equal(replay.toolResults[0].error.code,"TOOL_APPROVAL_REPLAYED");
+  assert.deepEqual(executedActions,["Review waste"]);
 });
 test("action tools cannot be approved by permission alone or with changed arguments",async()=>{const{runtime,executedActions}=setup();const call={id:"c1",name:"task.create",args:{title:"Send order"}};const pending=await runtime.run({tenantId:"t1",providerId:"mock",permissions:["task.create"],toolCalls:[call]});assert.equal(pending.toolResults[0].status,"awaiting_approval");const changed=await runtime.run({tenantId:"t1",providerId:"mock",permissions:["task.create"],approvedToolCalls:[pending.toolResults[0].approvalRequest],toolCalls:[{...call,args:{title:"Send different order"}}]});assert.equal(changed.toolResults[0].status,"awaiting_approval");assert.deepEqual(executedActions,[]);});
 test("memory is isolated by tenant and missing stays explicit",async()=>{const{runtime}=setup();await runtime.writeMemory({tenantId:"a1",namespace:"profile",key:"seats",value:80});assert.equal((await runtime.readMemory({tenantId:"a1",namespace:"profile",key:"seats"})).value,80);assert.equal((await runtime.readMemory({tenantId:"b1",namespace:"profile",key:"seats"})).status,"not_found");});
