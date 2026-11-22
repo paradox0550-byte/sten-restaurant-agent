@@ -1,18 +1,17 @@
 import {RuntimeError,requireTenantId} from "./errors.js";
+const stableJson=value=>JSON.stringify(value,(key,item)=>item&&typeof item==="object"&&!Array.isArray(item)?Object.fromEntries(Object.keys(item).sort().map(k=>[k,item[k]])):item);
 /** Provider-neutral orchestration. Network calls are delegated to injected adapters. */
 export function createStenRuntime({providers,tools,memory,audit,clock=()=>new Date().toISOString()}={}){
   if(!providers||!tools||!memory||!audit)throw new RuntimeError("RUNTIME_DEPENDENCIES_REQUIRED","providers, tools, memory and audit adapters are required.");
   return Object.freeze({
-    async run({tenantId,providerId,messages=[],toolCalls=[],permissions=[],approvedToolCallIds=[],memoryReads=[]}={}){
+    async run({tenantId,providerId,messages=[],toolCalls=[],permissions=[],approvedToolCalls=[],memoryReads=[]}={}){
       const tenant=requireTenantId(tenantId);
-      if(!Array.isArray(messages)||!Array.isArray(toolCalls)||!Array.isArray(memoryReads)||!Array.isArray(approvedToolCallIds))throw new RuntimeError("INVALID_REQUEST","messages, toolCalls, approvedToolCallIds and memoryReads must be arrays.");
-      const approvalIds=approvedToolCallIds.filter(id=>typeof id==="string"&&id.trim());
-      if(new Set(approvalIds).size!==approvalIds.length)throw new RuntimeError("INVALID_APPROVALS","approvedToolCallIds must be unique.");
-      const provider=providers.get(providerId),memoryContext=[];
+      if(!Array.isArray(messages)||!Array.isArray(toolCalls)||!Array.isArray(memoryReads)||!Array.isArray(approvedToolCalls))throw new RuntimeError("INVALID_REQUEST","messages, toolCalls, approvedToolCalls and memoryReads must be arrays.");
+      const provider=providers.get(providerId),memoryContext=[],toolResults=[];
       for(const item of memoryReads)memoryContext.push(await memory.get({...item,tenantId:tenant}));
-      const toolResults=[];
       for(const call of toolCalls){
-        const approved=typeof call.id==="string"&&approvalIds.includes(call.id);
+        const approvalRequest={callId:call.id??null,toolName:call.name,tenantId:tenant,args:structuredClone(call.args??{})};
+        const approved=approvedToolCalls.some(item=>item&&item.callId===approvalRequest.callId&&item.toolName===approvalRequest.toolName&&item.tenantId===tenant&&stableJson(item.args??{})===stableJson(approvalRequest.args));
         try{
           const result=await tools.execute({...call,tenantId:tenant,permissions,approved});
           toolResults.push({id:call.id??null,name:call.name,status:"success",result});
@@ -20,7 +19,7 @@ export function createStenRuntime({providers,tools,memory,audit,clock=()=>new Da
         }catch(error){
           const awaitingApproval=error.code==="TOOL_APPROVAL_REQUIRED";
           const status=awaitingApproval?"awaiting_approval":"error";
-          toolResults.push({id:call.id??null,name:call.name,status,error:{code:error.code??"TOOL_EXECUTION_FAILED",message:error.message}});
+          toolResults.push({id:call.id??null,name:call.name,status,error:{code:error.code??"TOOL_EXECUTION_FAILED",message:error.message},...(awaitingApproval?{approvalRequest}: {})});
           await audit.write({tenantId:tenant,type:awaitingApproval?"tool.approval_required":"tool.execution",at:clock(),outcome:status,metadata:{tool:call.name,callId:call.id??null,code:error.code??"TOOL_EXECUTION_FAILED"}});
         }
       }
