@@ -14,7 +14,7 @@ Stage 6 introduces a provider-neutral execution boundary over the Stage 1–5 me
 
 ## Runtime contract
 createStenRuntime({ providers, tools, memory, audit, clock? }) returns:
-- run({ tenantId, providerId, messages?, toolCalls?, permissions?, memoryReads? })
+- run({ tenantId, providerId, messages?, toolCalls?, permissions?, approvedToolCalls?, memoryReads? })
 - readMemory({ tenantId, namespace, key })
 - writeMemory({ tenantId, namespace, key, value })
 
@@ -26,7 +26,7 @@ Every operation requires a tenantId. Tool execution is deny-by-default: a tool m
 - The in-memory memory and audit adapters are for development/tests only. They are not encrypted, durable, distributed or production-grade.
 - A production deployment must supply persistent tenant-partitioned storage, access controls, encryption, retention/deletion policies, secrets management, rate limits and an independently protected audit store.
 - Do not expose unrestricted filesystem, shell, SQL, network or arbitrary-code tools to the model.
-- Tool permissions must be granted by trusted application policy, not by a model-generated request.
+- Tool permissions must be granted by trusted application policy, not by a model-generated request.\n- Tool registrations default to `approval: "required"`. The host must explicitly register deterministic, non-mutating tools with `approval: "not_required"`; this is a deliberate allowlist, not a model decision.\n- Approval-gated calls require a stable call `id`. The runtime returns an `approvalRequest` containing the tenant, tool name, call id and exact arguments. To resume, the trusted host passes that exact request in `approvedToolCalls`; changed arguments, a different tenant or a different tool do not satisfy the approval.\n- A pending call is returned with `status: "awaiting_approval"` and is not executed. The host is responsible for securely persisting pending calls/approvals if they must survive process restarts, presenting the exact action to an authorized person, and re-submitting the approved request. This in-memory runtime does not claim durable workflow execution.
 
 ## Stage 6 acceptance scope
-CI tests provider injection, tenant-required operations, permission-gated tool calls, argument validation, tenant memory isolation, copy boundaries, audit tenant filtering and provider error propagation. Passing these tests verifies the runtime foundation, not production security certification or live provider connectivity.
+CI tests provider injection, tenant-required operations, permission-gated tool calls, default approval gates for action tools, exact-payload approval matching, argument validation, tenant memory isolation, copy boundaries, audit tenant filtering and provider error propagation. Passing these tests verifies the runtime foundation, not production security certification or live provider connectivity.
