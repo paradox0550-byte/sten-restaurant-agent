@@ -3,6 +3,7 @@ const stableJson=value=>JSON.stringify(value,(key,item)=>item&&typeof item==="ob
 /** Provider-neutral orchestration. Network calls are delegated to injected adapters. */
 export function createStenRuntime({providers,tools,memory,audit,clock=()=>new Date().toISOString()}={}){
   if(!providers||!tools||!memory||!audit)throw new RuntimeError("RUNTIME_DEPENDENCIES_REQUIRED","providers, tools, memory and audit adapters are required.");
+  const consumedApprovals=new Set();
   return Object.freeze({
     async run({tenantId,providerId,messages=[],toolCalls=[],permissions=[],approvedToolCalls=[],memoryReads=[]}={}){
       const tenant=requireTenantId(tenantId);
@@ -11,7 +12,15 @@ export function createStenRuntime({providers,tools,memory,audit,clock=()=>new Da
       for(const item of memoryReads)memoryContext.push(await memory.get({...item,tenantId:tenant}));
       for(const call of toolCalls){
         const approvalRequest={callId:call.id??null,toolName:call.name,tenantId:tenant,args:structuredClone(call.args??{})};
-        const approved=approvedToolCalls.some(item=>item&&item.callId===approvalRequest.callId&&item.toolName===approvalRequest.toolName&&item.tenantId===tenant&&stableJson(item.args??{})===stableJson(approvalRequest.args));
+        const approvalRequired=tools.describe().some(tool=>tool.name===call.name&&tool.requiresApproval===true);
+        const approvalKey=stableJson(approvalRequest);
+        const approved=approvalRequired&&approvedToolCalls.some(item=>item&&item.callId===approvalRequest.callId&&item.toolName===approvalRequest.toolName&&item.tenantId===tenant&&stableJson(item.args??{})===stableJson(approvalRequest.args));
+        if(approved&&consumedApprovals.has(approvalKey)){
+          toolResults.push({id:call.id??null,name:call.name,status:"error",error:{code:"TOOL_APPROVAL_REPLAYED",message:"This approval has already been consumed; request a new approval."}});
+          await audit.write({tenantId:tenant,type:"tool.approval_replayed",at:clock(),outcome:"error",metadata:{tool:call.name,callId:call.id??null}});
+          continue;
+        }
+        if(approved)consumedApprovals.add(approvalKey);
         try{
           const result=await tools.execute({...call,callId:call.id,tenantId:tenant,permissions,approved});
           toolResults.push({id:call.id??null,name:call.name,status:"success",result});
