@@ -1,11 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {ProviderRegistry,ToolRegistry,InMemoryTenantMemory,InMemoryAuditSink,InMemoryApprovalStore,createStenRuntime} from "../src/runtime/index.js";
-function setup(complete=async r=>({text:"ok",receivedTenant:r.tenantId,toolResults:r.toolResults})){\n  const executedActions=[];\n  const providers=new ProviderRegistry().register("mock",{complete});
+function setup(complete=async r=>({text:"ok",receivedTenant:r.tenantId,toolResults:r.toolResults})){
+  const executedActions=[];
+  const providers=new ProviderRegistry().register("mock",{complete});
   const tools=new ToolRegistry()
     .register({name:"finance.ratio",description:"Calculate a ratio.",approval:"not_required",schema:{type:"object",required:["numerator","denominator"],additionalProperties:false,properties:{numerator:{type:"number"},denominator:{type:"number"}}},execute:({numerator,denominator})=>Number.isFinite(numerator)&&Number.isFinite(denominator)&&denominator!==0?{status:"calculated",value:numerator/denominator}:{status:"unavailable",reason:"missing_or_zero_denominator"}})
     .register({name:"task.create",description:"Create a management task.",schema:{type:"object",required:["title"],additionalProperties:false,properties:{title:{type:"string"}}},execute:({title})=>{executedActions.push(title);return{status:"created",title};}});
-  const memory=new InMemoryTenantMemory(),audit=new InMemoryAuditSink(),approvalStore=new InMemoryApprovalStore();\n  return{runtime:createStenRuntime({providers,tools,memory,audit,approvalStore,clock:()=>"2026-11-14T00:00:00.000Z"}),providers,memory,audit,approvalStore,tools,executedActions};
+  const memory=new InMemoryTenantMemory(),audit=new InMemoryAuditSink(),approvalStore=new InMemoryApprovalStore();
+  return{runtime:createStenRuntime({providers,tools,memory,audit,approvalStore,clock:()=>"2026-11-14T00:00:00.000Z"}),providers,memory,audit,approvalStore,tools,executedActions};
 }
 test("tenant identity is required",async()=>{const{runtime}=setup();await assert.rejects(()=>runtime.run({providerId:"mock"}),{code:"TENANT_REQUIRED"});});
 test("provider adapter is injected and vendor-neutral",async()=>{const{runtime}=setup();assert.equal((await runtime.run({tenantId:"restaurant-a",providerId:"mock"})).response.text,"ok");});
