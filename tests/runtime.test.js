@@ -100,3 +100,14 @@ test("agent loop stops safely at the configured step limit",async()=>{
 });
 
 test("agent loop validates the step limit",async()=>{const{runtime}=setup();await assert.rejects(()=>runtime.runAgent({tenantId:"t1",providerId:"mock",maxSteps:21}),{code:"INVALID_MAX_STEPS"});});
+
+test("audit failure after a side effect is not misreported as a tool failure",async()=>{
+  const executed=[];
+  const providers=new ProviderRegistry().register("mock",{async complete(){return{text:"ok"};}});
+  const tools=new ToolRegistry().register({name:"task.write",schema:{type:"object",required:["title"],additionalProperties:false,properties:{title:{type:"string"}}},execute:({title})=>{executed.push(title);return{title};}});
+  const audit={async write(event){if(event.type==="tool.execution")throw new Error("audit unavailable");return{status:"recorded"};}};
+  const runtime=createStenRuntime({providers,tools,memory:new InMemoryTenantMemory(),audit,approvalStore:new InMemoryApprovalStore()});
+  const pending=await runtime.run({tenantId:"tenant-a",providerId:"mock",permissions:["task.write"],toolCalls:[{id:"audit-case-1",name:"task.write",args:{title:"Count cash"}}]});
+  await assert.rejects(()=>runtime.run({tenantId:"tenant-a",providerId:"mock",permissions:["task.write"],approvedToolCalls:[pending.toolResults[0].approvalRequest],toolCalls:[{id:"audit-case-1",name:"task.write",args:{title:"Count cash"}}]}),/audit unavailable/);
+  assert.deepEqual(executed,["Count cash"]);
+});
