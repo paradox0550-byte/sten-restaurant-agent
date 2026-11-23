@@ -19,6 +19,17 @@ function validateRunInput({ messages, toolCalls, memoryReads, approvedToolCalls,
 function callId(call) {
   return typeof call?.id === "string" && call.id.trim() ? call.id : null;
 }
+function validateAgentToolCalls(calls) {
+  const ids = new Set();
+  for (const call of calls) {
+    if (!callId(call) || typeof call.name !== "string" || !call.name.trim() ||
+        !call.args || typeof call.args !== "object" || Array.isArray(call.args)) {
+      throw new RuntimeError("PROVIDER_TOOL_CALL_INVALID", "Each agent tool call requires a stable id, tool name and object args.");
+    }
+    if (ids.has(call.id)) throw new RuntimeError("PROVIDER_TOOL_CALL_ID_DUPLICATE", "Tool call IDs must be unique within a provider turn.");
+    ids.add(call.id);
+  }
+}
 
 /** Provider-neutral runtime. The host injects all I/O adapters and trusted permissions. */
 export function createStenRuntime({ providers, tools, memory, audit, approvalStore = new InMemoryApprovalStore(), clock = () => new Date().toISOString() } = {}) {
@@ -91,6 +102,7 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
   async function runAgent({ tenantId, providerId, messages = [], permissions = [], approvedToolCalls = [], pendingToolCalls = [], memoryReads = [], maxSteps = 8 } = {}) {
     const tenant = requireTenantId(tenantId);
     validateRunInput({ messages, toolCalls: pendingToolCalls, memoryReads, approvedToolCalls, permissions, maxSteps });
+    validateAgentToolCalls(pendingToolCalls);
     const provider = providers.get(providerId);
     const transcript = structuredClone(messages);
     const memoryContext = await loadMemory(tenant, memoryReads);
@@ -120,6 +132,7 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
       lastResponse = await provider.complete({ tenantId: tenant, messages: structuredClone(transcript), memory: memoryContext, availableTools: tools.describe(), step, maxSteps });
       const generatedCalls = lastResponse?.toolCalls ?? lastResponse?.tool_calls ?? [];
       if (!Array.isArray(generatedCalls)) throw new RuntimeError("PROVIDER_TOOL_CALLS_INVALID", "Provider toolCalls must be an array.");
+      validateAgentToolCalls(generatedCalls);
       if (generatedCalls.length === 0) {
         await audit.write({ tenantId: tenant, type: "agent.completed", at: clock(), outcome: "success", metadata: { provider: providerId, steps: step, toolCount: totalToolCalls } });
         return { status: "completed", providerId, steps: step, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
