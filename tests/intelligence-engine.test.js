@@ -111,6 +111,13 @@ test("expert core delegates restaurant ratios to the existing finance calculator
   assert.equal(result.financialRatios.primeCost.value, 0.55);
 });
 
+test("expert core distinguishes a successful empty search from useful retrieval results", () => {
+  const result = buildExpertAnalysis({ query: "a query with no applicable knowledge", knowledge: [], requiredInputs: ["period"], providedInputs: { period: "2026-10" } });
+  assert.equal(result.retrieval.status, "ok");
+  assert.equal(result.integrity.retrievalHasResults, false);
+  assert.equal(result.readiness, "incomplete");
+});
+
 test("expert core preserves unavailable financial ratios instead of assuming missing inputs are zero", () => {
   const result = buildExpertAnalysis({
     query: "food cost analysis",
@@ -121,4 +128,32 @@ test("expert core preserves unavailable financial ratios instead of assuming mis
   assert.equal(result.financialRatios.cogsShare.status, "unavailable");
   assert.equal(result.financialRatios.primeCost.status, "unavailable");
   assert.equal(result.readiness, "incomplete");
+});
+
+test("expert analysis does not let optional unavailable ratios block an unrelated decision", () => {
+  const result = buildExpertAnalysis({
+    query: "shift handover control",
+    knowledge: [{ id: "k-shift", title: "Shift handover control", text: "Shift handover checklist unresolved issues and manager review", topics: ["shift"] }],
+    requiredInputs: ["period"],
+    providedInputs: { period: "2026-10" },
+    financialInputs: { revenue: 1000, cogs: null, kitchenRevenue: 700, kitchenCogs: null, labor: null },
+    actions: [{ ownerRole: "Manager", dueOrTiming: "Next shift", verificationMetric: "handover completion" }]
+  });
+  assert.equal(result.financialRatios.cogsShare.status, "unavailable");
+  assert.equal(result.readiness, "reviewable");
+  assert.deepEqual(result.integrity.ratioIssues, []);
+});
+
+test("expert analysis blocks a declared required financial metric that is unavailable", () => {
+  const result = buildExpertAnalysis({
+    query: "food cost analysis",
+    knowledge: [{ id: "k-fin", title: "Food cost", text: "Kitchen revenue and kitchen COGS food cost", topics: ["finance"] }],
+    requiredInputs: ["period"],
+    providedInputs: { period: "2026-10" },
+    financialInputs: { revenue: 1000, cogs: 300, kitchenRevenue: 700, kitchenCogs: null, labor: 250 },
+    requiredFinancialMetrics: ["kitchenFoodCost"],
+    actions: [{ ownerRole: "Manager", dueOrTiming: "Before menu approval", verificationMetric: "Food cost %" }]
+  });
+  assert.equal(result.readiness, "incomplete");
+  assert.ok(result.integrity.ratioIssues.some(issue => issue.includes("kitchenFoodCost")));
 });

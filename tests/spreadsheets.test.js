@@ -108,6 +108,8 @@ test("agent tools create and read tenant-scoped XLSX artifacts through the runti
   const registry = registerSpreadsheetTools({ registry: new ToolRegistry(), artifacts });
   const created = await registry.execute({
     name: "spreadsheet.create_xlsx",
+    callId: "create-report-1",
+    approved: true,
     tenantId: "restaurant-a",
     permissions: ["spreadsheet.create_xlsx"],
     args: { title: "Shift report", sheets: [{ name: "Summary", rows: [["Revenue"], [1000]] }] },
