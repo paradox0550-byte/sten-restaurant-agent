@@ -45,8 +45,9 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
         item.tenantId === tenantId && stableJson(item.args ?? {}) === stableJson(request.args)
       );
       try {
-        const result = await tools.execute({ ...call, callId: id, tenantId, permissions, approved });
         if (approved) {
+          if (typeof tools.validateCall !== "function") throw new RuntimeError("TOOL_VALIDATOR_REQUIRED", "Approval-gated tools require a registry with validateCall().");
+          tools.validateCall({ ...call, callId: id, tenantId, permissions });
           const consumed = await approvalStore.consume({ tenantId, fingerprint: approvalFingerprint(request) });
           if (!consumed) {
             results.push({ id, name: call.name, status: "error", error: { code: "TOOL_APPROVAL_REPLAYED", message: "This approval has already been consumed; request a new approval." } });
@@ -54,6 +55,7 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
             continue;
           }
         }
+        const result = await tools.execute({ ...call, callId: id, tenantId, permissions, approved });
         results.push({ id, name: call.name, status: "success", result });
         await audit.write({ tenantId, type: "tool.execution", at: clock(), outcome: "success", metadata: { tool: call.name, callId: id, approved } });
       } catch (error) {
