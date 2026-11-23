@@ -92,16 +92,18 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
     const transcript = structuredClone(messages);
     const memoryContext = await loadMemory(tenant, memoryReads);
     let totalToolCalls = 0;
+    const allToolResults = [];
     let lastResponse = null;
 
     // Resume a human-approved action before asking the model to plan another step.
     if (pendingToolCalls.length) {
       const resumed = await executeCalls({ tenantId: tenant, toolCalls: pendingToolCalls, permissions, approvedToolCalls });
       totalToolCalls += pendingToolCalls.length;
+      allToolResults.push(...resumed);
       const pending = resumed.filter(item => item.status === "awaiting_approval");
-      if (pending.length) return { status: "awaiting_approval", providerId, steps: 0, memory: memoryContext, toolResults: resumed, pendingToolCalls, response: null };
+      if (pending.length) return { status: "awaiting_approval", providerId, steps: 0, memory: memoryContext, toolResults: allToolResults, pendingToolCalls, response: null };
       transcript.push({ role: "tool", content: JSON.stringify(resumed) });
-      if (resumed.some(item => item.status === "error")) return { status: "needs_attention", providerId, steps: 0, memory: memoryContext, toolResults: resumed, response: null };
+      if (resumed.some(item => item.status === "error")) return { status: "needs_attention", providerId, steps: 0, memory: memoryContext, toolResults: allToolResults, response: null };
     }
 
     for (let step = 1; step <= maxSteps; step += 1) {
@@ -110,29 +112,30 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
       if (!Array.isArray(generatedCalls)) throw new RuntimeError("PROVIDER_TOOL_CALLS_INVALID", "Provider toolCalls must be an array.");
       if (generatedCalls.length === 0) {
         await audit.write({ tenantId: tenant, type: "agent.completed", at: clock(), outcome: "success", metadata: { provider: providerId, steps: step, toolCount: totalToolCalls } });
-        return { status: "completed", providerId, steps: step, memory: memoryContext, toolResults: [], response: lastResponse };
+        return { status: "completed", providerId, steps: step, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
       }
       totalToolCalls += generatedCalls.length;
       transcript.push(lastResponse.message && typeof lastResponse.message === "object"
         ? structuredClone(lastResponse.message)
         : { role: "assistant", content: typeof lastResponse.text === "string" ? lastResponse.text : "" });
       const results = await executeCalls({ tenantId: tenant, toolCalls: generatedCalls, permissions, approvedToolCalls });
+      allToolResults.push(...results);
       const pending = results.filter(item => item.status === "awaiting_approval");
       transcript.push({ role: "tool", content: JSON.stringify(results) });
       if (pending.length) {
         await audit.write({ tenantId: tenant, type: "agent.paused_for_approval", at: clock(), outcome: "awaiting_approval", metadata: { provider: providerId, step, pendingCount: pending.length } });
         return {
           status: "awaiting_approval", providerId, steps: step, memory: memoryContext,
-          toolResults: results, pendingToolCalls: generatedCalls.filter(call => pending.some(item => item.id === callId(call))),
+          toolResults: allToolResults, pendingToolCalls: generatedCalls.filter(call => pending.some(item => item.id === callId(call))),
           approvalRequests: pending.map(item => item.approvalRequest), response: lastResponse
         };
       }
       if (results.some(item => item.status === "error")) {
-        return { status: "needs_attention", providerId, steps: step, memory: memoryContext, toolResults: results, response: lastResponse };
+        return { status: "needs_attention", providerId, steps: step, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
       }
     }
     await audit.write({ tenantId: tenant, type: "agent.step_limit_reached", at: clock(), outcome: "needs_attention", metadata: { provider: providerId, maxSteps, toolCount: totalToolCalls } });
-    return { status: "max_steps_reached", providerId, steps: maxSteps, memory: memoryContext, toolResults: [], response: lastResponse };
+    return { status: "max_steps_reached", providerId, steps: maxSteps, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
   }
 
   return Object.freeze({
