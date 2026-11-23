@@ -61,7 +61,8 @@ test("agent loop pauses for human approval and resumes the exact pending action"
   const pending=await runtime.runAgent({tenantId:"restaurant-a",providerId:"mock",permissions:["task.create"]});
   assert.equal(pending.status,"awaiting_approval");
   assert.deepEqual(executedActions,[]);
-  assert.equal(pending.pendingToolCalls.length,1);\n  assert.ok(Array.isArray(pending.resumeMessages));
+  assert.equal(pending.pendingToolCalls.length,1);
+  assert.ok(Array.isArray(pending.resumeMessages));
   const resumed=await runtime.runAgent({
     tenantId:"restaurant-a",providerId:"mock",permissions:["task.create"],
     pendingToolCalls:pending.pendingToolCalls,approvedToolCalls:pending.approvalRequests,messages:pending.resumeMessages
