@@ -148,3 +148,9 @@ test("agent resume keeps already executed actions out of the pending batch",asyn
   assert.equal(finished.status,"completed");
   assert.deepEqual(executedActions,["Check fridge","Check freezer"]);
 });
+
+test("agent loop rejects oversized provider tool batches before execution",async()=>{
+  const {runtime,executedActions}=setup(async()=>({toolCalls:Array.from({length:11},(_,i)=>({id:"batch-"+i,name:"task.create",args:{title:"Task "+i}}))}));
+  await assert.rejects(()=>runtime.runAgent({tenantId:"tenant-a",providerId:"mock",permissions:["task.create"]}),{code:"PROVIDER_TOOL_BATCH_LIMIT"});
+  assert.deepEqual(executedActions,[]);
+});
