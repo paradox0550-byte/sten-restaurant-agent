@@ -111,3 +111,40 @@ test("audit failure after a side effect is not misreported as a tool failure",as
   await assert.rejects(()=>runtime.run({tenantId:"tenant-a",providerId:"mock",permissions:["task.write"],approvedToolCalls:[pending.toolResults[0].approvalRequest],toolCalls:[{id:"audit-case-1",name:"task.write",args:{title:"Count cash"}}]}),/audit unavailable/);
   assert.deepEqual(executed,["Count cash"]);
 });
+
+test("agent loop requires unique stable IDs for each provider tool call",async()=>{
+  const {runtime}=setup(async()=>({toolCalls:[
+    {id:"same-id",name:"finance.ratio",args:{numerator:1,denominator:2}},
+    {id:"same-id",name:"finance.ratio",args:{numerator:2,denominator:4}}
+  ]}));
+  await assert.rejects(()=>runtime.runAgent({tenantId:"tenant-a",providerId:"mock",permissions:["finance.ratio"]}),{code:"PROVIDER_TOOL_CALL_ID_DUPLICATE"});
+});
+
+test("agent resume keeps already executed actions out of the pending batch",async()=>{
+  let calls=0;
+  const {runtime,executedActions}=setup(async()=>{
+    calls++;
+    return calls===1
+      ? {toolCalls:[
+          {id:"multi-1",name:"task.create",args:{title:"Check fridge"}},
+          {id:"multi-2",name:"task.create",args:{title:"Check freezer"}}
+        ]}
+      : {text:"Both checks are now assigned."};
+  });
+  const initial=await runtime.runAgent({tenantId:"tenant-a",providerId:"mock",permissions:["task.create"]});
+  const partial=await runtime.runAgent({
+    tenantId:"tenant-a",providerId:"mock",permissions:["task.create"],messages:initial.resumeMessages,
+    pendingToolCalls:initial.pendingToolCalls,approvedToolCalls:[initial.approvalRequests[0]]
+  });
+  assert.equal(partial.status,"awaiting_approval");
+  assert.deepEqual(executedActions,["Check fridge"]);
+  assert.deepEqual(partial.pendingToolCalls.map(call=>call.id),["multi-2"]);
+  assert.equal(partial.approvalRequests.length,1);
+  assert.equal(partial.approvalRequests[0].callId,"multi-2");
+  const finished=await runtime.runAgent({
+    tenantId:"tenant-a",providerId:"mock",permissions:["task.create"],messages:partial.resumeMessages,
+    pendingToolCalls:partial.pendingToolCalls,approvedToolCalls:partial.approvalRequests
+  });
+  assert.equal(finished.status,"completed");
+  assert.deepEqual(executedActions,["Check fridge","Check freezer"]);
+});
