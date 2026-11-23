@@ -32,12 +32,12 @@ Tool registrations default to `approval: "required"`. Deterministic, read-only t
 
 For an approval-gated action:
 1. The runtime returns `status: "awaiting_approval"`, the exact `approvalRequests`, `pendingToolCalls` and `resumeMessages`.
-2. The host displays the exact action and its arguments to an authorized person; approval must not be inferred from model text or tool permissions.
+2. The host displays the exact action and its arguments to an authorized person; approval must not be inferred from model text or tool permissions. The returned approval request is a data record, not a cryptographic signature: the host must protect it against tampering and bind the approval to an authenticated actor.
 3. The host resumes by passing the returned `pendingToolCalls`, `approvalRequests` as `approvedToolCalls`, and `resumeMessages` as `messages`.
 4. The approval is bound to tenant, tool, call ID and exact arguments. A changed payload, tool or tenant does not match.
 5. The approval ledger consumes each exact approval once. Replays return `TOOL_APPROVAL_REPLAYED`. Consumption occurs immediately before execution; if execution itself fails, the host must request a fresh approval before retrying.
 
-The included `InMemoryApprovalStore` shares replay protection only among runtime instances that share that object and only for the lifetime of the process. Production must inject a durable, atomic `consume({ tenantId, fingerprint })` implementation backed by persistent storage with a uniqueness/transaction guarantee. Persist pending calls and resume transcripts securely as well. The package does not claim durable workflow recovery by itself.
+The included `InMemoryApprovalStore` shares replay protection only among runtime instances that share that object and only for the lifetime of the process. Production must inject a durable, atomic `consume({ tenantId, fingerprint })` implementation backed by persistent storage with a uniqueness/transaction guarantee. It must return `true` only for the first successful consumption and `false` for every replay. Persist pending calls and resume transcripts securely as well. The package does not claim durable workflow recovery by itself.
 
 ## Security and production boundaries
 - Provider adapters are injected by the host; no API keys or vendor SDKs are included.
