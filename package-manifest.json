@@ -456,9 +456,9 @@
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 134,
+    "total_expected": 135,
     "command": "npm test",
-    "runtime_layer": 23,
+    "runtime_layer": 24,
     "retrieval_layer": 16,
     "workflow_layer": 6,
     "horeca_taxonomy": 4,
