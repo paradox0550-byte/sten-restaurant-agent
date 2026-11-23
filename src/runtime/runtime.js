@@ -104,7 +104,14 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
       totalToolCalls += pendingToolCalls.length;
       allToolResults.push(...resumed);
       const pending = resumed.filter(item => item.status === "awaiting_approval");
-      if (pending.length) return { status: "awaiting_approval", providerId, steps: 0, memory: memoryContext, toolResults: allToolResults, pendingToolCalls, resumeMessages: transcript, response: null };
+      if (pending.length) {
+        const pendingIds = new Set(pending.map(item => item.id));
+        return {
+          status: "awaiting_approval", providerId, steps: 0, memory: memoryContext,
+          toolResults: allToolResults, pendingToolCalls: pendingToolCalls.filter(call => pendingIds.has(callId(call))),
+          approvalRequests: pending.map(item => item.approvalRequest), resumeMessages: transcript, response: null
+        };
+      }
       transcript.push({ role: "tool", content: JSON.stringify(resumed) });
       if (resumed.some(item => item.status === "error")) return { status: "needs_attention", providerId, steps: 0, memory: memoryContext, toolResults: allToolResults, response: null };
     }
