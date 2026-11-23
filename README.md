@@ -58,7 +58,7 @@ The `src/workflow/` module implements analysis-gated action planning, controlled
 
 ## Runtime layer (Stage 6)
 
-A provider-neutral runtime foundation is available in `src/runtime/`. It injects provider, tool, memory and audit adapters; requires tenant identity; and gates every tool call behind explicit host-granted permissions. The included memory and audit adapters are development/test implementations only. See `docs/runtime-integration.md` before connecting a host application.
+A provider-neutral runtime foundation is available in `src/runtime/`. It injects provider, tool, memory, audit and approval-ledger adapters; requires tenant identity and host-granted per-call permissions; and provides a bounded provider/tool loop with human-approval pause/resume. The included memory, audit and approval-ledger adapters are development/test implementations only. Durable approvals, pending-run persistence, authentication and downstream idempotency remain host responsibilities. See `docs/runtime-integration.md` before connecting a host application.
 
 ## Continuous Restaurant Memory — Stages 6, 11 and 12
 
