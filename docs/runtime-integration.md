@@ -25,7 +25,7 @@ The injected provider's `complete(request)` may return:
 - `{ text, message?, toolCalls: [{ id, name, args }] }` when requesting tools; each call needs a stable unique ID.
 - `{ text, message? }` when the assistant turn is complete.
 
-After each tool batch, the runtime appends the assistant/tool result records to the transcript and calls the provider again. It stops on a final provider response, a human-approval pause, a tool error, or the step limit. The runtime returns all tool outcomes across the loop. This is a host adapter contract; it does not claim compatibility with every provider's native wire format without an adapter.
+After each tool batch, the runtime appends the assistant/tool result records to the transcript and calls the provider again. It stops on a final provider response, a human-approval pause, a tool error, or the step limit. The runtime returns all tool outcomes across the loop. Each provider turn is limited to 10 tool calls and one run is limited to 40 total tool calls to bound runaway execution. This is a host adapter contract; it does not claim compatibility with every provider's native wire format without an adapter.
 
 ### Approval pause and resume
 Tool registrations default to `approval: "required"`. Deterministic, read-only tools may be explicitly allowlisted with `approval: "not_required"`. Permissions must still be granted by trusted host policy in both cases.
