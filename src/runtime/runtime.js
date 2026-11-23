@@ -44,6 +44,7 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
         item && item.callId === request.callId && item.toolName === request.toolName &&
         item.tenantId === tenantId && stableJson(item.args ?? {}) === stableJson(request.args)
       );
+      let result;
       try {
         if (approved) {
           if (typeof tools.validateCall !== "function") throw new RuntimeError("TOOL_VALIDATOR_REQUIRED", "Approval-gated tools require a registry with validateCall().");
@@ -55,9 +56,7 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
             continue;
           }
         }
-        const result = await tools.execute({ ...call, callId: id, tenantId, permissions, approved });
-        results.push({ id, name: call.name, status: "success", result });
-        await audit.write({ tenantId, type: "tool.execution", at: clock(), outcome: "success", metadata: { tool: call.name, callId: id, approved } });
+        result = await tools.execute({ ...call, callId: id, tenantId, permissions, approved });
       } catch (error) {
         const awaitingApproval = error.code === "TOOL_APPROVAL_REQUIRED";
         const status = awaitingApproval ? "awaiting_approval" : "error";
@@ -67,7 +66,11 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
           ...(awaitingApproval ? { approvalRequest: request } : {})
         });
         await audit.write({ tenantId, type: awaitingApproval ? "tool.approval_required" : "tool.execution", at: clock(), outcome: status, metadata: { tool: call?.name ?? null, callId: id, code: error.code ?? "TOOL_EXECUTION_FAILED" } });
+        continue;
       }
+      // Keep audit failures outside the tool-execution catch: a side effect may already have happened.
+      results.push({ id, name: call.name, status: "success", result });
+      await audit.write({ tenantId, type: "tool.execution", at: clock(), outcome: "success", metadata: { tool: call.name, callId: id, approved } });
     }
     return results;
   }
