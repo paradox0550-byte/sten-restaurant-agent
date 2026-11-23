@@ -20,6 +20,7 @@ function callId(call) {
   return typeof call?.id === "string" && call.id.trim() ? call.id : null;
 }
 function validateAgentToolCalls(calls) {
+  if (calls.length > 10) throw new RuntimeError("PROVIDER_TOOL_BATCH_LIMIT", "A provider turn may contain at most 10 tool calls.");
   const ids = new Set();
   for (const call of calls) {
     if (!callId(call) || typeof call.name !== "string" || !call.name.trim() ||
@@ -136,6 +137,10 @@ export function createStenRuntime({ providers, tools, memory, audit, approvalSto
       if (generatedCalls.length === 0) {
         await audit.write({ tenantId: tenant, type: "agent.completed", at: clock(), outcome: "success", metadata: { provider: providerId, steps: step, toolCount: totalToolCalls } });
         return { status: "completed", providerId, steps: step, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
+      }
+      if (totalToolCalls + generatedCalls.length > 40) {
+        await audit.write({ tenantId: tenant, type: "agent.tool_call_limit_reached", at: clock(), outcome: "needs_attention", metadata: { provider: providerId, limit: 40, attemptedTotal: totalToolCalls + generatedCalls.length } });
+        return { status: "max_tool_calls_reached", providerId, steps: step, memory: memoryContext, toolResults: allToolResults, response: lastResponse };
       }
       totalToolCalls += generatedCalls.length;
       transcript.push(lastResponse.message && typeof lastResponse.message === "object"
