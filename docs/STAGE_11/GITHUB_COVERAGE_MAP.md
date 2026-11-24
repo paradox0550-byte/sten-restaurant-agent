@@ -4,7 +4,7 @@
 
 | Canonical source | Plugin destination | Transfer status |
 |---|---|---|
-| `providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md` | `sten-core-knowledge/references/01-core-rules-and-evidence.md` | Full file copy |
+| `providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md` | `DUMRAUF-core-knowledge/references/01-core-rules-and-evidence.md` | Full file copy |
 | `02-restaurant-management-and-shift.md` | matching reference | Full file copy |
 | `03-guest-service-and-recovery.md` | matching reference | Full file copy |
 | `04-food-safety-haccp-marking.md` | matching reference | Full file copy |
