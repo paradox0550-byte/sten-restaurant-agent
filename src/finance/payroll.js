@@ -5,7 +5,7 @@
  */
 const finite = Number.isFinite;
 
-export function calculatePayroll(rows, { currency = "RUB" } = {}) {
+export function calculatePayroll(rows, { currency = null } = {}) {
   if (!Array.isArray(rows) || rows.length === 0) {
     return {
       status: "insufficient_data",
@@ -24,7 +24,7 @@ export function calculatePayroll(rows, { currency = "RUB" } = {}) {
   const missingData = [];
   let partialAccrued = 0;
   let partialOvertime = 0;
-  let totalComplete = true;
+  let totalComplete = Boolean(currency);
   let hoursComplete = true;
   let knownHours = 0;
 
