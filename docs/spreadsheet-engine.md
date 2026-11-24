@@ -59,3 +59,26 @@ The Yandex adapter uses the official Yandex Disk REST API upload-link flow, then
 - The host must enforce tenant scope and user consent before cloud writes. To make spreadsheet operations callable by the agent runtime, register the exported `registerSpreadsheetTools({ registry, artifacts, getGoogleAccessToken, getYandexDiskAccessToken, getPdfFontPath })` helper. The artifact store must enforce tenant-scoped `save({ tenantId, name, mimeType, buffer })` and `get({ tenantId, artifactId })`; token/font resolvers are trusted host callbacks and must never be model-controlled.
 - Cloud calls use explicit adapters and can be disabled by omitting credentials.
 - Local file generation does not itself upload or share a document.
+
+
+## Agent workflow for uploaded reports
+
+A trusted host may inject `resolveUploadedFile({ tenantId, uploadId })` into `registerSpreadsheetTools()`. The resolver must authorize the upload against the authenticated tenant and return its bytes; model arguments must never contain arbitrary filesystem paths or URLs. The import tool copies the original XLSX into the tenant-scoped artifact store, applies a byte limit (25 MiB by default) and a total-cell limit (500,000 by default), and returns sheet dimensions plus a 10-row preview.
+
+For large workbooks, the agent should:
+1. inspect workbook metadata and preview before deciding what to read;
+2. identify header rows, period, outlet, sales channel and units from the actual source;
+3. read further data using `spreadsheet.read_xlsx_range` in windows of at most 500 rows;
+4. reconcile row counts and source totals before calculating;
+5. create the requested workbook with `spreadsheet.create_xlsx`;
+6. return the artifact's download URL only when the host artifact store actually supplies one.
+
+The import and range tools are registered only when a trusted upload resolver is configured. A downloadable URL is returned only when the artifact store's `save()` result includes `downloadUrl`. The repository does not include a production upload resolver, durable artifact store, signed-download service or deployed API. Those remain host deployment responsibilities.
+
+### Menu low-seller report contract
+
+A low-sales list is a screening report, not an automatic delisting decision. Keep source facts separate from computed metrics. At minimum, report item ID/name, units sold, net revenue (only if reconciled), share of item units, available selling days or availability, and source sheet/row lineage. Include contribution and Food Cost only when valid recipe/variable-cost data for the same period and scope are supplied. Do not invent popularity thresholds: show a ranked list by default and apply ABC/menu-engineering classes only with explicitly approved thresholds. Flag stock-outs, stop-list periods, new items, seasonality, channel mix and incomplete exports. Do not recommend removing a dish solely because it sold few units.
+
+### Formula and quality boundary
+
+The XLSX reader preserves formula text and cached values separately. ExcelJS does not calculate arbitrary formulas. Reconcile calculations independently in STEN's deterministic domain logic; do not treat a missing cached value as zero or as a validated result. Keep the uploaded original unchanged.
