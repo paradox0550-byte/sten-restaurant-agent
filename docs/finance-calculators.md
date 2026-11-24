@@ -21,7 +21,7 @@ This is a management P&L calculation, not a statutory accounting or tax return. 
 
 ## Payroll contract
 
-`src/finance/payroll.js` calculates accrued amounts before taxes and deductions:
+`src/finance/payroll.js` calculates accrued amounts before taxes and deductions. Currency must be supplied explicitly through the `currency` option; no currency is assumed:
 - hourly: regular hours × hourly rate;
 - shift: shifts × rate per shift; hours per shift must be explicit;
 - salary: salary periods × rate; period count must be explicit.
