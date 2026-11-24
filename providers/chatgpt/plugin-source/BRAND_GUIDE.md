@@ -14,7 +14,7 @@ A premium, calm and precise business intelligence and management platform. The i
 - Author signature: by Dumrauf, used as a secondary endorsement.
 - Standalone mark: a custom geometric D monogram built from a precise vertical stem and a controlled open curve.
 - The wordmark must work in light and dark contexts and remain legible at small sizes.
-- No legacy STEN letters, initials or three-bar symbol.
+- No obsolete initials or three-bar symbol.
 
 ## Palette
 - Obsidian: #0B1117
@@ -27,4 +27,4 @@ A premium, calm and precise business intelligence and management platform. The i
 Use a modern neutral sans-serif, restrained tracking, strong hierarchy and generous whitespace. Prefer typographic confidence over decorative graphics. Teal is an accent, not a large gradient. Use flat backgrounds and subtle separators.
 
 ## Do not use
-Chef hats, forks, knives, plates, crowns, heraldry, restaurant stock clichés, metallic gold, complex letter sculptures, excessive glow, ornamental waves, generic AI brain/circuit imagery, or the old STEN mark.
+Chef hats, forks, knives, plates, crowns, heraldry, restaurant stock clichés, metallic gold, complex letter sculptures, excessive glow, ornamental waves, generic AI brain/circuit imagery, or obsolete legacy marks.
