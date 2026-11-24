@@ -1,5 +1,8 @@
 import { buildExpertContext } from "../retrieval/context.js";
 import { calculateCostRatios } from "../finance/ratios.js";
+import { calculateRestaurantPnl } from "../finance/pnl.js";
+import { calculatePayroll } from "../finance/payroll.js";
+import { analyzePlanFactVariances } from "../finance/variances.js";
 
 const EVIDENCE_CLASSES = new Set(["CORE", "LAW", "RESEARCH", "INDUSTRY", "PRACTICE", "TREND", "HYPOTHESIS", "CONFIGURATION"]);
 const FACT_STATUSES = new Set(["observed", "calculated", "interpreted", "hypothesis", "unknown"]);
@@ -115,12 +118,15 @@ export function buildAnalysis(input = {}) { return buildAnalysisEnvelope(input);
 export function buildExpertAnalysis({
   query, profile = {}, knowledge = [], registry = EMPTY_REGISTRY, requiredInputs = [], providedInputs = {},
   facts = [], hypotheses = [], causalLinks = [], decisionScenarios = [], financialInputs = null,
-  requiredFinancialMetrics = [], actions = [], limit = 12
+  requiredFinancialMetrics = [], pnlInput = null, payrollRows = null, varianceInput = null, actions = [], limit = 12
 } = {}) {
   const retrieval = buildExpertContext({ query, profile, knowledge, registry, limit });
   const sufficiency = assessInputSufficiency({ required: requiredInputs, provided: providedInputs });
   const financialAssessments = decisionScenarios.map(compareDecisionScenarios);
   const financialRatios = financialInputs && typeof financialInputs === "object" ? calculateCostRatios(financialInputs) : null;
+  const pnl = pnlInput && typeof pnlInput === "object" ? calculateRestaurantPnl(pnlInput) : null;
+  const payroll = Array.isArray(payrollRows) ? calculatePayroll(payrollRows) : null;
+  const variances = varianceInput && Array.isArray(varianceInput.rows) ? analyzePlanFactVariances(varianceInput.rows, varianceInput.options ?? {}) : null;
   const normalizedCausalLinks = causalLinks.map((link, index) => ({ ...link, id: link.id ?? `causal-hypothesis-${index + 1}`, label: "HYPOTHESIS", verificationRequired: true }));
   const retrievedEvidence = retrieval.status === "ok" ? retrieval.evidence.filter(item => item.adaptedEvidence).map(item => item.adaptedEvidence) : [];
   const suppliedEvidence = Array.isArray(providedInputs.evidence) ? providedInputs.evidence : [];
@@ -151,7 +157,7 @@ export function buildExpertAnalysis({
   return {
     stage: 12, engineVersion: analysis.engineVersion,
     status: ready ? "analysis_ready_for_review" : "analysis_needs_review",
-    retrieval, sufficiency, analysis, causalLinks: normalizedCausalLinks, financialAssessments, financialRatios,
+    retrieval, sufficiency, analysis, causalLinks: normalizedCausalLinks, financialAssessments, financialRatios, pnl, payroll, variances,
     recommendations: analysis.actions,
     integrity: {
       financialIssues: scenarioIssues, ratioIssues, readinessIssues,
