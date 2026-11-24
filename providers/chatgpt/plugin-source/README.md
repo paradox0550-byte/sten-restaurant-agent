@@ -1,31 +1,39 @@
-# STEN AI — ChatGPT plugin v0.4.0
+# STEN AI — ChatGPT plugin source
 
-STEN AI — управленческий интеллект для ресторанного бизнеса: 21 специализированное направление, анализ документов и финансов на основе проверяемых источников.
+This directory is the repository-controlled source package for the existing private ChatGPT plugin. The installed plugin is a deployment artifact; edit these files in GitHub and rebuild rather than editing Plugin Creator directly.
 
-## 21 навыков
-- `general` — Общие запросы и безопасный выбор режима
-- `finance` — Финансы ресторана
-- `excel` — Excel и табличные данные
-- `operations` — Операционное управление
-- `people` — HR и персональные данные
-- `marketing` — Маркетинг ресторана
-- `procurement` — Закупки и поставщики
-- `fire_safety` — Пожарная безопасность
-- `bar_wine` — Бар и алкоголь
-- `labor_law` — Трудовое право
-- `occupational_safety` — Охрана труда
-- `compliance` — Санитария и комплаенс
-- `staff_management` — Управление персоналом
-- `franchise` — Франчайзинг
-- `iiko_inventory` — iiko и складской учет
-- `brand_strength` — Сила бренда
-- `process_architecture` — Архитектура процессов
-- `opening_and_governance` — Открытие и управление объектом
-- `accountability` — Ответственность и исполнение
-- `secretary` — Секретарь руководителя
-- `management` — Ситуационное управление
+## 27 skill files
 
-## Принципы
+- general — Общие запросы и безопасный выбор режима
+- finance — Финансы ресторана
+- excel — Excel и табличные данные
+- operations — Операционное управление
+- people — HR и персональные данные
+- marketing — Маркетинг ресторана
+- procurement — Закупки и поставщики
+- fire_safety — Пожарная безопасность
+- bar_wine — Бар и алкоголь
+- labor_law — Трудовое право
+- occupational_safety — Охрана труда
+- compliance — Санитария и комплаенс
+- staff_management — Управление персоналом
+- franchise — Франчайзинг
+- iiko_inventory — iiko и складской учет
+- brand_strength — Сила бренда
+- process_architecture — Архитектура процессов
+- opening_and_governance — Открытие и управление объектом
+- accountability — Ответственность и исполнение
+- secretary — Секретарь руководителя
+- management — Ситуационное управление
+- document-analysis — Анализ документов
+- financial-reconciliation — Сверка банка, POS и ОФД
+- management-decisions — Управленческие решения
+- restaurant-finance — Финансовый анализ ресторана
+- sten-core-knowledge — Базовая база знаний STEN
+- sten-director — Основной управляющий агент
+
+## Non-negotiable principles
+
 - No source = No fact
 - Calculation before interpretation
 - Missing is not zero
@@ -33,11 +41,10 @@ STEN AI — управленческий интеллект для рестор�
 - Источники, формулы, ограничения и неизвестные данные должны быть видимы
 - Не заявлять о подключении к iiko, банку, ОФД или другим системам без действующего инструмента
 
-## Проверка
-Пакет содержит 21 отдельный SKILL.md и каталог skills/SKILLS_CATALOG.md. Наличие файлов не приравнивается к успешному end-to-end тестированию. Состояние тестов и ограничения описаны в каталоге навыков.
+## Verification
 
-## Логотип
-Существующие фирменные SVG-файлы STEN AI (знак, wordmark и app icon) сохраняются в текущем релизе плагина. Стиль: графит, белый и бирюзовый акцент.
+The package contains 27 individual SKILL.md files. A skill file is not proof of successful end-to-end testing. Test coverage and maturity must be reported only from reproducible checks.
 
-## Конфиденциальность
-В пакет не включаются документы клиентов, банковские выписки, зарплаты, персональные данные, секреты, токены или конфигурация инфраструктуры.
+## Privacy
+
+Do not include client documents, bank statements, payroll, personal data, secrets, tokens or infrastructure configuration in the package.
