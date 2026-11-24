@@ -45,7 +45,7 @@ export function calculateRestaurantPnl({ lines = [], scope, period, currency, ta
   };
   const amountMetric = (amount, formula, inputKeys) => metric(amount, formula, ids(...inputKeys), inputKeys.flatMap(missing));
   const result = {
-    status: missingContext.length ? "insufficient_context" : "calculated_with_gaps",
+    status: missingContext.length ? "insufficient_context" : "pending",
     convention: "revenue_positive_expenses_negative",
     context: requiredContext,
     missingContext,
@@ -65,7 +65,8 @@ export function calculateRestaurantPnl({ lines = [], scope, period, currency, ta
       ebitda: metric(ebitda, "grossProfit + labor + overtime + opex", ids("revenue","discounts_refunds","cogs","labor","overtime","opex"), ["revenue","discounts_refunds","cogs","labor","overtime","opex"].flatMap(missing)),
       netProfit: metric(netProfit, "EBITDA + depreciation + interest + tax", ids("revenue","discounts_refunds","cogs","labor","overtime","opex","depreciation","interest","tax"), ["revenue","discounts_refunds","cogs","labor","overtime","opex","depreciation","interest","tax"].flatMap(missing))
     },
-    missingData: [...new Set([...missingContext, ...categories.filter(key => input[key].missing.length).map(key => key + (input[key].missing[0].includes(":") ? "" : ""))])]
+    missingData: [...new Set([...missingContext, ...categories.filter(key => input[key].missing.length).map(key => key)])]
   };
+  result.status = result.missingData.length === 0 ? "calculated" : "calculated_with_gaps";
   return result;
 }
