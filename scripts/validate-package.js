@@ -40,6 +40,6 @@ if (!String(manifest.stage_status?.["14"] ?? "").includes("in_progress")) fail("
 const claudeMcp = JSON.parse(fs.readFileSync("providers/claude/mcp-config.json", "utf8"));
 if (!claudeMcp || typeof claudeMcp.mcpServers !== "object" || Array.isArray(claudeMcp.mcpServers)) fail("Claude MCP configuration must expose an mcpServers object");
 const openapi = fs.readFileSync("providers/chatgpt/actions.openapi.yaml", "utf8");
-if (!openapi.includes("openapi: 3.1.0") || !openapi.includes("YOUR_DEPLOYED_STEN_API_HOST")) fail("ChatGPT OpenAPI adapter must remain an explicitly unconfigured 3.1 template");
+if (!openapi.includes("openapi: 3.1.0") || !openapi.includes("YOUR_DEPLOYED_DUMRAUF_API_HOST")) fail("ChatGPT OpenAPI adapter must remain an explicitly unconfigured 3.1 template");
 
 if (!process.exitCode) console.log(`Package verified: ${tracked.length} tracked source files, ${declared.length} source-manifest paths, ${tenantFiles.length} tenant-facing files, version ${packageJson.version}.`);
