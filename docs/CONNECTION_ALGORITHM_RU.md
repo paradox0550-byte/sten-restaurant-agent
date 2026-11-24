@@ -1,9 +1,9 @@
-# Пользовательский алгоритм подключения STEN к ChatGPT Project
+# Пользовательский алгоритм подключения DUMRAUF к ChatGPT Project
 
 **Версия:** 18 ноября 2026 года  
-**Назначение:** подключить готовый комплект знаний STEN к ChatGPT без установки программ, командной строки и регистрации в GitHub.
+**Назначение:** подключить готовый комплект знаний DUMRAUF к ChatGPT без установки программ, командной строки и регистрации в GitHub.
 
-> Это пользовательский способ работы через ChatGPT Project. Он подключает инструкции и документы как контекст для модели. Он не разворачивает программное ядро STEN, не подключает POS/iiko, не запускает JavaScript-калькуляторы и не создаёт серверную память.
+> Это пользовательский способ работы через ChatGPT Project. Он подключает инструкции и документы как контекст для модели. Он не разворачивает программное ядро DUMRAUF, не подключает POS/iiko, не запускает JavaScript-калькуляторы и не создаёт серверную память.
 
 ## Перед началом
 
@@ -27,7 +27,7 @@
 
 Если рестораны принадлежат разным независимым компаниям, имеют разные права доступа или документы нельзя смешивать по требованиям конфиденциальности, создайте отдельные Projects.
 
-Рекомендуемое имя: **STEN — [имя управляющего / группа ресторанов]**.
+Рекомендуемое имя: **DUMRAUF — [имя управляющего / группа ресторанов]**.
 
 ### Шаг 4. Создайте Project
 В боковом меню ChatGPT нажмите **New project / Новый проект**, задайте название. Если при создании доступен режим **Project-only memory / Память только проекта**, выберите его для отделения контекста проекта от общей памяти аккаунта. Доступность и название настройки могут зависеть от интерфейса и аккаунта.
@@ -36,7 +36,7 @@
 Внутри проекта откройте меню **••• → Project settings / Настройки проекта**. Найдите поле **Project instructions / Инструкции проекта**.
 
 ### Шаг 6. Скачайте текст инструкции
-Откройте файл [project-instructions-ru.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/project-instructions-ru.md). На странице файла нажмите **Raw** или **Download raw file**, затем сохраните текстовый Markdown-файл. На телефоне можно открыть Raw и сохранить файл через системное меню браузера.
+Откройте файл [project-instructions-ru.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/project-instructions-ru.md). На странице файла нажмите **Raw** или **Download raw file**, затем сохраните текстовый Markdown-файл. На телефоне можно открыть Raw и сохранить файл через системное меню браузера.
 
 ### Шаг 7. Вставьте инструкцию в Project
 Откройте скачанный файл, скопируйте весь текст и вставьте его в поле **Project instructions**. Сохраните настройки.
@@ -46,15 +46,15 @@
 ### Шаг 8. Скачайте девять файлов знаний
 Откройте каждый файл по ссылкам ниже. На странице GitHub выберите **Raw** или **Download raw file** и сохраните файл с исходным именем.
 
-1. [01-core-rules-and-evidence.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md)
-2. [02-restaurant-management-and-shift.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/02-restaurant-management-and-shift.md)
-3. [03-guest-service-and-recovery.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/03-guest-service-and-recovery.md)
-4. [04-food-safety-haccp-marking.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/04-food-safety-haccp-marking.md)
-5. [05-iiko-stock-and-calculator-audit.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/05-iiko-stock-and-calculator-audit.md)
-6. [06-menu-engineering-and-kitchen-workforce.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/06-menu-engineering-and-kitchen-workforce.md)
-7. [07-finance-payroll-and-labor.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/07-finance-payroll-and-labor.md)
-8. [08-operational-audit-and-checklists.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/08-operational-audit-and-checklists.md)
-9. [09-stage-11-scope-and-validation.md](https://github.com/paradox0550-byte/sten-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/09-stage-11-scope-and-validation.md)
+1. [01-core-rules-and-evidence.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/01-core-rules-and-evidence.md)
+2. [02-restaurant-management-and-shift.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/02-restaurant-management-and-shift.md)
+3. [03-guest-service-and-recovery.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/03-guest-service-and-recovery.md)
+4. [04-food-safety-haccp-marking.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/04-food-safety-haccp-marking.md)
+5. [05-iiko-stock-and-calculator-audit.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/05-iiko-stock-and-calculator-audit.md)
+6. [06-menu-engineering-and-kitchen-workforce.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/06-menu-engineering-and-kitchen-workforce.md)
+7. [07-finance-payroll-and-labor.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/07-finance-payroll-and-labor.md)
+8. [08-operational-audit-and-checklists.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/08-operational-audit-and-checklists.md)
+9. [09-stage-11-scope-and-validation.md](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/blob/main/providers/chatgpt/knowledge-pack/09-stage-11-scope-and-validation.md)
 
 Скачивайте все файлы из одной версии репозитория. Не переименовывайте их и не смешивайте с файлами из старых комплектов.
 
@@ -67,22 +67,22 @@
 ### Шаг 11. Запустите первый чат
 Создайте новый чат внутри проекта и отправьте:
 
-> Ты работаешь как STEN — эксперт по управлению рестораном. Ознакомься с инструкциями и девятью файлами знаний проекта. Подтверди, какие материалы доступны. Не утверждай, что видишь GitHub, исходный код или внешние системы. Не придумывай факты и показатели. Помоги начать работу с текущей задачей; профиль ресторана будем уточнять по мере необходимости. Если я веду несколько ресторанов, помоги вести их раздельные профили в рамках этого Project без повторных вопросов при каждом сообщении.
+> Ты работаешь как DUMRAUF — эксперт по управлению рестораном. Ознакомься с инструкциями и девятью файлами знаний проекта. Подтверди, какие материалы доступны. Не утверждай, что видишь GitHub, исходный код или внешние системы. Не придумывай факты и показатели. Помоги начать работу с текущей задачей; профиль ресторана будем уточнять по мере необходимости. Если я веду несколько ресторанов, помоги вести их раздельные профили в рамках этого Project без повторных вопросов при каждом сообщении.
 
 ### Шаг 12. Проверьте, что подключение работает
-Попросите STEN:
+Попросите DUMRAUF:
 - перечислить доступные ему области знаний;
 - объяснить правило «Нет источника — нет факта»;
 - показать, как он обозначит отсутствующее значение;
 - подтвердить, что не подключён к POS/iiko и не исполняет программные модули репозитория;
 - объяснить, как он будет различать рестораны и сохранять контекст текущей задачи.
 
-Если ответ утверждает, что STEN подключил внешнюю систему или сохранил данные на сервере, попросите фактическое подтверждение. В режиме Project такого подключения нет.
+Если ответ утверждает, что DUMRAUF подключил внешнюю систему или сохранил данные на сервере, попросите фактическое подтверждение. В режиме Project такого подключения нет.
 
 ### Шаг 13. Начните работу с безопасного материала
-Загрузите один обезличенный отчёт или задайте конкретную управленческую задачу. Укажите ресторан, подразделение и период, если они влияют на ответ. Не заполняйте анкету целиком заранее: STEN должен начать с доступной задачи и запрашивать только недостающие для неё сведения.
+Загрузите один обезличенный отчёт или задайте конкретную управленческую задачу. Укажите ресторан, подразделение и период, если они влияют на ответ. Не заполняйте анкету целиком заранее: DUMRAUF должен начать с доступной задачи и запрашивать только недостающие для неё сведения.
 
-Если управляющий ведёт несколько ресторанов в одном Project, достаточно один раз обозначить их названия и отличительные признаки. Далее STEN использует последний однозначно установленный контекст. Не нужно подтверждать ресторан в каждом сообщении.
+Если управляющий ведёт несколько ресторанов в одном Project, достаточно один раз обозначить их названия и отличительные признаки. Далее DUMRAUF использует последний однозначно установленный контекст. Не нужно подтверждать ресторан в каждом сообщении.
 
 Для первой проверки подойдут P&L, продажи, меню или график смен без лишних персональных данных. Пустые ячейки не заменяйте нулями.
 
@@ -94,7 +94,7 @@
 4. обновите текст Project instructions, если в релизе он изменился;
 5. повторите контроль из шагов 10–12.
 
-Не добавляйте методику одного ресторана в общий комплект STEN без проверки источника, прав на использование и области применимости. Локальные стандарты ресторана храните отдельно от универсальных методик.
+Не добавляйте методику одного ресторана в общий комплект DUMRAUF без проверки источника, прав на использование и области применимости. Локальные стандарты ресторана храните отдельно от универсальных методик.
 
 ## Несколько ресторанов в одном Project: правила работы
 
@@ -114,14 +114,14 @@
 
 **Подключено:** девять файлов знаний и инструкции в контексте одного ChatGPT Project; работа с документами и данными, которые пользователь сам добавляет в этот Project и которые ChatGPT способен обработать.
 
-**Не подключено:** исходный код и детерминированные модули STEN как исполняемый сервис; серверный API/MCP; POS, iiko, r_keeper и бухгалтерия; автоматическая синхронизация; production-аутентификация; постоянная серверная память и журнал аудита.
+**Не подключено:** исходный код и детерминированные модули DUMRAUF как исполняемый сервис; серверный API/MCP; POS, iiko, r_keeper и бухгалтерия; автоматическая синхронизация; production-аутентификация; постоянная серверная память и журнал аудита.
 
-ChatGPT Project — удобный пилотный рабочий кабинет, а не production-развёртывание STEN. Файлы и чаты проекта подчиняются настройкам хранения, доступа и обработки данных выбранной платформы. Project-only memory не заменяет серверную tenant-изоляцию и не является отдельной базой данных ресторана.
+ChatGPT Project — удобный пилотный рабочий кабинет, а не production-развёртывание DUMRAUF. Файлы и чаты проекта подчиняются настройкам хранения, доступа и обработки данных выбранной платформы. Project-only memory не заменяет серверную tenant-изоляцию и не является отдельной базой данных ресторана.
 
 ## Если что-то не получается
 
 - **Нет кнопки New project:** проверьте вход в аккаунт и доступность Projects в текущем интерфейсе.
 - **Не загружаются все девять файлов:** проверьте лимит файлов своего тарифа и уже добавленные источники. Для полного комплекта нужен лимит не менее девяти файлов.
 - **Инструкция не применяется:** убедитесь, что вставили её именно в Project settings, сохранили изменения и начали новый чат внутри этого проекта.
-- **STEN не видит файл:** проверьте, что файл появился в Sources проекта и загрузка завершилась.
+- **DUMRAUF не видит файл:** проверьте, что файл появился в Sources проекта и загрузка завершилась.
 - **Ответ слишком общий:** дайте конкретный исходный документ, период и подразделение; попросите показать расчёт и недостающие данные.
