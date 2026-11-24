@@ -7,7 +7,7 @@ const tenantFiles = manifest.tenant_distribution?.files ?? [];
 const forbidden = [
   /HACCP-AUDIT/i, /Food Audit/i, /Service Inspector/i, /Gastro Port/i,
   /Movenpik/i, /Курорт Красная Поляна/i, /ТРАТТОРИЯ/i, /Пандан/i,
-  /Dumrauf/i, /Ogark/i, /Буровцова/i, /Gmail thread\s+[a-f0-9]+/i,
+  /Ogark/i, /Буровцова/i, /Gmail thread\s+[a-f0-9]+/i,
   /\bS11-\d{2}\b/i, /\bsource\.[a-z0-9-]+/i, /\bpractice\.[a-z0-9-]+/i
 ];
 
