@@ -45,6 +45,7 @@ export function registerSpreadsheetTools({
 
   registry.register({
     name: "spreadsheet.create_xlsx",
+    approval: "not_required",
     description: "Create an XLSX workbook and save it to the tenant's artifact store.",
     schema: { type: "object", required: ["title", "sheets"], additionalProperties: false, properties: { title: { type: "string" }, sheets: { type: "array" } } },
     execute: async ({ tenantId, title, sheets }) => {
