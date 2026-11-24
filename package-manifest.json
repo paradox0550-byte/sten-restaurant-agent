@@ -117,7 +117,10 @@
     "stage_11_specialist_menu_and_kitchen_evaluation_cases",
     "structural_multi_hop_graph_evaluation_harness",
     "structured_manager_task_drafts",
-    "tenant_scoped_memory_adapter"
+    "tenant_scoped_memory_adapter",
+    "restaurant_pnl_calculator",
+    "accrued_payroll_calculator",
+    "plan_fact_variance_analysis"
   ],
   "not_claimed": [
     "automated_compliance_certification",
@@ -451,12 +454,17 @@
     "tools/calculators/menu/engineering.js",
     "tools/calculators/service/recovery.js",
     "tools/excel-analysis/README.md",
-    "tools/spreadsheet-engine/README.md"
+    "tools/spreadsheet-engine/README.md",
+    "docs/finance-calculators.md",
+    "src/finance/payroll.js",
+    "src/finance/pnl.js",
+    "src/finance/variances.js",
+    "tests/finance-calculators.test.js"
   ],
   "tests": {
     "stage4_existing": 11,
     "knowledge_evidence_layer": 11,
-    "total_expected": 157,
+    "total_expected": 163,
     "command": "npm test",
     "runtime_layer": 24,
     "retrieval_layer": 16,
