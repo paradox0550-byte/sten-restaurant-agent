@@ -69,7 +69,7 @@ The 23:59 timestamp and report path are source-specific configuration details, n
 ### 10. Period lock date
 The source asks to confirm that the trade enterprise settings contain the final lock date for the previous reporting period, meaning the period is closed.
 
-## Recommended STEN audit output
+## Recommended DUMRAUF audit output
 
 For each section return:
 - status: pass / finding / not checked / not applicable / unknown;
@@ -108,7 +108,7 @@ Do not ask for all ten report groups before inspecting the first supplied file.
 
 ## Stage 11 professional practice expansion — POS orders, stocktake and suppliers
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Order integrity independent of POS brand
 Before sending: confirm table/guest and order ownership, exact items, quantities, modifiers, allergens or restrictions communicated by the guest, courses and agreed timing. After sending: verify correct routing and changes; follow permissioned procedures for cancellations, discounts, split bills and corrections. Never claim a particular screen or button exists in the user's software version without checking it.

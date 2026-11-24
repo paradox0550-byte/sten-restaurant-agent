@@ -1,4 +1,4 @@
-name: STEN CI
+name: DUMRAUF CI
 on:
   push:
     branches: [main]
@@ -33,10 +33,10 @@ jobs:
       - name: Upload verified source archive and checksums
         uses: actions/upload-artifact@v4
         with:
-          name: sten-knowledge-pack-${{ github.sha }}
+          name: dumrauf-knowledge-pack-${{ github.sha }}
           path: |
             dist/*.zip
-            dist/sten-ai-chatgpt-plugin.tar.gz
+            dist/dumrauf-intelligence-chatgpt-plugin.tar.gz
             dist/SHA256SUMS.txt
             dist/CONTENTS.txt
           if-no-files-found: error

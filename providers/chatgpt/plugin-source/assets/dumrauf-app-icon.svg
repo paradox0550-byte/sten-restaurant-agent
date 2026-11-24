@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DUMRAUF app icon">
+  <rect width="512" height="512" rx="112" fill="#0B1117"/>
+  <path d="M154 112V400H268C354 400 408 341 408 256S354 112 268 112H154Z" fill="none" stroke="#F4F3EF" stroke-width="34" stroke-linejoin="round"/>
+  <path d="M154 112V400" stroke="#13C8BE" stroke-width="34" stroke-linecap="square"/>
+</svg>

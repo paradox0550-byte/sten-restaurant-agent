@@ -99,7 +99,7 @@ Personnel decisions, pay/schedule changes, purchases/payments, price/menu/recipe
 
 ## Stage 11 professional practice expansion — integrated restaurant audit
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Evidence-based walkthrough
 Structure the check by guest journey, employee readiness, POS order handling, pass and beverage quality, production flow, stock/receiving, food-safety records, equipment, emergency readiness and handover. Every observation needs location/shift/time, expected local standard, actual evidence, severity rationale, accountable role, containment, corrective action and verification date.

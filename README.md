@@ -1,6 +1,6 @@
-# STEN — Restaurant Management Intelligence
+# DUMRAUF — Business Intelligence & Management Systems
 
-**STEN** is a provider-neutral professional AI expert package for the full HoReCa sector. It combines restaurant management methodology, finance, people/labor, menu economics, guest experience, operations and evidence-governed reasoning.
+**DUMRAUF Intelligence** is a provider-neutral professional AI platform for business management, with its initial expertise rooted in the HoReCa sector. It combines restaurant management methodology, finance, people/labor, menu economics, guest experience, operations and evidence-governed reasoning.
 
 ## Canonical package structure
 
@@ -17,7 +17,7 @@
 
 ## Закрытый пользовательский пилот
 
-Инструкция для первых тестировщиков: [Пилот STEN на друзьях — подключение, сценарии и фиксация ошибок](docs/PILOT_FRIENDS_GUIDE_RU.md). Для установки в ChatGPT Project используйте отдельный приватный Project на каждого участника и девять файлов из `providers/chatgpt/knowledge-pack/`.
+Инструкция для первых тестировщиков: [Пилот DUMRAUF на друзьях — подключение, сценарии и фиксация ошибок](docs/PILOT_FRIENDS_GUIDE_RU.md). Для установки в ChatGPT Project используйте отдельный приватный Project на каждого участника и девять файлов из `providers/chatgpt/knowledge-pack/`.
 
 ## Stage status — canonical summary
 
@@ -50,7 +50,7 @@ Undeclared input requirements are `not_assessed`, not sufficient. Missing values
 
 ## Management Workflow (Stage 8)
 
-The `src/workflow/` module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding STEN to a vendor. See `docs/management-cycle.md`.
+The `src/workflow/` module implements analysis-gated action planning, controlled task lifecycle and evidence-backed outcome verification. Optional embedding, reranking and semantic-conflict adapters are exposed without binding DUMRAUF to a vendor. See `docs/management-cycle.md`.
 
 ## Knowledge Retrieval & Expert Context (Stage 7)
 
@@ -62,7 +62,7 @@ A provider-neutral runtime foundation is available in `src/runtime/`. It injects
 
 ## Continuous Restaurant Memory — Stages 6, 11 and 12
 
-STEN is designed to learn a restaurant's changing local context during normal work; completing a profile is optional. The structured capture boundary supports conservative silent capture of explicit, low-risk and unambiguous user assertions, preserves provenance and validity dates, deduplicates repeats, and keeps conflicting versions for human review. It does not promote local facts into universal methodology or approved standards.
+DUMRAUF is designed to learn a restaurant's changing local context during normal work; completing a profile is optional. The structured capture boundary supports conservative silent capture of explicit, low-risk and unambiguous user assertions, preserves provenance and validity dates, deduplicates repeats, and keeps conflicting versions for human review. It does not promote local facts into universal methodology or approved standards.
 
 The capture module currently runs against the injected development/test memory adapter. It does not provide durable cross-session storage or automatic extraction from raw conversations. See [Continuous Restaurant Memory](docs/continuous-restaurant-memory.md).
 
@@ -81,7 +81,7 @@ npm run package:source
 
 ## User installation guide\n\nFor end-user setup in ChatGPT Projects or Claude Projects, see [the Russian user guide](docs/USER_GUIDE_RU.md). The guide distinguishes project-based use from a live API/MCP deployment. Current release security limitations are recorded in [the security checklist](docs/SECURITY_RELEASE_CHECKLIST.md).\n\n## Evidence governance
 
-The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two STEN CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
+The evidence layer distinguishes LAW, RESEARCH, CORE, INDUSTRY, PRACTICE, TREND, HYPOTHESIS and CONFIGURATION. The starter registry contains two DUMRAUF CORE principles, one anonymized historical practice record and one empty legal intake template. It contains **no verified current legal requirements or scientific findings**. Legal applicability is not automatically asserted; unknown profile data remain unknown.
 
 
 ## Spreadsheet & Document Engine
@@ -96,10 +96,10 @@ The provider-neutral `src/writing/` module prepares source-linked briefs for mem
 
 ## Legal information and free-use terms
 
-STEN is currently offered free of charge for users' own internal professional and business operations. The original STEN materials are licensed under a **proprietary, non-exclusive, royalty-free internal-use license**; this is not an open-source license.
+DUMRAUF is currently offered free of charge for users' own internal professional and business operations. The original DUMRAUF materials are licensed under a **proprietary, non-exclusive, royalty-free internal-use license**; this is not an open-source license.
 
 - [Terms of Use](TERMS_OF_USE.md)
-- [License — original STEN materials](LICENSE)
+- [License — original DUMRAUF materials](LICENSE)
 - [User Disclaimer](DISCLAIMER.md)
 - [Privacy and Data Notice](PRIVACY_NOTICE.md)
 - [Legal publication checklist](LEGAL_DEPLOYMENT_CHECKLIST.md)
@@ -107,7 +107,7 @@ STEN is currently offered free of charge for users' own internal professional an
 **Rightsholder of original components:** Думрауф Александр Сергеевич  
 **Legal contact:** pocketshift.support@gmail.com
 
-Resale, paid standalone redistribution and distribution of modified STEN versions require the rightsholder's prior written permission, subject to mandatory law and the rights GitHub grants for public repositories. Read section 4 of the Terms of Use for the public-repository/fork limitation.
+Resale, paid standalone redistribution and distribution of modified DUMRAUF versions require the rightsholder's prior written permission, subject to mandatory law and the rights GitHub grants for public repositories. Read section 4 of the Terms of Use for the public-repository/fork limitation.
 
 The license applies only to components for which the rightsholder is entitled to grant rights. Third-party components remain subject to their own licenses. The repository remains a public experimental pilot; publication does not certify that every file has completed an ownership or legal audit.
 
@@ -137,7 +137,7 @@ The existing `src/evaluation/knowledge-quality.js` provides metadata integrity c
 
 ## Final Integration & Release — Stage 14
 
-Stage 14 engineering integration is substantially complete. The latest verified release-candidate CI run [43765995720](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/43765995720) passed on commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`: 99/99 tests, Evidence Registry validation, package integrity, secret scan and source archive generation. The manifest contains 147/147 tracked paths. A Russian pilot test plan is included.
+Stage 14 engineering integration is substantially complete. The latest verified release-candidate CI run [43765995720](https://github.com/paradox0550-byte/DUMRAUF-restaurant-agent/actions/runs/43765995720) passed on commit `f13535c528b3d17b5ae4bd687a875d84b6d9a80e`: 99/99 tests, Evidence Registry validation, package integrity, secret scan and source archive generation. The manifest contains 147/147 tracked paths. A Russian pilot test plan is included.
 
 The package remains a **working core**, not a published release. ChatGPT and Claude adapters are templates; the ChatGPT API host is a placeholder with no actions, and Claude MCP configuration is empty. Memory and audit are in-memory development/test adapters. No live provider connection, production API, persistent vector database, hosted memory or production authentication is included.
 
@@ -151,4 +151,4 @@ A curated 9-file Markdown pack is maintained in `providers/chatgpt/knowledge-pac
 
 ## Единый источник ChatGPT-плагина
 
-Исходники текущего ChatGPT-плагина хранятся в `providers/chatgpt/plugin-source/`. Не редактируйте установленный плагин напрямую. Сборка воспроизводимого архива выполняется командой `npm run build:chatgpt-plugin`; CI проверяет и публикует архив как артефакт сборки. Архитектура и порядок выпуска: [единый источник STEN AI](docs/CHATGPT_PLUGIN_SINGLE_SOURCE_RU.md).
+Исходники текущего ChatGPT-плагина хранятся в `providers/chatgpt/plugin-source/`. Не редактируйте установленный плагин напрямую. Сборка воспроизводимого архива выполняется командой `npm run build:chatgpt-plugin`; CI проверяет и публикует архив как артефакт сборки. Архитектура и порядок выпуска: [единый источник DUMRAUF Intelligence](docs/CHATGPT_PLUGIN_SINGLE_SOURCE_RU.md).

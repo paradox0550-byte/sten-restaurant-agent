@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" role="img" aria-label="STEN AI">
-  <rect width="620" height="120" fill="none"/>
-  <g transform="translate(8 10)">
-    <path d="M0 78V57h17v21H0Z M28 78V39h17v39H28Z M56 78V21h17v57H56Z" fill="#13C8BE"/>
-  </g>
-  <text x="112" y="82" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="600" letter-spacing="5" fill="#F4F7F8">STEN</text>
-  <text x="405" y="82" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="600" letter-spacing="3" fill="#13C8BE">AI</text>
-</svg>

@@ -10,7 +10,7 @@ const declared = [...(manifest.tenant_distribution?.files ?? [])].sort();
 if (!declared.length) throw new Error("tenant_distribution.files must be a non-empty allowlist");
 
 const version = packageJson.version;
-const prefix = `sten-knowledge-pack-${version}`;
+const prefix = `dumrauf-knowledge-pack-${version}`;
 const outputDir = path.join(root, "dist");
 const archivePath = path.join(outputDir, `${prefix}.zip`);
 fs.mkdirSync(outputDir, { recursive: true });

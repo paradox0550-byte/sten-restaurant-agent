@@ -1,12 +1,12 @@
 ---
-name: sten-core-knowledge
-description: Use as the authoritative compact STEN restaurant-management knowledge base for broad management questions, operational procedures, guest service, food safety, iiko stock controls, menu engineering, kitchen workforce, finance, payroll and audit. Load the relevant reference file before making domain-specific claims.
+name: dumrauf-core-knowledge
+description: Use as the authoritative compact DUMRAUF restaurant-management knowledge base for broad management questions, operational procedures, guest service, food safety, iiko stock controls, menu engineering, kitchen workforce, finance, payroll and audit. Load the relevant reference file before making domain-specific claims.
 ---
 
-# STEN Core Knowledge — 0.5.0 source pack
+# DUMRAUF Core Knowledge — 0.5.0 source pack
 
 ## Purpose
-This skill packages the nine-file ChatGPT knowledge export from the canonical STEN repository (`providers/chatgpt/knowledge-pack/`) plus its Russian Project instructions. It is a curated user-facing knowledge layer, not the complete repository, executable runtime, live legal database or production integration.
+This skill packages the nine-file ChatGPT knowledge export from the canonical DUMRAUF repository (`providers/chatgpt/knowledge-pack/`) plus its Russian Project instructions. It is a curated user-facing knowledge layer, not the complete repository, executable runtime, live legal database or production integration.
 
 ## Mandatory use
 1. Start with `references/01-core-rules-and-evidence.md` for evidence rules, knowledge classes, uncertainty and legal boundaries.
@@ -32,7 +32,7 @@ This skill packages the nine-file ChatGPT knowledge export from the canonical ST
 - `references/github-coverage-map.md` — exact transfer map and explicit non-transferred repository capabilities.
 
 ## Completeness and maturity
-This is the exact curated nine-file ChatGPT pack from STEN repository version 0.5.0, not a full mirror of every canonical source, test, evidence record, process card or executable module. The repository separately tracks 36 management domains and 77 process cards. Their presence in GitHub does not mean their full individual content is included here. Stage 11 is still open; the 77-card inventory is not a set of 77 expert-approved SOPs. Stage 13 retrieval metrics are small regression benchmarks, not answer accuracy or professional certification.
+This is the exact curated nine-file ChatGPT pack from DUMRAUF repository version 0.5.0, not a full mirror of every canonical source, test, evidence record, process card or executable module. The repository separately tracks 36 management domains and 77 process cards. Their presence in GitHub does not mean their full individual content is included here. Stage 11 is still open; the 77-card inventory is not a set of 77 expert-approved SOPs. Stage 13 retrieval metrics are small regression benchmarks, not answer accuracy or professional certification.
 
 ## Output contract
-For substantive work show: scope and source; source facts; calculations and formulas; interpretation versus hypothesis; missing information; limits; and a practical recommendation with verification. Do not claim access to iiko, banks, OFD, accounting, Google/Yandex services, APIs, persistent memory or external actions unless a real connected tool is available and has succeeded.
+For substantive work show: scope and source; source facts; calculations and formulas; interpretation versus hypothesis; missing information; limits; and a practical recommendation with verification. Do not claim access to iiko, banks, OFD, accounting, Google/Yandex services, APIs, persidumrauft memory or external actions unless a real connected tool is available and has succeeded.

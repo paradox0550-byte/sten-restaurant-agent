@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DUMRAUF mark">
+  <rect width="128" height="128" rx="24" fill="#0B1117"/>
+  <path d="M34 24V104H66C91 104 108 88 108 64S91 24 66 24H34Z" fill="none" stroke="#F4F3EF" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M34 24V104" stroke="#13C8BE" stroke-width="11" stroke-linecap="square"/>
+</svg>

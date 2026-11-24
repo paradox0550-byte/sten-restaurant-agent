@@ -116,7 +116,7 @@ The supplied materials identify a useful control framework; they do not constitu
 
 ## Stage 11 professional practice expansion — food-safety leadership
 
-The following operating model combines procurement control, internal verification, food-safety governance and production-flow risk management. It is a STEN-authored framework; local roles, review cadence and control limits must be configured and verified.
+The following operating model combines procurement control, internal verification, food-safety governance and production-flow risk management. It is a DUMRAUF-authored framework; local roles, review cadence and control limits must be configured and verified.
 
 ### Food-safety working group
 Identify a responsible leader and competent cross-functional participants from production, receiving/storage, service and maintenance as appropriate. The working cycle is: identify process and hazards → review control measures and ownership → define documented monitoring → handle deviations → verify corrective action → update training and procedures. Membership, meeting frequency, critical limits and authority are establishment-specific.

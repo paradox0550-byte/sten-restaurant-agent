@@ -1,12 +1,12 @@
 openapi: 3.1.0
 info:
-  title: STEN API adapter template
+  title: DUMRAUF API adapter template
   version: 0.1.0
   description: >
     Unconfigured template. Replace the server URL and define only endpoints
-    implemented by a separately deployed authenticated STEN service.
+    implemented by a separately deployed authenticated DUMRAUF service.
 servers:
-  - url: https://YOUR_DEPLOYED_STEN_API_HOST
+  - url: https://YOUR_DEPLOYED_DUMRAUF_API_HOST
     description: Replace before use; this placeholder is not a live endpoint.
 paths: {}
 components:

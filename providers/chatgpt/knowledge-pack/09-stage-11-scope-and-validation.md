@@ -1,13 +1,13 @@
-# STEN — Product Knowledge Scope and Quality Gates
+# DUMRAUF — Product Knowledge Scope and Quality Gates
 
 ## Product identity
 
-STEN is an independently developed restaurant-management intelligence system. It is not a document library, a repackaging of third-party manuals, or a generic chatbot with restaurant prompts. Its product value is the original synthesis of restaurant operating experience, domain research, decision logic, deterministic calculations, establishment context and verified feedback.
+DUMRAUF is an independently developed restaurant-management intelligence system. It is not a document library, a repackaging of third-party manuals, or a generic chatbot with restaurant prompts. Its product value is the original synthesis of restaurant operating experience, domain research, decision logic, deterministic calculations, establishment context and verified feedback.
 
 ## What belongs in the user-facing knowledge pack
 
 The user-facing pack contains only:
-- STEN-authored professional explanations and methods;
+- DUMRAUF-authored professional explanations and methods;
 - reusable operating models expressed in original language;
 - decision rules and calculations whose definitions and limitations are explicit;
 - adaptable procedures that have passed the required review gates;
@@ -27,16 +27,16 @@ A public source repository is not a private vault. Excluding a file from a relea
 
 ## Method synthesis standard
 
-Every new STEN method must be independently authored:
+Every new DUMRAUF method must be independently authored:
 1. Define the operating problem, intended result, constraints and measurable outcome.
 2. Separate confirmed expert experience from hypotheses, local rules and external claims.
 3. Research relevant international practice and current authoritative standards where appropriate.
 4. Compare approaches and test their relevance to restaurant formats, scale, jurisdiction and operating conditions.
-5. Build an original STEN model: objective, inputs, sequence, decision logic, roles, records, metrics, exceptions, failure response and review cycle.
+5. Build an original DUMRAUF model: objective, inputs, sequence, decision logic, roles, records, metrics, exceptions, failure response and review cycle.
 6. Verify calculations and deterministic rules with test cases.
 7. Record limitations and unresolved questions without filling gaps by invention.
 8. Run specialist review and, where operationally material, a controlled site pilot.
-9. Publish only the approved STEN-authored formulation. Keep confidential research records outside the public product repository.
+9. Publish only the approved DUMRAUF-authored formulation. Keep confidential research records outside the public product repository.
 
 Do not translate or lightly paraphrase a source document and call it original methodology. Do not claim that a method is unique or validated merely because it has been renamed.
 
@@ -44,7 +44,7 @@ Do not translate or lightly paraphrase a source document and call it original me
 
 The product distinguishes its own methods from public evidence and context-specific practice. Internal traceability is maintained only in an appropriately restricted environment; it is not displayed in the product knowledge pack or ordinary tenant answers.
 
-When a user explicitly asks for legal, scientific or current factual substantiation, STEN may cite public authoritative sources in that answer. This is distinct from exposing private expert inputs. Legal requirements must be tied to the applicable jurisdiction and current official text; research claims must be distinguished from STEN's own recommendations.
+When a user explicitly asks for legal, scientific or current factual substantiation, DUMRAUF may cite public authoritative sources in that answer. This is distinct from exposing private expert inputs. Legal requirements must be tied to the applicable jurisdiction and current official text; research claims must be distinguished from DUMRAUF's own recommendations.
 
 ## Research and development priorities
 
@@ -69,7 +69,7 @@ A source file being present, a draft being written or CI passing is not enough t
 Before generating a user-facing pack:
 - scan for private source titles, authors, organizations, filenames, correspondence identifiers and private source IDs;
 - ensure source registries and private research records are excluded from distribution;
-- ensure product methods are written in STEN's own terminology and structure;
+- ensure product methods are written in DUMRAUF's own terminology and structure;
 - verify tenant isolation and that no other customer's records are in the output;
 - run content, schema, calculation and answer-level tests;
 - require explicit release approval.
