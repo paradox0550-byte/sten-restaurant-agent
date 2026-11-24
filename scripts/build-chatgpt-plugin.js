@@ -43,6 +43,35 @@ for (const file of skillFiles) {
 fs.rmSync(packageDir, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 fs.cpSync(source, packageDir, { recursive: true });
+// Assemble the plugin's reference bundle from the canonical provider knowledge sources.
+const referenceOutput = path.join(packageDir, "skills/sten-core-knowledge/references");
+fs.mkdirSync(referenceOutput, { recursive: true });
+const knowledgeNames = [
+  "01-core-rules-and-evidence.md",
+  "02-restaurant-management-and-shift.md",
+  "03-guest-service-and-recovery.md",
+  "04-food-safety-haccp-marking.md",
+  "05-iiko-stock-and-calculator-audit.md",
+  "06-menu-engineering-and-kitchen-workforce.md",
+  "07-finance-payroll-and-labor.md",
+  "08-operational-audit-and-checklists.md",
+  "09-stage-11-scope-and-validation.md"
+];
+for (const name of knowledgeNames) {
+  const canonical = path.join(root, "providers/chatgpt/knowledge-pack", name);
+  if (!fs.existsSync(canonical)) fail("missing canonical knowledge source: " + name);
+  fs.copyFileSync(canonical, path.join(referenceOutput, name));
+}
+const extraReferences = [
+  ["providers/chatgpt/knowledge-pack/README.md", "knowledge-pack-README.md"],
+  ["providers/chatgpt/project-instructions-ru.md", "project-instructions-ru.md"],
+  ["docs/STAGE_11/GITHUB_COVERAGE_MAP.md", "github-coverage-map.md"]
+];
+for (const [relativeSource, outputName] of extraReferences) {
+  const canonical = path.join(root, relativeSource);
+  if (!fs.existsSync(canonical)) fail("missing canonical adapter reference: " + relativeSource);
+  fs.copyFileSync(canonical, path.join(referenceOutput, outputName));
+}
 let revision = process.env.GITHUB_SHA || "unknown";
 if (revision === "unknown") {
   try { revision = execFileSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).trim(); }
