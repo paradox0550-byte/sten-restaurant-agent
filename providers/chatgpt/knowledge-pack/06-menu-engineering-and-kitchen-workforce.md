@@ -107,7 +107,7 @@ Menu changes that alter volume, portion, recipe, batch size or station routing s
 
 ## Stage 11 professional practice expansion — kitchen and open-kitchen design
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Design from menu and throughput
 Before recommending layout or equipment, obtain menu/production routing, batch sizes, peak orders by interval, staffing and skill mix, equipment capacities, raw/finished/dirty/waste flows, storage requirements, service model and maintenance access. Map each menu family to station, process steps, handoffs and required utilities. Validate the design against peak workload and staff movement, not only floor area or visuals.
