@@ -28,12 +28,15 @@ jobs:
         run: npm test
       - name: Build and verify tenant knowledge pack
         run: npm run package:source
+      - name: Build reproducible ChatGPT plugin archive
+        run: npm run build:chatgpt-plugin
       - name: Upload verified source archive and checksums
         uses: actions/upload-artifact@v4
         with:
           name: sten-knowledge-pack-${{ github.sha }}
           path: |
             dist/*.zip
+            dist/sten-ai-chatgpt-plugin.tar.gz
             dist/SHA256SUMS.txt
             dist/CONTENTS.txt
           if-no-files-found: error
