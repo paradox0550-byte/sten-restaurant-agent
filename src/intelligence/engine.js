@@ -118,14 +118,14 @@ export function buildAnalysis(input = {}) { return buildAnalysisEnvelope(input);
 export function buildExpertAnalysis({
   query, profile = {}, knowledge = [], registry = EMPTY_REGISTRY, requiredInputs = [], providedInputs = {},
   facts = [], hypotheses = [], causalLinks = [], decisionScenarios = [], financialInputs = null,
-  requiredFinancialMetrics = [], pnlInput = null, payrollRows = null, varianceInput = null, actions = [], limit = 12
+  requiredFinancialMetrics = [], pnlInput = null, payrollRows = null, payrollOptions = {}, varianceInput = null, actions = [], limit = 12
 } = {}) {
   const retrieval = buildExpertContext({ query, profile, knowledge, registry, limit });
   const sufficiency = assessInputSufficiency({ required: requiredInputs, provided: providedInputs });
   const financialAssessments = decisionScenarios.map(compareDecisionScenarios);
   const financialRatios = financialInputs && typeof financialInputs === "object" ? calculateCostRatios(financialInputs) : null;
   const pnl = pnlInput && typeof pnlInput === "object" ? calculateRestaurantPnl(pnlInput) : null;
-  const payroll = Array.isArray(payrollRows) ? calculatePayroll(payrollRows) : null;
+  const payroll = Array.isArray(payrollRows) ? calculatePayroll(payrollRows, payrollOptions) : null;
   const variances = varianceInput && Array.isArray(varianceInput.rows) ? analyzePlanFactVariances(varianceInput.rows, varianceInput.options ?? {}) : null;
   const normalizedCausalLinks = causalLinks.map((link, index) => ({ ...link, id: link.id ?? `causal-hypothesis-${index + 1}`, label: "HYPOTHESIS", verificationRequired: true }));
   const retrievedEvidence = retrieval.status === "ok" ? retrieval.evidence.filter(item => item.adaptedEvidence).map(item => item.adaptedEvidence) : [];
