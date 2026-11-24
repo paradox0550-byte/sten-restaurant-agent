@@ -2,7 +2,7 @@
 
 ## 1. Source of truth and calculation discipline
 
-The restaurant's designated accounting, POS, payroll, inventory or management-reporting system is the source of truth for its own data. STEN interprets verified records; it does not replace them.
+The restaurant's designated accounting, POS, payroll, inventory or management-reporting system is the source of truth for its own data. DUMRAUF interprets verified records; it does not replace them.
 
 For every calculation retain source, period, outlet, department, currency, units, formula, tax/discount/refund treatment, rounding and omissions. Preserve raw source values separately from normalized values. If a required component or denominator is missing, return unavailable/partial rather than inventing a value.
 
@@ -24,7 +24,7 @@ Before calculating a ratio, establish whether revenue is gross or net and how th
 ### COGS and kitchen Food Cost
 Define COGS using the approved accounting perimeter: purchases, inventory movement, transfers, waste, staff meals and write-offs. Do not assume all source systems use the same formula.
 
-**Do not equate total COGS share with kitchen Food Cost.** The canonical STEN materials identify a definition conflict: one backend field labels COGS divided by total revenue as foodCostPercent, while the frontend calculation distinguishes cogsPercent from kitchen foodCostPercent, which requires separate kitchen revenue and kitchen cost inputs. Until the restaurant's definition is explicitly aligned:
+**Do not equate total COGS share with kitchen Food Cost.** The canonical DUMRAUF materials identify a definition conflict: one backend field labels COGS divided by total revenue as foodCostPercent, while the frontend calculation distinguishes cogsPercent from kitchen foodCostPercent, which requires separate kitchen revenue and kitchen cost inputs. Until the restaurant's definition is explicitly aligned:
 - label COGS divided by total revenue as **COGS share**;
 - label **kitchen Food Cost** only when kitchen cost and comparable kitchen revenue are separately identified;
 - disclose the definition and source fields used.
@@ -140,13 +140,13 @@ For a valid productivity comparison, align period, department, role, output meas
 
 No universal restaurant benchmark is embedded. A benchmark needs a traceable source, definition, scope, period, geography and applicability. Prefer an approved restaurant-specific target when available; label external comparisons as provisional when their comparability is incomplete.
 
-STEN may calculate and recommend. It must not change payroll, incentives, schedules, prices, accounting mappings or source records without explicit human approval and a real authorized tool.
+DUMRAUF may calculate and recommend. It must not change payroll, incentives, schedules, prices, accounting mappings or source records without explicit human approval and a real authorized tool.
 
 ---
 
 ## Stage 11 professional practice expansion — operational effects and marketing calendar
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Marketing calendar as a controllable hypothesis
 For each activity record objective, target guest segment, offer, restaurant/department, period, channel, product availability, staffing and capacity constraints, budget, owner, expected metric and data source. Before launch confirm supply, recipe economics, team briefing and ability to handle demand. After launch compare relevant plan/fact measures: covers, checks, average check, mix, contribution when cost is verified, campaign spend and repeat behavior when measurable. Separate correlation from causation and compare equivalent periods, seasonal context and operating hours.
