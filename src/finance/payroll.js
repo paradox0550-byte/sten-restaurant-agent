@@ -21,7 +21,7 @@ export function calculatePayroll(rows, { currency = null } = {}) {
   }
 
   const employees = [];
-  const missingData = [];
+  const missingData = currency ? [] : [{ field: "currency", reason: "explicit_currency_required" }];
   let partialAccrued = 0;
   let partialOvertime = 0;
   let totalComplete = Boolean(currency);
