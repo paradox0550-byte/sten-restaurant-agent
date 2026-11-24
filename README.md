@@ -147,3 +147,8 @@ Release preparation now includes a high-confidence secret-pattern scan, a manife
 ## ChatGPT Project knowledge pack
 
 A curated 9-file Markdown pack is maintained in `providers/chatgpt/knowledge-pack/` to fit a 25-file project attachment ceiling with room for the separate project instructions and future additions. See its README for the exact upload order. The source repository retains its full canonical files, code, tests and evidence registry; the pack is a compact provider export, not a replacement.
+
+
+## Единый источник ChatGPT-плагина
+
+Исходники текущего ChatGPT-плагина хранятся в `providers/chatgpt/plugin-source/`. Не редактируйте установленный плагин напрямую. Сборка воспроизводимого архива выполняется командой `npm run build:chatgpt-plugin`; CI проверяет и публикует архив как артефакт сборки. Архитектура и порядок выпуска: [единый источник STEN AI](docs/CHATGPT_PLUGIN_SINGLE_SOURCE_RU.md).

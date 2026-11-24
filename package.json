@@ -9,7 +9,8 @@
     "validate:evidence": "node src/evidence/cli.js",
     "validate:package": "node scripts/validate-package.js",
     "scan:secrets": "node scripts/scan-package-secrets.js",
-    "package:source": "node scripts/create-source-archive.js"
+    "package:source": "node scripts/create-source-archive.js",
+    "build:chatgpt-plugin": "node scripts/build-chatgpt-plugin.js"
   },
   "engines": {
     "node": ">=18"
