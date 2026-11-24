@@ -66,13 +66,13 @@ test("variance analysis normalizes articles, classifies direction and ranks by c
   assert.equal(result.results[0].id, "a");
   assert.equal(result.unfavorable.length, 1);
   assert.equal(result.favorable.length, 1);
-  assert.equal(result.results[0].deltaAbsolute, -50);
+  assert.equal(result.results[1].deltaAbsolute, -50);
 });
 
 test("variance analysis reports missing inputs and does not assume favorable direction", () => {
   const result = analyzePlanFactVariances([
     { article: "Новая статья", plan: 100, actual: 90 },
-    { article: "Прочее", plan: 100, actual: 90, scope: "r1", period: "2026-10", currency: "RUB", unit: "RUB", definition: "other" }
+    { article: "Аренда", plan: 100, actual: 90, scope: "r1", period: "2026-10", currency: "RUB", unit: "RUB", definition: "rent" }
   ]);
   assert.equal(result.missingData.length, 1);
   assert.equal(result.unclassified.length, 1);
