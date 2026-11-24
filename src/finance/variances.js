@@ -48,7 +48,7 @@ export function analyzePlanFactVariances(rows = [], { mapping = {}, directions =
       id, category, article: row.article ?? category, plan: row.plan, actual: row.actual,
       deltaAbsolute: delta, deltaPercent: relative,
       impact,
-      directionRule: direction, material: material === true, currency: row.currency,
+      directionRule: direction, material, currency: row.currency,
       unit: row.unit, period: row.period, scope: row.scope, definition: row.definition,
       sourceIds: [...new Set([...(row.planSourceIds ?? []), ...(row.actualSourceIds ?? [])])]
     });
