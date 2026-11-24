@@ -147,7 +147,7 @@ Do not create a task from every message. First determine whether it is an event,
 
 ## Stage 11 professional practice expansion — shift, coordination, training
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Shift as a managed cycle
 1. **Prepare:** check personnel and station readiness, product availability, critical equipment, reservations, expected load, open defects and handover notes.
