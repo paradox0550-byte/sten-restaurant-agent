@@ -79,6 +79,6 @@ if (revision === "unknown") {
 }
 fs.writeFileSync(path.join(packageDir, "SOURCE_REVISION.txt"), "Repository: paradox0550-byte/sten-restaurant-agent\nRevision: " + revision + "\n", "utf8");
 fs.rmSync(archive, { force: true });
-execFileSync("tar", ["-czf", archive, "-C", dist, "chatgpt-plugin"], { stdio: "inherit" });
+execFileSync("tar", ["-czf", archive, "-C", packageDir, "."], { stdio: "inherit" });
 if (!fs.existsSync(archive) || fs.statSync(archive).size === 0) fail("archive was not created");
 console.log("Built " + path.relative(root, archive) + " from " + revision + "; " + skillFiles.length + " skills validated.");
