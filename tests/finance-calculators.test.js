@@ -77,4 +77,10 @@ test("variance analysis reports missing inputs and does not assume favorable dir
   assert.equal(result.missingData.length, 1);
   assert.equal(result.unclassified.length, 1);
   assert.equal(result.unclassified[0].impact, "unclassified");
+  assert.equal(result.unclassified[0].material, null);
+  const neutral = analyzePlanFactVariances([
+    { article: "Прочее", plan: 100, actual: 120, scope: "r1", period: "2026-10", currency: "RUB", unit: "RUB", definition: "other" }
+  ], { directions: { opex: "neutral" } });
+  assert.equal(neutral.neutral[0].impact, "neutral");
+  assert.equal(neutral.unfavorable.length, 0);
 });
