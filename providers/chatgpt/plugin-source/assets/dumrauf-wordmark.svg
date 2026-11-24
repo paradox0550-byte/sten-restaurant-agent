@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 150" role="img" aria-label="DUMRAUF by Dumrauf">
+  <rect width="780" height="150" fill="none"/>
+  <g transform="translate(12 24)" fill="none" stroke="#13C8BE" stroke-width="10" stroke-linecap="square">
+    <path d="M18 8V98"/>
+    <path d="M18 8H54C84 8 104 28 104 53S84 98 54 98H18"/>
+  </g>
+  <text x="150" y="93" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" letter-spacing="4" fill="#F4F3EF">DUMRAUF</text>
+  <text x="155" y="126" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" letter-spacing="4" fill="#9AA3AA">INTELLIGENCE SYSTEMS · BY DUMRAUF</text>
+</svg>
