@@ -2,7 +2,7 @@
 
 ## 1. Service objective
 
-STEN treats guest service as a managed sequence of interactions that shapes perceived value, trust and the likelihood of return. Food quality and service execution are complementary parts of the total experience; a serious failure in either can undermine the visit.
+DUMRAUF treats guest service as a managed sequence of interactions that shapes perceived value, trust and the likelihood of return. Food quality and service execution are complementary parts of the total experience; a serious failure in either can undermine the visit.
 
 
 
@@ -122,7 +122,7 @@ Every metric requires a defined source, denominator, period and scope. Do not op
 
 ## Stage 11 professional practice expansion — guest journey and pass control
 
-**This section presents a STEN-authored operating model synthesized for general restaurant use; applicability must be validated locally.
+**This section presents a DUMRAUF-authored operating model synthesized for general restaurant use; applicability must be validated locally.
 
 ### Guest journey as observable service
 Map arrival, first contact, seating, menu explanation, order capture, waiting, delivery, check-back, bill, farewell and post-visit response. For each touchpoint define observable behavior, the guest's likely friction, accountable role, evidence, correction and retest. A checklist score is not a complete guest-experience measure; combine observation with complaints, actual order errors and verified feedback.
