@@ -48,9 +48,13 @@ test("payroll calculates hourly, shift and salary accruals; requires explicit sh
   assert.equal(result.totalAccrued, 132250);
   assert.equal(result.overtimeAccrued, 2250);
   const incomplete = calculatePayroll([{ payType: "shift", rate: 4000, shifts: 10 }]);
-  assert.equal(incomplete.totalAccrued, 0);
+  assert.equal(incomplete.totalAccrued, null);
+  assert.equal(incomplete.partialAccrued, 0);
   assert.equal(incomplete.status, "calculated_with_gaps");
   assert.equal(incomplete.missingData[0].reason, "explicit_shift_count_and_duration_required");
+  const empty = calculatePayroll([]);
+  assert.equal(empty.status, "insufficient_data");
+  assert.equal(empty.totalAccrued, null);
 });
 
 test("variance analysis normalizes articles, classifies direction and ranks by cash impact", () => {
