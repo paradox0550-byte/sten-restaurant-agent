@@ -7,7 +7,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const source = path.join(root, "providers/chatgpt/plugin-source");
 const dist = path.join(root, "dist");
 const packageDir = path.join(dist, "chatgpt-plugin");
-const archive = path.join(dist, "sten-ai-chatgpt-plugin.tar.gz");
+const archive = path.join(dist, "dumrauf-intelligence-chatgpt-plugin.tar.gz");
 
 function fail(message) {
   console.error("ChatGPT plugin build failed: " + message);
@@ -43,8 +43,10 @@ for (const file of skillFiles) {
 fs.rmSync(packageDir, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 fs.cpSync(source, packageDir, { recursive: true });
+// Remove the legacy internal skill folder from the assembled package; its active replacement is DUMRAUF.
+fs.rmSync(path.join(packageDir, "skills/sten-core-knowledge"), { recursive: true, force: true });
 // Assemble the plugin's reference bundle from the canonical provider knowledge sources.
-const referenceOutput = path.join(packageDir, "skills/sten-core-knowledge/references");
+const referenceOutput = path.join(packageDir, "skills/dumrauf-core-knowledge/references");
 fs.mkdirSync(referenceOutput, { recursive: true });
 const knowledgeNames = [
   "01-core-rules-and-evidence.md",
