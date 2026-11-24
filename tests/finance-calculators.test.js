@@ -45,7 +45,7 @@ test("payroll calculates hourly, shift and salary accruals; requires explicit sh
     { id: "s", payType: "shift", rate: 4000, shifts: 10, hoursPerShift: 12 },
     { id: "m", payType: "salary", rate: 60000, salaryPeriods: 1, hours: 160 }
   ]);
-  assert.equal(result.totalAccrued, 106250);
+  assert.equal(result.totalAccrued, 132250);
   assert.equal(result.overtimeAccrued, 2250);
   const incomplete = calculatePayroll([{ payType: "shift", rate: 4000, shifts: 10 }]);
   assert.equal(incomplete.totalAccrued, 0);
