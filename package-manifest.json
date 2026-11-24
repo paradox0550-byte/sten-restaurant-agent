@@ -1,6 +1,6 @@
 {
   "package": "STEN — Restaurant Management Intelligence",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "status": "working-core",
   "stage_integration": [
     1,
@@ -31,10 +31,12 @@
     "16_source_grounded_procedure_drafts_with_checklist_links",
     "77_process_inventory_classified_without_sop_promotion",
     "77_source_processes_preliminarily_mapped_to_36_domains",
+    "accrued_payroll_calculator",
     "action_task_lifecycle",
     "assistant_core",
     "autonomous_menu_engineering_workflow",
     "bounded_agent_tool_loop",
+    "bounded_xlsx_range_reader",
     "canonical_36_restaurant_management_domains",
     "canonical_horeca_sector_format_taxonomy",
     "chatgpt_project_knowledge_consolidation_under_25_attachments",
@@ -78,6 +80,7 @@
     "optional_semantic_conflict_detector_contract",
     "optional_semantic_reranker_contract",
     "permission_gated_tool_execution",
+    "plan_fact_variance_analysis",
     "procedure_checklist_templates",
     "profile_aware_retrieval",
     "profile_conditioned_applicability_framework",
@@ -91,6 +94,7 @@
     "reciprocal_rank_fusion",
     "reproducible_manifest_verified_source_archive",
     "restaurant_knowledge",
+    "restaurant_pnl_calculator",
     "retrieval_quality_seed_cases",
     "role_responsibility_provenance",
     "runtime_audit_sink",
@@ -112,15 +116,14 @@
     "source_linked_draft_quality_review",
     "source_linked_haccp_procedure_candidate_backlog",
     "source_linked_management_service_food_safety_and_iiko_knowledge",
+    "spreadsheet_artifact_creation",
     "stage_11_management_service_food_safety_and_iiko_source_expansion",
     "stage_11_source_expansion_evaluation_cases",
     "stage_11_specialist_menu_and_kitchen_evaluation_cases",
     "structural_multi_hop_graph_evaluation_harness",
     "structured_manager_task_drafts",
     "tenant_scoped_memory_adapter",
-    "restaurant_pnl_calculator",
-    "accrued_payroll_calculator",
-    "plan_fact_variance_analysis"
+    "tenant_scoped_uploaded_xlsx_import_adapter"
   ],
   "not_claimed": [
     "automated_compliance_certification",
@@ -150,15 +153,16 @@
     "persistent_style_learning",
     "production_api",
     "production_authentication_and_authorization",
+    "production_durable_artifact_store_and_signed_downloads",
     "production_embedding_provider",
     "production_persistent_memory",
     "production_semantic_contradiction_model",
     "production_semantic_reranker_provider",
+    "production_uploaded_file_resolver",
     "production_vector_database",
     "provider_deployment",
     "universal_director_time_benchmarks",
-    "validated_org_chart_for_all_horeca_formats",
-    "xlsx_parser"
+    "validated_org_chart_for_all_horeca_formats"
   ],
   "files": [
     ".github/workflows/ci.yml",

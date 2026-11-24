@@ -1,4 +1,4 @@
-import { createWorkbook, readXlsxBuffer, writeXlsxBuffer } from "./workbook.js";
+import { createWorkbook, readXlsxBuffer, readXlsxRangeBuffer, inspectXlsxBuffer, writeXlsxBuffer } from "./workbook.js";
 import { validateWorkbookFormulas } from "./formula-validator.js";
 import { exportDocxBuffer, exportPdfBuffer } from "./documents.js";
 import { createGoogleSpreadsheet, readGoogleSheetRange } from "./google-sheets.js";
@@ -26,7 +26,7 @@ function safeName(value, fallback) {
 async function saveArtifact(artifacts, tenantId, name, mimeType, buffer) {
   const saved = await artifacts.save({ tenantId, name, mimeType, buffer });
   if (!saved?.id) throw new Error("Artifact store did not return an artifact id.");
-  return { artifactId: saved.id, name: saved.name ?? name, mimeType, size: buffer.length };
+  return { artifactId: saved.id, name: saved.name ?? name, mimeType, size: buffer.length, ...(typeof saved.downloadUrl === "string" ? { downloadUrl: saved.downloadUrl } : {}) };
 }
 
 export function registerSpreadsheetTools({
@@ -36,18 +36,52 @@ export function registerSpreadsheetTools({
   getYandexDiskAccessToken,
   getPdfFontPath,
   fetchImpl = fetch,
+  resolveUploadedFile,
+  maxUploadBytes = 25 * 1024 * 1024,
+  maxWorkbookCells = 500000,
 }) {
   if (!registry || typeof registry.register !== "function") throw new TypeError("A compatible STEN ToolRegistry is required.");
   requireArtifactStore(artifacts);
 
   registry.register({
     name: "spreadsheet.create_xlsx",
+    approval: "not_required",
     description: "Create an XLSX workbook and save it to the tenant's artifact store.",
     schema: { type: "object", required: ["title", "sheets"], additionalProperties: false, properties: { title: { type: "string" }, sheets: { type: "array" } } },
     execute: async ({ tenantId, title, sheets }) => {
       requireSheets(sheets);
       const buffer = await writeXlsxBuffer(createWorkbook({ title, sheets }));
       return saveArtifact(artifacts, tenantId, safeName(title, "sten-report") + ".xlsx", XLSX_MIME, buffer);
+    },
+  });
+
+  if (typeof resolveUploadedFile === "function") {
+    registry.register({
+      name: "spreadsheet.import_uploaded_xlsx",
+      approval: "not_required",
+      description: "Import a user-uploaded XLSX file from the authenticated host upload area into this tenant's private artifact store. Returns workbook and sheet metadata with a small preview; use spreadsheet.read_xlsx_range to inspect further rows.",
+      schema: { type: "object", required: ["uploadId"], additionalProperties: false, properties: { uploadId: { type: "string" } } },
+      execute: async ({ tenantId, uploadId }) => {
+        const uploaded = await resolveUploadedFile({ tenantId, uploadId });
+        if (!uploaded?.buffer) throw new Error("Uploaded file was not found for this tenant.");
+        const buffer = Buffer.isBuffer(uploaded.buffer) ? uploaded.buffer : Buffer.from(uploaded.buffer);
+        if (!buffer.length || buffer.length > maxUploadBytes) throw new RangeError(`XLSX upload must be non-empty and no larger than ${maxUploadBytes} bytes.`);
+        const metadata = await inspectXlsxBuffer(buffer, { previewRows: 10, maxCells: maxWorkbookCells });
+        const saved = await saveArtifact(artifacts, tenantId, safeName(uploaded.name, "uploaded-report.xlsx"), XLSX_MIME, buffer);
+        return { ...saved, source: "user_upload", title: metadata.title, creator: metadata.creator, totalCells: metadata.totalCells, sheets: metadata.sheets };
+      },
+    });
+  }
+
+  registry.register({
+    name: "spreadsheet.read_xlsx_range",
+    approval: "not_required",
+    description: "Read a bounded row range from one worksheet of a tenant-owned XLSX artifact. Maximum 500 rows per call; formulas and cached results are kept distinct.",
+    schema: { type: "object", required: ["artifactId", "sheetName", "startRow", "endRow"], additionalProperties: false, properties: { artifactId: { type: "string" }, sheetName: { type: "string" }, startRow: { type: "integer" }, endRow: { type: "integer" } } },
+    execute: async ({ tenantId, artifactId, sheetName, startRow, endRow }) => {
+      const artifact = await artifacts.get({ tenantId, artifactId });
+      if (!artifact?.buffer) throw new Error("Artifact not found for this tenant.");
+      return readXlsxRangeBuffer(artifact.buffer, { sheetName, startRow, endRow, maxRows: 500 });
     },
   });
 

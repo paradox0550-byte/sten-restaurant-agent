@@ -96,3 +96,52 @@ export function workbookToTabularData(workbook) {
     ),
   }));
 }
+
+function normalizeCell(cell) {
+  const value = cell.value;
+  if (value && typeof value === "object" && "formula" in value) return { formula: value.formula, result: value.result ?? null, address: cell.address };
+  if (value && typeof value === "object" && "error" in value) return { error: value.error, address: cell.address };
+  if (value instanceof Date) return value.toISOString();
+  if (value && typeof value === "object" && "richText" in value) return value.richText.map(part => part.text).join("");
+  if (value && typeof value === "object" && "text" in value && "hyperlink" in value) return value.text;
+  return value ?? null;
+}
+
+export async function inspectXlsxBuffer(input, { previewRows = 10, maxCells = 500000 } = {}) {
+  const buffer = Buffer.isBuffer(input) ? input : Buffer.from(input);
+  if (buffer.length < 4 || buffer[0] !== 0x50 || buffer[1] !== 0x4b) throw new TypeError("Input is not a ZIP-based XLSX workbook.");
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.load(buffer);
+  const sheets = workbook.worksheets.map(sheet => {
+    const cells = sheet.rowCount * sheet.columnCount;
+    if (cells > maxCells) throw new RangeError(`Worksheet ${sheet.name} exceeds the configured cell limit.`);
+    return {
+      name: sheet.name, rowCount: sheet.rowCount, columnCount: sheet.columnCount,
+      preview: Array.from({ length: Math.min(sheet.rowCount, previewRows) }, (_, i) =>
+        Array.from({ length: sheet.columnCount }, (_, j) => normalizeCell(sheet.getRow(i + 1).getCell(j + 1))))
+    };
+  });
+  const totalCells = sheets.reduce((sum, sheet) => sum + sheet.rowCount * sheet.columnCount, 0);
+  if (totalCells > maxCells) throw new RangeError("Workbook exceeds the configured total cell limit.");
+  return { title: workbook.title || null, creator: workbook.creator || null, totalCells, sheets };
+}
+
+export async function readXlsxRangeBuffer(input, { sheetName, startRow = 1, endRow = startRow + 199, maxRows = 500 } = {}) {
+  if (!sheetName || !Number.isInteger(startRow) || !Number.isInteger(endRow) || startRow < 1 || endRow < startRow) {
+    throw new TypeError("A sheet name and valid 1-based row range are required.");
+  }
+  if (endRow - startRow + 1 > maxRows) throw new RangeError(`A maximum of ${maxRows} rows may be read per request.`);
+  const buffer = Buffer.isBuffer(input) ? input : Buffer.from(input);
+  if (buffer.length < 4 || buffer[0] !== 0x50 || buffer[1] !== 0x4b) throw new TypeError("Input is not a ZIP-based XLSX workbook.");
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.load(buffer);
+  const sheet = workbook.getWorksheet(sheetName);
+  if (!sheet) throw new Error(`Worksheet not found: ${sheetName}`);
+  const last = Math.min(endRow, sheet.rowCount);
+  const rows = [];
+  for (let index = startRow; index <= last; index += 1) {
+    const row = sheet.getRow(index);
+    rows.push(Array.from({ length: sheet.columnCount }, (_, j) => normalizeCell(row.getCell(j + 1))));
+  }
+  return { sheet: sheetName, startRow, endRow: last, totalRows: sheet.rowCount, rows };
+}
