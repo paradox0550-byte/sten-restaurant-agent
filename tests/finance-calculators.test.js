@@ -52,7 +52,7 @@ test("payroll calculates hourly, shift and salary accruals; requires explicit sh
   assert.equal(incomplete.partialAccrued, 0);
   assert.equal(incomplete.status, "calculated_with_gaps");
   assert.equal(incomplete.missingData[0].reason, "explicit_shift_count_and_duration_required");
-  const empty = calculatePayroll([]);
+  const noCurrency = calculatePayroll([{ payType: "hourly", rate: 300, hours: 10 }]);\n  assert.equal(noCurrency.totalAccrued, null);\n  assert.ok(noCurrency.missingData.some(item => item.field === "currency"));\n  const empty = calculatePayroll([]);
   assert.equal(empty.status, "insufficient_data");
   assert.equal(empty.totalAccrued, null);
 });
