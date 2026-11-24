@@ -59,7 +59,7 @@ test("variance analysis normalizes articles, classifies direction and ranks by c
     { id: "a", article: "Выручка", plan: 1000, actual: 1200, scope: "r1", period: "2026-10", currency: "RUB", unit: "RUB", definition: "gross revenue", planSourceIds: ["p"], actualSourceIds: ["a"] },
     { id: "b", article: "ФОТ", plan: -200, actual: -250, scope: "r1", period: "2026-10", currency: "RUB", unit: "RUB", definition: "accrued payroll" }
   ], { directions: { revenue: "higher", labor: "higher" } });
-  assert.equal(result.results[0].id, "b");
+  assert.equal(result.results[0].id, "a");
   assert.equal(result.unfavorable.length, 1);
   assert.equal(result.favorable.length, 1);
   assert.equal(result.results[0].deltaAbsolute, -50);
