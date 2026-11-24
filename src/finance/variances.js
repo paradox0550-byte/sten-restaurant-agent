@@ -36,14 +36,18 @@ export function analyzePlanFactVariances(rows = [], { mapping = {}, directions =
     const delta = row.actual - row.plan;
     const relative = row.plan === 0 ? null : delta / Math.abs(row.plan) * 100;
     const direction = directions[category] ?? "unknown";
-    const favorable = direction === "lower" ? delta < 0 : direction === "higher" ? delta > 0 : direction === "neutral" ? false : null;
+    const favorable = direction === "lower" ? delta < 0 : direction === "higher" ? delta > 0 : null;
+    const impact = direction === "neutral" ? (delta === 0 ? "no_change" : "neutral") : favorable === null ? (delta === 0 ? "no_change" : "unclassified") : favorable ? "favorable" : delta === 0 ? "no_change" : "unfavorable";
     const minAmount = materiality[category]?.amount;
     const minPercent = materiality[category]?.percent;
-    const material = (finite(minAmount) && Math.abs(delta) >= minAmount) || (finite(minPercent) && relative !== null && Math.abs(relative) >= minPercent);
+    const hasMaterialityRule = finite(minAmount) || finite(minPercent);
+    const material = hasMaterialityRule
+      ? ((finite(minAmount) && Math.abs(delta) >= minAmount) || (finite(minPercent) && relative !== null && Math.abs(relative) >= minPercent))
+      : null;
     results.push({
       id, category, article: row.article ?? category, plan: row.plan, actual: row.actual,
       deltaAbsolute: delta, deltaPercent: relative,
-      impact: favorable === null ? "unclassified" : favorable ? "favorable" : delta === 0 ? "no_change" : "unfavorable",
+      impact,
       directionRule: direction, material: material === true, currency: row.currency,
       unit: row.unit, period: row.period, scope: row.scope, definition: row.definition,
       sourceIds: [...new Set([...(row.planSourceIds ?? []), ...(row.actualSourceIds ?? [])])]
@@ -57,6 +61,7 @@ export function analyzePlanFactVariances(rows = [], { mapping = {}, directions =
     favorable: results.filter(x => x.impact === "favorable"),
     unfavorable: results.filter(x => x.impact === "unfavorable"),
     unclassified: results.filter(x => x.impact === "unclassified"),
+    neutral: results.filter(x => x.impact === "neutral"),
     missingData
   };
 }
