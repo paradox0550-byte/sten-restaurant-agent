@@ -39,20 +39,23 @@ test("P&L zero denominator is unavailable", () => {
   assert.equal(result.metrics.cogsPercent.missing[0], "zero_denominator");
 });
 
-test("payroll calculates hourly, shift and salary accruals; requires explicit shift duration", () => {
+test("payroll calculates hourly, shift and salary accruals; requires explicit shift duration and currency", () => {
   const result = calculatePayroll([
     { id: "h", payType: "hourly", rate: 300, hours: 100, overtimeHours: 5, overtimeMultiplier: 1.5 },
     { id: "s", payType: "shift", rate: 4000, shifts: 10, hoursPerShift: 12 },
     { id: "m", payType: "salary", rate: 60000, salaryPeriods: 1, hours: 160 }
-  ]);
+  ], { currency: "RUB" });
   assert.equal(result.totalAccrued, 132250);
   assert.equal(result.overtimeAccrued, 2250);
-  const incomplete = calculatePayroll([{ payType: "shift", rate: 4000, shifts: 10 }]);
+  const incomplete = calculatePayroll([{ payType: "shift", rate: 4000, shifts: 10 }], { currency: "RUB" });
   assert.equal(incomplete.totalAccrued, null);
   assert.equal(incomplete.partialAccrued, 0);
   assert.equal(incomplete.status, "calculated_with_gaps");
   assert.equal(incomplete.missingData[0].reason, "explicit_shift_count_and_duration_required");
-  const noCurrency = calculatePayroll([{ payType: "hourly", rate: 300, hours: 10 }]);\n  assert.equal(noCurrency.totalAccrued, null);\n  assert.ok(noCurrency.missingData.some(item => item.field === "currency"));\n  const empty = calculatePayroll([]);
+  const noCurrency = calculatePayroll([{ payType: "hourly", rate: 300, hours: 10 }]);
+  assert.equal(noCurrency.totalAccrued, null);
+  assert.ok(noCurrency.missingData.some(item => item.field === "currency"));
+  const empty = calculatePayroll([]);
   assert.equal(empty.status, "insufficient_data");
   assert.equal(empty.totalAccrued, null);
 });
