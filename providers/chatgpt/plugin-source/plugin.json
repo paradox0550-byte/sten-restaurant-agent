@@ -36,8 +36,8 @@
         "category": "Business & Operations",
         "capabilities": [],
         "brandColor": "#13C8BE",
-        "logo": "./assets/sten-wordmark.svg",
-        "composerIcon": "./assets/sten-app-icon.svg",
+        "logo": "./assets/dumrauf-wordmark.svg",
+        "composerIcon": "./assets/dumrauf-app-icon.svg",
         "defaultPrompt": [
           "Проанализируй документы ресторана. Покажи источники, расчёты, ограничения и выводы.",
           "Обработай весь загруженный Excel-отчёт и создай отдельный проверенный XLSX-файл с результатами, формулами, источниками и исключениями.",
