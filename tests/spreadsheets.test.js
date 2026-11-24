@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  createWorkbook, readXlsxBuffer, writeXlsxBuffer, validateWorkbookFormulas,
+  createWorkbook, readXlsxBuffer, readXlsxRangeBuffer, inspectXlsxBuffer, writeXlsxBuffer, validateWorkbookFormulas,
   exportDocxBuffer, exportPdfBuffer, createGoogleSpreadsheet, readGoogleSheetRange, uploadToYandexDisk, registerSpreadsheetTools,
 } from "../src/spreadsheets/index.js";
 
@@ -129,3 +129,68 @@ test("agent tools create and read tenant-scoped XLSX artifacts through the runti
     args: { artifactId: created.artifactId },
   }), /Artifact not found/);
 });
+
+test("large XLSX reports can be inspected and read in bounded row windows", async () => {
+  const rows = Array.from({ length: 20000 }, (_, index) => ({ sku: `SKU-${index + 1}`, name: `Dish ${index + 1}`, quantity: index % 37, revenue: (index % 37) * 250 }));
+  const workbook = createWorkbook({ title: "Large sales report", sheets: [{
+    name: "Sales", columns: [
+      { header: "SKU", key: "sku" }, { header: "Dish", key: "name" },
+      { header: "Quantity", key: "quantity" }, { header: "Revenue", key: "revenue" },
+    ], rows, freezeRows: 1, autoFilter: true,
+  }] });
+  const bytes = await writeXlsxBuffer(workbook);
+  const meta = await inspectXlsxBuffer(bytes, { previewRows: 3, maxCells: 100000 });
+  assert.equal(meta.sheets[0].rowCount, 20001);
+  assert.equal(meta.sheets[0].preview.length, 3);
+  const page = await readXlsxRangeBuffer(bytes, { sheetName: "Sales", startRow: 19998, endRow: 20001, maxRows: 500 });
+  assert.equal(page.rows.length, 4);
+  assert.equal(page.rows[3][0], "SKU-20000");
+  await assert.rejects(() => readXlsxRangeBuffer(bytes, { sheetName: "Sales", startRow: 1, endRow: 501, maxRows: 500 }), /maximum of 500 rows/);
+});
+
+test("agent imports uploaded XLSX, pages through it, and creates a tenant-scoped downloadable workbook", async () => {
+  const { ToolRegistry } = await import("../src/runtime/index.js");
+  const sourceWorkbook = createWorkbook({ title: "POS export", sheets: [{
+    name: "Sales", rows: [["SKU", "Dish", "Qty"], ["A", "Burger", 15], ["B", "Salad", 4]],
+  }] });
+  const sourceBytes = await writeXlsxBuffer(sourceWorkbook);
+  const store = new Map();
+  let nextId = 0;
+  const artifacts = {
+    async save({ tenantId, name, mimeType, buffer }) {
+      const id = `artifact-${++nextId}`;
+      store.set(`${tenantId}:${id}`, { name, mimeType, buffer });
+      return { id, name, downloadUrl: `https://files.example/${tenantId}/${id}` };
+    },
+    async get({ tenantId, artifactId }) { return store.get(`${tenantId}:${artifactId}`) ?? null; },
+  };
+  const registry = registerSpreadsheetTools({
+    registry: new ToolRegistry(), artifacts,
+    resolveUploadedFile: async ({ tenantId, uploadId }) => tenantId === "restaurant-a" && uploadId === "upload-1"
+      ? { name: "pos-export.xlsx", buffer: sourceBytes } : null,
+  });
+  const imported = await registry.execute({
+    name: "spreadsheet.import_uploaded_xlsx", tenantId: "restaurant-a",
+    permissions: ["spreadsheet.import_uploaded_xlsx"], args: { uploadId: "upload-1" },
+  });
+  assert.equal(imported.totalCells, 9);
+  assert.equal(imported.sheets[0].rowCount, 3);
+  const page = await registry.execute({
+    name: "spreadsheet.read_xlsx_range", tenantId: "restaurant-a",
+    permissions: ["spreadsheet.read_xlsx_range"],
+    args: { artifactId: imported.artifactId, sheetName: "Sales", startRow: 2, endRow: 3 },
+  });
+  assert.deepEqual(page.rows[1], ["B", "Salad", 4]);
+  const created = await registry.execute({
+    name: "spreadsheet.create_xlsx", tenantId: "restaurant-a",
+    permissions: ["spreadsheet.create_xlsx"], approved: true,
+    args: { title: "Low sellers", sheets: [{ name: "Analysis", rows: [["Dish", "Qty"], ["Salad", 4]] }] },
+  });
+  assert.equal(created.downloadUrl, `https://files.example/restaurant-a/${created.artifactId}`);
+  await assert.rejects(() => registry.execute({
+    name: "spreadsheet.read_xlsx_range", tenantId: "restaurant-b",
+    permissions: ["spreadsheet.read_xlsx_range"],
+    args: { artifactId: imported.artifactId, sheetName: "Sales", startRow: 1, endRow: 2 },
+  }), /Artifact not found/);
+});
+
