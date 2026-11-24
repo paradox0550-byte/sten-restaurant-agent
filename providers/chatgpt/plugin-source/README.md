@@ -1,4 +1,4 @@
-# STEN AI — ChatGPT plugin source
+# DUMRAUF AI — ChatGPT plugin source
 
 This directory is the repository-controlled source package for the existing private ChatGPT plugin. The installed plugin is a deployment artifact; edit these files in GitHub and rebuild rather than editing Plugin Creator directly.
 
@@ -29,8 +29,8 @@ This directory is the repository-controlled source package for the existing priv
 - financial-reconciliation — Сверка банка, POS и ОФД
 - management-decisions — Управленческие решения
 - restaurant-finance — Финансовый анализ ресторана
-- sten-core-knowledge — Базовая база знаний STEN
-- sten-director — Основной управляющий агент
+- dumrauf-core-knowledge — Базовая база знаний DUMRAUF
+- dumrauf-director — Основной управляющий агент
 
 ## Non-negotiable principles
 
