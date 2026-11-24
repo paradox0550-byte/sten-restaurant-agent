@@ -1,6 +1,6 @@
-# STEN — Restaurant Management Intelligence
+# DUMRAUF — Business Intelligence & Management Systems
 
-**STEN** is a provider-neutral professional AI expert package for the full HoReCa sector. It combines restaurant management methodology, finance, people/labor, menu economics, guest experience, operations and evidence-governed reasoning.
+**DUMRAUF Intelligence** is a provider-neutral professional AI platform for business management, with its initial expertise rooted in the HoReCa sector. It combines restaurant management methodology, finance, people/labor, menu economics, guest experience, operations and evidence-governed reasoning.
 
 ## Canonical package structure
 
@@ -17,7 +17,7 @@
 
 ## Закрытый пользовательский пилот
 
-Инструкция для первых тестировщиков: [Пилот STEN на друзьях — подключение, сценарии и фиксация ошибок](docs/PILOT_FRIENDS_GUIDE_RU.md). Для установки в ChatGPT Project используйте отдельный приватный Project на каждого участника и девять файлов из `providers/chatgpt/knowledge-pack/`.
+Инструкция для первых тестировщиков: [Пилот DUMRAUF на друзьях — подключение, сценарии и фиксация ошибок](docs/PILOT_FRIENDS_GUIDE_RU.md). Для установки в ChatGPT Project используйте отдельный приватный Project на каждого участника и девять файлов из `providers/chatgpt/knowledge-pack/`.
 
 ## Stage status — canonical summary
 
@@ -151,4 +151,4 @@ A curated 9-file Markdown pack is maintained in `providers/chatgpt/knowledge-pac
 
 ## Единый источник ChatGPT-плагина
 
-Исходники текущего ChatGPT-плагина хранятся в `providers/chatgpt/plugin-source/`. Не редактируйте установленный плагин напрямую. Сборка воспроизводимого архива выполняется командой `npm run build:chatgpt-plugin`; CI проверяет и публикует архив как артефакт сборки. Архитектура и порядок выпуска: [единый источник STEN AI](docs/CHATGPT_PLUGIN_SINGLE_SOURCE_RU.md).
+Исходники текущего ChatGPT-плагина хранятся в `providers/chatgpt/plugin-source/`. Не редактируйте установленный плагин напрямую. Сборка воспроизводимого архива выполняется командой `npm run build:chatgpt-plugin`; CI проверяет и публикует архив как артефакт сборки. Архитектура и порядок выпуска: [единый источник DUMRAUF Intelligence](docs/CHATGPT_PLUGIN_SINGLE_SOURCE_RU.md).
