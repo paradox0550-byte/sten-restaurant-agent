@@ -1,59 +1,74 @@
-# STEN 0.5.0 — пакет знаний для ChatGPT Project
+# DUMRAUF Intelligence 0.5.1 — пакет поставки
 
-## Distribution contract
+## Назначение
 
-Пользовательский архив — это curated knowledge pack для ChatGPT Project, а не исходный код и не развёртываемый сервер. Инструкция для пилотной группы: [PILOT_FRIENDS_GUIDE_RU.md](PILOT_FRIENDS_GUIDE_RU.md). It contains:
-- nine STEN knowledge Markdown files;
-- a separate Project instruction file.
+Этот документ описывает три разных артефакта DUMRAUF Intelligence. Их нельзя смешивать: каждый предназначен для своего сценария.
 
-The installation guide and user guide are maintained separately in the documentation set and Dropbox Paper. Internal evidence registries, source crosswalks, graph provenance catalogs, research registers, source files, tests and runtime code are not part of the tenant archive.
+## Состав поставки
 
-## Build and verification
+### 1. ChatGPT Project knowledge pack
 
-The release archive is produced by `npm run package:source` from the explicit `tenant_distribution.files` allowlist in `package-manifest.json`.
+Источник: providers/chatgpt/knowledge-pack/ и providers/chatgpt/project-instructions-ru.md.
 
-The CI release gate must pass:
-1. evidence registry validation;
-2. source/package manifest validation;
-3. high-confidence secret scan;
-4. complete automated test suite;
-5. tenant archive build and allowlist comparison;
-6. artifact upload.
+- Девять Markdown-файлов знаний — загружаются в Sources проекта.
+- Отдельный текст инструкций — вставляется в поле Project instructions.
+- Это контекст для модели, а не исполняемый сервер, plugin runtime или интеграция с iiko/POS.
 
-Архив создаётся скриптом `scripts/create-source-archive.js` из `tenant_distribution.files`; фактическое имя — `sten-knowledge-pack-0.5.0.zip`. `SHA256SUMS.txt` — контрольная сумма, `CONTENTS.txt` — перечень содержимого. `CONTENTS.txt` is the file inventory.
+Сборка tenant/source ZIP выполняется командой npm run package:source. Она использует явный allowlist tenant_distribution.files в package-manifest.json, сверяет состав архива и создаёт SHA256SUMS.txt и CONTENTS.txt.
 
-## Current Dropbox publication record
+### 2. ChatGPT plugin package
 
-- Uploaded file: `STEN-Project-Knowledge-Pack-0.5.0.zip`.
-- Dropbox path: `/STEN Restaurant Agent/05. Обновления и версии/STEN-Project-Knowledge-Pack-0.5.0.zip`.
-- Archive SHA-256: `0a7f19e3a0939eef3b9eb956d6ee172e811d2734849ebe1afbbcb0ea33cb9fdb`.
-- The file exists in Dropbox. A public anyone-with-the-link URL has not yet been enabled; this must be done in Dropbox web UI and then tested in a private browser session.
+Канонический исходник: providers/chatgpt/plugin-source/.
 
-## User release procedure
+Сборка: npm run build:chatgpt-plugin.
 
-1. Download the archive artifact from a successful main-branch CI run.
-2. Inspect the nested tenant ZIP and confirm it contains the nine knowledge files, README and Project instructions only.
-3. Scan the extracted tenant files for configured private source identities and locators.
-4. Upload the ZIP and its checksum/inventory to the Dropbox release folder.
-5. Update the Dropbox Paper release log with the actual commit, CI run, checksum and final Dropbox paths.
-6. Verify the user-facing Dropbox link with a separate browser/account if public access is intended.
+Ожидаемый файл: dist/dumrauf-intelligence-chatgpt-plugin.tar.gz. Внутри пакета создаётся SOURCE_REVISION.txt, указывающий исходную ревизию Git. Сборка проверяет обязательные файлы и 27 файлов SKILL.md, а также включает канонические reference-файлы из knowledge pack.
 
-## Important boundaries
+Этот архив предназначен для поддерживаемого процесса установки/обновления ChatGPT plugin. Не загружайте его вместо девяти файлов знаний в ChatGPT Project.
 
-- A file excluded from the tenant ZIP is not private if it remains in a public GitHub repository or its history.
-- Do not put confidential source materials into a public repository.
-- A green CI run proves only the automated checks it executes. It does not certify expert correctness, legal compliance, or successful operation at a restaurant.
-- Stage 11 substantive validation remains open until specialist review and controlled pilots are completed.
-- No release is published until the owner approves the final contents and distribution link.
+### 3. Source package
 
+Полный исходный репозиторий содержит код, тесты, навыки, методики, схемы и документацию. Он предназначен для разработчиков и технической проверки, а не для обычной загрузки в Project.
 
-## Closed pilot candidate — 20 November 2026
+## Проверки перед распространением
 
-- Main commit: `8bcff642340c6a4d1a524769560bda002629ac1f`.
-- Successful CI: [run 44680980200](https://github.com/paradox0550-byte/sten-restaurant-agent/actions/runs/44680980200).
-- Automated tests: 139 passed, 0 failed.
-- Tenant archive: `sten-knowledge-pack-0.5.0.zip`, 11/11 allowlisted files verified.
-- SHA-256: `b57c02814cb9737ac4fcc1a277f023a8b039789adc55c10acf60f4fc23ed1287`.
-- GitHub Actions artifact: `sten-knowledge-pack-8bcff642340c6a4d1a524769560bda002629ac1f` (available until 20 December 2026).
+1. npm install --no-audit --no-fund
+2. npm run validate:evidence
+3. npm run validate:package
+4. npm run scan:secrets
+5. npm test
+6. npm run package:source
+7. npm run build:chatgpt-plugin
+8. Проверить SOURCE_REVISION.txt, SHA256SUMS.txt, CONTENTS.txt и состав обоих архивов.
+9. Убедиться, что GitHub Actions завершился успешно для точного тега/коммита выпуска.
 
-This candidate is intended for a closed friends pilot in separate ChatGPT Projects using synthetic or anonymized data. It is not a deployed STEN server/API or a general production SaaS release. The public GitHub Release and Dropbox publication remain owner-controlled and have not been performed.
+CI подтверждает только те проверки, которые реально запускаются. Он не подтверждает экспертную корректность всех методик, правовую комплаентность или успешную работу на конкретном объекте.
+
+## Публикация артефактов в GitHub Release
+
+Workflow .github/workflows/publish-release-assets.yml можно запустить вручную через GitHub Actions. Укажите тег выпуска (для текущего выпуска — v0.5.1). Workflow проверяет существование опубликованного релиза, устанавливает зависимости, выполняет тесты и проверки, собирает оба архива и прикрепляет к релизу:
+
+- dumrauf-knowledge-pack-0.5.1.zip;
+- dumrauf-intelligence-chatgpt-plugin.tar.gz;
+- SHA256SUMS.txt;
+- CONTENTS.txt.
+
+Не объявляйте файлы опубликованными, пока workflow не завершился успешно и все четыре Assets не видны на странице релиза.
+
+## Безопасность и зрелость
+
+- Не включать клиентские документы, банковские выписки, персональные данные, токены и секреты в поставку.
+- Файл, исключённый из ZIP, всё ещё может оставаться доступным в публичном GitHub-репозитории или его истории.
+- 77 process inventory topics не являются 77 утверждёнными SOPs.
+- 19 source-grounded draft procedure cards не являются утверждёнными SOPs.
+- Stage 11 содержательная валидация остаётся открытой до экспертной проверки и контролируемых пилотов.
+- Юридические и санитарные выводы требуют актуальных официальных источников и проверки специалистом.
+
+## Выпуск 0.5.1
+
+- Tag: v0.5.1.
+- Product: DUMRAUF Intelligence.
+- Main merge commit: 7757000df45212158e334b8ec4d9e32721f1b7cd.
+- GitHub Actions CI #648 прошёл на PR head commit cff3f93beb569be819b65659debabea4acdc8cd6.
+- Официальная страница: https://github.com/paradox0550-byte/sten-restaurant-agent/releases/tag/v0.5.1
+- На момент подготовки этого документа Release опубликован, но Assets ещё не прикреплены.

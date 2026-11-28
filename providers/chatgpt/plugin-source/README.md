@@ -1,6 +1,6 @@
-# DUMRAUF AI — ChatGPT plugin source
+# DUMRAUF Intelligence — ChatGPT plugin source
 
-This directory is the repository-controlled source package for the existing private ChatGPT plugin. The installed plugin is a deployment artifact; edit these files in GitHub and rebuild rather than editing Plugin Creator directly.
+This directory is the repository-controlled source package for the DUMRAUF Intelligence ChatGPT plugin. The installed plugin is a deployment artifact; edit these files in GitHub and rebuild rather than editing Plugin Creator directly.
 
 ## 27 skill files
 
@@ -33,7 +33,6 @@ This directory is the repository-controlled source package for the existing priv
 - dumrauf-director — Основной управляющий агент
 
 ## Non-negotiable principles
-
 - No source = No fact
 - Calculation before interpretation
 - Missing is not zero
@@ -42,9 +41,10 @@ This directory is the repository-controlled source package for the existing priv
 - Не заявлять о подключении к iiko, банку, ОФД или другим системам без действующего инструмента
 
 ## Verification
-
 The package contains 27 individual SKILL.md files. A skill file is not proof of successful end-to-end testing. Test coverage and maturity must be reported only from reproducible checks.
 
 ## Privacy
-
 Do not include client documents, bank statements, payroll, personal data, secrets, tokens or infrastructure configuration in the package.
+
+## Compatibility note
+The internal plugin identifier in plugin.json is retained for compatibility with the existing installed integration. The public product identity and display name are DUMRAUF Intelligence.
