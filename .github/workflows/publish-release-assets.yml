@@ -1,0 +1,85 @@
+name: Publish DUMRAUF release assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published release tag to build and attach assets for (for example v0.5.1)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-upload:
+    name: Build, verify and attach release assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the exact release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify that the target is an existing published release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release view "$RELEASE_TAG" --json isDraft,isPrerelease,tagName
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq '.isDraft')" = "false"
+          test "$(gh release view "$RELEASE_TAG" --json isPrerelease --jq '.isPrerelease')" = "false"
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Validate evidence registry
+        run: npm run validate:evidence
+
+      - name: Validate package and manifests
+        run: npm run validate:package
+
+      - name: Scan tracked files for high-confidence secrets
+        run: npm run scan:secrets
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Build tenant knowledge pack and checksums
+        run: npm run package:source
+
+      - name: Build ChatGPT plugin archive
+        run: npm run build:chatgpt-plugin
+
+      - name: Verify release assets exist
+        run: |
+          set -euo pipefail
+          test -s "dist/dumrauf-knowledge-pack-$(node -p \"JSON.parse(require('fs').readFileSync('package.json')).version\").zip"
+          test -s dist/dumrauf-intelligence-chatgpt-plugin.tar.gz
+          test -s dist/SHA256SUMS.txt
+          test -s dist/CONTENTS.txt
+
+      - name: Attach verified assets to the existing GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          KNOWLEDGE_ZIP="$(find dist -maxdepth 1 -type f -name 'dumrauf-knowledge-pack-*.zip' -print -quit)"
+          test -n "$KNOWLEDGE_ZIP"
+          gh release upload "$RELEASE_TAG" "$KNOWLEDGE_ZIP" dist/dumrauf-intelligence-chatgpt-plugin.tar.gz dist/SHA256SUMS.txt dist/CONTENTS.txt --clobber
+
+      - name: Verify uploaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' | sort
