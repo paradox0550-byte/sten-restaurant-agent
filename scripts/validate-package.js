@@ -2,7 +2,7 @@ import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 
 function fail(message) {
-  console.error(`Package validation failed: ${message}`);
+  console.error(\`Package validation failed: \${message}\`);
   process.exitCode = 1;
 }
 
@@ -10,7 +10,7 @@ function readJson(path) {
   try {
     return JSON.parse(fs.readFileSync(path, "utf8"));
   } catch (error) {
-    fail(`cannot read valid JSON from ${path}: ${error.message}`);
+    fail(\`cannot read valid JSON from \${path}: \${error.message}\`);
     return {};
   }
 }
@@ -27,18 +27,19 @@ const tracked = execFileSync("git", ["ls-files", "-z"], { encoding: "utf8" }).sp
 const declared = [...(manifest.files ?? [])].sort();
 const missing = declared.filter((file) => !fs.existsSync(file));
 const unlisted = tracked.filter((file) => !declared.includes(file));
-if (missing.length) fail(`declared paths do not exist: ${missing.join(", ")}`);
-if (unlisted.length) fail(`tracked paths are absent from source manifest: ${unlisted.join(", ")}`);
+if (missing.length) fail(\`declared paths do not exist: \${missing.join(", ")}\`);
+if (unlisted.length) fail(\`tracked paths are absent from source manifest: \${unlisted.join(", ")}\`);
 
 const tenantFiles = manifest.tenant_distribution?.files ?? [];
 const tenantSet = new Set(tenantFiles);
 if (!tenantFiles.length || tenantSet.size !== tenantFiles.length) fail("tenant_distribution.files must be a non-empty unique allowlist");
 for (const file of tenantFiles) {
-  if (!declared.includes(file)) fail(`tenant distribution path is not in source manifest: ${file}`);
-  if (!fs.existsSync(file)) fail(`tenant distribution path does not exist: ${file}`);
+  if (!declared.includes(file)) fail(\`tenant distribution path is not in source manifest: \${file}\`);
+  if (!fs.existsSync(file)) fail(\`tenant distribution path does not exist: \${file}\`);
 }
-const forbiddenTenantPaths = tenantFiles.filter((file) => /(^|\\/)(evidence|research|source-crosswalk|sources\\.json|registry\\.json)(\\/|$)/i.test(file));
-if (forbiddenTenantPaths.length) fail(`tenant distribution includes internal provenance paths: ${forbiddenTenantPaths.join(", ")}`);
+const forbiddenSegments = new Set(["evidence", "research", "source-crosswalk", "sources.json", "registry.json"]);
+const forbiddenTenantPaths = tenantFiles.filter((file) => file.split("/").some((segment) => forbiddenSegments.has(segment.toLowerCase())));
+if (forbiddenTenantPaths.length) fail(\`tenant distribution includes internal provenance paths: \${forbiddenTenantPaths.join(", ")}\`);
 if (!String(manifest.tenant_distribution?.security_note ?? "").includes("public repository")) {
   fail("tenant distribution must disclose that archive exclusion does not make public repository files private");
 }
@@ -50,9 +51,9 @@ const versions = {
   chatgptPlugin: chatgptPlugin.version,
   codexPlugin: codexPlugin.version
 };
-const invalidVersions = Object.entries(versions).filter(([, version]) => typeof version !== "string" || !/^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$/.test(version));
-if (invalidVersions.length) fail(`invalid semantic version fields: ${JSON.stringify(invalidVersions)}`);
-if (new Set(Object.values(versions)).size !== 1) fail(`version mismatch across release manifests: ${JSON.stringify(versions)}`);
+const invalidVersions = Object.entries(versions).filter(([, version]) => typeof version !== "string" || !/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version));
+if (invalidVersions.length) fail(\`invalid semantic version fields: \${JSON.stringify(invalidVersions)}\`);
+if (new Set(Object.values(versions)).size !== 1) fail(\`version mismatch across release manifests: \${JSON.stringify(versions)}\`);
 
 if (!manifest.stage_integration?.includes(14)) fail("package manifest does not include Stage 14");
 if (manifest.stage_status?.["11"] !== "foundation_integrated_substantive_validation_open") fail("Stage 11 must remain explicitly open for substantive validation");
@@ -63,4 +64,4 @@ if (!claudeMcp || typeof claudeMcp.mcpServers !== "object" || Array.isArray(clau
 const openapi = fs.readFileSync("providers/chatgpt/actions.openapi.yaml", "utf8");
 if (!openapi.includes("openapi: 3.1.0") || !openapi.includes("YOUR_DEPLOYED_DUMRAUF_API_HOST")) fail("ChatGPT OpenAPI adapter must remain an explicitly unconfigured 3.1 template");
 
-if (!process.exitCode) console.log(`Package verified: ${tracked.length} tracked source files, ${declared.length} source-manifest paths, ${tenantFiles.length} tenant-facing files, ${Object.keys(versions).length} synchronized release versions (${packageJson.version}).`);
+if (!process.exitCode) console.log(\`Package verified: \${tracked.length} tracked source files, \${declared.length} source-manifest paths, \${tenantFiles.length} tenant-facing files, \${Object.keys(versions).length} synchronized release versions (\${packageJson.version}).\`);
