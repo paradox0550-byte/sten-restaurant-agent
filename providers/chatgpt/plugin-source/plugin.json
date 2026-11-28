@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sten-ai",
-  "version": "1.0.0",
+  "version": "0.5.1",
   "description": "DUMRAUF Intelligence — система управленческого анализа и принятия решений для бизнеса с начальной специализацией в HoReCa: 27 специализированных навыков, проверяемый анализ документов и финансов, Excel-отчёты и управленческие решения.",
   "author": {
     "name": "Dumrauf Aleksander",
