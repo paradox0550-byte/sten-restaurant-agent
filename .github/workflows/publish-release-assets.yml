@@ -61,7 +61,8 @@ jobs:
       - name: Verify release assets exist
         run: |
           set -euo pipefail
-          test -s "dist/dumrauf-knowledge-pack-$(node -p \"JSON.parse(require('fs').readFileSync('package.json')).version\").zip"
+          VERSION="$(node -p "require('./package.json').version")"
+          test -s "dist/dumrauf-knowledge-pack-${VERSION}.zip"
           test -s dist/dumrauf-intelligence-chatgpt-plugin.tar.gz
           test -s dist/SHA256SUMS.txt
           test -s dist/CONTENTS.txt
