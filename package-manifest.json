@@ -166,6 +166,7 @@
   ],
   "files": [
     ".github/workflows/ci.yml",
+    ".github/workflows/publish-release-assets.yml",
     "DISCLAIMER.md",
     "LEGAL_DEPLOYMENT_CHECKLIST.md",
     "LICENSE",
